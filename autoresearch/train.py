@@ -35,11 +35,11 @@ csv.field_size_limit(sys.maxsize)
 
 PARAMS = {
     "min_df": 2,
-    "max_df": 300,
+    "max_df": 375,
     "min_tfidf_score": 0.01,
     "max_features": 80000,
     "max_edges_per_verse": 30,
-    "max_verse_freq": 100,
+    "max_verse_freq": 75,
     "edge_weight_method": "geometric_mean",
     "extra_stopwords": [],
     "min_token_length": 2,
