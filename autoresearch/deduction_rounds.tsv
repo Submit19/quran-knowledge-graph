@@ -169,3 +169,22 @@ round	timestamp	novel_found	total_novel	elapsed	strategy	mutations
 41	2026-03-30T12:08:22.579065	36	13164	1.7	random	strategy: high_connectivity -> random; min_novelty: 50 -> 40
 42	2026-03-30T12:08:24.238172	0	13164	1.7	random	no changes
 43	2026-03-30T12:08:46.886248	1290	14454	22.6	random	transitive_max_chains: 800 -> 500; focus: specific -> all
+44	2026-03-30T12:09:09.659572	1294	15748	22.8	random	no changes
+45	2026-03-30T12:09:31.634495	1243	16991	22.0	random	shared_subject_max: 500 -> 300; max_neighbors_hop1: 11 -> 13
+46	2026-03-30T12:09:36.614574	993	17984	5.0	random	verses: 3000 -> 750; focus: all -> surahs [10, 14, 20, 30, 36]...
+47	2026-03-30T12:09:47.189925	652	18636	10.6	random	no changes
+48	2026-03-30T12:09:56.651398	455	19091	9.5	by_surah	strategy: random -> by_surah
+49	2026-03-30T12:10:06.139232	304	19395	9.5	by_surah	min_novelty: 40 -> 50; max_neighbors_hop3: 9 -> 10
+50	2026-03-30T12:10:15.743027	187	19582	9.6	by_surah	no changes
+51	2026-03-30T12:10:19.649886	912	20494	3.9	random	strategy: by_surah -> random; verses: 750 -> 500; max_neighbors_hop3: 10 -> 12; focus: specific -> all
+52	2026-03-30T12:10:23.437868	864	21358	3.8	random	no changes
+53	2026-03-30T12:10:27.656046	851	22209	4.2	random	focus: all -> surahs [3, 10, 30, 35, 36]...
+54	2026-03-30T12:10:31.651107	450	22659	4.0	random	thematic_bridge_max: 800 -> 500; max_neighbors_hop3: 12 -> 10
+55	2026-03-30T12:10:35.561249	620	23279	3.9	random	max_neighbors_hop1: 13 -> 15; focus: specific -> all
+56	2026-03-30T12:10:39.355676	625	23904	3.8	random	min_novelty: 50 -> 60; max_neighbors_hop1: 15 -> 14
+57	2026-03-30T12:10:49.043853	647	24551	9.7	high_connectivity	strategy: random -> high_connectivity; max_neighbors_hop1: 14 -> 16
+58	2026-03-30T12:10:58.565975	292	24843	9.5	high_connectivity	max_neighbors_hop3: 10 -> 11
+59	2026-03-30T12:11:08.099347	135	24978	9.5	high_connectivity	no changes
+60	2026-03-30T12:11:12.687137	596	25574	4.6	high_connectivity	transitive_max_chains: 500 -> 300; focus: all -> surahs [4, 6, 10, 12, 25]...
+61	2026-03-30T12:11:17.234140	260	25834	4.5	high_connectivity	shared_subject_max: 300 -> 200
+62	2026-03-30T12:11:26.838942	537	26371	9.6	high_connectivity	verses: 500 -> 2000; min_novelty: 60 -> 40; max_neighbors_hop1: 16 -> 17

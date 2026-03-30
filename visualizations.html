@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizations - Quran Knowledge Graph</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+      background: #060a14;
+      color: #cbd5e1;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── header ── */
+    header {
+      padding: 10px 20px;
+      border-bottom: 1px solid #1e293b;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-shrink: 0;
+      background: #0a0f1a;
+    }
+    header h1 { font-size: 1.05em; font-weight: 700; color: #10b981; white-space: nowrap; }
+    header p  { font-size: 0.75em; color: #334155; flex: 1; }
+    #header-tabs { display: flex; gap: 4px; }
+    #header-tabs .tab {
+      padding: 4px 14px; border-radius: 6px; font-size: 0.76em; font-weight: 600;
+      color: #64748b; text-decoration: none; border: 1px solid transparent;
+      transition: all 0.15s;
+    }
+    #header-tabs .tab:hover { color: #94a3b8; border-color: #1e293b; }
+    #header-tabs .tab.active { color: #10b981; border-color: #10b981; background: rgba(16,185,129,0.08); }
+
+    /* ── content ── */
+    .content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+    }
+    .content::-webkit-scrollbar { width: 5px; }
+    .content::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+    .content::-webkit-scrollbar-track { background: transparent; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .card.full-width {
+      grid-column: 1 / -1;
+    }
+    .card-title {
+      font-size: 0.85em;
+      font-weight: 600;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+
+    /* ── hero counter ── */
+    .hero-card {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 48px 24px;
+    }
+    .hero-number {
+      font-size: 4.5em;
+      font-weight: 800;
+      color: #10b981;
+      line-height: 1;
+      margin-bottom: 8px;
+      font-variant-numeric: tabular-nums;
+    }
+    .hero-subtitle {
+      font-size: 1.15em;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    /* ── stats grid ── */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 16px 8px;
+      background: #0a1020;
+      border-radius: 10px;
+      border: 1px solid #1a2540;
+    }
+    .stat-value {
+      font-size: 2em;
+      font-weight: 800;
+      color: #10b981;
+      line-height: 1.1;
+    }
+    .stat-label {
+      font-size: 0.78em;
+      color: #64748b;
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    /* ── live status ── */
+    .live-dot {
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      margin-right: 6px;
+      animation: livePulse 1.5s ease-in-out infinite;
+    }
+    .live-dot.offline { background: #475569; animation: none; }
+    @keyframes livePulse { 0%,100% { opacity:1; box-shadow:0 0 0 0 rgba(16,185,129,0.4); } 50% { opacity:0.6; box-shadow:0 0 0 6px rgba(16,185,129,0); } }
+    .live-count {
+      font-size: 2.5em;
+      font-weight: 800;
+      color: #10b981;
+      margin-top: 8px;
+    }
+    .live-label {
+      font-size: 0.82em;
+      color: #64748b;
+      margin-top: 2px;
+    }
+    .live-status-text {
+      font-size: 0.82em;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+    }
+
+    /* ── chart canvas wrapper ── */
+    .chart-wrap {
+      position: relative;
+      width: 100%;
+    }
+    .chart-wrap canvas {
+      width: 100% !important;
+    }
+
+    /* ── mobile ── */
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero-number { font-size: 3em; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      header { flex-wrap: wrap; }
+      header p { display: none; }
+      #header-tabs { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Quran Knowledge Graph</h1>
+  <p>Autonomous theological reasoning over 6,234 verses</p>
+  <nav id="header-tabs">
+    <a class="tab" href="/">Chat</a>
+    <a class="tab" href="/stats">Stats</a>
+    <a class="tab" href="/deductions">Deductions</a>
+    <a class="tab active" href="/visualizations">Visualizations</a>
+    <a class="tab" href="/presentation">Presentation</a>
+  </nav>
+</header>
+
+<div class="content">
+  <div class="grid">
+
+    <!-- 1. Hero Counter -->
+    <div class="card hero-card">
+      <div class="hero-number" id="hero-counter">0</div>
+      <div class="hero-subtitle">Novel Deductions Discovered Autonomously</div>
+    </div>
+
+    <!-- 8. Stats Grid -->
+    <div class="card full-width">
+      <div class="card-title">Knowledge Graph at a Glance</div>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-value">6,234</div>
+          <div class="stat-label">Verses</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">37,000+</div>
+          <div class="stat-label">Deductions</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">13</div>
+          <div class="stat-label">Themes</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">76</div>
+          <div class="stat-label">Theme Connections</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">5,744</div>
+          <div class="stat-label">Verses Referenced (92%)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">114</div>
+          <div class="stat-label">Surahs Covered</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Doughnut Chart: Rule Type Distribution -->
+    <div class="card">
+      <div class="card-title">Distribution by Rule Type</div>
+      <div class="chart-wrap">
+        <canvas id="doughnutChart"></canvas>
+      </div>
+    </div>
+
+    <!-- 5. Radar Chart: Quality Metrics -->
+    <div class="card">
+      <div class="card-title">Quality Metric Breakdown</div>
+      <div class="chart-wrap">
+        <canvas id="radarChart"></canvas>
+      </div>
+    </div>
+
+    <!-- 3. Horizontal Bar: Top Theological Categories -->
+    <div class="card full-width">
+      <div class="card-title">Top 13 Theological Categories by Deduction Count</div>
+      <div class="chart-wrap">
+        <canvas id="categoryChart" height="420"></canvas>
+      </div>
+    </div>
+
+    <!-- 4. Grouped Bar: Optimization Results -->
+    <div class="card">
+      <div class="card-title">AutoResearch Optimization Results</div>
+      <div class="chart-wrap">
+        <canvas id="optimizationChart"></canvas>
+      </div>
+    </div>
+
+    <!-- 7. Polar Area: Theme Connections -->
+    <div class="card">
+      <div class="card-title">Theme-to-Theme Connection Strengths</div>
+      <div class="chart-wrap">
+        <canvas id="polarChart"></canvas>
+      </div>
+    </div>
+
+    <!-- 6. Bar Chart: Bridge Keywords -->
+    <div class="card full-width">
+      <div class="card-title">Top 20 Bridge Keywords by Frequency</div>
+      <div class="chart-wrap">
+        <canvas id="keywordsChart" height="360"></canvas>
+      </div>
+    </div>
+
+    <!-- 9. Live Status -->
+    <div class="card full-width">
+      <div class="card-title">Live Pipeline Status</div>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+        <div>
+          <div class="live-status-text">
+            <span class="live-dot" id="live-dot"></span>
+            <span id="live-status-label">Checking...</span>
+          </div>
+          <div class="live-count" id="live-total">--</div>
+          <div class="live-label">Total Deductions</div>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <div style="font-size:0.8em;color:#475569;" id="live-details">Polling /api/deductions/status...</div>
+          <div style="font-size:0.75em;color:#334155;margin-top:4px;" id="live-updated"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ── Chart.js global defaults ──
+Chart.defaults.color = '#94a3b8';
+Chart.defaults.borderColor = '#1e293b';
+Chart.defaults.font.family = "system-ui, -apple-system, 'Segoe UI', sans-serif";
+
+// ── 1. Hero Counter Animation ──
+(function() {
+  const el = document.getElementById('hero-counter');
+  const target = 37000;
+  const duration = 2200;
+  const start = performance.now();
+  function tick(now) {
+    const t = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - t, 3);
+    const val = Math.floor(ease * target);
+    el.textContent = val.toLocaleString() + '+';
+    if (t < 1) requestAnimationFrame(tick);
+  }
+  // Start when visible
+  const obs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) { requestAnimationFrame(tick); obs.disconnect(); }
+  });
+  obs.observe(el);
+})();
+
+// ── 2. Doughnut Chart ──
+new Chart(document.getElementById('doughnutChart'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Thematic Bridge 3-Hop (70%)', 'Transitive Chain (13.5%)', 'Shared Subject Multi-Predicate (11.1%)', 'Shared Subject Synthesis (5.5%)'],
+    datasets: [{
+      data: [70, 13.5, 11.1, 5.5],
+      backgroundColor: ['#10b981', '#3b82f6', '#f59e0b', '#8b5cf6'],
+      borderColor: '#0f172a',
+      borderWidth: 3,
+      hoverOffset: 8
+    }]
+  },
+  options: {
+    responsive: true,
+    cutout: '60%',
+    plugins: {
+      legend: { position: 'bottom', labels: { padding: 14, usePointStyle: true, pointStyleWidth: 10, font: { size: 11 } } }
+    }
+  }
+});
+
+// ── 3. Horizontal Bar: Theological Categories ──
+(function() {
+  const categories = [
+    { label: 'Monotheism & God\'s Nature', value: 33874, color: '#10b981' },
+    { label: 'Prophecy & Revelation', value: 13795, color: '#3b82f6' },
+    { label: 'Afterlife & Judgment', value: 13239, color: '#ef4444' },
+    { label: 'Moral Law & Ethics', value: 11351, color: '#f59e0b' },
+    { label: 'Worship & Ritual', value: 7819, color: '#8b5cf6' },
+    { label: 'Covenant & Obedience', value: 6828, color: '#14b8a6' },
+    { label: 'Creation & Cosmology', value: 6604, color: '#06b6d4' },
+    { label: 'Prophetic Narratives', value: 3009, color: '#f97316' },
+    { label: 'Divine Mercy & Forgiveness', value: 2865, color: '#a3e635' },
+    { label: 'Social Law', value: 2448, color: '#ec4899' },
+    { label: 'Knowledge & Wisdom', value: 1828, color: '#818cf8' },
+    { label: 'Warfare & Struggle', value: 1562, color: '#dc2626' },
+    { label: 'Mathematical Miracle', value: 125, color: '#fbbf24' }
+  ];
+
+  new Chart(document.getElementById('categoryChart'), {
+    type: 'bar',
+    data: {
+      labels: categories.map(c => c.label),
+      datasets: [{
+        data: categories.map(c => c.value),
+        backgroundColor: categories.map(c => c.color),
+        borderRadius: 4,
+        barThickness: 24
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { color: '#1a2540' }, ticks: { font: { size: 11 } } },
+        y: { grid: { display: false }, ticks: { font: { size: 11.5 } } }
+      }
+    }
+  });
+})();
+
+// ── 4. Grouped Bar: Optimization ──
+new Chart(document.getElementById('optimizationChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Graph Quality', 'Cluster Coherence', 'Retrieval Quality'],
+    datasets: [
+      { label: 'Before', data: [75.47, 35.53, 58.99], backgroundColor: '#475569', borderRadius: 4, barPercentage: 0.6 },
+      { label: 'After',  data: [81.74, 59.87, 68.44], backgroundColor: '#10b981', borderRadius: 4, barPercentage: 0.6 }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position: 'top', labels: { usePointStyle: true, pointStyleWidth: 10, font: { size: 11 } } } },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+      y: { grid: { color: '#1a2540' }, min: 0, max: 100, ticks: { font: { size: 11 } } }
+    }
+  }
+});
+
+// ── 5. Radar Chart ──
+new Chart(document.getElementById('radarChart'), {
+  type: 'radar',
+  data: {
+    labels: ['Cluster Coherence', 'Retrieval Recall', 'Cross-Surah Ratio', 'Edge Density', 'Keyword Coverage', 'Vocabulary Efficiency', 'Avg Edge Weight'],
+    datasets: [{
+      label: 'Score',
+      data: [59.87, 79.96, 95.41, 87.57, 95.69, 97.59, 100.00],
+      backgroundColor: 'rgba(16,185,129,0.15)',
+      borderColor: '#10b981',
+      borderWidth: 2,
+      pointBackgroundColor: '#10b981',
+      pointBorderColor: '#0f172a',
+      pointBorderWidth: 2,
+      pointRadius: 4
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: {
+      r: {
+        beginAtZero: true, max: 100,
+        grid: { color: '#1a2540' },
+        angleLines: { color: '#1a2540' },
+        pointLabels: { font: { size: 10.5 }, color: '#94a3b8' },
+        ticks: { display: false }
+      }
+    }
+  }
+});
+
+// ── 6. Bar Chart: Bridge Keywords ──
+(function() {
+  const kw = [
+    ['salat',1578],['reward',1181],['woman',1140],['deserve',1081],['retribution',997],
+    ['wise',997],['help',964],['contact',944],['garden',859],['reverence',840],
+    ['omniscient',789],['almighty',787],['earth',683],['observe',676],['message',675],
+    ['flow',669],['righteous',669],['give',648],['generation',645],['wicked',645]
+  ];
+  new Chart(document.getElementById('keywordsChart'), {
+    type: 'bar',
+    data: {
+      labels: kw.map(k => k[0]),
+      datasets: [{
+        data: kw.map(k => k[1]),
+        backgroundColor: kw.map((_, i) => {
+          const colors = ['#10b981','#3b82f6','#06b6d4','#8b5cf6','#f59e0b','#14b8a6','#ec4899','#f97316','#a3e635','#818cf8'];
+          return colors[i % colors.length];
+        }),
+        borderRadius: 4,
+        barThickness: 28
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 11 }, maxRotation: 45, minRotation: 30 } },
+        y: { grid: { color: '#1a2540' }, ticks: { font: { size: 11 } } }
+      }
+    }
+  });
+})();
+
+// ── 7. Polar Area: Theme Connections ──
+new Chart(document.getElementById('polarChart'), {
+  type: 'polarArea',
+  data: {
+    labels: [
+      'Monotheism \u2194 Prophecy',
+      'Afterlife \u2194 Moral Law',
+      'Worship \u2194 Covenant',
+      'Monotheism \u2194 Afterlife',
+      'Prophecy \u2194 Narratives',
+      'Creation \u2194 Monotheism',
+      'Mercy \u2194 Moral Law',
+      'Social Law \u2194 Ethics'
+    ],
+    datasets: [{
+      data: [892, 764, 621, 587, 534, 498, 412, 378],
+      backgroundColor: [
+        'rgba(16,185,129,0.6)',
+        'rgba(59,130,246,0.6)',
+        'rgba(139,92,246,0.6)',
+        'rgba(239,68,68,0.6)',
+        'rgba(249,115,22,0.6)',
+        'rgba(6,182,212,0.6)',
+        'rgba(163,230,53,0.6)',
+        'rgba(236,72,153,0.6)'
+      ],
+      borderColor: '#0f172a',
+      borderWidth: 2
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'bottom', labels: { padding: 10, usePointStyle: true, pointStyleWidth: 10, font: { size: 10.5 } } }
+    },
+    scales: {
+      r: {
+        grid: { color: '#1a2540' },
+        ticks: { display: false }
+      }
+    }
+  }
+});
+
+// ── 9. Live Status Polling ──
+(function() {
+  const dot = document.getElementById('live-dot');
+  const label = document.getElementById('live-status-label');
+  const total = document.getElementById('live-total');
+  const details = document.getElementById('live-details');
+  const updated = document.getElementById('live-updated');
+
+  async function poll() {
+    try {
+      const res = await fetch('/api/deductions/status');
+      if (!res.ok) throw new Error(res.status);
+      const data = await res.json();
+      dot.classList.remove('offline');
+      label.textContent = data.running ? 'Pipeline Running' : 'Pipeline Idle';
+      total.textContent = (data.total_deductions || data.total || 0).toLocaleString();
+      details.textContent = data.message || ('Status: ' + (data.running ? 'Active' : 'Idle'));
+      updated.textContent = 'Last updated: ' + new Date().toLocaleTimeString();
+    } catch (e) {
+      dot.classList.add('offline');
+      label.textContent = 'Offline';
+      total.textContent = '--';
+      details.textContent = 'Unable to reach /api/deductions/status';
+      updated.textContent = 'Last attempt: ' + new Date().toLocaleTimeString();
+    }
+  }
+
+  poll();
+  setInterval(poll, 5000);
+})();
+</script>
+
+</body>
+</html>
