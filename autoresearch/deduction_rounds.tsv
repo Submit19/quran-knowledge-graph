@@ -291,3 +291,24 @@ round	timestamp	novel_found	total_novel	elapsed	strategy	mutations
 163	2026-03-30T12:29:17.722930	741	46926	7.4	random	max_neighbors_hop3: 6 -> 5
 164	2026-03-30T12:29:24.834366	878	47804	7.1	random	min_novelty: 80 -> 50; focus: all -> surahs [6, 21, 23, 26, 27]...
 165	2026-03-30T12:29:28.423658	440	48244	3.6	random	verses: 1000 -> 500
+166	2026-03-30T12:29:35.565632	500	48744	7.1	random	verses: 500 -> 3000
+167	2026-03-30T12:29:42.770516	248	48992	7.2	random	no changes
+168	2026-03-30T12:29:50.062437	201	49193	7.3	random	shared_subject_max: 200 -> 300
+169	2026-03-30T12:29:57.325806	276	49469	7.3	high_connectivity	strategy: random -> high_connectivity; shared_subject_max: 300 -> 500
+170	2026-03-30T12:30:04.411986	79	49548	7.1	high_connectivity	transitive_max_chains: 300 -> 800; min_novelty: 50 -> 70
+171	2026-03-30T12:30:34.142511	530	50078	29.7	high_connectivity	transitive_max_chains: 800 -> 200; focus: specific -> all
+172	2026-03-30T12:30:37.009059	424	50502	2.9	high_connectivity	verses: 3000 -> 2000; focus: all -> surahs [22, 25, 32, 41, 53]...
+173	2026-03-30T12:30:39.844695	0	50502	2.8	high_connectivity	verses: 2000 -> 750; max_neighbors_hop1: 13 -> 11
+174	2026-03-30T12:30:42.702836	0	50502	2.9	high_connectivity	verses: 750 -> 1000
+175	2026-03-30T12:30:45.408683	0	50502	2.7	high_connectivity	thematic_bridge_max: 800 -> 500; min_novelty: 70 -> 80
+176	2026-03-30T12:30:48.197040	0	50502	2.8	high_connectivity	no changes
+177	2026-03-30T12:30:50.993146	0	50502	2.8	high_connectivity	no changes
+178	2026-03-30T12:31:04.741729	225	50727	13.7	high_connectivity	focus: specific -> all
+179	2026-03-30T12:31:14.473719	18	50745	9.7	high_connectivity	verses: 1000 -> 500; thematic_bridge_max: 500 -> 800; max_neighbors_hop3: 5 -> 7
+180	2026-03-30T12:31:43.022400	159	50904	28.5	high_connectivity	verses: 500 -> 3000; thematic_bridge_max: 800 -> 200
+181	2026-03-30T12:32:12.629828	127	51031	29.6	high_connectivity	max_neighbors_hop2: 9 -> 10
+182	2026-03-30T12:32:30.826709	74	51105	18.2	high_connectivity	verses: 3000 -> 1500
+183	2026-03-30T12:32:48.852527	69	51174	18.0	high_connectivity	min_novelty: 80 -> 50
+184	2026-03-30T12:33:39.320420	151	51325	50.5	high_connectivity	verses: 1500 -> 6234
+185	2026-03-30T12:33:49.009224	220	51545	9.7	high_connectivity	focus: all -> surahs [6, 10, 26, 68, 87]...
+186	2026-03-30T12:33:59.148124	59	51604	10.1	high_connectivity	min_novelty: 50 -> 60

@@ -201,6 +201,19 @@ def main():
             "--max-experiments", "100",
         ])
 
+    # Additional loops (start after initial data exists)
+    time.sleep(10)
+    for loop_name, script_name in [
+        ("narrative_loop", "narrative_loop.py"),
+        ("contradiction_loop", "contradiction_loop.py"),
+        ("deepening_loop", "deepening_loop.py"),
+    ]:
+        script_path = os.path.join(AUTORESEARCH_DIR, script_name)
+        if os.path.exists(script_path):
+            manager.start(loop_name, [py, script_path, "--max-hours", "0"])
+        else:
+            print(f"  {script_name} not found, skipping")
+
     print("\n  All processes started. Monitoring...\n")
 
     # Monitor loop
