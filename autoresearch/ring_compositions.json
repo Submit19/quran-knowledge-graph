@@ -1,0 +1,4206 @@
+[
+  {
+    "surah": "109",
+    "surahName": "The Disbelievers",
+    "num_verses": 6,
+    "num_mirror_pairs": 1,
+    "avg_mirror_similarity": 0.2,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "109:1",
+          "109:5"
+        ],
+        "shared_keywords": [
+          "worship"
+        ],
+        "similarity": 0.2
+      }
+    ]
+  },
+  {
+    "surah": "2",
+    "surahName": "The Heifer",
+    "num_verses": 286,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.1618,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "2:1",
+          "2:281"
+        ],
+        "shared_keywords": [
+          "against",
+          "all",
+          "angels",
+          "any",
+          "aware",
+          "back",
+          "before",
+          "believe",
+          "believed",
+          "believers"
+        ],
+        "similarity": 0.105
+      },
+      {
+        "pair": [
+          "2:41",
+          "2:241"
+        ],
+        "shared_keywords": [
+          "about",
+          "after",
+          "among",
+          "any",
+          "anyone",
+          "away",
+          "because",
+          "been",
+          "before",
+          "believe"
+        ],
+        "similarity": 0.174
+      },
+      {
+        "pair": [
+          "2:81",
+          "2:201"
+        ],
+        "shared_keywords": [
+          "abide",
+          "abode",
+          "above",
+          "accordance",
+          "after",
+          "against",
+          "all",
+          "always",
+          "amicably",
+          "among"
+        ],
+        "similarity": 0.198
+      },
+      {
+        "pair": [
+          "2:121",
+          "2:161"
+        ],
+        "shared_keywords": [
+          "about",
+          "against",
+          "all",
+          "alone",
+          "also",
+          "among",
+          "another",
+          "anyone",
+          "appreciative",
+          "befalls"
+        ],
+        "similarity": 0.17
+      }
+    ]
+  },
+  {
+    "surah": "3",
+    "surahName": "The Amramites",
+    "num_verses": 200,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.1455,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "3:1",
+          "3:197"
+        ],
+        "shared_keywords": [
+          "abode",
+          "away",
+          "believe",
+          "better",
+          "destiny",
+          "far",
+          "flowing",
+          "gardens",
+          "given",
+          "god"
+        ],
+        "similarity": 0.091
+      },
+      {
+        "pair": [
+          "3:29",
+          "3:169"
+        ],
+        "shared_keywords": [
+          "all",
+          "among",
+          "another",
+          "away",
+          "believe",
+          "believed",
+          "believers",
+          "best",
+          "brought",
+          "can"
+        ],
+        "similarity": 0.155
+      },
+      {
+        "pair": [
+          "3:57",
+          "3:141"
+        ],
+        "shared_keywords": [
+          "about",
+          "after",
+          "alone",
+          "along",
+          "among",
+          "any",
+          "anyone",
+          "astray",
+          "aware",
+          "back"
+        ],
+        "similarity": 0.154
+      },
+      {
+        "pair": [
+          "3:85",
+          "3:113"
+        ],
+        "shared_keywords": [
+          "abide",
+          "advocate",
+          "all",
+          "among",
+          "angels",
+          "any",
+          "anything",
+          "attain",
+          "aware",
+          "been"
+        ],
+        "similarity": 0.182
+      }
+    ]
+  },
+  {
+    "surah": "4",
+    "surahName": "Women",
+    "num_verses": 176,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.1452,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "4:1",
+          "4:176"
+        ],
+        "shared_keywords": [
+          "all",
+          "children",
+          "female",
+          "get",
+          "gets",
+          "god",
+          "half",
+          "inheritance",
+          "leaves",
+          "left"
+        ],
+        "similarity": 0.074
+      },
+      {
+        "pair": [
+          "4:26",
+          "4:151"
+        ],
+        "shared_keywords": [
+          "about",
+          "admit",
+          "after",
+          "against",
+          "all",
+          "also",
+          "among",
+          "arrogant",
+          "before",
+          "being"
+        ],
+        "similarity": 0.156
+      },
+      {
+        "pair": [
+          "4:51",
+          "4:126"
+        ],
+        "shared_keywords": [
+          "all",
+          "among",
+          "any",
+          "astray",
+          "attain",
+          "aware",
+          "because",
+          "before",
+          "believe",
+          "believed"
+        ],
+        "similarity": 0.151
+      },
+      {
+        "pair": [
+          "4:76",
+          "4:101"
+        ],
+        "shared_keywords": [
+          "abode",
+          "advocate",
+          "against",
+          "all",
+          "also",
+          "among",
+          "anyone",
+          "astray",
+          "believe",
+          "believers"
+        ],
+        "similarity": 0.2
+      }
+    ]
+  },
+  {
+    "surah": "6",
+    "surahName": "Livestock",
+    "num_verses": 165,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.1358,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "6:1",
+          "6:162"
+        ],
+        "shared_keywords": [
+          "all",
+          "another",
+          "believe",
+          "commanded",
+          "devoted",
+          "earth",
+          "except",
+          "given",
+          "god",
+          "life"
+        ],
+        "similarity": 0.088
+      },
+      {
+        "pair": [
+          "6:24",
+          "6:139"
+        ],
+        "shared_keywords": [
+          "all",
+          "animals",
+          "anything",
+          "astray",
+          "away",
+          "backs",
+          "before",
+          "believe",
+          "better",
+          "can"
+        ],
+        "similarity": 0.136
+      },
+      {
+        "pair": [
+          "6:47",
+          "6:116"
+        ],
+        "shared_keywords": [
+          "all",
+          "among",
+          "any",
+          "anything",
+          "astray",
+          "attain",
+          "avoid",
+          "aware",
+          "been",
+          "before"
+        ],
+        "similarity": 0.158
+      },
+      {
+        "pair": [
+          "6:70",
+          "6:93"
+        ],
+        "shared_keywords": [
+          "about",
+          "all",
+          "among",
+          "any",
+          "back",
+          "been",
+          "before",
+          "being",
+          "believe",
+          "beside"
+        ],
+        "similarity": 0.161
+      }
+    ]
+  },
+  {
+    "surah": "7",
+    "surahName": "The Purgatory",
+    "num_verses": 206,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.1332,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "7:1",
+          "7:204"
+        ],
+        "shared_keywords": [
+          "before",
+          "day",
+          "fall",
+          "heed",
+          "him",
+          "lord",
+          "may",
+          "mercy",
+          "never",
+          "prostrate"
+        ],
+        "similarity": 0.054
+      },
+      {
+        "pair": [
+          "7:30",
+          "7:175"
+        ],
+        "shared_keywords": [
+          "about",
+          "above",
+          "adam",
+          "all",
+          "among",
+          "any",
+          "appreciative",
+          "bad",
+          "believe",
+          "beside"
+        ],
+        "similarity": 0.166
+      },
+      {
+        "pair": [
+          "7:59",
+          "7:146"
+        ],
+        "shared_keywords": [
+          "after",
+          "against",
+          "among",
+          "annihilated",
+          "any",
+          "arrogant",
+          "astray",
+          "believe",
+          "believed",
+          "best"
+        ],
+        "similarity": 0.141
+      },
+      {
+        "pair": [
+          "7:88",
+          "7:117"
+        ],
+        "shared_keywords": [
+          "afflicted",
+          "after",
+          "all",
+          "among",
+          "annihilated",
+          "any",
+          "away",
+          "before",
+          "believe",
+          "believed"
+        ],
+        "similarity": 0.172
+      }
+    ]
+  },
+  {
+    "surah": "9",
+    "surahName": "Ultimatum",
+    "num_verses": 127,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.1235,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "9:1",
+          "9:127"
+        ],
+        "shared_keywords": [
+          "god",
+          "hearts",
+          "left",
+          "people",
+          "thus",
+          "would"
+        ],
+        "similarity": 0.028
+      },
+      {
+        "pair": [
+          "9:19",
+          "9:109"
+        ],
+        "shared_keywords": [
+          "after",
+          "all",
+          "among",
+          "any",
+          "approval",
+          "around",
+          "became",
+          "believe",
+          "believers",
+          "cause"
+        ],
+        "similarity": 0.137
+      },
+      {
+        "pair": [
+          "9:37",
+          "9:91"
+        ],
+        "shared_keywords": [
+          "among",
+          "ask",
+          "behind",
+          "believe",
+          "believers",
+          "cause",
+          "charity",
+          "chosen",
+          "could",
+          "day"
+        ],
+        "similarity": 0.133
+      },
+      {
+        "pair": [
+          "9:55",
+          "9:73"
+        ],
+        "shared_keywords": [
+          "abide",
+          "after",
+          "all",
+          "among",
+          "ask",
+          "became",
+          "believe",
+          "believed",
+          "believers",
+          "cause"
+        ],
+        "similarity": 0.196
+      }
+    ]
+  },
+  {
+    "surah": "11",
+    "surahName": "Hood",
+    "num_verses": 123,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.116,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "11:1",
+          "11:120"
+        ],
+        "shared_keywords": [
+          "all",
+          "can",
+          "come",
+          "disbelieve",
+          "earth",
+          "god",
+          "heavens",
+          "him",
+          "lord",
+          "say"
+        ],
+        "similarity": 0.059
+      },
+      {
+        "pair": [
+          "11:18",
+          "11:103"
+        ],
+        "shared_keywords": [
+          "abide",
+          "about",
+          "against",
+          "among",
+          "any",
+          "blessed",
+          "comes",
+          "day",
+          "doubt",
+          "evil"
+        ],
+        "similarity": 0.138
+      },
+      {
+        "pair": [
+          "11:35",
+          "11:86"
+        ],
+        "shared_keywords": [
+          "among",
+          "any",
+          "before",
+          "believed",
+          "came",
+          "can",
+          "commit",
+          "find",
+          "god",
+          "him"
+        ],
+        "similarity": 0.133
+      },
+      {
+        "pair": [
+          "11:52",
+          "11:69"
+        ],
+        "shared_keywords": [
+          "among",
+          "back",
+          "bear",
+          "beside",
+          "brother",
+          "came",
+          "cannot",
+          "day",
+          "delivered",
+          "earth"
+        ],
+        "similarity": 0.134
+      }
+    ]
+  },
+  {
+    "surah": "5",
+    "surahName": "The Feast",
+    "num_verses": 120,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.1133,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "5:1",
+          "5:120"
+        ],
+        "shared_keywords": [
+          "belongs",
+          "earth",
+          "everything",
+          "god",
+          "heavens",
+          "omnipotent",
+          "sovereignty"
+        ],
+        "similarity": 0.021
+      },
+      {
+        "pair": [
+          "5:18",
+          "5:103"
+        ],
+        "shared_keywords": [
+          "after",
+          "all",
+          "among",
+          "anyone",
+          "bear",
+          "became",
+          "believers",
+          "blessings",
+          "can",
+          "children"
+        ],
+        "similarity": 0.127
+      },
+      {
+        "pair": [
+          "5:35",
+          "5:86"
+        ],
+        "shared_keywords": [
+          "after",
+          "all",
+          "almighty",
+          "among",
+          "any",
+          "ask",
+          "atone",
+          "away",
+          "believe",
+          "believers"
+        ],
+        "similarity": 0.136
+      },
+      {
+        "pair": [
+          "5:52",
+          "5:69"
+        ],
+        "shared_keywords": [
+          "admit",
+          "among",
+          "any",
+          "because",
+          "before",
+          "believe",
+          "believed",
+          "believers",
+          "come",
+          "committing"
+        ],
+        "similarity": 0.169
+      }
+    ]
+  },
+  {
+    "surah": "37",
+    "surahName": "The Arrangers",
+    "num_verses": 182,
+    "num_mirror_pairs": 3,
+    "avg_mirror_similarity": 0.112,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "37:1",
+          "37:157"
+        ],
+        "shared_keywords": [
+          "arrangers",
+          "been",
+          "between",
+          "cannot",
+          "day",
+          "decision",
+          "even",
+          "god",
+          "hell",
+          "lord"
+        ],
+        "similarity": 0.092
+      },
+      {
+        "pair": [
+          "37:27",
+          "37:131"
+        ],
+        "shared_keywords": [
+          "all",
+          "any",
+          "believe",
+          "day",
+          "exhausted",
+          "god",
+          "him",
+          "lord",
+          "messengers",
+          "one"
+        ],
+        "similarity": 0.094
+      },
+      {
+        "pair": [
+          "37:53",
+          "37:105"
+        ],
+        "shared_keywords": [
+          "absolutely",
+          "account",
+          "alone",
+          "called",
+          "devoted",
+          "disaster",
+          "generations",
+          "god",
+          "great",
+          "him"
+        ],
+        "similarity": 0.15
+      }
+    ]
+  },
+  {
+    "surah": "10",
+    "surahName": "Jonah",
+    "num_verses": 109,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.1075,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "10:1",
+          "10:106"
+        ],
+        "shared_keywords": [
+          "except",
+          "follow",
+          "god",
+          "goes",
+          "good",
+          "hardship",
+          "lord",
+          "own",
+          "people",
+          "relieve"
+        ],
+        "similarity": 0.06
+      },
+      {
+        "pair": [
+          "10:16",
+          "10:91"
+        ],
+        "shared_keywords": [
+          "all",
+          "alone",
+          "along",
+          "any",
+          "been",
+          "beside",
+          "came",
+          "can",
+          "come",
+          "day"
+        ],
+        "similarity": 0.111
+      },
+      {
+        "pair": [
+          "10:31",
+          "10:76"
+        ],
+        "shared_keywords": [
+          "any",
+          "being",
+          "believe",
+          "can",
+          "comes",
+          "does",
+          "earth",
+          "except",
+          "follow",
+          "god"
+        ],
+        "similarity": 0.095
+      },
+      {
+        "pair": [
+          "10:46",
+          "10:61"
+        ],
+        "shared_keywords": [
+          "about",
+          "absolutely",
+          "after",
+          "all",
+          "any",
+          "anything",
+          "believe",
+          "belongs",
+          "can",
+          "comes"
+        ],
+        "similarity": 0.164
+      }
+    ]
+  },
+  {
+    "surah": "12",
+    "surahName": "Joseph",
+    "num_verses": 111,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.1062,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "12:1",
+          "12:106"
+        ],
+        "shared_keywords": [
+          "all",
+          "before",
+          "believers",
+          "far",
+          "god",
+          "history",
+          "inspired",
+          "majority",
+          "people",
+          "quran"
+        ],
+        "similarity": 0.086
+      },
+      {
+        "pair": [
+          "12:16",
+          "12:91"
+        ],
+        "shared_keywords": [
+          "all",
+          "any",
+          "back",
+          "believe",
+          "can",
+          "caravan",
+          "conspired",
+          "dreams",
+          "earth",
+          "egypt"
+        ],
+        "similarity": 0.136
+      },
+      {
+        "pair": [
+          "12:31",
+          "12:76"
+        ],
+        "shared_keywords": [
+          "about",
+          "all",
+          "any",
+          "before",
+          "except",
+          "god",
+          "him",
+          "ignorant",
+          "indeed",
+          "joseph"
+        ],
+        "similarity": 0.093
+      },
+      {
+        "pair": [
+          "12:46",
+          "12:61"
+        ],
+        "shared_keywords": [
+          "about",
+          "anything",
+          "ask",
+          "back",
+          "bring",
+          "brother",
+          "came",
+          "can",
+          "come",
+          "entered"
+        ],
+        "similarity": 0.11
+      }
+    ]
+  },
+  {
+    "surah": "16",
+    "surahName": "The Bee",
+    "num_verses": 128,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.103,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "16:1",
+          "16:127"
+        ],
+        "shared_keywords": [
+          "god"
+        ],
+        "similarity": 0.006
+      },
+      {
+        "pair": [
+          "16:19",
+          "16:109"
+        ],
+        "shared_keywords": [
+          "all",
+          "better",
+          "come",
+          "community",
+          "consequently",
+          "day",
+          "dead",
+          "done",
+          "every",
+          "everything"
+        ],
+        "similarity": 0.133
+      },
+      {
+        "pair": [
+          "16:37",
+          "16:91"
+        ],
+        "shared_keywords": [
+          "because",
+          "before",
+          "disputed",
+          "does",
+          "done",
+          "down",
+          "everything",
+          "god",
+          "guide",
+          "hereafter"
+        ],
+        "similarity": 0.122
+      },
+      {
+        "pair": [
+          "16:55",
+          "16:73"
+        ],
+        "shared_keywords": [
+          "among",
+          "believe",
+          "bellies",
+          "belongs",
+          "blessings",
+          "can",
+          "cannot",
+          "created",
+          "disbelieve",
+          "down"
+        ],
+        "similarity": 0.151
+      }
+    ]
+  },
+  {
+    "surah": "26",
+    "surahName": "The Poets",
+    "num_verses": 227,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.1005,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "26:1",
+          "26:225"
+        ],
+        "shared_keywords": [
+          "god",
+          "say"
+        ],
+        "similarity": 0.014
+      },
+      {
+        "pair": [
+          "26:33",
+          "26:193"
+        ],
+        "shared_keywords": [
+          "believe",
+          "believers",
+          "came",
+          "children",
+          "come",
+          "every",
+          "follow",
+          "him",
+          "israel",
+          "like"
+        ],
+        "similarity": 0.061
+      },
+      {
+        "pair": [
+          "26:65",
+          "26:161"
+        ],
+        "shared_keywords": [
+          "all",
+          "almighty",
+          "assuredly",
+          "believers",
+          "created",
+          "day",
+          "forsake",
+          "generations",
+          "god",
+          "him"
+        ],
+        "similarity": 0.131
+      },
+      {
+        "pair": [
+          "26:97",
+          "26:129"
+        ],
+        "shared_keywords": [
+          "almighty",
+          "any",
+          "ask",
+          "assuredly",
+          "believers",
+          "brother",
+          "comes",
+          "disbelieved",
+          "god",
+          "good"
+        ],
+        "similarity": 0.196
+      }
+    ]
+  },
+  {
+    "surah": "39",
+    "surahName": "The Throngs",
+    "num_verses": 75,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.099,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "39:1",
+          "39:71"
+        ],
+        "shared_keywords": [
+          "after",
+          "all",
+          "among",
+          "day",
+          "disbelievers",
+          "earth",
+          "god",
+          "lord",
+          "receive",
+          "recompense"
+        ],
+        "similarity": 0.057
+      },
+      {
+        "pair": [
+          "39:11",
+          "39:61"
+        ],
+        "shared_keywords": [
+          "all",
+          "alone",
+          "been",
+          "can",
+          "day",
+          "god",
+          "him",
+          "lord",
+          "losers",
+          "never"
+        ],
+        "similarity": 0.121
+      },
+      {
+        "pair": [
+          "39:21",
+          "39:51"
+        ],
+        "shared_keywords": [
+          "before",
+          "best",
+          "consequences",
+          "day",
+          "god",
+          "guided",
+          "hell",
+          "lord",
+          "may",
+          "most"
+        ],
+        "similarity": 0.094
+      },
+      {
+        "pair": [
+          "39:31",
+          "39:41"
+        ],
+        "shared_keywords": [
+          "adversity",
+          "any",
+          "astray",
+          "before",
+          "believe",
+          "beside",
+          "blessing",
+          "come",
+          "day",
+          "earth"
+        ],
+        "similarity": 0.124
+      }
+    ]
+  },
+  {
+    "surah": "54",
+    "surahName": "The Moon",
+    "num_verses": 55,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.098,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "54:1",
+          "54:50"
+        ],
+        "shared_keywords": [],
+        "similarity": 0.0
+      },
+      {
+        "pair": [
+          "54:8",
+          "54:43"
+        ],
+        "shared_keywords": [
+          "disbelievers"
+        ],
+        "similarity": 0.013
+      },
+      {
+        "pair": [
+          "54:15",
+          "54:36"
+        ],
+        "shared_keywords": [
+          "any",
+          "consequently",
+          "does",
+          "easy",
+          "learn",
+          "made",
+          "people",
+          "quran",
+          "retribution",
+          "warnings"
+        ],
+        "similarity": 0.208
+      },
+      {
+        "pair": [
+          "54:22",
+          "54:29"
+        ],
+        "shared_keywords": [
+          "any",
+          "camel",
+          "does",
+          "easy",
+          "him",
+          "learn",
+          "made",
+          "one",
+          "quran",
+          "rejected"
+        ],
+        "similarity": 0.171
+      }
+    ]
+  },
+  {
+    "surah": "42",
+    "surahName": "Consultation",
+    "num_verses": 53,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0965,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "42:1",
+          "42:50"
+        ],
+        "shared_keywords": [
+          "about",
+          "absolutely",
+          "all",
+          "belongs",
+          "earth",
+          "everything",
+          "god",
+          "heavens",
+          "high",
+          "most"
+        ],
+        "similarity": 0.14
+      },
+      {
+        "pair": [
+          "42:8",
+          "42:43"
+        ],
+        "shared_keywords": [
+          "any",
+          "belongs",
+          "decreed",
+          "earth",
+          "find",
+          "god",
+          "heavens",
+          "lord",
+          "mercy",
+          "message"
+        ],
+        "similarity": 0.091
+      },
+      {
+        "pair": [
+          "42:15",
+          "42:36"
+        ],
+        "shared_keywords": [
+          "after",
+          "among",
+          "believe",
+          "far",
+          "give",
+          "god",
+          "incurred",
+          "lord",
+          "maintain",
+          "painful"
+        ],
+        "similarity": 0.075
+      },
+      {
+        "pair": [
+          "42:22",
+          "42:29"
+        ],
+        "shared_keywords": [
+          "appreciative",
+          "could",
+          "earth",
+          "god",
+          "lord",
+          "master",
+          "own",
+          "sins",
+          "spreads",
+          "willed"
+        ],
+        "similarity": 0.08
+      }
+    ]
+  },
+  {
+    "surah": "45",
+    "surahName": "Kneeling",
+    "num_verses": 37,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0945,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "45:1",
+          "45:36"
+        ],
+        "shared_keywords": [
+          "all",
+          "almighty",
+          "earth",
+          "god",
+          "heavens",
+          "most",
+          "wise"
+        ],
+        "similarity": 0.184
+      },
+      {
+        "pair": [
+          "45:6",
+          "45:31"
+        ],
+        "shared_keywords": [
+          "about",
+          "god",
+          "never",
+          "promise",
+          "recited",
+          "revelations"
+        ],
+        "similarity": 0.074
+      },
+      {
+        "pair": [
+          "45:11",
+          "45:26"
+        ],
+        "shared_keywords": [
+          "all",
+          "earth",
+          "everything",
+          "god",
+          "heavens",
+          "lord",
+          "people",
+          "righteousness"
+        ],
+        "similarity": 0.088
+      },
+      {
+        "pair": [
+          "45:16",
+          "45:21"
+        ],
+        "shared_keywords": [
+          "god",
+          "knowledge",
+          "one",
+          "righteous"
+        ],
+        "similarity": 0.032
+      }
+    ]
+  },
+  {
+    "surah": "18",
+    "surahName": "The Cave",
+    "num_verses": 110,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0925,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "18:1",
+          "18:106"
+        ],
+        "shared_keywords": [
+          "abide",
+          "any",
+          "beside",
+          "everything",
+          "forever",
+          "god",
+          "lead",
+          "life",
+          "lord",
+          "more"
+        ],
+        "similarity": 0.125
+      },
+      {
+        "pair": [
+          "18:16",
+          "18:91"
+        ],
+        "shared_keywords": [
+          "all",
+          "astray",
+          "away",
+          "beside",
+          "build",
+          "can",
+          "could",
+          "day",
+          "disbelieve",
+          "earth"
+        ],
+        "similarity": 0.101
+      },
+      {
+        "pair": [
+          "18:31",
+          "18:76"
+        ],
+        "shared_keywords": [
+          "after",
+          "all",
+          "because",
+          "better",
+          "could",
+          "earth",
+          "enough",
+          "far",
+          "him",
+          "life"
+        ],
+        "similarity": 0.08
+      },
+      {
+        "pair": [
+          "18:46",
+          "18:61"
+        ],
+        "shared_keywords": [
+          "all",
+          "can",
+          "choose",
+          "find",
+          "guidance",
+          "him",
+          "how",
+          "mercy",
+          "moses",
+          "one"
+        ],
+        "similarity": 0.064
+      }
+    ]
+  },
+  {
+    "surah": "8",
+    "surahName": "The Spoils of War",
+    "num_verses": 75,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0922,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "8:1",
+          "8:71"
+        ],
+        "shared_keywords": [
+          "against",
+          "another",
+          "believers",
+          "belong",
+          "everything",
+          "faith",
+          "forgiveness",
+          "gave",
+          "generous",
+          "god"
+        ],
+        "similarity": 0.097
+      },
+      {
+        "pair": [
+          "8:11",
+          "8:61"
+        ],
+        "shared_keywords": [
+          "believers",
+          "better",
+          "disbelieved",
+          "fight",
+          "fighting",
+          "god",
+          "hearer",
+          "hearts",
+          "help",
+          "omniscient"
+        ],
+        "similarity": 0.077
+      },
+      {
+        "pair": [
+          "8:21",
+          "8:51"
+        ],
+        "shared_keywords": [
+          "any",
+          "away",
+          "before",
+          "believe",
+          "creatures",
+          "does",
+          "god",
+          "known",
+          "may",
+          "people"
+        ],
+        "similarity": 0.09
+      },
+      {
+        "pair": [
+          "8:31",
+          "8:41"
+        ],
+        "shared_keywords": [
+          "all",
+          "could",
+          "defeated",
+          "disbelieved",
+          "each",
+          "everything",
+          "fully",
+          "god",
+          "hell",
+          "however"
+        ],
+        "similarity": 0.105
+      }
+    ]
+  },
+  {
+    "surah": "40",
+    "surahName": "Forgiver",
+    "num_verses": 85,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0922,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "40:1",
+          "40:85"
+        ],
+        "shared_keywords": [
+          "been",
+          "disbelievers",
+          "god",
+          "retribution"
+        ],
+        "similarity": 0.028
+      },
+      {
+        "pair": [
+          "40:13",
+          "40:73"
+        ],
+        "shared_keywords": [
+          "all",
+          "alone",
+          "because",
+          "before",
+          "beside",
+          "clear",
+          "consequences",
+          "disbelievers",
+          "earth",
+          "exposed"
+        ],
+        "similarity": 0.113
+      },
+      {
+        "pair": [
+          "40:25",
+          "40:61"
+        ],
+        "shared_keywords": [
+          "against",
+          "argue",
+          "around",
+          "before",
+          "came",
+          "can",
+          "clear",
+          "day",
+          "god",
+          "him"
+        ],
+        "similarity": 0.107
+      },
+      {
+        "pair": [
+          "40:37",
+          "40:49"
+        ],
+        "shared_keywords": [
+          "argue",
+          "believe",
+          "day",
+          "doubt",
+          "enter",
+          "god",
+          "hell",
+          "hellfire",
+          "incurred",
+          "judgment"
+        ],
+        "similarity": 0.121
+      }
+    ]
+  },
+  {
+    "surah": "29",
+    "surahName": "The Spider",
+    "num_verses": 69,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0915,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "29:1",
+          "29:64"
+        ],
+        "shared_keywords": [
+          "assuredly",
+          "believe",
+          "god",
+          "life",
+          "most",
+          "people",
+          "strive"
+        ],
+        "similarity": 0.056
+      },
+      {
+        "pair": [
+          "29:10",
+          "29:55"
+        ],
+        "shared_keywords": [
+          "all",
+          "among",
+          "aware",
+          "believe",
+          "believed",
+          "carry",
+          "come",
+          "day",
+          "fully",
+          "god"
+        ],
+        "similarity": 0.097
+      },
+      {
+        "pair": [
+          "29:19",
+          "29:46"
+        ],
+        "shared_keywords": [
+          "believe",
+          "disbelieve",
+          "earth",
+          "god",
+          "hell",
+          "him",
+          "lord",
+          "mercy",
+          "one",
+          "only"
+        ],
+        "similarity": 0.106
+      },
+      {
+        "pair": [
+          "29:28",
+          "29:37"
+        ],
+        "shared_keywords": [
+          "all",
+          "also",
+          "commit",
+          "consequence",
+          "doomed",
+          "earth",
+          "except",
+          "god",
+          "him",
+          "left"
+        ],
+        "similarity": 0.107
+      }
+    ]
+  },
+  {
+    "surah": "102",
+    "surahName": "Hoarding",
+    "num_verses": 8,
+    "num_mirror_pairs": 2,
+    "avg_mirror_similarity": 0.091,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "102:1",
+          "102:7"
+        ],
+        "shared_keywords": [],
+        "similarity": 0.0
+      },
+      {
+        "pair": [
+          "102:3",
+          "102:5"
+        ],
+        "shared_keywords": [
+          "find",
+          "out"
+        ],
+        "similarity": 0.182
+      }
+    ]
+  },
+  {
+    "surah": "25",
+    "surahName": "The Statute Book",
+    "num_verses": 77,
+    "num_mirror_pairs": 3,
+    "avg_mirror_similarity": 0.0883,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "25:1",
+          "25:67"
+        ],
+        "shared_keywords": [
+          "any",
+          "beside",
+          "day",
+          "disbelieve",
+          "give",
+          "life",
+          "merciful",
+          "most",
+          "never",
+          "only"
+        ],
+        "similarity": 0.068
+      },
+      {
+        "pair": [
+          "25:12",
+          "25:56"
+        ],
+        "shared_keywords": [
+          "all",
+          "any",
+          "before",
+          "day",
+          "destiny",
+          "good",
+          "help",
+          "him",
+          "lord",
+          "news"
+        ],
+        "similarity": 0.091
+      },
+      {
+        "pair": [
+          "25:23",
+          "25:45"
+        ],
+        "shared_keywords": [
+          "against",
+          "among",
+          "day",
+          "disbelievers",
+          "down",
+          "every",
+          "god",
+          "him",
+          "human",
+          "indeed"
+        ],
+        "similarity": 0.106
+      }
+    ]
+  },
+  {
+    "surah": "33",
+    "surahName": "The Parties",
+    "num_verses": 73,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0857,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "33:1",
+          "33:71"
+        ],
+        "shared_keywords": [
+          "forgiver",
+          "god",
+          "merciful",
+          "most",
+          "obey"
+        ],
+        "similarity": 0.03
+      },
+      {
+        "pair": [
+          "33:11",
+          "33:61"
+        ],
+        "shared_keywords": [
+          "about",
+          "all",
+          "also",
+          "find",
+          "god",
+          "killed",
+          "lord",
+          "messenger",
+          "only",
+          "people"
+        ],
+        "similarity": 0.076
+      },
+      {
+        "pair": [
+          "33:21",
+          "33:51"
+        ],
+        "shared_keywords": [
+          "all",
+          "also",
+          "any",
+          "believers",
+          "forgiver",
+          "god",
+          "gross",
+          "hearts",
+          "hereafter",
+          "homes"
+        ],
+        "similarity": 0.115
+      },
+      {
+        "pair": [
+          "33:31",
+          "33:41"
+        ],
+        "shared_keywords": [
+          "any",
+          "believing",
+          "deliver",
+          "divorced",
+          "father",
+          "frequently",
+          "generous",
+          "god",
+          "great",
+          "him"
+        ],
+        "similarity": 0.122
+      }
+    ]
+  },
+  {
+    "surah": "43",
+    "surahName": "Ornaments",
+    "num_verses": 89,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.085,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "43:1",
+          "43:85"
+        ],
+        "shared_keywords": [
+          "all",
+          "asked",
+          "created",
+          "earth",
+          "heavens",
+          "him",
+          "one",
+          "people",
+          "say",
+          "would"
+        ],
+        "similarity": 0.09
+      },
+      {
+        "pair": [
+          "43:13",
+          "43:73"
+        ],
+        "shared_keywords": [
+          "claims",
+          "given",
+          "gracious",
+          "lord",
+          "most",
+          "one",
+          "only",
+          "own",
+          "say",
+          "surely"
+        ],
+        "similarity": 0.074
+      },
+      {
+        "pair": [
+          "43:25",
+          "43:61"
+        ],
+        "shared_keywords": [
+          "another",
+          "any",
+          "become",
+          "can",
+          "devil",
+          "let",
+          "lord",
+          "most",
+          "one",
+          "ones"
+        ],
+        "similarity": 0.093
+      },
+      {
+        "pair": [
+          "43:37",
+          "43:49"
+        ],
+        "shared_keywords": [
+          "all",
+          "can",
+          "example",
+          "gods",
+          "guided",
+          "lord",
+          "one",
+          "over",
+          "people",
+          "pharaoh"
+        ],
+        "similarity": 0.083
+      }
+    ]
+  },
+  {
+    "surah": "13",
+    "surahName": "Thunder",
+    "num_verses": 43,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.084,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "13:1",
+          "13:43"
+        ],
+        "shared_keywords": [
+          "disbelieved",
+          "god",
+          "scripture"
+        ],
+        "similarity": 0.024
+      },
+      {
+        "pair": [
+          "13:7",
+          "13:37"
+        ],
+        "shared_keywords": [
+          "accordance",
+          "can",
+          "come",
+          "every",
+          "god",
+          "him",
+          "knows",
+          "master",
+          "miracle",
+          "most"
+        ],
+        "similarity": 0.082
+      },
+      {
+        "pair": [
+          "13:13",
+          "13:31"
+        ],
+        "shared_keywords": [
+          "all",
+          "any",
+          "believers",
+          "close",
+          "destiny",
+          "disbelievers",
+          "earth",
+          "even",
+          "give",
+          "god"
+        ],
+        "similarity": 0.11
+      },
+      {
+        "pair": [
+          "13:19",
+          "13:25"
+        ],
+        "shared_keywords": [
+          "commanded",
+          "covenant",
+          "deserved",
+          "destiny",
+          "evil",
+          "god",
+          "joined",
+          "joyous",
+          "lord",
+          "one"
+        ],
+        "similarity": 0.12
+      }
+    ]
+  },
+  {
+    "surah": "17",
+    "surahName": "The Children of Israel",
+    "num_verses": 111,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0835,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "17:1",
+          "17:106"
+        ],
+        "shared_keywords": [
+          "all",
+          "any",
+          "best",
+          "does",
+          "fall",
+          "him",
+          "lord",
+          "most",
+          "never",
+          "order"
+        ],
+        "similarity": 0.071
+      },
+      {
+        "pair": [
+          "17:16",
+          "17:91"
+        ],
+        "shared_keywords": [
+          "after",
+          "any",
+          "believing",
+          "beside",
+          "cognizant",
+          "even",
+          "except",
+          "fully",
+          "god",
+          "him"
+        ],
+        "similarity": 0.079
+      },
+      {
+        "pair": [
+          "17:31",
+          "17:76"
+        ],
+        "shared_keywords": [
+          "all",
+          "another",
+          "believe",
+          "can",
+          "cited",
+          "could",
+          "everyone",
+          "examples",
+          "given",
+          "great"
+        ],
+        "similarity": 0.085
+      },
+      {
+        "pair": [
+          "17:46",
+          "17:61"
+        ],
+        "shared_keywords": [
+          "advocate",
+          "after",
+          "against",
+          "alone",
+          "before",
+          "causes",
+          "created",
+          "day",
+          "devil",
+          "even"
+        ],
+        "similarity": 0.099
+      }
+    ]
+  },
+  {
+    "surah": "55",
+    "surahName": "Most Gracious",
+    "num_verses": 78,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0793,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "55:1",
+          "55:78"
+        ],
+        "shared_keywords": [
+          "most"
+        ],
+        "similarity": 0.024
+      },
+      {
+        "pair": [
+          "55:12",
+          "55:67"
+        ],
+        "shared_keywords": [
+          "can",
+          "deny",
+          "human",
+          "lord",
+          "marvels"
+        ],
+        "similarity": 0.102
+      },
+      {
+        "pair": [
+          "55:23",
+          "55:56"
+        ],
+        "shared_keywords": [
+          "can",
+          "deny",
+          "humans",
+          "jinns",
+          "like",
+          "lord",
+          "marvels"
+        ],
+        "similarity": 0.123
+      },
+      {
+        "pair": [
+          "55:34",
+          "55:45"
+        ],
+        "shared_keywords": [
+          "can",
+          "deny",
+          "lord",
+          "marvels"
+        ],
+        "similarity": 0.068
+      }
+    ]
+  },
+  {
+    "surah": "19",
+    "surahName": "Mary",
+    "num_verses": 98,
+    "num_mirror_pairs": 3,
+    "avg_mirror_similarity": 0.077,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "19:1",
+          "19:85"
+        ],
+        "shared_keywords": [
+          "about",
+          "before",
+          "day",
+          "good",
+          "him",
+          "news",
+          "righteous",
+          "said",
+          "servant",
+          "son"
+        ],
+        "similarity": 0.073
+      },
+      {
+        "pair": [
+          "19:15",
+          "19:71"
+        ],
+        "shared_keywords": [
+          "back",
+          "before",
+          "gracious",
+          "him",
+          "how",
+          "lord",
+          "may",
+          "most",
+          "righteous",
+          "said"
+        ],
+        "similarity": 0.063
+      },
+      {
+        "pair": [
+          "19:29",
+          "19:57"
+        ],
+        "shared_keywords": [
+          "abraham",
+          "among",
+          "any",
+          "believe",
+          "blessed",
+          "come",
+          "contact",
+          "day",
+          "die",
+          "earth"
+        ],
+        "similarity": 0.095
+      }
+    ]
+  },
+  {
+    "surah": "101",
+    "surahName": "The Shocker",
+    "num_verses": 11,
+    "num_mirror_pairs": 3,
+    "avg_mirror_similarity": 0.077,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "101:1",
+          "101:11"
+        ],
+        "shared_keywords": [],
+        "similarity": 0.0
+      },
+      {
+        "pair": [
+          "101:3",
+          "101:9"
+        ],
+        "shared_keywords": [],
+        "similarity": 0.0
+      },
+      {
+        "pair": [
+          "101:5",
+          "101:7"
+        ],
+        "shared_keywords": [
+          "him",
+          "weights",
+          "whose"
+        ],
+        "similarity": 0.231
+      }
+    ]
+  },
+  {
+    "surah": "23",
+    "surahName": "The Believers",
+    "num_verses": 118,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0765,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "23:1",
+          "23:113"
+        ],
+        "shared_keywords": [
+          "any",
+          "created",
+          "day",
+          "god",
+          "him",
+          "kind",
+          "most",
+          "only",
+          "vain"
+        ],
+        "similarity": 0.076
+      },
+      {
+        "pair": [
+          "23:17",
+          "23:97"
+        ],
+        "shared_keywords": [
+          "all",
+          "among",
+          "another",
+          "comes",
+          "gone",
+          "lord",
+          "people",
+          "said",
+          "say",
+          "send"
+        ],
+        "similarity": 0.048
+      },
+      {
+        "pair": [
+          "23:33",
+          "23:81"
+        ],
+        "shared_keywords": [
+          "after",
+          "bones",
+          "can",
+          "die",
+          "dust",
+          "god",
+          "him",
+          "lord",
+          "more",
+          "never"
+        ],
+        "similarity": 0.109
+      },
+      {
+        "pair": [
+          "23:49",
+          "23:65"
+        ],
+        "shared_keywords": [
+          "before",
+          "complain",
+          "everything",
+          "indeed",
+          "lord",
+          "never",
+          "one",
+          "recognize",
+          "retribution",
+          "scripture"
+        ],
+        "similarity": 0.073
+      }
+    ]
+  },
+  {
+    "surah": "22",
+    "surahName": "Pilgrimage",
+    "num_verses": 78,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.076,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "22:1",
+          "22:78"
+        ],
+        "shared_keywords": [
+          "among",
+          "god",
+          "lord",
+          "one",
+          "people",
+          "thus",
+          "witness"
+        ],
+        "similarity": 0.04
+      },
+      {
+        "pair": [
+          "22:12",
+          "22:67"
+        ],
+        "shared_keywords": [
+          "all",
+          "among",
+          "anything",
+          "believe",
+          "beside",
+          "cannot",
+          "day",
+          "disbelieve",
+          "earth",
+          "everyone"
+        ],
+        "similarity": 0.109
+      },
+      {
+        "pair": [
+          "22:23",
+          "22:56"
+        ],
+        "shared_keywords": [
+          "absolutely",
+          "admit",
+          "all",
+          "any",
+          "being",
+          "believe",
+          "beside",
+          "decreed",
+          "deserved",
+          "except"
+        ],
+        "similarity": 0.099
+      },
+      {
+        "pair": [
+          "22:34",
+          "22:45"
+        ],
+        "shared_keywords": [
+          "any",
+          "been",
+          "before",
+          "believe",
+          "earth",
+          "evil",
+          "god",
+          "hearts",
+          "led",
+          "lord"
+        ],
+        "similarity": 0.056
+      }
+    ]
+  },
+  {
+    "surah": "28",
+    "surahName": "History",
+    "num_verses": 88,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.076,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "28:1",
+          "28:85"
+        ],
+        "shared_keywords": [
+          "all",
+          "him",
+          "one"
+        ],
+        "similarity": 0.021
+      },
+      {
+        "pair": [
+          "28:13",
+          "28:73"
+        ],
+        "shared_keywords": [
+          "against",
+          "asked",
+          "before",
+          "better",
+          "came",
+          "earth",
+          "god",
+          "him",
+          "knowledge",
+          "may"
+        ],
+        "similarity": 0.088
+      },
+      {
+        "pair": [
+          "28:25",
+          "28:61"
+        ],
+        "shared_keywords": [
+          "can",
+          "come",
+          "god",
+          "him",
+          "lord",
+          "one",
+          "provide",
+          "righteous",
+          "said",
+          "where"
+        ],
+        "similarity": 0.046
+      },
+      {
+        "pair": [
+          "28:37",
+          "28:49"
+        ],
+        "shared_keywords": [
+          "after",
+          "annihilated",
+          "any",
+          "because",
+          "before",
+          "cannot",
+          "come",
+          "consequently",
+          "deeds",
+          "given"
+        ],
+        "similarity": 0.149
+      }
+    ]
+  },
+  {
+    "surah": "21",
+    "surahName": "The Prophets",
+    "num_verses": 112,
+    "num_mirror_pairs": 3,
+    "avg_mirror_similarity": 0.0753,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "21:1",
+          "21:97"
+        ],
+        "shared_keywords": [
+          "come",
+          "earth",
+          "everything",
+          "heaven",
+          "just",
+          "know",
+          "like",
+          "lord",
+          "oblivious",
+          "other"
+        ],
+        "similarity": 0.093
+      },
+      {
+        "pair": [
+          "21:17",
+          "21:81"
+        ],
+        "shared_keywords": [
+          "all",
+          "alone",
+          "any",
+          "could",
+          "god",
+          "him",
+          "lord",
+          "made",
+          "most",
+          "one"
+        ],
+        "similarity": 0.084
+      },
+      {
+        "pair": [
+          "21:33",
+          "21:65"
+        ],
+        "shared_keywords": [
+          "accordance",
+          "another",
+          "before",
+          "cannot",
+          "fire",
+          "gods",
+          "incurred",
+          "old",
+          "people",
+          "protect"
+        ],
+        "similarity": 0.049
+      }
+    ]
+  },
+  {
+    "surah": "30",
+    "surahName": "The Romans",
+    "num_verses": 60,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.075,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "30:1",
+          "30:57"
+        ],
+        "shared_keywords": [
+          "day",
+          "disbelievers",
+          "god",
+          "know",
+          "people",
+          "promise"
+        ],
+        "similarity": 0.067
+      },
+      {
+        "pair": [
+          "30:9",
+          "30:49"
+        ],
+        "shared_keywords": [
+          "believe",
+          "comes",
+          "day",
+          "disbelieve",
+          "god",
+          "guilty",
+          "hour",
+          "life",
+          "one",
+          "pass"
+        ],
+        "similarity": 0.083
+      },
+      {
+        "pair": [
+          "30:17",
+          "30:41"
+        ],
+        "shared_keywords": [
+          "among",
+          "day",
+          "down",
+          "earth",
+          "god",
+          "land",
+          "love",
+          "people",
+          "proofs",
+          "sends"
+        ],
+        "similarity": 0.086
+      },
+      {
+        "pair": [
+          "30:25",
+          "30:33"
+        ],
+        "shared_keywords": [
+          "can",
+          "god",
+          "him",
+          "idol",
+          "much",
+          "one",
+          "out",
+          "own",
+          "people",
+          "therefore"
+        ],
+        "similarity": 0.064
+      }
+    ]
+  },
+  {
+    "surah": "24",
+    "surahName": "Light",
+    "num_verses": 64,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0748,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "24:1",
+          "24:64"
+        ],
+        "shared_keywords": [
+          "day",
+          "god",
+          "him",
+          "may"
+        ],
+        "similarity": 0.045
+      },
+      {
+        "pair": [
+          "24:10",
+          "24:55"
+        ],
+        "shared_keywords": [
+          "among",
+          "because",
+          "believe",
+          "believers",
+          "better",
+          "each",
+          "explains",
+          "god",
+          "good",
+          "may"
+        ],
+        "similarity": 0.099
+      },
+      {
+        "pair": [
+          "24:19",
+          "24:46"
+        ],
+        "shared_keywords": [
+          "among",
+          "believe",
+          "believers",
+          "everything",
+          "fully",
+          "god",
+          "may",
+          "treat",
+          "wills",
+          "would"
+        ],
+        "similarity": 0.061
+      },
+      {
+        "pair": [
+          "24:28",
+          "24:37"
+        ],
+        "shared_keywords": [
+          "allegory",
+          "almost",
+          "aware",
+          "belongs",
+          "cover",
+          "day",
+          "earth",
+          "everything",
+          "eyes",
+          "fully"
+        ],
+        "similarity": 0.094
+      }
+    ]
+  },
+  {
+    "surah": "41",
+    "surahName": "Detailed",
+    "num_verses": 54,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.074,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "41:1",
+          "41:50"
+        ],
+        "shared_keywords": [
+          "away",
+          "being",
+          "disbelievers",
+          "god",
+          "him",
+          "human",
+          "most"
+        ],
+        "similarity": 0.064
+      },
+      {
+        "pair": [
+          "41:8",
+          "41:43"
+        ],
+        "shared_keywords": [
+          "believe",
+          "come",
+          "disbelieve",
+          "him",
+          "idols",
+          "lord",
+          "made",
+          "messengers",
+          "said",
+          "say"
+        ],
+        "similarity": 0.067
+      },
+      {
+        "pair": [
+          "41:15",
+          "41:36"
+        ],
+        "shared_keywords": [
+          "arrogant",
+          "can",
+          "created",
+          "day",
+          "everything",
+          "god",
+          "him",
+          "life",
+          "one",
+          "revelations"
+        ],
+        "similarity": 0.071
+      },
+      {
+        "pair": [
+          "41:22",
+          "41:29"
+        ],
+        "shared_keywords": [
+          "abode",
+          "become",
+          "can",
+          "disbelieved",
+          "god",
+          "humans",
+          "jinns",
+          "lord",
+          "may",
+          "such"
+        ],
+        "similarity": 0.094
+      }
+    ]
+  },
+  {
+    "surah": "46",
+    "surahName": "The Dunes",
+    "num_verses": 35,
+    "num_mirror_pairs": 3,
+    "avg_mirror_similarity": 0.0723,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "46:1",
+          "46:31"
+        ],
+        "shared_keywords": [
+          "astray",
+          "before",
+          "day",
+          "earth",
+          "god",
+          "heavens",
+          "one",
+          "other",
+          "respond",
+          "say"
+        ],
+        "similarity": 0.097
+      },
+      {
+        "pair": [
+          "46:6",
+          "46:26"
+        ],
+        "shared_keywords": [
+          "fabricated",
+          "god",
+          "idols",
+          "people",
+          "revealed",
+          "revelations",
+          "said",
+          "truth"
+        ],
+        "similarity": 0.066
+      },
+      {
+        "pair": [
+          "46:11",
+          "46:21"
+        ],
+        "shared_keywords": [
+          "about",
+          "before",
+          "fear",
+          "god",
+          "him",
+          "lord",
+          "said"
+        ],
+        "similarity": 0.054
+      }
+    ]
+  },
+  {
+    "surah": "47",
+    "surahName": "Muhammad",
+    "num_verses": 38,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0722,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "47:1",
+          "47:36"
+        ],
+        "shared_keywords": [
+          "believe",
+          "cause",
+          "god",
+          "people",
+          "while",
+          "without"
+        ],
+        "similarity": 0.067
+      },
+      {
+        "pair": [
+          "47:6",
+          "47:31"
+        ],
+        "shared_keywords": [
+          "all",
+          "believe",
+          "disbelieve",
+          "disbelievers",
+          "god",
+          "nullifies",
+          "vain",
+          "works"
+        ],
+        "similarity": 0.116
+      },
+      {
+        "pair": [
+          "47:11",
+          "47:26"
+        ],
+        "shared_keywords": [
+          "all",
+          "because",
+          "evil",
+          "god",
+          "works"
+        ],
+        "similarity": 0.047
+      },
+      {
+        "pair": [
+          "47:16",
+          "47:21"
+        ],
+        "shared_keywords": [
+          "god",
+          "guidance",
+          "leave",
+          "only",
+          "soon",
+          "would"
+        ],
+        "similarity": 0.059
+      }
+    ]
+  },
+  {
+    "surah": "20",
+    "surahName": "T.H.",
+    "num_verses": 135,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0713,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "20:1",
+          "20:134"
+        ],
+        "shared_keywords": [
+          "all",
+          "find",
+          "lord",
+          "said",
+          "surely"
+        ],
+        "similarity": 0.041
+      },
+      {
+        "pair": [
+          "20:20",
+          "20:115"
+        ],
+        "shared_keywords": [
+          "another",
+          "down",
+          "family",
+          "glorify",
+          "him",
+          "let",
+          "lord",
+          "may",
+          "said",
+          "seer"
+        ],
+        "similarity": 0.059
+      },
+      {
+        "pair": [
+          "20:39",
+          "20:96"
+        ],
+        "shared_keywords": [
+          "about",
+          "all",
+          "before",
+          "can",
+          "come",
+          "down",
+          "fear",
+          "generations",
+          "heed",
+          "inspired"
+        ],
+        "similarity": 0.103
+      },
+      {
+        "pair": [
+          "20:58",
+          "20:77"
+        ],
+        "shared_keywords": [
+          "aaron",
+          "believe",
+          "comes",
+          "fear",
+          "god",
+          "incur",
+          "life",
+          "lord",
+          "may",
+          "moses"
+        ],
+        "similarity": 0.082
+      }
+    ]
+  },
+  {
+    "surah": "48",
+    "surahName": "Victory",
+    "num_verses": 29,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0708,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "48:1",
+          "48:29"
+        ],
+        "shared_keywords": [
+          "blessings",
+          "god",
+          "great",
+          "messenger"
+        ],
+        "similarity": 0.053
+      },
+      {
+        "pair": [
+          "48:5",
+          "48:25"
+        ],
+        "shared_keywords": [
+          "about",
+          "all",
+          "believing",
+          "god",
+          "men",
+          "requite",
+          "sent",
+          "witness",
+          "women"
+        ],
+        "similarity": 0.073
+      },
+      {
+        "pair": [
+          "48:9",
+          "48:21"
+        ],
+        "shared_keywords": [
+          "everything",
+          "god",
+          "hands",
+          "such"
+        ],
+        "similarity": 0.04
+      },
+      {
+        "pair": [
+          "48:13",
+          "48:17"
+        ],
+        "shared_keywords": [
+          "away",
+          "god",
+          "messenger",
+          "most",
+          "obey",
+          "painful",
+          "people",
+          "requite",
+          "retribution",
+          "spoils"
+        ],
+        "similarity": 0.117
+      }
+    ]
+  },
+  {
+    "surah": "66",
+    "surahName": "Prohibition",
+    "num_verses": 12,
+    "num_mirror_pairs": 3,
+    "avg_mirror_similarity": 0.0683,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "66:1",
+          "66:11"
+        ],
+        "shared_keywords": [
+          "god",
+          "lord"
+        ],
+        "similarity": 0.048
+      },
+      {
+        "pair": [
+          "66:3",
+          "66:9"
+        ],
+        "shared_keywords": [
+          "against",
+          "believers",
+          "god",
+          "prophet",
+          "righteous",
+          "two",
+          "wife"
+        ],
+        "similarity": 0.111
+      },
+      {
+        "pair": [
+          "66:5",
+          "66:7"
+        ],
+        "shared_keywords": [
+          "believe",
+          "god",
+          "lord"
+        ],
+        "similarity": 0.046
+      }
+    ]
+  },
+  {
+    "surah": "49",
+    "surahName": "The Walls",
+    "num_verses": 18,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0673,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "49:1",
+          "49:17"
+        ],
+        "shared_keywords": [
+          "god"
+        ],
+        "similarity": 0.023
+      },
+      {
+        "pair": [
+          "49:3",
+          "49:15"
+        ],
+        "shared_keywords": [
+          "god",
+          "messenger",
+          "ones"
+        ],
+        "similarity": 0.068
+      },
+      {
+        "pair": [
+          "49:5",
+          "49:13"
+        ],
+        "shared_keywords": [
+          "any",
+          "forgiver",
+          "god",
+          "merciful",
+          "most",
+          "people",
+          "until"
+        ],
+        "similarity": 0.104
+      },
+      {
+        "pair": [
+          "49:7",
+          "49:11"
+        ],
+        "shared_keywords": [
+          "abhor",
+          "faith",
+          "god",
+          "most",
+          "wickedness"
+        ],
+        "similarity": 0.074
+      }
+    ]
+  },
+  {
+    "surah": "62",
+    "surahName": "Friday",
+    "num_verses": 11,
+    "num_mirror_pairs": 3,
+    "avg_mirror_similarity": 0.0667,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "62:1",
+          "62:11"
+        ],
+        "shared_keywords": [
+          "far",
+          "god"
+        ],
+        "similarity": 0.051
+      },
+      {
+        "pair": [
+          "62:3",
+          "62:9"
+        ],
+        "shared_keywords": [
+          "god"
+        ],
+        "similarity": 0.024
+      },
+      {
+        "pair": [
+          "62:5",
+          "62:7"
+        ],
+        "shared_keywords": [
+          "all",
+          "death",
+          "god",
+          "long",
+          "say",
+          "wicked"
+        ],
+        "similarity": 0.125
+      }
+    ]
+  },
+  {
+    "surah": "27",
+    "surahName": "The Ant",
+    "num_verses": 93,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0665,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "27:1",
+          "27:92"
+        ],
+        "shared_keywords": [
+          "god",
+          "good",
+          "lord",
+          "proofs",
+          "quran"
+        ],
+        "similarity": 0.043
+      },
+      {
+        "pair": [
+          "27:14",
+          "27:79"
+        ],
+        "shared_keywords": [
+          "all",
+          "before",
+          "earth",
+          "everything",
+          "get",
+          "god",
+          "good",
+          "heavens",
+          "him",
+          "knowledge"
+        ],
+        "similarity": 0.083
+      },
+      {
+        "pair": [
+          "27:27",
+          "27:66"
+        ],
+        "shared_keywords": [
+          "come",
+          "given",
+          "god",
+          "most",
+          "one",
+          "people",
+          "said"
+        ],
+        "similarity": 0.043
+      },
+      {
+        "pair": [
+          "27:40",
+          "27:53"
+        ],
+        "shared_keywords": [
+          "been",
+          "commit",
+          "god",
+          "good",
+          "him",
+          "idols",
+          "indeed",
+          "instead",
+          "know",
+          "mercy"
+        ],
+        "similarity": 0.097
+      }
+    ]
+  },
+  {
+    "surah": "59",
+    "surahName": "Exodus",
+    "num_verses": 24,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0663,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "59:1",
+          "59:22"
+        ],
+        "shared_keywords": [
+          "almighty",
+          "earth",
+          "everything",
+          "glorifying",
+          "god",
+          "heavens",
+          "most",
+          "one",
+          "wise"
+        ],
+        "similarity": 0.115
+      },
+      {
+        "pair": [
+          "59:4",
+          "59:19"
+        ],
+        "shared_keywords": [
+          "god",
+          "wicked"
+        ],
+        "similarity": 0.034
+      },
+      {
+        "pair": [
+          "59:7",
+          "59:16"
+        ],
+        "shared_keywords": [
+          "god",
+          "reverence"
+        ],
+        "similarity": 0.021
+      },
+      {
+        "pair": [
+          "59:10",
+          "59:13"
+        ],
+        "shared_keywords": [
+          "among",
+          "fact",
+          "fight",
+          "god",
+          "hearts",
+          "people",
+          "preceded",
+          "would"
+        ],
+        "similarity": 0.095
+      }
+    ]
+  },
+  {
+    "surah": "77",
+    "surahName": "Dispatched",
+    "num_verses": 50,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0663,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "77:1",
+          "77:50"
+        ],
+        "shared_keywords": [],
+        "similarity": 0.0
+      },
+      {
+        "pair": [
+          "77:8",
+          "77:43"
+        ],
+        "shared_keywords": [
+          "day",
+          "thus"
+        ],
+        "similarity": 0.071
+      },
+      {
+        "pair": [
+          "77:15",
+          "77:36"
+        ],
+        "shared_keywords": [
+          "day",
+          "generations",
+          "rejectors",
+          "woe"
+        ],
+        "similarity": 0.121
+      },
+      {
+        "pair": [
+          "77:22",
+          "77:29"
+        ],
+        "shared_keywords": [
+          "day",
+          "rejectors",
+          "woe"
+        ],
+        "similarity": 0.073
+      }
+    ]
+  },
+  {
+    "surah": "34",
+    "surahName": "Sheba",
+    "num_verses": 54,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.066,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "34:1",
+          "34:50"
+        ],
+        "shared_keywords": [
+          "believe",
+          "everything",
+          "lord",
+          "say"
+        ],
+        "similarity": 0.034
+      },
+      {
+        "pair": [
+          "34:8",
+          "34:43"
+        ],
+        "shared_keywords": [
+          "about",
+          "all",
+          "also",
+          "any",
+          "anything",
+          "came",
+          "crazy",
+          "fabricated",
+          "god",
+          "lies"
+        ],
+        "similarity": 0.093
+      },
+      {
+        "pair": [
+          "34:15",
+          "34:36"
+        ],
+        "shared_keywords": [
+          "all",
+          "believe",
+          "believers",
+          "lord",
+          "only",
+          "power",
+          "provisions",
+          "therein",
+          "used"
+        ],
+        "similarity": 0.059
+      },
+      {
+        "pair": [
+          "34:22",
+          "34:29"
+        ],
+        "shared_keywords": [
+          "before",
+          "god",
+          "him",
+          "idols",
+          "lord",
+          "one",
+          "say",
+          "sent",
+          "set",
+          "warner"
+        ],
+        "similarity": 0.078
+      }
+    ]
+  },
+  {
+    "surah": "31",
+    "surahName": "Luqmaan",
+    "num_verses": 34,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0655,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "31:1",
+          "31:33"
+        ],
+        "shared_keywords": [],
+        "similarity": 0.0
+      },
+      {
+        "pair": [
+          "31:5",
+          "31:29"
+        ],
+        "shared_keywords": [
+          "god",
+          "him",
+          "life",
+          "revelations"
+        ],
+        "similarity": 0.039
+      },
+      {
+        "pair": [
+          "31:9",
+          "31:25"
+        ],
+        "shared_keywords": [
+          "all",
+          "almighty",
+          "created",
+          "creation",
+          "earth",
+          "god",
+          "heavens",
+          "most",
+          "praiseworthy",
+          "wise"
+        ],
+        "similarity": 0.122
+      },
+      {
+        "pair": [
+          "31:13",
+          "31:21"
+        ],
+        "shared_keywords": [
+          "all",
+          "done",
+          "everything",
+          "follow",
+          "god",
+          "inform",
+          "only",
+          "parents",
+          "return",
+          "ultimate"
+        ],
+        "similarity": 0.101
+      }
+    ]
+  },
+  {
+    "surah": "60",
+    "surahName": "The Test",
+    "num_verses": 13,
+    "num_mirror_pairs": 3,
+    "avg_mirror_similarity": 0.0617,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "60:1",
+          "60:13"
+        ],
+        "shared_keywords": [
+          "befriend",
+          "believe",
+          "god",
+          "just"
+        ],
+        "similarity": 0.075
+      },
+      {
+        "pair": [
+          "60:3",
+          "60:11"
+        ],
+        "shared_keywords": [
+          "believe",
+          "besides",
+          "god",
+          "idols",
+          "pray",
+          "set"
+        ],
+        "similarity": 0.071
+      },
+      {
+        "pair": [
+          "60:5",
+          "60:9"
+        ],
+        "shared_keywords": [
+          "god",
+          "most",
+          "wise"
+        ],
+        "similarity": 0.039
+      }
+    ]
+  },
+  {
+    "surah": "57",
+    "surahName": "Iron",
+    "num_verses": 29,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0595,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "57:1",
+          "57:29"
+        ],
+        "shared_keywords": [
+          "all",
+          "god"
+        ],
+        "similarity": 0.037
+      },
+      {
+        "pair": [
+          "57:5",
+          "57:25"
+        ],
+        "shared_keywords": [
+          "all",
+          "among",
+          "believe",
+          "god",
+          "him",
+          "messenger",
+          "recompense",
+          "should"
+        ],
+        "similarity": 0.081
+      },
+      {
+        "pair": [
+          "57:9",
+          "57:21"
+        ],
+        "shared_keywords": [
+          "before",
+          "earth",
+          "god",
+          "most",
+          "one",
+          "towards"
+        ],
+        "similarity": 0.051
+      },
+      {
+        "pair": [
+          "57:13",
+          "57:17"
+        ],
+        "shared_keywords": [
+          "believed",
+          "disbelieved",
+          "god",
+          "light",
+          "like",
+          "lord",
+          "men",
+          "retribution",
+          "women"
+        ],
+        "similarity": 0.069
+      }
+    ]
+  },
+  {
+    "surah": "68",
+    "surahName": "The Pen",
+    "num_verses": 52,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0578,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "68:1",
+          "68:50"
+        ],
+        "shared_keywords": [
+          "blessed",
+          "crazy",
+          "lord"
+        ],
+        "similarity": 0.086
+      },
+      {
+        "pair": [
+          "68:8",
+          "68:43"
+        ],
+        "shared_keywords": [
+          "enough",
+          "money",
+          "sinner"
+        ],
+        "similarity": 0.045
+      },
+      {
+        "pair": [
+          "68:15",
+          "68:36"
+        ],
+        "shared_keywords": [],
+        "similarity": 0.0
+      },
+      {
+        "pair": [
+          "68:22",
+          "68:29"
+        ],
+        "shared_keywords": [
+          "each",
+          "only",
+          "other",
+          "righteous",
+          "said"
+        ],
+        "similarity": 0.1
+      }
+    ]
+  },
+  {
+    "surah": "32",
+    "surahName": "Prostration",
+    "num_verses": 30,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0565,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "32:1",
+          "32:29"
+        ],
+        "shared_keywords": [
+          "before"
+        ],
+        "similarity": 0.019
+      },
+      {
+        "pair": [
+          "32:5",
+          "32:25"
+        ],
+        "shared_keywords": [
+          "day",
+          "everything",
+          "one"
+        ],
+        "similarity": 0.043
+      },
+      {
+        "pair": [
+          "32:9",
+          "32:21"
+        ],
+        "shared_keywords": [
+          "attained",
+          "before",
+          "certainty",
+          "guilty",
+          "him",
+          "lord",
+          "meeting"
+        ],
+        "similarity": 0.08
+      },
+      {
+        "pair": [
+          "32:13",
+          "32:17"
+        ],
+        "shared_keywords": [
+          "believe",
+          "eternal",
+          "every",
+          "hell",
+          "return",
+          "taste",
+          "works"
+        ],
+        "similarity": 0.084
+      }
+    ]
+  },
+  {
+    "surah": "72",
+    "surahName": "Jinns",
+    "num_verses": 28,
+    "num_mirror_pairs": 3,
+    "avg_mirror_similarity": 0.055,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "72:1",
+          "72:25"
+        ],
+        "shared_keywords": [
+          "lord",
+          "only",
+          "say"
+        ],
+        "similarity": 0.054
+      },
+      {
+        "pair": [
+          "72:5",
+          "72:21"
+        ],
+        "shared_keywords": [
+          "god",
+          "messenger",
+          "power"
+        ],
+        "similarity": 0.046
+      },
+      {
+        "pair": [
+          "72:9",
+          "72:17"
+        ],
+        "shared_keywords": [
+          "anyone",
+          "god",
+          "lord",
+          "never"
+        ],
+        "similarity": 0.065
+      }
+    ]
+  },
+  {
+    "surah": "35",
+    "surahName": "Initiator",
+    "num_verses": 45,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0548,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "35:1",
+          "35:43"
+        ],
+        "shared_keywords": [
+          "can",
+          "earth",
+          "god",
+          "heavens",
+          "omnipotent",
+          "only",
+          "people",
+          "things"
+        ],
+        "similarity": 0.077
+      },
+      {
+        "pair": [
+          "35:7",
+          "35:37"
+        ],
+        "shared_keywords": [
+          "all",
+          "anyone",
+          "created",
+          "disbelieve",
+          "god",
+          "guided",
+          "life",
+          "long",
+          "one",
+          "therefore"
+        ],
+        "similarity": 0.071
+      },
+      {
+        "pair": [
+          "35:13",
+          "35:31"
+        ],
+        "shared_keywords": [
+          "all",
+          "cognizant",
+          "get",
+          "god",
+          "lord",
+          "only",
+          "part",
+          "time",
+          "while"
+        ],
+        "similarity": 0.061
+      },
+      {
+        "pair": [
+          "35:19",
+          "35:25"
+        ],
+        "shared_keywords": [
+          "god"
+        ],
+        "similarity": 0.01
+      }
+    ]
+  },
+  {
+    "surah": "36",
+    "surahName": "Y.S.",
+    "num_verses": 83,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0542,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "36:1",
+          "36:78"
+        ],
+        "shared_keywords": [
+          "one",
+          "place",
+          "same",
+          "therefore",
+          "whose"
+        ],
+        "similarity": 0.048
+      },
+      {
+        "pair": [
+          "36:12",
+          "36:67"
+        ],
+        "shared_keywords": [
+          "end",
+          "everything",
+          "god",
+          "him",
+          "human",
+          "other",
+          "profound",
+          "well"
+        ],
+        "similarity": 0.053
+      },
+      {
+        "pair": [
+          "36:23",
+          "36:56"
+        ],
+        "shared_keywords": [
+          "any",
+          "can",
+          "lord",
+          "most",
+          "see",
+          "set",
+          "wish"
+        ],
+        "similarity": 0.056
+      },
+      {
+        "pair": [
+          "36:34",
+          "36:45"
+        ],
+        "shared_keywords": [
+          "all",
+          "could",
+          "day",
+          "even",
+          "mercy",
+          "one",
+          "whatever",
+          "whereupon",
+          "willed"
+        ],
+        "similarity": 0.06
+      }
+    ]
+  },
+  {
+    "surah": "58",
+    "surahName": "The Debate",
+    "num_verses": 22,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.054,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "58:1",
+          "58:22"
+        ],
+        "shared_keywords": [
+          "god"
+        ],
+        "similarity": 0.014
+      },
+      {
+        "pair": [
+          "58:4",
+          "58:19"
+        ],
+        "shared_keywords": [
+          "god",
+          "messenger",
+          "surely"
+        ],
+        "similarity": 0.045
+      },
+      {
+        "pair": [
+          "58:7",
+          "58:16"
+        ],
+        "shared_keywords": [
+          "all",
+          "come",
+          "day",
+          "god",
+          "him",
+          "wherein"
+        ],
+        "similarity": 0.065
+      },
+      {
+        "pair": [
+          "58:10",
+          "58:13"
+        ],
+        "shared_keywords": [
+          "before",
+          "charity",
+          "cognizant",
+          "everything",
+          "fully",
+          "god",
+          "messenger"
+        ],
+        "similarity": 0.092
+      }
+    ]
+  },
+  {
+    "surah": "14",
+    "surahName": "Abraham",
+    "num_verses": 52,
+    "num_mirror_pairs": 4,
+    "avg_mirror_similarity": 0.0528,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "14:1",
+          "14:50"
+        ],
+        "shared_keywords": [
+          "god",
+          "most",
+          "one",
+          "people"
+        ],
+        "similarity": 0.037
+      },
+      {
+        "pair": [
+          "14:8",
+          "14:43"
+        ],
+        "shared_keywords": [
+          "before",
+          "earth",
+          "give",
+          "god",
+          "heavens",
+          "lord",
+          "messengers",
+          "more",
+          "people",
+          "promise"
+        ],
+        "similarity": 0.061
+      },
+      {
+        "pair": [
+          "14:15",
+          "14:36"
+        ],
+        "shared_keywords": [
+          "all",
+          "day",
+          "earth",
+          "follow",
+          "god",
+          "heavens",
+          "lord",
+          "nothing",
+          "place",
+          "whatever"
+        ],
+        "similarity": 0.068
+      },
+      {
+        "pair": [
+          "14:22",
+          "14:29"
+        ],
+        "shared_keywords": [
+          "accordance",
+          "blessings",
+          "can",
+          "god",
+          "lord",
+          "say",
+          "sends",
+          "sky"
+        ],
+        "similarity": 0.045
+      }
+    ]
+  }
+]

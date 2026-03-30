@@ -1,19 +1,17 @@
 """
-Rhetorical Pattern Analysis Loop for the Quran Knowledge Graph.
+Rhetorical Pattern Analyzer — infinite loop that discovers ring compositions,
+repetition patterns, question-answer pairs, and word frequency symmetries.
 
-Detects ring compositions, repetition patterns, question-answer pairs,
-and word frequency symmetries across surahs in an infinite analysis loop.
+Saves: ring_compositions.json, repetition_patterns.json, rhetorical_structures.json
 """
 
 import argparse
 import json
 import os
 import re
-import sys
 import time
 from collections import Counter, defaultdict
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from deduction_engine import load_graph
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,31 +22,227 @@ OUT_DIR = os.path.dirname(os.path.abspath(__file__))
 # Helpers
 # ══════════════════════════════════════════════════════════════════════════════
 
-STOP_WORDS = {
-    "the", "of", "and", "to", "in", "a", "is", "that", "for", "it", "with",
-    "was", "on", "are", "be", "this", "have", "from", "or", "an", "they",
-    "which", "you", "not", "but", "had", "his", "her", "has", "their", "all",
-    "been", "if", "will", "who", "do", "shall", "them", "he", "she", "we",
-    "no", "so", "by", "as", "at", "your", "what", "when", "upon", "did",
-    "those", "then", "there", "may", "would", "its", "any", "into", "said",
+STOPWORDS = {
+    "the", "and", "of", "to", "in", "for", "is", "are", "was", "were", "a",
+    "an", "that", "this", "it", "he", "she", "they", "we", "you", "his",
+    "her", "their", "our", "your", "with", "from", "on", "at", "by", "or",
+    "be", "has", "have", "had", "shall", "will", "do", "did", "not", "but",
+    "who", "whom", "which", "what", "them", "those", "these", "its", "as",
+    "if", "then", "than", "so", "no", "nor", "upon", "when", "into",
 }
 
-def words(text):
-    """Extract lowercase words from text, filtering stop words."""
-    return [w for w in re.findall(r"[a-z']+", text.lower()) if w not in STOP_WORDS and len(w) > 2]
+WORD_PAIRS = [
+    ("life", "death"), ("heaven", "hell"), ("angel", "devil"),
+    ("light", "darkness"), ("good", "evil"), ("reward", "punishment"),
+    ("believer", "disbeliever"), ("day", "night"), ("man", "woman"),
+    ("land", "sea"), ("rich", "poor"), ("mercy", "wrath"),
+    ("paradise", "fire"), ("peace", "war"), ("truth", "falsehood"),
+    ("love", "hate"), ("patience", "haste"), ("visible", "invisible"),
+]
 
 
-def group_by_surah(verses):
-    """Group verses by surah number, sorted by verse number."""
+def tokenize(text):
+    return re.findall(r'[a-z]+', text.lower())
+
+
+def content_words(text):
+    return [w for w in tokenize(text) if w not in STOPWORDS and len(w) > 2]
+
+
+def get_surah_verses(graph):
+    """Group verses by surah, ordered by verse number."""
     surahs = defaultdict(list)
-    for vid, info in verses.items():
-        surahs[info["surah"]].append((vid, info))
+    for vid, data in graph["verses"].items():
+        parts = vid.split(":")
+        surahs[data["surah"]].append({
+            "id": vid,
+            "num": int(parts[1]),
+            "text": data["text"],
+            "surahName": data["surahName"],
+        })
     for s in surahs:
-        surahs[s].sort(key=lambda x: int(x[0].split(":")[1]))
+        surahs[s].sort(key=lambda v: v["num"])
     return surahs
 
 
-def save_json(filename, data):
+# ══════════════════════════════════════════════════════════════════════════════
+# Analysis 1: Ring Composition Detection
+# ══════════════════════════════════════════════════════════════════════════════
+
+def detect_ring_compositions(surah_verses, keyword_data):
+    """
+    Detect chiastic (A-B-C-B'-A') patterns within surahs by comparing
+    keyword profiles of verse blocks from start and end.
+    """
+    results = []
+
+    for surah_id, verses in surah_verses.items():
+        if len(verses) < 6:
+            continue
+
+        n = len(verses)
+        name = verses[0]["surahName"]
+
+        # Divide surah into blocks of ~equal size
+        block_size = max(2, n // 7)
+        blocks = []
+        for i in range(0, n, block_size):
+            chunk = verses[i:i + block_size]
+            words = set()
+            for v in chunk:
+                words.update(content_words(v["text"]))
+            blocks.append({
+                "start_verse": chunk[0]["id"],
+                "end_verse": chunk[-1]["id"],
+                "keywords": words,
+            })
+
+        if len(blocks) < 3:
+            continue
+
+        # Compare mirror blocks: first vs last, second vs second-last, etc.
+        mirror_scores = []
+        num_pairs = len(blocks) // 2
+        for i in range(num_pairs):
+            front = blocks[i]
+            back = blocks[-(i + 1)]
+            shared = front["keywords"] & back["keywords"]
+            union = front["keywords"] | back["keywords"]
+            if union:
+                jaccard = len(shared) / len(union)
+                mirror_scores.append({
+                    "pair": (front["start_verse"], back["start_verse"]),
+                    "shared_keywords": sorted(shared)[:10],
+                    "similarity": round(jaccard, 3),
+                })
+
+        avg_sim = sum(m["similarity"] for m in mirror_scores) / max(1, len(mirror_scores))
+
+        if avg_sim > 0.05 and mirror_scores:
+            results.append({
+                "surah": surah_id,
+                "surahName": name,
+                "num_verses": n,
+                "num_mirror_pairs": len(mirror_scores),
+                "avg_mirror_similarity": round(avg_sim, 4),
+                "mirror_pairs": mirror_scores,
+            })
+
+    results.sort(key=lambda x: -x["avg_mirror_similarity"])
+    return results
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# Analysis 2: Repetition Patterns
+# ══════════════════════════════════════════════════════════════════════════════
+
+def find_repetition_patterns(graph, min_phrase_len=3, max_phrase_len=5, min_surahs=3):
+    """Find repeated multi-word phrases across surahs."""
+    phrase_locations = defaultdict(list)
+
+    for vid, data in graph["verses"].items():
+        words = tokenize(data["text"])
+        surah = data["surah"]
+        for plen in range(min_phrase_len, max_phrase_len + 1):
+            for i in range(len(words) - plen + 1):
+                phrase = " ".join(words[i:i + plen])
+                non_stop = [w for w in words[i:i + plen] if w not in STOPWORDS]
+                if len(non_stop) < 2:
+                    continue
+                phrase_locations[phrase].append((vid, surah))
+
+    results = []
+    for phrase, locations in phrase_locations.items():
+        surah_set = set(s for _, s in locations)
+        if len(surah_set) >= min_surahs:
+            verse_ids = list(set(v for v, _ in locations))
+            results.append({
+                "phrase": phrase,
+                "num_occurrences": len(locations),
+                "num_surahs": len(surah_set),
+                "surahs": sorted(surah_set, key=lambda x: int(x))[:20],
+                "sample_verses": verse_ids[:10],
+            })
+
+    results.sort(key=lambda x: (-x["num_surahs"], -x["num_occurrences"]))
+    return results[:500]
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# Analysis 3: Question-Answer Detection
+# ══════════════════════════════════════════════════════════════════════════════
+
+def find_question_answer_pairs(surah_verses):
+    """Find verses containing '?' and pair with following verse(s)."""
+    results = []
+
+    for surah_id, verses in surah_verses.items():
+        for i, v in enumerate(verses):
+            if "?" in v["text"]:
+                pair = {
+                    "question_verse": v["id"],
+                    "question_text": v["text"],
+                    "surahName": v["surahName"],
+                }
+                answers = []
+                for j in range(i + 1, min(i + 3, len(verses))):
+                    answers.append({
+                        "verse_id": verses[j]["id"],
+                        "text": verses[j]["text"],
+                    })
+                pair["following_verses"] = answers
+                results.append(pair)
+
+    return results
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# Analysis 4: Word Pair Symmetries
+# ══════════════════════════════════════════════════════════════════════════════
+
+def count_word_symmetries(graph):
+    """Count occurrences of thematic word pairs across all verses."""
+    pair_counts = {f"{a}/{b}": {"a": a, "b": b, "count_a": 0, "count_b": 0,
+                                 "verses_a": [], "verses_b": []}
+                   for a, b in WORD_PAIRS}
+
+    for vid, data in graph["verses"].items():
+        text_lower = data["text"].lower()
+        for a, b in WORD_PAIRS:
+            key = f"{a}/{b}"
+            if re.search(r'\b' + a + r'\w*\b', text_lower):
+                pair_counts[key]["count_a"] += 1
+                if len(pair_counts[key]["verses_a"]) < 5:
+                    pair_counts[key]["verses_a"].append(vid)
+            if re.search(r'\b' + b + r'\w*\b', text_lower):
+                pair_counts[key]["count_b"] += 1
+                if len(pair_counts[key]["verses_b"]) < 5:
+                    pair_counts[key]["verses_b"].append(vid)
+
+    results = []
+    for key, data in pair_counts.items():
+        ca, cb = data["count_a"], data["count_b"]
+        ratio = min(ca, cb) / max(ca, cb) if max(ca, cb) > 0 else 0
+        results.append({
+            "pair": key,
+            "word_a": data["a"],
+            "word_b": data["b"],
+            "count_a": ca,
+            "count_b": cb,
+            "ratio": round(ratio, 3),
+            "sample_verses_a": data["verses_a"],
+            "sample_verses_b": data["verses_b"],
+        })
+
+    results.sort(key=lambda x: -(x["count_a"] + x["count_b"]))
+    return results
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# Save helper
+# ══════════════════════════════════════════════════════════════════════════════
+
+def save_json(data, filename):
     path = os.path.join(OUT_DIR, filename)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
@@ -56,277 +250,110 @@ def save_json(filename, data):
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# Analysis 1: Ring Composition Detection
-# ══════════════════════════════════════════════════════════════════════════════
-
-def detect_ring_compositions(surahs, keyword_map):
-    """Detect chiastic (A-B-C-B'-A') theme patterns within surahs."""
-    results = []
-
-    for surah_num, verse_list in surahs.items():
-        if len(verse_list) < 5:
-            continue
-
-        # Build theme sequence per verse using top keywords
-        themes = []
-        for vid, info in verse_list:
-            kws = keyword_map.get(vid, [])
-            top_kw = tuple(sorted(kw for kw, _ in kws[:3]))
-            themes.append((vid, top_kw))
-
-        n = len(themes)
-        # Check for mirror symmetry: compare first half with reversed second half
-        half = n // 2
-        matches = 0
-        match_pairs = []
-        for i in range(half):
-            front = set(themes[i][1])
-            back = set(themes[n - 1 - i][1])
-            overlap = front & back
-            if overlap and len(overlap) >= 1:
-                matches += 1
-                match_pairs.append({
-                    "front_verse": themes[i][0],
-                    "back_verse": themes[n - 1 - i][0],
-                    "shared_themes": list(overlap),
-                })
-
-        if half > 0:
-            symmetry_ratio = matches / half
-        else:
-            continue
-
-        if symmetry_ratio >= 0.25 and matches >= 2:
-            results.append({
-                "surah": surah_num,
-                "surah_name": verse_list[0][1]["surahName"],
-                "total_verses": n,
-                "mirror_matches": matches,
-                "symmetry_ratio": round(symmetry_ratio, 3),
-                "pairs": match_pairs[:10],
-            })
-
-    results.sort(key=lambda x: -x["symmetry_ratio"])
-    return results
-
-
-# ══════════════════════════════════════════════════════════════════════════════
-# Analysis 2: Repetition Pattern Detection
-# ══════════════════════════════════════════════════════════════════════════════
-
-def find_repetition_patterns(verses, min_phrase_len=3, max_phrase_len=5, min_surahs=3):
-    """Find phrases of 3-5 words that appear across 3+ surahs."""
-    phrase_locations = defaultdict(set)  # phrase -> set of surah numbers
-
-    for vid, info in verses.items():
-        w = info["text"].lower().split()
-        surah = info["surah"]
-        for length in range(min_phrase_len, min(max_phrase_len + 1, len(w) + 1)):
-            for i in range(len(w) - length + 1):
-                phrase = " ".join(w[i:i + length])
-                # Skip boring phrases
-                phrase_words = set(re.findall(r"[a-z]+", phrase))
-                if phrase_words <= STOP_WORDS:
-                    continue
-                phrase_locations[phrase].add(surah)
-
-    # Filter to phrases in 3+ surahs
-    patterns = []
-    for phrase, surah_set in phrase_locations.items():
-        if len(surah_set) >= min_surahs:
-            patterns.append({
-                "phrase": phrase,
-                "surah_count": len(surah_set),
-                "surahs": sorted(surah_set, key=lambda x: int(x))[:20],
-            })
-
-    patterns.sort(key=lambda x: -x["surah_count"])
-    return patterns[:500]
-
-
-# ══════════════════════════════════════════════════════════════════════════════
-# Analysis 3: Question-Answer Detection
-# ══════════════════════════════════════════════════════════════════════════════
-
-def find_question_answer_pairs(surahs):
-    """Find verses containing '?' and pair with following verse."""
-    qa_pairs = []
-
-    for surah_num, verse_list in surahs.items():
-        for i, (vid, info) in enumerate(verse_list):
-            if "?" in info["text"]:
-                answer = None
-                if i + 1 < len(verse_list):
-                    answer = {
-                        "verse_id": verse_list[i + 1][0],
-                        "text": verse_list[i + 1][1]["text"][:200],
-                    }
-                qa_pairs.append({
-                    "question_verse": vid,
-                    "question_text": info["text"][:200],
-                    "surah": surah_num,
-                    "surah_name": info["surahName"],
-                    "answer": answer,
-                })
-
-    return qa_pairs
-
-
-# ══════════════════════════════════════════════════════════════════════════════
-# Analysis 4: Word Frequency Symmetries
-# ══════════════════════════════════════════════════════════════════════════════
-
-WORD_PAIRS = [
-    ("life", "death"), ("angel", "devil"), ("heaven", "hell"),
-    ("man", "woman"), ("good", "evil"), ("day", "night"),
-    ("reward", "punishment"), ("believe", "disbelieve"),
-    ("mercy", "wrath"), ("love", "hate"), ("peace", "war"),
-    ("light", "darkness"), ("earth", "sky"), ("rich", "poor"),
-    ("patient", "impatient"), ("truth", "falsehood"),
-    ("obey", "disobey"), ("paradise", "fire"),
-    ("gratitude", "ingratitude"), ("visible", "invisible"),
-]
-
-
-def count_word_pair_symmetries(verses):
-    """Count occurrences of paired concepts across all verses."""
-    results = []
-    all_text = " ".join(v["text"].lower() for v in verses.values())
-
-    for w1, w2 in WORD_PAIRS:
-        c1 = len(re.findall(r"\b" + w1 + r"\w*\b", all_text))
-        c2 = len(re.findall(r"\b" + w2 + r"\w*\b", all_text))
-        if c1 > 0 or c2 > 0:
-            ratio = min(c1, c2) / max(c1, c2) if max(c1, c2) > 0 else 0
-            results.append({
-                "word1": w1, "count1": c1,
-                "word2": w2, "count2": c2,
-                "ratio": round(ratio, 3),
-                "total": c1 + c2,
-                "nearly_symmetric": ratio > 0.8,
-            })
-
-    results.sort(key=lambda x: -x["total"])
-    return results
-
-
-# ══════════════════════════════════════════════════════════════════════════════
 # Main Loop
 # ══════════════════════════════════════════════════════════════════════════════
 
-def run_loop(max_hours=0):
-    print("=" * 70)
-    print("  RHETORICAL PATTERN ANALYSIS LOOP")
-    print("=" * 70)
+def main():
+    parser = argparse.ArgumentParser(description="Rhetorical pattern analysis loop")
+    parser.add_argument("--max-hours", type=float, default=0,
+                        help="Max hours to run (0=infinite)")
+    args = parser.parse_args()
 
-    print("\nLoading graph data...")
+    print("Loading graph data...")
     graph = load_graph()
-    verses = graph["verses"]
-    verse_keywords = graph["verse_keywords"]
-    surahs = group_by_surah(verses)
-    print(f"  {len(verses)} verses in {len(surahs)} surahs")
+    print(f"  {len(graph['verses'])} verses loaded")
+
+    surah_verses = get_surah_verses(graph)
+    print(f"  {len(surah_verses)} surahs")
 
     start_time = time.time()
-    rnd = 0
+    deadline = start_time + args.max_hours * 3600 if args.max_hours > 0 else None
 
     ring_results = []
-    repetition_results = []
-    qa_pairs = []
-    symmetry_results = []
+    rep_results = []
+    qa_results = []
+    sym_results = []
+    rnd = 0
 
     while True:
         rnd += 1
-        elapsed_h = (time.time() - start_time) / 3600
-        if max_hours > 0 and elapsed_h >= max_hours:
-            print(f"\nTime limit reached ({max_hours}h). Stopping.")
+
+        if deadline and time.time() > deadline:
+            print(f"\nTime limit reached after {rnd - 1} rounds.")
             break
 
-        # Round-robin through analyses with varying parameters
-        if rnd % 4 == 1:
-            ring = detect_ring_compositions(surahs, verse_keywords)
-            # Merge new findings
-            seen = {r["surah"] for r in ring_results}
-            for r in ring:
-                if r["surah"] not in seen:
-                    ring_results.append(r)
-                    seen.add(r["surah"])
+        # Ring compositions
+        rings = detect_ring_compositions(surah_verses, graph["verse_keywords"])
+        if rnd == 1 or len(rings) > len(ring_results):
+            ring_results = rings
 
-        elif rnd % 4 == 2:
-            min_len = 3 + (rnd // 8) % 3  # vary phrase length
-            min_s = 3 + (rnd // 12) % 3   # vary min surahs
-            reps = find_repetition_patterns(verses, min_phrase_len=min_len,
-                                            max_phrase_len=min_len + 2,
-                                            min_surahs=min_s)
-            seen = {r["phrase"] for r in repetition_results}
-            for r in reps:
-                if r["phrase"] not in seen:
-                    repetition_results.append(r)
-                    seen.add(r["phrase"])
+        # Repetition patterns (vary phrase length requirements)
+        min_surahs = max(2, 3 + (rnd % 4))
+        reps = find_repetition_patterns(graph, min_phrase_len=3,
+                                         max_phrase_len=3 + (rnd % 3),
+                                         min_surahs=min_surahs)
+        seen_phrases = {r["phrase"] for r in rep_results}
+        for r in reps:
+            if r["phrase"] not in seen_phrases:
+                rep_results.append(r)
+                seen_phrases.add(r["phrase"])
+        rep_results.sort(key=lambda x: (-x["num_surahs"], -x["num_occurrences"]))
+        rep_results = rep_results[:1000]
 
-        elif rnd % 4 == 3:
-            if not qa_pairs:
-                qa_pairs = find_question_answer_pairs(surahs)
+        # QA pairs and symmetries (deterministic, run once)
+        if rnd == 1:
+            qa_results = find_question_answer_pairs(surah_verses)
+            sym_results = count_word_symmetries(graph)
 
-        else:
-            symmetry_results = count_word_pair_symmetries(verses)
+        # Progress every 5 rounds
+        if rnd % 5 == 0 or rnd == 1:
+            elapsed = time.time() - start_time
+            print(f"\n[Round {rnd}] {elapsed/60:.1f} min elapsed")
+            print(f"  Ring compositions: {len(ring_results)} surahs with mirror patterns")
+            print(f"  Repetition patterns: {len(rep_results)} repeated phrases")
+            print(f"  Question-answer pairs: {len(qa_results)}")
+            print(f"  Word pair symmetries: {len(sym_results)} pairs tracked")
 
-        # Progress report every 5 rounds
-        if rnd % 5 == 0:
-            print(f"\n  [Round {rnd}] {elapsed_h:.2f}h elapsed")
-            print(f"    Ring compositions: {len(ring_results)}")
-            print(f"    Repetition patterns: {len(repetition_results)}")
-            print(f"    Question-answer pairs: {len(qa_pairs)}")
-            print(f"    Word symmetries: {len(symmetry_results)}")
+            if ring_results:
+                top = ring_results[0]
+                print(f"  Top ring: {top['surahName']} (sim={top['avg_mirror_similarity']:.3f})")
+            if sym_results:
+                for s in sym_results[:3]:
+                    print(f"  Symmetry: {s['pair']} = {s['count_a']} vs {s['count_b']}")
 
         # Save every 10 rounds
-        if rnd % 10 == 0:
-            ring_results.sort(key=lambda x: -x["symmetry_ratio"])
-            save_json("ring_compositions.json", ring_results[:300])
+        if rnd % 10 == 0 or rnd == 1:
+            save_json(ring_results, "ring_compositions.json")
+            save_json(rep_results, "repetition_patterns.json")
 
-            repetition_results.sort(key=lambda x: -x["surah_count"])
-            save_json("repetition_patterns.json", repetition_results[:500])
+            rhetorical = {
+                "question_answer_pairs": qa_results,
+                "word_symmetries": sym_results,
+                "meta": {
+                    "rounds_completed": rnd,
+                    "elapsed_minutes": round((time.time() - start_time) / 60, 1),
+                },
+            }
+            save_json(rhetorical, "rhetorical_structures.json")
+            print(f"  [Saved all 3 JSON files]")
 
-            save_json("rhetorical_structures.json", {
-                "question_answer_pairs": qa_pairs[:500],
-                "word_pair_symmetries": symmetry_results,
-                "rounds_completed": rnd,
-                "elapsed_hours": round(elapsed_h, 2),
-            })
-            print(f"    -> Saved results to JSON files")
-
-        # For the first pass, do a quick save after round 4
-        if rnd == 4:
-            save_json("ring_compositions.json", ring_results[:300])
-            save_json("repetition_patterns.json", repetition_results[:500])
-            save_json("rhetorical_structures.json", {
-                "question_answer_pairs": qa_pairs[:500],
-                "word_pair_symmetries": symmetry_results,
-                "rounds_completed": rnd,
-                "elapsed_hours": round(elapsed_h, 2),
-            })
-            print(f"\n  [Round {rnd}] Initial save complete.")
+        if rnd > 20:
+            time.sleep(2)
 
     # Final save
-    ring_results.sort(key=lambda x: -x["symmetry_ratio"])
-    p1 = save_json("ring_compositions.json", ring_results[:300])
-    repetition_results.sort(key=lambda x: -x["surah_count"])
-    p2 = save_json("repetition_patterns.json", repetition_results[:500])
-    p3 = save_json("rhetorical_structures.json", {
-        "question_answer_pairs": qa_pairs[:500],
-        "word_pair_symmetries": symmetry_results,
-        "rounds_completed": rnd,
-        "elapsed_hours": round((time.time() - start_time) / 3600, 2),
-    })
-    print(f"\nFinal results saved:")
-    print(f"  {p1}")
-    print(f"  {p2}")
-    print(f"  {p3}")
-    print(f"  Total rounds: {rnd}")
+    save_json(ring_results, "ring_compositions.json")
+    save_json(rep_results, "repetition_patterns.json")
+    rhetorical = {
+        "question_answer_pairs": qa_results,
+        "word_symmetries": sym_results,
+        "meta": {
+            "rounds_completed": rnd,
+            "elapsed_minutes": round((time.time() - start_time) / 60, 1),
+        },
+    }
+    save_json(rhetorical, "rhetorical_structures.json")
+    print(f"\nDone. {rnd} rounds, final files saved.")
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Rhetorical pattern analysis loop")
-    parser.add_argument("--max-hours", type=float, default=0,
-                        help="Maximum hours to run (0=infinite)")
-    args = parser.parse_args()
-    run_loop(max_hours=args.max_hours)
+    main()

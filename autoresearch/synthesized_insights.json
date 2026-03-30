@@ -1496,6 +1496,62 @@
     ]
   },
   {
+    "category": "monotheism_and_gods_nature",
+    "category_label": "God's nature, attributes, oneness, and sovereignty",
+    "verse_pair": [
+      "42:5",
+      "6:38"
+    ],
+    "num_supporting_deductions": 5,
+    "avg_quality": 78.1,
+    "bridge_keywords": [
+      "angel",
+      "earth",
+      "fly",
+      "glorify",
+      "heaven",
+      "messenger",
+      "praise",
+      "prayer",
+      "wing"
+    ],
+    "best_conclusion": "[42:5] (GOD —[is]→ the forgiver) connects to [6:38] (all these creatures —[states]→ To their Lord) through thematic chain: praise → glorify → glorify → prayer → fly → earth. Path: [42:5] → [10:10] → [24:41] → [6:38]",
+    "all_conclusions": [
+      "BECAUSE GOD is the forgiver [42:5], and this connects via 'earth' → 'earth', THEREFORE GOD's is relates to To their Lord [6:38]",
+      "[42:5] (GOD —[is]→ the forgiver) connects to [6:38] (all these creatures —[states]→ To their Lord) through thematic chain: earth → praise → earth → praise → earth → wing. Path: [42:5] → [2:30] → [35:1",
+      "[42:5] (GOD —[is]→ the forgiver) connects to [6:38] (all these creatures —[states]→ To their Lord) through thematic chain: earth → praise → wing → wing. Path: [42:5] → [35:1] → [17:24] → [6:38]",
+      "[42:5] (GOD —[is]→ the forgiver) connects to [6:38] (all these creatures —[states]→ To their Lord) through thematic chain: earth → praise → wing → messenger → wing. Path: [42:5] → [35:1] → [15:88] → [",
+      "[42:5] (GOD —[is]→ the forgiver) connects to [6:38] (all these creatures —[states]→ To their Lord) through thematic chain: praise → glorify → glorify → prayer → fly → earth. Path: [42:5] → [10:10] → ["
+    ]
+  },
+  {
+    "category": "monotheism_and_gods_nature",
+    "category_label": "God's nature, attributes, oneness, and sovereignty",
+    "verse_pair": [
+      "24:46",
+      "42:52"
+    ],
+    "num_supporting_deductions": 5,
+    "avg_quality": 76.0,
+    "bridge_keywords": [
+      "choose",
+      "commandment",
+      "guide",
+      "lest",
+      "path",
+      "revelation",
+      "straight"
+    ],
+    "best_conclusion": "BECAUSE GOD guides whoever wills (to be guided) in a straight path [24:46], and this connects via 'guide' → 'guide', THEREFORE GOD's guides relates to no idea about the scripture , or faith [42:52]",
+    "all_conclusions": [
+      "BECAUSE GOD guides whoever wills (to be guided) in a straight path [24:46], and this connects via 'guide' → 'guide', THEREFORE GOD's guides relates to no idea about the scripture , or faith [42:52]",
+      "[24:46] (GOD —[guides]→ whoever wills (to be guided) in a straight path) connects to [42:52] (You —[describes]→ no idea about the scripture , or faith) through thematic chain: straight → revelation → ",
+      "[24:46] (GOD —[guides]→ whoever wills (to be guided) in a straight path) connects to [42:52] (You —[describes]→ no idea about the scripture , or faith) through thematic chain: guide → straight → lest ",
+      "[24:46] (GOD —[guides]→ whoever wills (to be guided) in a straight path) connects to [42:52] (You —[describes]→ no idea about the scripture , or faith) through thematic chain: guide → straight → strai",
+      "[24:46] (GOD —[guides]→ whoever wills (to be guided) in a straight path) connects to [42:52] (You —[describes]→ no idea about the scripture , or faith) through thematic chain: guide → straight → strai"
+    ]
+  },
+  {
     "category": "afterlife_and_judgment",
     "category_label": "Day of Judgment, paradise, hell, resurrection, and accountability",
     "verse_pair": [
@@ -1910,6 +1966,29 @@
     ]
   },
   {
+    "category": "monotheism_and_gods_nature",
+    "category_label": "God's nature, attributes, oneness, and sovereignty",
+    "verse_pair": [
+      "28:59",
+      "38:3"
+    ],
+    "num_supporting_deductions": 5,
+    "avg_quality": 72.5,
+    "bridge_keywords": [
+      "annihilate",
+      "community",
+      "help"
+    ],
+    "best_conclusion": "[28:59] (GOD —[prohibits]→ any community) connects to [38:3] (They —[states]→ in vain) through thematic chain: community → community → annihilate → help. Path: [28:59] → [12:82] → [47:13] → [38:3]",
+    "all_conclusions": [
+      "[28:59] (GOD —[prohibits]→ any community) connects to [38:3] (They —[states]→ in vain) through thematic chain: annihilate → community → annihilate → community → annihilate → help. Path: [28:59] → [11:",
+      "[28:59] (GOD —[prohibits]→ any community) connects to [38:3] (They —[states]→ in vain) through thematic chain: annihilate → community → annihilate → community → annihilate → help. Path: [28:59] → [17:",
+      "[28:59] (GOD —[prohibits]→ any community) connects to [38:3] (They —[states]→ in vain) through thematic chain: annihilate → community → annihilate → community → annihilate → help. Path: [28:59] → [21:",
+      "[28:59] (GOD —[prohibits]→ any community) connects to [38:3] (They —[states]→ in vain) through thematic chain: community → community → annihilate → help. Path: [28:59] → [12:82] → [47:13] → [38:3]",
+      "[28:59] (GOD —[prohibits]→ any community) connects to [38:3] (They —[states]→ in vain) through thematic chain: community → community → annihilate → help. Path: [28:59] → [15:79] → [47:13] → [38:3]"
+    ]
+  },
+  {
     "category": "worship_and_ritual",
     "category_label": "Acts of worship, prayer, fasting, pilgrimage, and ritual practice",
     "verse_pair": [
@@ -1931,6 +2010,35 @@
       "[31:17] (You —[commands]→ the Contact Prayers ( Salat )) connects to [96:9] (You —[describes]→ the one who enjoins) through thematic chain: salat → contact → contact → enjoin. Path: [31:17] → [23:2] →",
       "[31:17] (You —[commands]→ the Contact Prayers ( Salat )) connects to [96:9] (You —[describes]→ the one who enjoins) through thematic chain: observe → salat → observe → contact → enjoin. Path: [31:17] ",
       "[31:17] (You —[commands]→ the Contact Prayers ( Salat )) connects to [96:9] (You —[describes]→ the one who enjoins) through thematic chain: observe → salat → contact → enjoin. Path: [31:17] → [29:45] "
+    ]
+  },
+  {
+    "category": "monotheism_and_gods_nature",
+    "category_label": "God's nature, attributes, oneness, and sovereignty",
+    "verse_pair": [
+      "22:64",
+      "114:6"
+    ],
+    "num_supporting_deductions": 4,
+    "avg_quality": 90.5,
+    "bridge_keywords": [
+      "another",
+      "darkness",
+      "example",
+      "lead",
+      "leave",
+      "light",
+      "like",
+      "mean",
+      "multiple",
+      "praiseworthy"
+    ],
+    "best_conclusion": "[22:64] (GOD —[is]→ the most rich) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: rich → mean → multiple → straightforward. Path: [22:64] → [65:7] → [3:7] → [114:6]",
+    "all_conclusions": [
+      "[22:64] (GOD —[is]→ the most rich) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: rich → mean → multiple → straightforward. Path: [22:64] → [65:7] → [3:",
+      "[22:64] (GOD —[is]→ the most rich) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: praiseworthy → lead → light → remind → darkness. Path: [22:64] → [14:1",
+      "[22:64] (GOD —[is]→ the most rich) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: praiseworthy → light → darkness → like → leave. Path: [22:64] → [14:1]",
+      "[22:64] (GOD —[is]→ the most rich) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: praiseworthy → example → another → example. Path: [22:64] → [60:6] → ["
     ]
   },
   {
@@ -2671,6 +2779,29 @@
     "category": "monotheism_and_gods_nature",
     "category_label": "God's nature, attributes, oneness, and sovereignty",
     "verse_pair": [
+      "24:53",
+      "37:125"
+    ],
+    "num_supporting_deductions": 5,
+    "avg_quality": 70.3,
+    "bridge_keywords": [
+      "solemnly",
+      "statue",
+      "swear"
+    ],
+    "best_conclusion": "[24:53] (They —[states]→ by GOD) connects to [37:125] (You —[commands]→ a statue) through thematic chain: swear → solemnly → swear → statue. Path: [24:53] → [90:1] → [21:57] → [37:125]",
+    "all_conclusions": [
+      "[24:53] (They —[states]→ by GOD) connects to [37:125] (You —[commands]→ a statue) through thematic chain: swear → solemnly → swear → statue. Path: [24:53] → [90:1] → [21:57] → [37:125]",
+      "[24:53] (They —[states]→ by GOD) connects to [37:125] (You —[commands]→ a statue) through thematic chain: swear → solemnly → swear → statue. Path: [24:53] → [81:15] → [21:57] → [37:125]",
+      "[24:53] (They —[states]→ by GOD) connects to [37:125] (You —[commands]→ a statue) through thematic chain: swear → swear → statue. Path: [24:53] → [38:82] → [21:57] → [37:125]",
+      "[24:53] (They —[states]→ by GOD) connects to [37:125] (You —[commands]→ a statue) through thematic chain: swear → swear → statue. Path: [24:53] → [9:56] → [21:57] → [37:125]",
+      "[24:53] (They —[states]→ by GOD) connects to [37:125] (You —[commands]→ a statue) through thematic chain: swear → swear → statue. Path: [24:53] → [69:38] → [21:57] → [37:125]"
+    ]
+  },
+  {
+    "category": "monotheism_and_gods_nature",
+    "category_label": "God's nature, attributes, oneness, and sovereignty",
+    "verse_pair": [
       "14:38",
       "114:6"
     ],
@@ -2777,6 +2908,30 @@
       "[10:25] (GOD —[states]→ to the abode of peace) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: straight → straight → guide → whomever. Path: [10:25] → [8",
       "[10:25] (GOD —[states]→ to the abode of peace) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: peace → guide → leave → light → like → leave. Path: [10:25",
       "[10:25] (GOD —[states]→ to the abode of peace) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: eternal → system → system. Path: [10:25] → [33:62] → [15:7"
+    ]
+  },
+  {
+    "category": "monotheism_and_gods_nature",
+    "category_label": "God's nature, attributes, oneness, and sovereignty",
+    "verse_pair": [
+      "22:56",
+      "76:20"
+    ],
+    "num_supporting_deductions": 5,
+    "avg_quality": 69.8,
+    "bridge_keywords": [
+      "bliss",
+      "deserve",
+      "life",
+      "righteous"
+    ],
+    "best_conclusion": "[22:56] (All Sovereignty On That Day —[decrees]→ to GOD) connects to [76:20] (You —[states]→ bliss) through thematic chain: life → righteous → righteous → bliss → bliss. Path: [22:56] → [10:9] → [52:17] → [76:20]",
+    "all_conclusions": [
+      "[22:56] (All Sovereignty On That Day —[decrees]→ to GOD) connects to [76:20] (You —[states]→ bliss) through thematic chain: bliss → deserve → bliss → bliss. Path: [22:56] → [56:8] → [9:21] → [76:20]",
+      "[22:56] (All Sovereignty On That Day —[decrees]→ to GOD) connects to [76:20] (You —[states]→ bliss) through thematic chain: bliss → deserve → bliss → deserve → bliss. Path: [22:56] → [56:8] → [52:17] ",
+      "[22:56] (All Sovereignty On That Day —[decrees]→ to GOD) connects to [76:20] (You —[states]→ bliss) through thematic chain: life → righteous → righteous → bliss → bliss. Path: [22:56] → [10:9] → [52:1",
+      "[22:56] (All Sovereignty On That Day —[decrees]→ to GOD) connects to [76:20] (You —[states]→ bliss) through thematic chain: life → righteous → righteous → bliss → bliss. Path: [22:56] → [10:9] → [68:3",
+      "[22:56] (All Sovereignty On That Day —[decrees]→ to GOD) connects to [76:20] (You —[states]→ bliss) through thematic chain: bliss → bliss → bliss. Path: [22:56] → [83:24] → [68:34] → [76:20]"
     ]
   },
   {
@@ -3280,6 +3435,29 @@
       "[39:20] (they —[describes]→ mansions upon mansions constructed for them) connects to [85:10] (they —[warns]→ the retribution of burning) through thematic chain: stream → flow → woman → sin → woman → m",
       "[39:20] (they —[describes]→ mansions upon mansions constructed for them) connects to [85:10] (they —[warns]→ the retribution of burning) through thematic chain: stream → flow → stream → men → woman → ",
       "BECAUSE those who reverence their lord, they will_receive have mansions upon mansions constructed for them [39:20], and this connects via 'stream' → 'woman', THEREFORE those who reverence their lord, "
+    ]
+  },
+  {
+    "category": "monotheism_and_gods_nature",
+    "category_label": "God's nature, attributes, oneness, and sovereignty",
+    "verse_pair": [
+      "28:80",
+      "40:82"
+    ],
+    "num_supporting_deductions": 4,
+    "avg_quality": 81.5,
+    "bridge_keywords": [
+      "consequence",
+      "earth",
+      "rejectors",
+      "woe"
+    ],
+    "best_conclusion": "[28:80] (None —[states]→ this) connects to [40:82] (they —[describes]→ the earth) through thematic chain: woe → rejectors → consequence → earth. Path: [28:80] → [77:34] → [6:11] → [40:82]",
+    "all_conclusions": [
+      "[28:80] (None —[states]→ this) connects to [40:82] (they —[describes]→ the earth) through thematic chain: woe → rejectors → consequence → earth. Path: [28:80] → [77:34] → [6:11] → [40:82]",
+      "[28:80] (None —[states]→ this) connects to [40:82] (they —[describes]→ the earth) through thematic chain: woe → rejectors → consequence → earth. Path: [28:80] → [77:24] → [6:11] → [40:82]",
+      "[28:80] (None —[states]→ this) connects to [40:82] (they —[describes]→ the earth) through thematic chain: woe → rejectors → consequence → earth. Path: [28:80] → [77:47] → [6:11] → [40:82]",
+      "[28:80] (None —[states]→ this) connects to [40:82] (they —[describes]→ the earth) through thematic chain: woe → rejectors → consequence → earth. Path: [28:80] → [77:15] → [6:11] → [40:82]"
     ]
   },
   {
@@ -3805,6 +3983,35 @@
       "[4:170] (the messenger —[describes]→ with the truth from your Lord) connects to [28:29] (he —[states]→ with his family ( towards Egypt) through thematic chain: wise → omniscient → wise → omniscient → ",
       "[4:170] (the messenger —[describes]→ with the truth from your Lord) connects to [28:29] (he —[states]→ with his family ( towards Egypt) through thematic chain: wise → omniscient → wise → omniscient → ",
       "[4:170] (the messenger —[describes]→ with the truth from your Lord) connects to [28:29] (he —[states]→ with his family ( towards Egypt) through thematic chain: wise → omniscient → wise → omniscient → "
+    ]
+  },
+  {
+    "category": "monotheism_and_gods_nature",
+    "category_label": "God's nature, attributes, oneness, and sovereignty",
+    "verse_pair": [
+      "56:72",
+      "114:6"
+    ],
+    "num_supporting_deductions": 4,
+    "avg_quality": 77.2,
+    "bridge_keywords": [
+      "aware",
+      "bad",
+      "earth",
+      "eat",
+      "enemy",
+      "example",
+      "fully",
+      "initiate",
+      "leave",
+      "let"
+    ],
+    "best_conclusion": "[56:72] (You —[states]→ its tree) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: tree → example → bad → terrible → set. Path: [56:72] → [14:26] → [16:94] → [114:6]",
+    "all_conclusions": [
+      "[56:72] (You —[states]→ its tree) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: tree → example → bad → terrible → set. Path: [56:72] → [14:26] → [16:94",
+      "[56:72] (You —[states]→ its tree) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: initiate → earth → initiate → fully → aware. Path: [56:72] → [11:61] → ",
+      "[56:72] (You —[states]→ its tree) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: initiate → worship → saaleh → eat → let. Path: [56:72] → [11:61] → [7:7",
+      "[56:72] (You —[states]→ its tree) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: tree → tree → leave → enemy. Path: [56:72] → [37:64] → [7:22] → [114:6]"
     ]
   },
   {
@@ -4572,6 +4779,31 @@
     ]
   },
   {
+    "category": "monotheism_and_gods_nature",
+    "category_label": "God's nature, attributes, oneness, and sovereignty",
+    "verse_pair": [
+      "19:76",
+      "65:11"
+    ],
+    "num_supporting_deductions": 4,
+    "avg_quality": 72.3,
+    "bridge_keywords": [
+      "better",
+      "commit",
+      "generously",
+      "reward",
+      "righteous",
+      "work"
+    ],
+    "best_conclusion": "[19:76] (GOD —[states]→ the guidance of those who choose to be) connects to [65:11] (GOD —[promises]→ him) through thematic chain: better → reward → reward → commit → righteous → reward. Path: [19:76] → [28:84] → [53:31] → [65:11]",
+    "all_conclusions": [
+      "[19:76] (GOD —[states]→ the guidance of those who choose to be) connects to [65:11] (GOD —[promises]→ him) through thematic chain: reward → reward → work → righteous → reward. Path: [19:76] → [56:24] ",
+      "[19:76] (GOD —[states]→ the guidance of those who choose to be) connects to [65:11] (GOD —[promises]→ him) through thematic chain: reward → reward → work → reward → generously. Path: [19:76] → [56:24]",
+      "[19:76] (GOD —[states]→ the guidance of those who choose to be) connects to [65:11] (GOD —[promises]→ him) through thematic chain: reward → reward → reward → generously. Path: [19:76] → [37:110] → [39",
+      "[19:76] (GOD —[states]→ the guidance of those who choose to be) connects to [65:11] (GOD —[promises]→ him) through thematic chain: better → reward → reward → commit → righteous → reward. Path: [19:76]"
+    ]
+  },
+  {
     "category": "afterlife_and_judgment",
     "category_label": "Day of Judgment, paradise, hell, resurrection, and accountability",
     "verse_pair": [
@@ -4984,6 +5216,27 @@
     ]
   },
   {
+    "category": "afterlife_and_judgment",
+    "category_label": "Day of Judgment, paradise, hell, resurrection, and accountability",
+    "verse_pair": [
+      "24:49",
+      "40:6"
+    ],
+    "num_supporting_deductions": 4,
+    "avg_quality": 70.8,
+    "bridge_keywords": [
+      "disbelieve",
+      "judgment"
+    ],
+    "best_conclusion": "[24:49] (they —[describes]→ it) connects to [40:6] (GOD —[warns]→ upon those who disbelieve ,) through thematic chain: judgment → judgment → disbelieve → judgment. Path: [24:49] → [56:56] → [74:46] → [40:6]",
+    "all_conclusions": [
+      "[24:49] (they —[describes]→ it) connects to [40:6] (GOD —[warns]→ upon those who disbelieve ,) through thematic chain: judgment → judgment → disbelieve → judgment. Path: [24:49] → [56:56] → [74:46] → ",
+      "[24:49] (they —[describes]→ it) connects to [40:6] (GOD —[warns]→ upon those who disbelieve ,) through thematic chain: judgment → judgment → disbelieve → judgment. Path: [24:49] → [51:6] → [74:46] → [",
+      "[24:49] (they —[describes]→ it) connects to [40:6] (GOD —[warns]→ upon those who disbelieve ,) through thematic chain: judgment → judgment → judgment. Path: [24:49] → [56:56] → [82:15] → [40:6]",
+      "[24:49] (they —[describes]→ it) connects to [40:6] (GOD —[warns]→ upon those who disbelieve ,) through thematic chain: judgment → judgment → judgment. Path: [24:49] → [51:6] → [82:15] → [40:6]"
+    ]
+  },
+  {
     "category": "monotheism_and_gods_nature",
     "category_label": "God's nature, attributes, oneness, and sovereignty",
     "verse_pair": [
@@ -5029,253 +5282,6 @@
       "[22:35] (they —[commands]→ the Contact Prayers ( Salat )) connects to [96:9] (You —[describes]→ the one who enjoins) through thematic chain: salat → contact → salat → contact → enjoin. Path: [22:35] →",
       "[22:35] (they —[commands]→ the Contact Prayers ( Salat )) connects to [96:9] (You —[describes]→ the one who enjoins) through thematic chain: salat → contact → contact → enjoin. Path: [22:35] → [23:2] ",
       "[22:35] (they —[commands]→ the Contact Prayers ( Salat )) connects to [96:9] (You —[describes]→ the one who enjoins) through thematic chain: observe → contact → observe → contact → enjoin. Path: [22:3"
-    ]
-  },
-  {
-    "category": "worship_and_ritual",
-    "category_label": "Acts of worship, prayer, fasting, pilgrimage, and ritual practice",
-    "verse_pair": [
-      "69:47",
-      "53:62"
-    ],
-    "num_supporting_deductions": 4,
-    "avg_quality": 69.9,
-    "bridge_keywords": [
-      "fall",
-      "help",
-      "money"
-    ],
-    "best_conclusion": "[69:47] (None Of You —[describes]→ him) connects to [53:62] (You —[commands]→ prostrate before GOD) through thematic chain: help → help → money → fall. Path: [69:47] → [58:17] → [92:11] → [53:62]",
-    "all_conclusions": [
-      "[69:47] (None Of You —[describes]→ him) connects to [53:62] (You —[commands]→ prostrate before GOD) through thematic chain: help → help → money → fall. Path: [69:47] → [69:28] → [92:11] → [53:62]",
-      "[69:47] (None Of You —[describes]→ him) connects to [53:62] (You —[commands]→ prostrate before GOD) through thematic chain: help → help → money → fall. Path: [69:47] → [58:17] → [92:11] → [53:62]",
-      "[69:47] (None Of You —[describes]→ him) connects to [53:62] (You —[commands]→ prostrate before GOD) through thematic chain: help → help → fall. Path: [69:47] → [19:81] → [92:11] → [53:62]",
-      "[69:47] (None Of You —[describes]→ him) connects to [53:62] (You —[commands]→ prostrate before GOD) through thematic chain: help → help → fall. Path: [69:47] → [26:93] → [92:11] → [53:62]"
-    ]
-  },
-  {
-    "category": "monotheism_and_gods_nature",
-    "category_label": "God's nature, attributes, oneness, and sovereignty",
-    "verse_pair": [
-      "37:182",
-      "41:12"
-    ],
-    "num_supporting_deductions": 4,
-    "avg_quality": 69.8,
-    "bridge_keywords": [
-      "seven",
-      "universe"
-    ],
-    "best_conclusion": "[37:182] (Praise —[states]→ to GOD ,) connects to [41:12] (He —[states]→ the seven universes) through thematic chain: universe → universe → seven → universe. Path: [37:182] → [7:67] → [23:86] → [41:12]",
-    "all_conclusions": [
-      "[37:182] (Praise —[states]→ to GOD ,) connects to [41:12] (He —[states]→ the seven universes) through thematic chain: universe → universe → seven → universe. Path: [37:182] → [7:67] → [23:86] → [41:12",
-      "[37:182] (Praise —[states]→ to GOD ,) connects to [41:12] (He —[states]→ the seven universes) through thematic chain: universe → universe → seven → universe. Path: [37:182] → [7:104] → [23:86] → [41:1",
-      "[37:182] (Praise —[states]→ to GOD ,) connects to [41:12] (He —[states]→ the seven universes) through thematic chain: universe → universe → seven → universe. Path: [37:182] → [81:29] → [23:86] → [41:1",
-      "[37:182] (Praise —[states]→ to GOD ,) connects to [41:12] (He —[states]→ the seven universes) through thematic chain: universe → universe → seven → universe. Path: [37:182] → [37:87] → [65:12] → [41:1"
-    ]
-  },
-  {
-    "category": "monotheism_and_gods_nature",
-    "category_label": "God's nature, attributes, oneness, and sovereignty",
-    "verse_pair": [
-      "12:34",
-      "4:148"
-    ],
-    "num_supporting_deductions": 4,
-    "avg_quality": 69.8,
-    "bridge_keywords": [
-      "change",
-      "hearer",
-      "omniscient",
-      "prayer",
-      "unless"
-    ],
-    "best_conclusion": "[12:34] (GOD —[states]→ his prayer) connects to [4:148] (GOD —[describes]→ the utterance of bad language) through thematic chain: omniscient → prayer → change → omniscient → hearer → unless. Path: [12:34] → [24:58] → [8:53] → [4:148]",
-    "all_conclusions": [
-      "[12:34] (GOD —[states]→ his prayer) connects to [4:148] (GOD —[describes]→ the utterance of bad language) through thematic chain: hearer → omniscient → hearer → omniscient → hearer. Path: [12:34] → [2",
-      "[12:34] (GOD —[states]→ his prayer) connects to [4:148] (GOD —[describes]→ the utterance of bad language) through thematic chain: omniscient → prayer → change → omniscient → hearer → unless. Path: [12",
-      "[12:34] (GOD —[states]→ his prayer) connects to [4:148] (GOD —[describes]→ the utterance of bad language) through thematic chain: hearer → omniscient → hearer → omniscient → hearer. Path: [12:34] → [4",
-      "[12:34] (GOD —[states]→ his prayer) connects to [4:148] (GOD —[describes]→ the utterance of bad language) through thematic chain: hearer → hearer → hearer. Path: [12:34] → [8:23] → [26:220] → [4:148]"
-    ]
-  },
-  {
-    "category": "monotheism_and_gods_nature",
-    "category_label": "God's nature, attributes, oneness, and sovereignty",
-    "verse_pair": [
-      "70:27",
-      "4:59"
-    ],
-    "num_supporting_deductions": 4,
-    "avg_quality": 69.7,
-    "bridge_keywords": [
-      "messenger",
-      "obey",
-      "reverence"
-    ],
-    "best_conclusion": "[70:27] (They —[states]→ their Lord 's requital) connects to [4:59] (You —[commands]→ GOD) through thematic chain: reverence → reverence → obey → messenger. Path: [70:27] → [9:119] → [24:52] → [4:59]",
-    "all_conclusions": [
-      "[70:27] (They —[states]→ their Lord 's requital) connects to [4:59] (You —[commands]→ GOD) through thematic chain: reverence → reverence → obey → messenger. Path: [70:27] → [9:119] → [24:52] → [4:59]",
-      "[70:27] (They —[states]→ their Lord 's requital) connects to [4:59] (You —[commands]→ GOD) through thematic chain: reverence → reverence → obey. Path: [70:27] → [9:119] → [26:126] → [4:59]",
-      "[70:27] (They —[states]→ their Lord 's requital) connects to [4:59] (You —[commands]→ GOD) through thematic chain: reverence → reverence → obey. Path: [70:27] → [7:56] → [26:126] → [4:59]",
-      "[70:27] (They —[states]→ their Lord 's requital) connects to [4:59] (You —[commands]→ GOD) through thematic chain: reverence → obey → obey. Path: [70:27] → [26:108] → [68:8] → [4:59]"
-    ]
-  },
-  {
-    "category": "monotheism_and_gods_nature",
-    "category_label": "God's nature, attributes, oneness, and sovereignty",
-    "verse_pair": [
-      "36:15",
-      "39:4"
-    ],
-    "num_supporting_deductions": 4,
-    "avg_quality": 69.5,
-    "bridge_keywords": [
-      "anything",
-      "beget",
-      "glorify",
-      "gracious",
-      "son",
-      "want"
-    ],
-    "best_conclusion": "[36:15] (The Most Gracious —[reveals]→ anything) connects to [39:4] (He —[describes]→ whomever He willed from among His creations) through thematic chain: gracious → beget → son → glorify → son. Path: [36:15] → [19:88] → [10:68] → [39:4]",
-    "all_conclusions": [
-      "[36:15] (The Most Gracious —[reveals]→ anything) connects to [39:4] (He —[describes]→ whomever He willed from among His creations) through thematic chain: gracious → beget → son → glorify → son. Path:",
-      "[36:15] (The Most Gracious —[reveals]→ anything) connects to [39:4] (He —[describes]→ whomever He willed from among His creations) through thematic chain: anything → anything → want. Path: [36:15] → [",
-      "[36:15] (The Most Gracious —[reveals]→ anything) connects to [39:4] (He —[describes]→ whomever He willed from among His creations) through thematic chain: anything → anything → want. Path: [36:15] → [",
-      "[36:15] (The Most Gracious —[reveals]→ anything) connects to [39:4] (He —[describes]→ whomever He willed from among His creations) through thematic chain: anything → anything → want. Path: [36:15] → ["
-    ]
-  },
-  {
-    "category": "monotheism_and_gods_nature",
-    "category_label": "God's nature, attributes, oneness, and sovereignty",
-    "verse_pair": [
-      "42:23",
-      "114:6"
-    ],
-    "num_supporting_deductions": 3,
-    "avg_quality": 92.5,
-    "bridge_keywords": [
-      "believer",
-      "cause",
-      "fulfill",
-      "lead",
-      "life",
-      "live",
-      "make",
-      "money",
-      "multiply",
-      "paradise"
-    ],
-    "best_conclusion": "[42:23] (GOD —[is]→ forgiver) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: reward → multiply → money → live → believer → make. Path: [42:23] → [34:37] → [9:111] → [114:6]",
-    "all_conclusions": [
-      "[42:23] (GOD —[is]→ forgiver) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: reward → multiply → money → live → believer → make. Path: [42:23] → [34:37]",
-      "[42:23] (GOD —[is]→ forgiver) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: lead → multiply → live → paradise → fulfill → pledge. Path: [42:23] → [34:3",
-      "[42:23] (GOD —[is]→ forgiver) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: life → righteous → live → money → rejoice → cause. Path: [42:23] → [34:37] "
-    ]
-  },
-  {
-    "category": "monotheism_and_gods_nature",
-    "category_label": "God's nature, attributes, oneness, and sovereignty",
-    "verse_pair": [
-      "12:29",
-      "114:6"
-    ],
-    "num_supporting_deductions": 3,
-    "avg_quality": 92.5,
-    "bridge_keywords": [
-      "beside",
-      "deserve",
-      "earth",
-      "eat",
-      "except",
-      "fear",
-      "forgiveness",
-      "immense",
-      "initiate",
-      "know"
-    ],
-    "best_conclusion": "[12:29] (You —[states]→ forgiveness for your sin) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: seek → forgiveness → initiate → earth → immense → except. Path: [12:29] → [11:61] → [53:32] → [114:6]",
-    "all_conclusions": [
-      "[12:29] (You —[states]→ forgiveness for your sin) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: seek → forgiveness → initiate → earth → immense → excep",
-      "[12:29] (You —[states]→ forgiveness for your sin) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: seek → forgiveness → beside → send → eat → touch. Path:",
-      "[12:29] (You —[states]→ forgiveness for your sin) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: seek → forgiveness → fear → deserve → utterly → know. P"
-    ]
-  },
-  {
-    "category": "monotheism_and_gods_nature",
-    "category_label": "God's nature, attributes, oneness, and sovereignty",
-    "verse_pair": [
-      "68:47",
-      "114:6"
-    ],
-    "num_supporting_deductions": 3,
-    "avg_quality": 92.5,
-    "bridge_keywords": [
-      "angel",
-      "future",
-      "imitate",
-      "impossible",
-      "know",
-      "quran",
-      "reveal",
-      "treasure",
-      "warner",
-      "wish"
-    ],
-    "best_conclusion": "[68:47] (they —[states]→ the future) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: know → future → reveal → angel → warner → wish. Path: [68:47] → [6:50] → [11:12] → [114:6]",
-    "all_conclusions": [
-      "[68:47] (they —[states]→ the future) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: know → future → reveal → angel → warner → wish. Path: [68:47] → [6:5",
-      "[68:47] (they —[states]→ the future) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: future → know → angel → treasure → impossible → reveal. Path: [68:47",
-      "[68:47] (they —[states]→ the future) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: future → know → angel → treasure → imitate → quran. Path: [68:47] → "
-    ]
-  },
-  {
-    "category": "moral_law_and_ethics",
-    "category_label": "Moral principles, ethical conduct, and commandments",
-    "verse_pair": [
-      "65:1",
-      "63:5"
-    ],
-    "num_supporting_deductions": 3,
-    "avg_quality": 92.5,
-    "bridge_keywords": [
-      "force",
-      "hurt",
-      "leave",
-      "may",
-      "pray",
-      "prophet",
-      "something",
-      "unless"
-    ],
-    "best_conclusion": "[65:1] (You —[commands]→ such an interim) connects to [63:5] (they —[commands]→ their heads) through thematic chain: force → something → may → hurt → pray. Path: [65:1] → [33:53] → [17:11] → [63:5]",
-    "all_conclusions": [
-      "[65:1] (You —[commands]→ such an interim) connects to [63:5] (they —[commands]→ their heads) through thematic chain: force → something → may → hurt → pray. Path: [65:1] → [33:53] → [17:11] → [63:5]",
-      "[65:1] (You —[commands]→ such an interim) connects to [63:5] (they —[commands]→ their heads) through thematic chain: unless → force → hurt → something → pray. Path: [65:1] → [33:53] → [17:11] → [63:5]",
-      "[65:1] (You —[commands]→ such an interim) connects to [63:5] (they —[commands]→ their heads) through thematic chain: prophet → leave → something → hurt → pray. Path: [65:1] → [33:53] → [17:11] → [63:5"
-    ]
-  },
-  {
-    "category": "worship_and_ritual",
-    "category_label": "Acts of worship, prayer, fasting, pilgrimage, and ritual practice",
-    "verse_pair": [
-      "5:79",
-      "20:132"
-    ],
-    "num_supporting_deductions": 4,
-    "avg_quality": 69.1,
-    "bridge_keywords": [
-      "contact",
-      "enjoin",
-      "salat",
-      "ultimate"
-    ],
-    "best_conclusion": "[5:79] (They —[states]→ one another) connects to [20:132] (You —[commands]→ your family) through thematic chain: enjoin → contact → salat → contact. Path: [5:79] → [15:70] → [23:2] → [20:132]",
-    "all_conclusions": [
-      "[5:79] (They —[states]→ one another) connects to [20:132] (You —[commands]→ your family) through thematic chain: enjoin → contact → salat → contact. Path: [5:79] → [15:70] → [23:2] → [20:132]",
-      "[5:79] (They —[states]→ one another) connects to [20:132] (You —[commands]→ your family) through thematic chain: enjoin → enjoin → ultimate → enjoin. Path: [5:79] → [15:70] → [13:36] → [20:132]",
-      "[5:79] (They —[states]→ one another) connects to [20:132] (You —[commands]→ your family) through thematic chain: enjoin → enjoin → enjoin. Path: [5:79] → [15:70] → [96:9] → [20:132]",
-      "[5:79] (They —[states]→ one another) connects to [20:132] (You —[commands]→ your family) through thematic chain: enjoin → enjoin → enjoin. Path: [5:79] → [11:112] → [96:9] → [20:132]"
     ]
   }
 ]
