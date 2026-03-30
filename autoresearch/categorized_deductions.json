@@ -13216,6 +13216,630 @@
     }
   },
   {
+    "timestamp": "2026-03-30T12:10:49.037434",
+    "novelty_score": 97.5,
+    "coherence_score": 100.0,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "33:1",
+      "4:17",
+      "25:71",
+      "114:6"
+    ],
+    "bridge_keywords": [
+      "wise",
+      "omniscient",
+      "redeem",
+      "repent",
+      "redemption",
+      "righteous"
+    ],
+    "conclusion": "[33:1] (You —[commands]→ GOD) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: wise → omniscient → redeem → repent → redemption → righteous. Path: [33:1] → [4:17] → [25:71] → [114:6]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "worship_and_ritual",
+        15
+      ],
+      [
+        "monotheism_and_gods_nature",
+        14
+      ],
+      [
+        "prophecy_and_revelation",
+        13
+      ]
+    ],
+    "quality_score": 92.5,
+    "quality_breakdown": {
+      "specificity": 100,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:10:49.037615",
+    "novelty_score": 97.5,
+    "coherence_score": 100.0,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "14:4",
+      "6:125",
+      "40:64",
+      "114:6"
+    ],
+    "bridge_keywords": [
+      "guide",
+      "whomever",
+      "sky",
+      "render",
+      "design",
+      "good"
+    ],
+    "conclusion": "[14:4] (GOD —[states]→ whomever) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: guide → whomever → sky → render → design → good. Path: [14:4] → [6:125] → [40:64] → [114:6]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "monotheism_and_gods_nature",
+        14
+      ],
+      [
+        "prophecy_and_revelation",
+        14
+      ],
+      [
+        "worship_and_ritual",
+        14
+      ]
+    ],
+    "quality_score": 92.5,
+    "quality_breakdown": {
+      "specificity": 100,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:10:49.038269",
+    "novelty_score": 97.5,
+    "coherence_score": 100.0,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "47:12",
+      "9:72",
+      "13:23",
+      "114:6"
+    ],
+    "bridge_keywords": [
+      "stream",
+      "flow",
+      "garden",
+      "eden",
+      "together",
+      "door"
+    ],
+    "conclusion": "[47:12] (GOD —[commands]→ those who believe and lead a righteous life) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: stream → flow → garden → eden → together → door. Path: [47:12] → [9:72] → [13:23] → [114:6]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "monotheism_and_gods_nature",
+        14
+      ],
+      [
+        "worship_and_ritual",
+        14
+      ],
+      [
+        "prophecy_and_revelation",
+        13
+      ]
+    ],
+    "quality_score": 92.5,
+    "quality_breakdown": {
+      "specificity": 100,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:10:49.038646",
+    "novelty_score": 97.5,
+    "coherence_score": 100.0,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "43:73",
+      "28:57",
+      "8:26",
+      "114:6"
+    ],
+    "bridge_keywords": [
+      "kind",
+      "fruit",
+      "provision",
+      "sanctuary",
+      "grant",
+      "good"
+    ],
+    "conclusion": "[43:73] (You —[describes]→ all kinds of fruits , from which you) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: kind → fruit → provision → sanctuary → grant → good. Path: [43:73] → [28:57] → [8:26] → [114:6]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "monotheism_and_gods_nature",
+        14
+      ],
+      [
+        "worship_and_ritual",
+        14
+      ],
+      [
+        "prophecy_and_revelation",
+        13
+      ]
+    ],
+    "quality_score": 92.5,
+    "quality_breakdown": {
+      "specificity": 100,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:10:49.038896",
+    "novelty_score": 97.5,
+    "coherence_score": 100.0,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "84:21",
+      "7:11",
+      "38:75",
+      "114:6"
+    ],
+    "bridge_keywords": [
+      "prostrate",
+      "fall",
+      "create",
+      "satan",
+      "arrogant",
+      "prevent"
+    ],
+    "conclusion": "[84:21] (they —[prohibits]→ prostrate) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: prostrate → fall → create → satan → arrogant → prevent. Path: [84:21] → [7:11] → [38:75] → [114:6]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "monotheism_and_gods_nature",
+        14
+      ],
+      [
+        "worship_and_ritual",
+        14
+      ],
+      [
+        "creation_and_cosmology",
+        14
+      ]
+    ],
+    "quality_score": 92.5,
+    "quality_breakdown": {
+      "specificity": 100,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:10:49.039008",
+    "novelty_score": 97.5,
+    "coherence_score": 83.33,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "84:21",
+      "3:101",
+      "4:146",
+      "114:6"
+    ],
+    "bridge_keywords": [
+      "recite",
+      "fast",
+      "hold",
+      "great",
+      "alone"
+    ],
+    "conclusion": "[84:21] (they —[prohibits]→ prostrate) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: recite → fast → hold → great → alone. Path: [84:21] → [3:101] → [4:146] → [114:6]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "monotheism_and_gods_nature",
+        14
+      ],
+      [
+        "worship_and_ritual",
+        14
+      ],
+      [
+        "prophecy_and_revelation",
+        13
+      ]
+    ],
+    "quality_score": 92.5,
+    "quality_breakdown": {
+      "specificity": 100,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:10:58.561319",
+    "novelty_score": 97.5,
+    "coherence_score": 66.67,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "82:14",
+      "34:32",
+      "7:75",
+      "114:6"
+    ],
+    "bridge_keywords": [
+      "wicked",
+      "leader",
+      "bring",
+      "common"
+    ],
+    "conclusion": "[82:14] (the wicked —[warns]→ Hell) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: wicked → leader → bring → common. Path: [82:14] → [34:32] → [7:75] → [114:6]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "monotheism_and_gods_nature",
+        14
+      ],
+      [
+        "worship_and_ritual",
+        14
+      ],
+      [
+        "prophecy_and_revelation",
+        13
+      ]
+    ],
+    "quality_score": 92.5,
+    "quality_breakdown": {
+      "specificity": 100,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:10:58.561371",
+    "novelty_score": 97.5,
+    "coherence_score": 100.0,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "22:41",
+      "89:18",
+      "24:22",
+      "114:6"
+    ],
+    "bridge_keywords": [
+      "charity",
+      "advocate",
+      "towards",
+      "poor",
+      "merciful",
+      "forgiveness"
+    ],
+    "conclusion": "[22:41] (GOD —[is]→ the ultimate ruler) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: charity → advocate → towards → poor → merciful → forgiveness. Path: [22:41] → [89:18] → [24:22] → [114:6]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "monotheism_and_gods_nature",
+        14
+      ],
+      [
+        "worship_and_ritual",
+        14
+      ],
+      [
+        "prophecy_and_revelation",
+        13
+      ]
+    ],
+    "quality_score": 92.5,
+    "quality_breakdown": {
+      "specificity": 100,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:10:58.561652",
+    "novelty_score": 97.5,
+    "coherence_score": 66.67,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "7:64",
+      "26:120",
+      "4:29",
+      "114:6"
+    ],
+    "bridge_keywords": [
+      "drown",
+      "others",
+      "merciful",
+      "acceptable"
+    ],
+    "conclusion": "[7:64] (They —[states]→ him) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: drown → others → merciful → acceptable. Path: [7:64] → [26:120] → [4:29] → [114:6]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "monotheism_and_gods_nature",
+        14
+      ],
+      [
+        "worship_and_ritual",
+        14
+      ],
+      [
+        "prophecy_and_revelation",
+        13
+      ]
+    ],
+    "quality_score": 92.5,
+    "quality_breakdown": {
+      "specificity": 100,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:10:58.561722",
+    "novelty_score": 97.5,
+    "coherence_score": 100.0,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "24:33",
+      "18:28",
+      "114:6",
+      "19:58"
+    ],
+    "bridge_keywords": [
+      "seek",
+      "world",
+      "confuse",
+      "worship",
+      "israel",
+      "contact"
+    ],
+    "conclusion": "[24:33] (Those Who Can Not Afford To Get Married —[commands]→ morality) connects to [19:58] (they —[describes]→ prostrate) through thematic chain: seek → world → confuse → worship → israel → contact. Path: [24:33] → [18:28] → [114:6] → [19:58]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "monotheism_and_gods_nature",
+        14
+      ],
+      [
+        "worship_and_ritual",
+        14
+      ],
+      [
+        "prophecy_and_revelation",
+        13
+      ]
+    ],
+    "quality_score": 92.5,
+    "quality_breakdown": {
+      "specificity": 100,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:10:58.562854",
+    "novelty_score": 97.5,
+    "coherence_score": 100.0,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "8:17",
+      "7:150",
+      "20:94",
+      "114:6"
+    ],
+    "bridge_keywords": [
+      "throw",
+      "kill",
+      "head",
+      "pull",
+      "israel",
+      "might"
+    ],
+    "conclusion": "[8:17] (He —[commands]→ a chance to earn a lot of credit) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: throw → kill → head → pull → israel → might. Path: [8:17] → [7:150] → [20:94] → [114:6]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "monotheism_and_gods_nature",
+        14
+      ],
+      [
+        "worship_and_ritual",
+        14
+      ],
+      [
+        "prophecy_and_revelation",
+        13
+      ]
+    ],
+    "quality_score": 92.5,
+    "quality_breakdown": {
+      "specificity": 100,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:11:08.096543",
+    "novelty_score": 97.5,
+    "coherence_score": 100.0,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "2:266",
+      "9:72",
+      "13:23",
+      "114:6"
+    ],
+    "bridge_keywords": [
+      "stream",
+      "flow",
+      "garden",
+      "eden",
+      "together",
+      "door"
+    ],
+    "conclusion": "[2:266] (GOD —[states]→ the revelations for you) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: stream → flow → garden → eden → together → door. Path: [2:266] → [9:72] → [13:23] → [114:6]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "monotheism_and_gods_nature",
+        14
+      ],
+      [
+        "worship_and_ritual",
+        14
+      ],
+      [
+        "prophecy_and_revelation",
+        13
+      ]
+    ],
+    "quality_score": 92.5,
+    "quality_breakdown": {
+      "specificity": 100,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:11:12.680089",
+    "novelty_score": 97.5,
+    "coherence_score": 100.0,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "4:77",
+      "28:60",
+      "20:127",
+      "10:13"
+    ],
+    "bridge_keywords": [
+      "better",
+      "give",
+      "far",
+      "everlasting",
+      "requite",
+      "refuse"
+    ],
+    "conclusion": "[4:77] (they —[commands]→ the people) connects to [10:13] (Their messengers —[commands]→ with clear proofs) through thematic chain: better → give → far → everlasting → requite → refuse. Path: [4:77] → [28:60] → [20:127] → [10:13]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "worship_and_ritual",
+        3
+      ],
+      [
+        "monotheism_and_gods_nature",
+        2
+      ],
+      [
+        "moral_law_and_ethics",
+        2
+      ]
+    ],
+    "quality_score": 92.5,
+    "quality_breakdown": {
+      "specificity": 100,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:11:12.681458",
+    "novelty_score": 97.5,
+    "coherence_score": 83.33,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "66:8",
+      "42:25",
+      "74:16",
+      "10:13"
+    ],
+    "bridge_keywords": [
+      "remit",
+      "sin",
+      "accept",
+      "refuse",
+      "proof"
+    ],
+    "conclusion": "[66:8] (You —[commands]→ a firm repentance) connects to [10:13] (Their messengers —[commands]→ with clear proofs) through thematic chain: remit → sin → accept → refuse → proof. Path: [66:8] → [42:25] → [74:16] → [10:13]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "monotheism_and_gods_nature",
+        5
+      ],
+      [
+        "prophecy_and_revelation",
+        2
+      ],
+      [
+        "divine_mercy_and_forgiveness",
+        2
+      ]
+    ],
+    "quality_score": 92.5,
+    "quality_breakdown": {
+      "specificity": 100,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
     "timestamp": "2026-03-29T23:11:33.532505",
     "novelty_score": 84.75,
     "coherence_score": 50.0,
@@ -15433,6 +16057,261 @@
       [
         "prophecy_and_revelation",
         13
+      ]
+    ],
+    "quality_score": 90.5,
+    "quality_breakdown": {
+      "specificity": 90,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:10:39.352141",
+    "novelty_score": 93.75,
+    "coherence_score": 50.0,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "34:1",
+      "22:24",
+      "2:263",
+      "31:26"
+    ],
+    "bridge_keywords": [
+      "praise",
+      "word",
+      "rich"
+    ],
+    "conclusion": "[34:1] (Praise —[describes]→ to GOD) connects to [31:26] (GOD —[is]→ the most rich) through thematic chain: praise → word → rich. Path: [34:1] → [22:24] → [2:263] → [31:26]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "moral_law_and_ethics",
+        3
+      ],
+      [
+        "monotheism_and_gods_nature",
+        2
+      ],
+      [
+        "afterlife_and_judgment",
+        1
+      ]
+    ],
+    "quality_score": 90.5,
+    "quality_breakdown": {
+      "specificity": 90,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:10:49.038371",
+    "novelty_score": 97.5,
+    "coherence_score": 66.67,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "29:26",
+      "74:6",
+      "7:171",
+      "114:6"
+    ],
+    "bridge_keywords": [
+      "lot",
+      "content",
+      "like",
+      "strongly"
+    ],
+    "conclusion": "[29:26] (Lot —[commands]→ with him) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: lot → content → like → strongly. Path: [29:26] → [74:6] → [7:171] → [114:6]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "monotheism_and_gods_nature",
+        14
+      ],
+      [
+        "worship_and_ritual",
+        14
+      ],
+      [
+        "prophecy_and_revelation",
+        13
+      ]
+    ],
+    "quality_score": 90.5,
+    "quality_breakdown": {
+      "specificity": 90,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:10:49.038380",
+    "novelty_score": 97.5,
+    "coherence_score": 66.67,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "29:26",
+      "74:6",
+      "33:51",
+      "114:6"
+    ],
+    "bridge_keywords": [
+      "lot",
+      "content",
+      "bring",
+      "closer"
+    ],
+    "conclusion": "[29:26] (Lot —[commands]→ with him) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: lot → content → bring → closer. Path: [29:26] → [74:6] → [33:51] → [114:6]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "monotheism_and_gods_nature",
+        14
+      ],
+      [
+        "worship_and_ritual",
+        14
+      ],
+      [
+        "prophecy_and_revelation",
+        13
+      ]
+    ],
+    "quality_score": 90.5,
+    "quality_breakdown": {
+      "specificity": 90,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:10:49.039051",
+    "novelty_score": 93.75,
+    "coherence_score": 50.0,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "27:66",
+      "4:9",
+      "26:182",
+      "114:6"
+    ],
+    "bridge_keywords": [
+      "concern",
+      "equitable",
+      "scale"
+    ],
+    "conclusion": "[27:66] (their knowledge concerning the Hereafter —[describes]→ In fact) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: concern → equitable → scale. Path: [27:66] → [4:9] → [26:182] → [114:6]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "monotheism_and_gods_nature",
+        14
+      ],
+      [
+        "worship_and_ritual",
+        14
+      ],
+      [
+        "prophecy_and_revelation",
+        13
+      ]
+    ],
+    "quality_score": 90.5,
+    "quality_breakdown": {
+      "specificity": 90,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:11:08.096720",
+    "novelty_score": 97.5,
+    "coherence_score": 66.67,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "16:10",
+      "52:9",
+      "13:13",
+      "114:6"
+    ],
+    "bridge_keywords": [
+      "sky",
+      "thunder",
+      "praise",
+      "power"
+    ],
+    "conclusion": "[16:10] (He —[states]→ for your drink) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: sky → thunder → praise → power. Path: [16:10] → [52:9] → [13:13] → [114:6]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "monotheism_and_gods_nature",
+        15
+      ],
+      [
+        "worship_and_ritual",
+        15
+      ],
+      [
+        "prophecy_and_revelation",
+        13
+      ]
+    ],
+    "quality_score": 90.5,
+    "quality_breakdown": {
+      "specificity": 90,
+      "surah_diversity": 100,
+      "meaningfulness": 80,
+      "coherence": 100.0,
+      "relevance": 100,
+      "rule_bonus": 70
+    }
+  },
+  {
+    "timestamp": "2026-03-30T12:11:12.682948",
+    "novelty_score": 93.75,
+    "coherence_score": 50.0,
+    "rule": "thematic_bridge_3hop",
+    "premise_verses": [
+      "6:139",
+      "26:166",
+      "52:47",
+      "4:104"
+    ],
+    "bridge_keywords": [
+      "wive",
+      "transgress",
+      "suffer"
+    ],
+    "conclusion": "[6:139] (they —[describes]→ their wives) connects to [4:104] (You —[prohibits]→ from GOD) through thematic chain: wive → transgress → suffer. Path: [6:139] → [26:166] → [52:47] → [4:104]",
+    "graph_distance": 3,
+    "categories": [
+      [
+        "monotheism_and_gods_nature",
+        4
+      ],
+      [
+        "afterlife_and_judgment",
+        1
+      ],
+      [
+        "creation_and_cosmology",
+        1
       ]
     ],
     "quality_score": 90.5,
@@ -21189,896 +22068,6 @@
       [
         "prophecy_and_revelation",
         13
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 100,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 80,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-29T23:27:23.307165",
-    "novelty_score": 97.5,
-    "coherence_score": 100.0,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "46:19",
-      "3:174",
-      "3:103",
-      "2:187"
-    ],
-    "bridge_keywords": [
-      "attain",
-      "deserve",
-      "blessing",
-      "grace",
-      "may",
-      "use"
-    ],
-    "conclusion": "[46:19] (They all —[describes]→ the ranks they have deserved) connects to [2:187] (You —[commands]→ until sunset) through thematic chain: attain → deserve → blessing → grace → may → use. Path: [46:19] → [3:174] → [3:103] → [2:187]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "monotheism_and_gods_nature",
-        2
-      ],
-      [
-        "worship_and_ritual",
-        2
-      ],
-      [
-        "afterlife_and_judgment",
-        1
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 80,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 100,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-29T23:27:44.784572",
-    "novelty_score": 97.5,
-    "coherence_score": 66.67,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "3:59",
-      "37:53",
-      "23:14",
-      "40:67"
-    ],
-    "bridge_keywords": [
-      "dust",
-      "bone",
-      "create",
-      "hang"
-    ],
-    "conclusion": "[3:59] (He —[creates]→ him) connects to [40:67] (You —[states]→ a predetermined age) through thematic chain: dust → bone → create → hang. Path: [3:59] → [37:53] → [23:14] → [40:67]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "monotheism_and_gods_nature",
-        3
-      ],
-      [
-        "creation_and_cosmology",
-        3
-      ],
-      [
-        "prophetic_narratives",
-        2
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 100,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 80,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-30T10:12:39.872782",
-    "novelty_score": 97.5,
-    "coherence_score": 66.67,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "58:7",
-      "77:30",
-      "20:53",
-      "6:99"
-    ],
-    "bridge_keywords": [
-      "three",
-      "different",
-      "kind",
-      "send"
-    ],
-    "conclusion": "[58:7] (He —[states]→ them) connects to [6:99] (We Fruits That Are Similar , Yet Dissimilar —[describes]→ from the green material multitudes of complex grains ,) through thematic chain: three → different → kind → send. Path: [58:7] → [77:30] → [20:53] → [6:99]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "creation_and_cosmology",
-        3
-      ],
-      [
-        "monotheism_and_gods_nature",
-        2
-      ],
-      [
-        "afterlife_and_judgment",
-        2
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 100,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 80,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-30T10:12:39.873819",
-    "novelty_score": 97.5,
-    "coherence_score": 66.67,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "53:23",
-      "81:20",
-      "33:56",
-      "2:248"
-    ],
-    "bridge_keywords": [
-      "authorize",
-      "support",
-      "angel",
-      "prophet"
-    ],
-    "conclusion": "[53:23] (GOD —[prohibits]→ such a blasphemy) connects to [2:248] (Their prophet —[describes]→ to them) through thematic chain: authorize → support → angel → prophet. Path: [53:23] → [81:20] → [33:56] → [2:248]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "monotheism_and_gods_nature",
-        3
-      ],
-      [
-        "prophecy_and_revelation",
-        3
-      ],
-      [
-        "covenant_and_obedience",
-        3
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 100,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 80,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-30T10:12:56.465975",
-    "novelty_score": 97.5,
-    "coherence_score": 100.0,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "2:274",
-      "16:75",
-      "11:24",
-      "41:44"
-    ],
-    "bridge_keywords": [
-      "charity",
-      "publicly",
-      "equal",
-      "example",
-      "would",
-      "deaf"
-    ],
-    "conclusion": "[2:274] (they —[commands]→ nothing to fear) connects to [41:44] (those who disbelieve, they —[will_receive]→ be deaf and blind to it) through thematic chain: charity → publicly → equal → example → would → deaf. Path: [2:274] → [16:75] → [11:24] → [41:44]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "monotheism_and_gods_nature",
-        3
-      ],
-      [
-        "moral_law_and_ethics",
-        2
-      ],
-      [
-        "covenant_and_obedience",
-        2
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 100,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 80,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-30T10:12:56.466431",
-    "novelty_score": 97.5,
-    "coherence_score": 100.0,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "9:98",
-      "9:99",
-      "24:22",
-      "114:6"
-    ],
-    "bridge_keywords": [
-      "spend",
-      "consider",
-      "forgiver",
-      "merciful",
-      "attain",
-      "charitable"
-    ],
-    "conclusion": "[9:98] (GOD —[is]→ hearer) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: spend → consider → forgiver → merciful → attain → charitable. Path: [9:98] → [9:99] → [24:22] → [114:6]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "monotheism_and_gods_nature",
-        14
-      ],
-      [
-        "worship_and_ritual",
-        14
-      ],
-      [
-        "prophecy_and_revelation",
-        13
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 80,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 100,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-30T10:13:12.698864",
-    "novelty_score": 97.5,
-    "coherence_score": 100.0,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "6:25",
-      "7:132",
-      "61:6",
-      "3:50"
-    ],
-    "bridge_keywords": [
-      "matter",
-      "kind",
-      "magic",
-      "show",
-      "proof",
-      "confirm"
-    ],
-    "conclusion": "[6:25] (Some of them —[states]→ to you) connects to [3:50] (You —[commands]→ GOD) through thematic chain: matter → kind → magic → show → proof → confirm. Path: [6:25] → [7:132] → [61:6] → [3:50]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "prophecy_and_revelation",
-        5
-      ],
-      [
-        "monotheism_and_gods_nature",
-        2
-      ],
-      [
-        "moral_law_and_ethics",
-        2
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 100,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 80,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-30T10:13:19.008288",
-    "novelty_score": 97.5,
-    "coherence_score": 83.33,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "18:29",
-      "3:187",
-      "2:100",
-      "57:8"
-    ],
-    "bridge_keywords": [
-      "miserable",
-      "proclaim",
-      "covenant",
-      "disregard",
-      "pledge"
-    ],
-    "conclusion": "[18:29] (they —[commands]→ a liquid like concentrated acid that scalds the) connects to [57:8] (You —[commands]→ in GOD) through thematic chain: miserable → proclaim → covenant → disregard → pledge. Path: [18:29] → [3:187] → [2:100] → [57:8]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "covenant_and_obedience",
-        3
-      ],
-      [
-        "monotheism_and_gods_nature",
-        2
-      ],
-      [
-        "prophecy_and_revelation",
-        2
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 100,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 80,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-30T10:13:31.350810",
-    "novelty_score": 97.5,
-    "coherence_score": 100.0,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "23:103",
-      "4:122",
-      "3:198",
-      "66:8"
-    ],
-    "bridge_keywords": [
-      "forever",
-      "whose",
-      "flow",
-      "righteous",
-      "stream",
-      "garden"
-    ],
-    "conclusion": "[23:103] (they —[warns]→ in Hell) connects to [66:8] (You —[commands]→ a firm repentance) through thematic chain: forever → whose → flow → righteous → stream → garden. Path: [23:103] → [4:122] → [3:198] → [66:8]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "monotheism_and_gods_nature",
-        4
-      ],
-      [
-        "afterlife_and_judgment",
-        3
-      ],
-      [
-        "divine_mercy_and_forgiveness",
-        2
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 100,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 80,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-30T10:13:38.714923",
-    "novelty_score": 97.5,
-    "coherence_score": 83.33,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "33:6",
-      "48:21",
-      "25:39",
-      "32:26"
-    ],
-    "bridge_keywords": [
-      "take",
-      "care",
-      "group",
-      "sufficient",
-      "annihilate"
-    ],
-    "conclusion": "[33:6] (the believers —[commands]→ care) connects to [32:26] (This —[states]→ sufficient proofs) through thematic chain: take → care → group → sufficient → annihilate. Path: [33:6] → [48:21] → [25:39] → [32:26]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "monotheism_and_gods_nature",
-        3
-      ],
-      [
-        "prophecy_and_revelation",
-        2
-      ],
-      [
-        "warfare_and_struggle",
-        1
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 100,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 80,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-30T10:13:51.673097",
-    "novelty_score": 97.5,
-    "coherence_score": 100.0,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "42:21",
-      "64:5",
-      "30:9",
-      "35:44"
-    ],
-    "bridge_keywords": [
-      "retribution",
-      "painful",
-      "consequence",
-      "note",
-      "earth",
-      "precede"
-    ],
-    "conclusion": "[42:21] (They —[commands]→ idols who decree for them religious laws never) connects to [35:44] (they —[describes]→ the earth) through thematic chain: retribution → painful → consequence → note → earth → precede. Path: [42:21] → [64:5] → [30:9] → [35:44]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "monotheism_and_gods_nature",
-        4
-      ],
-      [
-        "afterlife_and_judgment",
-        1
-      ],
-      [
-        "creation_and_cosmology",
-        1
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 100,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 80,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-30T10:14:06.629318",
-    "novelty_score": 97.5,
-    "coherence_score": 66.67,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "16:50",
-      "38:69",
-      "38:64",
-      "114:6"
-    ],
-    "bridge_keywords": [
-      "high",
-      "feud",
-      "predetermine",
-      "fact"
-    ],
-    "conclusion": "[16:50] (They —[describes]→ their Lord , high above them) connects to [114:6] (The reader —[states]→ the accuracy of this total) through thematic chain: high → feud → predetermine → fact. Path: [16:50] → [38:69] → [38:64] → [114:6]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "worship_and_ritual",
-        15
-      ],
-      [
-        "monotheism_and_gods_nature",
-        14
-      ],
-      [
-        "prophecy_and_revelation",
-        13
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 80,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 100,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-30T10:14:06.630554",
-    "novelty_score": 97.5,
-    "coherence_score": 100.0,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "2:277",
-      "22:41",
-      "2:285",
-      "3:186"
-    ],
-    "bridge_keywords": [
-      "zakat",
-      "obligatory",
-      "contact",
-      "prayer",
-      "hear",
-      "scripture"
-    ],
-    "conclusion": "[2:277] (they —[commands]→ nothing to fear) connects to [3:186] (You —[reveals]→ through your money and your lives) through thematic chain: zakat → obligatory → contact → prayer → hear → scripture. Path: [2:277] → [22:41] → [2:285] → [3:186]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "worship_and_ritual",
-        4
-      ],
-      [
-        "covenant_and_obedience",
-        4
-      ],
-      [
-        "monotheism_and_gods_nature",
-        3
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 80,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 100,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-30T10:14:38.267759",
-    "novelty_score": 97.5,
-    "coherence_score": 100.0,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "65:1",
-      "2:229",
-      "39:47",
-      "13:18"
-    ],
-    "bridge_keywords": [
-      "law",
-      "divorce",
-      "twice",
-      "transgress",
-      "would",
-      "earth"
-    ],
-    "conclusion": "[65:1] (You —[commands]→ such an interim) connects to [13:18] (GOD —[states]→ the good rewards) through thematic chain: law → divorce → twice → transgress → would → earth. Path: [65:1] → [2:229] → [39:47] → [13:18]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "afterlife_and_judgment",
-        5
-      ],
-      [
-        "social_law",
-        4
-      ],
-      [
-        "monotheism_and_gods_nature",
-        2
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 100,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 80,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-30T10:14:38.267786",
-    "novelty_score": 97.5,
-    "coherence_score": 100.0,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "65:1",
-      "2:229",
-      "24:29",
-      "3:154"
-    ],
-    "bridge_keywords": [
-      "law",
-      "divorce",
-      "error",
-      "home",
-      "conceal",
-      "everything"
-    ],
-    "conclusion": "[65:1] (You —[commands]→ such an interim) connects to [3:154] (He —[states]→ upon you) through thematic chain: law → divorce → error → home → conceal → everything. Path: [65:1] → [2:229] → [24:29] → [3:154]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "social_law",
-        4
-      ],
-      [
-        "monotheism_and_gods_nature",
-        2
-      ],
-      [
-        "prophecy_and_revelation",
-        2
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 100,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 80,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-30T10:14:38.267884",
-    "novelty_score": 97.5,
-    "coherence_score": 100.0,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "65:1",
-      "2:237",
-      "33:50",
-      "33:6"
-    ],
-    "bridge_keywords": [
-      "unless",
-      "divorce",
-      "dowry",
-      "forfeit",
-      "believer",
-      "mother"
-    ],
-    "conclusion": "[65:1] (You —[commands]→ such an interim) connects to [33:6] (the believers —[commands]→ care) through thematic chain: unless → divorce → dowry → forfeit → believer → mother. Path: [65:1] → [2:237] → [33:50] → [33:6]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "monotheism_and_gods_nature",
-        4
-      ],
-      [
-        "social_law",
-        4
-      ],
-      [
-        "prophecy_and_revelation",
-        2
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 80,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 100,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-30T10:14:38.268068",
-    "novelty_score": 97.5,
-    "coherence_score": 100.0,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "65:1",
-      "33:53",
-      "4:12",
-      "6:139"
-    ],
-    "bridge_keywords": [
-      "unless",
-      "force",
-      "hurt",
-      "leave",
-      "share",
-      "omniscient"
-    ],
-    "conclusion": "[65:1] (You —[commands]→ such an interim) connects to [6:139] (they —[describes]→ their wives) through thematic chain: unless → force → hurt → leave → share → omniscient. Path: [65:1] → [33:53] → [4:12] → [6:139]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "monotheism_and_gods_nature",
-        5
-      ],
-      [
-        "social_law",
-        4
-      ],
-      [
-        "moral_law_and_ethics",
-        3
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 100,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 80,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-30T10:14:38.271534",
-    "novelty_score": 88.5,
-    "coherence_score": 100.0,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "42:14",
-      "42:21",
-      "114:6",
-      "21:24"
-    ],
-    "bridge_keywords": [
-      "immediately",
-      "would",
-      "decree",
-      "retribution",
-      "generation",
-      "truth"
-    ],
-    "conclusion": "[42:14] (they —[states]→ into sects) connects to [21:24] (they —[describes]→ other gods) through thematic chain: immediately → would → decree → retribution → generation → truth. Path: [42:14] → [42:21] → [114:6] → [21:24]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "monotheism_and_gods_nature",
-        14
-      ],
-      [
-        "worship_and_ritual",
-        14
-      ],
-      [
-        "prophecy_and_revelation",
-        13
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 80,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 100,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-30T10:14:38.271543",
-    "novelty_score": 88.5,
-    "coherence_score": 100.0,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "42:14",
-      "42:21",
-      "114:6",
-      "19:58"
-    ],
-    "bridge_keywords": [
-      "immediately",
-      "would",
-      "decree",
-      "retribution",
-      "revelation",
-      "israel"
-    ],
-    "conclusion": "[42:14] (they —[states]→ into sects) connects to [19:58] (they —[describes]→ prostrate) through thematic chain: immediately → would → decree → retribution → revelation → israel. Path: [42:14] → [42:21] → [114:6] → [19:58]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "monotheism_and_gods_nature",
-        14
-      ],
-      [
-        "worship_and_ritual",
-        14
-      ],
-      [
-        "prophecy_and_revelation",
-        13
-      ]
-    ],
-    "quality_score": 89.5,
-    "quality_breakdown": {
-      "specificity": 100,
-      "surah_diversity": 80,
-      "meaningfulness": 80,
-      "coherence": 100.0,
-      "relevance": 100,
-      "rule_bonus": 70
-    }
-  },
-  {
-    "timestamp": "2026-03-30T10:14:42.795303",
-    "novelty_score": 97.5,
-    "coherence_score": 100.0,
-    "rule": "thematic_bridge_3hop",
-    "premise_verses": [
-      "34:37",
-      "57:11",
-      "48:16",
-      "59:11"
-    ],
-    "bridge_keywords": [
-      "multiply",
-      "manifold",
-      "recompense",
-      "generous",
-      "obey",
-      "fight"
-    ],
-    "conclusion": "[34:37] (BELIEVERS —[commands]→ the reward) connects to [59:11] (You —[commands]→ those who are plagued with hypocrisy) through thematic chain: multiply → manifold → recompense → generous → obey → fight. Path: [34:37] → [57:11] → [48:16] → [59:11]",
-    "graph_distance": 3,
-    "categories": [
-      [
-        "afterlife_and_judgment",
-        3
-      ],
-      [
-        "covenant_and_obedience",
-        3
-      ],
-      [
-        "monotheism_and_gods_nature",
-        1
       ]
     ],
     "quality_score": 89.5,

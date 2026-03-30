@@ -197,3 +197,5 @@ experiment	score	best	kept	mutations
 96	70.3200	70.7700	False	min_quality_for_insights: 40 -> 50
 97	70.7700	70.7700	True	quality_weight_meaningfulness: 0.218 -> 0.244
 98	70.7700	70.7700	True	min_insight_support: 4 -> 6; quality_weight_specificity: 0.297 -> 0.204
+99	70.7700	70.7700	True	min_quality_for_insights: 40 -> 40; quality_weight_rule_bonus: 0.15 -> 0.109
+100	70.7700	70.7700	True	quality_weight_surah_diversity: 0.106 -> 0.177; quality_weight_meaningfulness: 0.218 -> 0.246; quality_weight_rule_bonus: 0.15 -> 0.208
