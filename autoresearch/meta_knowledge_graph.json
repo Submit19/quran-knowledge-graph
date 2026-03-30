@@ -4,86 +4,86 @@
       "id": "monotheism_and_gods_nature",
       "label": "Monotheism And Gods Nature",
       "description": "God's nature, attributes, oneness, and sovereignty",
-      "verse_count": 142545
+      "verse_count": 143632
     },
     {
       "id": "prophecy_and_revelation",
       "label": "Prophecy And Revelation",
       "description": "Prophetic mission, revelation, scripture, and divine communication",
-      "verse_count": 57469
+      "verse_count": 58113
     },
     {
       "id": "moral_law_and_ethics",
       "label": "Moral Law And Ethics",
       "description": "Moral principles, ethical conduct, and commandments",
-      "verse_count": 48832
+      "verse_count": 49065
     },
     {
       "id": "worship_and_ritual",
       "label": "Worship And Ritual",
       "description": "Acts of worship, prayer, fasting, pilgrimage, and ritual practice",
-      "verse_count": 32917
+      "verse_count": 33214
     },
     {
       "id": "afterlife_and_judgment",
       "label": "Afterlife And Judgment",
       "description": "Day of Judgment, paradise, hell, resurrection, and accountability",
-      "verse_count": 58561
+      "verse_count": 58948
     },
     {
       "id": "creation_and_cosmology",
       "label": "Creation And Cosmology",
       "description": "Creation of universe, humans, nature, and natural phenomena",
-      "verse_count": 28109
+      "verse_count": 28348
     },
     {
       "id": "prophetic_narratives",
       "label": "Prophetic Narratives",
       "description": "Stories of prophets and historical narratives",
-      "verse_count": 13337
+      "verse_count": 13441
     },
     {
       "id": "social_law",
       "label": "Social Law",
       "description": "Family law, marriage, divorce, inheritance, and social contracts",
-      "verse_count": 9194
+      "verse_count": 9251
     },
     {
       "id": "covenant_and_obedience",
       "label": "Covenant And Obedience",
       "description": "Divine covenant, faith, obedience, and disbelief",
-      "verse_count": 30189
+      "verse_count": 30465
     },
     {
       "id": "divine_mercy_and_forgiveness",
       "label": "Divine Mercy And Forgiveness",
       "description": "God's mercy, forgiveness, repentance, and redemption",
-      "verse_count": 11258
+      "verse_count": 11338
     },
     {
       "id": "warfare_and_struggle",
       "label": "Warfare And Struggle",
       "description": "Armed struggle, persecution, migration, and defense",
-      "verse_count": 5364
+      "verse_count": 5396
     },
     {
       "id": "knowledge_and_wisdom",
       "label": "Knowledge And Wisdom",
       "description": "Pursuit of knowledge, wisdom, reflection, and understanding",
-      "verse_count": 7157
+      "verse_count": 7205
     },
     {
       "id": "mathematical_miracle",
       "label": "Mathematical Miracle",
       "description": "Khalifa's mathematical miracle of 19 and Quranic numerology",
-      "verse_count": 485
+      "verse_count": 489
     }
   ],
   "edges": [
     {
       "source": "monotheism_and_gods_nature",
       "target": "prophecy_and_revelation",
-      "weight": 13670,
+      "weight": 13815,
       "avg_quality": 76.1,
       "examples": [
         {
@@ -136,7 +136,7 @@
     {
       "source": "afterlife_and_judgment",
       "target": "monotheism_and_gods_nature",
-      "weight": 13329,
+      "weight": 13416,
       "avg_quality": 74.6,
       "examples": [
         {
@@ -189,7 +189,7 @@
     {
       "source": "monotheism_and_gods_nature",
       "target": "moral_law_and_ethics",
-      "weight": 11321,
+      "weight": 11370,
       "avg_quality": 74.9,
       "examples": [
         {
@@ -242,7 +242,7 @@
     {
       "source": "monotheism_and_gods_nature",
       "target": "worship_and_ritual",
-      "weight": 7935,
+      "weight": 8007,
       "avg_quality": 77.2,
       "examples": [
         {
@@ -295,7 +295,7 @@
     {
       "source": "covenant_and_obedience",
       "target": "monotheism_and_gods_nature",
-      "weight": 6777,
+      "weight": 6835,
       "avg_quality": 74.7,
       "examples": [
         {
@@ -348,7 +348,7 @@
     {
       "source": "creation_and_cosmology",
       "target": "monotheism_and_gods_nature",
-      "weight": 6509,
+      "weight": 6561,
       "avg_quality": 74.3,
       "examples": [
         {
@@ -401,7 +401,7 @@
     {
       "source": "afterlife_and_judgment",
       "target": "moral_law_and_ethics",
-      "weight": 3737,
+      "weight": 3748,
       "avg_quality": 74.9,
       "examples": [
         {
@@ -454,8 +454,8 @@
     {
       "source": "prophecy_and_revelation",
       "target": "worship_and_ritual",
-      "weight": 3281,
-      "avg_quality": 80.3,
+      "weight": 3330,
+      "avg_quality": 80.4,
       "examples": [
         {
           "verses": [
@@ -507,8 +507,8 @@
     {
       "source": "afterlife_and_judgment",
       "target": "prophecy_and_revelation",
-      "weight": 3101,
-      "avg_quality": 74.9,
+      "weight": 3130,
+      "avg_quality": 74.8,
       "examples": [
         {
           "verses": [
@@ -560,7 +560,7 @@
     {
       "source": "monotheism_and_gods_nature",
       "target": "prophetic_narratives",
-      "weight": 2901,
+      "weight": 2919,
       "avg_quality": 74.2,
       "examples": [
         {
@@ -613,7 +613,7 @@
     {
       "source": "moral_law_and_ethics",
       "target": "prophecy_and_revelation",
-      "weight": 2865,
+      "weight": 2893,
       "avg_quality": 75.0,
       "examples": [
         {
@@ -666,7 +666,7 @@
     {
       "source": "divine_mercy_and_forgiveness",
       "target": "monotheism_and_gods_nature",
-      "weight": 2767,
+      "weight": 2786,
       "avg_quality": 74.5,
       "examples": [
         {
@@ -719,7 +719,7 @@
     {
       "source": "afterlife_and_judgment",
       "target": "creation_and_cosmology",
-      "weight": 2396,
+      "weight": 2409,
       "avg_quality": 74.1,
       "examples": [
         {
@@ -771,7 +771,7 @@
     {
       "source": "afterlife_and_judgment",
       "target": "covenant_and_obedience",
-      "weight": 2221,
+      "weight": 2251,
       "avg_quality": 75.0,
       "examples": [
         {
@@ -824,7 +824,7 @@
     {
       "source": "covenant_and_obedience",
       "target": "prophecy_and_revelation",
-      "weight": 2171,
+      "weight": 2184,
       "avg_quality": 74.8,
       "examples": [
         {
@@ -877,8 +877,8 @@
     {
       "source": "monotheism_and_gods_nature",
       "target": "social_law",
-      "weight": 2079,
-      "avg_quality": 75.2,
+      "weight": 2091,
+      "avg_quality": 75.1,
       "examples": [
         {
           "verses": [
@@ -930,7 +930,7 @@
     {
       "source": "moral_law_and_ethics",
       "target": "worship_and_ritual",
-      "weight": 1944,
+      "weight": 1947,
       "avg_quality": 75.5,
       "examples": [
         {
@@ -983,7 +983,7 @@
     {
       "source": "knowledge_and_wisdom",
       "target": "monotheism_and_gods_nature",
-      "weight": 1545,
+      "weight": 1554,
       "avg_quality": 74.3,
       "examples": [
         {
@@ -1036,7 +1036,7 @@
     {
       "source": "creation_and_cosmology",
       "target": "prophecy_and_revelation",
-      "weight": 1473,
+      "weight": 1494,
       "avg_quality": 74.2,
       "examples": [
         {
@@ -1089,7 +1089,7 @@
     {
       "source": "covenant_and_obedience",
       "target": "moral_law_and_ethics",
-      "weight": 1384,
+      "weight": 1394,
       "avg_quality": 75.3,
       "examples": [
         {
@@ -1142,7 +1142,7 @@
     {
       "source": "monotheism_and_gods_nature",
       "target": "warfare_and_struggle",
-      "weight": 1246,
+      "weight": 1252,
       "avg_quality": 74.9,
       "examples": [
         {
@@ -1195,7 +1195,7 @@
     {
       "source": "afterlife_and_judgment",
       "target": "worship_and_ritual",
-      "weight": 1121,
+      "weight": 1125,
       "avg_quality": 74.8,
       "examples": [
         {
@@ -1248,7 +1248,7 @@
     {
       "source": "creation_and_cosmology",
       "target": "moral_law_and_ethics",
-      "weight": 1002,
+      "weight": 1007,
       "avg_quality": 74.4,
       "examples": [
         {
@@ -1301,7 +1301,7 @@
     {
       "source": "covenant_and_obedience",
       "target": "worship_and_ritual",
-      "weight": 885,
+      "weight": 895,
       "avg_quality": 74.7,
       "examples": [
         {
@@ -1354,7 +1354,7 @@
     {
       "source": "afterlife_and_judgment",
       "target": "prophetic_narratives",
-      "weight": 808,
+      "weight": 812,
       "avg_quality": 73.8,
       "examples": [
         {
@@ -1407,7 +1407,7 @@
     {
       "source": "prophecy_and_revelation",
       "target": "prophetic_narratives",
-      "weight": 802,
+      "weight": 810,
       "avg_quality": 75.1,
       "examples": [
         {
@@ -1460,7 +1460,7 @@
     {
       "source": "afterlife_and_judgment",
       "target": "divine_mercy_and_forgiveness",
-      "weight": 747,
+      "weight": 748,
       "avg_quality": 74.7,
       "examples": [
         {
@@ -1513,7 +1513,7 @@
     {
       "source": "creation_and_cosmology",
       "target": "worship_and_ritual",
-      "weight": 738,
+      "weight": 747,
       "avg_quality": 76.1,
       "examples": [
         {
@@ -1566,8 +1566,8 @@
     {
       "source": "moral_law_and_ethics",
       "target": "social_law",
-      "weight": 715,
-      "avg_quality": 75.2,
+      "weight": 719,
+      "avg_quality": 75.1,
       "examples": [
         {
           "verses": [
@@ -1619,7 +1619,7 @@
     {
       "source": "moral_law_and_ethics",
       "target": "prophetic_narratives",
-      "weight": 625,
+      "weight": 632,
       "avg_quality": 74.3,
       "examples": [
         {
@@ -1672,7 +1672,7 @@
     {
       "source": "afterlife_and_judgment",
       "target": "social_law",
-      "weight": 550,
+      "weight": 555,
       "avg_quality": 74.5,
       "examples": [
         {
@@ -1725,8 +1725,8 @@
     {
       "source": "divine_mercy_and_forgiveness",
       "target": "prophecy_and_revelation",
-      "weight": 509,
-      "avg_quality": 74.8,
+      "weight": 517,
+      "avg_quality": 74.7,
       "examples": [
         {
           "verses": [
@@ -1831,7 +1831,7 @@
     {
       "source": "knowledge_and_wisdom",
       "target": "prophecy_and_revelation",
-      "weight": 476,
+      "weight": 479,
       "avg_quality": 74.4,
       "examples": [
         {
@@ -1884,7 +1884,7 @@
     {
       "source": "prophecy_and_revelation",
       "target": "social_law",
-      "weight": 448,
+      "weight": 452,
       "avg_quality": 75.9,
       "examples": [
         {
@@ -1937,7 +1937,7 @@
     {
       "source": "covenant_and_obedience",
       "target": "creation_and_cosmology",
-      "weight": 438,
+      "weight": 443,
       "avg_quality": 73.7,
       "examples": [
         {
@@ -1990,7 +1990,7 @@
     {
       "source": "creation_and_cosmology",
       "target": "prophetic_narratives",
-      "weight": 388,
+      "weight": 392,
       "avg_quality": 73.7,
       "examples": [
         {
@@ -2041,7 +2041,7 @@
     {
       "source": "covenant_and_obedience",
       "target": "divine_mercy_and_forgiveness",
-      "weight": 350,
+      "weight": 352,
       "avg_quality": 74.0,
       "examples": [
         {
@@ -2090,62 +2090,10 @@
       ]
     },
     {
-      "source": "creation_and_cosmology",
-      "target": "knowledge_and_wisdom",
-      "weight": 312,
-      "avg_quality": 73.5,
-      "examples": [
-        {
-          "verses": [
-            "29:40",
-            "7:78",
-            "29:41",
-            "8:47"
-          ],
-          "bridge": [
-            "annihilate",
-            "quake",
-            "home",
-            "home"
-          ],
-          "conclusion": "[29:40] (BELIEVERS —[warns]→ as a consequence of their sins) connects to [8:47] (GOD —[is]→ fully aware of everything they do) through thematic chain:"
-        },
-        {
-          "verses": [
-            "50:6",
-            "55:58",
-            "9:127",
-            "18:68"
-          ],
-          "bridge": [
-            "look",
-            "look",
-            "comprehend"
-          ],
-          "conclusion": "[50:6] (they —[describes]→ above them) connects to [18:68] (You —[prohibits]→ that) through thematic chain: look → look → comprehend. Path: [50:6] → ["
-        },
-        {
-          "verses": [
-            "45:13",
-            "21:82",
-            "2:268",
-            "26:206"
-          ],
-          "bridge": [
-            "service",
-            "commit",
-            "devil",
-            "command"
-          ],
-          "conclusion": "[45:13] (He —[states]→ everything in the heavens and the earth) connects to [26:206] (the retribution —[warns]→ to them) through thematic chain: servi"
-        }
-      ]
-    },
-    {
       "source": "afterlife_and_judgment",
       "target": "knowledge_and_wisdom",
-      "weight": 311,
-      "avg_quality": 74.1,
+      "weight": 317,
+      "avg_quality": 74.0,
       "examples": [
         {
           "verses": [
@@ -2195,9 +2143,61 @@
       ]
     },
     {
+      "source": "creation_and_cosmology",
+      "target": "knowledge_and_wisdom",
+      "weight": 316,
+      "avg_quality": 73.5,
+      "examples": [
+        {
+          "verses": [
+            "29:40",
+            "7:78",
+            "29:41",
+            "8:47"
+          ],
+          "bridge": [
+            "annihilate",
+            "quake",
+            "home",
+            "home"
+          ],
+          "conclusion": "[29:40] (BELIEVERS —[warns]→ as a consequence of their sins) connects to [8:47] (GOD —[is]→ fully aware of everything they do) through thematic chain:"
+        },
+        {
+          "verses": [
+            "50:6",
+            "55:58",
+            "9:127",
+            "18:68"
+          ],
+          "bridge": [
+            "look",
+            "look",
+            "comprehend"
+          ],
+          "conclusion": "[50:6] (they —[describes]→ above them) connects to [18:68] (You —[prohibits]→ that) through thematic chain: look → look → comprehend. Path: [50:6] → ["
+        },
+        {
+          "verses": [
+            "45:13",
+            "21:82",
+            "2:268",
+            "26:206"
+          ],
+          "bridge": [
+            "service",
+            "commit",
+            "devil",
+            "command"
+          ],
+          "conclusion": "[45:13] (He —[states]→ everything in the heavens and the earth) connects to [26:206] (the retribution —[warns]→ to them) through thematic chain: servi"
+        }
+      ]
+    },
+    {
       "source": "prophetic_narratives",
       "target": "worship_and_ritual",
-      "weight": 301,
+      "weight": 303,
       "avg_quality": 75.3,
       "examples": [
         {
@@ -2250,7 +2250,7 @@
     {
       "source": "covenant_and_obedience",
       "target": "prophetic_narratives",
-      "weight": 300,
+      "weight": 302,
       "avg_quality": 73.8,
       "examples": [
         {
@@ -2300,7 +2300,7 @@
     {
       "source": "afterlife_and_judgment",
       "target": "warfare_and_struggle",
-      "weight": 295,
+      "weight": 297,
       "avg_quality": 75.3,
       "examples": [
         {
@@ -2351,7 +2351,7 @@
     {
       "source": "moral_law_and_ethics",
       "target": "warfare_and_struggle",
-      "weight": 286,
+      "weight": 288,
       "avg_quality": 74.3,
       "examples": [
         {
@@ -2455,7 +2455,7 @@
     {
       "source": "prophecy_and_revelation",
       "target": "warfare_and_struggle",
-      "weight": 272,
+      "weight": 273,
       "avg_quality": 75.4,
       "examples": [
         {
@@ -2508,7 +2508,7 @@
     {
       "source": "creation_and_cosmology",
       "target": "divine_mercy_and_forgiveness",
-      "weight": 254,
+      "weight": 258,
       "avg_quality": 74.7,
       "examples": [
         {
@@ -2613,7 +2613,7 @@
     {
       "source": "covenant_and_obedience",
       "target": "warfare_and_struggle",
-      "weight": 198,
+      "weight": 201,
       "avg_quality": 75.9,
       "examples": [
         {
@@ -2666,7 +2666,7 @@
     {
       "source": "divine_mercy_and_forgiveness",
       "target": "worship_and_ritual",
-      "weight": 180,
+      "weight": 181,
       "avg_quality": 75.2,
       "examples": [
         {
@@ -2718,7 +2718,7 @@
     {
       "source": "creation_and_cosmology",
       "target": "social_law",
-      "weight": 167,
+      "weight": 169,
       "avg_quality": 74.3,
       "examples": [
         {
@@ -2876,7 +2876,7 @@
     {
       "source": "prophetic_narratives",
       "target": "social_law",
-      "weight": 141,
+      "weight": 142,
       "avg_quality": 73.1,
       "examples": [
         {
@@ -2982,8 +2982,8 @@
     {
       "source": "divine_mercy_and_forgiveness",
       "target": "prophetic_narratives",
-      "weight": 112,
-      "avg_quality": 73.3,
+      "weight": 114,
+      "avg_quality": 73.2,
       "examples": [
         {
           "verses": [
@@ -3140,8 +3140,8 @@
     {
       "source": "divine_mercy_and_forgiveness",
       "target": "social_law",
-      "weight": 79,
-      "avg_quality": 75.6,
+      "weight": 80,
+      "avg_quality": 75.5,
       "examples": [
         {
           "verses": [
@@ -3448,7 +3448,7 @@
     {
       "source": "mathematical_miracle",
       "target": "prophecy_and_revelation",
-      "weight": 54,
+      "weight": 55,
       "avg_quality": 74.2,
       "examples": [
         {
@@ -3495,6 +3495,56 @@
             "proof"
           ],
           "conclusion": "[83:23] (they —[states]→ On luxurious furnishings) connects to [26:2] (These ( letters ) —[reveals]→ proofs of this clarifying scripture) through them"
+        }
+      ]
+    },
+    {
+      "source": "prophetic_narratives",
+      "target": "warfare_and_struggle",
+      "weight": 46,
+      "avg_quality": 73.8,
+      "examples": [
+        {
+          "verses": [
+            "47:4",
+            "2:123",
+            "61:14",
+            "8:40"
+          ],
+          "bridge": [
+            "ransom",
+            "another",
+            "help",
+            "another"
+          ],
+          "conclusion": "[47:4] (You —[states]→ the necks) connects to [8:40] (GOD —[is]→ your lord and master) through thematic chain: ransom → another → help → another → sup"
+        },
+        {
+          "verses": [
+            "8:74",
+            "8:75",
+            "29:26"
+          ],
+          "bridge": [
+            "support",
+            "strive",
+            "emigrate"
+          ],
+          "conclusion": "BECAUSE They describes forgiveness and a generous recompense [8:74], and this connects via 'support' → 'emigrate', THEREFORE They's describes relates "
+        },
+        {
+          "verses": [
+            "47:35",
+            "37:109",
+            "21:60",
+            "26:25"
+          ],
+          "bridge": [
+            "peace",
+            "abraham",
+            "hear"
+          ],
+          "conclusion": "[47:35] (You —[commands]→ for you are guaranteed victory) connects to [26:25] (He —[states]→ to those around him) through thematic chain: peace → abra"
         }
       ]
     },
@@ -3548,56 +3598,6 @@
             "omniscient"
           ],
           "conclusion": "[29:49] (Only the wicked —[states]→ our revelations) connects to [5:76] (GOD —[is]→ hearer) through thematic chain: chest → whisper → hearer → omnisci"
-        }
-      ]
-    },
-    {
-      "source": "prophetic_narratives",
-      "target": "warfare_and_struggle",
-      "weight": 45,
-      "avg_quality": 73.8,
-      "examples": [
-        {
-          "verses": [
-            "47:4",
-            "2:123",
-            "61:14",
-            "8:40"
-          ],
-          "bridge": [
-            "ransom",
-            "another",
-            "help",
-            "another"
-          ],
-          "conclusion": "[47:4] (You —[states]→ the necks) connects to [8:40] (GOD —[is]→ your lord and master) through thematic chain: ransom → another → help → another → sup"
-        },
-        {
-          "verses": [
-            "8:74",
-            "8:75",
-            "29:26"
-          ],
-          "bridge": [
-            "support",
-            "strive",
-            "emigrate"
-          ],
-          "conclusion": "BECAUSE They describes forgiveness and a generous recompense [8:74], and this connects via 'support' → 'emigrate', THEREFORE They's describes relates "
-        },
-        {
-          "verses": [
-            "47:35",
-            "37:109",
-            "21:60",
-            "26:25"
-          ],
-          "bridge": [
-            "peace",
-            "abraham",
-            "hear"
-          ],
-          "conclusion": "[47:35] (You —[commands]→ for you are guaranteed victory) connects to [26:25] (He —[states]→ to those around him) through thematic chain: peace → abra"
         }
       ]
     },
@@ -3812,8 +3812,8 @@
     {
       "source": "covenant_and_obedience",
       "target": "mathematical_miracle",
-      "weight": 7,
-      "avg_quality": 65.2,
+      "weight": 8,
+      "avg_quality": 66.3,
       "examples": [
         {
           "verses": [
