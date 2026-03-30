@@ -12005,32 +12005,6 @@
   ],
   "hub_keywords": [
     {
-      "keyword": "gracious",
-      "num_connections": 10,
-      "top_partners": [
-        {
-          "keyword": "merciful",
-          "count": 7
-        },
-        {
-          "keyword": "see",
-          "count": 6
-        },
-        {
-          "keyword": "son",
-          "count": 6
-        },
-        {
-          "keyword": "claim",
-          "count": 6
-        },
-        {
-          "keyword": "would",
-          "count": 5
-        }
-      ]
-    },
-    {
       "keyword": "merciful",
       "num_connections": 10,
       "top_partners": [
@@ -12161,32 +12135,6 @@
       ]
     },
     {
-      "keyword": "ask",
-      "num_connections": 10,
-      "top_partners": [
-        {
-          "keyword": "forgiveness",
-          "count": 15
-        },
-        {
-          "keyword": "know",
-          "count": 14
-        },
-        {
-          "keyword": "would",
-          "count": 12
-        },
-        {
-          "keyword": "knowledge",
-          "count": 12
-        },
-        {
-          "keyword": "go",
-          "count": 10
-        }
-      ]
-    },
-    {
       "keyword": "worship",
       "num_connections": 10,
       "top_partners": [
@@ -12209,6 +12157,32 @@
         {
           "keyword": "except",
           "count": 18
+        }
+      ]
+    },
+    {
+      "keyword": "ask",
+      "num_connections": 10,
+      "top_partners": [
+        {
+          "keyword": "forgiveness",
+          "count": 15
+        },
+        {
+          "keyword": "know",
+          "count": 14
+        },
+        {
+          "keyword": "would",
+          "count": 12
+        },
+        {
+          "keyword": "knowledge",
+          "count": 12
+        },
+        {
+          "keyword": "go",
+          "count": 10
         }
       ]
     },
@@ -12629,32 +12603,6 @@
       ]
     },
     {
-      "keyword": "certain",
-      "num_connections": 10,
-      "top_partners": [
-        {
-          "keyword": "may",
-          "count": 8
-        },
-        {
-          "keyword": "find",
-          "count": 7
-        },
-        {
-          "keyword": "know",
-          "count": 7
-        },
-        {
-          "keyword": "knowledge",
-          "count": 6
-        },
-        {
-          "keyword": "send",
-          "count": 6
-        }
-      ]
-    },
-    {
       "keyword": "hereafter",
       "num_connections": 10,
       "top_partners": [
@@ -12707,32 +12655,6 @@
       ]
     },
     {
-      "keyword": "reveal",
-      "num_connections": 10,
-      "top_partners": [
-        {
-          "keyword": "scripture",
-          "count": 30
-        },
-        {
-          "keyword": "may",
-          "count": 14
-        },
-        {
-          "keyword": "quran",
-          "count": 14
-        },
-        {
-          "keyword": "messenger",
-          "count": 14
-        },
-        {
-          "keyword": "revelation",
-          "count": 13
-        }
-      ]
-    },
-    {
       "keyword": "disbeliever",
       "num_connections": 10,
       "top_partners": [
@@ -12781,6 +12703,84 @@
         {
           "keyword": "may",
           "count": 9
+        }
+      ]
+    },
+    {
+      "keyword": "disbelieve",
+      "num_connections": 10,
+      "top_partners": [
+        {
+          "keyword": "retribution",
+          "count": 53
+        },
+        {
+          "keyword": "messenger",
+          "count": 45
+        },
+        {
+          "keyword": "among",
+          "count": 34
+        },
+        {
+          "keyword": "incur",
+          "count": 32
+        },
+        {
+          "keyword": "hell",
+          "count": 27
+        }
+      ]
+    },
+    {
+      "keyword": "eye",
+      "num_connections": 10,
+      "top_partners": [
+        {
+          "keyword": "adorn",
+          "count": 16
+        },
+        {
+          "keyword": "work",
+          "count": 14
+        },
+        {
+          "keyword": "hear",
+          "count": 12
+        },
+        {
+          "keyword": "see",
+          "count": 10
+        },
+        {
+          "keyword": "mind",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "keyword": "hear",
+      "num_connections": 10,
+      "top_partners": [
+        {
+          "keyword": "see",
+          "count": 13
+        },
+        {
+          "keyword": "eye",
+          "count": 12
+        },
+        {
+          "keyword": "revelation",
+          "count": 9
+        },
+        {
+          "keyword": "make",
+          "count": 8
+        },
+        {
+          "keyword": "call",
+          "count": 8
         }
       ]
     }

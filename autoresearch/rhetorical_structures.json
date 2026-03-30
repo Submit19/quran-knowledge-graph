@@ -12597,7 +12597,7 @@
     }
   ],
   "meta": {
-    "rounds_completed": 20,
-    "elapsed_minutes": 0.5
+    "rounds_completed": 120,
+    "elapsed_minutes": 5.5
   }
 }

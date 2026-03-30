@@ -547,3 +547,21 @@ round	timestamp	novel_found	total_novel	elapsed	strategy	mutations
 9	2026-03-30T13:08:03.541232	86	2333	2.5	random	strategy: high_connectivity -> random; shared_subject_max: 100 -> 500; min_novelty: 60.0 -> 40; max_neighbors_hop1: 11 -> 12
 10	2026-03-30T13:08:06.099788	0	2333	2.6	random	transitive_max_chains: 800 -> 100; max_neighbors_hop1: 12 -> 11
 11	2026-03-30T13:08:37.356028	582	2915	31.2	random	focus: specific -> all
+12	2026-03-30T13:09:29.298649	541	3456	51.9	high_connectivity	strategy: random -> high_connectivity
+13	2026-03-30T13:09:56.821346	135	3591	27.5	high_connectivity	verses: 3000 -> 1500
+14	2026-03-30T13:10:21.640814	97	3688	24.8	high_connectivity	min_novelty: 40 -> 50; max_neighbors_hop2: 4 -> 6
+15	2026-03-30T13:10:48.391098	100	3788	26.7	high_connectivity	no changes
+16	2026-03-30T13:11:14.138767	93	3881	25.7	high_connectivity	no changes
+17	2026-03-30T13:11:30.749733	204	4085	16.6	high_connectivity	verses: 1500 -> 750; min_novelty: 50 -> 70
+18	2026-03-30T13:12:04.199369	283	4368	33.4	random	strategy: high_connectivity -> random; verses: 750 -> 3000
+19	2026-03-30T13:12:45.413014	170	4538	41.2	random	max_neighbors_hop2: 6 -> 7
+20	2026-03-30T13:12:51.156444	141	4679	5.7	by_surah	strategy: random -> by_surah; focus: all -> surahs [6, 10, 13, 18, 28]...
+21	2026-03-30T13:12:56.034677	118	4797	4.9	by_surah	verses: 3000 -> 6234
+22	2026-03-30T13:13:18.661690	275	5072	22.6	by_surah	verses: 6234 -> 1500; thematic_bridge_max: 100 -> 200; max_neighbors_hop1: 11 -> 13; focus: specific -> all
+23	2026-03-30T13:13:33.327795	362	5434	14.7	random	strategy: by_surah -> random; max_neighbors_hop3: 6 -> 5
+24	2026-03-30T13:13:40.344682	233	5667	7.0	random	focus: all -> surahs [4, 5, 15, 17, 34]...
+25	2026-03-30T13:13:47.583062	167	5834	7.2	random	no changes
+26	2026-03-30T13:13:54.304671	160	5994	6.7	random	no changes
+27	2026-03-30T13:14:00.805892	157	6151	6.5	random	no changes
+28	2026-03-30T13:14:07.537985	136	6287	6.7	random	no changes
+29	2026-03-30T13:14:23.741504	221	6508	16.2	high_connectivity	strategy: random -> high_connectivity; verses: 1500 -> 1000; focus: specific -> all
