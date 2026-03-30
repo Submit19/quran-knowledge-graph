@@ -1251,3 +1251,223 @@ experiment	score	best	kept	mutations
 50	71.3700	71.3700	True	min_quality_for_insights: 55 -> 50; quality_weight_surah_diversity: 0.15 -> 0.079; min_insight_support: 2 -> 2
 51	71.3700	71.3700	True	min_quality_for_insights: 55 -> 45; quality_weight_meaningfulness: 0.119 -> 0.05
 52	71.3700	71.3700	True	quality_weight_relevance: 0.15 -> 0.18; quality_weight_meaningfulness: 0.119 -> 0.168
+53	71.3700	71.3700	True	quality_weight_rule_bonus: 0.115 -> 0.075
+54	71.3700	71.3700	True	quality_weight_surah_diversity: 0.15 -> 0.199; quality_weight_coherence: 0.2 -> 0.296
+55	71.3700	71.3700	True	quality_weight_coherence: 0.2 -> 0.126; min_insight_support: 2 -> 2; quality_weight_rule_bonus: 0.115 -> 0.163
+56	71.3700	71.3700	True	quality_weight_surah_diversity: 0.15 -> 0.051; quality_weight_rule_bonus: 0.115 -> 0.05; quality_weight_relevance: 0.15 -> 0.061
+57	70.9200	71.3700	False	min_quality_for_insights: 55 -> 65
+58	71.3700	71.3700	True	quality_weight_relevance: 0.15 -> 0.176
+59	71.3700	71.3700	True	min_insight_support: 2 -> 2
+60	71.3700	71.3700	True	quality_weight_rule_bonus: 0.115 -> 0.197
+61	71.3700	71.3700	True	quality_weight_rule_bonus: 0.115 -> 0.05
+62	70.6800	71.3700	False	min_insight_support: 2 -> 2; min_quality_for_graph: 70 -> 60; min_quality_for_insights: 55 -> 65
+63	71.3700	71.3700	True	quality_weight_coherence: 0.2 -> 0.118
+64	70.9200	71.3700	False	min_insight_support: 2 -> 3; min_quality_for_insights: 55 -> 65
+65	71.3700	71.3700	True	quality_weight_surah_diversity: 0.15 -> 0.215; quality_weight_meaningfulness: 0.119 -> 0.051
+66	71.3700	71.3700	True	quality_weight_surah_diversity: 0.15 -> 0.241
+67	71.1700	71.3700	False	min_quality_for_insights: 55 -> 50; min_quality_for_graph: 70 -> 65
+68	71.3700	71.3700	True	quality_weight_surah_diversity: 0.15 -> 0.247; min_quality_for_insights: 55 -> 45; quality_weight_coherence: 0.2 -> 0.269
+69	71.3700	71.3700	True	quality_weight_rule_bonus: 0.115 -> 0.056; min_insight_support: 2 -> 4; min_quality_for_insights: 55 -> 45
+70	71.1700	71.3700	False	min_quality_for_graph: 70 -> 65; quality_weight_surah_diversity: 0.15 -> 0.086
+71	70.9200	71.3700	False	quality_weight_relevance: 0.15 -> 0.183; min_quality_for_insights: 55 -> 65
+72	71.3700	71.3700	True	quality_weight_relevance: 0.15 -> 0.092
+73	71.3700	71.3700	True	quality_weight_coherence: 0.2 -> 0.268
+74	71.3700	71.3700	True	min_insight_support: 2 -> 4
+75	71.2200	71.3700	False	quality_weight_meaningfulness: 0.119 -> 0.071; min_quality_for_insights: 55 -> 60; quality_weight_surah_diversity: 0.15 -> 0.228
+76	71.3700	71.3700	True	min_insight_support: 2 -> 4; quality_weight_coherence: 0.2 -> 0.159
+77	70.8000	71.3700	False	min_quality_for_graph: 70 -> 80
+78	71.4400	71.4400	True	min_quality_for_graph: 70 -> 75; quality_weight_specificity: 0.2 -> 0.257
+79	71.4400	71.4400	True	quality_weight_rule_bonus: 0.115 -> 0.078
+80	71.4400	71.4400	True	quality_weight_relevance: 0.15 -> 0.214
+81	70.6500	71.4400	False	min_quality_for_insights: 55 -> 60; min_quality_for_graph: 75 -> 80
+82	71.4400	71.4400	True	quality_weight_coherence: 0.2 -> 0.168; quality_weight_surah_diversity: 0.15 -> 0.06; quality_weight_rule_bonus: 0.115 -> 0.142
+83	71.4400	71.4400	True	quality_weight_surah_diversity: 0.15 -> 0.117
+84	71.4400	71.4400	True	quality_weight_meaningfulness: 0.119 -> 0.148; min_quality_for_insights: 55 -> 45; quality_weight_surah_diversity: 0.15 -> 0.09
+85	71.3700	71.4400	False	min_quality_for_graph: 75 -> 70; quality_weight_surah_diversity: 0.15 -> 0.068; quality_weight_relevance: 0.15 -> 0.179
+86	70.6500	71.4400	False	min_quality_for_graph: 75 -> 80; min_quality_for_insights: 55 -> 60; min_insight_support: 2 -> 2
+87	71.4400	71.4400	True	quality_weight_rule_bonus: 0.115 -> 0.177
+88	71.4400	71.4400	True	quality_weight_rule_bonus: 0.115 -> 0.173; quality_weight_specificity: 0.257 -> 0.352
+89	71.4400	71.4400	True	quality_weight_surah_diversity: 0.15 -> 0.218
+90	71.4400	71.4400	True	quality_weight_coherence: 0.2 -> 0.17
+91	70.8000	71.4400	False	quality_weight_coherence: 0.2 -> 0.108; quality_weight_meaningfulness: 0.119 -> 0.212; min_quality_for_graph: 75 -> 80
+92	71.4400	71.4400	True	quality_weight_surah_diversity: 0.15 -> 0.216; quality_weight_meaningfulness: 0.119 -> 0.085
+93	71.4400	71.4400	True	quality_weight_surah_diversity: 0.15 -> 0.238; quality_weight_relevance: 0.15 -> 0.2
+94	71.4400	71.4400	True	quality_weight_rule_bonus: 0.115 -> 0.17; quality_weight_surah_diversity: 0.15 -> 0.221
+95	71.4400	71.4400	True	quality_weight_relevance: 0.15 -> 0.102
+96	71.3700	71.4400	False	quality_weight_coherence: 0.2 -> 0.115; min_quality_for_graph: 75 -> 70
+97	71.4400	71.4400	True	quality_weight_rule_bonus: 0.115 -> 0.05
+98	71.1700	71.4400	False	min_quality_for_graph: 75 -> 65; min_insight_support: 2 -> 4
+99	71.4400	71.4400	True	quality_weight_rule_bonus: 0.115 -> 0.214
+100	71.2900	71.4400	False	quality_weight_relevance: 0.15 -> 0.11; quality_weight_coherence: 0.2 -> 0.151; min_quality_for_insights: 55 -> 60
+1	69.7300	69.7300	True	quality_weight_surah_diversity: 0.15 -> 0.108
+2	69.7300	69.7300	True	min_insight_support: 2 -> 2
+3	69.7300	69.7300	True	quality_weight_coherence: 0.2 -> 0.109; quality_weight_specificity: 0.2 -> 0.254; quality_weight_relevance: 0.15 -> 0.115
+4	69.6500	69.7300	False	min_quality_for_graph: 50 -> 40; min_quality_for_insights: 55 -> 45; quality_weight_meaningfulness: 0.15 -> 0.091
+5	69.7000	69.7300	False	min_quality_for_graph: 50 -> 45; min_insight_support: 2 -> 2
+6	69.3600	69.7300	False	min_quality_for_insights: 55 -> 65; quality_weight_surah_diversity: 0.15 -> 0.09; quality_weight_specificity: 0.2 -> 0.113
+7	69.7300	69.7300	True	quality_weight_coherence: 0.2 -> 0.143
+8	69.7300	69.7300	True	quality_weight_relevance: 0.15 -> 0.242; quality_weight_specificity: 0.2 -> 0.298
+9	69.7300	69.7300	True	quality_weight_surah_diversity: 0.15 -> 0.176; quality_weight_meaningfulness: 0.15 -> 0.111
+10	69.6600	69.7300	False	min_insight_support: 2 -> 2; min_quality_for_insights: 55 -> 60
+11	69.7300	69.7300	True	quality_weight_surah_diversity: 0.15 -> 0.087; quality_weight_meaningfulness: 0.15 -> 0.124
+12	69.6600	69.7300	False	min_insight_support: 2 -> 2; quality_weight_meaningfulness: 0.15 -> 0.216; min_quality_for_insights: 55 -> 60
+13	69.7300	69.7300	True	quality_weight_specificity: 0.2 -> 0.283; quality_weight_meaningfulness: 0.15 -> 0.204; min_insight_support: 2 -> 4
+14	69.7300	69.7300	True	quality_weight_meaningfulness: 0.15 -> 0.09
+15	69.8100	69.8100	True	min_insight_support: 2 -> 2; quality_weight_meaningfulness: 0.15 -> 0.102; min_quality_for_insights: 55 -> 50
+16	69.8100	69.8100	True	quality_weight_specificity: 0.2 -> 0.293; quality_weight_rule_bonus: 0.15 -> 0.07; quality_weight_meaningfulness: 0.102 -> 0.2
+17	69.8100	69.8100	True	quality_weight_specificity: 0.2 -> 0.124
+18	69.8100	69.8100	True	quality_weight_relevance: 0.15 -> 0.237; min_insight_support: 2 -> 2
+19	69.8100	69.8100	True	quality_weight_meaningfulness: 0.102 -> 0.05; quality_weight_specificity: 0.2 -> 0.274; min_quality_for_insights: 50 -> 45
+20	69.8100	69.8100	True	quality_weight_specificity: 0.2 -> 0.131; min_quality_for_insights: 50 -> 45
+21	69.8100	69.8100	True	quality_weight_meaningfulness: 0.102 -> 0.165
+22	69.8100	69.8100	True	quality_weight_meaningfulness: 0.102 -> 0.059
+23	69.8400	69.8400	True	min_quality_for_graph: 50 -> 60; min_insight_support: 2 -> 2
+24	69.8400	69.8400	True	quality_weight_specificity: 0.2 -> 0.245
+25	69.8400	69.8400	True	quality_weight_rule_bonus: 0.15 -> 0.232
+26	69.8400	69.8400	True	quality_weight_rule_bonus: 0.15 -> 0.193
+27	69.8400	69.8400	True	quality_weight_meaningfulness: 0.102 -> 0.157; quality_weight_surah_diversity: 0.15 -> 0.208
+28	69.8400	69.8400	True	min_insight_support: 2 -> 2
+29	69.7700	69.8400	False	quality_weight_relevance: 0.15 -> 0.083; min_quality_for_insights: 50 -> 55
+30	69.8400	69.8400	True	quality_weight_surah_diversity: 0.15 -> 0.079; quality_weight_rule_bonus: 0.15 -> 0.078; quality_weight_coherence: 0.2 -> 0.291
+31	69.8100	69.8400	False	min_quality_for_graph: 60 -> 55; quality_weight_relevance: 0.15 -> 0.062
+32	69.8400	69.8400	True	min_quality_for_insights: 50 -> 45; quality_weight_meaningfulness: 0.102 -> 0.05
+33	69.8100	69.8400	False	quality_weight_meaningfulness: 0.102 -> 0.188; min_quality_for_graph: 60 -> 50
+34	69.6900	69.8400	False	min_quality_for_insights: 50 -> 60; quality_weight_rule_bonus: 0.15 -> 0.188
+35	69.9800	69.9800	True	min_quality_for_graph: 60 -> 70
+36	69.9800	69.9800	True	quality_weight_specificity: 0.2 -> 0.294; quality_weight_coherence: 0.2 -> 0.281; quality_weight_surah_diversity: 0.15 -> 0.216
+37	69.9800	69.9800	True	quality_weight_specificity: 0.2 -> 0.246; quality_weight_rule_bonus: 0.15 -> 0.204
+38	70.1300	70.1300	True	min_quality_for_insights: 50 -> 40; quality_weight_specificity: 0.2 -> 0.152
+39	70.0800	70.1300	False	quality_weight_surah_diversity: 0.15 -> 0.214; min_quality_for_graph: 70 -> 75
+40	69.9800	70.1300	False	quality_weight_rule_bonus: 0.15 -> 0.221; min_quality_for_insights: 40 -> 45
+41	70.0800	70.1300	False	quality_weight_rule_bonus: 0.15 -> 0.058; min_quality_for_graph: 70 -> 75; min_insight_support: 2 -> 3
+42	69.9800	70.1300	False	min_insight_support: 2 -> 4; min_quality_for_insights: 40 -> 50
+43	70.0800	70.1300	False	min_quality_for_graph: 70 -> 75
+44	70.0800	70.1300	False	min_quality_for_graph: 70 -> 75
+45	70.1300	70.1300	True	quality_weight_rule_bonus: 0.15 -> 0.182; quality_weight_specificity: 0.152 -> 0.107
+46	70.1300	70.1300	True	quality_weight_relevance: 0.15 -> 0.12; quality_weight_surah_diversity: 0.15 -> 0.123; min_insight_support: 2 -> 3
+47	70.1300	70.1300	True	min_insight_support: 2 -> 4; quality_weight_coherence: 0.2 -> 0.237
+48	70.1300	70.1300	True	quality_weight_relevance: 0.15 -> 0.177
+49	70.1300	70.1300	True	quality_weight_coherence: 0.2 -> 0.266; min_insight_support: 2 -> 3
+50	70.1300	70.1300	True	quality_weight_meaningfulness: 0.102 -> 0.05
+51	70.1300	70.1300	True	quality_weight_surah_diversity: 0.15 -> 0.191; min_insight_support: 2 -> 2
+52	70.1300	70.1300	True	quality_weight_specificity: 0.152 -> 0.205; quality_weight_rule_bonus: 0.15 -> 0.202
+53	69.9900	70.1300	False	quality_weight_surah_diversity: 0.15 -> 0.219; quality_weight_specificity: 0.152 -> 0.059; min_quality_for_graph: 70 -> 60
+54	70.1300	70.1300	True	quality_weight_coherence: 0.2 -> 0.292
+55	70.1300	70.1300	True	min_insight_support: 2 -> 2
+56	70.1300	70.1300	True	quality_weight_rule_bonus: 0.15 -> 0.235; min_insight_support: 2 -> 2
+57	70.1300	70.1300	True	quality_weight_surah_diversity: 0.15 -> 0.201
+58	70.1300	70.1300	True	quality_weight_coherence: 0.2 -> 0.288; quality_weight_specificity: 0.152 -> 0.21
+59	70.1300	70.1300	True	min_quality_for_insights: 40 -> 40
+60	70.1300	70.1300	True	quality_weight_surah_diversity: 0.15 -> 0.207
+61	70.1300	70.1300	True	quality_weight_coherence: 0.2 -> 0.261; quality_weight_meaningfulness: 0.102 -> 0.149; min_insight_support: 2 -> 2
+62	70.1300	70.1300	True	quality_weight_specificity: 0.152 -> 0.23; quality_weight_coherence: 0.2 -> 0.148
+63	69.9800	70.1300	False	quality_weight_coherence: 0.2 -> 0.261; min_quality_for_insights: 40 -> 50
+64	69.9800	70.1300	False	quality_weight_meaningfulness: 0.102 -> 0.05; min_quality_for_insights: 40 -> 50; quality_weight_relevance: 0.15 -> 0.074
+65	70.1300	70.1300	True	quality_weight_relevance: 0.15 -> 0.243; min_quality_for_insights: 40 -> 40
+66	70.1300	70.1300	True	quality_weight_surah_diversity: 0.15 -> 0.205; quality_weight_coherence: 0.2 -> 0.292; min_insight_support: 2 -> 2
+67	70.1300	70.1300	True	min_insight_support: 2 -> 2
+68	70.1300	70.1300	True	quality_weight_meaningfulness: 0.102 -> 0.057
+69	70.1300	70.1300	True	quality_weight_rule_bonus: 0.15 -> 0.205; quality_weight_meaningfulness: 0.102 -> 0.063
+70	70.1300	70.1300	True	quality_weight_meaningfulness: 0.102 -> 0.05
+71	70.1300	70.1300	True	quality_weight_rule_bonus: 0.15 -> 0.115
+72	69.8700	70.1300	False	min_quality_for_graph: 70 -> 80
+73	70.1300	70.1300	True	quality_weight_meaningfulness: 0.102 -> 0.051
+74	70.1300	70.1300	True	quality_weight_rule_bonus: 0.15 -> 0.108
+75	70.1300	70.1300	True	quality_weight_relevance: 0.15 -> 0.065
+76	69.9800	70.1300	False	quality_weight_rule_bonus: 0.15 -> 0.189; min_quality_for_insights: 40 -> 45
+77	70.1300	70.1300	True	quality_weight_meaningfulness: 0.102 -> 0.073
+78	69.9800	70.1300	False	min_quality_for_insights: 40 -> 45; quality_weight_meaningfulness: 0.102 -> 0.168; min_insight_support: 2 -> 2
+79	70.0800	70.1300	False	min_quality_for_graph: 70 -> 75
+80	70.1300	70.1300	True	quality_weight_specificity: 0.152 -> 0.074
+81	70.1300	70.1300	True	quality_weight_coherence: 0.2 -> 0.136; quality_weight_rule_bonus: 0.15 -> 0.067
+82	70.1300	70.1300	True	quality_weight_relevance: 0.15 -> 0.205; quality_weight_rule_bonus: 0.15 -> 0.06
+83	70.1300	70.1300	True	quality_weight_rule_bonus: 0.15 -> 0.239; quality_weight_coherence: 0.2 -> 0.294
+84	70.1300	70.1300	True	quality_weight_surah_diversity: 0.15 -> 0.195; quality_weight_coherence: 0.2 -> 0.252
+85	70.0400	70.1300	False	min_quality_for_graph: 70 -> 65; quality_weight_relevance: 0.15 -> 0.104
+86	69.9800	70.1300	False	min_quality_for_insights: 40 -> 50; quality_weight_specificity: 0.152 -> 0.249
+87	70.1300	70.1300	True	quality_weight_surah_diversity: 0.15 -> 0.197
+88	70.1300	70.1300	True	min_insight_support: 2 -> 3
+89	70.1300	70.1300	True	quality_weight_specificity: 0.152 -> 0.214
+90	70.1300	70.1300	True	quality_weight_meaningfulness: 0.102 -> 0.05
+91	70.0800	70.1300	False	min_quality_for_graph: 70 -> 75; min_insight_support: 2 -> 3; quality_weight_coherence: 0.2 -> 0.249
+92	70.1300	70.1300	True	quality_weight_meaningfulness: 0.102 -> 0.05; min_insight_support: 2 -> 3
+93	69.9900	70.1300	False	min_quality_for_graph: 70 -> 60; quality_weight_surah_diversity: 0.15 -> 0.238
+94	70.1300	70.1300	True	quality_weight_rule_bonus: 0.15 -> 0.199
+95	70.1300	70.1300	True	quality_weight_rule_bonus: 0.15 -> 0.206; quality_weight_surah_diversity: 0.15 -> 0.224
+96	70.1300	70.1300	True	quality_weight_surah_diversity: 0.15 -> 0.07
+97	69.9800	70.1300	False	quality_weight_surah_diversity: 0.15 -> 0.066; min_quality_for_insights: 40 -> 50
+98	70.1300	70.1300	True	quality_weight_rule_bonus: 0.15 -> 0.109; quality_weight_specificity: 0.152 -> 0.187
+99	69.9800	70.1300	False	quality_weight_coherence: 0.2 -> 0.137; min_quality_for_insights: 40 -> 45
+100	70.1300	70.1300	True	quality_weight_specificity: 0.152 -> 0.181
+1	71.1800	71.5800	False	min_quality_for_graph: 50 -> 45; min_quality_for_insights: 55 -> 65
+2	71.5800	71.5800	True	quality_weight_coherence: 0.2 -> 0.244
+3	71.4300	71.5800	False	quality_weight_meaningfulness: 0.15 -> 0.122; min_quality_for_graph: 50 -> 40
+4	71.5800	71.5800	True	quality_weight_specificity: 0.2 -> 0.269
+5	71.5900	71.5900	True	quality_weight_rule_bonus: 0.15 -> 0.198; min_quality_for_graph: 50 -> 55; min_insight_support: 2 -> 2
+6	71.6300	71.6300	True	quality_weight_specificity: 0.2 -> 0.269; quality_weight_rule_bonus: 0.198 -> 0.158; min_quality_for_graph: 55 -> 60
+7	71.6300	71.6300	True	quality_weight_coherence: 0.2 -> 0.266
+8	71.6300	71.6300	True	quality_weight_rule_bonus: 0.158 -> 0.123
+9	71.6300	71.6300	True	quality_weight_coherence: 0.2 -> 0.228; min_insight_support: 2 -> 4
+10	71.5500	71.6300	False	min_quality_for_insights: 55 -> 60
+11	71.8100	71.8100	True	min_quality_for_graph: 60 -> 70; quality_weight_rule_bonus: 0.158 -> 0.124; min_insight_support: 2 -> 3
+12	71.8100	71.8100	True	quality_weight_rule_bonus: 0.124 -> 0.182; quality_weight_coherence: 0.2 -> 0.279
+13	71.8100	71.8100	True	quality_weight_coherence: 0.2 -> 0.225; quality_weight_rule_bonus: 0.124 -> 0.05
+14	71.7100	71.8100	False	quality_weight_rule_bonus: 0.124 -> 0.064; min_quality_for_graph: 70 -> 80; min_quality_for_insights: 55 -> 65
+15	71.7400	71.8100	False	min_quality_for_insights: 55 -> 60
+16	71.7400	71.8100	False	min_quality_for_insights: 55 -> 60
+17	71.8100	71.8100	True	quality_weight_surah_diversity: 0.15 -> 0.193; quality_weight_coherence: 0.2 -> 0.243
+18	71.8100	71.8100	True	quality_weight_meaningfulness: 0.15 -> 0.176; quality_weight_specificity: 0.269 -> 0.199
+19	71.8100	71.8100	True	quality_weight_specificity: 0.269 -> 0.295; min_quality_for_insights: 55 -> 50
+20	71.6300	71.8100	False	min_quality_for_graph: 70 -> 60; min_quality_for_insights: 55 -> 50; quality_weight_relevance: 0.15 -> 0.112
+21	71.8100	71.8100	True	quality_weight_meaningfulness: 0.15 -> 0.216; quality_weight_specificity: 0.269 -> 0.231; quality_weight_surah_diversity: 0.15 -> 0.221
+22	71.8100	71.8100	True	quality_weight_surah_diversity: 0.15 -> 0.069; quality_weight_rule_bonus: 0.124 -> 0.213
+23	71.8100	71.8100	True	min_insight_support: 3 -> 5; quality_weight_surah_diversity: 0.15 -> 0.184
+24	71.8100	71.8100	True	min_insight_support: 3 -> 5
+25	71.8100	71.8100	True	quality_weight_specificity: 0.269 -> 0.225; min_insight_support: 3 -> 2
+26	71.8100	71.8100	True	quality_weight_coherence: 0.2 -> 0.237; quality_weight_rule_bonus: 0.124 -> 0.07; quality_weight_relevance: 0.15 -> 0.216
+27	71.8100	71.8100	True	quality_weight_relevance: 0.15 -> 0.215
+28	71.8100	71.8100	True	min_insight_support: 3 -> 2
+29	71.6700	71.8100	False	min_quality_for_graph: 70 -> 65; quality_weight_surah_diversity: 0.15 -> 0.056
+30	71.2500	71.8100	False	min_quality_for_insights: 55 -> 65; min_quality_for_graph: 70 -> 60; quality_weight_surah_diversity: 0.15 -> 0.052
+31	71.8100	71.8100	True	quality_weight_relevance: 0.15 -> 0.112; quality_weight_coherence: 0.2 -> 0.267
+32	71.8100	71.8100	True	min_insight_support: 3 -> 2
+33	71.6700	71.8100	False	min_quality_for_graph: 70 -> 65
+34	71.8100	71.8100	True	quality_weight_meaningfulness: 0.15 -> 0.186
+35	72.0300	72.0300	True	min_quality_for_graph: 70 -> 75; quality_weight_meaningfulness: 0.15 -> 0.118
+36	72.0300	72.0300	True	quality_weight_specificity: 0.269 -> 0.173; quality_weight_relevance: 0.15 -> 0.22
+37	72.0800	72.0800	True	quality_weight_coherence: 0.2 -> 0.278; min_quality_for_graph: 75 -> 80
+38	72.0800	72.0800	True	quality_weight_rule_bonus: 0.124 -> 0.156
+39	72.0800	72.0800	True	quality_weight_specificity: 0.269 -> 0.175
+40	71.7100	72.0800	False	min_quality_for_insights: 55 -> 65
+41	72.0800	72.0800	True	quality_weight_relevance: 0.15 -> 0.189
+42	72.0800	72.0800	True	quality_weight_relevance: 0.15 -> 0.101; quality_weight_coherence: 0.278 -> 0.363; quality_weight_meaningfulness: 0.118 -> 0.05
+43	72.0800	72.0800	True	quality_weight_relevance: 0.15 -> 0.075
+44	72.0800	72.0800	True	quality_weight_rule_bonus: 0.124 -> 0.193; min_insight_support: 3 -> 2
+45	72.0800	72.0800	True	quality_weight_coherence: 0.278 -> 0.215
+46	72.0800	72.0800	True	quality_weight_specificity: 0.269 -> 0.343
+47	72.0800	72.0800	True	quality_weight_specificity: 0.269 -> 0.321
+48	72.0800	72.0800	True	quality_weight_specificity: 0.269 -> 0.303; quality_weight_coherence: 0.278 -> 0.312
+49	72.0300	72.0800	False	quality_weight_specificity: 0.269 -> 0.2; min_quality_for_graph: 80 -> 75
+50	72.0800	72.0800	True	quality_weight_relevance: 0.15 -> 0.191; quality_weight_surah_diversity: 0.15 -> 0.094
+51	72.0800	72.0800	True	quality_weight_meaningfulness: 0.118 -> 0.071
+52	72.0100	72.0800	False	min_quality_for_insights: 55 -> 60
+53	72.0800	72.0800	True	quality_weight_surah_diversity: 0.15 -> 0.059
+54	72.0800	72.0800	True	quality_weight_meaningfulness: 0.118 -> 0.05; quality_weight_specificity: 0.269 -> 0.337
+55	72.0800	72.0800	True	quality_weight_surah_diversity: 0.15 -> 0.182; quality_weight_coherence: 0.278 -> 0.37
+56	72.0800	72.0800	True	quality_weight_coherence: 0.278 -> 0.37; min_quality_for_insights: 55 -> 50
+57	72.0800	72.0800	True	quality_weight_relevance: 0.15 -> 0.11; quality_weight_surah_diversity: 0.15 -> 0.093
+58	72.0800	72.0800	True	quality_weight_meaningfulness: 0.118 -> 0.145
+59	72.0800	72.0800	True	quality_weight_meaningfulness: 0.118 -> 0.213; quality_weight_specificity: 0.269 -> 0.225
+60	72.0800	72.0800	True	quality_weight_relevance: 0.15 -> 0.211; quality_weight_meaningfulness: 0.118 -> 0.176
+61	72.0800	72.0800	True	quality_weight_coherence: 0.278 -> 0.214
+62	72.0800	72.0800	True	quality_weight_surah_diversity: 0.15 -> 0.054
+63	72.0800	72.0800	True	quality_weight_surah_diversity: 0.15 -> 0.097; min_insight_support: 3 -> 5; quality_weight_coherence: 0.278 -> 0.308
+64	72.0800	72.0800	True	min_quality_for_insights: 55 -> 45; quality_weight_meaningfulness: 0.118 -> 0.147; quality_weight_surah_diversity: 0.15 -> 0.074
+65	72.0800	72.0800	True	quality_weight_relevance: 0.15 -> 0.055
+66	72.0800	72.0800	True	quality_weight_specificity: 0.269 -> 0.175
+67	72.0800	72.0800	True	quality_weight_coherence: 0.278 -> 0.214
+68	72.0800	72.0800	True	quality_weight_coherence: 0.278 -> 0.212; quality_weight_specificity: 0.269 -> 0.302
+69	72.0800	72.0800	True	quality_weight_meaningfulness: 0.118 -> 0.078; quality_weight_coherence: 0.278 -> 0.186
+70	72.0800	72.0800	True	quality_weight_relevance: 0.15 -> 0.215; quality_weight_surah_diversity: 0.15 -> 0.219; quality_weight_specificity: 0.269 -> 0.204
+71	72.0800	72.0800	True	min_quality_for_graph: 80 -> 80
+72	72.0800	72.0800	True	quality_weight_rule_bonus: 0.124 -> 0.2; quality_weight_relevance: 0.15 -> 0.203

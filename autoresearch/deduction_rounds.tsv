@@ -472,3 +472,58 @@ round	timestamp	novel_found	total_novel	elapsed	strategy	mutations
 344	2026-03-30T12:53:41.274583	495	89535	22.2	random	no changes
 345	2026-03-30T12:54:04.748123	439	89974	23.5	random	max_neighbors_hop3: 15 -> 17
 346	2026-03-30T12:54:08.562502	472	90446	3.8	random	verses: 3000 -> 500
+347	2026-03-30T12:54:21.844086	512	90958	13.3	random	verses: 500 -> 1000; max_neighbors_hop2: 7 -> 8
+348	2026-03-30T12:54:50.213419	416	91374	28.4	random	verses: 1000 -> 3000
+349	2026-03-30T12:54:54.533177	385	91759	4.3	random	max_neighbors_hop2: 8 -> 6; focus: all -> surahs [3, 10, 42, 48, 58]...
+350	2026-03-30T12:54:58.754360	121	91880	4.2	random	min_novelty: 80 -> 70
+351	2026-03-30T12:55:02.973537	79	91959	4.2	random	verses: 3000 -> 500; max_neighbors_hop1: 17 -> 15
+352	2026-03-30T12:55:07.223699	17	91976	4.2	random	max_neighbors_hop3: 17 -> 18
+353	2026-03-30T12:55:11.547273	13	91989	4.3	random	no changes
+354	2026-03-30T12:55:15.742814	508	92497	4.2	random	focus: specific -> all
+355	2026-03-30T12:55:27.454367	531	93028	11.7	random	verses: 500 -> 1500
+356	2026-03-30T12:55:45.177740	217	93245	17.7	high_connectivity	strategy: random -> high_connectivity; min_novelty: 70 -> 80
+357	2026-03-30T12:56:03.112726	194	93439	17.9	high_connectivity	transitive_max_chains: 200 -> 100; max_neighbors_hop2: 6 -> 7
+358	2026-03-30T12:56:12.116897	0	93439	9.0	high_connectivity	verses: 1500 -> 500; thematic_bridge_max: 800 -> 200
+359	2026-03-30T12:56:16.334781	131	93570	4.2	high_connectivity	focus: all -> surahs [7, 9, 11, 14, 45]...
+360	2026-03-30T12:56:20.576094	81	93651	4.2	high_connectivity	no changes
+361	2026-03-30T12:56:24.719570	79	93730	4.1	high_connectivity	max_neighbors_hop1: 15 -> 13
+362	2026-03-30T12:56:31.198911	108	93838	6.5	high_connectivity	verses: 500 -> 6234
+363	2026-03-30T12:56:37.650231	87	93925	6.4	high_connectivity	verses: 6234 -> 2000
+364	2026-03-30T12:56:44.114681	79	94004	6.5	high_connectivity	no changes
+365	2026-03-30T12:56:50.611787	61	94065	6.5	high_connectivity	no changes
+366	2026-03-30T12:56:57.119925	83	94148	6.5	high_connectivity	no changes
+367	2026-03-30T12:57:03.461446	69	94217	6.3	random	strategy: high_connectivity -> random
+368	2026-03-30T12:57:07.327354	52	94269	3.9	by_surah	strategy: random -> by_surah; max_neighbors_hop1: 13 -> 11
+369	2026-03-30T12:57:11.268969	51	94320	3.9	by_surah	max_neighbors_hop3: 18 -> 16
+370	2026-03-30T12:57:15.188500	31	94351	3.9	by_surah	verses: 2000 -> 1500; max_neighbors_hop1: 11 -> 13
+371	2026-03-30T12:57:19.036888	19	94370	3.8	by_surah	no changes
+372	2026-03-30T12:57:34.463296	102	94472	15.4	by_surah	focus: specific -> all
+373	2026-03-30T12:57:49.329931	78	94550	14.9	by_surah	no changes
+374	2026-03-30T12:58:21.971626	184	94734	32.6	by_surah	verses: 1500 -> 6234; shared_subject_max: 500 -> 200; min_novelty: 80 -> 40
+375	2026-03-30T12:58:33.459375	183	94917	11.5	by_surah	verses: 6234 -> 1000
+376	2026-03-30T12:58:44.570771	152	95069	11.1	by_surah	no changes
+377	2026-03-30T12:58:55.503700	185	95254	10.9	by_surah	no changes
+378	2026-03-30T12:59:09.490292	382	95636	14.0	by_surah	verses: 1000 -> 1500; transitive_max_chains: 100 -> 800
+379	2026-03-30T12:59:20.974754	176	95812	11.5	by_surah	verses: 1500 -> 1000; max_neighbors_hop3: 16 -> 14
+380	2026-03-30T12:59:29.045738	221	96033	8.1	by_surah	focus: all -> surahs [3, 20, 33, 44, 70]...
+381	2026-03-30T12:59:40.579740	185	96218	11.5	by_surah	min_novelty: 40 -> 50; max_neighbors_hop3: 14 -> 16; focus: specific -> all
+382	2026-03-30T12:59:51.817773	224	96442	11.2	by_surah	no changes
+383	2026-03-30T13:00:03.347946	238	96680	11.5	by_surah	no changes
+384	2026-03-30T13:00:15.039076	231	96911	11.7	by_surah	no changes
+385	2026-03-30T13:00:26.700146	187	97098	11.7	by_surah	max_neighbors_hop2: 7 -> 5
+386	2026-03-30T13:00:38.073582	216	97314	11.4	by_surah	transitive_max_chains: 800 -> 200
+387	2026-03-30T13:01:07.357443	176	97490	29.3	high_connectivity	strategy: by_surah -> high_connectivity; verses: 1000 -> 3000; thematic_bridge_max: 200 -> 500; max_neighbors_hop3: 16 -> 18
+388	2026-03-30T13:01:36.410610	240	97730	29.0	high_connectivity	transitive_max_chains: 200 -> 800
+389	2026-03-30T13:01:38.813514	215	97945	2.4	by_surah	strategy: high_connectivity -> by_surah; focus: all -> surahs [5, 26, 33, 45, 95]...
+390	2026-03-30T13:01:42.142790	176	98121	3.3	high_connectivity	strategy: by_surah -> high_connectivity; min_novelty: 50 -> 40; max_neighbors_hop1: 13 -> 14
+391	2026-03-30T13:01:45.487866	10	98131	3.3	high_connectivity	thematic_bridge_max: 500 -> 200; max_neighbors_hop1: 14 -> 15
+392	2026-03-30T13:01:49.174680	58	98189	3.7	high_connectivity	shared_subject_max: 200 -> 300; max_neighbors_hop2: 5 -> 6
+393	2026-03-30T13:01:52.939849	23	98212	3.8	high_connectivity	verses: 3000 -> 750; thematic_bridge_max: 200 -> 800; max_neighbors_hop1: 15 -> 14
+394	2026-03-30T13:01:56.480049	0	98212	3.5	high_connectivity	no changes
+395	2026-03-30T13:02:00.086821	0	98212	3.6	high_connectivity	transitive_max_chains: 800 -> 200
+396	2026-03-30T13:02:03.790880	0	98212	3.7	high_connectivity	thematic_bridge_max: 800 -> 200
+397	2026-03-30T13:02:07.450709	0	98212	3.7	high_connectivity	no changes
+398	2026-03-30T13:02:10.906617	47	98259	3.5	random	strategy: high_connectivity -> random; max_neighbors_hop1: 14 -> 12
+399	2026-03-30T13:02:13.425455	56	98315	2.5	by_surah	strategy: random -> by_surah
+400	2026-03-30T13:02:23.144633	217	98532	9.7	by_surah	focus: specific -> all
+401	2026-03-30T13:02:33.252159	216	98748	10.1	by_surah	no changes
