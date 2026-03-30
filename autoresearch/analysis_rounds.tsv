@@ -1,0 +1,7 @@
+round	timestamp	new_deductions	total_deductions	hub_verses_top3	structural_patterns_top3	clusters_found	insight_quality_score	weights_mutated	thresholds_mutated
+1	2026-03-30T12:03:36.824427	0	500	114:6, 19:58, 21:24	contact+salat; descendant+noah; flow+garden	21	1590.39	no	no
+2	2026-03-30T12:04:36.029444	1889	2389	114:6, 47:4, 5:64	hearer+omniscient; contact+salat; painful+retribution	30	2179.6	no	no
+3	2026-03-30T12:05:38.281808	3865	6254	114:6, 19:58, 47:4	contact+observe; observe+salat; flow+stream	30	2833.24	no	no
+4	2026-03-30T12:06:36.921776	2874	9128	114:6, 19:58, 75:31	observe+salat; contact+prayer; contact+observe	30	3022.79	no	no
+5	2026-03-30T12:07:36.467190	992	10120	114:6, 19:58, 75:31	observe+salat; contact+prayer; contact+observe	30	3053.57	no	no
+6	2026-03-30T12:08:36.358656	1210	11330	114:6, 19:58, 21:24	observe+salat; contact+observe; contact+prayer	30	3073.55	no	no
