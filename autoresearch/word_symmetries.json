@@ -1,6 +1,156 @@
 {
   "standard_pairs": [
     {
+      "pair": "astray/go",
+      "word_a": "astray",
+      "word_b": "go",
+      "count_a": 92,
+      "count_b": 2134,
+      "ratio": 0.0431,
+      "total": 2226,
+      "sample_verses_a": [
+        "2:198",
+        "3:69",
+        "3:164",
+        "4:60",
+        "4:88"
+      ],
+      "sample_verses_b": [
+        "1:1",
+        "1:2",
+        "2:7",
+        "2:8",
+        "2:9"
+      ],
+      "co_occurrence_verses": [
+        "2:198",
+        "3:164",
+        "4:88",
+        "4:116",
+        "4:136"
+      ]
+    },
+    {
+      "pair": "disbelieve/messenger",
+      "word_a": "disbelieve",
+      "word_b": "messenger",
+      "count_a": 440,
+      "count_b": 354,
+      "ratio": 0.8045,
+      "total": 794,
+      "sample_verses_a": [
+        "2:5",
+        "2:6",
+        "2:19",
+        "2:24",
+        "2:26"
+      ],
+      "sample_verses_b": [
+        "2:87",
+        "2:98",
+        "2:101",
+        "2:108",
+        "2:129"
+      ],
+      "co_occurrence_verses": [
+        "2:98",
+        "2:253",
+        "3:32",
+        "3:86",
+        "3:101"
+      ]
+    },
+    {
+      "pair": "disbelieve/retribution",
+      "word_a": "disbelieve",
+      "word_b": "retribution",
+      "count_a": 440,
+      "count_b": 350,
+      "ratio": 0.7955,
+      "total": 790,
+      "sample_verses_a": [
+        "2:5",
+        "2:6",
+        "2:19",
+        "2:24",
+        "2:26"
+      ],
+      "sample_verses_b": [
+        "2:7",
+        "2:10",
+        "2:85",
+        "2:86",
+        "2:90"
+      ],
+      "co_occurrence_verses": [
+        "2:85",
+        "2:90",
+        "2:104",
+        "2:126",
+        "2:191"
+      ]
+    },
+    {
+      "pair": "earth/know",
+      "word_a": "earth",
+      "word_b": "know",
+      "count_a": 375,
+      "count_b": 384,
+      "ratio": 0.9766,
+      "total": 759,
+      "sample_verses_a": [
+        "2:22",
+        "2:29",
+        "2:30",
+        "2:33",
+        "2:36"
+      ],
+      "sample_verses_b": [
+        "2:13",
+        "2:22",
+        "2:26",
+        "2:30",
+        "2:32"
+      ],
+      "co_occurrence_verses": [
+        "2:22",
+        "2:30",
+        "2:33",
+        "2:255",
+        "2:267"
+      ]
+    },
+    {
+      "pair": "among/messenger",
+      "word_a": "among",
+      "word_b": "messenger",
+      "count_a": 276,
+      "count_b": 354,
+      "ratio": 0.7797,
+      "total": 630,
+      "sample_verses_a": [
+        "2:59",
+        "2:65",
+        "2:72",
+        "2:78",
+        "2:85"
+      ],
+      "sample_verses_b": [
+        "2:87",
+        "2:98",
+        "2:101",
+        "2:108",
+        "2:129"
+      ],
+      "co_occurrence_verses": [
+        "2:129",
+        "2:143",
+        "2:151",
+        "2:253",
+        "2:285"
+      ]
+    },
+    {
       "pair": "earth/everything",
       "word_a": "earth",
       "word_b": "everything",
@@ -121,6 +271,36 @@
       ]
     },
     {
+      "pair": "create/earth",
+      "word_a": "create",
+      "word_b": "earth",
+      "count_a": 184,
+      "count_b": 375,
+      "ratio": 0.4907,
+      "total": 559,
+      "sample_verses_a": [
+        "2:21",
+        "2:29",
+        "2:228",
+        "3:7",
+        "3:47"
+      ],
+      "sample_verses_b": [
+        "2:22",
+        "2:29",
+        "2:30",
+        "2:33",
+        "2:36"
+      ],
+      "co_occurrence_verses": [
+        "2:29",
+        "3:191",
+        "5:17",
+        "5:18",
+        "6:1"
+      ]
+    },
+    {
       "pair": "incur/retribution",
       "word_a": "incur",
       "word_b": "retribution",
@@ -181,6 +361,96 @@
       ]
     },
     {
+      "pair": "belong/earth",
+      "word_a": "belong",
+      "word_b": "earth",
+      "count_a": 115,
+      "count_b": 375,
+      "ratio": 0.3067,
+      "total": 490,
+      "sample_verses_a": [
+        "2:115",
+        "2:116",
+        "2:142",
+        "2:145",
+        "2:156"
+      ],
+      "sample_verses_b": [
+        "2:22",
+        "2:29",
+        "2:30",
+        "2:33",
+        "2:36"
+      ],
+      "co_occurrence_verses": [
+        "2:116",
+        "2:255",
+        "2:284",
+        "3:109",
+        "3:129"
+      ]
+    },
+    {
+      "pair": "give/good",
+      "word_a": "give",
+      "word_b": "good",
+      "count_a": 274,
+      "count_b": 208,
+      "ratio": 0.7591,
+      "total": 482,
+      "sample_verses_a": [
+        "2:3",
+        "2:25",
+        "2:31",
+        "2:43",
+        "2:59"
+      ],
+      "sample_verses_b": [
+        "2:25",
+        "2:57",
+        "2:61",
+        "2:97",
+        "2:110"
+      ],
+      "co_occurrence_verses": [
+        "2:25",
+        "2:110",
+        "2:155",
+        "2:213",
+        "2:215"
+      ]
+    },
+    {
+      "pair": "messenger/send",
+      "word_a": "messenger",
+      "word_b": "send",
+      "count_a": 354,
+      "count_b": 127,
+      "ratio": 0.3588,
+      "total": 481,
+      "sample_verses_a": [
+        "2:87",
+        "2:98",
+        "2:101",
+        "2:108",
+        "2:129"
+      ],
+      "sample_verses_b": [
+        "2:22",
+        "2:110",
+        "2:151",
+        "2:164",
+        "2:196"
+      ],
+      "co_occurrence_verses": [
+        "2:151",
+        "4:64",
+        "4:80",
+        "6:48",
+        "7:53"
+      ]
+    },
+    {
       "pair": "everything/heaven",
       "word_a": "everything",
       "word_b": "heaven",
@@ -208,6 +478,36 @@
         "2:284",
         "3:29",
         "3:83"
+      ]
+    },
+    {
+      "pair": "idol/worship",
+      "word_a": "idol",
+      "word_b": "worship",
+      "count_a": 201,
+      "count_b": 237,
+      "ratio": 0.8481,
+      "total": 438,
+      "sample_verses_a": [
+        "2:22",
+        "2:96",
+        "2:105",
+        "2:135",
+        "2:165"
+      ],
+      "sample_verses_b": [
+        "1:5",
+        "2:21",
+        "2:51",
+        "2:54",
+        "2:83"
+      ],
+      "co_occurrence_verses": [
+        "2:96",
+        "2:105",
+        "2:135",
+        "2:285",
+        "3:64"
       ]
     },
     {
@@ -271,6 +571,66 @@
       ]
     },
     {
+      "pair": "create/heaven",
+      "word_a": "create",
+      "word_b": "heaven",
+      "count_a": 184,
+      "count_b": 222,
+      "ratio": 0.8288,
+      "total": 406,
+      "sample_verses_a": [
+        "2:21",
+        "2:29",
+        "2:228",
+        "3:7",
+        "3:47"
+      ],
+      "sample_verses_b": [
+        "2:33",
+        "2:107",
+        "2:116",
+        "2:117",
+        "2:164"
+      ],
+      "co_occurrence_verses": [
+        "3:191",
+        "5:17",
+        "5:18",
+        "6:1",
+        "6:73"
+      ]
+    },
+    {
+      "pair": "everything/fully",
+      "word_a": "everything",
+      "word_b": "fully",
+      "count_a": 244,
+      "count_b": 151,
+      "ratio": 0.6189,
+      "total": 395,
+      "sample_verses_a": [
+        "2:29",
+        "2:77",
+        "2:96",
+        "2:110",
+        "2:116"
+      ],
+      "sample_verses_b": [
+        "2:19",
+        "2:29",
+        "2:95",
+        "2:197",
+        "2:215"
+      ],
+      "co_occurrence_verses": [
+        "2:29",
+        "2:234",
+        "2:271",
+        "2:283",
+        "3:29"
+      ]
+    },
+    {
       "pair": "lead/life",
       "word_a": "lead",
       "word_b": "life",
@@ -331,6 +691,186 @@
       ]
     },
     {
+      "pair": "hereafter/life",
+      "word_a": "hereafter",
+      "word_b": "life",
+      "count_a": 115,
+      "count_b": 253,
+      "ratio": 0.4545,
+      "total": 368,
+      "sample_verses_a": [
+        "2:4",
+        "2:86",
+        "2:94",
+        "2:102",
+        "2:114"
+      ],
+      "sample_verses_b": [
+        "2:25",
+        "2:28",
+        "2:62",
+        "2:73",
+        "2:82"
+      ],
+      "co_occurrence_verses": [
+        "2:86",
+        "2:114",
+        "2:217",
+        "2:220",
+        "3:22"
+      ]
+    },
+    {
+      "pair": "beside/idol",
+      "word_a": "beside",
+      "word_b": "idol",
+      "count_a": 165,
+      "count_b": 201,
+      "ratio": 0.8209,
+      "total": 366,
+      "sample_verses_a": [
+        "2:107",
+        "2:255",
+        "3:6",
+        "3:64",
+        "3:79"
+      ],
+      "sample_verses_b": [
+        "2:22",
+        "2:96",
+        "2:105",
+        "2:135",
+        "2:165"
+      ],
+      "co_occurrence_verses": [
+        "3:64",
+        "3:79",
+        "3:151",
+        "4:48",
+        "4:116"
+      ]
+    },
+    {
+      "pair": "charity/give",
+      "word_a": "charity",
+      "word_b": "give",
+      "count_a": 72,
+      "count_b": 274,
+      "ratio": 0.2628,
+      "total": 346,
+      "sample_verses_a": [
+        "2:3",
+        "2:43",
+        "2:83",
+        "2:110",
+        "2:177"
+      ],
+      "sample_verses_b": [
+        "2:3",
+        "2:25",
+        "2:31",
+        "2:43",
+        "2:59"
+      ],
+      "co_occurrence_verses": [
+        "2:3",
+        "2:43",
+        "2:83",
+        "2:110",
+        "2:177"
+      ]
+    },
+    {
+      "pair": "idol/set",
+      "word_a": "idol",
+      "word_b": "set",
+      "count_a": 201,
+      "count_b": 142,
+      "ratio": 0.7065,
+      "total": 343,
+      "sample_verses_a": [
+        "2:22",
+        "2:96",
+        "2:105",
+        "2:135",
+        "2:165"
+      ],
+      "sample_verses_b": [
+        "2:22",
+        "2:66",
+        "2:165",
+        "2:197",
+        "2:236"
+      ],
+      "co_occurrence_verses": [
+        "2:22",
+        "2:165",
+        "3:64",
+        "3:151",
+        "4:48"
+      ]
+    },
+    {
+      "pair": "belong/heaven",
+      "word_a": "belong",
+      "word_b": "heaven",
+      "count_a": 115,
+      "count_b": 222,
+      "ratio": 0.518,
+      "total": 337,
+      "sample_verses_a": [
+        "2:115",
+        "2:116",
+        "2:142",
+        "2:145",
+        "2:156"
+      ],
+      "sample_verses_b": [
+        "2:33",
+        "2:107",
+        "2:116",
+        "2:117",
+        "2:164"
+      ],
+      "co_occurrence_verses": [
+        "2:116",
+        "2:255",
+        "2:284",
+        "3:109",
+        "3:129"
+      ]
+    },
+    {
+      "pair": "reject/revelation",
+      "word_a": "reject",
+      "word_b": "revelation",
+      "count_a": 123,
+      "count_b": 210,
+      "ratio": 0.5857,
+      "total": 333,
+      "sample_verses_a": [
+        "2:39",
+        "2:41",
+        "2:61",
+        "2:87",
+        "2:90"
+      ],
+      "sample_verses_b": [
+        "2:39",
+        "2:41",
+        "2:61",
+        "2:90",
+        "2:91"
+      ],
+      "co_occurrence_verses": [
+        "2:39",
+        "2:41",
+        "2:61",
+        "2:90",
+        "2:99"
+      ]
+    },
+    {
       "pair": "good/evil",
       "word_a": "good",
       "word_b": "evil",
@@ -388,6 +928,126 @@
         "3:156",
         "3:185",
         "6:60"
+      ]
+    },
+    {
+      "pair": "guide/path",
+      "word_a": "guide",
+      "word_b": "path",
+      "count_a": 192,
+      "count_b": 119,
+      "ratio": 0.6198,
+      "total": 311,
+      "sample_verses_a": [
+        "1:6",
+        "2:5",
+        "2:26",
+        "2:53",
+        "2:70"
+      ],
+      "sample_verses_b": [
+        "1:6",
+        "1:7",
+        "2:108",
+        "2:142",
+        "2:213"
+      ],
+      "co_occurrence_verses": [
+        "1:6",
+        "2:142",
+        "2:213",
+        "3:101",
+        "4:68"
+      ]
+    },
+    {
+      "pair": "beside/set",
+      "word_a": "beside",
+      "word_b": "set",
+      "count_a": 165,
+      "count_b": 142,
+      "ratio": 0.8606,
+      "total": 307,
+      "sample_verses_a": [
+        "2:107",
+        "2:255",
+        "3:6",
+        "3:64",
+        "3:79"
+      ],
+      "sample_verses_b": [
+        "2:22",
+        "2:66",
+        "2:165",
+        "2:197",
+        "2:236"
+      ],
+      "co_occurrence_verses": [
+        "3:64",
+        "3:151",
+        "4:48",
+        "5:72",
+        "6:64"
+      ]
+    },
+    {
+      "pair": "good/news",
+      "word_a": "good",
+      "word_b": "news",
+      "count_a": 208,
+      "count_b": 83,
+      "ratio": 0.399,
+      "total": 291,
+      "sample_verses_a": [
+        "2:25",
+        "2:57",
+        "2:61",
+        "2:97",
+        "2:110"
+      ],
+      "sample_verses_b": [
+        "2:25",
+        "2:97",
+        "2:119",
+        "2:155",
+        "2:213"
+      ],
+      "co_occurrence_verses": [
+        "2:25",
+        "2:97",
+        "2:119",
+        "2:155",
+        "2:213"
+      ]
+    },
+    {
+      "pair": "abide/hell",
+      "word_a": "abide",
+      "word_b": "hell",
+      "count_a": 70,
+      "count_b": 210,
+      "ratio": 0.3333,
+      "total": 280,
+      "sample_verses_a": [
+        "2:25",
+        "2:39",
+        "2:81",
+        "2:82",
+        "2:162"
+      ],
+      "sample_verses_b": [
+        "2:24",
+        "2:39",
+        "2:80",
+        "2:81",
+        "2:119"
+      ],
+      "co_occurrence_verses": [
+        "2:39",
+        "2:81",
+        "2:217",
+        "2:257",
+        "2:275"
       ]
     },
     {
@@ -481,6 +1141,66 @@
       ]
     },
     {
+      "pair": "forgiver/merciful",
+      "word_a": "forgiver",
+      "word_b": "merciful",
+      "count_a": 81,
+      "count_b": 121,
+      "ratio": 0.6694,
+      "total": 202,
+      "sample_verses_a": [
+        "2:173",
+        "2:182",
+        "2:192",
+        "2:199",
+        "2:218"
+      ],
+      "sample_verses_b": [
+        "1:1",
+        "1:3",
+        "2:37",
+        "2:54",
+        "2:128"
+      ],
+      "co_occurrence_verses": [
+        "2:173",
+        "2:182",
+        "2:192",
+        "2:199",
+        "2:218"
+      ]
+    },
+    {
+      "pair": "observe/prayer",
+      "word_a": "observe",
+      "word_b": "prayer",
+      "count_a": 104,
+      "count_b": 98,
+      "ratio": 0.9423,
+      "total": 202,
+      "sample_verses_a": [
+        "2:3",
+        "2:41",
+        "2:43",
+        "2:83",
+        "2:110"
+      ],
+      "sample_verses_b": [
+        "2:3",
+        "2:43",
+        "2:45",
+        "2:83",
+        "2:110"
+      ],
+      "co_occurrence_verses": [
+        "2:3",
+        "2:43",
+        "2:83",
+        "2:110",
+        "2:177"
+      ]
+    },
+    {
       "pair": "peace/war",
       "word_a": "peace",
       "word_b": "war",
@@ -561,6 +1281,96 @@
       ],
       "co_occurrence_verses": [
         "114:6"
+      ]
+    },
+    {
+      "pair": "almighty/wise",
+      "word_a": "almighty",
+      "word_b": "wise",
+      "count_a": 89,
+      "count_b": 96,
+      "ratio": 0.9271,
+      "total": 185,
+      "sample_verses_a": [
+        "2:129",
+        "2:209",
+        "2:220",
+        "2:228",
+        "2:240"
+      ],
+      "sample_verses_b": [
+        "2:32",
+        "2:129",
+        "2:209",
+        "2:220",
+        "2:228"
+      ],
+      "co_occurrence_verses": [
+        "2:129",
+        "2:209",
+        "2:220",
+        "2:228",
+        "2:240"
+      ]
+    },
+    {
+      "pair": "contact/observe",
+      "word_a": "contact",
+      "word_b": "observe",
+      "count_a": 80,
+      "count_b": 104,
+      "ratio": 0.7692,
+      "total": 184,
+      "sample_verses_a": [
+        "2:3",
+        "2:43",
+        "2:45",
+        "2:83",
+        "2:110"
+      ],
+      "sample_verses_b": [
+        "2:3",
+        "2:41",
+        "2:43",
+        "2:83",
+        "2:110"
+      ],
+      "co_occurrence_verses": [
+        "2:3",
+        "2:43",
+        "2:83",
+        "2:110",
+        "2:177"
+      ]
+    },
+    {
+      "pair": "observe/salat",
+      "word_a": "observe",
+      "word_b": "salat",
+      "count_a": 104,
+      "count_b": 80,
+      "ratio": 0.7692,
+      "total": 184,
+      "sample_verses_a": [
+        "2:3",
+        "2:41",
+        "2:43",
+        "2:83",
+        "2:110"
+      ],
+      "sample_verses_b": [
+        "2:3",
+        "2:43",
+        "2:45",
+        "2:83",
+        "2:110"
+      ],
+      "co_occurrence_verses": [
+        "2:3",
+        "2:43",
+        "2:83",
+        "2:110",
+        "2:177"
       ]
     },
     {
@@ -704,6 +1514,36 @@
         "3:162"
       ],
       "co_occurrence_verses": []
+    },
+    {
+      "pair": "abide/forever",
+      "word_a": "abide",
+      "word_b": "forever",
+      "count_a": 70,
+      "count_b": 74,
+      "ratio": 0.9459,
+      "total": 144,
+      "sample_verses_a": [
+        "2:25",
+        "2:39",
+        "2:81",
+        "2:82",
+        "2:162"
+      ],
+      "sample_verses_b": [
+        "2:25",
+        "2:39",
+        "2:81",
+        "2:82",
+        "2:217"
+      ],
+      "co_occurrence_verses": [
+        "2:25",
+        "2:39",
+        "2:81",
+        "2:82",
+        "2:217"
+      ]
     },
     {
       "pair": "land/sea",
@@ -1012,7 +1852,7 @@
   ],
   "discovered_pairs_count": 54,
   "meta": {
-    "rounds_completed": 7,
-    "elapsed_minutes": 0.1
+    "rounds_completed": 20,
+    "elapsed_minutes": 0.6
   }
 }

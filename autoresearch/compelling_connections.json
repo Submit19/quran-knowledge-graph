@@ -10628,6 +10628,32 @@
       "combined_score": 10.51
     },
     {
+      "verse_a": "11:115",
+      "verse_b": "8:46",
+      "surah_a": "11 (Hood)",
+      "surah_b": "8 (The Spoils of War)",
+      "text_a": "You shall steadfastly persevere, for GOD never fails to recompense the righteous.",
+      "text_b": "You shall obey GOD and His messenger, and do not dispute among yourselves, lest you fail and scatter your strength. You shall steadfastly persevere. GOD is with those who steadfastly persevere.",
+      "resonance_score": 8,
+      "relatedness_score": 1.314,
+      "resonance_keywords_a": [
+        "steadfast"
+      ],
+      "resonance_keywords_b": [
+        "strength",
+        "steadfast"
+      ],
+      "shared_resonance": [
+        "steadfast"
+      ],
+      "bridge_keywords": [
+        "fail",
+        "persevere",
+        "steadfastly"
+      ],
+      "combined_score": 10.51
+    },
+    {
       "verse_a": "21:73",
       "verse_b": "9:5",
       "surah_a": "21 (The Prophets)",
@@ -11394,6 +11420,35 @@
         "mercy",
         "light",
         "heal"
+      ],
+      "shared_resonance": [
+        "light",
+        "mercy"
+      ],
+      "bridge_keywords": [
+        "enlightenment",
+        "guidance",
+        "mercy"
+      ],
+      "combined_score": 9.49
+    },
+    {
+      "verse_a": "10:57",
+      "verse_b": "7:203",
+      "surah_a": "10 (Jonah)",
+      "surah_b": "7 (The Purgatory)",
+      "text_a": "O people, enlightenment has come to you herein from your Lord, and healing for anything that troubles your hearts, and guidance, and mercy for the believers.",
+      "text_b": "If you do not produce a miracle that they demand, they say, \"Why not ask for it?\" Say, \"I simply follow what is revealed to me from my Lord.\" These are enlightenments from your Lord, and guidance, and mercy for people who believe.",
+      "resonance_score": 13,
+      "relatedness_score": 0.73,
+      "resonance_keywords_a": [
+        "mercy",
+        "light",
+        "heal"
+      ],
+      "resonance_keywords_b": [
+        "mercy",
+        "light"
       ],
       "shared_resonance": [
         "light",
@@ -12192,6 +12247,34 @@
       "combined_score": 8.79
     },
     {
+      "verse_a": "10:107",
+      "verse_b": "9:27",
+      "surah_a": "10 (Jonah)",
+      "surah_b": "9 (Ultimatum)",
+      "text_a": "If GOD touches you with a hardship, none can relieve it except He. And when He blesses you, no force can prevent His grace. He bestows it upon whomever He chooses from among His servants. He is the Forgiver, Most Merciful.",
+      "text_b": "Ultimately, GOD redeems whomever He wills. GOD is Forgiver, Most Merciful.",
+      "resonance_score": 14,
+      "relatedness_score": 0.628,
+      "resonance_keywords_a": [
+        "forgive",
+        "grace",
+        "bless"
+      ],
+      "resonance_keywords_b": [
+        "forgive",
+        "redeem"
+      ],
+      "shared_resonance": [
+        "forgive"
+      ],
+      "bridge_keywords": [
+        "forgiver",
+        "merciful",
+        "whomever"
+      ],
+      "combined_score": 8.79
+    },
+    {
       "verse_a": "17:57",
       "verse_b": "3:159",
       "surah_a": "17 (The Children of Israel)",
@@ -12401,6 +12484,32 @@
       ],
       "resonance_keywords_b": [
         "peace",
+        "steadfast"
+      ],
+      "shared_resonance": [
+        "steadfast"
+      ],
+      "bridge_keywords": [
+        "persevere",
+        "steadfastly"
+      ],
+      "combined_score": 8.72
+    },
+    {
+      "verse_a": "13:24",
+      "verse_b": "8:46",
+      "surah_a": "13 (Thunder)",
+      "surah_b": "8 (The Spoils of War)",
+      "text_a": "\"Peace be upon you, because you steadfastly persevered. What a joyous destiny.\" (2) The Disbelievers",
+      "text_b": "You shall obey GOD and His messenger, and do not dispute among yourselves, lest you fail and scatter your strength. You shall steadfastly persevere. GOD is with those who steadfastly persevere.",
+      "resonance_score": 10,
+      "relatedness_score": 0.872,
+      "resonance_keywords_a": [
+        "peace",
+        "steadfast"
+      ],
+      "resonance_keywords_b": [
+        "strength",
         "steadfast"
       ],
       "shared_resonance": [
@@ -15715,6 +15824,32 @@
       "combined_score": 7.57
     },
     {
+      "verse_a": "16:127",
+      "verse_b": "14:21",
+      "surah_a": "16 (The Bee)",
+      "surah_b": "14 (Abraham)",
+      "text_a": "You shall resort to patience - and your patience is attainable only with GOD's help. Do not grieve over them, and do not be annoyed by their schemes.",
+      "text_b": "When they all stand before GOD, the followers will say to the leaders, \"We used to follow you. Can you spare us even a little bit of GOD's retribution?\" They will say, \"Had GOD guided us, we would have guided you. Now it is too late, whether we griev",
+      "resonance_score": 8,
+      "relatedness_score": 0.947,
+      "resonance_keywords_a": [
+        "patience"
+      ],
+      "resonance_keywords_b": [
+        "patience",
+        "guide"
+      ],
+      "shared_resonance": [
+        "patience"
+      ],
+      "bridge_keywords": [
+        "grieve",
+        "patience",
+        "resort"
+      ],
+      "combined_score": 7.57
+    },
+    {
       "verse_a": "2:105",
       "verse_b": "49:8",
       "surah_a": "2 (The Heifer)",
@@ -17292,6 +17427,29 @@
       "bridge_keywords": [
         "persevere",
         "steadfastly"
+      ],
+      "combined_score": 7.1
+    },
+    {
+      "verse_a": "12:52",
+      "verse_b": "8:58",
+      "surah_a": "12 (Joseph)",
+      "surah_b": "8 (The Spoils of War)",
+      "text_a": "\"I hope that he will realize that I never betrayed him in his absence, for GOD does not bless the schemes of the betrayers.",
+      "text_b": "When you are betrayed by a group of people, you shall mobilize against them in the same manner. GOD does not love the betrayers.",
+      "resonance_score": 8,
+      "relatedness_score": 0.887,
+      "resonance_keywords_a": [
+        "hope",
+        "bless"
+      ],
+      "resonance_keywords_b": [
+        "love"
+      ],
+      "shared_resonance": [],
+      "bridge_keywords": [
+        "betray",
+        "betrayer"
       ],
       "combined_score": 7.1
     },
@@ -18943,6 +19101,33 @@
         "guide",
         "land",
         "sea"
+      ],
+      "combined_score": 6.85
+    },
+    {
+      "verse_a": "59:10",
+      "verse_b": "57:9",
+      "surah_a": "59 (Exodus)",
+      "surah_b": "57 (Iron)",
+      "text_a": "Those who became believers after them say, \"Our Lord, forgive us and our brethren who preceded us to the faith, and keep our hearts from harboring any hatred towards those who believed. Our Lord, You are Compassionate, Most Merciful.\"",
+      "text_b": "He is the One who sends down to His servant clear revelations, in order to lead you out of the darkness into the light. GOD is Compassionate towards you, Most Merciful.",
+      "resonance_score": 11,
+      "relatedness_score": 0.623,
+      "resonance_keywords_a": [
+        "forgive",
+        "compassion"
+      ],
+      "resonance_keywords_b": [
+        "compassion",
+        "light"
+      ],
+      "shared_resonance": [
+        "compassion"
+      ],
+      "bridge_keywords": [
+        "compassionate",
+        "merciful",
+        "towards"
       ],
       "combined_score": 6.85
     },
@@ -21954,6 +22139,32 @@
       "combined_score": 6.38
     },
     {
+      "verse_a": "16:96",
+      "verse_b": "14:12",
+      "surah_a": "16 (The Bee)",
+      "surah_b": "14 (Abraham)",
+      "text_a": "What you possess runs out, but what GOD possesses lasts forever. We will surely reward those who steadfastly persevere; we will recompense them for their righteous works.",
+      "text_b": "\"Why should we not trust in GOD, when He has guided us in our paths? We will steadfastly persevere in the face of your persecution. In GOD all the trusters shall trust.\"",
+      "resonance_score": 10,
+      "relatedness_score": 0.638,
+      "resonance_keywords_a": [
+        "steadfast"
+      ],
+      "resonance_keywords_b": [
+        "trust",
+        "guide",
+        "steadfast"
+      ],
+      "shared_resonance": [
+        "steadfast"
+      ],
+      "bridge_keywords": [
+        "persevere",
+        "steadfastly"
+      ],
+      "combined_score": 6.38
+    },
+    {
       "verse_a": "21:73",
       "verse_b": "2:177",
       "surah_a": "21 (The Prophets)",
@@ -22880,6 +23091,34 @@
       "combined_score": 6.23
     },
     {
+      "verse_a": "11:43",
+      "verse_b": "8:11",
+      "surah_a": "11 (Hood)",
+      "surah_b": "8 (The Spoils of War)",
+      "text_a": "He said, \"I will take refuge on top of a hill, to protect me from the water.\" He said, \"Nothing can protect anyone today from GOD's judgment; only those worthy of His mercy (will be saved).\" The waves separated them, and he was among those who drowne",
+      "text_b": "He caused peaceful slumber to overtake you and pacify you, and He sent down water from the sky to clean you therewith. He protected you from the devil's curse, reassured your hearts and strengthened your foothold. Lessons from History",
+      "resonance_score": 13,
+      "relatedness_score": 0.479,
+      "resonance_keywords_a": [
+        "mercy",
+        "save",
+        "protect"
+      ],
+      "resonance_keywords_b": [
+        "peace",
+        "protect",
+        "strength"
+      ],
+      "shared_resonance": [
+        "protect"
+      ],
+      "bridge_keywords": [
+        "protect",
+        "water"
+      ],
+      "combined_score": 6.23
+    },
+    {
       "verse_a": "57:27",
       "verse_b": "5:66",
       "surah_a": "57 (Iron)",
@@ -22894,6 +23133,31 @@
       ],
       "resonance_keywords_b": [
         "bless"
+      ],
+      "shared_resonance": [],
+      "bridge_keywords": [
+        "gospel",
+        "many",
+        "send",
+        "uphold"
+      ],
+      "combined_score": 6.22
+    },
+    {
+      "verse_a": "5:66",
+      "verse_b": "57:27",
+      "surah_a": "5 (The Feast)",
+      "surah_b": "57 (Iron)",
+      "text_a": "If only they would uphold the Torah and the Gospel, and what is sent down to them herein from their Lord, they would be showered with blessings from above them and from beneath their feet. Some of them are righteous, but many of them are evildoers.",
+      "text_b": "Subsequent to them, we sent our messengers. We sent Jesus the son of Mary, and we gave him the Injeel (Gospel), and we placed in the hearts of his followers kindness and mercy. But they invented hermitism which we never decreed for them. All we asked",
+      "resonance_score": 8,
+      "relatedness_score": 0.777,
+      "resonance_keywords_a": [
+        "bless"
+      ],
+      "resonance_keywords_b": [
+        "mercy",
+        "kindness"
       ],
       "shared_resonance": [],
       "bridge_keywords": [
@@ -28644,6 +28908,32 @@
       "combined_score": 5.52
     },
     {
+      "verse_a": "65:2",
+      "verse_b": "8:29",
+      "surah_a": "65 (Divorce)",
+      "surah_b": "8 (The Spoils of War)",
+      "text_a": "Once the interim is fulfilled, you may reconcile with them equitably, or go through with the separation equitably. You shall have two equitable witnesses witness the divorce before GOD. This is to enlighten those who believe in GOD and the Last Day. ",
+      "text_b": "O you who believe, if you reverence GOD, He will enlighten you, remit your sins, and forgive you. GOD possesses infinite grace.",
+      "resonance_score": 10,
+      "relatedness_score": 0.552,
+      "resonance_keywords_a": [
+        "light"
+      ],
+      "resonance_keywords_b": [
+        "forgive",
+        "grace",
+        "light"
+      ],
+      "shared_resonance": [
+        "light"
+      ],
+      "bridge_keywords": [
+        "enlighten",
+        "reverence"
+      ],
+      "combined_score": 5.52
+    },
+    {
       "verse_a": "7:23",
       "verse_b": "26:82",
       "surah_a": "7 (The Purgatory)",
@@ -28670,7 +28960,7 @@
     }
   ],
   "meta": {
-    "rounds_completed": 10,
-    "elapsed_minutes": 0.0
+    "rounds_completed": 30,
+    "elapsed_minutes": 0.5
   }
 }

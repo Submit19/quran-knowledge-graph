@@ -1,0 +1,5507 @@
+[
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "21:24",
+      "20:128"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "beside",
+      "generation"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "21:The Prophets",
+      "20:T.H."
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> beside -> generation], we reach [20:128] (Surah T.H.) about 'They describes in the homes of those before them', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [21:24] -> [20:128].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.791288"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "21:24",
+      "27:93"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "beside",
+      "proof"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "21:The Prophets",
+      "27:The Ant"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> beside -> proof], we reach [27:93] (Surah The Ant) about 'praise, show, unaware', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [21:24] -> [27:93].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.791705"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "21:24",
+      "35:31"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "beside",
+      "consummate"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "21:The Prophets",
+      "35:Initiator"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> beside -> consummate], we reach [35:31] (Surah Initiator) about 'GOD is fully cognizant of his servants', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [21:24] -> [35:31].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.792127"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "38:75",
+      "34:20"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "arrogant",
+      "satan"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "38:S.",
+      "34:Sheba"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> arrogant -> satan], we reach [34:20] (Surah Sheba) about 'They commands him', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [38:75] -> [34:20].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.793442"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "38:75",
+      "6:93"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "arrogant",
+      "arrogant"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "38:S.",
+      "6:Livestock"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> arrogant -> arrogant], we reach [6:93] (Surah Livestock) about 'You states the transgressors', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [38:75] -> [6:93].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.793829"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "19:58",
+      "96:19"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "abraham",
+      "fall"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "19:Mary",
+      "96:The Embryo"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> abraham -> fall], we reach [96:19] (Surah The Embryo) about 'You commands prostrate', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [19:58] -> [96:19].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.794632"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "19:58",
+      "75:31"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "abraham",
+      "contact"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "19:Mary",
+      "75:Resurrection"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> abraham -> contact], we reach [75:31] (Surah Resurrection) about 'he commands neither the charity , nor the contact prayers', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [19:58] -> [75:31].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.795002"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "19:58",
+      "6:87"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "abraham",
+      "among"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "19:Mary",
+      "6:Livestock"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> abraham -> among], we reach [6:87] (Surah Livestock) about 'guide, path, many', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [19:58] -> [6:87].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.795430"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "19:9",
+      "54:17"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "create",
+      "easy"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "19:Mary",
+      "54:The Moon"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> create -> easy], we reach [54:17] (Surah The Moon) about 'make, quran, wish', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [19:9] -> [54:17].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.796208"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "19:9",
+      "29:19"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "create",
+      "easy"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "19:Mary",
+      "29:The Spider"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> create -> easy], we reach [29:19] (Surah The Spider) about 'see, creation, repeat', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [19:9] -> [29:19].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.796581"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "19:9",
+      "65:4"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "create",
+      "easy"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "19:Mary",
+      "65:Divorce"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> create -> easy], we reach [65:4] (Surah Divorce) about 'three, give, make', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [19:9] -> [65:4].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.797020"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "53:7",
+      "17:78"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "highest",
+      "highest"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "53:The Stars",
+      "17:The Children of Israel"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> highest -> highest], we reach [17:78] (Surah The Children of Israel) about 'You commands the Contact Prayer ( Salat ) when the', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [53:7] -> [17:78].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.797819"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "53:7",
+      "81:23"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "highest",
+      "horizon"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "53:The Stars",
+      "81:The Rolling"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> highest -> horizon], we reach [81:23] (Surah The Rolling) about 'He states him', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [53:7] -> [81:23].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.798224"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "53:7",
+      "70:3"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "highest",
+      "highest"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "53:The Stars",
+      "70:The Heights"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> highest -> highest], we reach [70:3] (Surah The Heights) about 'possessor, height, highest', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [53:7] -> [70:3].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.798605"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "11:12",
+      "53:44"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "angel",
+      "control"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "11:Hood",
+      "53:The Stars"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> angel -> control], we reach [53:44] (Surah The Stars) about 'death, life, control', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [11:12] -> [53:44].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.799395"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "11:12",
+      "22:49"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "angel",
+      "warner"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "11:Hood",
+      "22:Pilgrimage"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> angel -> warner], we reach [22:49] (Surah Pilgrimage) about 'send, profound, warner', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [11:12] -> [22:49].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.799765"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "11:12",
+      "6:50"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "angel",
+      "angel"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "11:Hood",
+      "6:Livestock"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> angel -> angel], we reach [6:50] (Surah Livestock) about 'reveal, know, blind', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [11:12] -> [6:50].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.800151"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "24:15",
+      "78:9"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "accord",
+      "rest"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "24:Light",
+      "78:The Event"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> accord -> rest], we reach [78:9] (Surah The Event) about 'create, rest, sleep', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [24:15] -> [78:9].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.800945"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "24:15",
+      "18:5"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "accord",
+      "gross"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "24:Light",
+      "18:The Cave"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> accord -> gross], we reach [18:5] (Surah The Cave) about 'They describes no knowledge about this', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [24:15] -> [18:5].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.801372"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "24:15",
+      "26:195"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "accord",
+      "tongue"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "24:Light",
+      "26:The Poets"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> accord -> tongue], we reach [26:195] (Surah The Poets) about 'perfect, tongue, arabic', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [24:15] -> [26:195].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.801740"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "81:28",
+      "42:52"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "go",
+      "straight"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "81:The Rolling",
+      "42:Consultation"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> go -> straight], we reach [42:52] (Surah Consultation) about 'You describes no idea about the scripture , or faith', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [81:28] -> [42:52].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.802523"
+  },
+  {
+    "chain_verses": [
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6",
+      "81:28",
+      "6:153"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "teaching",
+      "strongly",
+      "content",
+      "go",
+      "straight"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People",
+      "81:The Rolling",
+      "6:Livestock"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [87:18] (Surah The Most High) about 'This describes in the earlier teachings', through bridge keywords [teaching -> strongly -> content -> go -> straight], we reach [6:153] (Surah Livestock) about 'You commands it', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [87:18] -> [7:145] -> [7:171] -> [114:6] -> [81:28] -> [6:153].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.802892"
+  },
+  {
+    "chain_verses": [
+      "74:39",
+      "69:19",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "right",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "74:The Hidden Secret",
+      "69:Incontestable",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [74:39] (Surah The Hidden Secret) about 'right, except', through bridge keywords [right -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [74:39] -> [69:19] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.803922"
+  },
+  {
+    "chain_verses": [
+      "84:7",
+      "69:19",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "hand",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "84:The Rupture",
+      "69:Incontestable",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [84:7] (Surah The Rupture) about 'right, receive, hand', through bridge keywords [hand -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [84:7] -> [69:19] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.804266"
+  },
+  {
+    "chain_verses": [
+      "3:181",
+      "69:19",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "record",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "3:The Amramites",
+      "69:Incontestable",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "GOD —[describes]→ the utterances of those who said , \"",
+      "GOD —[is]→ poor",
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's"
+    ],
+    "narrative": "Starting from [3:181] (Surah The Amramites) about 'GOD describes the utterances of those who said , \"', through bridge keywords [record -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [3:181] -> [69:19] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.804580"
+  },
+  {
+    "chain_verses": [
+      "89:24",
+      "69:25",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "oh",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "89:Dawn",
+      "69:Incontestable",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [89:24] (Surah Dawn) about 'life, wish, prepare', through bridge keywords [oh -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [89:24] -> [69:25] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.805279"
+  },
+  {
+    "chain_verses": [
+      "3:181",
+      "69:25",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "record",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "3:The Amramites",
+      "69:Incontestable",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "GOD —[describes]→ the utterances of those who said , \"",
+      "GOD —[is]→ poor",
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's"
+    ],
+    "narrative": "Starting from [3:181] (Surah The Amramites) about 'GOD describes the utterances of those who said , \"', through bridge keywords [record -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [3:181] -> [69:25] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.805596"
+  },
+  {
+    "chain_verses": [
+      "82:12",
+      "69:25",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "record",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "82:The Shattering",
+      "69:Incontestable",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "They —[states]→ everything you do",
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “"
+    ],
+    "narrative": "Starting from [82:12] (Surah The Shattering) about 'They states everything you do', through bridge keywords [record -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [82:12] -> [69:25] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.805903"
+  },
+  {
+    "chain_verses": [
+      "6:59",
+      "54:52",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "everything",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "6:Livestock",
+      "54:The Moon",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "None —[describes]→ them",
+      "He —[states]→ everything on land and in the sea",
+      "Not A Leaf —[states]→ without His knowledge",
+      "Everything they did —[describes]→ in the scriptures",
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text"
+    ],
+    "narrative": "Starting from [6:59] (Surah Livestock) about 'None describes them', through bridge keywords [everything -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [6:59] -> [54:52] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.806583"
+  },
+  {
+    "chain_verses": [
+      "3:181",
+      "54:52",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "everything",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "3:The Amramites",
+      "54:The Moon",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "GOD —[describes]→ the utterances of those who said , \"",
+      "GOD —[is]→ poor",
+      "Everything they did —[describes]→ in the scriptures",
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left"
+    ],
+    "narrative": "Starting from [3:181] (Surah The Amramites) about 'GOD describes the utterances of those who said , \"', through bridge keywords [everything -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [3:181] -> [54:52] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.806887"
+  },
+  {
+    "chain_verses": [
+      "43:80",
+      "54:52",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "record",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "43:Ornaments",
+      "54:The Moon",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "Everything they did —[describes]→ in the scriptures",
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “"
+    ],
+    "narrative": "Starting from [43:80] (Surah Ornaments) about 'hear, secret, messenger', through bridge keywords [record -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [43:80] -> [54:52] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.807230"
+  },
+  {
+    "chain_verses": [
+      "36:31",
+      "77:16",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "annihilate",
+      "earlier",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "36:Y.S.",
+      "77:Dispatched",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [36:31] (Surah Y.S.) about 'see, return, many', through bridge keywords [annihilate -> earlier -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [36:31] -> [77:16] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.807874"
+  },
+  {
+    "chain_verses": [
+      "26:139",
+      "77:16",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "annihilate",
+      "earlier",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "26:The Poets",
+      "77:Dispatched",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "HUMANS —[is]→ not believers",
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “"
+    ],
+    "narrative": "Starting from [26:139] (Surah The Poets) about 'HUMANS is not believers', through bridge keywords [annihilate -> earlier -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [26:139] -> [77:16] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.808219"
+  },
+  {
+    "chain_verses": [
+      "19:74",
+      "77:16",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "annihilate",
+      "earlier",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "19:Mary",
+      "77:Dispatched",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [19:74] (Surah Mary) about 'many, generation, annihilate', through bridge keywords [annihilate -> earlier -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [19:74] -> [77:16] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.808533"
+  },
+  {
+    "chain_verses": [
+      "84:7",
+      "78:29",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "record",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "84:The Rupture",
+      "78:The Event",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [84:7] (Surah The Rupture) about 'right, receive, hand', through bridge keywords [record -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [84:7] -> [78:29] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.809227"
+  },
+  {
+    "chain_verses": [
+      "23:113",
+      "78:29",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "count",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "23:The Believers",
+      "78:The Event",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [23:113] (Surah The Believers) about 'ask, last, part', through bridge keywords [count -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [23:113] -> [78:29] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.809553"
+  },
+  {
+    "chain_verses": [
+      "27:75",
+      "78:29",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "everything",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "27:The Ant",
+      "78:The Event",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [27:75] (Surah The Ant) about 'earth, everything, heaven', through bridge keywords [everything -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [27:75] -> [78:29] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.809853"
+  },
+  {
+    "chain_verses": [
+      "19:67",
+      "20:52",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "forget",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "19:Mary",
+      "20:T.H.",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [19:67] (Surah Mary) about 'create, forget, human', through bridge keywords [forget -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [19:67] -> [20:52] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.810804"
+  },
+  {
+    "chain_verses": [
+      "19:79",
+      "20:52",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "record",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "19:Mary",
+      "20:T.H.",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [19:79] (Surah Mary) about 'retribution, commit, increase', through bridge keywords [record -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [19:79] -> [20:52] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.811128"
+  },
+  {
+    "chain_verses": [
+      "45:34",
+      "20:52",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "forget",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "45:Kneeling",
+      "20:T.H.",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [45:34] (Surah Kneeling) about 'meet, hellfire, abide', through bridge keywords [forget -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [45:34] -> [20:52] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.811470"
+  },
+  {
+    "chain_verses": [
+      "12:1",
+      "27:75",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "profound",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "12:Joseph",
+      "27:The Ant",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “",
+      "the Quran 's mathematical coding —[states]→ to the very complex"
+    ],
+    "narrative": "Starting from [12:1] (Surah Joseph) about 'scripture, profound, proof', through bridge keywords [profound -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [12:1] -> [27:75] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.812096"
+  },
+  {
+    "chain_verses": [
+      "4:42",
+      "27:75",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "hide",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "4:Women",
+      "27:The Ant",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "those who disbelieved and disobeyed the messenger —[will_receive]→ wish that they were level with the ground",
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left",
+      "This phenomenon alone —[describes]→ as incontrovertible proof that the Quran is God 's",
+      "HUMANS —[describes]→ track of 2698 occurrences of the word “"
+    ],
+    "narrative": "Starting from [4:42] (Surah Women) about 'those who disbelieved and disobeyed the messenger will_receive wish that they were level with the ground', through bridge keywords [hide -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [4:42] -> [27:75] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.812425"
+  },
+  {
+    "chain_verses": [
+      "6:120",
+      "27:75",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "hide",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "6:Livestock",
+      "27:The Ant",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "You —[commands]→ obvious sins",
+      "Those Who Have Earned Sins —[describes]→ for their transgressions",
+      "those who have earned sins —[will_receive]→ surely pay for their transgressions",
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left"
+    ],
+    "narrative": "Starting from [6:120] (Surah Livestock) about 'You commands obvious sins', through bridge keywords [hide -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [6:120] -> [27:75] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.812731"
+  },
+  {
+    "chain_verses": [
+      "4:108",
+      "27:75",
+      "87:18",
+      "7:145",
+      "7:171",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "everything",
+      "record",
+      "teaching",
+      "strongly",
+      "content"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "4:Women",
+      "27:The Ant",
+      "87:The Most High",
+      "7:The Purgatory",
+      "114:People"
+    ],
+    "propositions": [
+      "They —[prohibits]→ from the people",
+      "You —[prohibits]→ Them",
+      "GOD —[is]→ fully aware of everything they do",
+      "This —[describes]→ in the earlier teachings",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123",
+      "Details of the Quran 's unique mathematical composition —[commands]→ in Appendices 1 , 2 , 24 , 25",
+      "Any Reader Of This Book —[states]→ the Quran 's mathematical miracle",
+      "GOD —[describes]→ throughout the text",
+      "The cumulative frequency of occurrence of the word —[describes]→ at the bottom of each page in the left"
+    ],
+    "narrative": "Starting from [4:108] (Surah Women) about 'They prohibits from the people', through bridge keywords [everything -> record -> teaching -> strongly -> content], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [4:108] -> [27:75] -> [87:18] -> [7:145] -> [7:171] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:37.813096"
+  },
+  {
+    "chain_verses": [
+      "31:7",
+      "7:195",
+      "8:21",
+      "8:20",
+      "33:48",
+      "2:263"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "ear",
+      "hear",
+      "hear",
+      "disregard",
+      "insult"
+    ],
+    "themes": [
+      "ethics",
+      "prophethood",
+      "community",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "31:Luqmaan",
+      "7:The Purgatory",
+      "8:The Spoils of War",
+      "33:The Parties",
+      "2:The Heifer"
+    ],
+    "propositions": [
+      "he —[prohibits]→ in arrogance",
+      "they —[describes]→ legs on which they walk",
+      "they —[describes]→ hands with which they defend themselves",
+      "they —[describes]→ eyes with which they see",
+      "they —[describes]→ ears with which they hear",
+      "You Who Believe —[commands]→ GOD and His messenger",
+      "GOD —[commands]→ as an advocate",
+      "GOD —[is]→ rich"
+    ],
+    "narrative": "Starting from [31:7] (Surah Luqmaan) about 'he prohibits in arrogance', through bridge keywords [ear -> hear -> hear -> disregard -> insult], we reach [2:263] (Surah The Heifer) about 'GOD is rich', revealing that community, ethics, prophethood, spiritual are linked across 6 verses. Full path: [31:7] -> [7:195] -> [8:21] -> [8:20] -> [33:48] -> [2:263].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:38.539148"
+  },
+  {
+    "chain_verses": [
+      "10:71",
+      "22:72",
+      "31:7",
+      "7:195",
+      "8:21",
+      "8:20"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "much",
+      "promise",
+      "ear",
+      "hear",
+      "hear"
+    ],
+    "themes": [
+      "creation",
+      "prophethood",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "10:Jonah",
+      "22:Pilgrimage",
+      "31:Luqmaan",
+      "7:The Purgatory",
+      "8:The Spoils of War"
+    ],
+    "propositions": [
+      "He —[states]→ to his people",
+      "You —[states]→ with your leaders",
+      "You —[describes]→ wickedness",
+      "They —[reveals]→ those who recite our revelations to them",
+      "Hell —[warns]→ for those who disbelieve",
+      "They —[creates]→ a Fly",
+      "he —[prohibits]→ in arrogance",
+      "they —[describes]→ legs on which they walk",
+      "they —[describes]→ hands with which they defend themselves",
+      "they —[describes]→ eyes with which they see"
+    ],
+    "narrative": "Starting from [10:71] (Surah Jonah) about 'He states to his people', through bridge keywords [much -> promise -> ear -> hear -> hear], we reach [8:20] (Surah The Spoils of War) about 'You Who Believe commands GOD and His messenger', revealing that creation, eschatology, prophethood, spiritual are linked across 6 verses. Full path: [10:71] -> [22:72] -> [31:7] -> [7:195] -> [8:21] -> [8:20].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:38.545058"
+  },
+  {
+    "chain_verses": [
+      "13:30",
+      "22:72",
+      "31:7",
+      "7:195",
+      "8:21",
+      "8:20"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "destiny",
+      "promise",
+      "ear",
+      "hear",
+      "hear"
+    ],
+    "themes": [
+      "creation",
+      "prophethood",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "13:Thunder",
+      "22:Pilgrimage",
+      "31:Luqmaan",
+      "7:The Purgatory",
+      "8:The Spoils of War"
+    ],
+    "propositions": [
+      "You —[commands]→ to them",
+      "You —[describes]→ wickedness",
+      "They —[reveals]→ those who recite our revelations to them",
+      "Hell —[warns]→ for those who disbelieve",
+      "They —[creates]→ a Fly",
+      "he —[prohibits]→ in arrogance",
+      "they —[describes]→ legs on which they walk",
+      "they —[describes]→ hands with which they defend themselves",
+      "they —[describes]→ eyes with which they see",
+      "they —[describes]→ ears with which they hear"
+    ],
+    "narrative": "Starting from [13:30] (Surah Thunder) about 'You commands to them', through bridge keywords [destiny -> promise -> ear -> hear -> hear], we reach [8:20] (Surah The Spoils of War) about 'You Who Believe commands GOD and His messenger', revealing that creation, eschatology, prophethood, spiritual are linked across 6 verses. Full path: [13:30] -> [22:72] -> [31:7] -> [7:195] -> [8:21] -> [8:20].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:38.545171"
+  },
+  {
+    "chain_verses": [
+      "46:14",
+      "21:101",
+      "37:131",
+      "47:36",
+      "74:12",
+      "9:85"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "deserve",
+      "reward",
+      "reward",
+      "money",
+      "money"
+    ],
+    "themes": [
+      "ethics",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "46:The Dunes",
+      "21:The Prophets",
+      "37:The Arrangers",
+      "47:Muhammad",
+      "74:The Hidden Secret",
+      "9:Ultimatum"
+    ],
+    "propositions": [
+      "They —[promises]→ Paradise , where they abide forever",
+      "they —[states]→ from it",
+      "those who deserved our magnificent rewards, they —[will_receive]→ be protected from it",
+      "He —[commands]→ you"
+    ],
+    "narrative": "Starting from [46:14] (Surah The Dunes) about 'They promises Paradise , where they abide forever', through bridge keywords [deserve -> reward -> reward -> money -> money], we reach [9:85] (Surah Ultimatum) about 'disbeliever, cause, child', revealing that community, eschatology, ethics, spiritual are linked across 6 verses. Full path: [46:14] -> [21:101] -> [37:131] -> [47:36] -> [74:12] -> [9:85].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:39.995012"
+  },
+  {
+    "chain_verses": [
+      "53:62",
+      "15:33",
+      "46:14",
+      "21:101",
+      "37:131",
+      "47:36"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "prostrate",
+      "age",
+      "deserve",
+      "reward",
+      "reward"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation"
+    ],
+    "surahs_touched": [
+      "53:The Stars",
+      "15:Al-Hijr Valley",
+      "46:The Dunes",
+      "21:The Prophets",
+      "37:The Arrangers",
+      "47:Muhammad"
+    ],
+    "propositions": [
+      "You —[commands]→ prostrate before GOD",
+      "They —[promises]→ Paradise , where they abide forever",
+      "they —[states]→ from it",
+      "those who deserved our magnificent rewards, they —[will_receive]→ be protected from it",
+      "He —[commands]→ you"
+    ],
+    "narrative": "Starting from [53:62] (Surah The Stars) about 'You commands prostrate before GOD', through bridge keywords [prostrate -> age -> deserve -> reward -> reward], we reach [47:36] (Surah Muhammad) about 'He commands you', revealing that creation, eschatology, ethics, monotheism are linked across 6 verses. Full path: [53:62] -> [15:33] -> [46:14] -> [21:101] -> [37:131] -> [47:36].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:39.996051"
+  },
+  {
+    "chain_verses": [
+      "31:7",
+      "14:22",
+      "7:87",
+      "99:6",
+      "79:20",
+      "5:110"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "painful",
+      "disbelieve",
+      "issue",
+      "show",
+      "miracle"
+    ],
+    "themes": [
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "31:Luqmaan",
+      "14:Abraham",
+      "7:The Purgatory",
+      "99:The Quake",
+      "79:The Snatchers",
+      "5:The Feast"
+    ],
+    "propositions": [
+      "he —[prohibits]→ in arrogance",
+      "GOD —[describes]→ the truthful promise",
+      "My Complaining —[states]→ you",
+      "The transgressors —[warns]→ a painful retribution",
+      "the people —[states]→ from every direction",
+      "He —[states]→ the great miracle",
+      "You —[states]→ the blind and the leprous"
+    ],
+    "narrative": "Starting from [31:7] (Surah Luqmaan) about 'he prohibits in arrogance', through bridge keywords [painful -> disbelieve -> issue -> show -> miracle], we reach [5:110] (Surah The Feast) about 'You states the blind and the leprous', revealing that community, creation, eschatology, prophethood, spiritual are linked across 6 verses. Full path: [31:7] -> [14:22] -> [7:87] -> [99:6] -> [79:20] -> [5:110].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:40.576201"
+  },
+  {
+    "chain_verses": [
+      "31:7",
+      "14:22",
+      "7:87",
+      "99:6",
+      "9:1",
+      "28:44"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "painful",
+      "disbelieve",
+      "issue",
+      "issue",
+      "issue"
+    ],
+    "themes": [
+      "prophethood",
+      "law",
+      "community",
+      "eschatology"
+    ],
+    "surahs_touched": [
+      "31:Luqmaan",
+      "14:Abraham",
+      "7:The Purgatory",
+      "99:The Quake",
+      "9:Ultimatum",
+      "28:History"
+    ],
+    "propositions": [
+      "he —[prohibits]→ in arrogance",
+      "GOD —[describes]→ the truthful promise",
+      "My Complaining —[states]→ you",
+      "The transgressors —[warns]→ a painful retribution",
+      "the people —[states]→ from every direction"
+    ],
+    "narrative": "Starting from [31:7] (Surah Luqmaan) about 'he prohibits in arrogance', through bridge keywords [painful -> disbelieve -> issue -> issue -> issue], we reach [28:44] (Surah History) about 'witness, command, present', revealing that community, eschatology, law, prophethood are linked across 6 verses. Full path: [31:7] -> [14:22] -> [7:87] -> [99:6] -> [9:1] -> [28:44].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:40.576352"
+  },
+  {
+    "chain_verses": [
+      "31:7",
+      "14:22",
+      "7:87",
+      "99:6",
+      "9:1",
+      "5:23"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "painful",
+      "disbelieve",
+      "issue",
+      "issue",
+      "enter"
+    ],
+    "themes": [
+      "prophethood",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "31:Luqmaan",
+      "14:Abraham",
+      "7:The Purgatory",
+      "99:The Quake",
+      "9:Ultimatum",
+      "5:The Feast"
+    ],
+    "propositions": [
+      "he —[prohibits]→ in arrogance",
+      "GOD —[describes]→ the truthful promise",
+      "My Complaining —[states]→ you",
+      "The transgressors —[warns]→ a painful retribution",
+      "the people —[states]→ from every direction",
+      "You —[commands]→ in GOD"
+    ],
+    "narrative": "Starting from [31:7] (Surah Luqmaan) about 'he prohibits in arrogance', through bridge keywords [painful -> disbelieve -> issue -> issue -> enter], we reach [5:23] (Surah The Feast) about 'You commands in GOD', revealing that community, eschatology, prophethood, spiritual are linked across 6 verses. Full path: [31:7] -> [14:22] -> [7:87] -> [99:6] -> [9:1] -> [5:23].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:40.576388"
+  },
+  {
+    "chain_verses": [
+      "31:7",
+      "14:22",
+      "7:87",
+      "99:6",
+      "28:44",
+      "9:1"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "painful",
+      "disbelieve",
+      "issue",
+      "issue",
+      "issue"
+    ],
+    "themes": [
+      "prophethood",
+      "law",
+      "community",
+      "eschatology"
+    ],
+    "surahs_touched": [
+      "31:Luqmaan",
+      "14:Abraham",
+      "7:The Purgatory",
+      "99:The Quake",
+      "28:History",
+      "9:Ultimatum"
+    ],
+    "propositions": [
+      "he —[prohibits]→ in arrogance",
+      "GOD —[describes]→ the truthful promise",
+      "My Complaining —[states]→ you",
+      "The transgressors —[warns]→ a painful retribution",
+      "the people —[states]→ from every direction"
+    ],
+    "narrative": "Starting from [31:7] (Surah Luqmaan) about 'he prohibits in arrogance', through bridge keywords [painful -> disbelieve -> issue -> issue -> issue], we reach [9:1] (Surah Ultimatum) about 'idol, enter, messenger', revealing that community, eschatology, law, prophethood are linked across 6 verses. Full path: [31:7] -> [14:22] -> [7:87] -> [99:6] -> [28:44] -> [9:1].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:40.576562"
+  },
+  {
+    "chain_verses": [
+      "31:7",
+      "14:22",
+      "7:87",
+      "99:6",
+      "21:96",
+      "4:115"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "painful",
+      "disbelieve",
+      "issue",
+      "direction",
+      "direction"
+    ],
+    "themes": [
+      "prophethood",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "31:Luqmaan",
+      "14:Abraham",
+      "7:The Purgatory",
+      "99:The Quake",
+      "21:The Prophets",
+      "4:Women"
+    ],
+    "propositions": [
+      "he —[prohibits]→ in arrogance",
+      "GOD —[describes]→ the truthful promise",
+      "My Complaining —[states]→ you",
+      "The transgressors —[warns]→ a painful retribution",
+      "the people —[states]→ from every direction",
+      "they —[states]→ from every direction"
+    ],
+    "narrative": "Starting from [31:7] (Surah Luqmaan) about 'he prohibits in arrogance', through bridge keywords [painful -> disbelieve -> issue -> direction -> direction], we reach [4:115] (Surah Women) about 'believer, commit, guidance', revealing that community, eschatology, prophethood, spiritual are linked across 6 verses. Full path: [31:7] -> [14:22] -> [7:87] -> [99:6] -> [21:96] -> [4:115].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:40.580884"
+  },
+  {
+    "chain_verses": [
+      "28:39",
+      "7:133",
+      "31:7",
+      "14:22",
+      "7:87",
+      "99:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "arrogance",
+      "arrogance",
+      "painful",
+      "disbelieve",
+      "issue"
+    ],
+    "themes": [
+      "ethics",
+      "prophethood",
+      "eschatology",
+      "creation"
+    ],
+    "surahs_touched": [
+      "28:History",
+      "7:The Purgatory",
+      "31:Luqmaan",
+      "14:Abraham",
+      "99:The Quake"
+    ],
+    "propositions": [
+      "he and his troops —[states]→ without any right",
+      "they —[states]→ their arrogance",
+      "he —[prohibits]→ in arrogance",
+      "GOD —[describes]→ the truthful promise",
+      "My Complaining —[states]→ you",
+      "The transgressors —[warns]→ a painful retribution",
+      "the people —[states]→ from every direction"
+    ],
+    "narrative": "Starting from [28:39] (Surah History) about 'he and his troops states without any right', through bridge keywords [arrogance -> arrogance -> painful -> disbelieve -> issue], we reach [99:6] (Surah The Quake) about 'the people states from every direction', revealing that creation, eschatology, ethics, prophethood are linked across 6 verses. Full path: [28:39] -> [7:133] -> [31:7] -> [14:22] -> [7:87] -> [99:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:40.581676"
+  },
+  {
+    "chain_verses": [
+      "10:71",
+      "22:72",
+      "31:7",
+      "14:22",
+      "7:87",
+      "99:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "much",
+      "promise",
+      "painful",
+      "disbelieve",
+      "issue"
+    ],
+    "themes": [
+      "creation",
+      "prophethood",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "10:Jonah",
+      "22:Pilgrimage",
+      "31:Luqmaan",
+      "14:Abraham",
+      "7:The Purgatory",
+      "99:The Quake"
+    ],
+    "propositions": [
+      "He —[states]→ to his people",
+      "You —[states]→ with your leaders",
+      "You —[describes]→ wickedness",
+      "They —[reveals]→ those who recite our revelations to them",
+      "Hell —[warns]→ for those who disbelieve",
+      "They —[creates]→ a Fly",
+      "he —[prohibits]→ in arrogance",
+      "GOD —[describes]→ the truthful promise",
+      "My Complaining —[states]→ you",
+      "The transgressors —[warns]→ a painful retribution"
+    ],
+    "narrative": "Starting from [10:71] (Surah Jonah) about 'He states to his people', through bridge keywords [much -> promise -> painful -> disbelieve -> issue], we reach [99:6] (Surah The Quake) about 'the people states from every direction', revealing that creation, eschatology, prophethood, spiritual are linked across 6 verses. Full path: [10:71] -> [22:72] -> [31:7] -> [14:22] -> [7:87] -> [99:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:40.582021"
+  },
+  {
+    "chain_verses": [
+      "13:30",
+      "22:72",
+      "31:7",
+      "14:22",
+      "7:87",
+      "99:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "destiny",
+      "promise",
+      "painful",
+      "disbelieve",
+      "issue"
+    ],
+    "themes": [
+      "creation",
+      "prophethood",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "13:Thunder",
+      "22:Pilgrimage",
+      "31:Luqmaan",
+      "14:Abraham",
+      "7:The Purgatory",
+      "99:The Quake"
+    ],
+    "propositions": [
+      "You —[commands]→ to them",
+      "You —[describes]→ wickedness",
+      "They —[reveals]→ those who recite our revelations to them",
+      "Hell —[warns]→ for those who disbelieve",
+      "They —[creates]→ a Fly",
+      "he —[prohibits]→ in arrogance",
+      "GOD —[describes]→ the truthful promise",
+      "My Complaining —[states]→ you",
+      "The transgressors —[warns]→ a painful retribution",
+      "the people —[states]→ from every direction"
+    ],
+    "narrative": "Starting from [13:30] (Surah Thunder) about 'You commands to them', through bridge keywords [destiny -> promise -> painful -> disbelieve -> issue], we reach [99:6] (Surah The Quake) about 'the people states from every direction', revealing that creation, eschatology, prophethood, spiritual are linked across 6 verses. Full path: [13:30] -> [22:72] -> [31:7] -> [14:22] -> [7:87] -> [99:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:40.582125"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "77:1",
+      "23:44"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "succession"
+    ],
+    "themes": [
+      "prophethood",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "77:Dispatched",
+      "23:The Believers"
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row",
+      "ANGELS —[states]→ in succession",
+      "they —[states]→ him"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> succession], we reach [23:44] (Surah The Believers) about 'they states him', revealing that community, eschatology, prophethood, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [77:1] -> [23:44].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.665198"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "43:60",
+      "3:124"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "angel"
+    ],
+    "themes": [
+      "creation",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "43:Ornaments",
+      "3:The Amramites"
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row",
+      "You —[describes]→ the believers"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> angel], we reach [3:124] (Surah The Amramites) about 'You describes the believers', revealing that community, creation, eschatology, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [43:60] -> [3:124].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.665278"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "43:60",
+      "6:8"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "angel"
+    ],
+    "themes": [
+      "creation",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "43:Ornaments",
+      "6:Livestock"
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> angel], we reach [6:8] (Surah Livestock) about 'send, angel, longer', revealing that community, creation, eschatology, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [43:60] -> [6:8].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.665317"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "15:30",
+      "20:70"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "fell"
+    ],
+    "themes": [
+      "prophethood",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "15:Al-Hijr Valley",
+      "20:T.H."
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> fell], we reach [20:70] (Surah T.H.) about 'prostrate, fell, moses', revealing that community, eschatology, prophethood, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [15:30] -> [20:70].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.665385"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "15:30",
+      "34:40"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "angel"
+    ],
+    "themes": [
+      "monotheism",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "15:Al-Hijr Valley",
+      "34:Sheba"
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row",
+      "He —[commands]→ to the angels"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> angel], we reach [34:40] (Surah Sheba) about 'He commands to the angels', revealing that community, eschatology, monotheism, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [15:30] -> [34:40].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.665419"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "15:30",
+      "53:62"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "prostrate"
+    ],
+    "themes": [
+      "monotheism",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "15:Al-Hijr Valley",
+      "53:The Stars"
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row",
+      "You —[commands]→ prostrate before GOD"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> prostrate], we reach [53:62] (Surah The Stars) about 'You commands prostrate before GOD', revealing that community, eschatology, monotheism, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [15:30] -> [53:62].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.665456"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "66:4",
+      "2:210"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "angel"
+    ],
+    "themes": [
+      "ethics",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "66:Prohibition"
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row",
+      "GOD —[is]→ his ally"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> angel], we reach [2:210] (Surah The Heifer) about 'return, everything, angel', revealing that community, eschatology, ethics, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [66:4] -> [2:210].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.665529"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "66:4",
+      "36:25"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "listen"
+    ],
+    "themes": [
+      "ethics",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "66:Prohibition",
+      "36:Y.S."
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row",
+      "GOD —[is]→ his ally"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> listen], we reach [36:25] (Surah Y.S.) about 'please, listen', revealing that community, eschatology, ethics, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [66:4] -> [36:25].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.665564"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "66:4",
+      "50:17"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "angel"
+    ],
+    "themes": [
+      "ethics",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "66:Prohibition",
+      "50:Q."
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row",
+      "GOD —[is]→ his ally"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> angel], we reach [50:17] (Surah Q.) about 'right, leave, angel', revealing that community, eschatology, ethics, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [66:4] -> [50:17].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.665599"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "13:23",
+      "114:6"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "among"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "13:Thunder",
+      "114:People"
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row",
+      "They —[states]→ the gardens of Eden",
+      "The angels —[states]→ from every door",
+      "The reader —[states]→ the accuracy of this total",
+      "the total also a multiple of 19 ( —[states]→ to 118123"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> among], we reach [114:6] (Surah People) about 'The reader states the accuracy of this total', revealing that community, creation, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [13:23] -> [114:6].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.666237"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "13:23",
+      "43:70"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "enter"
+    ],
+    "themes": [
+      "ethics",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "13:Thunder",
+      "43:Ornaments"
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row",
+      "They —[states]→ the gardens of Eden",
+      "The angels —[states]→ from every door"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> enter], we reach [43:70] (Surah Ornaments) about 'spouse, paradise, enter', revealing that community, eschatology, ethics, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [13:23] -> [43:70].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.666305"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "13:23",
+      "9:72"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "eden"
+    ],
+    "themes": [
+      "ethics",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "13:Thunder",
+      "9:Ultimatum"
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row",
+      "They —[states]→ the gardens of Eden",
+      "The angels —[states]→ from every door",
+      "GOD —[states]→ the believing men and the believing women gardens"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> eden], we reach [9:72] (Surah Ultimatum) about 'GOD states the believing men and the believing women gardens', revealing that community, eschatology, ethics, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [13:23] -> [9:72].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.666350"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "13:23",
+      "9:24"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "child"
+    ],
+    "themes": [
+      "ethics",
+      "eschatology",
+      "prophethood",
+      "community",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "13:Thunder",
+      "9:Ultimatum"
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row",
+      "They —[states]→ the gardens of Eden",
+      "The angels —[states]→ from every door",
+      "GOD —[states]→ the wicked people"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> child], we reach [9:24] (Surah Ultimatum) about 'GOD states the wicked people', revealing that community, eschatology, ethics, prophethood, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [13:23] -> [9:24].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.666392"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "34:40",
+      "3:87"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "angel"
+    ],
+    "themes": [
+      "monotheism",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "34:Sheba",
+      "3:The Amramites"
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row",
+      "He —[commands]→ to the angels",
+      "These —[describes]→ condemnation by GOD , and the angels ,"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> angel], we reach [3:87] (Surah The Amramites) about 'These describes condemnation by GOD , and the angels ,', revealing that community, eschatology, monotheism, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [34:40] -> [3:87].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.666452"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "34:40",
+      "25:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "angel"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "community",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "34:Sheba",
+      "25:The Statute Book"
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row",
+      "He —[commands]→ to the angels"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> angel], we reach [25:22] (Surah The Statute Book) about 'see, good, news', revealing that community, eschatology, ethics, monotheism, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [34:40] -> [25:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.666485"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "34:40",
+      "15:8"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "angel"
+    ],
+    "themes": [
+      "monotheism",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "34:Sheba",
+      "15:Al-Hijr Valley"
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row",
+      "He —[commands]→ to the angels"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> angel], we reach [15:8] (Surah Al-Hijr Valley) about 'send, except, angel', revealing that community, eschatology, monotheism, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [34:40] -> [15:8].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.666517"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "34:40",
+      "23:60"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "summon"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "community",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "34:Sheba",
+      "23:The Believers"
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row",
+      "He —[commands]→ to the angels"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> summon], we reach [23:60] (Surah The Believers) about 'give, charity, fully', revealing that community, eschatology, ethics, monotheism, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [34:40] -> [23:60].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.666549"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "6:8",
+      "41:14"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "angel"
+    ],
+    "themes": [
+      "monotheism",
+      "eschatology",
+      "prophethood",
+      "community",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "6:Livestock",
+      "41:Detailed"
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row",
+      "Their messengers —[commands]→ to them"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> angel], we reach [41:14] (Surah Detailed) about 'Their messengers commands to them', revealing that community, eschatology, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [6:8] -> [41:14].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.666612"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "6:8",
+      "4:97"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "angel"
+    ],
+    "themes": [
+      "ethics",
+      "eschatology",
+      "creation",
+      "community",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "6:Livestock",
+      "4:Women"
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> angel], we reach [4:97] (Surah Women) about 'ask, earth, whose', revealing that community, creation, eschatology, ethics, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [6:8] -> [4:97].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.666652"
+  },
+  {
+    "chain_verses": [
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22",
+      "6:8",
+      "38:71"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "angel",
+      "angel",
+      "angel"
+    ],
+    "themes": [
+      "creation",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn",
+      "6:Livestock",
+      "38:S."
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row",
+      "GOD —[states]→ to the angels"
+    ],
+    "narrative": "Starting from [24:40] (Surah Light) about 'Darkness Upon Darkness - states it', through bridge keywords [darkness -> darkness -> angel -> angel -> angel], we reach [38:71] (Surah S.) about 'GOD states to the angels', revealing that community, creation, eschatology, spiritual are linked across 6 verses. Full path: [24:40] -> [2:257] -> [33:43] -> [89:22] -> [6:8] -> [38:71].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.666688"
+  },
+  {
+    "chain_verses": [
+      "7:138",
+      "10:22",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "across",
+      "violent",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "monotheism",
+      "eschatology",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "7:The Purgatory",
+      "10:Jonah",
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "You —[states]→ onto the ships",
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [7:138] (Surah The Purgatory) about 'worship, u, like', through bridge keywords [across -> violent -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, eschatology, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [7:138] -> [10:22] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.666807"
+  },
+  {
+    "chain_verses": [
+      "14:18",
+      "10:22",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "violent",
+      "violent",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "law",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "14:Abraham",
+      "10:Jonah",
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "You —[states]→ onto the ships",
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [14:18] (Surah Abraham) about 'disbelieve, like, stray', through bridge keywords [violent -> violent -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, eschatology, law, spiritual are linked across 6 verses. Full path: [14:18] -> [10:22] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.666846"
+  },
+  {
+    "chain_verses": [
+      "41:16",
+      "10:22",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "violent",
+      "violent",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "law",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "41:Detailed",
+      "10:Jonah",
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "You —[states]→ onto the ships",
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [41:16] (Surah Detailed) about 'hereafter, retribution, consequently', through bridge keywords [violent -> violent -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, eschatology, law, spiritual are linked across 6 verses. Full path: [41:16] -> [10:22] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.666884"
+  },
+  {
+    "chain_verses": [
+      "2:102",
+      "13:16",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "benefit",
+      "darkness",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "2:The Heifer",
+      "13:Thunder",
+      "24:Light",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "They —[describes]→ sorcery",
+      "These two —[describes]→ such knowledge",
+      "You —[commands]→ such knowledge",
+      "the people —[states]→ it",
+      "They —[prohibits]→ anyone",
+      "they —[describes]→ idols besides GOD who created creations similar to",
+      "GOD —[is]→ the creator of all things",
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them"
+    ],
+    "narrative": "Starting from [2:102] (Surah The Heifer) about 'They describes sorcery', through bridge keywords [benefit -> darkness -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, creation, eschatology, ethics, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [2:102] -> [13:16] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.666974"
+  },
+  {
+    "chain_verses": [
+      "7:188",
+      "13:16",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "benefit",
+      "darkness",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "creation",
+      "community",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "7:The Purgatory",
+      "13:Thunder",
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "GOD —[states]→ to me",
+      "they —[describes]→ idols besides GOD who created creations similar to",
+      "GOD —[is]→ the creator of all things",
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [7:188] (Surah The Purgatory) about 'GOD states to me', through bridge keywords [benefit -> darkness -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, creation, eschatology, ethics, monotheism, spiritual are linked across 6 verses. Full path: [7:188] -> [13:16] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.667015"
+  },
+  {
+    "chain_verses": [
+      "35:19",
+      "13:16",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "blind",
+      "darkness",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "monotheism",
+      "eschatology",
+      "creation",
+      "community",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "35:Initiator",
+      "13:Thunder",
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "they —[describes]→ idols besides GOD who created creations similar to",
+      "GOD —[is]→ the creator of all things",
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [35:19] (Surah Initiator) about 'blind, seer, equal', through bridge keywords [blind -> darkness -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, creation, eschatology, monotheism, spiritual are linked across 6 verses. Full path: [35:19] -> [13:16] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.667052"
+  },
+  {
+    "chain_verses": [
+      "40:58",
+      "13:16",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "blind",
+      "darkness",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "monotheism",
+      "eschatology",
+      "creation",
+      "community",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "40:Forgiver",
+      "13:Thunder",
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "You —[states]→ heed",
+      "they —[describes]→ idols besides GOD who created creations similar to",
+      "GOD —[is]→ the creator of all things",
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [40:58] (Surah Forgiver) about 'You states heed', through bridge keywords [blind -> darkness -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, creation, eschatology, monotheism, spiritual are linked across 6 verses. Full path: [40:58] -> [13:16] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.667142"
+  },
+  {
+    "chain_verses": [
+      "37:128",
+      "31:32",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "alone",
+      "violent",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "eschatology",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "37:The Arrangers",
+      "31:Luqmaan",
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "they —[states]→ GOD",
+      "None —[describes]→ our revelations except those who are betrayers ,",
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [37:128] (Surah The Arrangers) about 'alone, save, servant', through bridge keywords [alone -> violent -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, eschatology, law, prophethood, spiritual are linked across 6 verses. Full path: [37:128] -> [31:32] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.667234"
+  },
+  {
+    "chain_verses": [
+      "15:40",
+      "31:32",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "alone",
+      "violent",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "eschatology",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "15:Al-Hijr Valley",
+      "31:Luqmaan",
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "they —[states]→ GOD",
+      "None —[describes]→ our revelations except those who are betrayers ,",
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [15:40] (Surah Al-Hijr Valley) about 'alone, except, among', through bridge keywords [alone -> violent -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, eschatology, law, prophethood, spiritual are linked across 6 verses. Full path: [15:40] -> [31:32] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.667271"
+  },
+  {
+    "chain_verses": [
+      "39:17",
+      "31:32",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "alone",
+      "violent",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "prophethood",
+      "community",
+      "law",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "39:The Throngs",
+      "31:Luqmaan",
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "they —[commands]→ happiness",
+      "they —[states]→ GOD",
+      "None —[describes]→ our revelations except those who are betrayers ,",
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [39:17] (Surah The Throngs) about 'they commands happiness', through bridge keywords [alone -> violent -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, eschatology, ethics, law, monotheism, prophethood, spiritual are linked across 6 verses. Full path: [39:17] -> [31:32] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.667312"
+  },
+  {
+    "chain_verses": [
+      "71:16",
+      "35:20",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "light",
+      "darkness",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "creation",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "71:Noah",
+      "35:Initiator",
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "He —[states]→ the moon",
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [71:16] (Surah Noah) about 'He states the moon', through bridge keywords [light -> darkness -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, creation, eschatology, spiritual are linked across 6 verses. Full path: [71:16] -> [35:20] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.667374"
+  },
+  {
+    "chain_verses": [
+      "27:63",
+      "35:20",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "eschatology",
+      "community",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "27:The Ant",
+      "35:Initiator",
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [27:63] (Surah The Ant) about 'guide, darkness, another', through bridge keywords [darkness -> darkness -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, eschatology, ethics, monotheism, spiritual are linked across 6 verses. Full path: [27:63] -> [35:20] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.667411"
+  },
+  {
+    "chain_verses": [
+      "13:10",
+      "35:20",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "darkness",
+      "darkness",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "creation",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "13:Thunder",
+      "35:Initiator",
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [13:10] (Surah Thunder) about 'whether, darkness, declare', through bridge keywords [darkness -> darkness -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, creation, eschatology, spiritual are linked across 6 verses. Full path: [13:10] -> [35:20] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.667443"
+  },
+  {
+    "chain_verses": [
+      "59:8",
+      "56:67",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "deprive",
+      "deprive",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "prophethood",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "59:Exodus",
+      "56:The Inevitable",
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "You —[commands]→ to the needy who immigrated",
+      "They —[describes]→ from their homes",
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [59:8] (Surah Exodus) about 'You commands to the needy who immigrated', through bridge keywords [deprive -> deprive -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, eschatology, prophethood, spiritual are linked across 6 verses. Full path: [59:8] -> [56:67] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.667510"
+  },
+  {
+    "chain_verses": [
+      "5:85",
+      "65:11",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "abide",
+      "darkness",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "ethics",
+      "eschatology",
+      "prophethood",
+      "community",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "5:The Feast",
+      "65:Divorce",
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "He —[describes]→ them",
+      "GOD —[promises]→ him",
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [5:85] (Surah The Feast) about 'He describes them', through bridge keywords [abide -> darkness -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, eschatology, ethics, prophethood, spiritual are linked across 6 verses. Full path: [5:85] -> [65:11] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.667655"
+  },
+  {
+    "chain_verses": [
+      "45:25",
+      "65:11",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "clearly",
+      "darkness",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "ethics",
+      "eschatology",
+      "prophethood",
+      "community",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "45:Kneeling",
+      "65:Divorce",
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "GOD —[promises]→ him",
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [45:25] (Surah Kneeling) about 'truthful, bring, revelation', through bridge keywords [clearly -> darkness -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, eschatology, ethics, prophethood, spiritual are linked across 6 verses. Full path: [45:25] -> [65:11] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.667696"
+  },
+  {
+    "chain_verses": [
+      "53:31",
+      "65:11",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "reward",
+      "darkness",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "ethics",
+      "eschatology",
+      "creation",
+      "prophethood",
+      "community",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "53:The Stars",
+      "65:Divorce",
+      "24:Light",
+      "2:The Heifer",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "He —[promises]→ those who commit evil for their works",
+      "those who commit evil for their works, and —[will_receive]→ reward the righteous for their righteousness",
+      "GOD —[promises]→ him",
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [53:31] (Surah The Stars) about 'He promises those who commit evil for their works', through bridge keywords [reward -> darkness -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, creation, eschatology, ethics, prophethood, spiritual are linked across 6 verses. Full path: [53:31] -> [65:11] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.667733"
+  },
+  {
+    "chain_verses": [
+      "14:24",
+      "2:19",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "example",
+      "another",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "ethics",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "14:Abraham",
+      "2:The Heifer",
+      "24:Light",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "They —[states]→ their fingers",
+      "GOD —[is]→ fully aware of the disbelievers",
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [14:24] (Surah Abraham) about 'example, see, sky', through bridge keywords [example -> another -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, eschatology, ethics, spiritual are linked across 6 verses. Full path: [14:24] -> [2:19] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.667802"
+  },
+  {
+    "chain_verses": [
+      "6:61",
+      "2:19",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "death",
+      "another",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "prophethood",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "6:Livestock",
+      "2:The Heifer",
+      "24:Light",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "MESSENGERS —[states]→ him",
+      "They —[states]→ their fingers",
+      "GOD —[is]→ fully aware of the disbelievers",
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [6:61] (Surah Livestock) about 'MESSENGERS states him', through bridge keywords [death -> another -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, eschatology, prophethood, spiritual are linked across 6 verses. Full path: [6:61] -> [2:19] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.667838"
+  },
+  {
+    "chain_verses": [
+      "40:11",
+      "2:19",
+      "24:40",
+      "2:257",
+      "33:43",
+      "89:22"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "death",
+      "another",
+      "darkness",
+      "darkness",
+      "angel"
+    ],
+    "themes": [
+      "ethics",
+      "community",
+      "eschatology",
+      "spiritual"
+    ],
+    "surahs_touched": [
+      "40:Forgiver",
+      "2:The Heifer",
+      "24:Light",
+      "33:The Parties",
+      "89:Dawn"
+    ],
+    "propositions": [
+      "They —[states]→ their fingers",
+      "GOD —[is]→ fully aware of the disbelievers",
+      "Darkness Upon Darkness - —[states]→ it",
+      "GOD —[describes]→ no light",
+      "He —[commands]→ them",
+      "they —[warns]→ in it",
+      "GOD —[is]→ lord of those who believe",
+      "GOD —[states]→ with the angels in row after row"
+    ],
+    "narrative": "Starting from [40:11] (Surah Forgiver) about 'u, give, put', through bridge keywords [death -> another -> darkness -> darkness -> angel], we reach [89:22] (Surah Dawn) about 'GOD states with the angels in row after row', revealing that community, eschatology, ethics, spiritual are linked across 6 verses. Full path: [40:11] -> [2:19] -> [24:40] -> [2:257] -> [33:43] -> [89:22].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:42.667872"
+  },
+  {
+    "chain_verses": [
+      "92:11",
+      "19:81",
+      "52:46",
+      "46:8",
+      "4:50",
+      "17:4"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "help",
+      "help",
+      "protect",
+      "fabricate",
+      "gross"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "prophethood",
+      "creation"
+    ],
+    "surahs_touched": [
+      "92:The Night",
+      "19:Mary",
+      "52:Mount Sinai",
+      "46:The Dunes",
+      "4:Women",
+      "17:The Children of Israel"
+    ],
+    "propositions": [
+      "His Money —[states]→ him",
+      "They —[commands]→ other gods that ( they think ) may",
+      "their schemes —[states]→ them",
+      "He —[states]→ as a witness between me and you",
+      "You —[reveals]→ gross evil"
+    ],
+    "narrative": "Starting from [92:11] (Surah The Night) about 'His Money states him', through bridge keywords [help -> help -> protect -> fabricate -> gross], we reach [17:4] (Surah The Children of Israel) about 'You reveals gross evil', revealing that creation, ethics, monotheism, prophethood are linked across 6 verses. Full path: [92:11] -> [19:81] -> [52:46] -> [46:8] -> [4:50] -> [17:4].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:43.337677"
+  },
+  {
+    "chain_verses": [
+      "92:11",
+      "19:81",
+      "52:46",
+      "46:8",
+      "4:50",
+      "29:68"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "help",
+      "help",
+      "protect",
+      "fabricate",
+      "fabricate"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "community",
+      "eschatology"
+    ],
+    "surahs_touched": [
+      "92:The Night",
+      "19:Mary",
+      "52:Mount Sinai",
+      "46:The Dunes",
+      "4:Women",
+      "29:The Spider"
+    ],
+    "propositions": [
+      "His Money —[states]→ him",
+      "They —[commands]→ other gods that ( they think ) may",
+      "their schemes —[states]→ them",
+      "He —[states]→ as a witness between me and you"
+    ],
+    "narrative": "Starting from [92:11] (Surah The Night) about 'His Money states him', through bridge keywords [help -> help -> protect -> fabricate -> fabricate], we reach [29:68] (Surah The Spider) about 'disbeliever, retribution, lie', revealing that community, eschatology, ethics, monotheism are linked across 6 verses. Full path: [92:11] -> [19:81] -> [52:46] -> [46:8] -> [4:50] -> [29:68].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:43.337709"
+  },
+  {
+    "chain_verses": [
+      "92:11",
+      "19:81",
+      "52:46",
+      "46:8",
+      "16:116",
+      "6:21"
+    ],
+    "chain_length": 6,
+    "depth_score": 100.0,
+    "sub_scores": {
+      "length": 100,
+      "surah_diversity": 100,
+      "keyword_coherence": 100,
+      "theme_diversity": 100
+    },
+    "bridge_keywords": [
+      "help",
+      "help",
+      "protect",
+      "fabricate",
+      "lie"
+    ],
+    "themes": [
+      "monotheism",
+      "ethics",
+      "prophethood",
+      "law"
+    ],
+    "surahs_touched": [
+      "92:The Night",
+      "19:Mary",
+      "52:Mount Sinai",
+      "46:The Dunes",
+      "16:The Bee",
+      "6:Livestock"
+    ],
+    "propositions": [
+      "His Money —[states]→ him",
+      "They —[commands]→ other gods that ( they think ) may",
+      "their schemes —[states]→ them",
+      "He —[states]→ as a witness between me and you",
+      "You —[commands]→ lies",
+      "those who fabricate lies and attribute them to god —[will_receive]→ never succeed"
+    ],
+    "narrative": "Starting from [92:11] (Surah The Night) about 'His Money states him', through bridge keywords [help -> help -> protect -> fabricate -> lie], we reach [6:21] (Surah Livestock) about 'lie, evil, reject', revealing that ethics, law, monotheism, prophethood are linked across 6 verses. Full path: [92:11] -> [19:81] -> [52:46] -> [46:8] -> [16:116] -> [6:21].",
+    "seed_rule": "thematic_bridge_3hop",
+    "seed_source": "best_deductions",
+    "timestamp": "2026-03-30T13:08:43.337863"
+  }
+]

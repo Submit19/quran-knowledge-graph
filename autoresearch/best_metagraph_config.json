@@ -1,15 +1,15 @@
 {
-  "score": 72.08,
+  "score": 70.16,
   "params": {
-    "min_quality_for_graph": 80,
-    "min_quality_for_insights": 55,
-    "quality_weight_specificity": 0.269,
-    "quality_weight_surah_diversity": 0.15,
-    "quality_weight_meaningfulness": 0.118,
-    "quality_weight_coherence": 0.278,
+    "min_quality_for_graph": 70,
+    "min_quality_for_insights": 40,
+    "quality_weight_specificity": 0.126,
+    "quality_weight_surah_diversity": 0.211,
+    "quality_weight_meaningfulness": 0.15,
+    "quality_weight_coherence": 0.198,
     "quality_weight_relevance": 0.15,
-    "quality_weight_rule_bonus": 0.124,
-    "min_insight_support": 3,
+    "quality_weight_rule_bonus": 0.207,
+    "min_insight_support": 2,
     "max_insights": 200
   }
 }

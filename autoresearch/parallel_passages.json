@@ -12921,6 +12921,377 @@
     "text_b": "GOD cites as examples of those who disbelieved the wife of Noah and the wife of Lot. They were married to two of our righteous servants, but they betrayed them and, consequently, they could not help t"
   },
   {
+    "entity": "mary",
+    "verse_a": "3:36",
+    "verse_b": "5:112",
+    "surah_a": "3 (The Amramites)",
+    "surah_b": "5 (The Feast)",
+    "shared_words": [
+      "god",
+      "lord",
+      "mary",
+      "said"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "When she gave birth to her, she said, \"My Lord, I have given birth to a girl\" - GOD was fully aware of what she bore - \"The male is not the same as the female. I have named her Mary, and I invoke Your",
+    "text_b": "Recall that the disciples said, \"O Jesus, son of Mary, can your Lord send down to us a feast from the sky?\" He said, \"You should reverence GOD, if you are believers.\""
+  },
+  {
+    "entity": "mary",
+    "verse_a": "5:17",
+    "verse_b": "27:60",
+    "surah_a": "5 (The Feast)",
+    "surah_b": "27 (The Ant)",
+    "shared_words": [
+      "could",
+      "earth",
+      "god",
+      "heavens",
+      "indeed",
+      "mary"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "Pagans indeed are those who say that GOD is the Messiah, the son of Mary. Say, \"Who could oppose GOD if He willed to annihilate the Messiah, son of Mary, and his mother, and everyone on earth?\" To GOD",
+    "text_b": "Who is the One who created the heavens and the earth? Who is the One who sends down to you from the sky water, whereby we produce gardens full of beauty - you could not possibly manufacture its trees?"
+  },
+  {
+    "entity": "moses",
+    "verse_a": "7:128",
+    "verse_b": "26:61",
+    "surah_a": "7 (The Purgatory)",
+    "surah_b": "26 (The Poets)",
+    "shared_words": [
+      "moses",
+      "people",
+      "said"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "Moses said to his people, \"Seek GOD's help, and steadfastly persevere. The earth belongs to GOD, and He grants it to whomever He chooses from among His servants. The ultimate victory belongs to the ri",
+    "text_b": "When both parties saw each other, Moses' people said, \"We will be caught.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "7:128",
+    "verse_b": "28:19",
+    "surah_a": "7 (The Purgatory)",
+    "surah_b": "28 (History)",
+    "shared_words": [
+      "earth",
+      "moses",
+      "righteous",
+      "said"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "Moses said to his people, \"Seek GOD's help, and steadfastly persevere. The earth belongs to GOD, and He grants it to whomever He chooses from among His servants. The ultimate victory belongs to the ri",
+    "text_b": "Before he attempted to strike their common enemy, he said, \"O Moses, do you want to kill me, as you killed the other man yesterday? Obviously, you wish to be a tyrant on earth; you do not wish to be r"
+  },
+  {
+    "entity": "moses",
+    "verse_a": "7:131",
+    "verse_b": "10:89",
+    "surah_a": "7 (The Purgatory)",
+    "surah_b": "10 (Jonah)",
+    "shared_words": [
+      "know",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "When good omens came their way, they said, \"We have deserved this,\" but when a hardship afflicted them, they blamed Moses and those with him. In fact, their omens are decided only by GOD, but most of ",
+    "text_b": "He said, \"Your prayer has been answered (O Moses and Aaron), so be steadfast, and do not follow the ways of those who do not know.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "7:131",
+    "verse_b": "20:88",
+    "surah_a": "7 (The Purgatory)",
+    "surah_b": "20 (T.H.)",
+    "shared_words": [
+      "god",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "When good omens came their way, they said, \"We have deserved this,\" but when a hardship afflicted them, they blamed Moses and those with him. In fact, their omens are decided only by GOD, but most of ",
+    "text_b": "He produced for them a sculpted calf, complete with a calf's sound. They said, \"This is your god, and the god of Moses.\" Thus, he forgot."
+  },
+  {
+    "entity": "moses",
+    "verse_a": "7:138",
+    "verse_b": "20:88",
+    "surah_a": "7 (The Purgatory)",
+    "surah_b": "20 (T.H.)",
+    "shared_words": [
+      "god",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "We delivered the Children of Israel across the sea. When they passed by people who were worshiping statues, they said, \"O Moses, make a god for us, like the gods they have.\" He said, \"Indeed, you are ",
+    "text_b": "He produced for them a sculpted calf, complete with a calf's sound. They said, \"This is your god, and the god of Moses.\" Thus, he forgot."
+  },
+  {
+    "entity": "moses",
+    "verse_a": "7:144",
+    "verse_b": "10:88",
+    "surah_a": "7 (The Purgatory)",
+    "surah_b": "10 (Jonah)",
+    "shared_words": [
+      "given",
+      "moses",
+      "out",
+      "said"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "He said, \"O Moses, I have chosen you, out of all the people, with My messages and by speaking to you. Therefore, take what I have given you and be appreciative.\"",
+    "text_b": "Moses said, \"Our Lord, you have given Pharaoh and his elders luxuries and wealth in this world. Our Lord, they only use them to repulse others from Your path. Our Lord, wipe out their wealth, and hard"
+  },
+  {
+    "entity": "moses",
+    "verse_a": "7:151",
+    "verse_b": "40:26",
+    "surah_a": "7 (The Purgatory)",
+    "surah_b": "40 (Forgiver)",
+    "shared_words": [
+      "lord",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "(Moses) said, \"My Lord, forgive me and my brother, and admit us into Your mercy. Of all the merciful ones, You are the Most Merciful.\"",
+    "text_b": "Pharaoh said, \"Let me kill Moses, and let him implore his Lord. I worry lest he corrupts your religion, or spreads evil throughout the land.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "7:154",
+    "verse_b": "28:46",
+    "surah_a": "7 (The Purgatory)",
+    "surah_b": "28 (History)",
+    "shared_words": [
+      "lord",
+      "mercy",
+      "moses"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "When Moses' anger subsided, he picked up the tablets, containing guidance and mercy for those who reverence their Lord.",
+    "text_b": "Nor were you on the slope of Mount Sinai when we called (Moses). But it is mercy from your Lord, (towards the people,) in order to warn people who received no warner before you, that they may take hee"
+  },
+  {
+    "entity": "moses",
+    "verse_a": "10:77",
+    "verse_b": "40:25",
+    "surah_a": "10 (Jonah)",
+    "surah_b": "40 (Forgiver)",
+    "shared_words": [
+      "moses",
+      "said",
+      "truth"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "Moses said, \"Is this how you describe the truth when it comes to you? Is this magic? How can any magicians prevail?\"",
+    "text_b": "And when he showed them the truth from us, they said, \"Kill the sons of those who believed with him, and spare their daughters.\" Thus, the scheming of the disbelievers is always wicked. Moses vs Phara"
+  },
+  {
+    "entity": "moses",
+    "verse_a": "10:81",
+    "verse_b": "28:76",
+    "surah_a": "10 (Jonah)",
+    "surah_b": "28 (History)",
+    "shared_words": [
+      "does",
+      "god",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "When they threw, Moses said, \"What you have produced is magic, and GOD will make it fail. GOD does not support the transgressors' work.\"",
+    "text_b": "Qaaroon (the slave driver) was one of Moses' people who betrayed them and oppressed them. We gave him so many treasures that the keys thereof were almost too heavy for the strongest band. His people s"
+  },
+  {
+    "entity": "moses",
+    "verse_a": "10:88",
+    "verse_b": "20:49",
+    "surah_a": "10 (Jonah)",
+    "surah_b": "20 (T.H.)",
+    "shared_words": [
+      "lord",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "Moses said, \"Our Lord, you have given Pharaoh and his elders luxuries and wealth in this world. Our Lord, they only use them to repulse others from Your path. Our Lord, wipe out their wealth, and hard",
+    "text_b": "He said, \"Who is your Lord, O Moses.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "10:89",
+    "verse_b": "61:5",
+    "surah_a": "10 (Jonah)",
+    "surah_b": "61 (The Column)",
+    "shared_words": [
+      "know",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "He said, \"Your prayer has been answered (O Moses and Aaron), so be steadfast, and do not follow the ways of those who do not know.\"",
+    "text_b": "Recall that Moses said to his people, \"O my people, why do you hurt me, even though you know that I am GOD's messenger to you?\" When they deviated, GOD diverted their hearts. For GOD does not guide th"
+  },
+  {
+    "entity": "moses",
+    "verse_a": "14:8",
+    "verse_b": "22:44",
+    "surah_a": "14 (Abraham)",
+    "surah_b": "22 (Pilgrimage)",
+    "shared_words": [
+      "all",
+      "moses",
+      "people"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "Moses said, \"If you disbelieve, along with all the people on earth, GOD is in no need, Praiseworthy.\" Egotistic Defiance: A Human Trait",
+    "text_b": "And the dwellers of Midyan. Moses was also rejected. I led all those people on, then I called them to account; how (devastating) was My requital!"
+  },
+  {
+    "entity": "moses",
+    "verse_a": "18:66",
+    "verse_b": "28:18",
+    "surah_a": "18 (The Cave)",
+    "surah_b": "28 (History)",
+    "shared_words": [
+      "him",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "Moses said to him, \"Can I follow you, that you may teach me some of the knowledge and the guidance bestowed upon you?\"",
+    "text_b": "In the morning, he was in the city, afraid and watchful. The one who sought his help yesterday, asked for his help again. Moses said to him, \"You are really a trouble maker.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "18:66",
+    "verse_b": "40:25",
+    "surah_a": "18 (The Cave)",
+    "surah_b": "40 (Forgiver)",
+    "shared_words": [
+      "him",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "Moses said to him, \"Can I follow you, that you may teach me some of the knowledge and the guidance bestowed upon you?\"",
+    "text_b": "And when he showed them the truth from us, they said, \"Kill the sons of those who believed with him, and spare their daughters.\" Thus, the scheming of the disbelievers is always wicked. Moses vs Phara"
+  },
+  {
+    "entity": "moses",
+    "verse_a": "18:66",
+    "verse_b": "40:26",
+    "surah_a": "18 (The Cave)",
+    "surah_b": "40 (Forgiver)",
+    "shared_words": [
+      "him",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "Moses said to him, \"Can I follow you, that you may teach me some of the knowledge and the guidance bestowed upon you?\"",
+    "text_b": "Pharaoh said, \"Let me kill Moses, and let him implore his Lord. I worry lest he corrupts your religion, or spreads evil throughout the land.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "20:88",
+    "verse_b": "61:5",
+    "surah_a": "20 (T.H.)",
+    "surah_b": "61 (The Column)",
+    "shared_words": [
+      "god",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "He produced for them a sculpted calf, complete with a calf's sound. They said, \"This is your god, and the god of Moses.\" Thus, he forgot.",
+    "text_b": "Recall that Moses said to his people, \"O my people, why do you hurt me, even though you know that I am GOD's messenger to you?\" When they deviated, GOD diverted their hearts. For GOD does not guide th"
+  },
+  {
+    "entity": "moses",
+    "verse_a": "26:61",
+    "verse_b": "28:19",
+    "surah_a": "26 (The Poets)",
+    "surah_b": "28 (History)",
+    "shared_words": [
+      "moses",
+      "other",
+      "said"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "When both parties saw each other, Moses' people said, \"We will be caught.\"",
+    "text_b": "Before he attempted to strike their common enemy, he said, \"O Moses, do you want to kill me, as you killed the other man yesterday? Obviously, you wish to be a tyrant on earth; you do not wish to be r"
+  },
+  {
+    "entity": "moses",
+    "verse_a": "28:43",
+    "verse_b": "40:53",
+    "surah_a": "28 (History)",
+    "surah_b": "40 (Forgiver)",
+    "shared_words": [
+      "guidance",
+      "moses",
+      "scripture"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "We gave Moses the scripture - after having annihilated the previous generations, and after setting the examples through them - to provide enlightenment for the people, and guidance, and mercy, that th",
+    "text_b": "We have given Moses the guidance, and made the Children of Israel inherit the scripture."
+  },
+  {
+    "entity": "noah",
+    "verse_a": "7:59",
+    "verse_b": "29:14",
+    "surah_a": "7 (The Purgatory)",
+    "surah_b": "29 (The Spider)",
+    "shared_words": [
+      "noah",
+      "people",
+      "sent"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "We sent Noah to his people, saying, \"O my people, worship GOD; you have no other god beside Him. I fear for you the retribution of an awesome day.\"",
+    "text_b": "We sent Noah to his people, and he stayed with them one thousand years, less fifty. Subsequently, they incurred the flood because of their transgressions."
+  },
+  {
+    "entity": "noah",
+    "verse_a": "11:48",
+    "verse_b": "25:37",
+    "surah_a": "11 (Hood)",
+    "surah_b": "25 (The Statute Book)",
+    "shared_words": [
+      "noah",
+      "painful",
+      "retribution"
+    ],
+    "overlap_score": 0.125,
+    "text_a": "It was proclaimed: \"O Noah, disembark, with peace and blessings upon you, and upon nations who will descend from your companions. As for the other nations descending from you, we will bless them for a",
+    "text_b": "Similarly, when the people of Noah disbelieved the messengers, we drowned them, and we set them up as a sign for the people. We have prepared for the transgressors a painful retribution."
+  },
+  {
+    "entity": "mary",
+    "verse_a": "4:171",
+    "verse_b": "5:72",
+    "surah_a": "4 (Women)",
+    "surah_b": "5 (The Feast)",
+    "shared_words": [
+      "god",
+      "him",
+      "lord",
+      "mary",
+      "messiah",
+      "say",
+      "son"
+    ],
+    "overlap_score": 0.123,
+    "text_a": "O people of the scripture, do not transgress the limits of your religion, and do not say about GOD except the truth. The Messiah, Jesus, the son of Mary, was a messenger of GOD, and His word that He h",
+    "text_b": "Pagans indeed are those who say that GOD is the Messiah, son of Mary. The Messiah himself said, \"O Children of Israel, you shall worship GOD; my Lord and your Lord.\" Anyone who sets up any idol beside"
+  },
+  {
     "entity": "jesus",
     "verse_a": "2:87",
     "verse_b": "5:110",
@@ -12991,6 +13362,23 @@
     "overlap_score": 0.122,
     "text_a": "The leaders among Pharaoh's people said, \"Will you allow Moses and his people to corrupt the earth, and forsake you and your gods?\" He said, \"We will kill their sons, and spare their daughters. We are",
     "text_b": "A believing man among Pharaoh's people, who was concealing his belief, said, \"How can you kill a man just for saying, `My Lord is GOD,' and he has shown you clear proofs from your Lord? If he is a lia"
+  },
+  {
+    "entity": "moses",
+    "verse_a": "2:246",
+    "verse_b": "7:138",
+    "surah_a": "2 (The Heifer)",
+    "surah_b": "7 (The Purgatory)",
+    "shared_words": [
+      "children",
+      "god",
+      "israel",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.122,
+    "text_a": "Have you noted the leaders of Israel after Moses? They said to their prophet, \"If you appoint a king to lead us, we will fight in the cause of GOD.\" He said, \"Is it your intention that, if fighting is",
+    "text_b": "We delivered the Children of Israel across the sea. When they passed by people who were worshiping statues, they said, \"O Moses, make a god for us, like the gods they have.\" He said, \"Indeed, you are "
   },
   {
     "entity": "abraham",
@@ -13138,6 +13526,118 @@
     "overlap_score": 0.121,
     "text_a": "Recall that Moses said to his people, \"Remember GOD's blessings upon you. He saved you from Pharaoh's people who inflicted the worst persecution upon you, slaughtering your sons and sparing your daugh",
     "text_b": "Pharaoh said, \"Let me kill Moses, and let him implore his Lord. I worry lest he corrupts your religion, or spreads evil throughout the land.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "2:54",
+    "verse_b": "7:127",
+    "surah_a": "2 (The Heifer)",
+    "surah_b": "7 (The Purgatory)",
+    "shared_words": [
+      "kill",
+      "moses",
+      "people",
+      "said"
+    ],
+    "overlap_score": 0.121,
+    "text_a": "Recall that Moses said to his people, \"O my people, you have wronged your souls by worshiping the calf. You must repent to your Creator. You shall kill your egos. This is better for you in the sight o",
+    "text_b": "The leaders among Pharaoh's people said, \"Will you allow Moses and his people to corrupt the earth, and forsake you and your gods?\" He said, \"We will kill their sons, and spare their daughters. We are"
+  },
+  {
+    "entity": "moses",
+    "verse_a": "2:60",
+    "verse_b": "5:22",
+    "surah_a": "2 (The Heifer)",
+    "surah_b": "5 (The Feast)",
+    "shared_words": [
+      "moses",
+      "out",
+      "people",
+      "said"
+    ],
+    "overlap_score": 0.121,
+    "text_a": "Recall that Moses sought water for his people. We said, \"Strike the rock with your staff.\" Whereupon, twelve springs gushed out therefrom. The members of each tribe knew their own water. Eat and drink",
+    "text_b": "They said, \"O Moses, there are powerful people in it, and we will not enter it, unless they get out of it. If they get out, we are entering.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "2:60",
+    "verse_b": "10:84",
+    "surah_a": "2 (The Heifer)",
+    "surah_b": "10 (Jonah)",
+    "shared_words": [
+      "god",
+      "moses",
+      "people",
+      "said"
+    ],
+    "overlap_score": 0.121,
+    "text_a": "Recall that Moses sought water for his people. We said, \"Strike the rock with your staff.\" Whereupon, twelve springs gushed out therefrom. The members of each tribe knew their own water. Eat and drink",
+    "text_b": "Moses said, \"O my people, if you have really believed in GOD, then put your trust in Him, if you are really submitters.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "2:108",
+    "verse_b": "40:37",
+    "surah_a": "2 (The Heifer)",
+    "surah_b": "40 (Forgiver)",
+    "shared_words": [
+      "moses",
+      "path",
+      "right",
+      "truly"
+    ],
+    "overlap_score": 0.121,
+    "text_a": "Do you wish to demand of your messenger what was demanded of Moses in the past? Anyone who chooses disbelief, instead of belief, has truly strayed off the right path.",
+    "text_b": "\"I want to reach the heaven, and take a look at the god of Moses. I believe he is a liar.\" Thus were the evil works of Pharaoh adorned in his eyes, and thus was he kept from following (the right) path"
+  },
+  {
+    "entity": "moses",
+    "verse_a": "2:136",
+    "verse_b": "7:134",
+    "surah_a": "2 (The Heifer)",
+    "surah_b": "7 (The Purgatory)",
+    "shared_words": [
+      "believe",
+      "him",
+      "lord",
+      "moses"
+    ],
+    "overlap_score": 0.121,
+    "text_a": "Say, \"We believe in GOD, and in what was sent down to us, and in what was sent down to Abraham, Ismail, Isaac, Jacob, and the Patriarchs; and in what was given to Moses and Jesus, and all the prophets",
+    "text_b": "Whenever a plague afflicted them, they said, \"O Moses, implore your Lord - you are close to Him. If you relieve this plague, we will believe with you, and will send the Children of Israel with you.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "7:148",
+    "verse_b": "61:5",
+    "surah_a": "7 (The Purgatory)",
+    "surah_b": "61 (The Column)",
+    "shared_words": [
+      "guide",
+      "moses",
+      "people",
+      "wicked"
+    ],
+    "overlap_score": 0.121,
+    "text_a": "During his absence, Moses' people made from their jewelry the statue of a calf, complete with the sound of a calf. Did they not see that it could not speak to them, or guide them in any path? They wor",
+    "text_b": "Recall that Moses said to his people, \"O my people, why do you hurt me, even though you know that I am GOD's messenger to you?\" When they deviated, GOD diverted their hearts. For GOD does not guide th"
+  },
+  {
+    "entity": "noah",
+    "verse_a": "9:70",
+    "verse_b": "40:31",
+    "surah_a": "9 (Ultimatum)",
+    "surah_b": "40 (Forgiver)",
+    "shared_words": [
+      "aad",
+      "god",
+      "noah",
+      "people"
+    ],
+    "overlap_score": 0.121,
+    "text_a": "Have they not learned anything from the previous generations; the people of Noah, `Aad, Thamood, the people of Abraham, the dwellers of Midyan, and the evildoers (of Sodom and Gomorrah)? Their messeng",
+    "text_b": "\"The opponents of Noah, and `Aad, Thamoud, and others who came after them. GOD does not wish any injustice for the people."
   },
   {
     "entity": "adam",
@@ -13410,6 +13910,444 @@
     "text_b": "He said, \"My son, do not tell your brothers about your dream, lest they plot and scheme against you. Surely, the devil is man's worst enemy."
   },
   {
+    "entity": "mary",
+    "verse_a": "3:42",
+    "verse_b": "5:114",
+    "surah_a": "3 (The Amramites)",
+    "surah_b": "5 (The Feast)",
+    "shared_words": [
+      "god",
+      "mary",
+      "said"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "The angels said, \"O Mary, GOD has chosen you and purified you. He has chosen you from all the women.",
+    "text_b": "Said Jesus, the son of Mary, \"Our god, our Lord, send down to us a feast from the sky. Let it bring plenty for each and every one of us, and a sign from You. Provide for us; You are the best Provider."
+  },
+  {
+    "entity": "mary",
+    "verse_a": "5:116",
+    "verse_b": "43:57",
+    "surah_a": "5 (The Feast)",
+    "surah_b": "43 (Ornaments)",
+    "shared_words": [
+      "mary",
+      "people",
+      "son"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "GOD will say, \"O Jesus, son of Mary, did you say to the people, `Make me and my mother idols beside GOD?' \" He will say, \"Be You glorified. I could not utter what was not right. Had I said it, You alr",
+    "text_b": "When the son of Mary was cited as an example, your people disregarded it."
+  },
+  {
+    "entity": "moses",
+    "verse_a": "2:54",
+    "verse_b": "26:61",
+    "surah_a": "2 (The Heifer)",
+    "surah_b": "26 (The Poets)",
+    "shared_words": [
+      "moses",
+      "people",
+      "said"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "Recall that Moses said to his people, \"O my people, you have wronged your souls by worshiping the calf. You must repent to your Creator. You shall kill your egos. This is better for you in the sight o",
+    "text_b": "When both parties saw each other, Moses' people said, \"We will be caught.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "2:67",
+    "verse_b": "20:61",
+    "surah_a": "2 (The Heifer)",
+    "surah_b": "20 (T.H.)",
+    "shared_words": [
+      "god",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "Moses said to his people, \"GOD commands you to sacrifice a heifer.\" They said, \"Are you mocking us?\" He said, \"GOD forbid, that I should behave like the ignorant ones.\"",
+    "text_b": "Moses said to them, \"Woe to you. Do you fabricate lies to fight GOD and thus incur His retribution? Such fabricators will surely fail.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "2:67",
+    "verse_b": "46:30",
+    "surah_a": "2 (The Heifer)",
+    "surah_b": "46 (The Dunes)",
+    "shared_words": [
+      "moses",
+      "people",
+      "said"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "Moses said to his people, \"GOD commands you to sacrifice a heifer.\" They said, \"Are you mocking us?\" He said, \"GOD forbid, that I should behave like the ignorant ones.\"",
+    "text_b": "They said, \"O our people, we have heard a book that was revealed after Moses, and confirms the previous scriptures. It guides to the truth; to the right path."
+  },
+  {
+    "entity": "moses",
+    "verse_a": "2:136",
+    "verse_b": "26:65",
+    "surah_a": "2 (The Heifer)",
+    "surah_b": "26 (The Poets)",
+    "shared_words": [
+      "all",
+      "him",
+      "moses"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "Say, \"We believe in GOD, and in what was sent down to us, and in what was sent down to Abraham, Ismail, Isaac, Jacob, and the Patriarchs; and in what was given to Moses and Jesus, and all the prophets",
+    "text_b": "We thus saved Moses and all those who were with him."
+  },
+  {
+    "entity": "moses",
+    "verse_a": "5:20",
+    "verse_b": "7:144",
+    "surah_a": "5 (The Feast)",
+    "surah_b": "7 (The Purgatory)",
+    "shared_words": [
+      "moses",
+      "people",
+      "said"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "Recall that Moses said to his people, \"O my people, remember GOD's blessings upon you: He appointed prophets from among you, made you kings, and granted you what He never granted any other people.",
+    "text_b": "He said, \"O Moses, I have chosen you, out of all the people, with My messages and by speaking to you. Therefore, take what I have given you and be appreciative.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "5:20",
+    "verse_b": "10:81",
+    "surah_a": "5 (The Feast)",
+    "surah_b": "10 (Jonah)",
+    "shared_words": [
+      "god",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "Recall that Moses said to his people, \"O my people, remember GOD's blessings upon you: He appointed prophets from among you, made you kings, and granted you what He never granted any other people.",
+    "text_b": "When they threw, Moses said, \"What you have produced is magic, and GOD will make it fail. GOD does not support the transgressors' work.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "5:20",
+    "verse_b": "27:7",
+    "surah_a": "5 (The Feast)",
+    "surah_b": "27 (The Ant)",
+    "shared_words": [
+      "moses",
+      "recall",
+      "said"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "Recall that Moses said to his people, \"O my people, remember GOD's blessings upon you: He appointed prophets from among you, made you kings, and granted you what He never granted any other people.",
+    "text_b": "Recall that Moses said to his family, \"I see a fire; let me bring you news therefrom, or a torch to warm you.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "5:20",
+    "verse_b": "28:36",
+    "surah_a": "5 (The Feast)",
+    "surah_b": "28 (History)",
+    "shared_words": [
+      "moses",
+      "never",
+      "said"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "Recall that Moses said to his people, \"O my people, remember GOD's blessings upon you: He appointed prophets from among you, made you kings, and granted you what He never granted any other people.",
+    "text_b": "When Moses went to them with our proofs, clear and profound, they said, \"This is fabricated magic. We have never heard of this from our ancient ancestors.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "5:22",
+    "verse_b": "7:128",
+    "surah_a": "5 (The Feast)",
+    "surah_b": "7 (The Purgatory)",
+    "shared_words": [
+      "moses",
+      "people",
+      "said"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "They said, \"O Moses, there are powerful people in it, and we will not enter it, unless they get out of it. If they get out, we are entering.\"",
+    "text_b": "Moses said to his people, \"Seek GOD's help, and steadfastly persevere. The earth belongs to GOD, and He grants it to whomever He chooses from among His servants. The ultimate victory belongs to the ri"
+  },
+  {
+    "entity": "moses",
+    "verse_a": "5:22",
+    "verse_b": "14:5",
+    "surah_a": "5 (The Feast)",
+    "surah_b": "14 (Abraham)",
+    "shared_words": [
+      "moses",
+      "out",
+      "people"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "They said, \"O Moses, there are powerful people in it, and we will not enter it, unless they get out of it. If they get out, we are entering.\"",
+    "text_b": "Thus, we sent Moses with our miracles, saying, \"Lead your people out of darkness into the light, and remind them of the days of GOD.\" These are lessons for every steadfast, appreciative person."
+  },
+  {
+    "entity": "moses",
+    "verse_a": "6:154",
+    "verse_b": "7:134",
+    "surah_a": "6 (Livestock)",
+    "surah_b": "7 (The Purgatory)",
+    "shared_words": [
+      "believe",
+      "lord",
+      "moses"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "And we gave Moses the scripture, complete with the best commandments, and detailing everything, and a beacon and mercy, that they may believe in meeting their Lord.",
+    "text_b": "Whenever a plague afflicted them, they said, \"O Moses, implore your Lord - you are close to Him. If you relieve this plague, we will believe with you, and will send the Children of Israel with you.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "6:154",
+    "verse_b": "28:37",
+    "surah_a": "6 (Livestock)",
+    "surah_b": "28 (History)",
+    "shared_words": [
+      "best",
+      "lord",
+      "moses"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "And we gave Moses the scripture, complete with the best commandments, and detailing everything, and a beacon and mercy, that they may believe in meeting their Lord.",
+    "text_b": "Moses said, \"My Lord knows best who brought the guidance from Him, and who will be the ultimate victors. Surely, the transgressors never succeed.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "7:103",
+    "verse_b": "61:5",
+    "surah_a": "7 (The Purgatory)",
+    "surah_b": "61 (The Column)",
+    "shared_words": [
+      "moses",
+      "people",
+      "wicked"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "After (those messengers,) we sent Moses with our signs to Pharaoh and his people, but they transgressed. Note the consequences for the wicked.",
+    "text_b": "Recall that Moses said to his people, \"O my people, why do you hurt me, even though you know that I am GOD's messenger to you?\" When they deviated, GOD diverted their hearts. For GOD does not guide th"
+  },
+  {
+    "entity": "moses",
+    "verse_a": "7:127",
+    "verse_b": "10:84",
+    "surah_a": "7 (The Purgatory)",
+    "surah_b": "10 (Jonah)",
+    "shared_words": [
+      "moses",
+      "people",
+      "said"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "The leaders among Pharaoh's people said, \"Will you allow Moses and his people to corrupt the earth, and forsake you and your gods?\" He said, \"We will kill their sons, and spare their daughters. We are",
+    "text_b": "Moses said, \"O my people, if you have really believed in GOD, then put your trust in Him, if you are really submitters.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "7:128",
+    "verse_b": "20:88",
+    "surah_a": "7 (The Purgatory)",
+    "surah_b": "20 (T.H.)",
+    "shared_words": [
+      "god",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "Moses said to his people, \"Seek GOD's help, and steadfastly persevere. The earth belongs to GOD, and He grants it to whomever He chooses from among His servants. The ultimate victory belongs to the ri",
+    "text_b": "He produced for them a sculpted calf, complete with a calf's sound. They said, \"This is your god, and the god of Moses.\" Thus, he forgot."
+  },
+  {
+    "entity": "moses",
+    "verse_a": "7:128",
+    "verse_b": "33:69",
+    "surah_a": "7 (The Purgatory)",
+    "surah_b": "33 (The Parties)",
+    "shared_words": [
+      "god",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "Moses said to his people, \"Seek GOD's help, and steadfastly persevere. The earth belongs to GOD, and He grants it to whomever He chooses from among His servants. The ultimate victory belongs to the ri",
+    "text_b": "O you who believe, do not be like those who hurt Moses, then GOD absolved him of what they said. He was, in the sight of GOD, honorable."
+  },
+  {
+    "entity": "moses",
+    "verse_a": "7:131",
+    "verse_b": "18:66",
+    "surah_a": "7 (The Purgatory)",
+    "surah_b": "18 (The Cave)",
+    "shared_words": [
+      "him",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "When good omens came their way, they said, \"We have deserved this,\" but when a hardship afflicted them, they blamed Moses and those with him. In fact, their omens are decided only by GOD, but most of ",
+    "text_b": "Moses said to him, \"Can I follow you, that you may teach me some of the knowledge and the guidance bestowed upon you?\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "7:151",
+    "verse_b": "28:46",
+    "surah_a": "7 (The Purgatory)",
+    "surah_b": "28 (History)",
+    "shared_words": [
+      "lord",
+      "mercy",
+      "moses"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "(Moses) said, \"My Lord, forgive me and my brother, and admit us into Your mercy. Of all the merciful ones, You are the Most Merciful.\"",
+    "text_b": "Nor were you on the slope of Mount Sinai when we called (Moses). But it is mercy from your Lord, (towards the people,) in order to warn people who received no warner before you, that they may take hee"
+  },
+  {
+    "entity": "moses",
+    "verse_a": "10:84",
+    "verse_b": "14:5",
+    "surah_a": "10 (Jonah)",
+    "surah_b": "14 (Abraham)",
+    "shared_words": [
+      "god",
+      "moses",
+      "people"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "Moses said, \"O my people, if you have really believed in GOD, then put your trust in Him, if you are really submitters.\"",
+    "text_b": "Thus, we sent Moses with our miracles, saying, \"Lead your people out of darkness into the light, and remind them of the days of GOD.\" These are lessons for every steadfast, appreciative person."
+  },
+  {
+    "entity": "moses",
+    "verse_a": "14:5",
+    "verse_b": "20:88",
+    "surah_a": "14 (Abraham)",
+    "surah_b": "20 (T.H.)",
+    "shared_words": [
+      "god",
+      "moses",
+      "thus"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "Thus, we sent Moses with our miracles, saying, \"Lead your people out of darkness into the light, and remind them of the days of GOD.\" These are lessons for every steadfast, appreciative person.",
+    "text_b": "He produced for them a sculpted calf, complete with a calf's sound. They said, \"This is your god, and the god of Moses.\" Thus, he forgot."
+  },
+  {
+    "entity": "moses",
+    "verse_a": "14:8",
+    "verse_b": "20:61",
+    "surah_a": "14 (Abraham)",
+    "surah_b": "20 (T.H.)",
+    "shared_words": [
+      "god",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "Moses said, \"If you disbelieve, along with all the people on earth, GOD is in no need, Praiseworthy.\" Egotistic Defiance: A Human Trait",
+    "text_b": "Moses said to them, \"Woe to you. Do you fabricate lies to fight GOD and thus incur His retribution? Such fabricators will surely fail.\""
+  },
+  {
+    "entity": "moses",
+    "verse_a": "14:8",
+    "verse_b": "46:30",
+    "surah_a": "14 (Abraham)",
+    "surah_b": "46 (The Dunes)",
+    "shared_words": [
+      "moses",
+      "people",
+      "said"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "Moses said, \"If you disbelieve, along with all the people on earth, GOD is in no need, Praiseworthy.\" Egotistic Defiance: A Human Trait",
+    "text_b": "They said, \"O our people, we have heard a book that was revealed after Moses, and confirms the previous scriptures. It guides to the truth; to the right path."
+  },
+  {
+    "entity": "moses",
+    "verse_a": "17:101",
+    "verse_b": "28:37",
+    "surah_a": "17 (The Children of Israel)",
+    "surah_b": "28 (History)",
+    "shared_words": [
+      "him",
+      "moses",
+      "said"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "We supported Moses with nine profound miracles - ask the Children of Israel. When he went to them, Pharaoh said to him, \"I think that you, Moses, are bewitched.\"",
+    "text_b": "Moses said, \"My Lord knows best who brought the guidance from Him, and who will be the ultimate victors. Surely, the transgressors never succeed.\""
+  },
+  {
+    "entity": "noah",
+    "verse_a": "6:84",
+    "verse_b": "21:76",
+    "surah_a": "6 (Livestock)",
+    "surah_b": "21 (The Prophets)",
+    "shared_words": [
+      "before",
+      "him",
+      "noah"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "And we granted him Isaac and Jacob, and we guided both of them. Similarly, we guided Noah before that, and from his descendants (we guided) David, Solomon, Job, Joseph, Moses, and Aaron. We thus rewar",
+    "text_b": "And, before that, Noah called and we responded to him. We saved him and his family from the great disaster."
+  },
+  {
+    "entity": "noah",
+    "verse_a": "7:59",
+    "verse_b": "11:48",
+    "surah_a": "7 (The Purgatory)",
+    "surah_b": "11 (Hood)",
+    "shared_words": [
+      "noah",
+      "other",
+      "retribution"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "We sent Noah to his people, saying, \"O my people, worship GOD; you have no other god beside Him. I fear for you the retribution of an awesome day.\"",
+    "text_b": "It was proclaimed: \"O Noah, disembark, with peace and blessings upon you, and upon nations who will descend from your companions. As for the other nations descending from you, we will bless them for a"
+  },
+  {
+    "entity": "noah",
+    "verse_a": "7:69",
+    "verse_b": "10:71",
+    "surah_a": "7 (The Purgatory)",
+    "surah_b": "10 (Jonah)",
+    "shared_words": [
+      "god",
+      "much",
+      "noah",
+      "people",
+      "should",
+      "too"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "\"Is it too much of a wonder that a message should come to you from your Lord, through a man like you, to warn you? Recall that He made you inheritors after the people of Noah, and multiplied your numb",
+    "text_b": "Recite for them the history of Noah. He said to his people, \"O my people, if you find my position and my reminding you of GOD's revelations too much for you, then I put my trust in GOD. You should get"
+  },
+  {
+    "entity": "noah",
+    "verse_a": "9:70",
+    "verse_b": "26:105",
+    "surah_a": "9 (Ultimatum)",
+    "surah_b": "26 (The Poets)",
+    "shared_words": [
+      "messengers",
+      "noah",
+      "people"
+    ],
+    "overlap_score": 0.12,
+    "text_a": "Have they not learned anything from the previous generations; the people of Noah, `Aad, Thamood, the people of Abraham, the dwellers of Midyan, and the evildoers (of Sodom and Gomorrah)? Their messeng",
+    "text_b": "The people of Noah disbelieved the messengers."
+  },
+  {
     "entity": "abraham",
     "verse_a": "14:35",
     "verse_b": "60:4",
@@ -13478,6 +14416,23 @@
     "overlap_score": 0.119,
     "text_a": "Said Jesus, the son of Mary, \"Our god, our Lord, send down to us a feast from the sky. Let it bring plenty for each and every one of us, and a sign from You. Provide for us; You are the best Provider.",
     "text_b": "Recall that Jesus, son of Mary, said, \"O Children of Israel, I am GOD's messenger to you, confirming the Torah and bringing good news of a messenger to come after me whose name will be even more prais"
+  },
+  {
+    "entity": "mary",
+    "verse_a": "5:116",
+    "verse_b": "9:31",
+    "surah_a": "5 (The Feast)",
+    "surah_b": "9 (Ultimatum)",
+    "shared_words": [
+      "all",
+      "glorified",
+      "god",
+      "mary",
+      "son"
+    ],
+    "overlap_score": 0.119,
+    "text_a": "GOD will say, \"O Jesus, son of Mary, did you say to the people, `Make me and my mother idols beside GOD?' \" He will say, \"Be You glorified. I could not utter what was not right. Had I said it, You alr",
+    "text_b": "They have set up their religious leaders and scholars as lords, instead of GOD. Others deified the Messiah, son of Mary. They were all commanded to worship only one god. There is no god except He. Be "
   },
   {
     "entity": "abraham",
@@ -13628,6 +14583,22 @@
     "text_b": "And when he showed them the truth from us, they said, \"Kill the sons of those who believed with him, and spare their daughters.\" Thus, the scheming of the disbelievers is always wicked. Moses vs Phara"
   },
   {
+    "entity": "mary",
+    "verse_a": "9:31",
+    "verse_b": "23:50",
+    "surah_a": "9 (Ultimatum)",
+    "surah_b": "23 (The Believers)",
+    "shared_words": [
+      "god",
+      "mary",
+      "one",
+      "son"
+    ],
+    "overlap_score": 0.118,
+    "text_a": "They have set up their religious leaders and scholars as lords, instead of GOD. Others deified the Messiah, son of Mary. They were all commanded to worship only one god. There is no god except He. Be ",
+    "text_b": "We made the son of Mary and his mother a sign, and we gave them refuge on a mesa with food and drink. One God/One Religion"
+  },
+  {
     "entity": "pharaoh",
     "verse_a": "28:38",
     "verse_b": "40:28",
@@ -13643,6 +14614,23 @@
     "overlap_score": 0.116,
     "text_a": "Pharaoh said, \"O you elders, I have not known of any god for you other than me. Therefore, fire the adobe, O Hamaan, in order to build a tower, that I may take a look at the god of Moses. I am sure th",
     "text_b": "A believing man among Pharaoh's people, who was concealing his belief, said, \"How can you kill a man just for saying, `My Lord is GOD,' and he has shown you clear proofs from your Lord? If he is a lia"
+  },
+  {
+    "entity": "mary",
+    "verse_a": "4:157",
+    "verse_b": "5:75",
+    "surah_a": "4 (Women)",
+    "surah_b": "5 (The Feast)",
+    "shared_words": [
+      "him",
+      "mary",
+      "messenger",
+      "messiah",
+      "son"
+    ],
+    "overlap_score": 0.116,
+    "text_a": "And for claiming that they killed the Messiah, Jesus, son of Mary, the messenger of GOD. In fact, they never killed him, they never crucified him - they were made to think that they did. All factions ",
+    "text_b": "The Messiah, son of Mary, is no more than a messenger like the messengers before him, and his mother was a saint. Both of them used to eat the food. Note how we explain the revelations for them, and n"
   },
   {
     "entity": "adam",
@@ -13978,6 +14966,51 @@
     "text_b": "And GOD cites as an example of those who believed the wife of Pharaoh. She said, \"My Lord, build a home for me at You in Paradise, and save me from Pharaoh and his works; save me from the transgressin"
   },
   {
+    "entity": "mary",
+    "verse_a": "3:45",
+    "verse_b": "19:27",
+    "surah_a": "3 (The Amramites)",
+    "surah_b": "19 (Mary)",
+    "shared_words": [
+      "him",
+      "mary",
+      "said"
+    ],
+    "overlap_score": 0.115,
+    "text_a": "The angels said, \"O Mary, GOD gives you good news: a Word from Him whose name is `The Messiah, Jesus the son of Mary. He will be prominent in this life and in the Hereafter, and one of those closest t",
+    "text_b": "She came to her family, carrying him. They said, \"O Mary, you have committed something that is totally unexpected."
+  },
+  {
+    "entity": "mary",
+    "verse_a": "5:112",
+    "verse_b": "23:50",
+    "surah_a": "5 (The Feast)",
+    "surah_b": "23 (The Believers)",
+    "shared_words": [
+      "god",
+      "mary",
+      "son"
+    ],
+    "overlap_score": 0.115,
+    "text_a": "Recall that the disciples said, \"O Jesus, son of Mary, can your Lord send down to us a feast from the sky?\" He said, \"You should reverence GOD, if you are believers.\"",
+    "text_b": "We made the son of Mary and his mother a sign, and we gave them refuge on a mesa with food and drink. One God/One Religion"
+  },
+  {
+    "entity": "noah",
+    "verse_a": "40:5",
+    "verse_b": "53:52",
+    "surah_a": "40 (Forgiver)",
+    "surah_b": "53 (The Stars)",
+    "shared_words": [
+      "before",
+      "noah",
+      "people"
+    ],
+    "overlap_score": 0.115,
+    "text_a": "Disbelieving before them were the people of Noah, and many other opponents after them. Every community persecuted their messenger to neutralize him. And they argued with falsehood, to defeat the truth",
+    "text_b": "Also the people of Noah before that; they were evil transgressors."
+  },
+  {
     "entity": "abraham",
     "verse_a": "2:258",
     "verse_b": "3:68",
@@ -14204,6 +15237,54 @@
     "overlap_score": 0.114,
     "text_a": "Recall that Moses said to his people, \"Remember GOD's blessings upon you. He saved you from Pharaoh's people who inflicted the worst persecution upon you, slaughtering your sons and sparing your daugh",
     "text_b": "A believing man among Pharaoh's people, who was concealing his belief, said, \"How can you kill a man just for saying, `My Lord is GOD,' and he has shown you clear proofs from your Lord? If he is a lia"
+  },
+  {
+    "entity": "noah",
+    "verse_a": "11:25",
+    "verse_b": "14:9",
+    "surah_a": "11 (Hood)",
+    "surah_b": "14 (Abraham)",
+    "shared_words": [
+      "clear",
+      "noah",
+      "people",
+      "sent"
+    ],
+    "overlap_score": 0.114,
+    "text_a": "We sent Noah to his people, saying, \"I come to you as a clear warner.",
+    "text_b": "Have you not heard about those before you - the people of Noah, `Aad, Thamoud, and others who came after them and known only to GOD? Their messengers went to them with clear proofs, but they treated t"
+  },
+  {
+    "entity": "noah",
+    "verse_a": "14:9",
+    "verse_b": "38:12",
+    "surah_a": "14 (Abraham)",
+    "surah_b": "38 (S.)",
+    "shared_words": [
+      "aad",
+      "before",
+      "noah",
+      "people"
+    ],
+    "overlap_score": 0.114,
+    "text_a": "Have you not heard about those before you - the people of Noah, `Aad, Thamoud, and others who came after them and known only to GOD? Their messengers went to them with clear proofs, but they treated t",
+    "text_b": "Disbelieving before them were the people of Noah, `Aad, and the mighty Pharaoh."
+  },
+  {
+    "entity": "noah",
+    "verse_a": "14:9",
+    "verse_b": "50:12",
+    "surah_a": "14 (Abraham)",
+    "surah_b": "50 (Q.)",
+    "shared_words": [
+      "before",
+      "noah",
+      "people",
+      "thamoud"
+    ],
+    "overlap_score": 0.114,
+    "text_a": "Have you not heard about those before you - the people of Noah, `Aad, Thamoud, and others who came after them and known only to GOD? Their messengers went to them with clear proofs, but they treated t",
+    "text_b": "Disbelieving before them were the people of Noah, the dwellers of Russ, and Thamoud."
   },
   {
     "entity": "abraham",
@@ -14871,1211 +15952,115 @@
     "text_b": "We thus put Solomon to the test; we blessed him with vast material wealth, but he steadfastly submitted."
   },
   {
-    "entity": "jesus",
-    "verse_a": "3:84",
-    "verse_b": "5:45",
+    "entity": "mary",
+    "verse_a": "3:36",
+    "verse_b": "5:114",
     "surah_a": "3 (The Amramites)",
     "surah_b": "5 (The Feast)",
     "shared_words": [
-      "any",
       "god",
-      "him",
-      "jesus",
-      "one"
-    ],
-    "overlap_score": 0.109,
-    "text_a": "Say, \"We believe in GOD, and in what was sent down to us, and in what was sent down to Abraham, Ismail, Isaac, Jacob, and the Patriarchs, and in what was given to Moses, Jesus, and the prophets from t",
-    "text_b": "And we decreed for them in it that: the life for the life, the eye for the eye, the nose for the nose, the ear for the ear, the tooth for the tooth, and an equivalent injury for any injury. If one for"
-  },
-  {
-    "entity": "adam",
-    "verse_a": "7:172",
-    "verse_b": "18:50",
-    "surah_a": "7 (The Purgatory)",
-    "surah_b": "18 (The Cave)",
-    "shared_words": [
-      "adam",
-      "descendants",
       "lord",
+      "mary",
       "said"
     ],
-    "overlap_score": 0.108,
-    "text_a": "Recall that your Lord summoned all the descendants of Adam, and had them bear witness for themselves: \"Am I not your Lord?\" They all said, \"Yes. We bear witness.\" Thus, you cannot say on the Day of Re",
-    "text_b": "We said to the angels, \"Fall prostrate before Adam.\" They fell prostrate, except Satan. He became a jinn, for he disobeyed the order of His Lord. Will you choose him and his descendants as lords inste"
+    "overlap_score": 0.111,
+    "text_a": "When she gave birth to her, she said, \"My Lord, I have given birth to a girl\" - GOD was fully aware of what she bore - \"The male is not the same as the female. I have named her Mary, and I invoke Your",
+    "text_b": "Said Jesus, the son of Mary, \"Our god, our Lord, send down to us a feast from the sky. Let it bring plenty for each and every one of us, and a sign from You. Provide for us; You are the best Provider."
   },
   {
-    "entity": "abraham",
-    "verse_a": "2:125",
-    "verse_b": "3:97",
-    "surah_a": "2 (The Heifer)",
-    "surah_b": "3 (The Amramites)",
-    "shared_words": [
-      "abraham",
-      "people",
-      "safe",
-      "shrine"
-    ],
-    "overlap_score": 0.108,
-    "text_a": "We have rendered the shrine (the Ka`aba) a focal point for the people, and a safe sanctuary. You may use Abraham's shrine as a prayer house. We commissioned Abraham and Ismail: \"You shall purify My ho",
-    "text_b": "In it are clear signs: the station of Abraham. Anyone who enters it shall be granted safe passage. The people owe it to GOD that they shall observe Hajj to this shrine, when they can afford it. As for"
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "2:126",
-    "verse_b": "29:16",
-    "surah_a": "2 (The Heifer)",
-    "surah_b": "29 (The Spider)",
-    "shared_words": [
-      "abraham",
-      "god",
-      "people",
-      "said"
-    ],
-    "overlap_score": 0.108,
-    "text_a": "Abraham prayed: \"My Lord, make this a peaceful land, and provide its people with fruits. Provide for those who believe in GOD and the Last Day.\" (God) said, \"I will also provide for those who disbelie",
-    "text_b": "Abraham said to his people, \"You shall worship GOD, and reverence Him. This is better for you, if you only knew. God: The Only Source of Provisions"
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "3:84",
-    "verse_b": "21:72",
-    "surah_a": "3 (The Amramites)",
-    "surah_b": "21 (The Prophets)",
-    "shared_words": [
-      "abraham",
-      "him",
-      "isaac",
-      "jacob"
-    ],
-    "overlap_score": 0.108,
-    "text_a": "Say, \"We believe in GOD, and in what was sent down to us, and in what was sent down to Abraham, Ismail, Isaac, Jacob, and the Patriarchs, and in what was given to Moses, Jesus, and the prophets from t",
-    "text_b": "And we granted him Isaac and Jacob as a gift, and we made them both righteous. Abraham: Delivered All Religious Duties of Submission (Islam)"
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "21:72",
-    "verse_b": "22:25",
-    "surah_a": "21 (The Prophets)",
-    "surah_b": "22 (Pilgrimage)",
-    "shared_words": [
-      "abraham",
-      "all",
-      "duties",
-      "islam"
-    ],
-    "overlap_score": 0.108,
-    "text_a": "And we granted him Isaac and Jacob as a gift, and we made them both righteous. Abraham: Delivered All Religious Duties of Submission (Islam)",
-    "text_b": "Surely, those who disbelieve and repulse others from the path of GOD, and from the Sacred Masjid that we designated for all the people - be they natives or visitors - and seek to pollute it and corrup"
-  },
-  {
-    "entity": "jesus",
-    "verse_a": "3:84",
-    "verse_b": "5:44",
-    "surah_a": "3 (The Amramites)",
-    "surah_b": "5 (The Feast)",
-    "shared_words": [
-      "down",
-      "given",
-      "god",
-      "jesus",
-      "moses",
-      "prophets",
-      "sent"
-    ],
-    "overlap_score": 0.108,
-    "text_a": "Say, \"We believe in GOD, and in what was sent down to us, and in what was sent down to Abraham, Ismail, Isaac, Jacob, and the Patriarchs, and in what was given to Moses, Jesus, and the prophets from t",
-    "text_b": "We have sent down the Torah, containing guidance and light. Ruling in accordance with it were the Jewish prophets, as well as the rabbis and the priests, as dictated to them in GOD's scripture, and as"
-  },
-  {
-    "entity": "jesus",
-    "verse_a": "5:110",
+    "entity": "mary",
+    "verse_a": "3:42",
     "verse_b": "61:14",
-    "surah_a": "5 (The Feast)",
+    "surah_a": "3 (The Amramites)",
     "surah_b": "61 (The Column)",
     "shared_words": [
-      "children",
       "god",
-      "israel",
-      "jesus",
       "mary",
-      "said",
-      "son"
+      "said"
     ],
-    "overlap_score": 0.108,
-    "text_a": "GOD will say, \"O Jesus, son of Mary, remember My blessings upon you and your mother. I supported you with the Holy Spirit, to enable you to speak to the people from the crib, as well as an adult. I ta",
+    "overlap_score": 0.111,
+    "text_a": "The angels said, \"O Mary, GOD has chosen you and purified you. He has chosen you from all the women.",
     "text_b": "O you who believe, be GOD's supporters, like the disciples of Jesus, son of Mary. When he said to them, \"Who are my supporters towards GOD,\" they said, \"We are GOD's supporters.\" Thus, a group from th"
   },
   {
-    "entity": "jesus",
-    "verse_a": "33:7",
-    "verse_b": "61:6",
-    "surah_a": "33 (The Parties)",
-    "surah_b": "61 (The Column)",
+    "entity": "mary",
+    "verse_a": "3:45",
+    "verse_b": "5:75",
+    "surah_a": "3 (The Amramites)",
+    "surah_b": "5 (The Feast)",
     "shared_words": [
-      "jesus",
+      "him",
       "mary",
-      "recall",
+      "messiah",
       "son"
     ],
-    "overlap_score": 0.108,
-    "text_a": "Recall that we took from the prophets their covenant, including you (O Muhammad), Noah, Abraham, Moses, and Jesus the son of Mary. We took from them a solemn pledge.",
-    "text_b": "Recall that Jesus, son of Mary, said, \"O Children of Israel, I am GOD's messenger to you, confirming the Torah and bringing good news of a messenger to come after me whose name will be even more prais"
+    "overlap_score": 0.111,
+    "text_a": "The angels said, \"O Mary, GOD gives you good news: a Word from Him whose name is `The Messiah, Jesus the son of Mary. He will be prominent in this life and in the Hereafter, and one of those closest t",
+    "text_b": "The Messiah, son of Mary, is no more than a messenger like the messengers before him, and his mother was a saint. Both of them used to eat the food. Note how we explain the revelations for them, and n"
   },
   {
-    "entity": "pharaoh",
-    "verse_a": "14:6",
-    "verse_b": "28:38",
-    "surah_a": "14 (Abraham)",
-    "surah_b": "28 (History)",
-    "shared_words": [
-      "god",
-      "moses",
-      "pharaoh",
-      "said"
-    ],
-    "overlap_score": 0.108,
-    "text_a": "Recall that Moses said to his people, \"Remember GOD's blessings upon you. He saved you from Pharaoh's people who inflicted the worst persecution upon you, slaughtering your sons and sparing your daugh",
-    "text_b": "Pharaoh said, \"O you elders, I have not known of any god for you other than me. Therefore, fire the adobe, O Hamaan, in order to build a tower, that I may take a look at the god of Moses. I am sure th"
-  },
-  {
-    "entity": "adam",
-    "verse_a": "7:26",
-    "verse_b": "17:70",
-    "surah_a": "7 (The Purgatory)",
-    "surah_b": "17 (The Children of Israel)",
-    "shared_words": [
-      "adam",
-      "children",
-      "provided"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "O children of Adam, we have provided you with garments to cover your bodies, as well as for luxury. But the best garment is the garment of righteousness. These are some of GOD's signs, that they may t",
-    "text_b": "We have honored the children of Adam, and provided them with rides on land and in the sea. We provided for them good provisions, and we gave them greater advantages than many of our creatures."
-  },
-  {
-    "entity": "adam",
-    "verse_a": "7:27",
-    "verse_b": "20:117",
-    "surah_a": "7 (The Purgatory)",
-    "surah_b": "20 (T.H.)",
-    "shared_words": [
-      "adam",
-      "let",
-      "paradise"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "O children of Adam, do not let the devil dupe you as he did when he caused the eviction of your parents from Paradise, and the removal of their garments to expose their bodies. He and his tribe see yo",
-    "text_b": "We then said, \"O Adam, this is an enemy of you and your wife. Do not let him evict you from Paradise, lest you become miserable."
-  },
-  {
-    "entity": "adam",
-    "verse_a": "7:27",
-    "verse_b": "20:120",
-    "surah_a": "7 (The Purgatory)",
-    "surah_b": "20 (T.H.)",
-    "shared_words": [
-      "adam",
-      "devil",
-      "let"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "O children of Adam, do not let the devil dupe you as he did when he caused the eviction of your parents from Paradise, and the removal of their garments to expose their bodies. He and his tribe see yo",
-    "text_b": "But the devil whispered to him, saying, \"O Adam, let me show you the tree of eternity and unending kingship.\""
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "3:65",
-    "verse_b": "4:163",
-    "surah_a": "3 (The Amramites)",
-    "surah_b": "4 (Women)",
-    "shared_words": [
-      "abraham",
-      "after",
-      "him"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "O followers of the scripture, why do you argue about Abraham, when the Torah and the Gospel were not revealed until after him? Do you not understand?",
-    "text_b": "We have inspired you, as we inspired Noah and the prophets after him. And we inspired Abraham, Ismail, Isaac, Jacob, the Patriarchs, Jesus, Job, Jonah, Aaron, and Solomon. And we gave David the Psalms"
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "3:68",
-    "verse_b": "12:6",
-    "surah_a": "3 (The Amramites)",
-    "surah_b": "12 (Joseph)",
-    "shared_words": [
-      "abraham",
-      "lord",
-      "most"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "The people most worthy of Abraham are those who followed him, and this prophet, and those who believe. GOD is the Lord and Master of the believers.",
-    "text_b": "\"Your Lord has thus blessed you, and has given you good news through your dream. He has perfected His blessings upon you and upon the family of Jacob, as He did for your ancestors Abraham and Isaac be"
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "3:84",
-    "verse_b": "60:4",
-    "surah_a": "3 (The Amramites)",
-    "surah_b": "60 (The Test)",
-    "shared_words": [
-      "abraham",
-      "alone",
-      "believe",
-      "god",
-      "him",
-      "lord"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "Say, \"We believe in GOD, and in what was sent down to us, and in what was sent down to Abraham, Ismail, Isaac, Jacob, and the Patriarchs, and in what was given to Moses, Jesus, and the prophets from t",
-    "text_b": "A good example has been set for you by Abraham and those with him. They said to their people, \"We disown you and the idols that you worship besides GOD. We denounce you, and you will see nothing from "
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "4:124",
-    "verse_b": "21:72",
+    "entity": "mary",
+    "verse_a": "4:157",
+    "verse_b": "23:50",
     "surah_a": "4 (Women)",
-    "surah_b": "21 (The Prophets)",
+    "surah_b": "23 (The Believers)",
     "shared_words": [
-      "abraham",
-      "islam",
+      "god",
+      "made",
+      "mary",
+      "son"
+    ],
+    "overlap_score": 0.111,
+    "text_a": "And for claiming that they killed the Messiah, Jesus, son of Mary, the messenger of GOD. In fact, they never killed him, they never crucified him - they were made to think that they did. All factions ",
+    "text_b": "We made the son of Mary and his mother a sign, and we gave them refuge on a mesa with food and drink. One God/One Religion"
+  },
+  {
+    "entity": "mary",
+    "verse_a": "4:171",
+    "verse_b": "5:75",
+    "surah_a": "4 (Women)",
+    "surah_b": "5 (The Feast)",
+    "shared_words": [
+      "him",
+      "mary",
+      "messenger",
+      "messengers",
+      "messiah",
+      "son"
+    ],
+    "overlap_score": 0.111,
+    "text_a": "O people of the scripture, do not transgress the limits of your religion, and do not say about GOD except the truth. The Messiah, Jesus, the son of Mary, was a messenger of GOD, and His word that He h",
+    "text_b": "The Messiah, son of Mary, is no more than a messenger like the messengers before him, and his mother was a saint. Both of them used to eat the food. Note how we explain the revelations for them, and n"
+  },
+  {
+    "entity": "mary",
+    "verse_a": "5:17",
+    "verse_b": "23:50",
+    "surah_a": "5 (The Feast)",
+    "surah_b": "23 (The Believers)",
+    "shared_words": [
+      "god",
+      "mary",
+      "mother",
+      "son"
+    ],
+    "overlap_score": 0.111,
+    "text_a": "Pagans indeed are those who say that GOD is the Messiah, the son of Mary. Say, \"Who could oppose GOD if He willed to annihilate the Messiah, son of Mary, and his mother, and everyone on earth?\" To GOD",
+    "text_b": "We made the son of Mary and his mother a sign, and we gave them refuge on a mesa with food and drink. One God/One Religion"
+  },
+  {
+    "entity": "noah",
+    "verse_a": "6:84",
+    "verse_b": "23:23",
+    "surah_a": "6 (Livestock)",
+    "surah_b": "23 (The Believers)",
+    "shared_words": [
+      "him",
+      "noah",
       "righteous"
     ],
-    "overlap_score": 0.107,
-    "text_a": "As for those who lead a righteous life, male or female, while believing, they enter Paradise; without the slightest injustice. Abraham: Original Messenger of Islam",
-    "text_b": "And we granted him Isaac and Jacob as a gift, and we made them both righteous. Abraham: Delivered All Religious Duties of Submission (Islam)"
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "11:74",
-    "verse_b": "12:6",
-    "surah_a": "11 (Hood)",
-    "surah_b": "12 (Joseph)",
-    "shared_words": [
-      "abraham",
-      "good",
-      "news"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "When Abraham's fear subsided, and the good news was delivered to him, he proceeded to argue with us on behalf of Lot's people.",
-    "text_b": "\"Your Lord has thus blessed you, and has given you good news through your dream. He has perfected His blessings upon you and upon the family of Jacob, as He did for your ancestors Abraham and Isaac be"
-  },
-  {
-    "entity": "aaron",
-    "verse_a": "2:248",
-    "verse_b": "10:89",
-    "surah_a": "2 (The Heifer)",
-    "surah_b": "10 (Jonah)",
-    "shared_words": [
-      "aaron",
-      "moses",
-      "said"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "Their prophet said to them, \"The sign of his kingship is that the Ark of the Covenant will be restored to you, bringing assurances from your Lord, and relics left by the people of Moses and the people",
-    "text_b": "He said, \"Your prayer has been answered (O Moses and Aaron), so be steadfast, and do not follow the ways of those who do not know.\""
-  },
-  {
-    "entity": "aaron",
-    "verse_a": "7:142",
-    "verse_b": "20:70",
-    "surah_a": "7 (The Purgatory)",
-    "surah_b": "20 (T.H.)",
-    "shared_words": [
-      "aaron",
-      "lord",
-      "moses"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "We summoned Moses for thirty nights, and completed them by adding ten. Thus, the audience with his Lord lasted forty nights. Moses said to his brother Aaron, \"Stay here with my people, maintain righte",
-    "text_b": "The magicians fell prostrate, saying, \"We believe in the Lord of Aaron and Moses.\""
-  },
-  {
-    "entity": "jacob",
-    "verse_a": "4:163",
-    "verse_b": "19:49",
-    "surah_a": "4 (Women)",
-    "surah_b": "19 (Mary)",
-    "shared_words": [
-      "him",
-      "isaac",
-      "jacob"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "We have inspired you, as we inspired Noah and the prophets after him. And we inspired Abraham, Ismail, Isaac, Jacob, the Patriarchs, Jesus, Job, Jonah, Aaron, and Solomon. And we gave David the Psalms",
-    "text_b": "Because he abandoned them and the gods they worshiped beside GOD, we granted him Isaac and Jacob, and we made each of them a prophet."
-  },
-  {
-    "entity": "jesus",
-    "verse_a": "2:253",
-    "verse_b": "61:14",
-    "surah_a": "2 (The Heifer)",
-    "surah_b": "61 (The Column)",
-    "shared_words": [
-      "believed",
-      "disbelieved",
-      "god",
-      "jesus",
-      "mary",
-      "son"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "These messengers; we blessed some of them more than others. For example, GOD spoke to one, and we raised some of them to higher ranks. And we gave Jesus, son of Mary, profound miracles and supported h",
-    "text_b": "O you who believe, be GOD's supporters, like the disciples of Jesus, son of Mary. When he said to them, \"Who are my supporters towards GOD,\" they said, \"We are GOD's supporters.\" Thus, a group from th"
-  },
-  {
-    "entity": "jesus",
-    "verse_a": "3:59",
-    "verse_b": "5:114",
-    "surah_a": "3 (The Amramites)",
-    "surah_b": "5 (The Feast)",
-    "shared_words": [
-      "god",
-      "jesus",
-      "said"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "The example of Jesus, as far as GOD is concerned, is the same as that of Adam; He created him from dust, then said to him, \"Be,\" and he was.",
-    "text_b": "Said Jesus, the son of Mary, \"Our god, our Lord, send down to us a feast from the sky. Let it bring plenty for each and every one of us, and a sign from You. Provide for us; You are the best Provider."
-  },
-  {
-    "entity": "pharaoh",
-    "verse_a": "2:49",
-    "verse_b": "8:54",
-    "surah_a": "2 (The Heifer)",
-    "surah_b": "8 (The Spoils of War)",
-    "shared_words": [
-      "lord",
-      "people",
-      "pharaoh"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "Recall that we saved you from Pharaoh's people who inflicted upon you the worst persecution, slaying your sons and sparing your daughters. That was an exacting test from your Lord.",
-    "text_b": "Such was the case with the people of Pharaoh and others before them. They first rejected the signs of their Lord. Consequently, we annihilated them for their sins. We drowned Pharaoh's people; the wic"
-  },
-  {
-    "entity": "pharaoh",
-    "verse_a": "7:123",
-    "verse_b": "17:101",
-    "surah_a": "7 (The Purgatory)",
-    "surah_b": "17 (The Children of Israel)",
-    "shared_words": [
-      "him",
-      "pharaoh",
-      "said"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "Pharaoh said, \"Did you believe in him without my permission? This must be a conspiracy you schemed in the city, in order to take its people away. You will surely find out.",
-    "text_b": "We supported Moses with nine profound miracles - ask the Children of Israel. When he went to them, Pharaoh said to him, \"I think that you, Moses, are bewitched.\""
-  },
-  {
-    "entity": "pharaoh",
-    "verse_a": "7:123",
-    "verse_b": "40:45",
-    "surah_a": "7 (The Purgatory)",
-    "surah_b": "40 (Forgiver)",
-    "shared_words": [
-      "him",
-      "people",
-      "pharaoh"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "Pharaoh said, \"Did you believe in him without my permission? This must be a conspiracy you schemed in the city, in order to take its people away. You will surely find out.",
-    "text_b": "GOD then protected him from their evil schemes, while the people of Pharaoh have incurred the worst retribution. While in the Grave: A Continuous Nightmare"
-  },
-  {
-    "entity": "pharaoh",
-    "verse_a": "7:141",
-    "verse_b": "8:54",
-    "surah_a": "7 (The Purgatory)",
-    "surah_b": "8 (The Spoils of War)",
-    "shared_words": [
-      "lord",
-      "people",
-      "pharaoh"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "Recall that we delivered you from Pharaoh's people, who inflicted the worst persecution upon you, killing your sons and sparing your daughters. That was an exacting trial for you from your Lord.",
-    "text_b": "Such was the case with the people of Pharaoh and others before them. They first rejected the signs of their Lord. Consequently, we annihilated them for their sins. We drowned Pharaoh's people; the wic"
-  },
-  {
-    "entity": "pharaoh",
-    "verse_a": "8:52",
-    "verse_b": "66:11",
-    "surah_a": "8 (The Spoils of War)",
-    "surah_b": "66 (Prohibition)",
-    "shared_words": [
-      "god",
-      "people",
-      "pharaoh"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "This is the same fate as that of Pharaoh's people and those who disbelieved before them. They rejected GOD's revelations, and GOD punished them for their sins. GOD is powerful, and His retribution is ",
-    "text_b": "And GOD cites as an example of those who believed the wife of Pharaoh. She said, \"My Lord, build a home for me at You in Paradise, and save me from Pharaoh and his works; save me from the transgressin"
-  },
-  {
-    "entity": "pharaoh",
-    "verse_a": "8:54",
-    "verse_b": "27:12",
-    "surah_a": "8 (The Spoils of War)",
-    "surah_b": "27 (The Ant)",
-    "shared_words": [
-      "people",
-      "pharaoh",
-      "wicked"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "Such was the case with the people of Pharaoh and others before them. They first rejected the signs of their Lord. Consequently, we annihilated them for their sins. We drowned Pharaoh's people; the wic",
-    "text_b": "\"Put your hand in your pocket; it will come out white, without a blemish. These are among nine miracles to Pharaoh and his people, for they are wicked people.\""
-  },
-  {
-    "entity": "pharaoh",
-    "verse_a": "14:6",
-    "verse_b": "28:3",
-    "surah_a": "14 (Abraham)",
-    "surah_b": "28 (History)",
-    "shared_words": [
-      "moses",
-      "people",
-      "pharaoh"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "Recall that Moses said to his people, \"Remember GOD's blessings upon you. He saved you from Pharaoh's people who inflicted the worst persecution upon you, slaughtering your sons and sparing your daugh",
-    "text_b": "We recite to you herein some history of Moses and Pharaoh, truthfully, for the benefit of people who believe."
-  },
-  {
-    "entity": "pharaoh",
-    "verse_a": "14:6",
-    "verse_b": "40:46",
-    "surah_a": "14 (Abraham)",
-    "surah_b": "40 (Forgiver)",
-    "shared_words": [
-      "people",
-      "pharaoh",
-      "worst"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "Recall that Moses said to his people, \"Remember GOD's blessings upon you. He saved you from Pharaoh's people who inflicted the worst persecution upon you, slaughtering your sons and sparing your daugh",
-    "text_b": "The Hell will be shown to them day and night, and on the Day of Resurrection: \"Admit Pharaoh's people into the worst retribution.\""
-  },
-  {
-    "entity": "pharaoh",
-    "verse_a": "14:6",
-    "verse_b": "43:46",
-    "surah_a": "14 (Abraham)",
-    "surah_b": "43 (Ornaments)",
-    "shared_words": [
-      "lord",
-      "moses",
-      "pharaoh"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "Recall that Moses said to his people, \"Remember GOD's blessings upon you. He saved you from Pharaoh's people who inflicted the worst persecution upon you, slaughtering your sons and sparing your daugh",
-    "text_b": "For example, we sent Moses with our proofs to Pharaoh and his elders, proclaiming: \"I am a messenger from the Lord of the universe.\""
-  },
-  {
-    "entity": "pharaoh",
-    "verse_a": "17:102",
-    "verse_b": "40:26",
-    "surah_a": "17 (The Children of Israel)",
-    "surah_b": "40 (Forgiver)",
-    "shared_words": [
-      "lord",
-      "pharaoh",
-      "said"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "He said, \"You know full well that no one can manifest these except, obviously, the Lord of the heavens and the earth. I think that you, Pharaoh, are doomed.\"",
-    "text_b": "Pharaoh said, \"Let me kill Moses, and let him implore his Lord. I worry lest he corrupts your religion, or spreads evil throughout the land.\""
-  },
-  {
-    "entity": "pharaoh",
-    "verse_a": "28:3",
-    "verse_b": "40:37",
-    "surah_a": "28 (History)",
-    "surah_b": "40 (Forgiver)",
-    "shared_words": [
-      "believe",
-      "moses",
-      "pharaoh"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "We recite to you herein some history of Moses and Pharaoh, truthfully, for the benefit of people who believe.",
-    "text_b": "\"I want to reach the heaven, and take a look at the god of Moses. I believe he is a liar.\" Thus were the evil works of Pharaoh adorned in his eyes, and thus was he kept from following (the right) path"
-  },
-  {
-    "entity": "pharaoh",
-    "verse_a": "40:25",
-    "verse_b": "66:11",
-    "surah_a": "40 (Forgiver)",
-    "surah_b": "66 (Prohibition)",
-    "shared_words": [
-      "believed",
-      "pharaoh",
-      "said"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "And when he showed them the truth from us, they said, \"Kill the sons of those who believed with him, and spare their daughters.\" Thus, the scheming of the disbelievers is always wicked. Moses vs Phara",
-    "text_b": "And GOD cites as an example of those who believed the wife of Pharaoh. She said, \"My Lord, build a home for me at You in Paradise, and save me from Pharaoh and his works; save me from the transgressin"
-  },
-  {
-    "entity": "pharaoh",
-    "verse_a": "40:26",
-    "verse_b": "66:11",
-    "surah_a": "40 (Forgiver)",
-    "surah_b": "66 (Prohibition)",
-    "shared_words": [
-      "lord",
-      "pharaoh",
-      "said"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "Pharaoh said, \"Let me kill Moses, and let him implore his Lord. I worry lest he corrupts your religion, or spreads evil throughout the land.\"",
-    "text_b": "And GOD cites as an example of those who believed the wife of Pharaoh. She said, \"My Lord, build a home for me at You in Paradise, and save me from Pharaoh and his works; save me from the transgressin"
-  },
-  {
-    "entity": "lot",
-    "verse_a": "7:80",
-    "verse_b": "12:88",
-    "surah_a": "7 (The Purgatory)",
-    "surah_b": "12 (Joseph)",
-    "shared_words": [
-      "lot",
-      "one",
-      "said"
-    ],
-    "overlap_score": 0.107,
-    "text_a": "Lot said to his people, \"You commit such an abomination; no one in the world has done it before!",
-    "text_b": "When they entered (Joseph's) quarters, they said, \"O you noble one, we have suffered a lot of hardship, along with our family, and we have brought inferior goods. But we hope that you will give us ful"
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "9:114",
-    "verse_b": "60:4",
-    "surah_a": "9 (Ultimatum)",
-    "surah_b": "60 (The Test)",
-    "shared_words": [
-      "abraham",
-      "father",
-      "forgiveness",
-      "god",
-      "him"
-    ],
-    "overlap_score": 0.106,
-    "text_a": "The only reason Abraham asked forgiveness for his father was that he had promised him to do so. But as soon as he realized that he was an enemy of GOD, he disowned him. Abraham was extremely kind, cle",
-    "text_b": "A good example has been set for you by Abraham and those with him. They said to their people, \"We disown you and the idols that you worship besides GOD. We denounce you, and you will see nothing from "
-  },
-  {
-    "entity": "jesus",
-    "verse_a": "4:171",
-    "verse_b": "57:27",
-    "surah_a": "4 (Women)",
-    "surah_b": "57 (Iron)",
-    "shared_words": [
-      "god",
-      "him",
-      "jesus",
-      "mary",
-      "messengers",
-      "sent",
-      "son"
-    ],
-    "overlap_score": 0.106,
-    "text_a": "O people of the scripture, do not transgress the limits of your religion, and do not say about GOD except the truth. The Messiah, Jesus, the son of Mary, was a messenger of GOD, and His word that He h",
-    "text_b": "Subsequent to them, we sent our messengers. We sent Jesus the son of Mary, and we gave him the Injeel (Gospel), and we placed in the hearts of his followers kindness and mercy. But they invented hermi"
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "2:126",
-    "verse_b": "22:77",
-    "surah_a": "2 (The Heifer)",
-    "surah_b": "22 (Pilgrimage)",
-    "shared_words": [
-      "abraham",
-      "believe",
-      "islam",
-      "lord"
-    ],
-    "overlap_score": 0.105,
-    "text_a": "Abraham prayed: \"My Lord, make this a peaceful land, and provide its people with fruits. Provide for those who believe in GOD and the Last Day.\" (God) said, \"I will also provide for those who disbelie",
-    "text_b": "O you who believe, you shall bow, prostrate, worship your Lord, and work righteousness, that you may succeed. Abraham: Original Messenger of Islam"
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "3:84",
-    "verse_b": "9:114",
-    "surah_a": "3 (The Amramites)",
-    "surah_b": "9 (Ultimatum)",
-    "shared_words": [
-      "abraham",
-      "god",
-      "him",
-      "only"
-    ],
-    "overlap_score": 0.105,
-    "text_a": "Say, \"We believe in GOD, and in what was sent down to us, and in what was sent down to Abraham, Ismail, Isaac, Jacob, and the Patriarchs, and in what was given to Moses, Jesus, and the prophets from t",
-    "text_b": "The only reason Abraham asked forgiveness for his father was that he had promised him to do so. But as soon as he realized that he was an enemy of GOD, he disowned him. Abraham was extremely kind, cle"
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "4:125",
-    "verse_b": "19:58",
-    "surah_a": "4 (Women)",
-    "surah_b": "19 (Mary)",
-    "shared_words": [
-      "abraham",
-      "chosen",
-      "god",
-      "guided"
-    ],
-    "overlap_score": 0.105,
-    "text_a": "Who is better guided in his religion than one who submits totally to GOD, leads a righteous life, according to the creed of Abraham: monotheism? GOD has chosen Abraham as a beloved friend.",
-    "text_b": "These are some of the prophets whom GOD blessed. They were chosen from among the descendants of Adam, and the descendants of those whom we carried with Noah, and the descendants of Abraham and Israel,"
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "9:70",
-    "verse_b": "12:38",
-    "surah_a": "9 (Ultimatum)",
-    "surah_b": "12 (Joseph)",
-    "shared_words": [
-      "abraham",
-      "god",
-      "never",
-      "people"
-    ],
-    "overlap_score": 0.105,
-    "text_a": "Have they not learned anything from the previous generations; the people of Noah, `Aad, Thamood, the people of Abraham, the dwellers of Midyan, and the evildoers (of Sodom and Gomorrah)? Their messeng",
-    "text_b": "\"And I followed instead the religion of my ancestors, Abraham, Isaac, and Jacob. We never set up any idols beside GOD. Such is the blessing from GOD upon us and upon the people, but most people are un"
-  },
-  {
-    "entity": "jacob",
-    "verse_a": "2:136",
-    "verse_b": "6:84",
-    "surah_a": "2 (The Heifer)",
-    "surah_b": "6 (Livestock)",
-    "shared_words": [
-      "him",
-      "isaac",
-      "jacob",
-      "moses"
-    ],
-    "overlap_score": 0.105,
-    "text_a": "Say, \"We believe in GOD, and in what was sent down to us, and in what was sent down to Abraham, Ismail, Isaac, Jacob, and the Patriarchs; and in what was given to Moses and Jesus, and all the prophets",
-    "text_b": "And we granted him Isaac and Jacob, and we guided both of them. Similarly, we guided Noah before that, and from his descendants (we guided) David, Solomon, Job, Joseph, Moses, and Aaron. We thus rewar"
-  },
-  {
-    "entity": "jesus",
-    "verse_a": "3:45",
-    "verse_b": "9:30",
-    "surah_a": "3 (The Amramites)",
-    "surah_b": "9 (Ultimatum)",
-    "shared_words": [
-      "god",
-      "jesus",
-      "said",
-      "son"
-    ],
-    "overlap_score": 0.105,
-    "text_a": "The angels said, \"O Mary, GOD gives you good news: a Word from Him whose name is `The Messiah, Jesus the son of Mary. He will be prominent in this life and in the Hereafter, and one of those closest t",
-    "text_b": "The Jews said, \"Ezra is the son of GOD,\" while the Christians said, \"Jesus is the son of GOD!\" These are blasphemies uttered by their mouths. They thus match the blasphemies of those who have disbelie"
-  },
-  {
-    "entity": "jesus",
-    "verse_a": "3:84",
-    "verse_b": "5:112",
-    "surah_a": "3 (The Amramites)",
-    "surah_b": "5 (The Feast)",
-    "shared_words": [
-      "down",
-      "god",
-      "jesus",
-      "lord"
-    ],
-    "overlap_score": 0.105,
-    "text_a": "Say, \"We believe in GOD, and in what was sent down to us, and in what was sent down to Abraham, Ismail, Isaac, Jacob, and the Patriarchs, and in what was given to Moses, Jesus, and the prophets from t",
-    "text_b": "Recall that the disciples said, \"O Jesus, son of Mary, can your Lord send down to us a feast from the sky?\" He said, \"You should reverence GOD, if you are believers.\""
-  },
-  {
-    "entity": "joseph",
-    "verse_a": "6:84",
-    "verse_b": "40:34",
-    "surah_a": "6 (Livestock)",
-    "surah_b": "40 (Forgiver)",
-    "shared_words": [
-      "before",
-      "him",
-      "joseph",
-      "thus"
-    ],
-    "overlap_score": 0.105,
+    "overlap_score": 0.111,
     "text_a": "And we granted him Isaac and Jacob, and we guided both of them. Similarly, we guided Noah before that, and from his descendants (we guided) David, Solomon, Job, Joseph, Moses, and Aaron. We thus rewar",
-    "text_b": "Joseph had come to you before that with clear revelations, but you continued to doubt his message. Then, when he died you said, \"GOD will not send any other messenger after him. (He was the last messe"
-  },
-  {
-    "entity": "lot",
-    "verse_a": "7:79",
-    "verse_b": "11:81",
-    "surah_a": "7 (The Purgatory)",
-    "surah_b": "11 (Hood)",
-    "shared_words": [
-      "condemned",
-      "lord",
-      "lot",
-      "people"
-    ],
-    "overlap_score": 0.105,
-    "text_a": "He turned away from them, saying, \"O my people, I have delivered my Lord's message to you, and advised you, but you do not like any advisers.\" Lot: Homosexuality Condemned",
-    "text_b": "(The angels) said, \"O Lot, we are your Lord's messengers, and these people cannot touch you. You shall leave with your family during the night, and let not anyone of you look back, except your wife; s"
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "2:133",
-    "verse_b": "60:4",
-    "surah_a": "2 (The Heifer)",
-    "surah_b": "60 (The Test)",
-    "shared_words": [
-      "abraham",
-      "god",
-      "him",
-      "said",
-      "worship"
-    ],
-    "overlap_score": 0.104,
-    "text_a": "Had you witnessed Jacob on his death bed; he said to his children, \"What will you worship after I die?\" They said, \"We will worship your god; the god of your fathers Abraham, Ismail, and Isaac; the on",
-    "text_b": "A good example has been set for you by Abraham and those with him. They said to their people, \"We disown you and the idols that you worship besides GOD. We denounce you, and you will see nothing from "
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "4:125",
-    "verse_b": "22:78",
-    "surah_a": "4 (Women)",
-    "surah_b": "22 (Pilgrimage)",
-    "shared_words": [
-      "abraham",
-      "chosen",
-      "god",
-      "one",
-      "religion"
-    ],
-    "overlap_score": 0.104,
-    "text_a": "Who is better guided in his religion than one who submits totally to GOD, leads a righteous life, according to the creed of Abraham: monotheism? GOD has chosen Abraham as a beloved friend.",
-    "text_b": "You shall strive for the cause of GOD as you should strive for His cause. He has chosen you and has placed no hardship on you in practicing your religion - the religion of your father Abraham. He is t"
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "29:31",
-    "verse_b": "60:4",
-    "surah_a": "29 (The Spider)",
-    "surah_b": "60 (The Test)",
-    "shared_words": [
-      "abraham",
-      "been",
-      "good",
-      "people",
-      "said"
-    ],
-    "overlap_score": 0.104,
-    "text_a": "When our messengers went to Abraham with good news (about Isaac's birth), they also said, \"We are on our way to annihilate the people of that town (Sodom), for its people have been wicked.\"",
-    "text_b": "A good example has been set for you by Abraham and those with him. They said to their people, \"We disown you and the idols that you worship besides GOD. We denounce you, and you will see nothing from "
-  },
-  {
-    "entity": "jesus",
-    "verse_a": "2:253",
-    "verse_b": "5:78",
-    "surah_a": "2 (The Heifer)",
-    "surah_b": "5 (The Feast)",
-    "shared_words": [
-      "among",
-      "disbelieved",
-      "jesus",
-      "mary",
-      "son"
-    ],
-    "overlap_score": 0.104,
-    "text_a": "These messengers; we blessed some of them more than others. For example, GOD spoke to one, and we raised some of them to higher ranks. And we gave Jesus, son of Mary, profound miracles and supported h",
-    "text_b": "Condemned are those who disbelieved among the Children of Israel, by the tongue of David and Jesus, the son of Mary. This is because they disobeyed and transgressed."
-  },
-  {
-    "entity": "jesus",
-    "verse_a": "3:45",
-    "verse_b": "57:27",
-    "surah_a": "3 (The Amramites)",
-    "surah_b": "57 (Iron)",
-    "shared_words": [
-      "god",
-      "him",
-      "jesus",
-      "mary",
-      "son"
-    ],
-    "overlap_score": 0.104,
-    "text_a": "The angels said, \"O Mary, GOD gives you good news: a Word from Him whose name is `The Messiah, Jesus the son of Mary. He will be prominent in this life and in the Hereafter, and one of those closest t",
-    "text_b": "Subsequent to them, we sent our messengers. We sent Jesus the son of Mary, and we gave him the Injeel (Gospel), and we placed in the hearts of his followers kindness and mercy. But they invented hermi"
-  },
-  {
-    "entity": "adam",
-    "verse_a": "7:26",
-    "verse_b": "20:121",
-    "surah_a": "7 (The Purgatory)",
-    "surah_b": "20 (T.H.)",
-    "shared_words": [
-      "adam",
-      "bodies",
-      "cover"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "O children of Adam, we have provided you with garments to cover your bodies, as well as for luxury. But the best garment is the garment of righteousness. These are some of GOD's signs, that they may t",
-    "text_b": "They ate from it, whereupon their bodies became visible to them, and they tried to cover themselves with the leaves of Paradise. Adam thus disobeyed his Lord, and fell."
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "2:133",
-    "verse_b": "6:74",
-    "surah_a": "2 (The Heifer)",
-    "surah_b": "6 (Livestock)",
-    "shared_words": [
-      "abraham",
-      "said",
-      "worship"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "Had you witnessed Jacob on his death bed; he said to his children, \"What will you worship after I die?\" They said, \"We will worship your god; the god of your fathers Abraham, Ismail, and Isaac; the on",
-    "text_b": "Recall that Abraham said to his father Azar, \"How could you worship statues as gods? I see that you and your people have gone far astray.\""
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "2:136",
-    "verse_b": "38:45",
-    "surah_a": "2 (The Heifer)",
-    "surah_b": "38 (S.)",
-    "shared_words": [
-      "abraham",
-      "isaac",
-      "jacob"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "Say, \"We believe in GOD, and in what was sent down to us, and in what was sent down to Abraham, Ismail, Isaac, Jacob, and the Patriarchs; and in what was given to Moses and Jesus, and all the prophets",
-    "text_b": "Remember also our servants Abraham, Isaac, and Jacob. They were resourceful, and possessed vision."
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "2:140",
-    "verse_b": "6:161",
-    "surah_a": "2 (The Heifer)",
-    "surah_b": "6 (Livestock)",
-    "shared_words": [
-      "abraham",
-      "never",
-      "say"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "Do you say that Abraham, Ismail, Isaac, Jacob, and the Patriarchs were Jewish or Christian? Say, \"Do you know better than GOD? Who is more evil than one who conceals a testimony he has learned from GO",
-    "text_b": "Say, \"My Lord has guided me in a straight path - the perfect religion of Abraham, monotheism. He never was an idol worshiper.\""
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "2:140",
-    "verse_b": "29:16",
-    "surah_a": "2 (The Heifer)",
-    "surah_b": "29 (The Spider)",
-    "shared_words": [
-      "abraham",
-      "better",
-      "god"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "Do you say that Abraham, Ismail, Isaac, Jacob, and the Patriarchs were Jewish or Christian? Say, \"Do you know better than GOD? Who is more evil than one who conceals a testimony he has learned from GO",
-    "text_b": "Abraham said to his people, \"You shall worship GOD, and reverence Him. This is better for you, if you only knew. God: The Only Source of Provisions"
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "3:84",
-    "verse_b": "4:125",
-    "surah_a": "3 (The Amramites)",
-    "surah_b": "4 (Women)",
-    "shared_words": [
-      "abraham",
-      "god",
-      "one",
-      "religion"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "Say, \"We believe in GOD, and in what was sent down to us, and in what was sent down to Abraham, Ismail, Isaac, Jacob, and the Patriarchs, and in what was given to Moses, Jesus, and the prophets from t",
-    "text_b": "Who is better guided in his religion than one who submits totally to GOD, leads a righteous life, according to the creed of Abraham: monotheism? GOD has chosen Abraham as a beloved friend."
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "3:97",
-    "verse_b": "29:16",
-    "surah_a": "3 (The Amramites)",
-    "surah_b": "29 (The Spider)",
-    "shared_words": [
-      "abraham",
-      "god",
-      "people"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "In it are clear signs: the station of Abraham. Anyone who enters it shall be granted safe passage. The people owe it to GOD that they shall observe Hajj to this shrine, when they can afford it. As for",
-    "text_b": "Abraham said to his people, \"You shall worship GOD, and reverence Him. This is better for you, if you only knew. God: The Only Source of Provisions"
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "4:54",
-    "verse_b": "12:38",
-    "surah_a": "4 (Women)",
-    "surah_b": "12 (Joseph)",
-    "shared_words": [
-      "abraham",
-      "god",
-      "people"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "Are they envious of the people because GOD has showered them with His blessings? We have given Abraham's family the scripture, and wisdom; we granted them a great authority.",
-    "text_b": "\"And I followed instead the religion of my ancestors, Abraham, Isaac, and Jacob. We never set up any idols beside GOD. Such is the blessing from GOD upon us and upon the people, but most people are un"
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "4:163",
-    "verse_b": "42:13",
-    "surah_a": "4 (Women)",
-    "surah_b": "42 (Consultation)",
-    "shared_words": [
-      "abraham",
-      "inspired",
-      "jesus",
-      "noah"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "We have inspired you, as we inspired Noah and the prophets after him. And we inspired Abraham, Ismail, Isaac, Jacob, the Patriarchs, Jesus, Job, Jonah, Aaron, and Solomon. And we gave David the Psalms",
-    "text_b": "He decreed for you the same religion decreed for Noah, and what we inspired to you, and what we decreed for Abraham, Moses, and Jesus: \"You shall uphold this one religion, and do not divide it.\" The i"
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "6:74",
-    "verse_b": "29:31",
-    "surah_a": "6 (Livestock)",
-    "surah_b": "29 (The Spider)",
-    "shared_words": [
-      "abraham",
-      "people",
-      "said"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "Recall that Abraham said to his father Azar, \"How could you worship statues as gods? I see that you and your people have gone far astray.\"",
-    "text_b": "When our messengers went to Abraham with good news (about Isaac's birth), they also said, \"We are on our way to annihilate the people of that town (Sodom), for its people have been wicked.\""
-  },
-  {
-    "entity": "abraham",
-    "verse_a": "12:38",
-    "verse_b": "60:3",
-    "surah_a": "12 (Joseph)",
-    "surah_b": "60 (The Test)",
-    "shared_words": [
-      "abraham",
-      "god",
-      "never"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "\"And I followed instead the religion of my ancestors, Abraham, Isaac, and Jacob. We never set up any idols beside GOD. Such is the blessing from GOD upon us and upon the people, but most people are un",
-    "text_b": "Your relatives and your money can never help you. On the Day of Resurrection, He will judge among you. GOD is Seer of everything you do. Abraham: An Example"
-  },
-  {
-    "entity": "aaron",
-    "verse_a": "2:248",
-    "verse_b": "10:75",
-    "surah_a": "2 (The Heifer)",
-    "surah_b": "10 (Jonah)",
-    "shared_words": [
-      "aaron",
-      "moses",
-      "people"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "Their prophet said to them, \"The sign of his kingship is that the Ark of the Covenant will be restored to you, bringing assurances from your Lord, and relics left by the people of Moses and the people",
-    "text_b": "Then we sent after them Moses and Aaron to Pharaoh and his group, with our proofs. But they turned arrogant; and were transgressing people."
-  },
-  {
-    "entity": "aaron",
-    "verse_a": "2:248",
-    "verse_b": "20:90",
-    "surah_a": "2 (The Heifer)",
-    "surah_b": "20 (T.H.)",
-    "shared_words": [
-      "aaron",
-      "lord",
-      "people"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "Their prophet said to them, \"The sign of his kingship is that the Ark of the Covenant will be restored to you, bringing assurances from your Lord, and relics left by the people of Moses and the people",
-    "text_b": "And Aaron had told them, \"O my people, this is a test for you. Your only Lord is the Most Gracious, so follow me, and obey my commands.\""
-  },
-  {
-    "entity": "jacob",
-    "verse_a": "2:133",
-    "verse_b": "29:27",
-    "surah_a": "2 (The Heifer)",
-    "surah_b": "29 (The Spider)",
-    "shared_words": [
-      "him",
-      "isaac",
-      "jacob"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "Had you witnessed Jacob on his death bed; he said to his children, \"What will you worship after I die?\" They said, \"We will worship your god; the god of your fathers Abraham, Ismail, and Isaac; the on",
-    "text_b": "We granted him Isaac and Jacob, we assigned to his descendants prophethood and the scriptures, we endowed him with his due recompense in this life, and in the Hereafter he will surely be with the righ"
-  },
-  {
-    "entity": "isaac",
-    "verse_a": "2:136",
-    "verse_b": "37:113",
-    "surah_a": "2 (The Heifer)",
-    "surah_b": "37 (The Arrangers)",
-    "shared_words": [
-      "among",
-      "him",
-      "isaac"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "Say, \"We believe in GOD, and in what was sent down to us, and in what was sent down to Abraham, Ismail, Isaac, Jacob, and the Patriarchs; and in what was given to Moses and Jesus, and all the prophets",
-    "text_b": "We blessed him and Isaac. Among their descendants, some are righteous, and some are wicked transgressors."
-  },
-  {
-    "entity": "jesus",
-    "verse_a": "2:136",
-    "verse_b": "5:114",
-    "surah_a": "2 (The Heifer)",
-    "surah_b": "5 (The Feast)",
-    "shared_words": [
-      "down",
-      "god",
-      "jesus",
-      "lord"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "Say, \"We believe in GOD, and in what was sent down to us, and in what was sent down to Abraham, Ismail, Isaac, Jacob, and the Patriarchs; and in what was given to Moses and Jesus, and all the prophets",
-    "text_b": "Said Jesus, the son of Mary, \"Our god, our Lord, send down to us a feast from the sky. Let it bring plenty for each and every one of us, and a sign from You. Provide for us; You are the best Provider."
-  },
-  {
-    "entity": "jesus",
-    "verse_a": "3:45",
-    "verse_b": "5:78",
-    "surah_a": "3 (The Amramites)",
-    "surah_b": "5 (The Feast)",
-    "shared_words": [
-      "jesus",
-      "mary",
-      "son"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "The angels said, \"O Mary, GOD gives you good news: a Word from Him whose name is `The Messiah, Jesus the son of Mary. He will be prominent in this life and in the Hereafter, and one of those closest t",
-    "text_b": "Condemned are those who disbelieved among the Children of Israel, by the tongue of David and Jesus, the son of Mary. This is because they disobeyed and transgressed."
-  },
-  {
-    "entity": "jesus",
-    "verse_a": "3:45",
-    "verse_b": "43:63",
-    "surah_a": "3 (The Amramites)",
-    "surah_b": "43 (Ornaments)",
-    "shared_words": [
-      "god",
-      "jesus",
-      "said"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "The angels said, \"O Mary, GOD gives you good news: a Word from Him whose name is `The Messiah, Jesus the son of Mary. He will be prominent in this life and in the Hereafter, and one of those closest t",
-    "text_b": "When Jesus went with the proofs, he said, \"I bring to you wisdom, and to clarify some of the matters in which you dispute. You shall reverence GOD and obey me."
-  },
-  {
-    "entity": "jesus",
-    "verse_a": "3:52",
-    "verse_b": "5:114",
-    "surah_a": "3 (The Amramites)",
-    "surah_b": "5 (The Feast)",
-    "shared_words": [
-      "god",
-      "jesus",
-      "said"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "When Jesus sensed their disbelief, he said, \"Who are my supporters towards GOD?\" The disciples said, \"We are GOD's supporters; we believe in GOD, and bear witness that we are submitters.\"",
-    "text_b": "Said Jesus, the son of Mary, \"Our god, our Lord, send down to us a feast from the sky. Let it bring plenty for each and every one of us, and a sign from You. Provide for us; You are the best Provider."
-  },
-  {
-    "entity": "jesus",
-    "verse_a": "4:157",
-    "verse_b": "5:112",
-    "surah_a": "4 (Women)",
-    "surah_b": "5 (The Feast)",
-    "shared_words": [
-      "god",
-      "jesus",
-      "mary",
-      "son"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "And for claiming that they killed the Messiah, Jesus, son of Mary, the messenger of GOD. In fact, they never killed him, they never crucified him - they were made to think that they did. All factions ",
-    "text_b": "Recall that the disciples said, \"O Jesus, son of Mary, can your Lord send down to us a feast from the sky?\" He said, \"You should reverence GOD, if you are believers.\""
-  },
-  {
-    "entity": "jesus",
-    "verse_a": "5:114",
-    "verse_b": "9:30",
-    "surah_a": "5 (The Feast)",
-    "surah_b": "9 (Ultimatum)",
-    "shared_words": [
-      "god",
-      "jesus",
-      "said",
-      "son"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "Said Jesus, the son of Mary, \"Our god, our Lord, send down to us a feast from the sky. Let it bring plenty for each and every one of us, and a sign from You. Provide for us; You are the best Provider.",
-    "text_b": "The Jews said, \"Ezra is the son of GOD,\" while the Christians said, \"Jesus is the son of GOD!\" These are blasphemies uttered by their mouths. They thus match the blasphemies of those who have disbelie"
-  },
-  {
-    "entity": "joseph",
-    "verse_a": "6:84",
-    "verse_b": "12:56",
-    "surah_a": "6 (Livestock)",
-    "surah_b": "12 (Joseph)",
-    "shared_words": [
-      "joseph",
-      "righteous",
-      "thus"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "And we granted him Isaac and Jacob, and we guided both of them. Similarly, we guided Noah before that, and from his descendants (we guided) David, Solomon, Job, Joseph, Moses, and Aaron. We thus rewar",
-    "text_b": "We thus established Joseph on earth, ruling as he wished. We shower our mercy upon whomever we will, and we never fail to recompense the righteous."
-  },
-  {
-    "entity": "joseph",
-    "verse_a": "12:11",
-    "verse_b": "40:34",
-    "surah_a": "12 (Joseph)",
-    "surah_b": "40 (Forgiver)",
-    "shared_words": [
-      "him",
-      "joseph",
-      "said"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "They said, \"Our father, why do you not trust us with Joseph? We will take good care of him.",
-    "text_b": "Joseph had come to you before that with clear revelations, but you continued to doubt his message. Then, when he died you said, \"GOD will not send any other messenger after him. (He was the last messe"
-  },
-  {
-    "entity": "pharaoh",
-    "verse_a": "3:11",
-    "verse_b": "40:29",
-    "surah_a": "3 (The Amramites)",
-    "surah_b": "40 (Forgiver)",
-    "shared_words": [
-      "god",
-      "people",
-      "pharaoh"
-    ],
-    "overlap_score": 0.103,
-    "text_a": "Like Pharaoh's people and those before them, they rejected our revelations and, consequently, GOD punished them for their sins. GOD is strict in enforcing retribution.",
-    "text_b": "\"O my people, today you have kingship and the upperhand. But who will help us against GOD's judgment, should it come to us?\" Pharaoh said, \"You are to follow only what I see fit; I will guide you only"
+    "text_b": "We sent Noah to his people, saying, \"O my people, worship GOD. You have no other god beside Him. Would you not be righteous?\""
   }
 ]

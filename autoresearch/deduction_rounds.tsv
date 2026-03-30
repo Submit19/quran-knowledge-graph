@@ -529,3 +529,21 @@ round	timestamp	novel_found	total_novel	elapsed	strategy	mutations
 401	2026-03-30T13:02:33.252159	216	98748	10.1	by_surah	no changes
 402	2026-03-30T13:02:54.785924	56	98804	21.5	high_connectivity	strategy: by_surah -> high_connectivity; verses: 750 -> 2000
 403	2026-03-30T13:03:15.388614	77	98881	20.6	high_connectivity	no changes
+404	2026-03-30T13:03:49.249928	150	99031	33.9	by_surah	strategy: high_connectivity -> by_surah; verses: 2000 -> 6234; min_novelty: 40 -> 60; max_neighbors_hop3: 18 -> 20
+405	2026-03-30T13:04:21.561510	145	99176	32.3	by_surah	no changes
+406	2026-03-30T13:04:55.038298	117	99293	33.5	by_surah	no changes
+407	2026-03-30T13:05:28.808524	196	99489	33.8	by_surah	shared_subject_max: 300 -> 800
+408	2026-03-30T13:06:01.355321	225	99714	32.5	by_surah	no changes
+409	2026-03-30T13:06:34.544568	181	99895	33.2	by_surah	no changes
+410	2026-03-30T13:06:46.377870	208	100103	11.8	by_surah	verses: 6234 -> 1000
+1	2026-03-30T13:07:27.371267	643	643	13.5	random	no changes
+2	2026-03-30T13:07:35.441456	630	1273	8.1	random	max_neighbors_hop3: 4 -> 6
+3	2026-03-30T13:07:48.312128	662	1935	12.9	random	no changes
+4	2026-03-30T13:07:50.887601	291	2226	2.6	random	thematic_bridge_max: 300 -> 800; focus: all -> surahs [19, 33, 38, 67, 69]...
+5	2026-03-30T13:07:53.423044	0	2226	2.5	random	verses: 1000 -> 1500; transitive_max_chains: 300 -> 800; max_neighbors_hop1: 10 -> 11
+6	2026-03-30T13:07:55.961951	0	2226	2.5	random	shared_subject_max: 300 -> 100
+7	2026-03-30T13:07:58.491730	0	2226	2.5	random	thematic_bridge_max: 800 -> 200
+8	2026-03-30T13:08:00.989015	21	2247	2.5	high_connectivity	strategy: random -> high_connectivity; verses: 1500 -> 3000; thematic_bridge_max: 200 -> 100; max_neighbors_hop2: 6 -> 4
+9	2026-03-30T13:08:03.541232	86	2333	2.5	random	strategy: high_connectivity -> random; shared_subject_max: 100 -> 500; min_novelty: 60.0 -> 40; max_neighbors_hop1: 11 -> 12
+10	2026-03-30T13:08:06.099788	0	2333	2.6	random	transitive_max_chains: 800 -> 100; max_neighbors_hop1: 12 -> 11
+11	2026-03-30T13:08:37.356028	582	2915	31.2	random	focus: specific -> all
