@@ -1,0 +1,3053 @@
+{
+  "moses": {
+    "total_verses": 138,
+    "surahs": {
+      "7": 20,
+      "20": 17,
+      "28": 17,
+      "2": 13,
+      "10": 9,
+      "26": 8,
+      "40": 6,
+      "5": 4,
+      "18": 4,
+      "6": 3,
+      "11": 3,
+      "14": 3,
+      "27": 3,
+      "4": 2,
+      "17": 2,
+      "23": 2,
+      "33": 2,
+      "37": 2,
+      "46": 2,
+      "3": 1,
+      "19": 1,
+      "21": 1,
+      "22": 1,
+      "25": 1,
+      "29": 1,
+      "32": 1,
+      "41": 1,
+      "42": 1,
+      "43": 1,
+      "51": 1,
+      "53": 1,
+      "61": 1,
+      "79": 1,
+      "87": 1,
+      "114": 1
+    },
+    "events": [
+      {
+        "name": "lord_aaron_fell",
+        "verses": [
+          "7:122",
+          "20:49",
+          "20:70",
+          "26:48"
+        ],
+        "keywords": [
+          "lord",
+          "aaron",
+          "fell",
+          "believe",
+          "magicians"
+        ],
+        "verse_count": 4
+      },
+      {
+        "name": "gave_scripture_guided",
+        "verses": [
+          "2:53",
+          "21:48",
+          "23:49"
+        ],
+        "keywords": [
+          "gave",
+          "scripture",
+          "guided",
+          "statute",
+          "book"
+        ],
+        "verse_count": 3
+      },
+      {
+        "name": "pharaoh_lord_messenger",
+        "verses": [
+          "7:104",
+          "43:46",
+          "51:38"
+        ],
+        "keywords": [
+          "pharaoh",
+          "lord",
+          "messenger",
+          "universe",
+          "sent"
+        ],
+        "verse_count": 3
+      },
+      {
+        "name": "throw_either_throwing",
+        "verses": [
+          "7:115",
+          "20:19",
+          "20:65"
+        ],
+        "keywords": [
+          "throw",
+          "either",
+          "throwing",
+          "first"
+        ],
+        "verse_count": 3
+      },
+      {
+        "name": "wicked_yet_calf",
+        "verses": [
+          "2:51",
+          "2:92"
+        ],
+        "keywords": [
+          "wicked",
+          "yet",
+          "calf",
+          "turned",
+          "absence"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "eat_knew_springs",
+        "verses": [
+          "2:60",
+          "7:160"
+        ],
+        "keywords": [
+          "eat",
+          "knew",
+          "springs",
+          "people",
+          "rock"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "jesus_distinction_isaac",
+        "verses": [
+          "2:136",
+          "3:84"
+        ],
+        "keywords": [
+          "jesus",
+          "distinction",
+          "isaac",
+          "prophets",
+          "believe"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "whereupon_fabricated_swallowed",
+        "verses": [
+          "7:117",
+          "26:45"
+        ],
+        "keywords": [
+          "whereupon",
+          "fabricated",
+          "swallowed",
+          "staff",
+          "whatever"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "throw_going_whatever",
+        "verses": [
+          "10:80",
+          "26:43"
+        ],
+        "keywords": [
+          "throw",
+          "going",
+          "whatever",
+          "magicians"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "profound_sent_signs",
+        "verses": [
+          "11:96",
+          "40:23"
+        ],
+        "keywords": [
+          "profound",
+          "sent",
+          "signs",
+          "authority"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "judged_immediately_disputed",
+        "verses": [
+          "11:110",
+          "41:45"
+        ],
+        "keywords": [
+          "judged",
+          "immediately",
+          "disputed",
+          "scripture",
+          "predetermined"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "history_noted_known",
+        "verses": [
+          "20:9",
+          "79:15"
+        ],
+        "keywords": [
+          "history",
+          "noted",
+          "known"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "around_throw_saw",
+        "verses": [
+          "27:10",
+          "28:31"
+        ],
+        "keywords": [
+          "around",
+          "throw",
+          "saw",
+          "fled",
+          "like"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "israel_children_scripture",
+        "verses": [
+          "32:23",
+          "40:53"
+        ],
+        "keywords": [
+          "israel",
+          "children",
+          "scripture",
+          "given",
+          "guide"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "aaron_blessed_peace",
+        "verses": [
+          "37:114",
+          "37:120"
+        ],
+        "keywords": [
+          "aaron",
+          "blessed",
+          "peace"
+        ],
+        "verse_count": 2
+      }
+    ],
+    "parallels": [
+      {
+        "event": "lord_aaron_fell",
+        "keywords": [
+          "lord",
+          "aaron",
+          "fell",
+          "believe",
+          "magicians"
+        ],
+        "tellings": [
+          {
+            "surah": 20,
+            "verses": [
+              "20:49",
+              "20:70"
+            ],
+            "verse_count": 2,
+            "unique_words": [
+              "believe",
+              "fell",
+              "magicians",
+              "prostrate"
+            ],
+            "unique_word_count": 4,
+            "shared_word_count": 3
+          },
+          {
+            "surah": 7,
+            "verses": [
+              "7:122"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 3
+          },
+          {
+            "surah": 26,
+            "verses": [
+              "26:48"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 3
+          }
+        ],
+        "num_surahs": 3
+      },
+      {
+        "event": "gave_scripture_guided",
+        "keywords": [
+          "gave",
+          "scripture",
+          "guided",
+          "statute",
+          "book"
+        ],
+        "tellings": [
+          {
+            "surah": 2,
+            "verses": [
+              "2:53"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "recall"
+            ],
+            "unique_word_count": 1,
+            "shared_word_count": 6
+          },
+          {
+            "surah": 21,
+            "verses": [
+              "21:48"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "aaron",
+              "beacon",
+              "reminder",
+              "righteous"
+            ],
+            "unique_word_count": 4,
+            "shared_word_count": 4
+          },
+          {
+            "surah": 23,
+            "verses": [
+              "23:49"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 4
+          }
+        ],
+        "num_surahs": 3
+      },
+      {
+        "event": "pharaoh_lord_messenger",
+        "keywords": [
+          "pharaoh",
+          "lord",
+          "messenger",
+          "universe",
+          "sent"
+        ],
+        "tellings": [
+          {
+            "surah": 7,
+            "verses": [
+              "7:104"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 5
+          },
+          {
+            "surah": 43,
+            "verses": [
+              "43:46"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "elders",
+              "example",
+              "proclaiming"
+            ],
+            "unique_word_count": 3,
+            "shared_word_count": 7
+          },
+          {
+            "surah": 51,
+            "verses": [
+              "51:38"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "lesson",
+              "manifest"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 4
+          }
+        ],
+        "num_surahs": 3
+      },
+      {
+        "event": "throw_either_throwing",
+        "keywords": [
+          "throw",
+          "either",
+          "throwing",
+          "first"
+        ],
+        "tellings": [
+          {
+            "surah": 20,
+            "verses": [
+              "20:19",
+              "20:65"
+            ],
+            "verse_count": 2,
+            "unique_words": [
+              "first"
+            ],
+            "unique_word_count": 1,
+            "shared_word_count": 3
+          },
+          {
+            "surah": 7,
+            "verses": [
+              "7:115"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "throwing"
+            ],
+            "unique_word_count": 1,
+            "shared_word_count": 3
+          }
+        ],
+        "num_surahs": 2
+      },
+      {
+        "event": "eat_knew_springs",
+        "keywords": [
+          "eat",
+          "knew",
+          "springs",
+          "people",
+          "rock"
+        ],
+        "tellings": [
+          {
+            "surah": 2,
+            "verses": [
+              "2:60"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "corruptingly",
+              "drink",
+              "earth",
+              "god's",
+              "members",
+              "provisions",
+              "recall",
+              "roam",
+              "sought",
+              "tribe"
+            ],
+            "unique_word_count": 10,
+            "shared_word_count": 13
+          },
+          {
+            "surah": 7,
+            "verses": [
+              "7:160"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "asked",
+              "clouds",
+              "communities",
+              "community",
+              "divided",
+              "good",
+              "inspired",
+              "manna",
+              "provided",
+              "quails",
+              "sent",
+              "shaded",
+              "souls",
+              "things",
+              "thus"
+            ],
+            "unique_word_count": 17,
+            "shared_word_count": 13
+          }
+        ],
+        "num_surahs": 2
+      },
+      {
+        "event": "jesus_distinction_isaac",
+        "keywords": [
+          "jesus",
+          "distinction",
+          "isaac",
+          "prophets",
+          "believe"
+        ],
+        "tellings": [
+          {
+            "surah": 2,
+            "verses": [
+              "2:136"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 17
+          },
+          {
+            "surah": 3,
+            "verses": [
+              "3:84"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "approved",
+              "religion"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 17
+          }
+        ],
+        "num_surahs": 2
+      },
+      {
+        "event": "whereupon_fabricated_swallowed",
+        "keywords": [
+          "whereupon",
+          "fabricated",
+          "swallowed",
+          "staff",
+          "whatever"
+        ],
+        "tellings": [
+          {
+            "surah": 7,
+            "verses": [
+              "7:117"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "experts",
+              "inspired",
+              "recognized",
+              "throw",
+              "truth",
+              "whatever"
+            ],
+            "unique_word_count": 6,
+            "shared_word_count": 5
+          },
+          {
+            "surah": 26,
+            "verses": [
+              "26:45"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "threw"
+            ],
+            "unique_word_count": 1,
+            "shared_word_count": 5
+          }
+        ],
+        "num_surahs": 2
+      },
+      {
+        "event": "throw_going_whatever",
+        "keywords": [
+          "throw",
+          "going",
+          "whatever",
+          "magicians"
+        ],
+        "tellings": [
+          {
+            "surah": 10,
+            "verses": [
+              "10:80"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "magicians",
+              "whatever"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 3
+          },
+          {
+            "surah": 26,
+            "verses": [
+              "26:43"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 3
+          }
+        ],
+        "num_surahs": 2
+      },
+      {
+        "event": "profound_sent_signs",
+        "keywords": [
+          "profound",
+          "sent",
+          "signs",
+          "authority"
+        ],
+        "tellings": [
+          {
+            "surah": 11,
+            "verses": [
+              "11:96"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 5
+          },
+          {
+            "surah": 40,
+            "verses": [
+              "40:23"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 5
+          }
+        ],
+        "num_surahs": 2
+      },
+      {
+        "event": "judged_immediately_disputed",
+        "keywords": [
+          "judged",
+          "immediately",
+          "disputed",
+          "scripture",
+          "predetermined"
+        ],
+        "tellings": [
+          {
+            "surah": 11,
+            "verses": [
+              "11:110"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "decreed",
+              "doubt",
+              "full",
+              "lord",
+              "suspicious",
+              "word"
+            ],
+            "unique_word_count": 6,
+            "shared_word_count": 7
+          },
+          {
+            "surah": 41,
+            "verses": [
+              "41:45"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "decision",
+              "doubts",
+              "harbor",
+              "indeed",
+              "lord's",
+              "many"
+            ],
+            "unique_word_count": 6,
+            "shared_word_count": 7
+          }
+        ],
+        "num_surahs": 2
+      },
+      {
+        "event": "history_noted_known",
+        "keywords": [
+          "history",
+          "noted",
+          "known"
+        ],
+        "tellings": [
+          {
+            "surah": 20,
+            "verses": [
+              "20:9"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "noted"
+            ],
+            "unique_word_count": 1,
+            "shared_word_count": 2
+          },
+          {
+            "surah": 79,
+            "verses": [
+              "79:15"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "known"
+            ],
+            "unique_word_count": 1,
+            "shared_word_count": 2
+          }
+        ],
+        "num_surahs": 2
+      },
+      {
+        "event": "around_throw_saw",
+        "keywords": [
+          "around",
+          "throw",
+          "saw",
+          "fled",
+          "like"
+        ],
+        "tellings": [
+          {
+            "surah": 27,
+            "verses": [
+              "27:10"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "fear",
+              "messengers"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 11
+          },
+          {
+            "surah": 28,
+            "verses": [
+              "28:31"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "back",
+              "perfectly",
+              "safe"
+            ],
+            "unique_word_count": 3,
+            "shared_word_count": 11
+          }
+        ],
+        "num_surahs": 2
+      },
+      {
+        "event": "israel_children_scripture",
+        "keywords": [
+          "israel",
+          "children",
+          "scripture",
+          "given",
+          "guide"
+        ],
+        "tellings": [
+          {
+            "surah": 32,
+            "verses": [
+              "32:23"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "any",
+              "doubt",
+              "guide",
+              "harbor",
+              "meeting"
+            ],
+            "unique_word_count": 5,
+            "shared_word_count": 5
+          },
+          {
+            "surah": 40,
+            "verses": [
+              "40:53"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "guidance",
+              "inherit"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 5
+          }
+        ],
+        "num_surahs": 2
+      }
+    ],
+    "most_detailed_surah": 7,
+    "most_unique_telling": {
+      "surah": 7,
+      "event": "eat_knew_springs",
+      "unique_word_count": 17
+    },
+    "narrative_centrality": 72,
+    "num_surahs": 35,
+    "connections_to": {
+      "aaron": 16,
+      "pharaoh": 16,
+      "jesus": 7,
+      "abraham": 6,
+      "noah": 4,
+      "isaac": 4,
+      "ishmael": 3,
+      "jacob": 3,
+      "mary": 3,
+      "joseph": 2,
+      "david": 2,
+      "solomon": 2,
+      "lot": 1,
+      "adam": 1,
+      "jonah": 1,
+      "job": 1
+    }
+  },
+  "abraham": {
+    "total_verses": 72,
+    "surahs": {
+      "2": 13,
+      "3": 7,
+      "21": 5,
+      "22": 5,
+      "4": 4,
+      "6": 4,
+      "11": 4,
+      "16": 3,
+      "19": 3,
+      "37": 3,
+      "9": 2,
+      "12": 2,
+      "29": 2,
+      "43": 2,
+      "60": 2,
+      "14": 1,
+      "15": 1,
+      "26": 1,
+      "33": 1,
+      "38": 1,
+      "42": 1,
+      "51": 1,
+      "53": 1,
+      "57": 1,
+      "87": 1,
+      "114": 1
+    },
+    "events": [
+      {
+        "name": "never_worshiper_idol",
+        "verses": [
+          "2:135",
+          "3:67",
+          "6:161",
+          "16:123"
+        ],
+        "keywords": [
+          "never",
+          "worshiper",
+          "idol",
+          "religion",
+          "monotheism"
+        ],
+        "verse_count": 4
+      },
+      {
+        "name": "god_children_submitters",
+        "verses": [
+          "2:132",
+          "2:133"
+        ],
+        "keywords": [
+          "god",
+          "children",
+          "submitters",
+          "jacob",
+          "die"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "jesus_distinction_isaac",
+        "verses": [
+          "2:136",
+          "3:84"
+        ],
+        "keywords": [
+          "jesus",
+          "distinction",
+          "isaac",
+          "prophets",
+          "believe"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "guests_abraham's_inform",
+        "verses": [
+          "15:51",
+          "51:24"
+        ],
+        "keywords": [
+          "guests",
+          "abraham's",
+          "inform",
+          "honorable",
+          "history"
+        ],
+        "verse_count": 2
+      }
+    ],
+    "parallels": [
+      {
+        "event": "never_worshiper_idol",
+        "keywords": [
+          "never",
+          "worshiper",
+          "idol",
+          "religion",
+          "monotheism"
+        ],
+        "tellings": [
+          {
+            "surah": 2,
+            "verses": [
+              "2:135"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 10
+          },
+          {
+            "surah": 3,
+            "verses": [
+              "3:67"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "neither",
+              "submitter"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 7
+          },
+          {
+            "surah": 6,
+            "verses": [
+              "6:161"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "lord",
+              "path",
+              "perfect",
+              "straight"
+            ],
+            "unique_word_count": 4,
+            "shared_word_count": 7
+          },
+          {
+            "surah": 16,
+            "verses": [
+              "16:123"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "inspired",
+              "muhammad"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 7
+          }
+        ],
+        "num_surahs": 4
+      },
+      {
+        "event": "jesus_distinction_isaac",
+        "keywords": [
+          "jesus",
+          "distinction",
+          "isaac",
+          "prophets",
+          "believe"
+        ],
+        "tellings": [
+          {
+            "surah": 2,
+            "verses": [
+              "2:136"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 17
+          },
+          {
+            "surah": 3,
+            "verses": [
+              "3:84"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "approved",
+              "religion"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 17
+          }
+        ],
+        "num_surahs": 2
+      },
+      {
+        "event": "guests_abraham's_inform",
+        "keywords": [
+          "guests",
+          "abraham's",
+          "inform",
+          "honorable",
+          "history"
+        ],
+        "tellings": [
+          {
+            "surah": 15,
+            "verses": [
+              "15:51"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "inform"
+            ],
+            "unique_word_count": 1,
+            "shared_word_count": 2
+          },
+          {
+            "surah": 51,
+            "verses": [
+              "51:24"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "history",
+              "honorable",
+              "noted"
+            ],
+            "unique_word_count": 3,
+            "shared_word_count": 2
+          }
+        ],
+        "num_surahs": 2
+      }
+    ],
+    "most_detailed_surah": 2,
+    "most_unique_telling": {
+      "surah": 6,
+      "event": "never_worshiper_idol",
+      "unique_word_count": 4
+    },
+    "narrative_centrality": 67,
+    "num_surahs": 26,
+    "connections_to": {
+      "isaac": 11,
+      "jacob": 10,
+      "noah": 8,
+      "ishmael": 8,
+      "moses": 6,
+      "jesus": 6,
+      "lot": 3,
+      "adam": 3,
+      "david": 2,
+      "solomon": 2,
+      "jonah": 2,
+      "aaron": 2,
+      "mary": 2,
+      "joseph": 1,
+      "job": 1
+    }
+  },
+  "noah": {
+    "total_verses": 44,
+    "surahs": {
+      "11": 8,
+      "26": 3,
+      "71": 3,
+      "7": 2,
+      "17": 2,
+      "37": 2,
+      "40": 2,
+      "3": 1,
+      "4": 1,
+      "6": 1,
+      "9": 1,
+      "10": 1,
+      "14": 1,
+      "19": 1,
+      "21": 1,
+      "22": 1,
+      "23": 1,
+      "25": 1,
+      "29": 1,
+      "33": 1,
+      "38": 1,
+      "42": 1,
+      "50": 1,
+      "51": 1,
+      "53": 1,
+      "54": 1,
+      "57": 1,
+      "66": 1,
+      "114": 1
+    },
+    "events": [
+      {
+        "name": "sent_god_beside",
+        "verses": [
+          "7:59",
+          "23:23"
+        ],
+        "keywords": [
+          "sent",
+          "god",
+          "beside",
+          "worship",
+          "people"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "disbelieved_people_reject",
+        "verses": [
+          "22:42",
+          "26:105"
+        ],
+        "keywords": [
+          "disbelieved",
+          "people",
+          "reject",
+          "thamoud",
+          "aad"
+        ],
+        "verse_count": 2
+      }
+    ],
+    "parallels": [
+      {
+        "event": "sent_god_beside",
+        "keywords": [
+          "sent",
+          "god",
+          "beside",
+          "worship",
+          "people"
+        ],
+        "tellings": [
+          {
+            "surah": 7,
+            "verses": [
+              "7:59"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "awesome",
+              "day",
+              "fear",
+              "retribution"
+            ],
+            "unique_word_count": 4,
+            "shared_word_count": 6
+          },
+          {
+            "surah": 23,
+            "verses": [
+              "23:23"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "righteous"
+            ],
+            "unique_word_count": 1,
+            "shared_word_count": 6
+          }
+        ],
+        "num_surahs": 2
+      },
+      {
+        "event": "disbelieved_people_reject",
+        "keywords": [
+          "disbelieved",
+          "people",
+          "reject",
+          "thamoud",
+          "aad"
+        ],
+        "tellings": [
+          {
+            "surah": 22,
+            "verses": [
+              "22:42"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "aad",
+              "reject",
+              "thamoud"
+            ],
+            "unique_word_count": 3,
+            "shared_word_count": 3
+          },
+          {
+            "surah": 26,
+            "verses": [
+              "26:105"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "messengers"
+            ],
+            "unique_word_count": 1,
+            "shared_word_count": 3
+          }
+        ],
+        "num_surahs": 2
+      }
+    ],
+    "most_detailed_surah": 11,
+    "most_unique_telling": {
+      "surah": 7,
+      "event": "sent_god_beside",
+      "unique_word_count": 4
+    },
+    "narrative_centrality": 48,
+    "num_surahs": 29,
+    "connections_to": {
+      "abraham": 8,
+      "moses": 4,
+      "jesus": 4,
+      "david": 3,
+      "solomon": 3,
+      "lot": 3,
+      "adam": 3,
+      "isaac": 3,
+      "aaron": 3,
+      "joseph": 2,
+      "jonah": 2,
+      "job": 2,
+      "ishmael": 2,
+      "jacob": 2,
+      "mary": 2,
+      "pharaoh": 2
+    }
+  },
+  "jesus": {
+    "total_verses": 33,
+    "surahs": {
+      "5": 8,
+      "3": 5,
+      "4": 4,
+      "2": 3,
+      "19": 2,
+      "43": 2,
+      "61": 2,
+      "6": 1,
+      "9": 1,
+      "27": 1,
+      "33": 1,
+      "42": 1,
+      "57": 1,
+      "114": 1
+    },
+    "events": [
+      {
+        "name": "distinction_isaac_prophets",
+        "verses": [
+          "2:136",
+          "3:84"
+        ],
+        "keywords": [
+          "distinction",
+          "isaac",
+          "prophets",
+          "believe",
+          "any"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "son_god_lord",
+        "verses": [
+          "5:112",
+          "5:114"
+        ],
+        "keywords": [
+          "son",
+          "god",
+          "lord",
+          "sky",
+          "send"
+        ],
+        "verse_count": 2
+      }
+    ],
+    "parallels": [
+      {
+        "event": "distinction_isaac_prophets",
+        "keywords": [
+          "distinction",
+          "isaac",
+          "prophets",
+          "believe",
+          "any"
+        ],
+        "tellings": [
+          {
+            "surah": 2,
+            "verses": [
+              "2:136"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 17
+          },
+          {
+            "surah": 3,
+            "verses": [
+              "3:84"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "approved",
+              "religion"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 17
+          }
+        ],
+        "num_surahs": 2
+      }
+    ],
+    "most_detailed_surah": 5,
+    "most_unique_telling": {
+      "surah": 3,
+      "event": "distinction_isaac_prophets",
+      "unique_word_count": 2
+    },
+    "narrative_centrality": 62,
+    "num_surahs": 14,
+    "connections_to": {
+      "mary": 19,
+      "moses": 7,
+      "abraham": 6,
+      "noah": 4,
+      "ishmael": 4,
+      "isaac": 4,
+      "david": 3,
+      "jacob": 3,
+      "solomon": 2,
+      "adam": 2,
+      "jonah": 2,
+      "aaron": 2,
+      "joseph": 1,
+      "lot": 1,
+      "job": 1,
+      "elijah": 1
+    }
+  },
+  "joseph": {
+    "total_verses": 32,
+    "surahs": {
+      "12": 29,
+      "6": 1,
+      "40": 1,
+      "114": 1
+    },
+    "events": [],
+    "parallels": [],
+    "most_detailed_surah": 12,
+    "most_unique_telling": null,
+    "narrative_centrality": 22,
+    "num_surahs": 4,
+    "connections_to": {
+      "moses": 2,
+      "noah": 2,
+      "david": 2,
+      "solomon": 2,
+      "isaac": 2,
+      "jacob": 2,
+      "aaron": 2,
+      "abraham": 1,
+      "jesus": 1,
+      "lot": 1,
+      "adam": 1,
+      "jonah": 1,
+      "job": 1,
+      "ishmael": 1,
+      "mary": 1
+    }
+  },
+  "david": {
+    "total_verses": 16,
+    "surahs": {
+      "38": 4,
+      "21": 2,
+      "27": 2,
+      "34": 2,
+      "2": 1,
+      "4": 1,
+      "5": 1,
+      "6": 1,
+      "17": 1,
+      "114": 1
+    },
+    "events": [],
+    "parallels": [],
+    "most_detailed_surah": 38,
+    "most_unique_telling": null,
+    "narrative_centrality": 38,
+    "num_surahs": 10,
+    "connections_to": {
+      "solomon": 8,
+      "noah": 3,
+      "jesus": 3,
+      "isaac": 3,
+      "aaron": 3,
+      "moses": 2,
+      "abraham": 2,
+      "joseph": 2,
+      "jonah": 2,
+      "job": 2,
+      "ishmael": 2,
+      "jacob": 2,
+      "mary": 2,
+      "lot": 1,
+      "adam": 1
+    }
+  },
+  "solomon": {
+    "total_verses": 19,
+    "surahs": {
+      "27": 9,
+      "21": 3,
+      "38": 2,
+      "2": 1,
+      "4": 1,
+      "6": 1,
+      "34": 1,
+      "114": 1
+    },
+    "events": [],
+    "parallels": [],
+    "most_detailed_surah": 27,
+    "most_unique_telling": null,
+    "narrative_centrality": 36,
+    "num_surahs": 8,
+    "connections_to": {
+      "david": 8,
+      "noah": 3,
+      "isaac": 3,
+      "aaron": 3,
+      "moses": 2,
+      "abraham": 2,
+      "jesus": 2,
+      "joseph": 2,
+      "jonah": 2,
+      "job": 2,
+      "ishmael": 2,
+      "jacob": 2,
+      "lot": 1,
+      "adam": 1,
+      "mary": 1
+    }
+  },
+  "lot": {
+    "total_verses": 29,
+    "surahs": {
+      "11": 5,
+      "29": 4,
+      "26": 3,
+      "7": 2,
+      "15": 2,
+      "21": 2,
+      "27": 2,
+      "54": 2,
+      "6": 1,
+      "22": 1,
+      "37": 1,
+      "38": 1,
+      "50": 1,
+      "66": 1,
+      "114": 1
+    },
+    "events": [
+      {
+        "name": "abomination_people_commit",
+        "verses": [
+          "7:80",
+          "27:54",
+          "29:28"
+        ],
+        "keywords": [
+          "abomination",
+          "people",
+          "commit",
+          "done",
+          "world"
+        ],
+        "verse_count": 3
+      },
+      {
+        "name": "lot's_family_save",
+        "verses": [
+          "15:59",
+          "54:34"
+        ],
+        "keywords": [
+          "lot's",
+          "family",
+          "save",
+          "saved",
+          "rocks"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "messengers_town_lot's",
+        "verses": [
+          "15:61",
+          "37:133"
+        ],
+        "keywords": [
+          "messengers",
+          "town",
+          "lot's"
+        ],
+        "verse_count": 2
+      }
+    ],
+    "parallels": [
+      {
+        "event": "abomination_people_commit",
+        "keywords": [
+          "abomination",
+          "people",
+          "commit",
+          "done",
+          "world"
+        ],
+        "tellings": [
+          {
+            "surah": 7,
+            "verses": [
+              "7:80"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 6
+          },
+          {
+            "surah": 27,
+            "verses": [
+              "27:54"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "publicly",
+              "see",
+              "while"
+            ],
+            "unique_word_count": 3,
+            "shared_word_count": 4
+          },
+          {
+            "surah": 29,
+            "verses": [
+              "29:28"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "ever"
+            ],
+            "unique_word_count": 1,
+            "shared_word_count": 6
+          }
+        ],
+        "num_surahs": 3
+      },
+      {
+        "event": "lot's_family_save",
+        "keywords": [
+          "lot's",
+          "family",
+          "save",
+          "saved",
+          "rocks"
+        ],
+        "tellings": [
+          {
+            "surah": 15,
+            "verses": [
+              "15:59"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "save"
+            ],
+            "unique_word_count": 1,
+            "shared_word_count": 2
+          },
+          {
+            "surah": 54,
+            "verses": [
+              "54:34"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "dawn",
+              "rocks",
+              "saved",
+              "showered"
+            ],
+            "unique_word_count": 4,
+            "shared_word_count": 2
+          }
+        ],
+        "num_surahs": 2
+      },
+      {
+        "event": "messengers_town_lot's",
+        "keywords": [
+          "messengers",
+          "town",
+          "lot's"
+        ],
+        "tellings": [
+          {
+            "surah": 15,
+            "verses": [
+              "15:61"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "lot's",
+              "town"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 1
+          },
+          {
+            "surah": 37,
+            "verses": [
+              "37:133"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "lot"
+            ],
+            "unique_word_count": 1,
+            "shared_word_count": 1
+          }
+        ],
+        "num_surahs": 2
+      }
+    ],
+    "most_detailed_surah": 11,
+    "most_unique_telling": {
+      "surah": 54,
+      "event": "lot's_family_save",
+      "unique_word_count": 4
+    },
+    "narrative_centrality": 22,
+    "num_surahs": 15,
+    "connections_to": {
+      "abraham": 3,
+      "noah": 3,
+      "jonah": 2,
+      "ishmael": 2,
+      "pharaoh": 2,
+      "moses": 1,
+      "jesus": 1,
+      "joseph": 1,
+      "david": 1,
+      "solomon": 1,
+      "adam": 1,
+      "elisha": 1,
+      "isaac": 1,
+      "aaron": 1,
+      "mary": 1
+    }
+  },
+  "adam": {
+    "total_verses": 27,
+    "surahs": {
+      "7": 8,
+      "2": 5,
+      "20": 5,
+      "3": 2,
+      "17": 2,
+      "5": 1,
+      "18": 1,
+      "19": 1,
+      "36": 1,
+      "114": 1
+    },
+    "events": [
+      {
+        "name": "fell_satan_angels",
+        "verses": [
+          "2:34",
+          "7:11",
+          "17:61",
+          "20:116"
+        ],
+        "keywords": [
+          "fell",
+          "satan",
+          "angels",
+          "fall",
+          "except"
+        ],
+        "verse_count": 4
+      },
+      {
+        "name": "paradise_therefrom_please",
+        "verses": [
+          "2:35",
+          "7:19"
+        ],
+        "keywords": [
+          "paradise",
+          "therefrom",
+          "please",
+          "tree",
+          "approach"
+        ],
+        "verse_count": 2
+      }
+    ],
+    "parallels": [
+      {
+        "event": "fell_satan_angels",
+        "keywords": [
+          "fell",
+          "satan",
+          "angels",
+          "fall",
+          "except"
+        ],
+        "tellings": [
+          {
+            "surah": 2,
+            "verses": [
+              "2:34"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "arrogant",
+              "disbeliever"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 8
+          },
+          {
+            "surah": 7,
+            "verses": [
+              "7:11"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "iblees",
+              "prostrators",
+              "shaped"
+            ],
+            "unique_word_count": 3,
+            "shared_word_count": 8
+          },
+          {
+            "surah": 17,
+            "verses": [
+              "17:61"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "mud"
+            ],
+            "unique_word_count": 1,
+            "shared_word_count": 8
+          },
+          {
+            "surah": 20,
+            "verses": [
+              "20:116"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "recall"
+            ],
+            "unique_word_count": 1,
+            "shared_word_count": 8
+          }
+        ],
+        "num_surahs": 4
+      },
+      {
+        "event": "paradise_therefrom_please",
+        "keywords": [
+          "paradise",
+          "therefrom",
+          "please",
+          "tree",
+          "approach"
+        ],
+        "tellings": [
+          {
+            "surah": 2,
+            "verses": [
+              "2:35"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "generously",
+              "live"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 10
+          },
+          {
+            "surah": 7,
+            "verses": [
+              "7:19"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "dwell",
+              "fall"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 10
+          }
+        ],
+        "num_surahs": 2
+      }
+    ],
+    "most_detailed_surah": 7,
+    "most_unique_telling": {
+      "surah": 7,
+      "event": "fell_satan_angels",
+      "unique_word_count": 3
+    },
+    "narrative_centrality": 18,
+    "num_surahs": 10,
+    "connections_to": {
+      "abraham": 3,
+      "noah": 3,
+      "jesus": 2,
+      "moses": 1,
+      "joseph": 1,
+      "david": 1,
+      "solomon": 1,
+      "lot": 1,
+      "jonah": 1,
+      "ishmael": 1,
+      "isaac": 1,
+      "aaron": 1,
+      "mary": 1
+    }
+  },
+  "jonah": {
+    "total_verses": 7,
+    "surahs": {
+      "4": 1,
+      "6": 1,
+      "10": 1,
+      "21": 1,
+      "37": 1,
+      "68": 1,
+      "114": 1
+    },
+    "events": [],
+    "parallels": [],
+    "most_detailed_surah": 4,
+    "most_unique_telling": null,
+    "narrative_centrality": 26,
+    "num_surahs": 7,
+    "connections_to": {
+      "ishmael": 3,
+      "abraham": 2,
+      "noah": 2,
+      "jesus": 2,
+      "david": 2,
+      "solomon": 2,
+      "lot": 2,
+      "isaac": 2,
+      "aaron": 2,
+      "moses": 1,
+      "joseph": 1,
+      "adam": 1,
+      "job": 1,
+      "elisha": 1,
+      "jacob": 1,
+      "mary": 1
+    }
+  },
+  "job": {
+    "total_verses": 4,
+    "surahs": {
+      "4": 1,
+      "6": 1,
+      "21": 1,
+      "38": 1
+    },
+    "events": [],
+    "parallels": [],
+    "most_detailed_surah": 4,
+    "most_unique_telling": null,
+    "narrative_centrality": 18,
+    "num_surahs": 4,
+    "connections_to": {
+      "noah": 2,
+      "david": 2,
+      "solomon": 2,
+      "isaac": 2,
+      "jacob": 2,
+      "aaron": 2,
+      "moses": 1,
+      "abraham": 1,
+      "jesus": 1,
+      "joseph": 1,
+      "jonah": 1,
+      "ishmael": 1
+    }
+  },
+  "elijah": {
+    "total_verses": 3,
+    "surahs": {
+      "37": 2,
+      "6": 1
+    },
+    "events": [],
+    "parallels": [],
+    "most_detailed_surah": 37,
+    "most_unique_telling": null,
+    "narrative_centrality": 1,
+    "num_surahs": 2,
+    "connections_to": {
+      "jesus": 1
+    }
+  },
+  "elisha": {
+    "total_verses": 2,
+    "surahs": {
+      "6": 1,
+      "38": 1
+    },
+    "events": [],
+    "parallels": [],
+    "most_detailed_surah": 6,
+    "most_unique_telling": null,
+    "narrative_centrality": 4,
+    "num_surahs": 2,
+    "connections_to": {
+      "ishmael": 2,
+      "lot": 1,
+      "jonah": 1
+    }
+  },
+  "ishmael": {
+    "total_verses": 14,
+    "surahs": {
+      "2": 5,
+      "3": 1,
+      "4": 1,
+      "6": 1,
+      "14": 1,
+      "19": 1,
+      "21": 1,
+      "37": 1,
+      "38": 1,
+      "114": 1
+    },
+    "events": [
+      {
+        "name": "jesus_distinction_isaac",
+        "verses": [
+          "2:136",
+          "3:84"
+        ],
+        "keywords": [
+          "jesus",
+          "distinction",
+          "isaac",
+          "prophets",
+          "believe"
+        ],
+        "verse_count": 2
+      }
+    ],
+    "parallels": [
+      {
+        "event": "jesus_distinction_isaac",
+        "keywords": [
+          "jesus",
+          "distinction",
+          "isaac",
+          "prophets",
+          "believe"
+        ],
+        "tellings": [
+          {
+            "surah": 2,
+            "verses": [
+              "2:136"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 17
+          },
+          {
+            "surah": 3,
+            "verses": [
+              "3:84"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "approved",
+              "religion"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 17
+          }
+        ],
+        "num_surahs": 2
+      }
+    ],
+    "most_detailed_surah": 2,
+    "most_unique_telling": {
+      "surah": 3,
+      "event": "jesus_distinction_isaac",
+      "unique_word_count": 2
+    },
+    "narrative_centrality": 46,
+    "num_surahs": 10,
+    "connections_to": {
+      "abraham": 8,
+      "isaac": 7,
+      "jacob": 5,
+      "jesus": 4,
+      "moses": 3,
+      "jonah": 3,
+      "noah": 2,
+      "david": 2,
+      "solomon": 2,
+      "lot": 2,
+      "elisha": 2,
+      "aaron": 2,
+      "joseph": 1,
+      "adam": 1,
+      "job": 1,
+      "mary": 1
+    }
+  },
+  "isaac": {
+    "total_verses": 18,
+    "surahs": {
+      "2": 3,
+      "12": 2,
+      "29": 2,
+      "37": 2,
+      "3": 1,
+      "4": 1,
+      "6": 1,
+      "11": 1,
+      "14": 1,
+      "19": 1,
+      "21": 1,
+      "38": 1,
+      "114": 1
+    },
+    "events": [
+      {
+        "name": "jesus_distinction_prophets",
+        "verses": [
+          "2:136",
+          "3:84"
+        ],
+        "keywords": [
+          "jesus",
+          "distinction",
+          "prophets",
+          "believe",
+          "any"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "gave_good_news",
+        "verses": [
+          "11:71",
+          "37:112"
+        ],
+        "keywords": [
+          "gave",
+          "good",
+          "news",
+          "laughed",
+          "standing"
+        ],
+        "verse_count": 2
+      }
+    ],
+    "parallels": [
+      {
+        "event": "jesus_distinction_prophets",
+        "keywords": [
+          "jesus",
+          "distinction",
+          "prophets",
+          "believe",
+          "any"
+        ],
+        "tellings": [
+          {
+            "surah": 2,
+            "verses": [
+              "2:136"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 17
+          },
+          {
+            "surah": 3,
+            "verses": [
+              "3:84"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "approved",
+              "religion"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 17
+          }
+        ],
+        "num_surahs": 2
+      },
+      {
+        "event": "gave_good_news",
+        "keywords": [
+          "gave",
+          "good",
+          "news",
+          "laughed",
+          "standing"
+        ],
+        "tellings": [
+          {
+            "surah": 11,
+            "verses": [
+              "11:71"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "jacob",
+              "laughed",
+              "standing",
+              "wife"
+            ],
+            "unique_word_count": 4,
+            "shared_word_count": 4
+          },
+          {
+            "surah": 37,
+            "verses": [
+              "37:112"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "birth",
+              "prophets",
+              "righteous"
+            ],
+            "unique_word_count": 3,
+            "shared_word_count": 4
+          }
+        ],
+        "num_surahs": 2
+      }
+    ],
+    "most_detailed_surah": 2,
+    "most_unique_telling": {
+      "surah": 11,
+      "event": "gave_good_news",
+      "unique_word_count": 4
+    },
+    "narrative_centrality": 60,
+    "num_surahs": 13,
+    "connections_to": {
+      "jacob": 13,
+      "abraham": 11,
+      "ishmael": 7,
+      "moses": 4,
+      "jesus": 4,
+      "noah": 3,
+      "david": 3,
+      "solomon": 3,
+      "aaron": 3,
+      "joseph": 2,
+      "jonah": 2,
+      "job": 2,
+      "lot": 1,
+      "adam": 1,
+      "mary": 1
+    }
+  },
+  "jacob": {
+    "total_verses": 16,
+    "surahs": {
+      "2": 4,
+      "12": 3,
+      "19": 2,
+      "3": 1,
+      "4": 1,
+      "6": 1,
+      "11": 1,
+      "21": 1,
+      "29": 1,
+      "38": 1
+    },
+    "events": [
+      {
+        "name": "abraham_god_children",
+        "verses": [
+          "2:132",
+          "2:133"
+        ],
+        "keywords": [
+          "abraham",
+          "god",
+          "children",
+          "submitters",
+          "die"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "jesus_distinction_isaac",
+        "verses": [
+          "2:136",
+          "3:84"
+        ],
+        "keywords": [
+          "jesus",
+          "distinction",
+          "isaac",
+          "prophets",
+          "believe"
+        ],
+        "verse_count": 2
+      }
+    ],
+    "parallels": [
+      {
+        "event": "jesus_distinction_isaac",
+        "keywords": [
+          "jesus",
+          "distinction",
+          "isaac",
+          "prophets",
+          "believe"
+        ],
+        "tellings": [
+          {
+            "surah": 2,
+            "verses": [
+              "2:136"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 17
+          },
+          {
+            "surah": 3,
+            "verses": [
+              "3:84"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "approved",
+              "religion"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 17
+          }
+        ],
+        "num_surahs": 2
+      }
+    ],
+    "most_detailed_surah": 2,
+    "most_unique_telling": {
+      "surah": 3,
+      "event": "jesus_distinction_isaac",
+      "unique_word_count": 2
+    },
+    "narrative_centrality": 47,
+    "num_surahs": 10,
+    "connections_to": {
+      "isaac": 13,
+      "abraham": 10,
+      "ishmael": 5,
+      "moses": 3,
+      "jesus": 3,
+      "noah": 2,
+      "joseph": 2,
+      "david": 2,
+      "solomon": 2,
+      "job": 2,
+      "aaron": 2,
+      "jonah": 1
+    }
+  },
+  "aaron": {
+    "total_verses": 23,
+    "surahs": {
+      "20": 4,
+      "7": 3,
+      "10": 2,
+      "19": 2,
+      "26": 2,
+      "37": 2,
+      "2": 1,
+      "4": 1,
+      "6": 1,
+      "21": 1,
+      "23": 1,
+      "25": 1,
+      "28": 1,
+      "114": 1
+    },
+    "events": [
+      {
+        "name": "moses_lord_fell",
+        "verses": [
+          "7:122",
+          "20:70",
+          "26:48"
+        ],
+        "keywords": [
+          "moses",
+          "lord",
+          "fell",
+          "believe",
+          "magicians"
+        ],
+        "verse_count": 3
+      },
+      {
+        "name": "moses_blessed_peace",
+        "verses": [
+          "37:114",
+          "37:120"
+        ],
+        "keywords": [
+          "moses",
+          "blessed",
+          "peace"
+        ],
+        "verse_count": 2
+      }
+    ],
+    "parallels": [
+      {
+        "event": "moses_lord_fell",
+        "keywords": [
+          "moses",
+          "lord",
+          "fell",
+          "believe",
+          "magicians"
+        ],
+        "tellings": [
+          {
+            "surah": 7,
+            "verses": [
+              "7:122"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 3
+          },
+          {
+            "surah": 20,
+            "verses": [
+              "20:70"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "believe",
+              "fell",
+              "magicians",
+              "prostrate"
+            ],
+            "unique_word_count": 4,
+            "shared_word_count": 3
+          },
+          {
+            "surah": 26,
+            "verses": [
+              "26:48"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 3
+          }
+        ],
+        "num_surahs": 3
+      }
+    ],
+    "most_detailed_surah": 20,
+    "most_unique_telling": {
+      "surah": 20,
+      "event": "moses_lord_fell",
+      "unique_word_count": 4
+    },
+    "narrative_centrality": 46,
+    "num_surahs": 14,
+    "connections_to": {
+      "moses": 16,
+      "noah": 3,
+      "david": 3,
+      "solomon": 3,
+      "isaac": 3,
+      "abraham": 2,
+      "jesus": 2,
+      "joseph": 2,
+      "jonah": 2,
+      "job": 2,
+      "ishmael": 2,
+      "jacob": 2,
+      "lot": 1,
+      "adam": 1,
+      "mary": 1,
+      "pharaoh": 1
+    }
+  },
+  "mary": {
+    "total_verses": 33,
+    "surahs": {
+      "5": 9,
+      "3": 6,
+      "4": 3,
+      "19": 3,
+      "2": 2,
+      "61": 2,
+      "9": 1,
+      "23": 1,
+      "27": 1,
+      "33": 1,
+      "43": 1,
+      "57": 1,
+      "66": 1,
+      "114": 1
+    },
+    "events": [
+      {
+        "name": "jesus_son_god",
+        "verses": [
+          "5:112",
+          "5:114"
+        ],
+        "keywords": [
+          "jesus",
+          "son",
+          "god",
+          "lord",
+          "sky"
+        ],
+        "verse_count": 2
+      }
+    ],
+    "parallels": [],
+    "most_detailed_surah": 5,
+    "most_unique_telling": null,
+    "narrative_centrality": 36,
+    "num_surahs": 14,
+    "connections_to": {
+      "jesus": 19,
+      "moses": 3,
+      "abraham": 2,
+      "noah": 2,
+      "david": 2,
+      "joseph": 1,
+      "solomon": 1,
+      "lot": 1,
+      "adam": 1,
+      "jonah": 1,
+      "ishmael": 1,
+      "isaac": 1,
+      "aaron": 1
+    }
+  },
+  "pharaoh": {
+    "total_verses": 69,
+    "surahs": {
+      "7": 9,
+      "40": 9,
+      "28": 7,
+      "26": 6,
+      "10": 5,
+      "20": 5,
+      "2": 2,
+      "8": 2,
+      "17": 2,
+      "43": 2,
+      "44": 2,
+      "66": 2,
+      "73": 2,
+      "3": 1,
+      "11": 1,
+      "14": 1,
+      "23": 1,
+      "27": 1,
+      "29": 1,
+      "38": 1,
+      "50": 1,
+      "51": 1,
+      "54": 1,
+      "69": 1,
+      "79": 1,
+      "85": 1,
+      "89": 1
+    },
+    "events": [
+      {
+        "name": "lord_universe_messenger",
+        "verses": [
+          "7:104",
+          "26:16",
+          "26:23",
+          "43:46"
+        ],
+        "keywords": [
+          "lord",
+          "universe",
+          "messenger",
+          "moses",
+          "messengers"
+        ],
+        "verse_count": 4
+      },
+      {
+        "name": "persecution_sparing_daughters",
+        "verses": [
+          "2:49",
+          "7:141",
+          "14:6"
+        ],
+        "keywords": [
+          "persecution",
+          "sparing",
+          "daughters",
+          "lord",
+          "inflicted"
+        ],
+        "verse_count": 3
+      },
+      {
+        "name": "transgressed",
+        "verses": [
+          "20:24",
+          "20:43",
+          "79:17"
+        ],
+        "keywords": [
+          "transgressed"
+        ],
+        "verse_count": 3
+      },
+      {
+        "name": "retribution_punished_god",
+        "verses": [
+          "3:11",
+          "8:52"
+        ],
+        "keywords": [
+          "retribution",
+          "punished",
+          "god",
+          "rejected",
+          "pharaoh's"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "pharaoh's_people_leaders",
+        "verses": [
+          "7:109",
+          "26:11"
+        ],
+        "keywords": [
+          "pharaoh's",
+          "people",
+          "leaders",
+          "clever",
+          "magician"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "magicians_winners_paid",
+        "verses": [
+          "7:113",
+          "26:41"
+        ],
+        "keywords": [
+          "magicians",
+          "winners",
+          "paid",
+          "get"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "turned_people_arrogant",
+        "verses": [
+          "10:75",
+          "23:46"
+        ],
+        "keywords": [
+          "turned",
+          "people",
+          "arrogant",
+          "transgressing",
+          "sent"
+        ],
+        "verse_count": 2
+      },
+      {
+        "name": "pocket_put_white",
+        "verses": [
+          "27:12",
+          "28:32"
+        ],
+        "keywords": [
+          "pocket",
+          "put",
+          "white",
+          "hand",
+          "wicked"
+        ],
+        "verse_count": 2
+      }
+    ],
+    "parallels": [
+      {
+        "event": "lord_universe_messenger",
+        "keywords": [
+          "lord",
+          "universe",
+          "messenger",
+          "moses",
+          "messengers"
+        ],
+        "tellings": [
+          {
+            "surah": 26,
+            "verses": [
+              "26:16",
+              "26:23"
+            ],
+            "verse_count": 2,
+            "unique_words": [
+              "messengers"
+            ],
+            "unique_word_count": 1,
+            "shared_word_count": 3
+          },
+          {
+            "surah": 7,
+            "verses": [
+              "7:104"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 5
+          },
+          {
+            "surah": 43,
+            "verses": [
+              "43:46"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "elders",
+              "example",
+              "proclaiming",
+              "proofs",
+              "sent"
+            ],
+            "unique_word_count": 5,
+            "shared_word_count": 5
+          }
+        ],
+        "num_surahs": 3
+      },
+      {
+        "event": "persecution_sparing_daughters",
+        "keywords": [
+          "persecution",
+          "sparing",
+          "daughters",
+          "lord",
+          "inflicted"
+        ],
+        "tellings": [
+          {
+            "surah": 2,
+            "verses": [
+              "2:49"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "slaying",
+              "test"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 12
+          },
+          {
+            "surah": 7,
+            "verses": [
+              "7:141"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "delivered",
+              "killing"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 12
+          },
+          {
+            "surah": 14,
+            "verses": [
+              "14:6"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "appreciative",
+              "blessings",
+              "god's",
+              "moses",
+              "remember",
+              "slaughtering",
+              "unappreciative"
+            ],
+            "unique_word_count": 7,
+            "shared_word_count": 13
+          }
+        ],
+        "num_surahs": 3
+      },
+      {
+        "event": "transgressed",
+        "keywords": [
+          "transgressed"
+        ],
+        "tellings": [
+          {
+            "surah": 20,
+            "verses": [
+              "20:24",
+              "20:43"
+            ],
+            "verse_count": 2,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 2
+          },
+          {
+            "surah": 79,
+            "verses": [
+              "79:17"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 2
+          }
+        ],
+        "num_surahs": 2
+      },
+      {
+        "event": "retribution_punished_god",
+        "keywords": [
+          "retribution",
+          "punished",
+          "god",
+          "rejected",
+          "pharaoh's"
+        ],
+        "tellings": [
+          {
+            "surah": 3,
+            "verses": [
+              "3:11"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "consequently",
+              "enforcing",
+              "like",
+              "strict"
+            ],
+            "unique_word_count": 4,
+            "shared_word_count": 8
+          },
+          {
+            "surah": 8,
+            "verses": [
+              "8:52"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "consequence",
+              "disbelieved",
+              "fate",
+              "god's",
+              "powerful",
+              "severe",
+              "sin"
+            ],
+            "unique_word_count": 7,
+            "shared_word_count": 8
+          }
+        ],
+        "num_surahs": 2
+      },
+      {
+        "event": "pharaoh's_people_leaders",
+        "keywords": [
+          "pharaoh's",
+          "people",
+          "leaders",
+          "clever",
+          "magician"
+        ],
+        "tellings": [
+          {
+            "surah": 7,
+            "verses": [
+              "7:109"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "clever",
+              "leaders",
+              "magician"
+            ],
+            "unique_word_count": 3,
+            "shared_word_count": 2
+          },
+          {
+            "surah": 26,
+            "verses": [
+              "26:11"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "perhaps",
+              "reform"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 2
+          }
+        ],
+        "num_surahs": 2
+      },
+      {
+        "event": "magicians_winners_paid",
+        "keywords": [
+          "magicians",
+          "winners",
+          "paid",
+          "get"
+        ],
+        "tellings": [
+          {
+            "surah": 7,
+            "verses": [
+              "7:113"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 5
+          },
+          {
+            "surah": 26,
+            "verses": [
+              "26:41"
+            ],
+            "verse_count": 1,
+            "unique_words": [],
+            "unique_word_count": 0,
+            "shared_word_count": 5
+          }
+        ],
+        "num_surahs": 2
+      },
+      {
+        "event": "turned_people_arrogant",
+        "keywords": [
+          "turned",
+          "people",
+          "arrogant",
+          "transgressing",
+          "sent"
+        ],
+        "tellings": [
+          {
+            "surah": 10,
+            "verses": [
+              "10:75"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "aaron",
+              "group",
+              "moses",
+              "proofs",
+              "sent",
+              "transgressing"
+            ],
+            "unique_word_count": 6,
+            "shared_word_count": 4
+          },
+          {
+            "surah": 23,
+            "verses": [
+              "23:46"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "elders",
+              "oppressive"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 4
+          }
+        ],
+        "num_surahs": 2
+      },
+      {
+        "event": "pocket_put_white",
+        "keywords": [
+          "pocket",
+          "put",
+          "white",
+          "hand",
+          "wicked"
+        ],
+        "tellings": [
+          {
+            "surah": 27,
+            "verses": [
+              "27:12"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "miracles",
+              "nine"
+            ],
+            "unique_word_count": 2,
+            "shared_word_count": 9
+          },
+          {
+            "surah": 28,
+            "verses": [
+              "28:32"
+            ],
+            "verse_count": 1,
+            "unique_words": [
+              "elders",
+              "fear",
+              "fold",
+              "lord",
+              "proofs",
+              "settle",
+              "shown",
+              "wings"
+            ],
+            "unique_word_count": 8,
+            "shared_word_count": 9
+          }
+        ],
+        "num_surahs": 2
+      }
+    ],
+    "most_detailed_surah": 7,
+    "most_unique_telling": {
+      "surah": 28,
+      "event": "pocket_put_white",
+      "unique_word_count": 8
+    },
+    "narrative_centrality": 21,
+    "num_surahs": 27,
+    "connections_to": {
+      "moses": 16,
+      "noah": 2,
+      "lot": 2,
+      "aaron": 1
+    }
+  }
+}

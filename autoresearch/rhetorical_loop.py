@@ -13,6 +13,7 @@ import time
 from collections import Counter, defaultdict
 
 from deduction_engine import load_graph
+from analyze_deductions import THEOLOGICAL_CATEGORIES
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -66,13 +67,50 @@ def get_surah_verses(graph):
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# Analysis 1: Ring Composition Detection
+# Analysis 1: Ring Composition Detection (category-based LCS approach)
 # ══════════════════════════════════════════════════════════════════════════════
+
+def _verse_primary_category(text):
+    """Assign a single primary theological category to a verse."""
+    words = set(re.findall(r'[a-z]+', text.lower()))
+    best_cat = "uncategorized"
+    best_score = 0
+    for cat_name, cat_info in THEOLOGICAL_CATEGORIES.items():
+        overlap = len(words & cat_info["keywords"])
+        if overlap > best_score:
+            best_score = overlap
+            best_cat = cat_name
+    return best_cat
+
+
+def _lcs_length(seq_a, seq_b):
+    """Compute length of the longest common subsequence of two sequences."""
+    m, n = len(seq_a), len(seq_b)
+    if m == 0 or n == 0:
+        return 0
+    # Space-optimised DP (two rows)
+    prev = [0] * (n + 1)
+    curr = [0] * (n + 1)
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            if seq_a[i - 1] == seq_b[j - 1]:
+                curr[j] = prev[j - 1] + 1
+            else:
+                curr[j] = max(prev[j], curr[j - 1])
+        prev, curr = curr, [0] * (n + 1)
+    return max(prev)
+
 
 def detect_ring_compositions(surah_verses, keyword_data):
     """
-    Detect chiastic (A-B-C-B'-A') patterns within surahs by comparing
-    keyword profiles of verse blocks from start and end.
+    Detect chiastic (A-B-C-D-C-B-A) ring compositions within surahs.
+
+    Approach:
+      1. Assign each verse a primary theological category.
+      2. Build the category sequence for the surah.
+      3. Split into first-half and reversed second-half.
+      4. Compute LCS between them.
+      5. symmetry_score = LCS_length / half_length * 100.
     """
     results = []
 
@@ -83,52 +121,68 @@ def detect_ring_compositions(surah_verses, keyword_data):
         n = len(verses)
         name = verses[0]["surahName"]
 
-        # Divide surah into blocks of ~equal size
-        block_size = max(2, n // 7)
-        blocks = []
-        for i in range(0, n, block_size):
-            chunk = verses[i:i + block_size]
-            words = set()
-            for v in chunk:
-                words.update(content_words(v["text"]))
-            blocks.append({
-                "start_verse": chunk[0]["id"],
-                "end_verse": chunk[-1]["id"],
-                "keywords": words,
-            })
+        # Step 1-2: Build category sequence
+        cat_sequence = [_verse_primary_category(v["text"]) for v in verses]
 
-        if len(blocks) < 3:
+        # Step 3: Split around centre
+        half = n // 2
+        first_half = cat_sequence[:half]
+        second_half = cat_sequence[n - half:]  # same length as first_half
+        reversed_second = list(reversed(second_half))
+
+        # Step 4: LCS
+        lcs_len = _lcs_length(first_half, reversed_second)
+
+        # Step 5: Score
+        if half == 0:
             continue
+        symmetry_score = round(lcs_len / half * 100, 2)
 
-        # Compare mirror blocks: first vs last, second vs second-last, etc.
-        mirror_scores = []
-        num_pairs = len(blocks) // 2
+        # Build mirror-pair detail (block-level for readability)
+        block_size = max(1, n // 7)
+        mirror_pairs = []
+        num_blocks = n // block_size
+        num_pairs = num_blocks // 2
         for i in range(num_pairs):
-            front = blocks[i]
-            back = blocks[-(i + 1)]
-            shared = front["keywords"] & back["keywords"]
-            union = front["keywords"] | back["keywords"]
-            if union:
-                jaccard = len(shared) / len(union)
-                mirror_scores.append({
-                    "pair": (front["start_verse"], back["start_verse"]),
-                    "shared_keywords": sorted(shared)[:10],
-                    "similarity": round(jaccard, 3),
-                })
-
-        avg_sim = sum(m["similarity"] for m in mirror_scores) / max(1, len(mirror_scores))
-
-        if avg_sim > 0.05 and mirror_scores:
-            results.append({
-                "surah": surah_id,
-                "surahName": name,
-                "num_verses": n,
-                "num_mirror_pairs": len(mirror_scores),
-                "avg_mirror_similarity": round(avg_sim, 4),
-                "mirror_pairs": mirror_scores,
+            front_start = i * block_size
+            front_end = min(front_start + block_size, n)
+            back_end = n - i * block_size
+            back_start = max(back_end - block_size, 0)
+            front_cats = Counter(cat_sequence[front_start:front_end])
+            back_cats = Counter(cat_sequence[back_start:back_end])
+            shared_cats = set(front_cats.keys()) & set(back_cats.keys())
+            total_cats = set(front_cats.keys()) | set(back_cats.keys())
+            sim = len(shared_cats) / max(1, len(total_cats))
+            mirror_pairs.append({
+                "pair": (verses[front_start]["id"], verses[back_start]["id"]),
+                "front_dominant": front_cats.most_common(1)[0][0],
+                "back_dominant": back_cats.most_common(1)[0][0],
+                "category_overlap": round(sim, 3),
             })
 
-    results.sort(key=lambda x: -x["avg_mirror_similarity"])
+        # Centre element(s)
+        if n % 2 == 1:
+            center_cat = cat_sequence[n // 2]
+        else:
+            center_cat = Counter(cat_sequence[half - 1:half + 1]).most_common(1)[0][0]
+
+        results.append({
+            "surah": surah_id,
+            "surahName": name,
+            "num_verses": n,
+            "symmetry_score": symmetry_score,
+            "lcs_length": lcs_len,
+            "half_length": half,
+            "center_theme": center_cat,
+            "category_sequence_summary": [
+                f"{cat}({count})"
+                for cat, count in Counter(cat_sequence).most_common()
+            ],
+            "num_mirror_pairs": len(mirror_pairs),
+            "mirror_pairs": mirror_pairs,
+        })
+
+    results.sort(key=lambda x: -x["symmetry_score"])
     return results
 
 
@@ -316,7 +370,7 @@ def main():
 
             if ring_results:
                 top = ring_results[0]
-                print(f"  Top ring: {top['surahName']} (sim={top['avg_mirror_similarity']:.3f})")
+                print(f"  Top ring: {top['surahName']} (symmetry={top['symmetry_score']:.1f}%)")
             if sym_results:
                 for s in sym_results[:3]:
                     print(f"  Symmetry: {s['pair']} = {s['count_a']} vs {s['count_b']}")

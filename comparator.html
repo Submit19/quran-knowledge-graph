@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallel Passage Comparator — Quran Knowledge Graph</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+      background: #060a14;
+      color: #cbd5e1;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── header ── */
+    header {
+      padding: 10px 20px;
+      border-bottom: 1px solid #1e293b;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-shrink: 0;
+      background: #0a0f1a;
+    }
+    header h1 { font-size: 1.05em; font-weight: 700; color: #10b981; white-space: nowrap; }
+    header p  { font-size: 0.75em; color: #334155; flex: 1; }
+    #header-tabs { display: flex; gap: 4px; flex-wrap: wrap; }
+    #header-tabs .tab {
+      padding: 4px 14px; border-radius: 6px; font-size: 0.76em; font-weight: 600;
+      color: #64748b; text-decoration: none; border: 1px solid transparent;
+      transition: all 0.15s;
+    }
+    #header-tabs .tab:hover { color: #94a3b8; border-color: #1e293b; }
+    #header-tabs .tab.active { color: #10b981; border-color: #10b981; background: rgba(16,185,129,0.08); }
+
+    /* ── controls ── */
+    .controls {
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 1px solid #1e293b;
+      background: #0a0f1a;
+    }
+    .controls label { font-size: 0.85em; font-weight: 600; color: #94a3b8; }
+    .controls select {
+      background: #0f172a;
+      color: #cbd5e1;
+      border: 1px solid #1e293b;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.85em;
+      cursor: pointer;
+    }
+    .controls select:focus { outline: none; border-color: #10b981; }
+    .result-count {
+      font-size: 0.8em;
+      color: #64748b;
+      margin-left: auto;
+    }
+
+    /* ── main ── */
+    .main-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .main-content::-webkit-scrollbar { width: 4px; }
+    .main-content::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 2px; }
+
+    /* ── parallel card ── */
+    .parallel-card {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .card-header {
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #1e293b;
+      background: rgba(16,185,129,0.04);
+    }
+    .card-header .refs {
+      font-size: 0.85em;
+      font-weight: 700;
+      color: #10b981;
+    }
+    .card-header .refs span { color: #64748b; font-weight: 400; }
+
+    /* overlap bar */
+    .overlap-bar-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .overlap-bar {
+      width: 100px;
+      height: 6px;
+      background: #1e293b;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .overlap-bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.4s ease;
+    }
+    .overlap-label {
+      font-size: 0.75em;
+      font-weight: 600;
+      min-width: 36px;
+      text-align: right;
+    }
+
+    /* side-by-side */
+    .verses-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    .verse-col {
+      padding: 16px 18px;
+    }
+    .verse-col:first-child {
+      border-right: 1px solid #1e293b;
+    }
+    .verse-col .surah-label {
+      font-size: 0.7em;
+      color: #64748b;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .verse-col .verse-text {
+      font-size: 0.88em;
+      line-height: 1.65;
+      color: #e2e8f0;
+    }
+    .verse-text .hl {
+      background: rgba(250,204,21,0.25);
+      color: #fde68a;
+      border-radius: 2px;
+      padding: 0 2px;
+    }
+
+    /* shared words */
+    .shared-words {
+      padding: 10px 18px;
+      border-top: 1px solid #1e293b;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+    .shared-words .label {
+      font-size: 0.7em;
+      color: #64748b;
+      margin-right: 4px;
+    }
+    .shared-words .pill {
+      font-size: 0.7em;
+      padding: 2px 8px;
+      border-radius: 10px;
+      background: rgba(16,185,129,0.12);
+      color: #10b981;
+      border: 1px solid rgba(16,185,129,0.2);
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: #475569;
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 700px) {
+      .verses-row { grid-template-columns: 1fr; }
+      .verse-col:first-child { border-right: none; border-bottom: 1px solid #1e293b; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Quran Knowledge Graph</h1>
+  <p>Parallel Passage Comparator</p>
+  <nav id="header-tabs">
+    <a class="tab" href="/">Chat</a>
+    <a class="tab" href="/stats">Stats</a>
+    <a class="tab" href="/deductions">Deductions</a>
+    <a class="tab" href="/visualizations">Visualizations</a>
+    <a class="tab active" href="/comparator">Comparator</a>
+    <a class="tab" href="/explorer">Explorer</a>
+    <a class="tab" href="/presentation">Presentation</a>
+  </nav>
+</header>
+
+<div class="controls">
+  <label for="entity-select">Entity:</label>
+  <select id="entity-select">
+    <option value="moses">Moses</option>
+    <option value="abraham">Abraham</option>
+    <option value="adam">Adam</option>
+    <option value="lot">Lot</option>
+  </select>
+  <span class="result-count" id="result-count"></span>
+</div>
+
+<div class="main-content" id="parallels-container">
+</div>
+
+<script>
+const PARALLELS = {
+  "moses": [
+    {
+      "verse_a": "11:96", "verse_b": "40:23",
+      "surah_a": "Hood", "surah_b": "Forgiver",
+      "shared_words": ["authority","moses","profound","sent","signs"],
+      "overlap_score": 1.0,
+      "text_a": "We sent Moses with our signs and a profound authority.",
+      "text_b": "We sent Moses with our signs and a profound authority."
+    },
+    {
+      "verse_a": "7:115", "verse_b": "20:65",
+      "surah_a": "The Purgatory", "surah_b": "T.H.",
+      "shared_words": ["either","moses","said","throw"],
+      "overlap_score": 0.667,
+      "text_a": "They said, \"O Moses, either you throw, or we are throwing.\"",
+      "text_b": "They said, \"O Moses, either you throw, or we will be the first to throw.\""
+    },
+    {
+      "verse_a": "27:10", "verse_b": "28:31",
+      "surah_a": "The Ant", "surah_b": "History",
+      "shared_words": ["afraid","around","demon","down","fled","like","moses","moving","saw","staff","throw","turned"],
+      "overlap_score": 0.667,
+      "text_a": "\"Throw down your staff.\" When he saw it moving like a demon, he turned around and fled. \"O Moses, do not be afraid. My messengers shall not fear.",
+      "text_b": "\"Throw down your staff.\" When he saw it moving like a demon, he turned around and fled. \"O Moses, come back; do not be afraid. You are perfectly safe."
+    },
+    {
+      "verse_a": "2:53", "verse_b": "23:49",
+      "surah_a": "The Heifer", "surah_b": "The Believers",
+      "shared_words": ["gave","guided","may","moses","scripture"],
+      "overlap_score": 0.625,
+      "text_a": "Recall that we gave Moses scripture and the statute book, that you may be guided.",
+      "text_b": "We gave Moses the scripture, that they may be guided."
+    },
+    {
+      "verse_a": "10:80", "verse_b": "26:43",
+      "surah_a": "Jonah", "surah_b": "The Poets",
+      "shared_words": ["going","moses","said","throw"],
+      "overlap_score": 0.571,
+      "text_a": "When the magicians came, Moses said to them, \"Throw whatever you are going to throw.\"",
+      "text_b": "Moses said to them \"Throw what you are going to throw.\""
+    }
+  ],
+  "abraham": [
+    {
+      "verse_a": "2:136", "verse_b": "3:84",
+      "surah_a": "The Heifer", "surah_b": "The Amramites",
+      "shared_words": ["abraham","alone","among","any","believe","distinction","down","given","god","him","isaac","ismail","jacob","jesus","lord"],
+      "overlap_score": 0.815,
+      "text_a": "Say, \"We believe in GOD, and in what was sent down to us, and in what was sent down to Abraham, Ismail, Isaac, Jacob, and the Patriarchs; and in what was given to Moses and Jesus, and all the prophets from their Lord. We make no distinction among any of them. To Him alone we are submitters.\"",
+      "text_b": "Say, \"We believe in GOD, and in what was sent down to us, and in what was sent down to Abraham, Ismail, Isaac, Jacob, and the Patriarchs, and in what was given to Moses, Jesus, and the prophets from their Lord. We do not make any distinction among any of them. To Him alone we are submitters.\""
+    },
+    {
+      "verse_a": "2:140", "verse_b": "4:46",
+      "surah_a": "The Heifer", "surah_b": "Women",
+      "shared_words": ["better","jewish"],
+      "overlap_score": 0.044,
+      "text_a": "Do you say that Abraham, Ismail, Isaac, Jacob, and the Patriarchs were Jewish or Christian? Say, \"Do you know better than GOD? Who is more evil than one who conceals a testimony he has learned from GOD? GOD is never unaware of anything you do.\"",
+      "text_b": "Among those who are Jewish, some distort the words beyond the truth, and they say, \"We hear, but we disobey,\" and \"Your words are falling on deaf ears.\" Had they said, \"We hear, and we obey,\" it would have been better for them, and more righteous. Instead, they have incurred condemnation from GOD due to their disbelief."
+    },
+    {
+      "verse_a": "7:59", "verse_b": "23:23",
+      "surah_a": "The Purgatory", "surah_b": "The Believers",
+      "shared_words": ["beside","god","him","noah","other","people","saying","sent","worship"],
+      "overlap_score": 0.6,
+      "text_a": "We sent Noah to his people, saying, \"O my people, worship GOD; you have no other god beside Him. I fear for you the retribution of an awesome day.\"",
+      "text_b": "We sent Noah to his people, saying, \"O my people, worship GOD. You have no other god beside Him. Would you not be righteous?\""
+    }
+  ],
+  "adam": [
+    {
+      "verse_a": "2:34", "verse_b": "20:116",
+      "surah_a": "The Heifer", "surah_b": "T.H.",
+      "shared_words": ["adam","angels","before","except","fall","fell","prostrate","refused","said","satan"],
+      "overlap_score": 0.714,
+      "text_a": "When we said to the angels, \"Fall prostrate before Adam,\" they fell prostrate, except Satan; he refused, was too arrogant, and a disbeliever.",
+      "text_b": "Recall that we said to the angels, \"Fall prostrate before Adam.\" They fell prostrate, except Satan; he refused."
+    },
+    {
+      "verse_a": "2:35", "verse_b": "7:19",
+      "surah_a": "The Heifer", "surah_b": "The Purgatory",
+      "shared_words": ["adam","approach","eat","lest","paradise","please","sin","therefrom","tree","wife"],
+      "overlap_score": 0.625,
+      "text_a": "We said, \"O Adam, live with your wife in Paradise, and eat therefrom generously, as you please, but do not approach this tree, lest you sin.\"",
+      "text_b": "\"As for you, Adam, dwell with your wife in Paradise, and eat therefrom as you please, but do not approach this one tree, lest you fall in sin.\""
+    }
+  ],
+  "lot": [
+    {
+      "verse_a": "7:80", "verse_b": "29:28",
+      "surah_a": "The Purgatory", "surah_b": "The Spider",
+      "shared_words": ["abomination","before","commit","done","lot","one","people","said","such","world"],
+      "overlap_score": 0.909,
+      "text_a": "Lot said to his people, \"You commit such an abomination; no one in the world has done it before!",
+      "text_b": "Lot said to his people, \"You commit such an abomination, no one in the world has ever done it before you."
+    },
+    {
+      "verse_a": "2:49", "verse_b": "7:141",
+      "surah_a": "The Heifer", "surah_b": "The Purgatory",
+      "shared_words": ["daughters","exacting","inflicted","lord","people","persecution","pharaoh","recall","sons","sparing","worst"],
+      "overlap_score": 0.647,
+      "text_a": "Recall that we saved you from Pharaoh's people who inflicted upon you the worst persecution, slaying your sons and sparing your daughters. That was an exacting test from your Lord.",
+      "text_b": "Recall that we delivered you from Pharaoh's people, who inflicted the worst persecution upon you, killing your sons and sparing your daughters. That was an exacting trial for you from your Lord."
+    }
+  ]
+};
+
+function getOverlapColor(score) {
+  if (score >= 0.8) return '#10b981';
+  if (score >= 0.6) return '#3b82f6';
+  if (score >= 0.4) return '#f59e0b';
+  return '#ef4444';
+}
+
+function highlightDifferences(textA, textB) {
+  const wordsA = textA.split(/\s+/);
+  const wordsB = textB.split(/\s+/);
+  const setB = new Set(wordsB.map(w => w.toLowerCase().replace(/[^a-z]/g, '')));
+  const setA = new Set(wordsA.map(w => w.toLowerCase().replace(/[^a-z]/g, '')));
+
+  const hlA = wordsA.map(w => {
+    const clean = w.toLowerCase().replace(/[^a-z]/g, '');
+    return clean && !setB.has(clean) ? `<span class="hl">${w}</span>` : w;
+  }).join(' ');
+
+  const hlB = wordsB.map(w => {
+    const clean = w.toLowerCase().replace(/[^a-z]/g, '');
+    return clean && !setA.has(clean) ? `<span class="hl">${w}</span>` : w;
+  }).join(' ');
+
+  return [hlA, hlB];
+}
+
+function renderParallels(entity) {
+  const container = document.getElementById('parallels-container');
+  const data = PARALLELS[entity] || [];
+  document.getElementById('result-count').textContent = `${data.length} parallel passage${data.length !== 1 ? 's' : ''}`;
+
+  if (!data.length) {
+    container.innerHTML = '<div class="empty-state">No parallel passages found for this entity.</div>';
+    return;
+  }
+
+  container.innerHTML = data.map(p => {
+    const [hlA, hlB] = highlightDifferences(p.text_a, p.text_b);
+    const pct = Math.round(p.overlap_score * 100);
+    const color = getOverlapColor(p.overlap_score);
+    return `
+      <div class="parallel-card">
+        <div class="card-header">
+          <div class="refs">
+            ${p.verse_a} <span>(${p.surah_a})</span>
+            &nbsp;&harr;&nbsp;
+            ${p.verse_b} <span>(${p.surah_b})</span>
+          </div>
+          <div class="overlap-bar-wrap">
+            <div class="overlap-bar"><div class="overlap-bar-fill" style="width:${pct}%;background:${color}"></div></div>
+            <span class="overlap-label" style="color:${color}">${pct}%</span>
+          </div>
+        </div>
+        <div class="verses-row">
+          <div class="verse-col">
+            <div class="surah-label">${p.verse_a} &mdash; ${p.surah_a}</div>
+            <div class="verse-text">${hlA}</div>
+          </div>
+          <div class="verse-col">
+            <div class="surah-label">${p.verse_b} &mdash; ${p.surah_b}</div>
+            <div class="verse-text">${hlB}</div>
+          </div>
+        </div>
+        <div class="shared-words">
+          <span class="label">Shared:</span>
+          ${p.shared_words.map(w => `<span class="pill">${w}</span>`).join('')}
+        </div>
+      </div>`;
+  }).join('');
+}
+
+// Try API first, fall back to embedded data
+async function loadParallels(entity) {
+  try {
+    const resp = await fetch(`/api/comparator/parallels?entity=${encodeURIComponent(entity)}`);
+    if (resp.ok) {
+      const data = await resp.json();
+      if (data.parallels && data.parallels.length) {
+        PARALLELS[entity] = data.parallels;
+      }
+    }
+  } catch(e) { /* use embedded data */ }
+  renderParallels(entity);
+}
+
+document.getElementById('entity-select').addEventListener('change', e => {
+  loadParallels(e.target.value);
+});
+
+loadParallels('moses');
+</script>
+</body>
+</html>

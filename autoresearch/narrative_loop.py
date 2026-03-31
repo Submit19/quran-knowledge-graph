@@ -86,18 +86,92 @@ def surah_name(graph, surah_num):
 # Intra-surah analysis
 # ══════════════════════════════════════════════════════════════════════════════
 
+def _smooth_categories(raw_sequence, window=5):
+    """Smooth a category sequence using a sliding-window majority vote.
+
+    For each position, the most common category within a centred window of
+    *window* verses is chosen.  Ties are broken by keeping the raw value.
+    """
+    if len(raw_sequence) <= window:
+        # Too short to smooth — just return as-is
+        return list(raw_sequence)
+
+    half = window // 2
+    smoothed = []
+    for i in range(len(raw_sequence)):
+        lo = max(0, i - half)
+        hi = min(len(raw_sequence), i + half + 1)
+        counts = Counter(raw_sequence[lo:hi])
+        top_cat, top_count = counts.most_common(1)[0]
+        # If the raw value ties with the winner, prefer the raw value
+        # (avoids unnecessary flicker)
+        if counts[raw_sequence[i]] == top_count:
+            smoothed.append(raw_sequence[i])
+        else:
+            smoothed.append(top_cat)
+    return smoothed
+
+
+def _build_theme_blocks(smoothed_sequence, verse_ids, sustain=3):
+    """Identify contiguous theme blocks from a smoothed sequence.
+
+    A new block starts only when the smoothed theme changes AND the new
+    theme sustains for at least *sustain* consecutive verses.  Short
+    interruptions (< sustain verses) are absorbed into the surrounding block.
+
+    Returns a list of dicts:
+        {"theme": str, "start_verse": str, "end_verse": str, "length": int}
+    """
+    if not smoothed_sequence:
+        return []
+
+    # First pass: run-length encode the smoothed sequence
+    runs = []  # [(category, start_index, length)]
+    cur_cat = smoothed_sequence[0]
+    cur_start = 0
+    for i in range(1, len(smoothed_sequence)):
+        if smoothed_sequence[i] != cur_cat:
+            runs.append((cur_cat, cur_start, i - cur_start))
+            cur_cat = smoothed_sequence[i]
+            cur_start = i
+    runs.append((cur_cat, cur_start, len(smoothed_sequence) - cur_start))
+
+    # Second pass: merge short runs (< sustain) into the preceding block
+    merged = [runs[0]]
+    for cat, start, length in runs[1:]:
+        if length < sustain:
+            # Absorb into previous block
+            prev_cat, prev_start, prev_len = merged[-1]
+            merged[-1] = (prev_cat, prev_start, prev_len + length)
+        else:
+            merged.append((cat, start, length))
+
+    # Convert to output format
+    blocks = []
+    for cat, start, length in merged:
+        blocks.append({
+            "theme": cat,
+            "start_verse": verse_ids[start],
+            "end_verse": verse_ids[min(start + length - 1, len(verse_ids) - 1)],
+            "length": length,
+        })
+    return blocks
+
+
 def analyze_intra_surah(surah_num, verse_ids, graph):
     """Analyze theme flow within a single surah.
 
     Returns a dict with:
       - verse_categories: [{verseId, keywords, primary_cat, all_cats}, ...]
-      - transitions: [(from_cat, to_cat, verse_index), ...]
-      - narrative_arc: {opening, development, conclusion}
+      - transitions: [(from_cat, to_cat, verse_index), ...]  (sustained only)
+      - theme_blocks: [{theme, start_verse, end_verse, length}, ...]
+      - narrative_arc: {opening_block, development_blocks, closing_block}
       - thematic_center: category name
       - category_distribution: {cat: count}
+      - narrative_complexity: number of theme blocks
     """
     verse_categories = []
-    category_sequence = []
+    raw_sequence = []
 
     for vid in verse_ids:
         text = graph["verses"][vid]["text"]
@@ -115,35 +189,55 @@ def analyze_intra_surah(surah_num, verse_ids, graph):
             "primary_category": p_cat,
             "all_categories": [(c, s) for c, s in cats[:3]],
         })
-        category_sequence.append(p_cat)
+        raw_sequence.append(p_cat)
 
-    # Detect theme transitions
+    # Smooth with sliding window of 5 verses (majority vote)
+    smoothed = _smooth_categories(raw_sequence, window=5)
+
+    # Build theme blocks (only count sustained changes of 4+ verses)
+    theme_blocks = _build_theme_blocks(smoothed, verse_ids, sustain=4)
+
+    # Transitions: only between consecutive theme blocks
     transitions = []
-    for i in range(1, len(category_sequence)):
-        if category_sequence[i] != category_sequence[i - 1]:
-            transitions.append((category_sequence[i - 1], category_sequence[i], i))
+    for i in range(1, len(theme_blocks)):
+        if theme_blocks[i]["theme"] != theme_blocks[i - 1]["theme"]:
+            # Find the verse index where this block starts
+            block_start_vid = theme_blocks[i]["start_verse"]
+            v_idx = verse_ids.index(block_start_vid) if block_start_vid in verse_ids else i
+            transitions.append((
+                theme_blocks[i - 1]["theme"],
+                theme_blocks[i]["theme"],
+                v_idx,
+            ))
 
-    # Category distribution
-    cat_counts = Counter(category_sequence)
+    # Category distribution (from smoothed sequence)
+    cat_counts = Counter(smoothed)
     thematic_center = cat_counts.most_common(1)[0][0] if cat_counts else "uncategorized"
 
-    # Narrative arc: opening (first ~10%), development (middle ~80%), conclusion (last ~10%)
-    n = len(category_sequence)
-    if n == 0:
-        arc = {"opening": "uncategorized", "development": [], "conclusion": "uncategorized"}
-    else:
-        boundary_open = max(1, n // 10)
-        boundary_close = max(boundary_open + 1, n - max(1, n // 10))
-
-        opening_cats = Counter(category_sequence[:boundary_open])
-        conclusion_cats = Counter(category_sequence[boundary_close:])
-        dev_cats = Counter(category_sequence[boundary_open:boundary_close])
-
+    # Narrative arc based on theme blocks
+    if not theme_blocks:
         arc = {
-            "opening": opening_cats.most_common(1)[0][0] if opening_cats else "uncategorized",
-            "development": [c for c, _ in dev_cats.most_common(3)],
-            "conclusion": conclusion_cats.most_common(1)[0][0] if conclusion_cats else "uncategorized",
+            "opening_block": "uncategorized",
+            "development_blocks": [],
+            "closing_block": "uncategorized",
         }
+    elif len(theme_blocks) == 1:
+        arc = {
+            "opening_block": theme_blocks[0]["theme"],
+            "development_blocks": [],
+            "closing_block": theme_blocks[0]["theme"],
+        }
+    else:
+        arc = {
+            "opening_block": theme_blocks[0]["theme"],
+            "development_blocks": [b["theme"] for b in theme_blocks[1:-1]],
+            "closing_block": theme_blocks[-1]["theme"],
+        }
+
+    # For backward compatibility, also expose the old-style arc keys
+    arc["opening"] = arc["opening_block"]
+    arc["development"] = arc["development_blocks"]
+    arc["conclusion"] = arc["closing_block"]
 
     return {
         "surah": surah_num,
@@ -151,6 +245,8 @@ def analyze_intra_surah(surah_num, verse_ids, graph):
         "verse_categories": verse_categories,
         "transitions": transitions,
         "num_transitions": len(transitions),
+        "theme_blocks": theme_blocks,
+        "narrative_complexity": len(theme_blocks),
         "narrative_arc": arc,
         "thematic_center": thematic_center,
         "category_distribution": dict(cat_counts),
@@ -234,7 +330,7 @@ def build_surah_profile(surah_num, arc_data, bridges_in, bridges_out, graph, sur
     primary_theme = sorted_cats[0][0] if sorted_cats else "uncategorized"
     secondary_themes = [c for c, _ in sorted_cats[1:3]]
     theme_diversity = len(cat_dist)
-    narrative_complexity = arc_data["num_transitions"]
+    narrative_complexity = arc_data.get("narrative_complexity", arc_data["num_transitions"])
 
     # Key bridge keywords across both directions
     all_bridge_kws = set()
@@ -378,6 +474,8 @@ def run_loop(max_hours=0):
                         for t in arc_data["transitions"]
                     ],
                     "num_transitions": arc_data["num_transitions"],
+                    "theme_blocks": arc_data.get("theme_blocks", []),
+                    "narrative_complexity": arc_data.get("narrative_complexity", arc_data["num_transitions"]),
                     "narrative_arc": arc_data["narrative_arc"],
                     "thematic_center": arc_data["thematic_center"],
                     "category_distribution": arc_data["category_distribution"],
