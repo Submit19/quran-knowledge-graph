@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deductions — Quran Knowledge Graph</title>
+  <title>Quran Knowledge Graph</title>
   <script src="https://cdn.jsdelivr.net/npm/three@0.160/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/3d-force-graph@1/dist/3d-force-graph.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
@@ -48,8 +48,8 @@
       overflow: hidden;
     }
 
-    /* ── left panel ── */
-    #left-panel {
+    /* ── chat panel (LEFT) ── */
+    #chat-panel {
       flex: 0 0 40%;
       display: flex;
       flex-direction: column;
@@ -57,119 +57,131 @@
       overflow: hidden;
     }
 
-    /* stats summary */
-    #stats-summary {
-      padding: 16px;
-      border-bottom: 1px solid #1e293b;
-      flex-shrink: 0;
-    }
-    #stats-summary h2 {
-      font-size: 0.82em; font-weight: 700; color: #10b981;
-      margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.06em;
-    }
-    .stats-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
-    }
-    .stat-card {
-      background: #0f1a2e;
-      border: 1px solid #1e293b;
-      border-radius: 8px;
-      padding: 10px 12px;
-      text-align: center;
-    }
-    .stat-value {
-      font-size: 1.4em; font-weight: 700; color: #f1f5f9;
-      line-height: 1.2;
-    }
-    .stat-label {
-      font-size: 0.68em; color: #475569; margin-top: 2px;
-    }
-
-    /* quality bar */
-    .quality-bar-wrap {
-      margin-top: 12px;
-    }
-    .quality-bar-wrap .label {
-      font-size: 0.7em; color: #475569; margin-bottom: 4px;
-    }
-    .quality-bar {
-      display: flex; height: 6px; border-radius: 3px; overflow: hidden; gap: 1px;
-    }
-    .quality-bar .seg { border-radius: 2px; }
-    .quality-bar .seg-high   { background: #10b981; }
-    .quality-bar .seg-medium { background: #f59e0b; }
-    .quality-bar .seg-low    { background: #ef4444; }
-
-    /* insights list */
-    #insights-area {
+    #messages {
       flex: 1;
       overflow-y: auto;
-      padding: 12px 14px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
-    #insights-area::-webkit-scrollbar { width: 3px; }
-    #insights-area::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 2px; }
+    #messages::-webkit-scrollbar { width: 3px; }
+    #messages::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 2px; }
 
-    .category-group { margin-bottom: 16px; }
-    .category-group-title {
-      font-size: 0.72em; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.05em; padding: 4px 0; margin-bottom: 6px;
-      border-bottom: 1px solid #1e293b; display: flex; align-items: center; gap: 8px;
+    /* bubbles */
+    .row-user      { display: flex; justify-content: flex-end; }
+    .row-assistant { display: flex; justify-content: flex-start; }
+
+    .bubble-user {
+      background: #047857;
+      color: #ecfdf5;
+      padding: 9px 14px;
+      border-radius: 16px 16px 4px 16px;
+      max-width: 80%;
+      font-size: 0.88em;
+      line-height: 1.5;
+      word-break: break-word;
     }
-    .cat-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-
-    .insight-card {
+    .bubble-assistant {
       background: #0f1a2e;
       border: 1px solid #1e293b;
-      border-radius: 8px;
-      padding: 10px 12px;
-      margin-bottom: 8px;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-    .insight-card:hover { border-color: #334155; background: #111d33; }
-    .insight-card.selected { border-color: #10b981; background: rgba(16,185,129,0.06); }
-
-    .insight-header {
-      display: flex; align-items: center; gap: 8px; margin-bottom: 6px;
-    }
-    .cat-badge {
-      font-size: 0.62em; font-weight: 600; padding: 2px 8px;
-      border-radius: 10px; white-space: nowrap;
-      background: rgba(16,185,129,0.12); color: #10b981;
-    }
-    .quality-badge {
-      font-size: 0.6em; font-weight: 700; padding: 2px 6px;
-      border-radius: 4px; margin-left: auto;
-    }
-    .quality-badge.high   { background: rgba(16,185,129,0.15); color: #10b981; }
-    .quality-badge.medium { background: rgba(245,158,11,0.15); color: #f59e0b; }
-    .quality-badge.low    { background: rgba(239,68,68,0.15); color: #ef4444; }
-
-    .insight-conclusion {
-      font-size: 0.8em; color: #94a3b8; line-height: 1.55;
-      margin-bottom: 6px;
-      display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    .insight-meta {
-      display: flex; flex-wrap: wrap; gap: 4px; align-items: center;
-    }
-    .verse-ref {
-      color: #10b981; font-weight: 700; font-size: 0.68em;
-      border-bottom: 1px dotted #059669; cursor: help;
-    }
-    .bridge-kw {
-      font-size: 0.62em; color: #64748b; background: #0a0f1a;
-      padding: 1px 6px; border-radius: 8px; border: 1px solid #1e293b;
+      color: #cbd5e1;
+      padding: 12px 15px;
+      border-radius: 4px 16px 16px 16px;
+      max-width: 95%;
+      font-size: 0.85em;
+      line-height: 1.65;
+      word-break: break-word;
     }
 
-    /* loading state */
-    .insights-loading {
-      color: #1e3a5f; font-size: 0.85em; text-align: center;
-      padding: 40px 20px; font-style: italic;
+    .thinking {
+      color: #1e3a5f;
+      font-style: italic;
       animation: pulse 1.4s ease-in-out infinite;
     }
     @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
+
+    /* prose */
+    .prose p               { margin-bottom: 0.45em; }
+    .prose p:last-child    { margin-bottom: 0; }
+    .prose h2,.prose h3    { color: #f1f5f9; font-weight: 600; margin: 0.6em 0 0.2em; font-size: 1em; }
+    .prose ul,.prose ol    { padding-left: 1.4em; margin-bottom: 0.4em; }
+    .prose li              { margin-bottom: 0.15em; }
+    .prose strong          { color: #e2e8f0; }
+    .prose em              { color: #64748b; }
+    .prose code            { background: #0a0f1a; color: #7dd3fc; padding: 0.1em 0.35em; border-radius: 3px; font-size: 0.87em; font-family: monospace; }
+    .prose blockquote      { border-left: 2px solid #10b981; padding-left: 8px; color: #64748b; margin: 0.4em 0; }
+    .prose a               { color: #34d399; }
+
+    /* tool blocks */
+    .tool-block {
+      background: #060a14;
+      border: 1px solid #1a2540;
+      border-radius: 5px;
+      padding: 5px 9px;
+      margin: 6px 0;
+    }
+    .tool-block > summary {
+      cursor: pointer; color: #1e3a5f; font-size: 0.78em;
+      font-style: italic; list-style: none; user-select: none;
+    }
+    .tool-block > summary::-webkit-details-marker { display: none; }
+    .tool-block > summary::before { content: '> '; }
+    .tool-block[open] > summary::before { content: 'v '; }
+    .tool-block > summary:hover { color: #334155; }
+    .tool-result { color: #334155; font-size: 0.78em; padding-top: 3px; padding-left: 12px; }
+
+    /* verse refs */
+    .vref {
+      color: #10b981; font-weight: 700; cursor: help;
+      border-bottom: 1px dotted #059669;
+    }
+    .vref:hover { color: #34d399; }
+
+    /* examples */
+    #examples {
+      padding: 0 14px 8px;
+      display: flex; flex-wrap: wrap; gap: 6px; flex-shrink: 0;
+    }
+    .ex-btn {
+      background: #0a0f1a; border: 1px solid #1e293b; color: #334155;
+      font-size: 0.72em; padding: 4px 10px; border-radius: 20px;
+      cursor: pointer; transition: all 0.15s; font-family: inherit;
+    }
+    .ex-btn:hover { background: #1e293b; color: #94a3b8; }
+
+    /* input */
+    #input-area { padding: 0 14px 14px; display: flex; gap: 7px; flex-shrink: 0; }
+    #input {
+      flex: 1; background: #0f1a2e; border: 1px solid #1e293b;
+      color: #f1f5f9; padding: 10px 14px; border-radius: 10px;
+      font-size: 0.88em; font-family: inherit; outline: none;
+    }
+    #input:focus      { border-color: #10b981; }
+    #input::placeholder { color: #1e3a5f; }
+
+    #send-btn {
+      background: #047857; color: white; border: none;
+      padding: 10px 18px; border-radius: 10px; font-size: 0.88em;
+      font-weight: 600; cursor: pointer; transition: background 0.15s;
+      white-space: nowrap; font-family: inherit;
+    }
+    #send-btn:hover:not(:disabled) { background: #10b981; }
+    #send-btn:disabled { background: #0a0f1a; color: #1e293b; cursor: not-allowed; }
+
+    /* tooltip */
+    #tooltip {
+      position: fixed;
+      background: #0f1a2e; color: #cbd5e1; padding: 10px 14px;
+      border-radius: 9px; font-size: 0.81em; font-style: italic;
+      line-height: 1.55; max-width: 340px; z-index: 9999;
+      pointer-events: none; box-shadow: 0 8px 28px rgba(0,0,0,0.7);
+      border: 1px solid #1e293b; display: none;
+    }
+    #tooltip-ref {
+      font-size: 0.75em; color: #10b981; font-weight: 700;
+      font-style: normal; display: block; margin-bottom: 4px;
+    }
 
     /* ── graph panel (RIGHT) ── */
     #graph-panel {
@@ -179,45 +191,6 @@
       background: #060a14;
     }
     #graph-panel canvas { display: block; }
-
-    /* tooltip */
-    #tooltip {
-      position: fixed;
-      background: #0f1a2e; color: #cbd5e1; padding: 10px 14px;
-      border-radius: 9px; font-size: 0.81em;
-      line-height: 1.55; max-width: 360px; z-index: 9999;
-      pointer-events: none; box-shadow: 0 8px 28px rgba(0,0,0,0.7);
-      border: 1px solid #1e293b; display: none;
-    }
-    #tooltip-title {
-      font-size: 0.85em; font-weight: 700; display: block; margin-bottom: 4px;
-    }
-    #tooltip-body {
-      font-size: 0.78em; color: #94a3b8;
-    }
-
-    /* graph legend */
-    #graph-legend {
-      position: absolute;
-      top: 12px; left: 12px;
-      font-size: 0.65em;
-      color: #475569;
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-      pointer-events: none;
-      max-height: calc(100% - 80px);
-      overflow-y: auto;
-    }
-    .legend-item { display: flex; align-items: center; gap: 6px; }
-    .legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-
-    #graph-loading {
-      position: absolute;
-      top: 50%; left: 50%; transform: translate(-50%, -50%);
-      color: #1e3a5f; font-size: 0.85em; text-align: center;
-      animation: pulse 1.4s ease-in-out infinite;
-    }
 
     /* node info card */
     #node-info {
@@ -230,20 +203,39 @@
       backdrop-filter: blur(6px);
       font-size: 0.82em;
       display: none;
-      max-height: 160px;
+      max-height: 140px;
       overflow-y: auto;
     }
     #node-info-title {
-      color: #10b981; font-weight: 700; font-size: 0.9em; margin-bottom: 5px;
+      color: #10b981;
+      font-weight: 700;
+      font-size: 0.9em;
+      margin-bottom: 5px;
     }
     #node-info-body { color: #94a3b8; line-height: 1.5; font-style: italic; }
     #node-info-close {
-      position: absolute; top: 8px; right: 10px;
-      color: #334155; cursor: pointer; font-size: 1.1em; line-height: 1;
+      position: absolute;
+      top: 8px; right: 10px;
+      color: #334155;
+      cursor: pointer;
+      font-size: 1.1em;
+      line-height: 1;
     }
     #node-info-close:hover { color: #64748b; }
 
-    /* WASD hint */
+    /* graph legend + WASD hint */
+    #graph-legend {
+      position: absolute;
+      top: 12px; left: 12px;
+      font-size: 0.7em;
+      color: #334155;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      pointer-events: none;
+    }
+    .legend-item { display: flex; align-items: center; gap: 6px; }
+    .legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
     #wasd-hint {
       position: absolute;
       bottom: 16px; right: 16px;
@@ -254,81 +246,84 @@
       line-height: 1.6;
     }
 
-    /* live counter bar */
-    #live-counter {
-      padding: 6px 20px;
-      border-top: 1px solid #1e293b;
-      background: #0a0f1a;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-shrink: 0;
+    #clear-graph-btn {
+      position: absolute;
+      top: 12px; right: 12px;
+      background: rgba(15, 26, 46, 0.85);
+      border: 1px solid #1e293b;
+      color: #64748b;
       font-size: 0.72em;
+      padding: 5px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: inherit;
+      z-index: 10;
+      backdrop-filter: blur(4px);
     }
-    .live-dot {
-      width: 7px; height: 7px; border-radius: 50%;
-      background: #334155; flex-shrink: 0;
+    #clear-graph-btn:hover { border-color: #334155; color: #94a3b8; }
+
+    /* loading bar */
+    #graph-loading {
+      position: absolute;
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      color: #1e3a5f; font-size: 0.85em; text-align: center;
     }
-    .live-dot.active {
-      background: #10b981;
-      animation: pulse 1.4s ease-in-out infinite;
-    }
-    .live-label { color: #475569; }
-    .live-value { color: #94a3b8; font-weight: 600; }
-    .live-sep   { color: #1e293b; }
   </style>
 </head>
 <body>
   <div id="app" style="display:flex;flex-direction:column;height:100dvh;">
     <header>
-      <h1>Quran Knowledge Graph</h1>
+      <h1>Quran Knowledge Graph — Deductions</h1>
       <nav id="header-tabs">
         <a href="/" class="tab">Chat</a>
         <a href="/stats" class="tab">Stats</a>
         <a href="/deductions" class="tab active">Deductions</a>
+        <a href="/visualizations" class="tab">Visualizations</a>
+        <a href="/comparator" class="tab">Comparator</a>
+        <a href="/explorer" class="tab">Explorer</a>
+        <a href="/presentation" class="tab">Presentation</a>
       </nav>
-      <p>Meta-knowledge graph of cross-verse theological deductions</p>
+      <p>143,000+ deductions &nbsp;|&nbsp; 13 theological themes &nbsp;|&nbsp; WASD to fly &nbsp;|&nbsp; Drag to orbit &nbsp;|&nbsp; Scroll to zoom</p>
     </header>
-
     <div id="main">
-      <!-- LEFT: insights panel -->
-      <div id="left-panel">
-        <div id="stats-summary">
-          <h2>Deduction Overview</h2>
-          <div class="stats-grid">
-            <div class="stat-card">
-              <div class="stat-value" id="stat-total">--</div>
-              <div class="stat-label">Total Deductions</div>
+      <!-- INSIGHTS on LEFT -->
+      <div id="chat-panel">
+        <div style="padding:14px;border-bottom:1px solid #1e293b;">
+          <div style="display:flex;gap:10px;margin-bottom:10px;">
+            <div style="flex:1;background:#0f1a2e;border:1px solid #1e293b;border-radius:8px;padding:10px;text-align:center;">
+              <div id="stat-total" style="color:#10b981;font-size:1.4em;font-weight:700;">—</div>
+              <div style="color:#475569;font-size:0.7em;">Deductions</div>
             </div>
-            <div class="stat-card">
-              <div class="stat-value" id="stat-categories">13</div>
-              <div class="stat-label">Categories</div>
+            <div style="flex:1;background:#0f1a2e;border:1px solid #1e293b;border-radius:8px;padding:10px;text-align:center;">
+              <div style="color:#3b82f6;font-size:1.4em;font-weight:700;">13</div>
+              <div style="color:#475569;font-size:0.7em;">Themes</div>
             </div>
-            <div class="stat-card">
-              <div class="stat-value" id="stat-high">--</div>
-              <div class="stat-label">High Quality</div>
-            </div>
-          </div>
-          <div class="quality-bar-wrap">
-            <div class="label">Quality distribution</div>
-            <div class="quality-bar" id="quality-bar">
-              <div class="seg seg-high" style="flex:1"></div>
-              <div class="seg seg-medium" style="flex:1"></div>
-              <div class="seg seg-low" style="flex:1"></div>
+            <div style="flex:1;background:#0f1a2e;border:1px solid #1e293b;border-radius:8px;padding:10px;text-align:center;">
+              <div style="color:#f59e0b;font-size:1.4em;font-weight:700;">76</div>
+              <div style="color:#475569;font-size:0.7em;">Connections</div>
             </div>
           </div>
+          <div style="color:#475569;font-size:0.72em;">Top insights from autonomous syllogistic deduction analysis</div>
         </div>
-
-        <div id="insights-area">
-          <div class="insights-loading">Loading insights...</div>
+        <div id="messages" style="padding:10px;">
+          <div style="color:#334155;font-size:0.8em;text-align:center;padding:20px;">Loading insights...</div>
+        </div>
+        <div id="status-bar" style="padding:8px 14px;border-top:1px solid #1e293b;font-size:0.7em;color:#475569;display:flex;align-items:center;gap:8px;">
+          <span id="status-dot" style="width:8px;height:8px;border-radius:50%;background:#475569;"></span>
+          <span id="status-text">Checking status...</span>
         </div>
       </div>
-
-      <!-- RIGHT: 3D graph -->
+      <!-- GRAPH on RIGHT -->
       <div id="graph-panel">
-        <div id="graph-loading">Loading deduction graph...</div>
-        <div id="graph-legend"></div>
-        <div id="wasd-hint">W/S -- forward/back<br>A/D -- strafe<br>Q/E -- up/down<br>Drag to orbit | Scroll to zoom</div>
+        <div id="graph-loading">Loading 6,346 verses...</div>
+        <div id="graph-legend">
+          <div class="legend-item"><div class="legend-dot" style="background:#0f4c3a"></div><span>Verse (idle)</span></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#6ee7b7"></div><span>Verse (active)</span></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div><span>Keyword</span></div>
+        </div>
+        <button id="clear-graph-btn" onclick="clearGraph()">Clear connections</button>
+        <div id="wasd-hint">W/S — forward/back<br>A/D — strafe<br>Q/E — up/down</div>
         <div id="node-info">
           <span id="node-info-close" onclick="document.getElementById('node-info').style.display='none'">x</span>
           <div id="node-info-title"></div>
@@ -336,427 +331,796 @@
         </div>
       </div>
     </div>
-
-    <!-- live counter bar -->
-    <div id="live-counter">
-      <div class="live-dot" id="live-dot"></div>
-      <span class="live-label">Deductions engine:</span>
-      <span class="live-value" id="live-status">checking...</span>
-      <span class="live-sep">|</span>
-      <span class="live-label">Total:</span>
-      <span class="live-value" id="live-total">--</span>
-      <span class="live-sep">|</span>
-      <span class="live-label">Last round:</span>
-      <span class="live-value" id="live-round">--</span>
-    </div>
   </div>
 
-  <div id="tooltip">
-    <span id="tooltip-title"></span>
-    <span id="tooltip-body"></span>
-  </div>
+  <div id="tooltip"><span id="tooltip-ref"></span><span id="tooltip-text"></span></div>
 
   <script>
-    // ════════════════════════════════════════════════════════════════════════════
-    // CATEGORY COLORS
-    // ════════════════════════════════════════════════════════════════════════════
-    const CATEGORY_COLORS = {
-      monotheism_and_gods_nature:    '#10b981',
-      prophecy_and_revelation:       '#3b82f6',
-      moral_law_and_ethics:          '#f59e0b',
-      worship_and_ritual:            '#8b5cf6',
-      afterlife_and_judgment:        '#ef4444',
-      creation_and_cosmology:        '#06b6d4',
-      prophetic_narratives:          '#f97316',
-      social_law:                    '#ec4899',
-      covenant_and_obedience:        '#14b8a6',
-      divine_mercy_and_forgiveness:  '#a3e635',
-      warfare_and_struggle:          '#dc2626',
-      knowledge_and_wisdom:          '#818cf8',
-      mathematical_miracle:          '#fbbf24',
+    // ── marked config ────────────────────────────────────────────────────────────
+    marked.use({ breaks: true, gfm: true });
+
+    // ── Category colors ──────────────────────────────────────────────────────────
+    const CAT_COLORS = {
+      monotheism_and_gods_nature: '#10b981', prophecy_and_revelation: '#3b82f6',
+      moral_law_and_ethics: '#f59e0b', worship_and_ritual: '#8b5cf6',
+      afterlife_and_judgment: '#ef4444', creation_and_cosmology: '#06b6d4',
+      prophetic_narratives: '#f97316', social_law: '#ec4899',
+      covenant_and_obedience: '#14b8a6', divine_mercy_and_forgiveness: '#a3e635',
+      warfare_and_struggle: '#dc2626', knowledge_and_wisdom: '#818cf8',
+      mathematical_miracle: '#fbbf24', uncategorized: '#475569',
     };
 
-    function categoryLabel(key) {
-      return key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    // ── Load insights into left panel ────────────────────────────────────────────
+    async function loadInsights() {
+      const msgEl = document.getElementById('messages');
+      try {
+        const resp = await fetch('/api/deductions/insights');
+        const data = await resp.json();
+        const insights = data.insights || [];
+        msgEl.innerHTML = '';
+        if (!insights.length) { msgEl.innerHTML = '<div style="color:#475569;padding:20px;text-align:center;">No insights yet</div>'; return; }
+        insights.forEach((ins, i) => {
+          const catColor = CAT_COLORS[ins.category] || '#475569';
+          const catLabel = (ins.category || 'unknown').replace(/_/g, ' ');
+          const vp = ins.verse_pair || [];
+          const kws = (ins.bridge_keywords || []).slice(0, 5);
+          const card = document.createElement('div');
+          card.style.cssText = 'background:#0f1a2e;border:1px solid #1e293b;border-radius:8px;padding:10px 12px;margin-bottom:8px;cursor:pointer;transition:border-color 0.15s;';
+          card.onmouseover = () => card.style.borderColor = catColor;
+          card.onmouseout = () => card.style.borderColor = '#1e293b';
+          card.onclick = () => {
+            if (vp.length && GALAXY_POSITIONS[vp[0]]) {
+              const p = GALAXY_POSITIONS[vp[0]];
+              if (Graph) Graph.cameraPosition({x:p.x+100,y:p.y+50,z:p.z+100},{x:p.x,y:p.y,z:p.z},1500);
+            }
+          };
+          card.innerHTML = `
+            <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
+              <span style="background:${catColor};color:#000;padding:2px 8px;border-radius:10px;font-size:0.65em;font-weight:600;">${catLabel}</span>
+              <span style="color:#475569;font-size:0.65em;margin-left:auto;">${ins.quality ? ins.quality.toFixed(1) : '—'}</span>
+            </div>
+            <div style="color:#94a3b8;font-size:0.78em;line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">
+              ${(ins.conclusion || '').slice(0, 200)}
+            </div>
+            <div style="margin-top:6px;display:flex;flex-wrap:wrap;gap:4px;">
+              ${vp.map(v => `<span style="color:#10b981;font-size:0.7em;font-weight:600;">[${v}]</span>`).join(' ')}
+              ${kws.map(k => `<span style="background:#1e293b;color:#64748b;font-size:0.62em;padding:1px 6px;border-radius:8px;">${k}</span>`).join('')}
+            </div>`;
+          msgEl.appendChild(card);
+        });
+      } catch (e) {
+        msgEl.innerHTML = `<div style="color:#f87171;padding:20px;text-align:center;">Could not load insights: ${e.message}</div>`;
+      }
     }
 
-    function categoryColor(key) {
-      return CATEGORY_COLORS[key] || '#64748b';
+    // ── Load status ──────────────────────────────────────────────────────────────
+    async function loadStatus() {
+      try {
+        const resp = await fetch('/api/deductions/status');
+        const s = await resp.json();
+        document.getElementById('stat-total').textContent = (s.total_deductions || 0).toLocaleString();
+        document.getElementById('status-text').textContent = s.is_running ? `Running — ${(s.total_deductions||0).toLocaleString()} deductions` : `Idle — ${(s.total_deductions||0).toLocaleString()} deductions`;
+        document.getElementById('status-dot').style.background = s.is_running ? '#10b981' : '#475569';
+      } catch { document.getElementById('status-text').textContent = 'Offline'; }
     }
 
-    function qualityClass(score) {
-      if (score >= 0.7) return 'high';
-      if (score >= 0.4) return 'medium';
-      return 'low';
+    // ── Load meta-graph as 3D overlay ────────────────────────────────────────────
+    async function loadMetaGraph() {
+      try {
+        const resp = await fetch('/api/deductions/graph');
+        const data = await resp.json();
+        if (!Graph || !data.nodes) return;
+        // Add category nodes as large orbs
+        const catNodes = data.nodes.map(n => ({
+          id: `cat:${n.id}`, type: 'keyword', label: n.label,
+          active: true, inConv: true, catColor: n.color,
+        }));
+        // Position category nodes at surah 1-13 positions (spread them out)
+        const catSurahs = [2,7,4,5,16,36,12,24,9,39,47,35,74]; // representative surahs per category
+        catNodes.forEach((cn, i) => {
+          const sid = catSurahs[i] || (i*8+1);
+          const vid = `${sid}:1`;
+          if (GALAXY_POSITIONS[vid]) {
+            const p = GALAXY_POSITIONS[vid];
+            cn.fx = p.x * 1.3; cn.fy = p.y * 1.3; cn.fz = p.z * 1.3;
+          }
+        });
+        // Add edges between categories
+        const catLinks = data.edges.map(e => ({
+          source: `cat:${e.source}`, target: `cat:${e.target}`,
+          type: 'related',
+        }));
+        // Apply to graph
+        const existing = Graph.graphData();
+        Graph.graphData({
+          nodes: [...existing.nodes, ...catNodes],
+          links: [...existing.links, ...catLinks],
+        });
+      } catch (e) { console.log('Meta-graph load:', e); }
     }
 
-    // ════════════════════════════════════════════════════════════════════════════
-    // BUILD LEGEND
-    // ════════════════════════════════════════════════════════════════════════════
-    const legendEl = document.getElementById('graph-legend');
-    Object.entries(CATEGORY_COLORS).forEach(([key, color]) => {
-      const item = document.createElement('div');
-      item.className = 'legend-item';
-      item.innerHTML = `<div class="legend-dot" style="background:${color}"></div><span>${categoryLabel(key)}</span>`;
-      legendEl.appendChild(item);
-    });
+    loadInsights();
+    loadStatus();
+    setInterval(loadStatus, 10000);
+    setTimeout(loadMetaGraph, 2000);
 
     // ════════════════════════════════════════════════════════════════════════════
     // 3D GRAPH
     // ════════════════════════════════════════════════════════════════════════════
     const graphPanel = document.getElementById('graph-panel');
-    let Graph = null;
-    let graphData = { nodes: [], links: [] };
-    let selectedInsightId = null;
 
-    function initGraph(data) {
-      document.getElementById('graph-loading').style.display = 'none';
+    // ── colour helpers ───────────────────────────────────────────────────────────
+    const C_VERSE_ACTIVE   = new THREE.Color('#6ee7b7');
+    const C_VERSE_CONV     = new THREE.Color('#0d9488');   // in conversation, not active
+    const C_VERSE_IDLE     = new THREE.Color('#0f4c3a');   // all other verses (dim)
+    const C_KEYWORD_ACTIVE = new THREE.Color('#fde68a');
+    const C_KEYWORD_IDLE   = new THREE.Color('#d97706');
 
-      const nodes = (data.nodes || []).map(n => ({
-        ...n,
-        color: categoryColor(n.category || n.id),
-      }));
+    function nodeBaseColor(node) {
+      if (node.type === 'keyword') return node.active ? C_KEYWORD_ACTIVE : C_KEYWORD_IDLE;
+      if (node.active)       return C_VERSE_ACTIVE;
+      if (node.inConv)       return C_VERSE_CONV;
+      return C_VERSE_IDLE;
+    }
 
-      const links = (data.edges || []).map(e => ({
-        source: e.source,
-        target: e.target,
-        weight: e.weight || 1,
-      }));
+    // ── sprite factory ───────────────────────────────────────────────────────────
+    function makeSprite(text, type) {
+      const w = 256, h = 52;
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      const ctx = canvas.getContext('2d');
+      ctx.font = 'bold 24px monospace';
+      ctx.fillStyle = type === 'keyword' ? '#fde68a' : '#a7f3d0';
+      ctx.shadowColor = '#000'; ctx.shadowBlur = 5;
+      ctx.fillText(text, 6, 38);
+      const tex = new THREE.CanvasTexture(canvas);
+      const mat = new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false });
+      const sprite = new THREE.Sprite(mat);
+      sprite.scale.set(w / 12, h / 12, 1);
+      sprite.position.set(0, 7, 0);
+      sprite.name = 'label';
+      sprite.visible = false;
+      return sprite;
+    }
 
-      graphData = { nodes, links };
+    // ── build Three.js object for a node ────────────────────────────────────────
+    function buildNodeObj(node) {
+      // Base verses (not yet touched by conversation): tiny dim sphere, no sprite
+      if (node.type === 'verse' && !node.inConv && !node.active) {
+        const geo  = new THREE.SphereGeometry(1.2, 5, 5);
+        const col  = C_VERSE_IDLE.clone();
+        const mat  = new THREE.MeshBasicMaterial({ color: col, transparent: true, opacity: 0.45 });
+        const mesh = new THREE.Mesh(geo, mat);
+        mesh.name  = 'sphere';
+        const g    = new THREE.Group();
+        g.add(mesh);
+        node.__obj = g;
+        return g;
+      }
 
-      Graph = ForceGraph3D()(graphPanel)
-        .graphData(graphData)
-        .backgroundColor('#060a14')
-        .nodeThreeObject(node => {
-          const isCategory = node.type === 'category';
-          const group = new THREE.Group();
+      // Conversation / keyword nodes: full sphere + optional aura + label
+      const isKw = node.type === 'keyword';
+      const r    = isKw ? 2.5 : 4;
+      const col  = nodeBaseColor(node);
+      const group = new THREE.Group();
 
-          // sphere
-          const r = isCategory ? 6 : 1.8;
-          const col = new THREE.Color(node.color || '#64748b');
-          const geo = new THREE.SphereGeometry(r, isCategory ? 16 : 8, isCategory ? 16 : 8);
-          const mat = new THREE.MeshPhongMaterial({
-            color: col.clone(),
-            emissive: col.clone(),
-            emissiveIntensity: isCategory ? 0.6 : 0.2,
-            transparent: true,
-            opacity: isCategory ? 0.95 : 0.7,
-            shininess: 80,
+      const geo = new THREE.SphereGeometry(r, 14, 14);
+      const mat = new THREE.MeshPhongMaterial({
+        color: col.clone(), emissive: col.clone(),
+        emissiveIntensity: node.active ? 0.85 : 0.15,
+        transparent: true, opacity: node.active ? 1.0 : 0.75,
+        shininess: 90,
+      });
+      const sphere = new THREE.Mesh(geo, mat);
+      sphere.name = 'sphere';
+      group.add(sphere);
+
+      if (node.active) {
+        const ag = new THREE.SphereGeometry(r * 2.4, 8, 8);
+        const am = new THREE.MeshBasicMaterial({
+          color: col.clone(), transparent: true, opacity: 0.10, side: THREE.BackSide,
+        });
+        const aura = new THREE.Mesh(ag, am);
+        aura.name = 'aura';
+        group.add(aura);
+      }
+
+      const sprite = makeSprite(node.label, node.type);
+      // Labels always visible for active and conversation nodes
+      sprite.visible = true;
+      group.add(sprite);
+      node.__obj = group;
+      return group;
+    }
+
+    // ── refresh an existing node object in-place ─────────────────────────────────
+    let hoveredNode = null;
+
+    function refreshNode(node) {
+      if (!node.__obj) return;
+
+      // If this was a dim base node but is now in conversation, rebuild it properly
+      const sphere = node.__obj.getObjectByName('sphere');
+      const isFullNode = sphere && sphere.type === 'Mesh' &&
+                         sphere.material.type === 'MeshPhongMaterial';
+      const needsUpgrade = (node.inConv || node.active) &&
+                           sphere && sphere.material.type === 'MeshBasicMaterial';
+
+      if (needsUpgrade) {
+        // Replace the simple mesh with the full node object
+        // Remove all children
+        while (node.__obj.children.length) {
+          const c = node.__obj.children[0];
+          node.__obj.remove(c);
+          if (c.geometry) c.geometry.dispose();
+          if (c.material) c.material.dispose();
+        }
+        // Re-add full geometry
+        const isKw = node.type === 'keyword';
+        const r    = isKw ? 2.5 : 4;
+        const col  = nodeBaseColor(node);
+        const geo  = new THREE.SphereGeometry(r, 14, 14);
+        const mat  = new THREE.MeshPhongMaterial({
+          color: col.clone(), emissive: col.clone(),
+          emissiveIntensity: node.active ? 0.85 : 0.15,
+          transparent: true, opacity: node.active ? 1.0 : 0.75,
+          shininess: 90,
+        });
+        const newSphere = new THREE.Mesh(geo, mat);
+        newSphere.name = 'sphere';
+        node.__obj.add(newSphere);
+        const sp = makeSprite(node.label, node.type);
+        sp.visible = true;
+        node.__obj.add(sp);
+        if (node.active) {
+          const ag = new THREE.SphereGeometry(r * 2.4, 8, 8);
+          const am = new THREE.MeshBasicMaterial({
+            color: col.clone(), transparent: true, opacity: 0.10, side: THREE.BackSide,
           });
-          const sphere = new THREE.Mesh(geo, mat);
-          sphere.name = 'sphere';
-          group.add(sphere);
+          const aura = new THREE.Mesh(ag, am); aura.name = 'aura';
+          node.__obj.add(aura);
+        }
+        return;
+      }
 
-          // glow for categories
-          if (isCategory) {
-            const ag = new THREE.SphereGeometry(r * 2.2, 10, 10);
-            const am = new THREE.MeshBasicMaterial({
-              color: col.clone(), transparent: true, opacity: 0.06, side: THREE.BackSide,
-            });
-            group.add(new THREE.Mesh(ag, am));
+      const col = nodeBaseColor(node);
+      if (sphere) {
+        sphere.material.color.copy(col);
+        if (sphere.material.emissive) {
+          sphere.material.emissive.copy(col);
+          sphere.material.emissiveIntensity = node.active ? 0.85 : 0.15;
+        }
+        sphere.material.opacity = node.active ? 1.0 : (node.inConv ? 0.75 : 0.45);
+        sphere.material.needsUpdate = true;
+      }
 
-            // label sprite
-            const canvas = document.createElement('canvas');
-            const w = 512, h = 64;
-            canvas.width = w; canvas.height = h;
-            const ctx = canvas.getContext('2d');
-            ctx.font = 'bold 28px system-ui, sans-serif';
-            ctx.fillStyle = node.color || '#cbd5e1';
-            ctx.shadowColor = '#000'; ctx.shadowBlur = 6;
-            const label = categoryLabel(node.category || node.id);
-            ctx.fillText(label, 6, 44);
-            const tex = new THREE.CanvasTexture(canvas);
-            const spMat = new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false });
-            const sprite = new THREE.Sprite(spMat);
-            sprite.scale.set(w / 10, h / 10, 1);
-            sprite.position.set(0, r + 5, 0);
-            group.add(sprite);
-          }
+      // aura
+      let aura = node.__obj.getObjectByName('aura');
+      if (node.active && !aura) {
+        const r  = node.type === 'keyword' ? 2.5 : 4;
+        const ag = new THREE.SphereGeometry(r * 2.4, 8, 8);
+        const am = new THREE.MeshBasicMaterial({
+          color: col.clone(), transparent: true, opacity: 0.10, side: THREE.BackSide,
+        });
+        aura = new THREE.Mesh(ag, am); aura.name = 'aura';
+        node.__obj.add(aura);
+      } else if (!node.active && aura) {
+        node.__obj.remove(aura);
+        aura.geometry.dispose(); aura.material.dispose();
+      }
 
-          node.__obj = group;
-          return group;
-        })
-        .nodeVal(node => node.type === 'category' ? 12 : 2)
-        .linkWidth(link => Math.max(0.3, Math.min(3, (link.weight || 1) * 0.4)))
-        .linkColor(() => 'rgba(30,41,59,0.5)')
-        .linkOpacity(0.4)
+      // label: always visible for conv/active, visible on hover too
+      const label = node.__obj.getObjectByName('label');
+      if (label) {
+        label.visible = node.active || node.inConv || node === hoveredNode;
+      }
+    }
+
+    // ── all 114 surah verse counts (6,236 total) ─────────────────────────────────
+    const SURAH_COUNTS = [
+       7,286,200,176,120,165,206, 75,129,109,
+     123,111, 43, 52, 99,128,111,110, 98,135,
+     112, 78,118, 64, 77,227, 93, 88, 69, 60,
+      34, 30, 73, 54, 45, 83,182, 88, 75, 85,
+      54, 53, 89, 59, 37, 35, 38, 29, 18, 45,
+      60, 49, 62, 55, 78, 96, 29, 22, 24, 13,
+      14, 11, 11, 18, 12, 12, 30, 52, 52, 44,
+      28, 28, 20, 56, 40, 31, 50, 40, 46, 42,
+      29, 19, 36, 25, 22, 17, 19, 26, 30, 20,
+      15, 21, 11,  8,  8, 19,  5,  8,  8, 11,
+      11,  8,  3,  9,  5,  4,  7,  3,  6,  3,
+       5,  4,  5,  6
+    ];
+
+    // ── surah names (number, arabic, english) ────────────────────────────────────
+    const SURAH_DATA = [
+      [1,  'الفاتحة',       'Al-Fatihah'],
+      [2,  'البقرة',        'Al-Baqarah'],
+      [3,  'آل عمران',      'Ali \'Imran'],
+      [4,  'النساء',        'An-Nisa'],
+      [5,  'المائدة',       'Al-Ma\'idah'],
+      [6,  'الأنعام',       'Al-An\'am'],
+      [7,  'الأعراف',       'Al-A\'raf'],
+      [8,  'الأنفال',       'Al-Anfal'],
+      [9,  'التوبة',        'At-Tawbah'],
+      [10, 'يونس',          'Yunus'],
+      [11, 'هود',           'Hud'],
+      [12, 'يوسف',          'Yusuf'],
+      [13, 'الرعد',         'Ar-Ra\'d'],
+      [14, 'إبراهيم',       'Ibrahim'],
+      [15, 'الحجر',         'Al-Hijr'],
+      [16, 'النحل',         'An-Nahl'],
+      [17, 'الإسراء',       'Al-Isra'],
+      [18, 'الكهف',         'Al-Kahf'],
+      [19, 'مريم',          'Maryam'],
+      [20, 'طه',            'Ta-Ha'],
+      [21, 'الأنبياء',      'Al-Anbiya'],
+      [22, 'الحج',          'Al-Hajj'],
+      [23, 'المؤمنون',      'Al-Mu\'minun'],
+      [24, 'النور',         'An-Nur'],
+      [25, 'الفرقان',       'Al-Furqan'],
+      [26, 'الشعراء',       'Ash-Shu\'ara'],
+      [27, 'النمل',         'An-Naml'],
+      [28, 'القصص',         'Al-Qasas'],
+      [29, 'العنكبوت',      'Al-\'Ankabut'],
+      [30, 'الروم',         'Ar-Rum'],
+      [31, 'لقمان',         'Luqman'],
+      [32, 'السجدة',        'As-Sajdah'],
+      [33, 'الأحزاب',       'Al-Ahzab'],
+      [34, 'سبأ',           'Saba'],
+      [35, 'فاطر',          'Fatir'],
+      [36, 'يس',            'Ya-Sin'],
+      [37, 'الصافات',       'As-Saffat'],
+      [38, 'ص',             'Sad'],
+      [39, 'الزمر',         'Az-Zumar'],
+      [40, 'غافر',          'Ghafir'],
+      [41, 'فصلت',          'Fussilat'],
+      [42, 'الشورى',        'Ash-Shura'],
+      [43, 'الزخرف',        'Az-Zukhruf'],
+      [44, 'الدخان',        'Ad-Dukhan'],
+      [45, 'الجاثية',       'Al-Jathiyah'],
+      [46, 'الأحقاف',       'Al-Ahqaf'],
+      [47, 'محمد',          'Muhammad'],
+      [48, 'الفتح',         'Al-Fath'],
+      [49, 'الحجرات',       'Al-Hujurat'],
+      [50, 'ق',             'Qaf'],
+      [51, 'الذاريات',      'Adh-Dhariyat'],
+      [52, 'الطور',         'At-Tur'],
+      [53, 'النجم',         'An-Najm'],
+      [54, 'القمر',         'Al-Qamar'],
+      [55, 'الرحمن',        'Ar-Rahman'],
+      [56, 'الواقعة',       'Al-Waqi\'ah'],
+      [57, 'الحديد',        'Al-Hadid'],
+      [58, 'المجادلة',      'Al-Mujadila'],
+      [59, 'الحشر',         'Al-Hashr'],
+      [60, 'الممتحنة',      'Al-Mumtahanah'],
+      [61, 'الصف',          'As-Saf'],
+      [62, 'الجمعة',        'Al-Jumu\'ah'],
+      [63, 'المنافقون',     'Al-Munafiqun'],
+      [64, 'التغابن',       'At-Taghabun'],
+      [65, 'الطلاق',        'At-Talaq'],
+      [66, 'التحريم',       'At-Tahrim'],
+      [67, 'الملك',         'Al-Mulk'],
+      [68, 'القلم',         'Al-Qalam'],
+      [69, 'الحاقة',        'Al-Haqqah'],
+      [70, 'المعارج',       'Al-Ma\'arij'],
+      [71, 'نوح',           'Nuh'],
+      [72, 'الجن',          'Al-Jinn'],
+      [73, 'المزمل',        'Al-Muzzammil'],
+      [74, 'المدثر',        'Al-Muddaththir'],
+      [75, 'القيامة',       'Al-Qiyamah'],
+      [76, 'الإنسان',       'Al-Insan'],
+      [77, 'المرسلات',      'Al-Mursalat'],
+      [78, 'النبأ',         'An-Naba'],
+      [79, 'النازعات',      'An-Nazi\'at'],
+      [80, 'عبس',           'Abasa'],
+      [81, 'التكوير',       'At-Takwir'],
+      [82, 'الانفطار',      'Al-Infitar'],
+      [83, 'المطففين',      'Al-Mutaffifin'],
+      [84, 'الانشقاق',      'Al-Inshiqaq'],
+      [85, 'البروج',        'Al-Buruj'],
+      [86, 'الطارق',        'At-Tariq'],
+      [87, 'الأعلى',        'Al-A\'la'],
+      [88, 'الغاشية',       'Al-Ghashiyah'],
+      [89, 'الفجر',         'Al-Fajr'],
+      [90, 'البلد',         'Al-Balad'],
+      [91, 'الشمس',         'Ash-Shams'],
+      [92, 'الليل',         'Al-Layl'],
+      [93, 'الضحى',         'Ad-Duha'],
+      [94, 'الشرح',         'Ash-Sharh'],
+      [95, 'التين',         'At-Tin'],
+      [96, 'العلق',         'Al-\'Alaq'],
+      [97, 'القدر',         'Al-Qadr'],
+      [98, 'البينة',        'Al-Bayyinah'],
+      [99, 'الزلزلة',       'Az-Zalzalah'],
+      [100,'العاديات',      'Al-\'Adiyat'],
+      [101,'القارعة',       'Al-Qari\'ah'],
+      [102,'التكاثر',       'At-Takathur'],
+      [103,'العصر',         'Al-\'Asr'],
+      [104,'الهمزة',        'Al-Humazah'],
+      [105,'الفيل',         'Al-Fil'],
+      [106,'قريش',          'Quraysh'],
+      [107,'الماعون',       'Al-Ma\'un'],
+      [108,'الكوثر',        'Al-Kawthar'],
+      [109,'الكافرون',      'Al-Kafirun'],
+      [110,'النصر',         'An-Nasr'],
+      [111,'المسد',         'Al-Masad'],
+      [112,'الإخلاص',       'Al-Ikhlas'],
+      [113,'الفلق',         'Al-Falaq'],
+      [114,'الناس',         'An-Nas'],
+    ];
+
+    // ── pre-compute galaxy positions ─────────────────────────────────────────────
+    // Each surah gets a center on a fibonacci sphere (radius 600).
+    // Each surah's verses form a ring in the plane perpendicular to the radius.
+    const GALAXY_POSITIONS = {};
+
+    function fibSphere(i, n, R) {
+      const phi   = Math.acos(1 - 2 * (i + 0.5) / n);
+      const theta = Math.PI * (1 + Math.sqrt(5)) * i;
+      return new THREE.Vector3(
+        R * Math.sin(phi) * Math.cos(theta),
+        R * Math.cos(phi),
+        R * Math.sin(phi) * Math.sin(theta)
+      );
+    }
+
+    // Two vectors perpendicular to 'dir'
+    function perpFrame(dir) {
+      const up = Math.abs(dir.y) < 0.9 ? new THREE.Vector3(0, 1, 0)
+                                        : new THREE.Vector3(1, 0, 0);
+      const u  = new THREE.Vector3().crossVectors(up, dir).normalize();
+      const v  = new THREE.Vector3().crossVectors(dir, u).normalize();
+      return { u, v };
+    }
+
+    function buildGalaxyPositions(verses) {
+      // Group by surah
+      const bySurah = {};
+      for (const v of verses) {
+        if (!bySurah[v.surah]) bySurah[v.surah] = [];
+        bySurah[v.surah].push(v.id);
+      }
+      const surahNums = Object.keys(bySurah).map(Number).sort((a, b) => a - b);
+
+      surahNums.forEach((sNum, si) => {
+        const center = fibSphere(si, 114, 600);
+        const dir    = center.clone().normalize();
+        const { u, v } = perpFrame(dir);
+        const ids    = bySurah[sNum];
+        const n      = ids.length;
+        // Ring radius scales with verse count (min 20, max 90)
+        const ringR  = Math.min(20 + n * 0.55, 90);
+
+        ids.forEach((id, vi) => {
+          const angle = (vi / n) * 2 * Math.PI;
+          const pos   = new THREE.Vector3()
+            .addScaledVector(center, 1)
+            .addScaledVector(u, Math.cos(angle) * ringR)
+            .addScaledVector(v, Math.sin(angle) * ringR);
+          GALAXY_POSITIONS[id] = pos;
+        });
+      });
+    }
+
+    // ── surah label sprites ───────────────────────────────────────────────────────
+    function makeSurahSprite(num, arabic, english) {
+      const w = 512, h = 200;
+      const c = document.createElement('canvas');
+      c.width = w; c.height = h;
+      const ctx = c.getContext('2d');
+
+      ctx.clearRect(0, 0, w, h);
+
+      // surah number (gold, top)
+      ctx.textAlign = 'center';
+      ctx.fillStyle = '#f59e0b';
+      ctx.font = 'bold 32px sans-serif';
+      ctx.fillText(`${num}`, w / 2, 38);
+
+      // Arabic name (large white)
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 72px serif';
+      ctx.fillText(arabic, w / 2, 118);
+
+      // English name (muted, bottom)
+      ctx.fillStyle = '#94a3b8';
+      ctx.font = '28px sans-serif';
+      ctx.fillText(english, w / 2, 168);
+
+      const tex = new THREE.CanvasTexture(c);
+      const mat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0.85, depthWrite: false });
+      const sprite = new THREE.Sprite(mat);
+      // world-unit size: larger so readable from normal zoom
+      sprite.scale.set(180, 72, 1);
+      sprite.userData.isSurahLabel = true;
+      return sprite;
+    }
+
+    const surahLabelSprites = []; // { sprite, center } for fade loop
+
+    // ── surah colour palette (hue spread over 114 surahs) ───────────────────────
+    function surahColor(surahNum) {
+      const hue = ((surahNum - 1) / 114) * 360;
+      return new THREE.Color().setHSL(hue / 360, 0.7, 0.18);  // dim version
+    }
+
+    // ── Graph instance ───────────────────────────────────────────────────────────
+    let Graph = null;
+    try {
+      Graph = ForceGraph3D({ antialias: true, alpha: true })
+        (graphPanel)
+        .width(graphPanel.clientWidth)
+        .height(graphPanel.clientHeight)
+        .backgroundColor('#060a14')
+        .showNavInfo(false)
+        .nodeThreeObject(buildNodeObj)
+        .nodeThreeObjectExtend(false)
+        .nodeLabel(() => '')
+        .linkColor(link => link.type === 'mentions' ? '#78350f' : '#164e63')
+        .linkWidth(link => link.type === 'related' ? 0.8 : 0.4)
+        .linkOpacity(0.6)
+        .linkDirectionalParticles(link => link.type === 'related' ? 3 : 0)
+        .linkDirectionalParticleWidth(1.4)
+        .linkDirectionalParticleSpeed(0.005)
+        .d3AlphaDecay(0.02)
+        .d3VelocityDecay(0.4)
         .onNodeHover(node => {
+          if (hoveredNode && hoveredNode !== node) refreshNode(hoveredNode);
+          hoveredNode = node || null;
+          if (hoveredNode) refreshNode(hoveredNode);
           graphPanel.style.cursor = node ? 'pointer' : 'default';
-          const tip = document.getElementById('tooltip');
-          if (node) {
-            const title = document.getElementById('tooltip-title');
-            const body = document.getElementById('tooltip-body');
-            if (node.type === 'category') {
-              title.style.color = node.color;
-              title.textContent = categoryLabel(node.category || node.id);
-              body.textContent = (node.deduction_count || 0) + ' deductions';
-            } else {
-              title.style.color = categoryColor(node.category);
-              title.textContent = (node.verse_refs || []).join(', ') || node.id;
-              body.textContent = node.conclusion || '';
-            }
-            tip.style.display = 'block';
-          } else {
-            tip.style.display = 'none';
-          }
         })
         .onNodeClick(node => {
-          const info = document.getElementById('node-info');
-          const infoTitle = document.getElementById('node-info-title');
-          const infoBody = document.getElementById('node-info-body');
-          if (node.type === 'category') {
-            infoTitle.style.color = node.color;
-            infoTitle.textContent = categoryLabel(node.category || node.id);
-            infoBody.textContent = (node.deduction_count || 0) + ' deductions in this theological category';
+          if (!node) return;
+          const infoEl  = document.getElementById('node-info');
+          const titleEl = document.getElementById('node-info-title');
+          const bodyEl  = document.getElementById('node-info-body');
+          if (node.type === 'verse') {
+            titleEl.textContent = `[${node.verseId}]  ${node.surahName || ''}`;
+            bodyEl.textContent  = node.text || '(no text cached — ask Claude about this verse)';
           } else {
-            infoTitle.style.color = categoryColor(node.category);
-            infoTitle.textContent = (node.verse_refs || []).join(', ') || node.id;
-            infoBody.innerHTML = '<p>' + (node.conclusion || 'No conclusion available') + '</p>'
-              + (node.bridge_keywords ? '<p style="margin-top:6px;color:#475569;font-size:0.9em;">Bridge: ' + node.bridge_keywords.join(', ') + '</p>' : '');
+            titleEl.textContent = `Keyword: ${node.label}`;
+            bodyEl.textContent  = 'Click a verse node to read its text.';
           }
-          info.style.display = 'block';
-
-          // fly to
-          const dist = 80;
-          const pos = node;
-          Graph.cameraPosition(
-            { x: pos.x + dist, y: pos.y + dist / 2, z: pos.z + dist },
-            { x: pos.x, y: pos.y, z: pos.z },
-            1200
-          );
+          infoEl.style.display = 'block';
         })
-        .enableNavigationControls(true)
-        .showNavInfo(false);
-
-      // lighting
-      const scene = Graph.scene();
-      scene.add(new THREE.AmbientLight(0x334155, 1.2));
-      const dir = new THREE.DirectionalLight(0xffffff, 0.5);
-      dir.position.set(100, 200, 100);
-      scene.add(dir);
-
-      // WASD controls
-      const keys = {};
-      window.addEventListener('keydown', e => { keys[e.key.toLowerCase()] = true; });
-      window.addEventListener('keyup', e => { keys[e.key.toLowerCase()] = false; });
-
-      function wasdLoop() {
-        requestAnimationFrame(wasdLoop);
-        if (!Graph) return;
-        const cam = Graph.camera();
-        const speed = 2;
-        const dir = new THREE.Vector3();
-        cam.getWorldDirection(dir);
-        const right = new THREE.Vector3().crossVectors(dir, cam.up).normalize();
-        if (keys['w']) cam.position.addScaledVector(dir, speed);
-        if (keys['s']) cam.position.addScaledVector(dir, -speed);
-        if (keys['a']) cam.position.addScaledVector(right, -speed);
-        if (keys['d']) cam.position.addScaledVector(right, speed);
-        if (keys['q']) cam.position.y += speed;
-        if (keys['e']) cam.position.y -= speed;
-      }
-      wasdLoop();
+        .onEngineStop(() => {
+          if (!Graph) return;
+          Graph.graphData().nodes.forEach(node => {
+            if (node.x !== undefined && !node.fx) {
+              node.fx = node.x; node.fy = node.y; node.fz = node.z;
+            }
+          });
+        });
+    } catch(e) {
+      document.getElementById('graph-loading').textContent = '3D graph unavailable';
+      console.error('ForceGraph3D init failed:', e);
     }
 
-    // track mouse for tooltip position
-    document.addEventListener('mousemove', e => {
-      const tip = document.getElementById('tooltip');
-      if (tip.style.display === 'block') {
-        tip.style.left = (e.clientX + 14) + 'px';
-        tip.style.top = (e.clientY + 14) + 'px';
-      }
-    });
+    // Prevent page scroll when over the graph
+    graphPanel.addEventListener('wheel', e => e.preventDefault(), { passive: false });
 
-    // ════════════════════════════════════════════════════════════════════════════
-    // HIGHLIGHT INSIGHT IN GRAPH
-    // ════════════════════════════════════════════════════════════════════════════
-    function highlightInsight(insightId) {
-      selectedInsightId = insightId;
+    // Keep graph sized to panel
+    new ResizeObserver(() => {
+      if (Graph) Graph.width(graphPanel.clientWidth).height(graphPanel.clientHeight);
+    }).observe(graphPanel);
 
-      // update card selections
-      document.querySelectorAll('.insight-card').forEach(c => {
-        c.classList.toggle('selected', c.dataset.id === insightId);
+    // ── graph state ──────────────────────────────────────────────────────────────
+    const gState = {
+      nodeMap:   {},
+      linkKeys:  new Set(),
+      activeIds: new Set(),
+    };
+
+    // ── build verse globe as a single THREE.Points (1 draw call, no blocking) ─────
+    let pointCloud = null;
+    const versePointIndex = {}; // verseId → index in buffer
+
+    function buildVerseGlobe() {
+      if (!Graph) return;
+      const allVerses = [];
+      SURAH_COUNTS.forEach((count, si) => {
+        for (let v = 1; v <= count; v++) allVerses.push({ id: `${si+1}:${v}`, surah: si+1 });
+      });
+      buildGalaxyPositions(allVerses);
+
+      const N = allVerses.length;
+      const posArr = new Float32Array(N * 3);
+      const colArr = new Float32Array(N * 3);
+      allVerses.forEach((v, i) => {
+        const p = GALAXY_POSITIONS[v.id];
+        posArr[i*3] = p.x; posArr[i*3+1] = p.y; posArr[i*3+2] = p.z;
+        versePointIndex[v.id] = i;
+        const c = new THREE.Color().setHSL((v.surah - 1) / 114, 0.6, 0.18);
+        colArr[i*3] = c.r; colArr[i*3+1] = c.g; colArr[i*3+2] = c.b;
       });
 
-      if (!Graph || !graphData.nodes.length) return;
+      const geo = new THREE.BufferGeometry();
+      geo.setAttribute('position', new THREE.BufferAttribute(posArr, 3));
+      geo.setAttribute('color',    new THREE.BufferAttribute(colArr, 3));
+      pointCloud = new THREE.Points(geo, new THREE.PointsMaterial({
+        size: 2.2, vertexColors: true, transparent: true, opacity: 0.6, sizeAttenuation: true,
+      }));
+      Graph.scene().add(pointCloud);
 
-      // find the node in the graph
-      const node = graphData.nodes.find(n => n.id === insightId);
-      if (node && node.x !== undefined) {
-        const dist = 60;
-        Graph.cameraPosition(
-          { x: node.x + dist, y: node.y + dist / 3, z: node.z + dist },
-          { x: node.x, y: node.y, z: node.z },
-          1000
-        );
+      // Add surah label sprites exactly at each surah ring centre
+      SURAH_DATA.forEach(([num, arabic, english], si) => {
+        const center = fibSphere(si, 114, 600);
+        const sprite = makeSurahSprite(num, arabic, english);
+        sprite.position.copy(center);
+        Graph.scene().add(sprite);
+        surahLabelSprites.push({ sprite, pos: center.clone() });
+      });
 
-        // pulse the node
-        if (node.__obj) {
-          const sphere = node.__obj.getObjectByName('sphere');
-          if (sphere) {
-            const origEmissive = sphere.material.emissiveIntensity;
-            sphere.material.emissiveIntensity = 1.0;
-            sphere.material.opacity = 1.0;
-            setTimeout(() => {
-              sphere.material.emissiveIntensity = origEmissive;
-              sphere.material.opacity = node.type === 'category' ? 0.95 : 0.7;
-            }, 1500);
+      Graph.graphData({ nodes: [], links: [] });
+      Graph.cameraPosition({ x: 0, y: 0, z: 2000 }, { x: 0, y: 0, z: 0 }, 1500);
+    }
+
+    // Fade surah labels based on camera distance — visible from normal zoom
+    (function animateSurahLabels() {
+      requestAnimationFrame(animateSurahLabels);
+      if (!Graph || surahLabelSprites.length === 0) return;
+      const cam = Graph.camera();
+      if (!cam) return;
+      const camPos = cam.position;
+      for (const { sprite, pos } of surahLabelSprites) {
+        const dist = camPos.distanceTo(pos);
+        // fully visible ≤ 800 units, fades to 0.15 at 1600+
+        const t = 1 - Math.min(1, Math.max(0, (dist - 800) / 800));
+        sprite.material.opacity = 0.15 + t * 0.80;
+      }
+    })();
+
+    buildVerseGlobe();
+    const _loadingEl = document.getElementById('graph-loading');
+    if (_loadingEl) _loadingEl.style.display = 'none';
+
+    // ── apply conversation graph update ──────────────────────────────────────────
+    function applyGraphUpdate(update) {
+      // Deactivate previous active nodes
+      gState.activeIds.forEach(id => {
+        const n = gState.nodeMap[id];
+        if (n) { n.active = false; refreshNode(n); }
+      });
+      gState.activeIds.clear();
+
+      if (!Graph) return;
+      const existing = Graph.graphData();
+      const newLinks = [];
+
+      for (const n of update.nodes) {
+        // Pin verse nodes to their galaxy position so they stay on the sphere
+        if (n.type === 'verse' && GALAXY_POSITIONS[n.id]) {
+          const gp = GALAXY_POSITIONS[n.id];
+          n.fx = gp.x; n.fy = gp.y; n.fz = gp.z;
+        }
+        // Pin keyword nodes near the centroid of their connected verses
+        if (n.type === 'keyword') {
+          const connectedVIds = update.links
+            .filter(l => l.source === n.id || l.target === n.id)
+            .map(l => l.source === n.id ? l.target : l.source);
+          let cx = 0, cy = 0, cz = 0, count = 0;
+          for (const vid of connectedVIds) {
+            const gp = GALAXY_POSITIONS[vid];
+            if (gp) { cx += gp.x; cy += gp.y; cz += gp.z; count++; }
+          }
+          if (count > 0) {
+            n.fx = cx / count; n.fy = cy / count; n.fz = cz / count;
           }
         }
-      }
-    }
 
-    // ════════════════════════════════════════════════════════════════════════════
-    // LOAD INSIGHTS
-    // ════════════════════════════════════════════════════════════════════════════
-    async function loadInsights() {
-      const area = document.getElementById('insights-area');
-      try {
-        const res = await fetch('/api/deductions/insights');
-        if (!res.ok) throw new Error('Failed to fetch insights');
-        const insights = await res.json();
-
-        if (!insights || !insights.length) {
-          area.innerHTML = '<div class="insights-loading" style="animation:none;color:#334155;">No deductions yet. The engine is still working...</div>';
-          return;
+        const en = gState.nodeMap[n.id];
+        if (en) {
+          if (n.text)      en.text      = n.text;
+          if (n.surahName) en.surahName = n.surahName;
+          if (n.fx != null) { en.fx = n.fx; en.fy = n.fy; en.fz = n.fz; }
+          if (!en.inConv) { en.inConv = true; refreshNode(en); }
+        } else {
+          gState.nodeMap[n.id] = n;
         }
+      }
 
-        // group by category
-        const grouped = {};
-        insights.forEach(ins => {
-          const cat = ins.category || 'unknown';
-          if (!grouped[cat]) grouped[cat] = [];
-          grouped[cat].push(ins);
+      const existIds = new Set(existing.nodes.map(n => n.id));
+      const newNodes = update.nodes.filter(n => !existIds.has(n.id));
+
+      for (const l of update.links) {
+        const key = `${l.source}>${l.target}`;
+        if (!gState.linkKeys.has(key)) { gState.linkKeys.add(key); newLinks.push(l); }
+      }
+
+      if (newNodes.length || newLinks.length) {
+        Graph.graphData({
+          nodes: [...existing.nodes, ...newNodes],
+          links: [...existing.links, ...newLinks],
         });
+      }
 
-        // stats
-        const total = insights.length;
-        const high = insights.filter(i => (i.quality_score || 0) >= 0.7).length;
-        const medium = insights.filter(i => (i.quality_score || 0) >= 0.4 && (i.quality_score || 0) < 0.7).length;
-        const low = total - high - medium;
-
-        document.getElementById('stat-total').textContent = total.toLocaleString();
-        document.getElementById('stat-high').textContent = high.toLocaleString();
-
-        // update quality bar
-        const bar = document.getElementById('quality-bar');
-        if (total > 0) {
-          bar.innerHTML = `
-            <div class="seg seg-high" style="flex:${high}"></div>
-            <div class="seg seg-medium" style="flex:${medium}"></div>
-            <div class="seg seg-low" style="flex:${low}"></div>
-          `;
+      setTimeout(() => {
+        for (const id of update.active) {
+          gState.activeIds.add(id);
+          const n = gState.nodeMap[id] || Graph.graphData().nodes.find(n => n.id === id);
+          if (n) { n.active = true; n.inConv = true; refreshNode(n); }
         }
+      }, 80);
+    }
 
-        // render grouped insights
-        area.innerHTML = '';
-        const catOrder = Object.keys(CATEGORY_COLORS);
-        const allCats = [...new Set([...catOrder, ...Object.keys(grouped)])];
-
-        allCats.forEach(cat => {
-          const items = grouped[cat];
-          if (!items || !items.length) return;
-
-          const group = document.createElement('div');
-          group.className = 'category-group';
-
-          const title = document.createElement('div');
-          title.className = 'category-group-title';
-          title.style.color = categoryColor(cat);
-          title.innerHTML = `<div class="cat-dot" style="background:${categoryColor(cat)}"></div>${categoryLabel(cat)} <span style="font-weight:400;color:#475569;font-size:0.9em;">(${items.length})</span>`;
-          group.appendChild(title);
-
-          items.forEach(ins => {
-            const card = document.createElement('div');
-            card.className = 'insight-card';
-            card.dataset.id = ins.id || '';
-            card.onclick = () => highlightInsight(ins.id);
-
-            const qClass = qualityClass(ins.quality_score || 0);
-            const qScore = ((ins.quality_score || 0) * 100).toFixed(0);
-
-            let metaHtml = '';
-            if (ins.verse_refs && ins.verse_refs.length) {
-              metaHtml += ins.verse_refs.map(v => `<span class="verse-ref">${v}</span>`).join(' ');
-            }
-            if (ins.bridge_keywords && ins.bridge_keywords.length) {
-              metaHtml += ' ';
-              metaHtml += ins.bridge_keywords.slice(0, 5).map(k => `<span class="bridge-kw">${k}</span>`).join(' ');
-            }
-
-            card.innerHTML = `
-              <div class="insight-header">
-                <span class="cat-badge" style="background:${categoryColor(cat)}20;color:${categoryColor(cat)}">${categoryLabel(cat)}</span>
-                <span class="quality-badge ${qClass}">${qScore}%</span>
-              </div>
-              <div class="insight-conclusion">${ins.conclusion || 'No conclusion'}</div>
-              <div class="insight-meta">${metaHtml}</div>
-            `;
-            group.appendChild(card);
-          });
-
-          area.appendChild(group);
-        });
-
-      } catch (err) {
-        area.innerHTML = `<div class="insights-loading" style="animation:none;color:#334155;">Could not load insights: ${err.message}</div>`;
-      }
+    // ── clear conversation graph ─────────────────────────────────────────────────
+    function clearGraph() {
+      if (!Graph) return;
+      // Reset all tracking state
+      gState.activeIds.clear();
+      gState.linkKeys.clear();
+      gState.nodeMap = {};
+      // Remove all conversation nodes/links, keep the point cloud
+      Graph.graphData({ nodes: [], links: [] });
+      // Hide node info card
+      document.getElementById('node-info').style.display = 'none';
     }
 
     // ════════════════════════════════════════════════════════════════════════════
-    // LOAD GRAPH DATA
+    // WASD CAMERA MOVEMENT
     // ════════════════════════════════════════════════════════════════════════════
-    async function loadGraph() {
-      try {
-        const res = await fetch('/api/deductions/graph');
-        if (!res.ok) throw new Error('Failed to load graph');
-        const data = await res.json();
-        initGraph(data);
-      } catch (err) {
-        document.getElementById('graph-loading').textContent = 'Could not load graph: ' + err.message;
-        document.getElementById('graph-loading').style.animation = 'none';
+    const keys = {};
+    const MOVE_SPEED = 8;
+
+    document.addEventListener('keydown', e => {
+      keys[e.key.toLowerCase()] = true;
+      // Don't steal keys when typing in the input box
+      if (document.activeElement === document.getElementById('input')) return;
+      if (['w','a','s','d','q','e'].includes(e.key.toLowerCase())) e.preventDefault();
+    });
+    document.addEventListener('keyup',   e => { keys[e.key.toLowerCase()] = false; });
+
+    // Focus graph panel on click so WASD works without extra click
+    graphPanel.addEventListener('click', () => graphPanel.focus());
+    graphPanel.setAttribute('tabindex', '0');
+
+    function animateWASD() {
+      requestAnimationFrame(animateWASD);
+
+      const active = keys['w'] || keys['s'] || keys['a'] || keys['d'] || keys['q'] || keys['e'];
+      if (!active) return;
+      if (document.activeElement === document.getElementById('input')) return;
+
+      if (!Graph) return;
+      const cam = Graph.camera();
+      if (!cam) return;
+
+      // Forward vector (camera direction, projected — keep Y for free-fly)
+      const dir = new THREE.Vector3();
+      cam.getWorldDirection(dir);
+
+      const right = new THREE.Vector3();
+      right.crossVectors(dir, cam.up).normalize();
+
+      const up = new THREE.Vector3(0, 1, 0);
+
+      const delta = new THREE.Vector3();
+      if (keys['w']) delta.addScaledVector(dir,   MOVE_SPEED);
+      if (keys['s']) delta.addScaledVector(dir,  -MOVE_SPEED);
+      if (keys['a']) delta.addScaledVector(right, -MOVE_SPEED);
+      if (keys['d']) delta.addScaledVector(right,  MOVE_SPEED);
+      if (keys['q']) delta.addScaledVector(up,    -MOVE_SPEED);
+      if (keys['e']) delta.addScaledVector(up,     MOVE_SPEED);
+
+      cam.position.add(delta);
+
+      // Also move the orbit controls target so rotation stays centred
+      const controls = Graph.controls();
+      if (controls && controls.target) {
+        controls.target.add(delta);
+        controls.update();
       }
     }
 
-    // ════════════════════════════════════════════════════════════════════════════
-    // LIVE STATUS POLLING
-    // ════════════════════════════════════════════════════════════════════════════
-    async function pollStatus() {
-      try {
-        const res = await fetch('/api/deductions/status');
-        if (!res.ok) throw new Error('offline');
-        const data = await res.json();
-
-        const dot = document.getElementById('live-dot');
-        const status = document.getElementById('live-status');
-        const total = document.getElementById('live-total');
-        const round = document.getElementById('live-round');
-
-        dot.className = data.running ? 'live-dot active' : 'live-dot';
-        status.textContent = data.running ? 'running' : 'idle';
-        status.style.color = data.running ? '#10b981' : '#64748b';
-        total.textContent = (data.total_deductions || 0).toLocaleString();
-        round.textContent = data.last_round || '--';
-
-        // update top stat if we have it
-        const statTotalEl = document.getElementById('stat-total');
-        if (statTotalEl.textContent === '--' && data.total_deductions) {
-          statTotalEl.textContent = data.total_deductions.toLocaleString();
-        }
-      } catch (err) {
-        document.getElementById('live-status').textContent = 'offline';
-        document.getElementById('live-status').style.color = '#ef4444';
-      }
-    }
+    animateWASD();
 
     // ════════════════════════════════════════════════════════════════════════════
-    // INIT
+    // (Chat removed — this is the deductions view)
     // ════════════════════════════════════════════════════════════════════════════
-    loadGraph();
-    loadInsights();
-    pollStatus();
-    setInterval(pollStatus, 5000);
+
+    // Insights panel doesn't need chat functions
   </script>
 </body>
 </html>
