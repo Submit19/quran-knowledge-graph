@@ -1,0 +1,10734 @@
+[
+  {
+    "surah": "1",
+    "surahName": "The Key",
+    "num_verses": 7,
+    "total_words": 61,
+    "unique_words": 37,
+    "type_token_ratio": 0.6066,
+    "avg_word_length": 4.07,
+    "avg_verse_length": 8.71,
+    "max_verse_length": 18,
+    "min_verse_length": 4,
+    "hapax_legomena": 25,
+    "hapax_ratio": 0.4098,
+    "top_content_words": [
+      {
+        "word": "most",
+        "count": 4
+      },
+      {
+        "word": "god",
+        "count": 2
+      },
+      {
+        "word": "gracious",
+        "count": 2
+      },
+      {
+        "word": "merciful",
+        "count": 2
+      },
+      {
+        "word": "alone",
+        "count": 2
+      },
+      {
+        "word": "path",
+        "count": 2
+      },
+      {
+        "word": "name",
+        "count": 1
+      },
+      {
+        "word": "praise",
+        "count": 1
+      },
+      {
+        "word": "lord",
+        "count": 1
+      },
+      {
+        "word": "universe",
+        "count": 1
+      },
+      {
+        "word": "master",
+        "count": 1
+      },
+      {
+        "word": "day",
+        "count": 1
+      },
+      {
+        "word": "judgment",
+        "count": 1
+      },
+      {
+        "word": "worship",
+        "count": 1
+      },
+      {
+        "word": "ask",
+        "count": 1
+      },
+      {
+        "word": "help",
+        "count": 1
+      },
+      {
+        "word": "guide",
+        "count": 1
+      },
+      {
+        "word": "right",
+        "count": 1
+      },
+      {
+        "word": "blessed",
+        "count": 1
+      },
+      {
+        "word": "deserved",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "2",
+    "surahName": "The Heifer",
+    "num_verses": 286,
+    "total_words": 11091,
+    "unique_words": 1753,
+    "type_token_ratio": 0.1581,
+    "avg_word_length": 4.43,
+    "avg_verse_length": 38.78,
+    "max_verse_length": 204,
+    "min_verse_length": 3,
+    "hapax_legomena": 880,
+    "hapax_ratio": 0.0793,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 297
+      },
+      {
+        "word": "said",
+        "count": 66
+      },
+      {
+        "word": "people",
+        "count": 56
+      },
+      {
+        "word": "lord",
+        "count": 54
+      },
+      {
+        "word": "believe",
+        "count": 52
+      },
+      {
+        "word": "may",
+        "count": 51
+      },
+      {
+        "word": "say",
+        "count": 44
+      },
+      {
+        "word": "him",
+        "count": 41
+      },
+      {
+        "word": "one",
+        "count": 40
+      },
+      {
+        "word": "know",
+        "count": 35
+      },
+      {
+        "word": "scripture",
+        "count": 32
+      },
+      {
+        "word": "most",
+        "count": 30
+      },
+      {
+        "word": "righteous",
+        "count": 29
+      },
+      {
+        "word": "give",
+        "count": 27
+      },
+      {
+        "word": "never",
+        "count": 27
+      },
+      {
+        "word": "any",
+        "count": 27
+      },
+      {
+        "word": "observe",
+        "count": 26
+      },
+      {
+        "word": "among",
+        "count": 26
+      },
+      {
+        "word": "all",
+        "count": 24
+      },
+      {
+        "word": "retribution",
+        "count": 22
+      }
+    ]
+  },
+  {
+    "surah": "3",
+    "surahName": "The Amramites",
+    "num_verses": 200,
+    "total_words": 6192,
+    "unique_words": 1122,
+    "type_token_ratio": 0.1812,
+    "avg_word_length": 4.42,
+    "avg_verse_length": 30.96,
+    "max_verse_length": 134,
+    "min_verse_length": 3,
+    "hapax_legomena": 593,
+    "hapax_ratio": 0.0958,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 218
+      },
+      {
+        "word": "lord",
+        "count": 41
+      },
+      {
+        "word": "scripture",
+        "count": 32
+      },
+      {
+        "word": "say",
+        "count": 32
+      },
+      {
+        "word": "people",
+        "count": 29
+      },
+      {
+        "word": "believe",
+        "count": 27
+      },
+      {
+        "word": "said",
+        "count": 27
+      },
+      {
+        "word": "him",
+        "count": 23
+      },
+      {
+        "word": "never",
+        "count": 22
+      },
+      {
+        "word": "believers",
+        "count": 20
+      },
+      {
+        "word": "all",
+        "count": 18
+      },
+      {
+        "word": "righteous",
+        "count": 18
+      },
+      {
+        "word": "among",
+        "count": 18
+      },
+      {
+        "word": "day",
+        "count": 17
+      },
+      {
+        "word": "retribution",
+        "count": 16
+      },
+      {
+        "word": "good",
+        "count": 16
+      },
+      {
+        "word": "revelations",
+        "count": 15
+      },
+      {
+        "word": "would",
+        "count": 15
+      },
+      {
+        "word": "thus",
+        "count": 15
+      },
+      {
+        "word": "down",
+        "count": 13
+      }
+    ]
+  },
+  {
+    "surah": "4",
+    "surahName": "Women",
+    "num_verses": 176,
+    "total_words": 6742,
+    "unique_words": 1230,
+    "type_token_ratio": 0.1824,
+    "avg_word_length": 4.45,
+    "avg_verse_length": 38.31,
+    "max_verse_length": 150,
+    "min_verse_length": 1,
+    "hapax_legomena": 619,
+    "hapax_ratio": 0.0918,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 233
+      },
+      {
+        "word": "him",
+        "count": 33
+      },
+      {
+        "word": "believe",
+        "count": 31
+      },
+      {
+        "word": "one",
+        "count": 30
+      },
+      {
+        "word": "people",
+        "count": 29
+      },
+      {
+        "word": "all",
+        "count": 24
+      },
+      {
+        "word": "most",
+        "count": 24
+      },
+      {
+        "word": "women",
+        "count": 23
+      },
+      {
+        "word": "messenger",
+        "count": 21
+      },
+      {
+        "word": "would",
+        "count": 19
+      },
+      {
+        "word": "among",
+        "count": 19
+      },
+      {
+        "word": "say",
+        "count": 19
+      },
+      {
+        "word": "only",
+        "count": 18
+      },
+      {
+        "word": "believers",
+        "count": 17
+      },
+      {
+        "word": "give",
+        "count": 16
+      },
+      {
+        "word": "may",
+        "count": 15
+      },
+      {
+        "word": "any",
+        "count": 15
+      },
+      {
+        "word": "scripture",
+        "count": 15
+      },
+      {
+        "word": "never",
+        "count": 15
+      },
+      {
+        "word": "good",
+        "count": 14
+      }
+    ]
+  },
+  {
+    "surah": "5",
+    "surahName": "The Feast",
+    "num_verses": 120,
+    "total_words": 5192,
+    "unique_words": 1021,
+    "type_token_ratio": 0.1966,
+    "avg_word_length": 4.38,
+    "avg_verse_length": 43.27,
+    "max_verse_length": 131,
+    "min_verse_length": 12,
+    "hapax_legomena": 521,
+    "hapax_ratio": 0.1003,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 153
+      },
+      {
+        "word": "people",
+        "count": 40
+      },
+      {
+        "word": "believe",
+        "count": 30
+      },
+      {
+        "word": "among",
+        "count": 27
+      },
+      {
+        "word": "say",
+        "count": 24
+      },
+      {
+        "word": "said",
+        "count": 24
+      },
+      {
+        "word": "may",
+        "count": 18
+      },
+      {
+        "word": "lord",
+        "count": 17
+      },
+      {
+        "word": "messenger",
+        "count": 17
+      },
+      {
+        "word": "him",
+        "count": 17
+      },
+      {
+        "word": "revelations",
+        "count": 16
+      },
+      {
+        "word": "scripture",
+        "count": 15
+      },
+      {
+        "word": "observe",
+        "count": 14
+      },
+      {
+        "word": "all",
+        "count": 14
+      },
+      {
+        "word": "righteous",
+        "count": 13
+      },
+      {
+        "word": "everything",
+        "count": 13
+      },
+      {
+        "word": "believers",
+        "count": 12
+      },
+      {
+        "word": "retribution",
+        "count": 11
+      },
+      {
+        "word": "one",
+        "count": 11
+      },
+      {
+        "word": "any",
+        "count": 11
+      }
+    ]
+  },
+  {
+    "surah": "6",
+    "surahName": "Livestock",
+    "num_verses": 165,
+    "total_words": 5675,
+    "unique_words": 1072,
+    "type_token_ratio": 0.1889,
+    "avg_word_length": 4.33,
+    "avg_verse_length": 34.39,
+    "max_verse_length": 89,
+    "min_verse_length": 9,
+    "hapax_legomena": 554,
+    "hapax_ratio": 0.0976,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 93
+      },
+      {
+        "word": "say",
+        "count": 62
+      },
+      {
+        "word": "lord",
+        "count": 57
+      },
+      {
+        "word": "one",
+        "count": 28
+      },
+      {
+        "word": "him",
+        "count": 28
+      },
+      {
+        "word": "people",
+        "count": 28
+      },
+      {
+        "word": "all",
+        "count": 27
+      },
+      {
+        "word": "would",
+        "count": 26
+      },
+      {
+        "word": "thus",
+        "count": 22
+      },
+      {
+        "word": "only",
+        "count": 20
+      },
+      {
+        "word": "revelations",
+        "count": 19
+      },
+      {
+        "word": "believe",
+        "count": 18
+      },
+      {
+        "word": "retribution",
+        "count": 17
+      },
+      {
+        "word": "idols",
+        "count": 17
+      },
+      {
+        "word": "most",
+        "count": 16
+      },
+      {
+        "word": "can",
+        "count": 16
+      },
+      {
+        "word": "never",
+        "count": 16
+      },
+      {
+        "word": "come",
+        "count": 15
+      },
+      {
+        "word": "guided",
+        "count": 15
+      },
+      {
+        "word": "earth",
+        "count": 14
+      }
+    ]
+  },
+  {
+    "surah": "7",
+    "surahName": "The Purgatory",
+    "num_verses": 206,
+    "total_words": 6110,
+    "unique_words": 1172,
+    "type_token_ratio": 0.1918,
+    "avg_word_length": 4.35,
+    "avg_verse_length": 29.66,
+    "max_verse_length": 95,
+    "min_verse_length": 4,
+    "hapax_legomena": 629,
+    "hapax_ratio": 0.1029,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 69
+      },
+      {
+        "word": "people",
+        "count": 68
+      },
+      {
+        "word": "lord",
+        "count": 67
+      },
+      {
+        "word": "said",
+        "count": 65
+      },
+      {
+        "word": "him",
+        "count": 41
+      },
+      {
+        "word": "say",
+        "count": 29
+      },
+      {
+        "word": "moses",
+        "count": 22
+      },
+      {
+        "word": "all",
+        "count": 20
+      },
+      {
+        "word": "believe",
+        "count": 20
+      },
+      {
+        "word": "thus",
+        "count": 18
+      },
+      {
+        "word": "see",
+        "count": 17
+      },
+      {
+        "word": "revelations",
+        "count": 16
+      },
+      {
+        "word": "earth",
+        "count": 16
+      },
+      {
+        "word": "among",
+        "count": 16
+      },
+      {
+        "word": "come",
+        "count": 14
+      },
+      {
+        "word": "mercy",
+        "count": 14
+      },
+      {
+        "word": "righteous",
+        "count": 14
+      },
+      {
+        "word": "may",
+        "count": 13
+      },
+      {
+        "word": "most",
+        "count": 13
+      },
+      {
+        "word": "out",
+        "count": 12
+      }
+    ]
+  },
+  {
+    "surah": "8",
+    "surahName": "The Spoils of War",
+    "num_verses": 75,
+    "total_words": 2371,
+    "unique_words": 596,
+    "type_token_ratio": 0.2514,
+    "avg_word_length": 4.34,
+    "avg_verse_length": 31.61,
+    "max_verse_length": 93,
+    "min_verse_length": 9,
+    "hapax_legomena": 323,
+    "hapax_ratio": 0.1362,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 89
+      },
+      {
+        "word": "believers",
+        "count": 14
+      },
+      {
+        "word": "people",
+        "count": 13
+      },
+      {
+        "word": "retribution",
+        "count": 11
+      },
+      {
+        "word": "messenger",
+        "count": 9
+      },
+      {
+        "word": "one",
+        "count": 9
+      },
+      {
+        "word": "believe",
+        "count": 9
+      },
+      {
+        "word": "made",
+        "count": 9
+      },
+      {
+        "word": "hearts",
+        "count": 8
+      },
+      {
+        "word": "lord",
+        "count": 8
+      },
+      {
+        "word": "most",
+        "count": 8
+      },
+      {
+        "word": "may",
+        "count": 8
+      },
+      {
+        "word": "would",
+        "count": 8
+      },
+      {
+        "word": "all",
+        "count": 8
+      },
+      {
+        "word": "can",
+        "count": 8
+      },
+      {
+        "word": "disbelievers",
+        "count": 7
+      },
+      {
+        "word": "disbelieved",
+        "count": 7
+      },
+      {
+        "word": "know",
+        "count": 7
+      },
+      {
+        "word": "good",
+        "count": 6
+      },
+      {
+        "word": "war",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "surah": "9",
+    "surahName": "Ultimatum",
+    "num_verses": 127,
+    "total_words": 4685,
+    "unique_words": 961,
+    "type_token_ratio": 0.2051,
+    "avg_word_length": 4.49,
+    "avg_verse_length": 36.89,
+    "max_verse_length": 91,
+    "min_verse_length": 9,
+    "hapax_legomena": 502,
+    "hapax_ratio": 0.1072,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 175
+      },
+      {
+        "word": "messenger",
+        "count": 34
+      },
+      {
+        "word": "people",
+        "count": 24
+      },
+      {
+        "word": "most",
+        "count": 19
+      },
+      {
+        "word": "him",
+        "count": 19
+      },
+      {
+        "word": "any",
+        "count": 16
+      },
+      {
+        "word": "believers",
+        "count": 16
+      },
+      {
+        "word": "say",
+        "count": 16
+      },
+      {
+        "word": "would",
+        "count": 15
+      },
+      {
+        "word": "among",
+        "count": 15
+      },
+      {
+        "word": "believe",
+        "count": 15
+      },
+      {
+        "word": "all",
+        "count": 14
+      },
+      {
+        "word": "worshipers",
+        "count": 13
+      },
+      {
+        "word": "disbelievers",
+        "count": 13
+      },
+      {
+        "word": "thus",
+        "count": 13
+      },
+      {
+        "word": "idol",
+        "count": 12
+      },
+      {
+        "word": "day",
+        "count": 12
+      },
+      {
+        "word": "retribution",
+        "count": 12
+      },
+      {
+        "word": "may",
+        "count": 12
+      },
+      {
+        "word": "hearts",
+        "count": 12
+      }
+    ]
+  },
+  {
+    "surah": "10",
+    "surahName": "Jonah",
+    "num_verses": 109,
+    "total_words": 3250,
+    "unique_words": 777,
+    "type_token_ratio": 0.2391,
+    "avg_word_length": 4.37,
+    "avg_verse_length": 29.82,
+    "max_verse_length": 83,
+    "min_verse_length": 8,
+    "hapax_legomena": 427,
+    "hapax_ratio": 0.1314,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 63
+      },
+      {
+        "word": "people",
+        "count": 32
+      },
+      {
+        "word": "say",
+        "count": 30
+      },
+      {
+        "word": "lord",
+        "count": 26
+      },
+      {
+        "word": "all",
+        "count": 17
+      },
+      {
+        "word": "believe",
+        "count": 16
+      },
+      {
+        "word": "earth",
+        "count": 16
+      },
+      {
+        "word": "said",
+        "count": 15
+      },
+      {
+        "word": "one",
+        "count": 14
+      },
+      {
+        "word": "truth",
+        "count": 14
+      },
+      {
+        "word": "him",
+        "count": 13
+      },
+      {
+        "word": "any",
+        "count": 13
+      },
+      {
+        "word": "can",
+        "count": 13
+      },
+      {
+        "word": "retribution",
+        "count": 11
+      },
+      {
+        "word": "day",
+        "count": 11
+      },
+      {
+        "word": "life",
+        "count": 10
+      },
+      {
+        "word": "everything",
+        "count": 10
+      },
+      {
+        "word": "idols",
+        "count": 9
+      },
+      {
+        "word": "moses",
+        "count": 9
+      },
+      {
+        "word": "proofs",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "surah": "11",
+    "surahName": "Hood",
+    "num_verses": 123,
+    "total_words": 3569,
+    "unique_words": 800,
+    "type_token_ratio": 0.2242,
+    "avg_word_length": 4.2,
+    "avg_verse_length": 29.02,
+    "max_verse_length": 66,
+    "min_verse_length": 6,
+    "hapax_legomena": 438,
+    "hapax_ratio": 0.1227,
+    "top_content_words": [
+      {
+        "word": "lord",
+        "count": 44
+      },
+      {
+        "word": "god",
+        "count": 43
+      },
+      {
+        "word": "people",
+        "count": 40
+      },
+      {
+        "word": "said",
+        "count": 33
+      },
+      {
+        "word": "him",
+        "count": 32
+      },
+      {
+        "word": "retribution",
+        "count": 14
+      },
+      {
+        "word": "day",
+        "count": 12
+      },
+      {
+        "word": "only",
+        "count": 12
+      },
+      {
+        "word": "any",
+        "count": 12
+      },
+      {
+        "word": "all",
+        "count": 11
+      },
+      {
+        "word": "say",
+        "count": 11
+      },
+      {
+        "word": "mercy",
+        "count": 11
+      },
+      {
+        "word": "would",
+        "count": 10
+      },
+      {
+        "word": "judgment",
+        "count": 10
+      },
+      {
+        "word": "earth",
+        "count": 9
+      },
+      {
+        "word": "among",
+        "count": 9
+      },
+      {
+        "word": "worship",
+        "count": 8
+      },
+      {
+        "word": "one",
+        "count": 8
+      },
+      {
+        "word": "some",
+        "count": 8
+      },
+      {
+        "word": "never",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "surah": "12",
+    "surahName": "Joseph",
+    "num_verses": 111,
+    "total_words": 3302,
+    "unique_words": 770,
+    "type_token_ratio": 0.2332,
+    "avg_word_length": 4.13,
+    "avg_verse_length": 29.75,
+    "max_verse_length": 75,
+    "min_verse_length": 10,
+    "hapax_legomena": 435,
+    "hapax_ratio": 0.1317,
+    "top_content_words": [
+      {
+        "word": "said",
+        "count": 70
+      },
+      {
+        "word": "him",
+        "count": 60
+      },
+      {
+        "word": "god",
+        "count": 46
+      },
+      {
+        "word": "joseph",
+        "count": 31
+      },
+      {
+        "word": "father",
+        "count": 22
+      },
+      {
+        "word": "one",
+        "count": 22
+      },
+      {
+        "word": "lord",
+        "count": 19
+      },
+      {
+        "word": "most",
+        "count": 15
+      },
+      {
+        "word": "brother",
+        "count": 15
+      },
+      {
+        "word": "people",
+        "count": 14
+      },
+      {
+        "word": "back",
+        "count": 13
+      },
+      {
+        "word": "before",
+        "count": 12
+      },
+      {
+        "word": "can",
+        "count": 12
+      },
+      {
+        "word": "all",
+        "count": 12
+      },
+      {
+        "word": "know",
+        "count": 11
+      },
+      {
+        "word": "may",
+        "count": 10
+      },
+      {
+        "word": "saw",
+        "count": 9
+      },
+      {
+        "word": "thus",
+        "count": 9
+      },
+      {
+        "word": "righteous",
+        "count": 9
+      },
+      {
+        "word": "about",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "surah": "13",
+    "surahName": "Thunder",
+    "num_verses": 43,
+    "total_words": 1578,
+    "unique_words": 537,
+    "type_token_ratio": 0.3403,
+    "avg_word_length": 4.51,
+    "avg_verse_length": 36.7,
+    "max_verse_length": 92,
+    "min_verse_length": 12,
+    "hapax_legomena": 345,
+    "hapax_ratio": 0.2186,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 35
+      },
+      {
+        "word": "him",
+        "count": 16
+      },
+      {
+        "word": "lord",
+        "count": 14
+      },
+      {
+        "word": "say",
+        "count": 13
+      },
+      {
+        "word": "one",
+        "count": 9
+      },
+      {
+        "word": "destiny",
+        "count": 9
+      },
+      {
+        "word": "people",
+        "count": 8
+      },
+      {
+        "word": "earth",
+        "count": 8
+      },
+      {
+        "word": "disbelievers",
+        "count": 7
+      },
+      {
+        "word": "all",
+        "count": 6
+      },
+      {
+        "word": "incurred",
+        "count": 6
+      },
+      {
+        "word": "every",
+        "count": 6
+      },
+      {
+        "word": "any",
+        "count": 6
+      },
+      {
+        "word": "life",
+        "count": 6
+      },
+      {
+        "word": "believe",
+        "count": 5
+      },
+      {
+        "word": "can",
+        "count": 5
+      },
+      {
+        "word": "ones",
+        "count": 5
+      },
+      {
+        "word": "only",
+        "count": 5
+      },
+      {
+        "word": "thus",
+        "count": 5
+      },
+      {
+        "word": "wills",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "surah": "14",
+    "surahName": "Abraham",
+    "num_verses": 52,
+    "total_words": 1593,
+    "unique_words": 528,
+    "type_token_ratio": 0.3315,
+    "avg_word_length": 4.35,
+    "avg_verse_length": 30.63,
+    "max_verse_length": 76,
+    "min_verse_length": 7,
+    "hapax_legomena": 337,
+    "hapax_ratio": 0.2116,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 39
+      },
+      {
+        "word": "lord",
+        "count": 17
+      },
+      {
+        "word": "people",
+        "count": 12
+      },
+      {
+        "word": "earth",
+        "count": 8
+      },
+      {
+        "word": "said",
+        "count": 8
+      },
+      {
+        "word": "day",
+        "count": 8
+      },
+      {
+        "word": "all",
+        "count": 7
+      },
+      {
+        "word": "one",
+        "count": 6
+      },
+      {
+        "word": "heavens",
+        "count": 6
+      },
+      {
+        "word": "retribution",
+        "count": 6
+      },
+      {
+        "word": "messengers",
+        "count": 6
+      },
+      {
+        "word": "prayers",
+        "count": 6
+      },
+      {
+        "word": "accordance",
+        "count": 5
+      },
+      {
+        "word": "give",
+        "count": 5
+      },
+      {
+        "word": "more",
+        "count": 5
+      },
+      {
+        "word": "before",
+        "count": 5
+      },
+      {
+        "word": "only",
+        "count": 5
+      },
+      {
+        "word": "say",
+        "count": 5
+      },
+      {
+        "word": "every",
+        "count": 4
+      },
+      {
+        "word": "transgressors",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "surah": "15",
+    "surahName": "Al-Hijr Valley",
+    "num_verses": 99,
+    "total_words": 1165,
+    "unique_words": 415,
+    "type_token_ratio": 0.3562,
+    "avg_word_length": 4.34,
+    "avg_verse_length": 11.77,
+    "max_verse_length": 31,
+    "min_verse_length": 5,
+    "hapax_legomena": 263,
+    "hapax_ratio": 0.2258,
+    "top_content_words": [
+      {
+        "word": "said",
+        "count": 22
+      },
+      {
+        "word": "lord",
+        "count": 9
+      },
+      {
+        "word": "him",
+        "count": 7
+      },
+      {
+        "word": "except",
+        "count": 6
+      },
+      {
+        "word": "all",
+        "count": 6
+      },
+      {
+        "word": "people",
+        "count": 6
+      },
+      {
+        "word": "out",
+        "count": 5
+      },
+      {
+        "word": "down",
+        "count": 5
+      },
+      {
+        "word": "messengers",
+        "count": 5
+      },
+      {
+        "word": "never",
+        "count": 4
+      },
+      {
+        "word": "any",
+        "count": 4
+      },
+      {
+        "word": "specific",
+        "count": 4
+      },
+      {
+        "word": "angels",
+        "count": 4
+      },
+      {
+        "word": "send",
+        "count": 4
+      },
+      {
+        "word": "before",
+        "count": 4
+      },
+      {
+        "word": "been",
+        "count": 4
+      },
+      {
+        "word": "being",
+        "count": 4
+      },
+      {
+        "word": "like",
+        "count": 4
+      },
+      {
+        "word": "good",
+        "count": 4
+      },
+      {
+        "word": "news",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "surah": "16",
+    "surahName": "The Bee",
+    "num_verses": 128,
+    "total_words": 3449,
+    "unique_words": 849,
+    "type_token_ratio": 0.2462,
+    "avg_word_length": 4.44,
+    "avg_verse_length": 26.95,
+    "max_verse_length": 60,
+    "min_verse_length": 7,
+    "hapax_legomena": 485,
+    "hapax_ratio": 0.1406,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 90
+      },
+      {
+        "word": "lord",
+        "count": 19
+      },
+      {
+        "word": "one",
+        "count": 17
+      },
+      {
+        "word": "people",
+        "count": 15
+      },
+      {
+        "word": "him",
+        "count": 14
+      },
+      {
+        "word": "everything",
+        "count": 13
+      },
+      {
+        "word": "most",
+        "count": 12
+      },
+      {
+        "word": "say",
+        "count": 11
+      },
+      {
+        "word": "idols",
+        "count": 10
+      },
+      {
+        "word": "earth",
+        "count": 10
+      },
+      {
+        "word": "surely",
+        "count": 10
+      },
+      {
+        "word": "out",
+        "count": 10
+      },
+      {
+        "word": "ones",
+        "count": 10
+      },
+      {
+        "word": "day",
+        "count": 10
+      },
+      {
+        "word": "retribution",
+        "count": 10
+      },
+      {
+        "word": "created",
+        "count": 9
+      },
+      {
+        "word": "would",
+        "count": 9
+      },
+      {
+        "word": "anything",
+        "count": 9
+      },
+      {
+        "word": "believe",
+        "count": 9
+      },
+      {
+        "word": "righteous",
+        "count": 9
+      }
+    ]
+  },
+  {
+    "surah": "17",
+    "surahName": "The Children of Israel",
+    "num_verses": 111,
+    "total_words": 2977,
+    "unique_words": 820,
+    "type_token_ratio": 0.2754,
+    "avg_word_length": 4.33,
+    "avg_verse_length": 26.82,
+    "max_verse_length": 56,
+    "min_verse_length": 8,
+    "hapax_legomena": 493,
+    "hapax_ratio": 0.1656,
+    "top_content_words": [
+      {
+        "word": "lord",
+        "count": 33
+      },
+      {
+        "word": "him",
+        "count": 23
+      },
+      {
+        "word": "say",
+        "count": 19
+      },
+      {
+        "word": "all",
+        "count": 14
+      },
+      {
+        "word": "quran",
+        "count": 13
+      },
+      {
+        "word": "one",
+        "count": 12
+      },
+      {
+        "word": "god",
+        "count": 12
+      },
+      {
+        "word": "any",
+        "count": 10
+      },
+      {
+        "word": "said",
+        "count": 10
+      },
+      {
+        "word": "own",
+        "count": 9
+      },
+      {
+        "word": "may",
+        "count": 9
+      },
+      {
+        "word": "down",
+        "count": 9
+      },
+      {
+        "word": "children",
+        "count": 8
+      },
+      {
+        "word": "earth",
+        "count": 8
+      },
+      {
+        "word": "mercy",
+        "count": 8
+      },
+      {
+        "word": "retribution",
+        "count": 8
+      },
+      {
+        "word": "life",
+        "count": 8
+      },
+      {
+        "word": "human",
+        "count": 8
+      },
+      {
+        "word": "day",
+        "count": 8
+      },
+      {
+        "word": "people",
+        "count": 8
+      }
+    ]
+  },
+  {
+    "surah": "18",
+    "surahName": "The Cave",
+    "num_verses": 110,
+    "total_words": 3015,
+    "unique_words": 792,
+    "type_token_ratio": 0.2627,
+    "avg_word_length": 4.2,
+    "avg_verse_length": 27.41,
+    "max_verse_length": 82,
+    "min_verse_length": 4,
+    "hapax_legomena": 441,
+    "hapax_ratio": 0.1463,
+    "top_content_words": [
+      {
+        "word": "lord",
+        "count": 40
+      },
+      {
+        "word": "said",
+        "count": 32
+      },
+      {
+        "word": "god",
+        "count": 22
+      },
+      {
+        "word": "him",
+        "count": 22
+      },
+      {
+        "word": "one",
+        "count": 18
+      },
+      {
+        "word": "never",
+        "count": 13
+      },
+      {
+        "word": "say",
+        "count": 12
+      },
+      {
+        "word": "out",
+        "count": 10
+      },
+      {
+        "word": "people",
+        "count": 10
+      },
+      {
+        "word": "see",
+        "count": 10
+      },
+      {
+        "word": "could",
+        "count": 10
+      },
+      {
+        "word": "let",
+        "count": 10
+      },
+      {
+        "word": "can",
+        "count": 10
+      },
+      {
+        "word": "about",
+        "count": 9
+      },
+      {
+        "word": "may",
+        "count": 9
+      },
+      {
+        "word": "earth",
+        "count": 9
+      },
+      {
+        "word": "two",
+        "count": 9
+      },
+      {
+        "word": "any",
+        "count": 9
+      },
+      {
+        "word": "other",
+        "count": 9
+      },
+      {
+        "word": "there",
+        "count": 9
+      }
+    ]
+  },
+  {
+    "surah": "19",
+    "surahName": "Mary",
+    "num_verses": 98,
+    "total_words": 1833,
+    "unique_words": 543,
+    "type_token_ratio": 0.2962,
+    "avg_word_length": 4.15,
+    "avg_verse_length": 18.7,
+    "max_verse_length": 64,
+    "min_verse_length": 6,
+    "hapax_legomena": 333,
+    "hapax_ratio": 0.1817,
+    "top_content_words": [
+      {
+        "word": "him",
+        "count": 25
+      },
+      {
+        "word": "lord",
+        "count": 23
+      },
+      {
+        "word": "said",
+        "count": 20
+      },
+      {
+        "word": "most",
+        "count": 18
+      },
+      {
+        "word": "gracious",
+        "count": 15
+      },
+      {
+        "word": "day",
+        "count": 13
+      },
+      {
+        "word": "god",
+        "count": 9
+      },
+      {
+        "word": "son",
+        "count": 8
+      },
+      {
+        "word": "righteous",
+        "count": 8
+      },
+      {
+        "word": "worship",
+        "count": 8
+      },
+      {
+        "word": "about",
+        "count": 7
+      },
+      {
+        "word": "before",
+        "count": 7
+      },
+      {
+        "word": "scripture",
+        "count": 7
+      },
+      {
+        "word": "prophet",
+        "count": 7
+      },
+      {
+        "word": "see",
+        "count": 6
+      },
+      {
+        "word": "father",
+        "count": 6
+      },
+      {
+        "word": "come",
+        "count": 6
+      },
+      {
+        "word": "one",
+        "count": 6
+      },
+      {
+        "word": "never",
+        "count": 5
+      },
+      {
+        "word": "mention",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "surah": "20",
+    "surahName": "T.H.",
+    "num_verses": 135,
+    "total_words": 2547,
+    "unique_words": 714,
+    "type_token_ratio": 0.2803,
+    "avg_word_length": 4.16,
+    "avg_verse_length": 18.87,
+    "max_verse_length": 75,
+    "min_verse_length": 2,
+    "hapax_legomena": 441,
+    "hapax_ratio": 0.1731,
+    "top_content_words": [
+      {
+        "word": "said",
+        "count": 37
+      },
+      {
+        "word": "lord",
+        "count": 27
+      },
+      {
+        "word": "him",
+        "count": 23
+      },
+      {
+        "word": "moses",
+        "count": 17
+      },
+      {
+        "word": "god",
+        "count": 13
+      },
+      {
+        "word": "throw",
+        "count": 10
+      },
+      {
+        "word": "may",
+        "count": 10
+      },
+      {
+        "word": "day",
+        "count": 10
+      },
+      {
+        "word": "all",
+        "count": 9
+      },
+      {
+        "word": "thus",
+        "count": 9
+      },
+      {
+        "word": "say",
+        "count": 9
+      },
+      {
+        "word": "life",
+        "count": 9
+      },
+      {
+        "word": "out",
+        "count": 8
+      },
+      {
+        "word": "before",
+        "count": 8
+      },
+      {
+        "word": "people",
+        "count": 8
+      },
+      {
+        "word": "one",
+        "count": 8
+      },
+      {
+        "word": "most",
+        "count": 7
+      },
+      {
+        "word": "can",
+        "count": 7
+      },
+      {
+        "word": "down",
+        "count": 7
+      },
+      {
+        "word": "any",
+        "count": 6
+      }
+    ]
+  },
+  {
+    "surah": "21",
+    "surahName": "The Prophets",
+    "num_verses": 112,
+    "total_words": 2246,
+    "unique_words": 647,
+    "type_token_ratio": 0.2881,
+    "avg_word_length": 4.31,
+    "avg_verse_length": 20.05,
+    "max_verse_length": 53,
+    "min_verse_length": 8,
+    "hapax_legomena": 396,
+    "hapax_ratio": 0.1763,
+    "top_content_words": [
+      {
+        "word": "him",
+        "count": 32
+      },
+      {
+        "word": "said",
+        "count": 18
+      },
+      {
+        "word": "one",
+        "count": 16
+      },
+      {
+        "word": "all",
+        "count": 15
+      },
+      {
+        "word": "lord",
+        "count": 14
+      },
+      {
+        "word": "god",
+        "count": 14
+      },
+      {
+        "word": "people",
+        "count": 11
+      },
+      {
+        "word": "earth",
+        "count": 10
+      },
+      {
+        "word": "gods",
+        "count": 9
+      },
+      {
+        "word": "can",
+        "count": 9
+      },
+      {
+        "word": "before",
+        "count": 7
+      },
+      {
+        "word": "day",
+        "count": 7
+      },
+      {
+        "word": "been",
+        "count": 7
+      },
+      {
+        "word": "indeed",
+        "count": 7
+      },
+      {
+        "word": "most",
+        "count": 7
+      },
+      {
+        "word": "made",
+        "count": 6
+      },
+      {
+        "word": "saved",
+        "count": 6
+      },
+      {
+        "word": "come",
+        "count": 6
+      },
+      {
+        "word": "any",
+        "count": 6
+      },
+      {
+        "word": "say",
+        "count": 6
+      }
+    ]
+  },
+  {
+    "surah": "22",
+    "surahName": "Pilgrimage",
+    "num_verses": 78,
+    "total_words": 2332,
+    "unique_words": 704,
+    "type_token_ratio": 0.3019,
+    "avg_word_length": 4.5,
+    "avg_verse_length": 29.9,
+    "max_verse_length": 125,
+    "min_verse_length": 7,
+    "hapax_legomena": 431,
+    "hapax_ratio": 0.1848,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 79
+      },
+      {
+        "word": "people",
+        "count": 22
+      },
+      {
+        "word": "him",
+        "count": 20
+      },
+      {
+        "word": "among",
+        "count": 12
+      },
+      {
+        "word": "lord",
+        "count": 11
+      },
+      {
+        "word": "life",
+        "count": 11
+      },
+      {
+        "word": "all",
+        "count": 11
+      },
+      {
+        "word": "most",
+        "count": 11
+      },
+      {
+        "word": "day",
+        "count": 9
+      },
+      {
+        "word": "decreed",
+        "count": 8
+      },
+      {
+        "word": "one",
+        "count": 8
+      },
+      {
+        "word": "believe",
+        "count": 8
+      },
+      {
+        "word": "everything",
+        "count": 8
+      },
+      {
+        "word": "earth",
+        "count": 7
+      },
+      {
+        "word": "about",
+        "count": 6
+      },
+      {
+        "word": "any",
+        "count": 6
+      },
+      {
+        "word": "thus",
+        "count": 6
+      },
+      {
+        "word": "beside",
+        "count": 6
+      },
+      {
+        "word": "revelations",
+        "count": 6
+      },
+      {
+        "word": "good",
+        "count": 6
+      }
+    ]
+  },
+  {
+    "surah": "23",
+    "surahName": "The Believers",
+    "num_verses": 118,
+    "total_words": 1947,
+    "unique_words": 604,
+    "type_token_ratio": 0.3102,
+    "avg_word_length": 4.38,
+    "avg_verse_length": 16.5,
+    "max_verse_length": 62,
+    "min_verse_length": 4,
+    "hapax_legomena": 372,
+    "hapax_ratio": 0.1911,
+    "top_content_words": [
+      {
+        "word": "lord",
+        "count": 23
+      },
+      {
+        "word": "god",
+        "count": 20
+      },
+      {
+        "word": "say",
+        "count": 17
+      },
+      {
+        "word": "one",
+        "count": 13
+      },
+      {
+        "word": "said",
+        "count": 12
+      },
+      {
+        "word": "him",
+        "count": 11
+      },
+      {
+        "word": "people",
+        "count": 11
+      },
+      {
+        "word": "never",
+        "count": 10
+      },
+      {
+        "word": "other",
+        "count": 9
+      },
+      {
+        "word": "most",
+        "count": 8
+      },
+      {
+        "word": "all",
+        "count": 8
+      },
+      {
+        "word": "any",
+        "count": 6
+      },
+      {
+        "word": "beside",
+        "count": 6
+      },
+      {
+        "word": "would",
+        "count": 6
+      },
+      {
+        "word": "disbelieved",
+        "count": 6
+      },
+      {
+        "word": "retribution",
+        "count": 6
+      },
+      {
+        "word": "indeed",
+        "count": 5
+      },
+      {
+        "word": "day",
+        "count": 5
+      },
+      {
+        "word": "sent",
+        "count": 5
+      },
+      {
+        "word": "among",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "surah": "24",
+    "surahName": "Light",
+    "num_verses": 64,
+    "total_words": 2406,
+    "unique_words": 620,
+    "type_token_ratio": 0.2577,
+    "avg_word_length": 4.37,
+    "avg_verse_length": 37.59,
+    "max_verse_length": 144,
+    "min_verse_length": 11,
+    "hapax_legomena": 338,
+    "hapax_ratio": 0.1405,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 83
+      },
+      {
+        "word": "homes",
+        "count": 13
+      },
+      {
+        "word": "may",
+        "count": 12
+      },
+      {
+        "word": "women",
+        "count": 11
+      },
+      {
+        "word": "messenger",
+        "count": 11
+      },
+      {
+        "word": "believers",
+        "count": 10
+      },
+      {
+        "word": "fully",
+        "count": 10
+      },
+      {
+        "word": "believe",
+        "count": 9
+      },
+      {
+        "word": "everything",
+        "count": 9
+      },
+      {
+        "word": "permission",
+        "count": 9
+      },
+      {
+        "word": "him",
+        "count": 8
+      },
+      {
+        "word": "most",
+        "count": 8
+      },
+      {
+        "word": "among",
+        "count": 8
+      },
+      {
+        "word": "revelations",
+        "count": 7
+      },
+      {
+        "word": "day",
+        "count": 7
+      },
+      {
+        "word": "other",
+        "count": 7
+      },
+      {
+        "word": "grace",
+        "count": 7
+      },
+      {
+        "word": "good",
+        "count": 7
+      },
+      {
+        "word": "wills",
+        "count": 7
+      },
+      {
+        "word": "light",
+        "count": 7
+      }
+    ]
+  },
+  {
+    "surah": "25",
+    "surahName": "The Statute Book",
+    "num_verses": 77,
+    "total_words": 1755,
+    "unique_words": 552,
+    "type_token_ratio": 0.3145,
+    "avg_word_length": 4.32,
+    "avg_verse_length": 22.79,
+    "max_verse_length": 49,
+    "min_verse_length": 7,
+    "hapax_legomena": 345,
+    "hapax_ratio": 0.1966,
+    "top_content_words": [
+      {
+        "word": "one",
+        "count": 16
+      },
+      {
+        "word": "lord",
+        "count": 14
+      },
+      {
+        "word": "most",
+        "count": 12
+      },
+      {
+        "word": "day",
+        "count": 12
+      },
+      {
+        "word": "god",
+        "count": 12
+      },
+      {
+        "word": "him",
+        "count": 11
+      },
+      {
+        "word": "say",
+        "count": 11
+      },
+      {
+        "word": "all",
+        "count": 8
+      },
+      {
+        "word": "said",
+        "count": 8
+      },
+      {
+        "word": "any",
+        "count": 7
+      },
+      {
+        "word": "people",
+        "count": 7
+      },
+      {
+        "word": "only",
+        "count": 7
+      },
+      {
+        "word": "could",
+        "count": 7
+      },
+      {
+        "word": "never",
+        "count": 6
+      },
+      {
+        "word": "designed",
+        "count": 6
+      },
+      {
+        "word": "set",
+        "count": 6
+      },
+      {
+        "word": "come",
+        "count": 6
+      },
+      {
+        "word": "retribution",
+        "count": 6
+      },
+      {
+        "word": "beside",
+        "count": 5
+      },
+      {
+        "word": "resurrection",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "surah": "26",
+    "surahName": "The Poets",
+    "num_verses": 227,
+    "total_words": 2394,
+    "unique_words": 581,
+    "type_token_ratio": 0.2427,
+    "avg_word_length": 4.22,
+    "avg_verse_length": 10.55,
+    "max_verse_length": 41,
+    "min_verse_length": 4,
+    "hapax_legomena": 347,
+    "hapax_ratio": 0.1449,
+    "top_content_words": [
+      {
+        "word": "said",
+        "count": 45
+      },
+      {
+        "word": "lord",
+        "count": 36
+      },
+      {
+        "word": "most",
+        "count": 26
+      },
+      {
+        "word": "people",
+        "count": 21
+      },
+      {
+        "word": "god",
+        "count": 15
+      },
+      {
+        "word": "believers",
+        "count": 13
+      },
+      {
+        "word": "one",
+        "count": 12
+      },
+      {
+        "word": "universe",
+        "count": 11
+      },
+      {
+        "word": "him",
+        "count": 10
+      },
+      {
+        "word": "day",
+        "count": 10
+      },
+      {
+        "word": "reverence",
+        "count": 10
+      },
+      {
+        "word": "wage",
+        "count": 10
+      },
+      {
+        "word": "retribution",
+        "count": 10
+      },
+      {
+        "word": "can",
+        "count": 9
+      },
+      {
+        "word": "disbelieved",
+        "count": 9
+      },
+      {
+        "word": "should",
+        "count": 9
+      },
+      {
+        "word": "almighty",
+        "count": 9
+      },
+      {
+        "word": "merciful",
+        "count": 9
+      },
+      {
+        "word": "any",
+        "count": 9
+      },
+      {
+        "word": "all",
+        "count": 9
+      }
+    ]
+  },
+  {
+    "surah": "27",
+    "surahName": "The Ant",
+    "num_verses": 93,
+    "total_words": 2147,
+    "unique_words": 624,
+    "type_token_ratio": 0.2906,
+    "avg_word_length": 4.25,
+    "avg_verse_length": 23.09,
+    "max_verse_length": 76,
+    "min_verse_length": 8,
+    "hapax_legomena": 374,
+    "hapax_ratio": 0.1742,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 34
+      },
+      {
+        "word": "said",
+        "count": 28
+      },
+      {
+        "word": "people",
+        "count": 23
+      },
+      {
+        "word": "one",
+        "count": 17
+      },
+      {
+        "word": "lord",
+        "count": 12
+      },
+      {
+        "word": "most",
+        "count": 11
+      },
+      {
+        "word": "him",
+        "count": 10
+      },
+      {
+        "word": "earth",
+        "count": 10
+      },
+      {
+        "word": "say",
+        "count": 10
+      },
+      {
+        "word": "solomon",
+        "count": 9
+      },
+      {
+        "word": "good",
+        "count": 8
+      },
+      {
+        "word": "come",
+        "count": 7
+      },
+      {
+        "word": "works",
+        "count": 6
+      },
+      {
+        "word": "see",
+        "count": 6
+      },
+      {
+        "word": "bring",
+        "count": 6
+      },
+      {
+        "word": "been",
+        "count": 6
+      },
+      {
+        "word": "all",
+        "count": 6
+      },
+      {
+        "word": "everything",
+        "count": 6
+      },
+      {
+        "word": "before",
+        "count": 6
+      },
+      {
+        "word": "news",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "surah": "28",
+    "surahName": "History",
+    "num_verses": 88,
+    "total_words": 2669,
+    "unique_words": 690,
+    "type_token_ratio": 0.2585,
+    "avg_word_length": 4.22,
+    "avg_verse_length": 30.33,
+    "max_verse_length": 69,
+    "min_verse_length": 3,
+    "hapax_legomena": 410,
+    "hapax_ratio": 0.1536,
+    "top_content_words": [
+      {
+        "word": "him",
+        "count": 40
+      },
+      {
+        "word": "said",
+        "count": 34
+      },
+      {
+        "word": "god",
+        "count": 34
+      },
+      {
+        "word": "one",
+        "count": 22
+      },
+      {
+        "word": "people",
+        "count": 20
+      },
+      {
+        "word": "lord",
+        "count": 19
+      },
+      {
+        "word": "moses",
+        "count": 18
+      },
+      {
+        "word": "day",
+        "count": 13
+      },
+      {
+        "word": "earth",
+        "count": 9
+      },
+      {
+        "word": "other",
+        "count": 9
+      },
+      {
+        "word": "come",
+        "count": 9
+      },
+      {
+        "word": "say",
+        "count": 9
+      },
+      {
+        "word": "pharaoh",
+        "count": 8
+      },
+      {
+        "word": "life",
+        "count": 8
+      },
+      {
+        "word": "may",
+        "count": 8
+      },
+      {
+        "word": "two",
+        "count": 8
+      },
+      {
+        "word": "without",
+        "count": 7
+      },
+      {
+        "word": "can",
+        "count": 7
+      },
+      {
+        "word": "all",
+        "count": 7
+      },
+      {
+        "word": "never",
+        "count": 7
+      }
+    ]
+  },
+  {
+    "surah": "29",
+    "surahName": "The Spider",
+    "num_verses": 69,
+    "total_words": 1884,
+    "unique_words": 543,
+    "type_token_ratio": 0.2882,
+    "avg_word_length": 4.37,
+    "avg_verse_length": 27.3,
+    "max_verse_length": 59,
+    "min_verse_length": 3,
+    "hapax_legomena": 314,
+    "hapax_ratio": 0.1667,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 45
+      },
+      {
+        "word": "people",
+        "count": 23
+      },
+      {
+        "word": "him",
+        "count": 21
+      },
+      {
+        "word": "believe",
+        "count": 13
+      },
+      {
+        "word": "say",
+        "count": 12
+      },
+      {
+        "word": "said",
+        "count": 12
+      },
+      {
+        "word": "retribution",
+        "count": 10
+      },
+      {
+        "word": "only",
+        "count": 10
+      },
+      {
+        "word": "most",
+        "count": 9
+      },
+      {
+        "word": "one",
+        "count": 9
+      },
+      {
+        "word": "earth",
+        "count": 9
+      },
+      {
+        "word": "life",
+        "count": 8
+      },
+      {
+        "word": "worship",
+        "count": 8
+      },
+      {
+        "word": "sins",
+        "count": 7
+      },
+      {
+        "word": "come",
+        "count": 7
+      },
+      {
+        "word": "certainly",
+        "count": 7
+      },
+      {
+        "word": "all",
+        "count": 7
+      },
+      {
+        "word": "some",
+        "count": 7
+      },
+      {
+        "word": "righteous",
+        "count": 6
+      },
+      {
+        "word": "beside",
+        "count": 6
+      }
+    ]
+  },
+  {
+    "surah": "30",
+    "surahName": "The Romans",
+    "num_verses": 60,
+    "total_words": 1579,
+    "unique_words": 496,
+    "type_token_ratio": 0.3141,
+    "avg_word_length": 4.44,
+    "avg_verse_length": 26.32,
+    "max_verse_length": 54,
+    "min_verse_length": 3,
+    "hapax_legomena": 306,
+    "hapax_ratio": 0.1938,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 25
+      },
+      {
+        "word": "people",
+        "count": 15
+      },
+      {
+        "word": "one",
+        "count": 12
+      },
+      {
+        "word": "day",
+        "count": 11
+      },
+      {
+        "word": "earth",
+        "count": 10
+      },
+      {
+        "word": "among",
+        "count": 10
+      },
+      {
+        "word": "proofs",
+        "count": 10
+      },
+      {
+        "word": "him",
+        "count": 9
+      },
+      {
+        "word": "most",
+        "count": 7
+      },
+      {
+        "word": "therefore",
+        "count": 6
+      },
+      {
+        "word": "dead",
+        "count": 6
+      },
+      {
+        "word": "can",
+        "count": 6
+      },
+      {
+        "word": "land",
+        "count": 5
+      },
+      {
+        "word": "heavens",
+        "count": 5
+      },
+      {
+        "word": "life",
+        "count": 5
+      },
+      {
+        "word": "own",
+        "count": 5
+      },
+      {
+        "word": "after",
+        "count": 4
+      },
+      {
+        "word": "such",
+        "count": 4
+      },
+      {
+        "word": "consequences",
+        "count": 4
+      },
+      {
+        "word": "revelations",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "surah": "31",
+    "surahName": "Luqmaan",
+    "num_verses": 34,
+    "total_words": 986,
+    "unique_words": 377,
+    "type_token_ratio": 0.3824,
+    "avg_word_length": 4.32,
+    "avg_verse_length": 29.0,
+    "max_verse_length": 55,
+    "min_verse_length": 3,
+    "hapax_legomena": 247,
+    "hapax_ratio": 0.2505,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 32
+      },
+      {
+        "word": "most",
+        "count": 8
+      },
+      {
+        "word": "earth",
+        "count": 7
+      },
+      {
+        "word": "him",
+        "count": 6
+      },
+      {
+        "word": "all",
+        "count": 6
+      },
+      {
+        "word": "without",
+        "count": 5
+      },
+      {
+        "word": "heavens",
+        "count": 5
+      },
+      {
+        "word": "appreciative",
+        "count": 5
+      },
+      {
+        "word": "everything",
+        "count": 5
+      },
+      {
+        "word": "people",
+        "count": 4
+      },
+      {
+        "word": "one",
+        "count": 4
+      },
+      {
+        "word": "life",
+        "count": 4
+      },
+      {
+        "word": "set",
+        "count": 4
+      },
+      {
+        "word": "beside",
+        "count": 4
+      },
+      {
+        "word": "son",
+        "count": 4
+      },
+      {
+        "word": "parents",
+        "count": 4
+      },
+      {
+        "word": "proofs",
+        "count": 3
+      },
+      {
+        "word": "righteous",
+        "count": 3
+      },
+      {
+        "word": "prayers",
+        "count": 3
+      },
+      {
+        "word": "knowledge",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "surah": "32",
+    "surahName": "Prostration",
+    "num_verses": 30,
+    "total_words": 682,
+    "unique_words": 298,
+    "type_token_ratio": 0.437,
+    "avg_word_length": 4.43,
+    "avg_verse_length": 22.73,
+    "max_verse_length": 40,
+    "min_verse_length": 3,
+    "hapax_legomena": 216,
+    "hapax_ratio": 0.3167,
+    "top_content_words": [
+      {
+        "word": "lord",
+        "count": 11
+      },
+      {
+        "word": "one",
+        "count": 7
+      },
+      {
+        "word": "him",
+        "count": 6
+      },
+      {
+        "word": "before",
+        "count": 5
+      },
+      {
+        "word": "all",
+        "count": 4
+      },
+      {
+        "word": "day",
+        "count": 4
+      },
+      {
+        "word": "now",
+        "count": 4
+      },
+      {
+        "word": "created",
+        "count": 3
+      },
+      {
+        "word": "earth",
+        "count": 3
+      },
+      {
+        "word": "everything",
+        "count": 3
+      },
+      {
+        "word": "righteous",
+        "count": 3
+      },
+      {
+        "word": "given",
+        "count": 3
+      },
+      {
+        "word": "hell",
+        "count": 3
+      },
+      {
+        "word": "taste",
+        "count": 3
+      },
+      {
+        "word": "retribution",
+        "count": 3
+      },
+      {
+        "word": "works",
+        "count": 3
+      },
+      {
+        "word": "believe",
+        "count": 3
+      },
+      {
+        "word": "revelations",
+        "count": 3
+      },
+      {
+        "word": "without",
+        "count": 2
+      },
+      {
+        "word": "doubt",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "33",
+    "surahName": "The Parties",
+    "num_verses": 73,
+    "total_words": 2410,
+    "unique_words": 660,
+    "type_token_ratio": 0.2739,
+    "avg_word_length": 4.44,
+    "avg_verse_length": 33.01,
+    "max_verse_length": 139,
+    "min_verse_length": 7,
+    "hapax_legomena": 396,
+    "hapax_ratio": 0.1643,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 90
+      },
+      {
+        "word": "women",
+        "count": 20
+      },
+      {
+        "word": "any",
+        "count": 18
+      },
+      {
+        "word": "prophet",
+        "count": 17
+      },
+      {
+        "word": "messenger",
+        "count": 15
+      },
+      {
+        "word": "men",
+        "count": 14
+      },
+      {
+        "word": "all",
+        "count": 11
+      },
+      {
+        "word": "believers",
+        "count": 11
+      },
+      {
+        "word": "wives",
+        "count": 10
+      },
+      {
+        "word": "believing",
+        "count": 10
+      },
+      {
+        "word": "hearts",
+        "count": 9
+      },
+      {
+        "word": "may",
+        "count": 9
+      },
+      {
+        "word": "most",
+        "count": 8
+      },
+      {
+        "word": "only",
+        "count": 8
+      },
+      {
+        "word": "him",
+        "count": 8
+      },
+      {
+        "word": "one",
+        "count": 7
+      },
+      {
+        "word": "prepared",
+        "count": 7
+      },
+      {
+        "word": "believe",
+        "count": 7
+      },
+      {
+        "word": "say",
+        "count": 7
+      },
+      {
+        "word": "man",
+        "count": 6
+      }
+    ]
+  },
+  {
+    "surah": "34",
+    "surahName": "Sheba",
+    "num_verses": 54,
+    "total_words": 1645,
+    "unique_words": 517,
+    "type_token_ratio": 0.3143,
+    "avg_word_length": 4.32,
+    "avg_verse_length": 30.46,
+    "max_verse_length": 67,
+    "min_verse_length": 13,
+    "hapax_legomena": 327,
+    "hapax_ratio": 0.1988,
+    "top_content_words": [
+      {
+        "word": "say",
+        "count": 23
+      },
+      {
+        "word": "lord",
+        "count": 15
+      },
+      {
+        "word": "him",
+        "count": 14
+      },
+      {
+        "word": "one",
+        "count": 12
+      },
+      {
+        "word": "all",
+        "count": 11
+      },
+      {
+        "word": "most",
+        "count": 11
+      },
+      {
+        "word": "god",
+        "count": 9
+      },
+      {
+        "word": "said",
+        "count": 8
+      },
+      {
+        "word": "retribution",
+        "count": 8
+      },
+      {
+        "word": "earth",
+        "count": 7
+      },
+      {
+        "word": "everything",
+        "count": 6
+      },
+      {
+        "word": "believe",
+        "count": 6
+      },
+      {
+        "word": "only",
+        "count": 6
+      },
+      {
+        "word": "also",
+        "count": 5
+      },
+      {
+        "word": "truth",
+        "count": 5
+      },
+      {
+        "word": "any",
+        "count": 5
+      },
+      {
+        "word": "provisions",
+        "count": 5
+      },
+      {
+        "word": "before",
+        "count": 5
+      },
+      {
+        "word": "heavens",
+        "count": 4
+      },
+      {
+        "word": "hereafter",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "surah": "35",
+    "surahName": "Initiator",
+    "num_verses": 45,
+    "total_words": 1435,
+    "unique_words": 486,
+    "type_token_ratio": 0.3387,
+    "avg_word_length": 4.35,
+    "avg_verse_length": 31.89,
+    "max_verse_length": 80,
+    "min_verse_length": 7,
+    "hapax_legomena": 295,
+    "hapax_ratio": 0.2056,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 38
+      },
+      {
+        "word": "earth",
+        "count": 10
+      },
+      {
+        "word": "people",
+        "count": 9
+      },
+      {
+        "word": "one",
+        "count": 9
+      },
+      {
+        "word": "can",
+        "count": 7
+      },
+      {
+        "word": "all",
+        "count": 7
+      },
+      {
+        "word": "other",
+        "count": 6
+      },
+      {
+        "word": "only",
+        "count": 6
+      },
+      {
+        "word": "warner",
+        "count": 6
+      },
+      {
+        "word": "heavens",
+        "count": 5
+      },
+      {
+        "word": "wills",
+        "count": 5
+      },
+      {
+        "word": "him",
+        "count": 5
+      },
+      {
+        "word": "disbelieve",
+        "count": 5
+      },
+      {
+        "word": "life",
+        "count": 5
+      },
+      {
+        "word": "lord",
+        "count": 5
+      },
+      {
+        "word": "even",
+        "count": 5
+      },
+      {
+        "word": "soul",
+        "count": 5
+      },
+      {
+        "word": "never",
+        "count": 5
+      },
+      {
+        "word": "most",
+        "count": 4
+      },
+      {
+        "word": "any",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "surah": "36",
+    "surahName": "Y.S.",
+    "num_verses": 83,
+    "total_words": 1404,
+    "unique_words": 475,
+    "type_token_ratio": 0.3383,
+    "avg_word_length": 4.2,
+    "avg_verse_length": 16.92,
+    "max_verse_length": 42,
+    "min_verse_length": 4,
+    "hapax_legomena": 302,
+    "hapax_ratio": 0.2151,
+    "top_content_words": [
+      {
+        "word": "one",
+        "count": 13
+      },
+      {
+        "word": "most",
+        "count": 9
+      },
+      {
+        "word": "messengers",
+        "count": 8
+      },
+      {
+        "word": "people",
+        "count": 8
+      },
+      {
+        "word": "him",
+        "count": 8
+      },
+      {
+        "word": "said",
+        "count": 6
+      },
+      {
+        "word": "lord",
+        "count": 6
+      },
+      {
+        "word": "can",
+        "count": 6
+      },
+      {
+        "word": "all",
+        "count": 6
+      },
+      {
+        "word": "see",
+        "count": 5
+      },
+      {
+        "word": "everything",
+        "count": 5
+      },
+      {
+        "word": "other",
+        "count": 5
+      },
+      {
+        "word": "created",
+        "count": 5
+      },
+      {
+        "word": "never",
+        "count": 4
+      },
+      {
+        "word": "place",
+        "count": 4
+      },
+      {
+        "word": "cannot",
+        "count": 4
+      },
+      {
+        "word": "gracious",
+        "count": 4
+      },
+      {
+        "word": "human",
+        "count": 4
+      },
+      {
+        "word": "god",
+        "count": 4
+      },
+      {
+        "word": "any",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "surah": "37",
+    "surahName": "The Arrangers",
+    "num_verses": 182,
+    "total_words": 1618,
+    "unique_words": 499,
+    "type_token_ratio": 0.3084,
+    "avg_word_length": 4.28,
+    "avg_verse_length": 8.89,
+    "max_verse_length": 45,
+    "min_verse_length": 4,
+    "hapax_legomena": 305,
+    "hapax_ratio": 0.1885,
+    "top_content_words": [
+      {
+        "word": "him",
+        "count": 24
+      },
+      {
+        "word": "god",
+        "count": 18
+      },
+      {
+        "word": "one",
+        "count": 17
+      },
+      {
+        "word": "lord",
+        "count": 15
+      },
+      {
+        "word": "only",
+        "count": 10
+      },
+      {
+        "word": "say",
+        "count": 9
+      },
+      {
+        "word": "said",
+        "count": 9
+      },
+      {
+        "word": "servants",
+        "count": 9
+      },
+      {
+        "word": "righteous",
+        "count": 9
+      },
+      {
+        "word": "all",
+        "count": 8
+      },
+      {
+        "word": "day",
+        "count": 8
+      },
+      {
+        "word": "thus",
+        "count": 8
+      },
+      {
+        "word": "messengers",
+        "count": 6
+      },
+      {
+        "word": "saved",
+        "count": 6
+      },
+      {
+        "word": "would",
+        "count": 6
+      },
+      {
+        "word": "been",
+        "count": 5
+      },
+      {
+        "word": "used",
+        "count": 5
+      },
+      {
+        "word": "hell",
+        "count": 5
+      },
+      {
+        "word": "devoted",
+        "count": 5
+      },
+      {
+        "word": "alone",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "surah": "38",
+    "surahName": "S.",
+    "num_verses": 88,
+    "total_words": 1370,
+    "unique_words": 498,
+    "type_token_ratio": 0.3635,
+    "avg_word_length": 4.4,
+    "avg_verse_length": 15.57,
+    "max_verse_length": 65,
+    "min_verse_length": 4,
+    "hapax_legomena": 333,
+    "hapax_ratio": 0.2431,
+    "top_content_words": [
+      {
+        "word": "him",
+        "count": 15
+      },
+      {
+        "word": "said",
+        "count": 13
+      },
+      {
+        "word": "lord",
+        "count": 10
+      },
+      {
+        "word": "day",
+        "count": 8
+      },
+      {
+        "word": "one",
+        "count": 7
+      },
+      {
+        "word": "people",
+        "count": 7
+      },
+      {
+        "word": "hell",
+        "count": 7
+      },
+      {
+        "word": "god",
+        "count": 6
+      },
+      {
+        "word": "all",
+        "count": 6
+      },
+      {
+        "word": "before",
+        "count": 5
+      },
+      {
+        "word": "among",
+        "count": 5
+      },
+      {
+        "word": "retribution",
+        "count": 5
+      },
+      {
+        "word": "earth",
+        "count": 5
+      },
+      {
+        "word": "treat",
+        "count": 5
+      },
+      {
+        "word": "righteous",
+        "count": 5
+      },
+      {
+        "word": "say",
+        "count": 5
+      },
+      {
+        "word": "also",
+        "count": 4
+      },
+      {
+        "word": "remember",
+        "count": 4
+      },
+      {
+        "word": "servant",
+        "count": 4
+      },
+      {
+        "word": "david",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "surah": "39",
+    "surahName": "The Throngs",
+    "num_verses": 75,
+    "total_words": 2144,
+    "unique_words": 611,
+    "type_token_ratio": 0.285,
+    "avg_word_length": 4.42,
+    "avg_verse_length": 28.59,
+    "max_verse_length": 68,
+    "min_verse_length": 9,
+    "hapax_legomena": 357,
+    "hapax_ratio": 0.1665,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 62
+      },
+      {
+        "word": "him",
+        "count": 21
+      },
+      {
+        "word": "say",
+        "count": 21
+      },
+      {
+        "word": "lord",
+        "count": 18
+      },
+      {
+        "word": "all",
+        "count": 13
+      },
+      {
+        "word": "one",
+        "count": 12
+      },
+      {
+        "word": "retribution",
+        "count": 12
+      },
+      {
+        "word": "earth",
+        "count": 11
+      },
+      {
+        "word": "day",
+        "count": 10
+      },
+      {
+        "word": "worship",
+        "count": 8
+      },
+      {
+        "word": "alone",
+        "count": 7
+      },
+      {
+        "word": "only",
+        "count": 7
+      },
+      {
+        "word": "servants",
+        "count": 7
+      },
+      {
+        "word": "can",
+        "count": 7
+      },
+      {
+        "word": "hell",
+        "count": 7
+      },
+      {
+        "word": "idols",
+        "count": 6
+      },
+      {
+        "word": "beside",
+        "count": 6
+      },
+      {
+        "word": "such",
+        "count": 6
+      },
+      {
+        "word": "heavens",
+        "count": 6
+      },
+      {
+        "word": "any",
+        "count": 6
+      }
+    ]
+  },
+  {
+    "surah": "40",
+    "surahName": "Forgiver",
+    "num_verses": 85,
+    "total_words": 2292,
+    "unique_words": 598,
+    "type_token_ratio": 0.2609,
+    "avg_word_length": 4.36,
+    "avg_verse_length": 26.96,
+    "max_verse_length": 63,
+    "min_verse_length": 2,
+    "hapax_legomena": 339,
+    "hapax_ratio": 0.1479,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 60
+      },
+      {
+        "word": "lord",
+        "count": 19
+      },
+      {
+        "word": "day",
+        "count": 19
+      },
+      {
+        "word": "people",
+        "count": 17
+      },
+      {
+        "word": "him",
+        "count": 15
+      },
+      {
+        "word": "one",
+        "count": 13
+      },
+      {
+        "word": "said",
+        "count": 11
+      },
+      {
+        "word": "retribution",
+        "count": 10
+      },
+      {
+        "word": "believe",
+        "count": 10
+      },
+      {
+        "word": "most",
+        "count": 10
+      },
+      {
+        "word": "pharaoh",
+        "count": 10
+      },
+      {
+        "word": "used",
+        "count": 9
+      },
+      {
+        "word": "all",
+        "count": 8
+      },
+      {
+        "word": "thus",
+        "count": 8
+      },
+      {
+        "word": "disbelievers",
+        "count": 8
+      },
+      {
+        "word": "say",
+        "count": 8
+      },
+      {
+        "word": "any",
+        "count": 8
+      },
+      {
+        "word": "worship",
+        "count": 8
+      },
+      {
+        "word": "alone",
+        "count": 7
+      },
+      {
+        "word": "proofs",
+        "count": 7
+      }
+    ]
+  },
+  {
+    "surah": "41",
+    "surahName": "Detailed",
+    "num_verses": 54,
+    "total_words": 1458,
+    "unique_words": 464,
+    "type_token_ratio": 0.3182,
+    "avg_word_length": 4.31,
+    "avg_verse_length": 27.0,
+    "max_verse_length": 62,
+    "min_verse_length": 2,
+    "hapax_legomena": 259,
+    "hapax_ratio": 0.1776,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 13
+      },
+      {
+        "word": "lord",
+        "count": 12
+      },
+      {
+        "word": "one",
+        "count": 10
+      },
+      {
+        "word": "said",
+        "count": 9
+      },
+      {
+        "word": "him",
+        "count": 9
+      },
+      {
+        "word": "say",
+        "count": 8
+      },
+      {
+        "word": "can",
+        "count": 7
+      },
+      {
+        "word": "most",
+        "count": 6
+      },
+      {
+        "word": "life",
+        "count": 6
+      },
+      {
+        "word": "come",
+        "count": 6
+      },
+      {
+        "word": "retribution",
+        "count": 6
+      },
+      {
+        "word": "good",
+        "count": 5
+      },
+      {
+        "word": "day",
+        "count": 5
+      },
+      {
+        "word": "works",
+        "count": 5
+      },
+      {
+        "word": "arabic",
+        "count": 4
+      },
+      {
+        "word": "quran",
+        "count": 4
+      },
+      {
+        "word": "away",
+        "count": 4
+      },
+      {
+        "word": "made",
+        "count": 4
+      },
+      {
+        "word": "more",
+        "count": 4
+      },
+      {
+        "word": "being",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "surah": "42",
+    "surahName": "Consultation",
+    "num_verses": 53,
+    "total_words": 1547,
+    "unique_words": 484,
+    "type_token_ratio": 0.3129,
+    "avg_word_length": 4.48,
+    "avg_verse_length": 29.19,
+    "max_verse_length": 77,
+    "min_verse_length": 2,
+    "hapax_legomena": 286,
+    "hapax_ratio": 0.1849,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 32
+      },
+      {
+        "word": "lord",
+        "count": 13
+      },
+      {
+        "word": "him",
+        "count": 12
+      },
+      {
+        "word": "whomever",
+        "count": 11
+      },
+      {
+        "word": "wills",
+        "count": 11
+      },
+      {
+        "word": "one",
+        "count": 10
+      },
+      {
+        "word": "earth",
+        "count": 8
+      },
+      {
+        "word": "everything",
+        "count": 7
+      },
+      {
+        "word": "heavens",
+        "count": 7
+      },
+      {
+        "word": "all",
+        "count": 7
+      },
+      {
+        "word": "among",
+        "count": 7
+      },
+      {
+        "word": "retribution",
+        "count": 7
+      },
+      {
+        "word": "most",
+        "count": 6
+      },
+      {
+        "word": "about",
+        "count": 6
+      },
+      {
+        "word": "believe",
+        "count": 6
+      },
+      {
+        "word": "day",
+        "count": 5
+      },
+      {
+        "word": "transgressors",
+        "count": 5
+      },
+      {
+        "word": "only",
+        "count": 5
+      },
+      {
+        "word": "fully",
+        "count": 5
+      },
+      {
+        "word": "servants",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "surah": "43",
+    "surahName": "Ornaments",
+    "num_verses": 89,
+    "total_words": 1644,
+    "unique_words": 520,
+    "type_token_ratio": 0.3163,
+    "avg_word_length": 4.36,
+    "avg_verse_length": 18.47,
+    "max_verse_length": 58,
+    "min_verse_length": 2,
+    "hapax_legomena": 332,
+    "hapax_ratio": 0.2019,
+    "top_content_words": [
+      {
+        "word": "one",
+        "count": 14
+      },
+      {
+        "word": "lord",
+        "count": 13
+      },
+      {
+        "word": "people",
+        "count": 12
+      },
+      {
+        "word": "him",
+        "count": 11
+      },
+      {
+        "word": "most",
+        "count": 11
+      },
+      {
+        "word": "say",
+        "count": 10
+      },
+      {
+        "word": "would",
+        "count": 9
+      },
+      {
+        "word": "said",
+        "count": 9
+      },
+      {
+        "word": "all",
+        "count": 8
+      },
+      {
+        "word": "gracious",
+        "count": 7
+      },
+      {
+        "word": "sent",
+        "count": 6
+      },
+      {
+        "word": "created",
+        "count": 6
+      },
+      {
+        "word": "earth",
+        "count": 6
+      },
+      {
+        "word": "example",
+        "count": 6
+      },
+      {
+        "word": "day",
+        "count": 6
+      },
+      {
+        "word": "only",
+        "count": 5
+      },
+      {
+        "word": "before",
+        "count": 5
+      },
+      {
+        "word": "any",
+        "count": 5
+      },
+      {
+        "word": "better",
+        "count": 5
+      },
+      {
+        "word": "can",
+        "count": 5
+      }
+    ]
+  },
+  {
+    "surah": "44",
+    "surahName": "Smoke",
+    "num_verses": 59,
+    "total_words": 614,
+    "unique_words": 280,
+    "type_token_ratio": 0.456,
+    "avg_word_length": 4.37,
+    "avg_verse_length": 10.41,
+    "max_verse_length": 20,
+    "min_verse_length": 2,
+    "hapax_legomena": 193,
+    "hapax_ratio": 0.3143,
+    "top_content_words": [
+      {
+        "word": "lord",
+        "count": 9
+      },
+      {
+        "word": "people",
+        "count": 6
+      },
+      {
+        "word": "god",
+        "count": 5
+      },
+      {
+        "word": "retribution",
+        "count": 5
+      },
+      {
+        "word": "him",
+        "count": 4
+      },
+      {
+        "word": "death",
+        "count": 4
+      },
+      {
+        "word": "day",
+        "count": 4
+      },
+      {
+        "word": "all",
+        "count": 4
+      },
+      {
+        "word": "earth",
+        "count": 3
+      },
+      {
+        "word": "only",
+        "count": 3
+      },
+      {
+        "word": "other",
+        "count": 3
+      },
+      {
+        "word": "messenger",
+        "count": 3
+      },
+      {
+        "word": "enlightening",
+        "count": 2
+      },
+      {
+        "word": "scripture",
+        "count": 2
+      },
+      {
+        "word": "night",
+        "count": 2
+      },
+      {
+        "word": "clarified",
+        "count": 2
+      },
+      {
+        "word": "mercy",
+        "count": 2
+      },
+      {
+        "word": "heavens",
+        "count": 2
+      },
+      {
+        "word": "everything",
+        "count": 2
+      },
+      {
+        "word": "between",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "45",
+    "surahName": "Kneeling",
+    "num_verses": 37,
+    "total_words": 894,
+    "unique_words": 315,
+    "type_token_ratio": 0.3523,
+    "avg_word_length": 4.42,
+    "avg_verse_length": 24.16,
+    "max_verse_length": 47,
+    "min_verse_length": 2,
+    "hapax_legomena": 191,
+    "hapax_ratio": 0.2136,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 19
+      },
+      {
+        "word": "revelations",
+        "count": 8
+      },
+      {
+        "word": "lord",
+        "count": 8
+      },
+      {
+        "word": "all",
+        "count": 7
+      },
+      {
+        "word": "people",
+        "count": 7
+      },
+      {
+        "word": "heavens",
+        "count": 6
+      },
+      {
+        "word": "earth",
+        "count": 6
+      },
+      {
+        "word": "him",
+        "count": 6
+      },
+      {
+        "word": "day",
+        "count": 5
+      },
+      {
+        "word": "life",
+        "count": 5
+      },
+      {
+        "word": "proofs",
+        "count": 4
+      },
+      {
+        "word": "one",
+        "count": 4
+      },
+      {
+        "word": "retribution",
+        "count": 4
+      },
+      {
+        "word": "about",
+        "count": 4
+      },
+      {
+        "word": "everything",
+        "count": 4
+      },
+      {
+        "word": "only",
+        "count": 4
+      },
+      {
+        "word": "most",
+        "count": 3
+      },
+      {
+        "word": "certain",
+        "count": 3
+      },
+      {
+        "word": "provisions",
+        "count": 3
+      },
+      {
+        "word": "believe",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "surah": "46",
+    "surahName": "The Dunes",
+    "num_verses": 35,
+    "total_words": 1162,
+    "unique_words": 399,
+    "type_token_ratio": 0.3434,
+    "avg_word_length": 4.36,
+    "avg_verse_length": 33.2,
+    "max_verse_length": 83,
+    "min_verse_length": 2,
+    "hapax_legomena": 241,
+    "hapax_ratio": 0.2074,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 16
+      },
+      {
+        "word": "say",
+        "count": 10
+      },
+      {
+        "word": "people",
+        "count": 8
+      },
+      {
+        "word": "said",
+        "count": 8
+      },
+      {
+        "word": "day",
+        "count": 7
+      },
+      {
+        "word": "him",
+        "count": 7
+      },
+      {
+        "word": "retribution",
+        "count": 7
+      },
+      {
+        "word": "before",
+        "count": 6
+      },
+      {
+        "word": "works",
+        "count": 6
+      },
+      {
+        "word": "come",
+        "count": 6
+      },
+      {
+        "word": "righteous",
+        "count": 5
+      },
+      {
+        "word": "lord",
+        "count": 5
+      },
+      {
+        "word": "earth",
+        "count": 4
+      },
+      {
+        "word": "idols",
+        "count": 4
+      },
+      {
+        "word": "disbelieved",
+        "count": 4
+      },
+      {
+        "word": "truth",
+        "count": 4
+      },
+      {
+        "word": "parents",
+        "count": 4
+      },
+      {
+        "word": "after",
+        "count": 4
+      },
+      {
+        "word": "bring",
+        "count": 4
+      },
+      {
+        "word": "scripture",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "surah": "47",
+    "surahName": "Muhammad",
+    "num_verses": 38,
+    "total_words": 1021,
+    "unique_words": 347,
+    "type_token_ratio": 0.3399,
+    "avg_word_length": 4.41,
+    "avg_verse_length": 26.87,
+    "max_verse_length": 69,
+    "min_verse_length": 9,
+    "hapax_legomena": 206,
+    "hapax_ratio": 0.2018,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 28
+      },
+      {
+        "word": "works",
+        "count": 9
+      },
+      {
+        "word": "believe",
+        "count": 8
+      },
+      {
+        "word": "disbelieve",
+        "count": 7
+      },
+      {
+        "word": "lord",
+        "count": 6
+      },
+      {
+        "word": "all",
+        "count": 6
+      },
+      {
+        "word": "because",
+        "count": 5
+      },
+      {
+        "word": "thus",
+        "count": 4
+      },
+      {
+        "word": "never",
+        "count": 4
+      },
+      {
+        "word": "righteous",
+        "count": 4
+      },
+      {
+        "word": "evil",
+        "count": 4
+      },
+      {
+        "word": "rivers",
+        "count": 4
+      },
+      {
+        "word": "stingy",
+        "count": 4
+      },
+      {
+        "word": "repel",
+        "count": 3
+      },
+      {
+        "word": "path",
+        "count": 3
+      },
+      {
+        "word": "nullifies",
+        "count": 3
+      },
+      {
+        "word": "sins",
+        "count": 3
+      },
+      {
+        "word": "while",
+        "count": 3
+      },
+      {
+        "word": "war",
+        "count": 3
+      },
+      {
+        "word": "put",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "surah": "48",
+    "surahName": "Victory",
+    "num_verses": 29,
+    "total_words": 1066,
+    "unique_words": 365,
+    "type_token_ratio": 0.3424,
+    "avg_word_length": 4.49,
+    "avg_verse_length": 36.76,
+    "max_verse_length": 93,
+    "min_verse_length": 9,
+    "hapax_legomena": 227,
+    "hapax_ratio": 0.2129,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 39
+      },
+      {
+        "word": "messenger",
+        "count": 9
+      },
+      {
+        "word": "say",
+        "count": 6
+      },
+      {
+        "word": "hearts",
+        "count": 5
+      },
+      {
+        "word": "believers",
+        "count": 5
+      },
+      {
+        "word": "against",
+        "count": 5
+      },
+      {
+        "word": "thus",
+        "count": 5
+      },
+      {
+        "word": "great",
+        "count": 4
+      },
+      {
+        "word": "victory",
+        "count": 4
+      },
+      {
+        "word": "all",
+        "count": 4
+      },
+      {
+        "word": "most",
+        "count": 4
+      },
+      {
+        "word": "men",
+        "count": 4
+      },
+      {
+        "word": "women",
+        "count": 4
+      },
+      {
+        "word": "requite",
+        "count": 4
+      },
+      {
+        "word": "people",
+        "count": 4
+      },
+      {
+        "word": "him",
+        "count": 4
+      },
+      {
+        "word": "pledge",
+        "count": 4
+      },
+      {
+        "word": "hands",
+        "count": 4
+      },
+      {
+        "word": "behind",
+        "count": 4
+      },
+      {
+        "word": "disbelievers",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "surah": "49",
+    "surahName": "The Walls",
+    "num_verses": 18,
+    "total_words": 654,
+    "unique_words": 250,
+    "type_token_ratio": 0.3823,
+    "avg_word_length": 4.36,
+    "avg_verse_length": 36.33,
+    "max_verse_length": 64,
+    "min_verse_length": 13,
+    "hapax_legomena": 149,
+    "hapax_ratio": 0.2278,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 27
+      },
+      {
+        "word": "one",
+        "count": 7
+      },
+      {
+        "word": "believe",
+        "count": 6
+      },
+      {
+        "word": "most",
+        "count": 6
+      },
+      {
+        "word": "messenger",
+        "count": 5
+      },
+      {
+        "word": "other",
+        "count": 5
+      },
+      {
+        "word": "any",
+        "count": 5
+      },
+      {
+        "word": "omniscient",
+        "count": 4
+      },
+      {
+        "word": "people",
+        "count": 4
+      },
+      {
+        "word": "believers",
+        "count": 4
+      },
+      {
+        "word": "may",
+        "count": 4
+      },
+      {
+        "word": "another",
+        "count": 4
+      },
+      {
+        "word": "say",
+        "count": 4
+      },
+      {
+        "word": "doing",
+        "count": 4
+      },
+      {
+        "word": "become",
+        "count": 3
+      },
+      {
+        "word": "ones",
+        "count": 3
+      },
+      {
+        "word": "hearts",
+        "count": 3
+      },
+      {
+        "word": "until",
+        "count": 3
+      },
+      {
+        "word": "better",
+        "count": 3
+      },
+      {
+        "word": "merciful",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "surah": "50",
+    "surahName": "Q.",
+    "num_verses": 45,
+    "total_words": 628,
+    "unique_words": 302,
+    "type_token_ratio": 0.4809,
+    "avg_word_length": 4.37,
+    "avg_verse_length": 13.96,
+    "max_verse_length": 25,
+    "min_verse_length": 5,
+    "hapax_legomena": 221,
+    "hapax_ratio": 0.3519,
+    "top_content_words": [
+      {
+        "word": "day",
+        "count": 6
+      },
+      {
+        "word": "said",
+        "count": 4
+      },
+      {
+        "word": "earth",
+        "count": 4
+      },
+      {
+        "word": "every",
+        "count": 4
+      },
+      {
+        "word": "people",
+        "count": 4
+      },
+      {
+        "word": "before",
+        "count": 4
+      },
+      {
+        "word": "came",
+        "count": 3
+      },
+      {
+        "word": "created",
+        "count": 3
+      },
+      {
+        "word": "him",
+        "count": 3
+      },
+      {
+        "word": "witness",
+        "count": 3
+      },
+      {
+        "word": "more",
+        "count": 3
+      },
+      {
+        "word": "quran",
+        "count": 2
+      },
+      {
+        "word": "strange",
+        "count": 2
+      },
+      {
+        "word": "after",
+        "count": 2
+      },
+      {
+        "word": "fully",
+        "count": 2
+      },
+      {
+        "word": "aware",
+        "count": 2
+      },
+      {
+        "word": "sky",
+        "count": 2
+      },
+      {
+        "word": "without",
+        "count": 2
+      },
+      {
+        "word": "all",
+        "count": 2
+      },
+      {
+        "word": "dwellers",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "51",
+    "surahName": "Drivers of the Winds",
+    "num_verses": 60,
+    "total_words": 623,
+    "unique_words": 280,
+    "type_token_ratio": 0.4494,
+    "avg_word_length": 4.35,
+    "avg_verse_length": 10.38,
+    "max_verse_length": 20,
+    "min_verse_length": 2,
+    "hapax_legomena": 196,
+    "hapax_ratio": 0.3146,
+    "top_content_words": [
+      {
+        "word": "said",
+        "count": 8
+      },
+      {
+        "word": "lord",
+        "count": 5
+      },
+      {
+        "word": "him",
+        "count": 5
+      },
+      {
+        "word": "day",
+        "count": 4
+      },
+      {
+        "word": "lesson",
+        "count": 4
+      },
+      {
+        "word": "sent",
+        "count": 4
+      },
+      {
+        "word": "god",
+        "count": 4
+      },
+      {
+        "word": "set",
+        "count": 3
+      },
+      {
+        "word": "earth",
+        "count": 3
+      },
+      {
+        "word": "fear",
+        "count": 3
+      },
+      {
+        "word": "people",
+        "count": 3
+      },
+      {
+        "word": "transgressors",
+        "count": 3
+      },
+      {
+        "word": "there",
+        "count": 3
+      },
+      {
+        "word": "manifest",
+        "count": 3
+      },
+      {
+        "word": "provisions",
+        "count": 2
+      },
+      {
+        "word": "promised",
+        "count": 2
+      },
+      {
+        "word": "judgment",
+        "count": 2
+      },
+      {
+        "word": "created",
+        "count": 2
+      },
+      {
+        "word": "sky",
+        "count": 2
+      },
+      {
+        "word": "continue",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "52",
+    "surahName": "Mount Sinai",
+    "num_verses": 49,
+    "total_words": 555,
+    "unique_words": 254,
+    "type_token_ratio": 0.4577,
+    "avg_word_length": 4.37,
+    "avg_verse_length": 11.33,
+    "max_verse_length": 36,
+    "min_verse_length": 2,
+    "hapax_legomena": 178,
+    "hapax_ratio": 0.3207,
+    "top_content_words": [
+      {
+        "word": "lord",
+        "count": 7
+      },
+      {
+        "word": "say",
+        "count": 5
+      },
+      {
+        "word": "day",
+        "count": 4
+      },
+      {
+        "word": "god",
+        "count": 4
+      },
+      {
+        "word": "disbelievers",
+        "count": 3
+      },
+      {
+        "word": "used",
+        "count": 3
+      },
+      {
+        "word": "never",
+        "count": 3
+      },
+      {
+        "word": "most",
+        "count": 3
+      },
+      {
+        "word": "let",
+        "count": 3
+      },
+      {
+        "word": "recorded",
+        "count": 2
+      },
+      {
+        "word": "requital",
+        "count": 2
+      },
+      {
+        "word": "sky",
+        "count": 2
+      },
+      {
+        "word": "out",
+        "count": 2
+      },
+      {
+        "word": "see",
+        "count": 2
+      },
+      {
+        "word": "suffer",
+        "count": 2
+      },
+      {
+        "word": "just",
+        "count": 2
+      },
+      {
+        "word": "enjoy",
+        "count": 2
+      },
+      {
+        "word": "spared",
+        "count": 2
+      },
+      {
+        "word": "retribution",
+        "count": 2
+      },
+      {
+        "word": "drink",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "53",
+    "surahName": "The Stars",
+    "num_verses": 62,
+    "total_words": 617,
+    "unique_words": 280,
+    "type_token_ratio": 0.4538,
+    "avg_word_length": 4.42,
+    "avg_verse_length": 9.95,
+    "max_verse_length": 51,
+    "min_verse_length": 4,
+    "hapax_legomena": 195,
+    "hapax_ratio": 0.316,
+    "top_content_words": [
+      {
+        "word": "lord",
+        "count": 7
+      },
+      {
+        "word": "one",
+        "count": 7
+      },
+      {
+        "word": "god",
+        "count": 6
+      },
+      {
+        "word": "fully",
+        "count": 5
+      },
+      {
+        "word": "away",
+        "count": 4
+      },
+      {
+        "word": "saw",
+        "count": 4
+      },
+      {
+        "word": "aware",
+        "count": 4
+      },
+      {
+        "word": "works",
+        "count": 4
+      },
+      {
+        "word": "knowledge",
+        "count": 3
+      },
+      {
+        "word": "evil",
+        "count": 3
+      },
+      {
+        "word": "out",
+        "count": 2
+      },
+      {
+        "word": "personal",
+        "count": 2
+      },
+      {
+        "word": "desire",
+        "count": 2
+      },
+      {
+        "word": "authority",
+        "count": 2
+      },
+      {
+        "word": "highest",
+        "count": 2
+      },
+      {
+        "word": "revealed",
+        "count": 2
+      },
+      {
+        "word": "never",
+        "count": 2
+      },
+      {
+        "word": "made",
+        "count": 2
+      },
+      {
+        "word": "another",
+        "count": 2
+      },
+      {
+        "word": "female",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "54",
+    "surahName": "The Moon",
+    "num_verses": 55,
+    "total_words": 641,
+    "unique_words": 265,
+    "type_token_ratio": 0.4134,
+    "avg_word_length": 4.48,
+    "avg_verse_length": 11.65,
+    "max_verse_length": 21,
+    "min_verse_length": 4,
+    "hapax_legomena": 177,
+    "hapax_ratio": 0.2761,
+    "top_content_words": [
+      {
+        "word": "learn",
+        "count": 10
+      },
+      {
+        "word": "warnings",
+        "count": 8
+      },
+      {
+        "word": "retribution",
+        "count": 8
+      },
+      {
+        "word": "been",
+        "count": 6
+      },
+      {
+        "word": "does",
+        "count": 6
+      },
+      {
+        "word": "any",
+        "count": 6
+      },
+      {
+        "word": "wish",
+        "count": 6
+      },
+      {
+        "word": "terrible",
+        "count": 5
+      },
+      {
+        "word": "made",
+        "count": 5
+      },
+      {
+        "word": "warned",
+        "count": 5
+      },
+      {
+        "word": "come",
+        "count": 4
+      },
+      {
+        "word": "disbelieved",
+        "count": 4
+      },
+      {
+        "word": "day",
+        "count": 4
+      },
+      {
+        "word": "people",
+        "count": 4
+      },
+      {
+        "word": "him",
+        "count": 4
+      },
+      {
+        "word": "rejected",
+        "count": 4
+      },
+      {
+        "word": "how",
+        "count": 4
+      },
+      {
+        "word": "quran",
+        "count": 4
+      },
+      {
+        "word": "easy",
+        "count": 4
+      },
+      {
+        "word": "hour",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "surah": "55",
+    "surahName": "Most Gracious",
+    "num_verses": 78,
+    "total_words": 721,
+    "unique_words": 202,
+    "type_token_ratio": 0.2802,
+    "avg_word_length": 4.11,
+    "avg_verse_length": 9.24,
+    "max_verse_length": 27,
+    "min_verse_length": 3,
+    "hapax_legomena": 129,
+    "hapax_ratio": 0.1789,
+    "top_content_words": [
+      {
+        "word": "lord",
+        "count": 35
+      },
+      {
+        "word": "can",
+        "count": 32
+      },
+      {
+        "word": "deny",
+        "count": 32
+      },
+      {
+        "word": "marvels",
+        "count": 31
+      },
+      {
+        "word": "jinns",
+        "count": 7
+      },
+      {
+        "word": "two",
+        "count": 7
+      },
+      {
+        "word": "humans",
+        "count": 6
+      },
+      {
+        "word": "human",
+        "count": 5
+      },
+      {
+        "word": "earth",
+        "count": 4
+      },
+      {
+        "word": "like",
+        "count": 4
+      },
+      {
+        "word": "one",
+        "count": 4
+      },
+      {
+        "word": "law",
+        "count": 3
+      },
+      {
+        "word": "created",
+        "count": 3
+      },
+      {
+        "word": "fruits",
+        "count": 3
+      },
+      {
+        "word": "majesty",
+        "count": 3
+      },
+      {
+        "word": "penetrate",
+        "count": 3
+      },
+      {
+        "word": "jinn",
+        "count": 3
+      },
+      {
+        "word": "beautiful",
+        "count": 3
+      },
+      {
+        "word": "most",
+        "count": 2
+      },
+      {
+        "word": "sky",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "56",
+    "surahName": "The Inevitable",
+    "num_verses": 96,
+    "total_words": 648,
+    "unique_words": 265,
+    "type_token_ratio": 0.409,
+    "avg_word_length": 4.27,
+    "avg_verse_length": 6.75,
+    "max_verse_length": 14,
+    "min_verse_length": 2,
+    "hapax_legomena": 181,
+    "hapax_ratio": 0.2793,
+    "top_content_words": [
+      {
+        "word": "never",
+        "count": 8
+      },
+      {
+        "word": "generations",
+        "count": 7
+      },
+      {
+        "word": "can",
+        "count": 5
+      },
+      {
+        "word": "right",
+        "count": 5
+      },
+      {
+        "word": "bliss",
+        "count": 4
+      },
+      {
+        "word": "many",
+        "count": 4
+      },
+      {
+        "word": "noted",
+        "count": 4
+      },
+      {
+        "word": "misery",
+        "count": 3
+      },
+      {
+        "word": "later",
+        "count": 3
+      },
+      {
+        "word": "drinks",
+        "count": 3
+      },
+      {
+        "word": "fruits",
+        "count": 3
+      },
+      {
+        "word": "only",
+        "count": 3
+      },
+      {
+        "word": "peace",
+        "count": 3
+      },
+      {
+        "word": "side",
+        "count": 3
+      },
+      {
+        "word": "great",
+        "count": 3
+      },
+      {
+        "word": "lord",
+        "count": 3
+      },
+      {
+        "word": "one",
+        "count": 3
+      },
+      {
+        "word": "comes",
+        "count": 2
+      },
+      {
+        "word": "nothing",
+        "count": 2
+      },
+      {
+        "word": "stop",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "57",
+    "surahName": "Iron",
+    "num_verses": 29,
+    "total_words": 1080,
+    "unique_words": 366,
+    "type_token_ratio": 0.3389,
+    "avg_word_length": 4.4,
+    "avg_verse_length": 37.24,
+    "max_verse_length": 84,
+    "min_verse_length": 16,
+    "hapax_legomena": 221,
+    "hapax_ratio": 0.2046,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 32
+      },
+      {
+        "word": "earth",
+        "count": 8
+      },
+      {
+        "word": "everything",
+        "count": 7
+      },
+      {
+        "word": "all",
+        "count": 7
+      },
+      {
+        "word": "believe",
+        "count": 6
+      },
+      {
+        "word": "sent",
+        "count": 6
+      },
+      {
+        "word": "heavens",
+        "count": 5
+      },
+      {
+        "word": "him",
+        "count": 5
+      },
+      {
+        "word": "day",
+        "count": 5
+      },
+      {
+        "word": "should",
+        "count": 5
+      },
+      {
+        "word": "light",
+        "count": 5
+      },
+      {
+        "word": "believed",
+        "count": 5
+      },
+      {
+        "word": "messengers",
+        "count": 5
+      },
+      {
+        "word": "grace",
+        "count": 5
+      },
+      {
+        "word": "most",
+        "count": 4
+      },
+      {
+        "word": "down",
+        "count": 4
+      },
+      {
+        "word": "among",
+        "count": 4
+      },
+      {
+        "word": "recompense",
+        "count": 4
+      },
+      {
+        "word": "lord",
+        "count": 4
+      },
+      {
+        "word": "mercy",
+        "count": 4
+      }
+    ]
+  },
+  {
+    "surah": "58",
+    "surahName": "The Debate",
+    "num_verses": 22,
+    "total_words": 847,
+    "unique_words": 301,
+    "type_token_ratio": 0.3554,
+    "avg_word_length": 4.57,
+    "avg_verse_length": 38.5,
+    "max_verse_length": 88,
+    "min_verse_length": 13,
+    "hapax_legomena": 181,
+    "hapax_ratio": 0.2137,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 41
+      },
+      {
+        "word": "everything",
+        "count": 9
+      },
+      {
+        "word": "messenger",
+        "count": 8
+      },
+      {
+        "word": "believe",
+        "count": 6
+      },
+      {
+        "word": "him",
+        "count": 6
+      },
+      {
+        "word": "before",
+        "count": 5
+      },
+      {
+        "word": "cannot",
+        "count": 4
+      },
+      {
+        "word": "people",
+        "count": 4
+      },
+      {
+        "word": "incurred",
+        "count": 4
+      },
+      {
+        "word": "retribution",
+        "count": 4
+      },
+      {
+        "word": "day",
+        "count": 4
+      },
+      {
+        "word": "all",
+        "count": 4
+      },
+      {
+        "word": "confer",
+        "count": 4
+      },
+      {
+        "word": "devil",
+        "count": 4
+      },
+      {
+        "word": "party",
+        "count": 4
+      },
+      {
+        "word": "mothers",
+        "count": 3
+      },
+      {
+        "word": "indeed",
+        "count": 3
+      },
+      {
+        "word": "cognizant",
+        "count": 3
+      },
+      {
+        "word": "come",
+        "count": 3
+      },
+      {
+        "word": "secretly",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "surah": "59",
+    "surahName": "Exodus",
+    "num_verses": 24,
+    "total_words": 883,
+    "unique_words": 320,
+    "type_token_ratio": 0.3624,
+    "avg_word_length": 4.49,
+    "avg_verse_length": 36.79,
+    "max_verse_length": 82,
+    "min_verse_length": 17,
+    "hapax_legomena": 213,
+    "hapax_ratio": 0.2412,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 31
+      },
+      {
+        "word": "most",
+        "count": 11
+      },
+      {
+        "word": "would",
+        "count": 8
+      },
+      {
+        "word": "messenger",
+        "count": 7
+      },
+      {
+        "word": "one",
+        "count": 5
+      },
+      {
+        "word": "people",
+        "count": 5
+      },
+      {
+        "word": "hearts",
+        "count": 5
+      },
+      {
+        "word": "because",
+        "count": 5
+      },
+      {
+        "word": "evicted",
+        "count": 4
+      },
+      {
+        "word": "among",
+        "count": 4
+      },
+      {
+        "word": "never",
+        "count": 4
+      },
+      {
+        "word": "leave",
+        "count": 4
+      },
+      {
+        "word": "retribution",
+        "count": 4
+      },
+      {
+        "word": "give",
+        "count": 4
+      },
+      {
+        "word": "reverence",
+        "count": 4
+      },
+      {
+        "word": "themselves",
+        "count": 4
+      },
+      {
+        "word": "him",
+        "count": 4
+      },
+      {
+        "word": "everything",
+        "count": 3
+      },
+      {
+        "word": "almighty",
+        "count": 3
+      },
+      {
+        "word": "homes",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "surah": "60",
+    "surahName": "The Test",
+    "num_verses": 13,
+    "total_words": 652,
+    "unique_words": 240,
+    "type_token_ratio": 0.3681,
+    "avg_word_length": 4.31,
+    "avg_verse_length": 50.15,
+    "max_verse_length": 129,
+    "min_verse_length": 19,
+    "hapax_legomena": 145,
+    "hapax_ratio": 0.2224,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 21
+      },
+      {
+        "word": "believe",
+        "count": 6
+      },
+      {
+        "word": "befriend",
+        "count": 5
+      },
+      {
+        "word": "most",
+        "count": 5
+      },
+      {
+        "word": "disbelievers",
+        "count": 5
+      },
+      {
+        "word": "enemies",
+        "count": 4
+      },
+      {
+        "word": "may",
+        "count": 4
+      },
+      {
+        "word": "wives",
+        "count": 4
+      },
+      {
+        "word": "love",
+        "count": 3
+      },
+      {
+        "word": "because",
+        "count": 3
+      },
+      {
+        "word": "lord",
+        "count": 3
+      },
+      {
+        "word": "everything",
+        "count": 3
+      },
+      {
+        "word": "among",
+        "count": 3
+      },
+      {
+        "word": "abraham",
+        "count": 3
+      },
+      {
+        "word": "example",
+        "count": 3
+      },
+      {
+        "word": "set",
+        "count": 3
+      },
+      {
+        "word": "fight",
+        "count": 3
+      },
+      {
+        "word": "enemy",
+        "count": 3
+      },
+      {
+        "word": "ask",
+        "count": 3
+      },
+      {
+        "word": "paid",
+        "count": 3
+      }
+    ]
+  },
+  {
+    "surah": "61",
+    "surahName": "The Column",
+    "num_verses": 14,
+    "total_words": 385,
+    "unique_words": 178,
+    "type_token_ratio": 0.4623,
+    "avg_word_length": 4.2,
+    "avg_verse_length": 27.5,
+    "max_verse_length": 58,
+    "min_verse_length": 13,
+    "hapax_legomena": 112,
+    "hapax_ratio": 0.2909,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 17
+      },
+      {
+        "word": "said",
+        "count": 5
+      },
+      {
+        "word": "messenger",
+        "count": 5
+      },
+      {
+        "word": "believe",
+        "count": 4
+      },
+      {
+        "word": "people",
+        "count": 4
+      },
+      {
+        "word": "one",
+        "count": 3
+      },
+      {
+        "word": "supporters",
+        "count": 3
+      },
+      {
+        "word": "everything",
+        "count": 2
+      },
+      {
+        "word": "most",
+        "count": 2
+      },
+      {
+        "word": "why",
+        "count": 2
+      },
+      {
+        "word": "say",
+        "count": 2
+      },
+      {
+        "word": "cause",
+        "count": 2
+      },
+      {
+        "word": "like",
+        "count": 2
+      },
+      {
+        "word": "recall",
+        "count": 2
+      },
+      {
+        "word": "even",
+        "count": 2
+      },
+      {
+        "word": "does",
+        "count": 2
+      },
+      {
+        "word": "guide",
+        "count": 2
+      },
+      {
+        "word": "jesus",
+        "count": 2
+      },
+      {
+        "word": "son",
+        "count": 2
+      },
+      {
+        "word": "mary",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "62",
+    "surahName": "Friday",
+    "num_verses": 11,
+    "total_words": 322,
+    "unique_words": 158,
+    "type_token_ratio": 0.4907,
+    "avg_word_length": 4.32,
+    "avg_verse_length": 29.27,
+    "max_verse_length": 42,
+    "min_verse_length": 13,
+    "hapax_legomena": 111,
+    "hapax_ratio": 0.3447,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 12
+      },
+      {
+        "word": "everything",
+        "count": 3
+      },
+      {
+        "word": "most",
+        "count": 3
+      },
+      {
+        "word": "people",
+        "count": 3
+      },
+      {
+        "word": "say",
+        "count": 3
+      },
+      {
+        "word": "all",
+        "count": 3
+      },
+      {
+        "word": "business",
+        "count": 3
+      },
+      {
+        "word": "almighty",
+        "count": 2
+      },
+      {
+        "word": "wise",
+        "count": 2
+      },
+      {
+        "word": "revelations",
+        "count": 2
+      },
+      {
+        "word": "far",
+        "count": 2
+      },
+      {
+        "word": "grace",
+        "count": 2
+      },
+      {
+        "word": "example",
+        "count": 2
+      },
+      {
+        "word": "wicked",
+        "count": 2
+      },
+      {
+        "word": "long",
+        "count": 2
+      },
+      {
+        "word": "death",
+        "count": 2
+      },
+      {
+        "word": "prayer",
+        "count": 2
+      },
+      {
+        "word": "better",
+        "count": 2
+      },
+      {
+        "word": "may",
+        "count": 2
+      },
+      {
+        "word": "some",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "63",
+    "surahName": "The Hypocrites",
+    "num_verses": 11,
+    "total_words": 342,
+    "unique_words": 156,
+    "type_token_ratio": 0.4561,
+    "avg_word_length": 4.37,
+    "avg_verse_length": 31.09,
+    "max_verse_length": 49,
+    "min_verse_length": 16,
+    "hapax_legomena": 111,
+    "hapax_ratio": 0.3246,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 14
+      },
+      {
+        "word": "messenger",
+        "count": 5
+      },
+      {
+        "word": "hypocrites",
+        "count": 4
+      },
+      {
+        "word": "say",
+        "count": 4
+      },
+      {
+        "word": "pray",
+        "count": 3
+      },
+      {
+        "word": "forgiveness",
+        "count": 3
+      },
+      {
+        "word": "come",
+        "count": 2
+      },
+      {
+        "word": "witness",
+        "count": 2
+      },
+      {
+        "word": "repel",
+        "count": 2
+      },
+      {
+        "word": "people",
+        "count": 2
+      },
+      {
+        "word": "see",
+        "count": 2
+      },
+      {
+        "word": "may",
+        "count": 2
+      },
+      {
+        "word": "give",
+        "count": 2
+      },
+      {
+        "word": "any",
+        "count": 2
+      },
+      {
+        "word": "money",
+        "count": 2
+      },
+      {
+        "word": "however",
+        "count": 2
+      },
+      {
+        "word": "know",
+        "count": 2
+      },
+      {
+        "word": "death",
+        "count": 2
+      },
+      {
+        "word": "bear",
+        "count": 1
+      },
+      {
+        "word": "knows",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "64",
+    "surahName": "Mutual Blaming",
+    "num_verses": 18,
+    "total_words": 474,
+    "unique_words": 201,
+    "type_token_ratio": 0.4241,
+    "avg_word_length": 4.5,
+    "avg_verse_length": 26.33,
+    "max_verse_length": 53,
+    "min_verse_length": 11,
+    "hapax_legomena": 136,
+    "hapax_ratio": 0.2869,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 21
+      },
+      {
+        "word": "everything",
+        "count": 8
+      },
+      {
+        "word": "him",
+        "count": 5
+      },
+      {
+        "word": "all",
+        "count": 4
+      },
+      {
+        "word": "fully",
+        "count": 4
+      },
+      {
+        "word": "heavens",
+        "count": 3
+      },
+      {
+        "word": "earth",
+        "count": 3
+      },
+      {
+        "word": "disbelieved",
+        "count": 3
+      },
+      {
+        "word": "messenger",
+        "count": 3
+      },
+      {
+        "word": "day",
+        "count": 3
+      },
+      {
+        "word": "anyone",
+        "count": 3
+      },
+      {
+        "word": "obey",
+        "count": 3
+      },
+      {
+        "word": "belongs",
+        "count": 2
+      },
+      {
+        "word": "created",
+        "count": 2
+      },
+      {
+        "word": "there",
+        "count": 2
+      },
+      {
+        "word": "destiny",
+        "count": 2
+      },
+      {
+        "word": "knows",
+        "count": 2
+      },
+      {
+        "word": "aware",
+        "count": 2
+      },
+      {
+        "word": "away",
+        "count": 2
+      },
+      {
+        "word": "need",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "65",
+    "surahName": "Divorce",
+    "num_verses": 12,
+    "total_words": 512,
+    "unique_words": 232,
+    "type_token_ratio": 0.4531,
+    "avg_word_length": 4.55,
+    "avg_verse_length": 42.67,
+    "max_verse_length": 89,
+    "min_verse_length": 10,
+    "hapax_legomena": 162,
+    "hapax_ratio": 0.3164,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 25
+      },
+      {
+        "word": "him",
+        "count": 8
+      },
+      {
+        "word": "anyone",
+        "count": 6
+      },
+      {
+        "word": "interim",
+        "count": 5
+      },
+      {
+        "word": "provide",
+        "count": 4
+      },
+      {
+        "word": "divorce",
+        "count": 3
+      },
+      {
+        "word": "life",
+        "count": 3
+      },
+      {
+        "word": "against",
+        "count": 3
+      },
+      {
+        "word": "reverences",
+        "count": 3
+      },
+      {
+        "word": "commands",
+        "count": 3
+      },
+      {
+        "word": "women",
+        "count": 2
+      },
+      {
+        "word": "fulfilled",
+        "count": 2
+      },
+      {
+        "word": "reverence",
+        "count": 2
+      },
+      {
+        "word": "lord",
+        "count": 2
+      },
+      {
+        "word": "make",
+        "count": 2
+      },
+      {
+        "word": "miserable",
+        "count": 2
+      },
+      {
+        "word": "leave",
+        "count": 2
+      },
+      {
+        "word": "own",
+        "count": 2
+      },
+      {
+        "word": "laws",
+        "count": 2
+      },
+      {
+        "word": "never",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "66",
+    "surahName": "Prohibition",
+    "num_verses": 12,
+    "total_words": 452,
+    "unique_words": 204,
+    "type_token_ratio": 0.4513,
+    "avg_word_length": 4.35,
+    "avg_verse_length": 37.67,
+    "max_verse_length": 70,
+    "min_verse_length": 17,
+    "hapax_legomena": 134,
+    "hapax_ratio": 0.2965,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 13
+      },
+      {
+        "word": "lord",
+        "count": 6
+      },
+      {
+        "word": "wife",
+        "count": 5
+      },
+      {
+        "word": "prophet",
+        "count": 4
+      },
+      {
+        "word": "him",
+        "count": 4
+      },
+      {
+        "word": "wives",
+        "count": 3
+      },
+      {
+        "word": "informed",
+        "count": 3
+      },
+      {
+        "word": "two",
+        "count": 3
+      },
+      {
+        "word": "against",
+        "count": 3
+      },
+      {
+        "word": "believers",
+        "count": 3
+      },
+      {
+        "word": "believed",
+        "count": 3
+      },
+      {
+        "word": "pharaoh",
+        "count": 3
+      },
+      {
+        "word": "omniscient",
+        "count": 2
+      },
+      {
+        "word": "most",
+        "count": 2
+      },
+      {
+        "word": "part",
+        "count": 2
+      },
+      {
+        "word": "said",
+        "count": 2
+      },
+      {
+        "word": "repent",
+        "count": 2
+      },
+      {
+        "word": "righteous",
+        "count": 2
+      },
+      {
+        "word": "also",
+        "count": 2
+      },
+      {
+        "word": "angels",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "67",
+    "surahName": "Kingship",
+    "num_verses": 30,
+    "total_words": 585,
+    "unique_words": 255,
+    "type_token_ratio": 0.4359,
+    "avg_word_length": 4.35,
+    "avg_verse_length": 19.5,
+    "max_verse_length": 34,
+    "min_verse_length": 10,
+    "hapax_legomena": 176,
+    "hapax_ratio": 0.3009,
+    "top_content_words": [
+      {
+        "word": "one",
+        "count": 10
+      },
+      {
+        "word": "say",
+        "count": 7
+      },
+      {
+        "word": "most",
+        "count": 6
+      },
+      {
+        "word": "would",
+        "count": 4
+      },
+      {
+        "word": "gracious",
+        "count": 4
+      },
+      {
+        "word": "disbelieved",
+        "count": 4
+      },
+      {
+        "word": "him",
+        "count": 4
+      },
+      {
+        "word": "created",
+        "count": 3
+      },
+      {
+        "word": "see",
+        "count": 3
+      },
+      {
+        "word": "come",
+        "count": 3
+      },
+      {
+        "word": "retribution",
+        "count": 3
+      },
+      {
+        "word": "hell",
+        "count": 3
+      },
+      {
+        "word": "warner",
+        "count": 3
+      },
+      {
+        "word": "indeed",
+        "count": 3
+      },
+      {
+        "word": "god",
+        "count": 3
+      },
+      {
+        "word": "earth",
+        "count": 3
+      },
+      {
+        "word": "all",
+        "count": 2
+      },
+      {
+        "word": "among",
+        "count": 2
+      },
+      {
+        "word": "better",
+        "count": 2
+      },
+      {
+        "word": "any",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "68",
+    "surahName": "The Pen",
+    "num_verses": 52,
+    "total_words": 556,
+    "unique_words": 236,
+    "type_token_ratio": 0.4245,
+    "avg_word_length": 4.22,
+    "avg_verse_length": 10.69,
+    "max_verse_length": 23,
+    "min_verse_length": 3,
+    "hapax_legomena": 156,
+    "hapax_ratio": 0.2806,
+    "top_content_words": [
+      {
+        "word": "lord",
+        "count": 10
+      },
+      {
+        "word": "said",
+        "count": 5
+      },
+      {
+        "word": "him",
+        "count": 3
+      },
+      {
+        "word": "like",
+        "count": 3
+      },
+      {
+        "word": "harvest",
+        "count": 3
+      },
+      {
+        "word": "morning",
+        "count": 3
+      },
+      {
+        "word": "each",
+        "count": 3
+      },
+      {
+        "word": "other",
+        "count": 3
+      },
+      {
+        "word": "let",
+        "count": 3
+      },
+      {
+        "word": "righteous",
+        "count": 3
+      },
+      {
+        "word": "attained",
+        "count": 2
+      },
+      {
+        "word": "great",
+        "count": 2
+      },
+      {
+        "word": "crazy",
+        "count": 2
+      },
+      {
+        "word": "deserved",
+        "count": 2
+      },
+      {
+        "word": "blessed",
+        "count": 2
+      },
+      {
+        "word": "see",
+        "count": 2
+      },
+      {
+        "word": "fully",
+        "count": 2
+      },
+      {
+        "word": "aware",
+        "count": 2
+      },
+      {
+        "word": "obey",
+        "count": 2
+      },
+      {
+        "word": "wish",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "69",
+    "surahName": "Incontestable",
+    "num_verses": 52,
+    "total_words": 463,
+    "unique_words": 226,
+    "type_token_ratio": 0.4881,
+    "avg_word_length": 4.3,
+    "avg_verse_length": 8.9,
+    "max_verse_length": 23,
+    "min_verse_length": 3,
+    "hapax_legomena": 150,
+    "hapax_ratio": 0.324,
+    "top_content_words": [
+      {
+        "word": "him",
+        "count": 9
+      },
+      {
+        "word": "any",
+        "count": 5
+      },
+      {
+        "word": "lord",
+        "count": 4
+      },
+      {
+        "word": "record",
+        "count": 4
+      },
+      {
+        "word": "incontestable",
+        "count": 3
+      },
+      {
+        "word": "event",
+        "count": 3
+      },
+      {
+        "word": "devastating",
+        "count": 3
+      },
+      {
+        "word": "see",
+        "count": 3
+      },
+      {
+        "word": "believe",
+        "count": 3
+      },
+      {
+        "word": "wish",
+        "count": 3
+      },
+      {
+        "word": "utterance",
+        "count": 3
+      },
+      {
+        "word": "thamoud",
+        "count": 2
+      },
+      {
+        "word": "aad",
+        "count": 2
+      },
+      {
+        "word": "annihilated",
+        "count": 2
+      },
+      {
+        "word": "eight",
+        "count": 2
+      },
+      {
+        "word": "days",
+        "count": 2
+      },
+      {
+        "word": "could",
+        "count": 2
+      },
+      {
+        "word": "around",
+        "count": 2
+      },
+      {
+        "word": "can",
+        "count": 2
+      },
+      {
+        "word": "sinners",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "70",
+    "surahName": "The Heights",
+    "num_verses": 44,
+    "total_words": 384,
+    "unique_words": 200,
+    "type_token_ratio": 0.5208,
+    "avg_word_length": 4.41,
+    "avg_verse_length": 8.73,
+    "max_verse_length": 24,
+    "min_verse_length": 3,
+    "hapax_legomena": 145,
+    "hapax_ratio": 0.3776,
+    "top_content_words": [
+      {
+        "word": "day",
+        "count": 7
+      },
+      {
+        "word": "him",
+        "count": 4
+      },
+      {
+        "word": "can",
+        "count": 3
+      },
+      {
+        "word": "see",
+        "count": 3
+      },
+      {
+        "word": "lord",
+        "count": 3
+      },
+      {
+        "word": "retribution",
+        "count": 2
+      },
+      {
+        "word": "therefore",
+        "count": 2
+      },
+      {
+        "word": "away",
+        "count": 2
+      },
+      {
+        "word": "close",
+        "count": 2
+      },
+      {
+        "word": "come",
+        "count": 2
+      },
+      {
+        "word": "like",
+        "count": 2
+      },
+      {
+        "word": "friend",
+        "count": 2
+      },
+      {
+        "word": "even",
+        "count": 2
+      },
+      {
+        "word": "people",
+        "count": 2
+      },
+      {
+        "word": "observe",
+        "count": 2
+      },
+      {
+        "word": "contact",
+        "count": 2
+      },
+      {
+        "word": "prayers",
+        "count": 2
+      },
+      {
+        "word": "salat",
+        "count": 2
+      },
+      {
+        "word": "requital",
+        "count": 2
+      },
+      {
+        "word": "keep",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "71",
+    "surahName": "Noah",
+    "num_verses": 28,
+    "total_words": 381,
+    "unique_words": 192,
+    "type_token_ratio": 0.5039,
+    "avg_word_length": 4.4,
+    "avg_verse_length": 13.61,
+    "max_verse_length": 32,
+    "min_verse_length": 4,
+    "hapax_legomena": 140,
+    "hapax_ratio": 0.3675,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 7
+      },
+      {
+        "word": "said",
+        "count": 6
+      },
+      {
+        "word": "lord",
+        "count": 5
+      },
+      {
+        "word": "people",
+        "count": 4
+      },
+      {
+        "word": "noah",
+        "count": 3
+      },
+      {
+        "word": "only",
+        "count": 3
+      },
+      {
+        "word": "invited",
+        "count": 3
+      },
+      {
+        "word": "earth",
+        "count": 3
+      },
+      {
+        "word": "reverence",
+        "count": 2
+      },
+      {
+        "word": "forgive",
+        "count": 2
+      },
+      {
+        "word": "sins",
+        "count": 2
+      },
+      {
+        "word": "placed",
+        "count": 2
+      },
+      {
+        "word": "money",
+        "count": 2
+      },
+      {
+        "word": "children",
+        "count": 2
+      },
+      {
+        "word": "created",
+        "count": 2
+      },
+      {
+        "word": "therein",
+        "count": 2
+      },
+      {
+        "word": "abandon",
+        "count": 2
+      },
+      {
+        "word": "let",
+        "count": 2
+      },
+      {
+        "word": "wicked",
+        "count": 2
+      },
+      {
+        "word": "give",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "72",
+    "surahName": "Jinns",
+    "num_verses": 28,
+    "total_words": 497,
+    "unique_words": 225,
+    "type_token_ratio": 0.4527,
+    "avg_word_length": 4.14,
+    "avg_verse_length": 17.75,
+    "max_verse_length": 28,
+    "min_verse_length": 10,
+    "hapax_legomena": 147,
+    "hapax_ratio": 0.2958,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 10
+      },
+      {
+        "word": "lord",
+        "count": 8
+      },
+      {
+        "word": "never",
+        "count": 6
+      },
+      {
+        "word": "him",
+        "count": 6
+      },
+      {
+        "word": "say",
+        "count": 5
+      },
+      {
+        "word": "any",
+        "count": 5
+      },
+      {
+        "word": "beside",
+        "count": 4
+      },
+      {
+        "word": "only",
+        "count": 4
+      },
+      {
+        "word": "anyone",
+        "count": 4
+      },
+      {
+        "word": "can",
+        "count": 4
+      },
+      {
+        "word": "among",
+        "count": 3
+      },
+      {
+        "word": "used",
+        "count": 3
+      },
+      {
+        "word": "thought",
+        "count": 3
+      },
+      {
+        "word": "power",
+        "count": 3
+      },
+      {
+        "word": "messenger",
+        "count": 3
+      },
+      {
+        "word": "all",
+        "count": 3
+      },
+      {
+        "word": "future",
+        "count": 3
+      },
+      {
+        "word": "jinns",
+        "count": 2
+      },
+      {
+        "word": "heard",
+        "count": 2
+      },
+      {
+        "word": "believed",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "73",
+    "surahName": "Cloaked",
+    "num_verses": 20,
+    "total_words": 379,
+    "unique_words": 178,
+    "type_token_ratio": 0.4697,
+    "avg_word_length": 4.23,
+    "avg_verse_length": 18.95,
+    "max_verse_length": 148,
+    "min_verse_length": 4,
+    "hapax_legomena": 116,
+    "hapax_ratio": 0.3061,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 8
+      },
+      {
+        "word": "him",
+        "count": 5
+      },
+      {
+        "word": "night",
+        "count": 4
+      },
+      {
+        "word": "day",
+        "count": 4
+      },
+      {
+        "word": "lord",
+        "count": 4
+      },
+      {
+        "word": "can",
+        "count": 4
+      },
+      {
+        "word": "during",
+        "count": 3
+      },
+      {
+        "word": "little",
+        "count": 3
+      },
+      {
+        "word": "more",
+        "count": 3
+      },
+      {
+        "word": "read",
+        "count": 3
+      },
+      {
+        "word": "give",
+        "count": 3
+      },
+      {
+        "word": "messenger",
+        "count": 3
+      },
+      {
+        "word": "knows",
+        "count": 3
+      },
+      {
+        "word": "may",
+        "count": 3
+      },
+      {
+        "word": "one",
+        "count": 2
+      },
+      {
+        "word": "meditate",
+        "count": 2
+      },
+      {
+        "word": "half",
+        "count": 2
+      },
+      {
+        "word": "quran",
+        "count": 2
+      },
+      {
+        "word": "cover",
+        "count": 2
+      },
+      {
+        "word": "time",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "74",
+    "surahName": "The Hidden Secret",
+    "num_verses": 56,
+    "total_words": 431,
+    "unique_words": 214,
+    "type_token_ratio": 0.4965,
+    "avg_word_length": 4.42,
+    "avg_verse_length": 7.7,
+    "max_verse_length": 104,
+    "min_verse_length": 2,
+    "hapax_legomena": 153,
+    "hapax_ratio": 0.355,
+    "top_content_words": [
+      {
+        "word": "him",
+        "count": 4
+      },
+      {
+        "word": "lord",
+        "count": 3
+      },
+      {
+        "word": "disbelievers",
+        "count": 3
+      },
+      {
+        "word": "one",
+        "count": 3
+      },
+      {
+        "word": "decided",
+        "count": 3
+      },
+      {
+        "word": "indeed",
+        "count": 3
+      },
+      {
+        "word": "retribution",
+        "count": 3
+      },
+      {
+        "word": "god",
+        "count": 3
+      },
+      {
+        "word": "reminder",
+        "count": 3
+      },
+      {
+        "word": "day",
+        "count": 2
+      },
+      {
+        "word": "easy",
+        "count": 2
+      },
+      {
+        "word": "made",
+        "count": 2
+      },
+      {
+        "word": "miserable",
+        "count": 2
+      },
+      {
+        "word": "human",
+        "count": 2
+      },
+      {
+        "word": "all",
+        "count": 2
+      },
+      {
+        "word": "people",
+        "count": 2
+      },
+      {
+        "word": "christians",
+        "count": 2
+      },
+      {
+        "word": "jews",
+        "count": 2
+      },
+      {
+        "word": "scripture",
+        "count": 2
+      },
+      {
+        "word": "doubt",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "75",
+    "surahName": "Resurrection",
+    "num_verses": 40,
+    "total_words": 326,
+    "unique_words": 156,
+    "type_token_ratio": 0.4785,
+    "avg_word_length": 4.14,
+    "avg_verse_length": 8.15,
+    "max_verse_length": 23,
+    "min_verse_length": 3,
+    "hapax_legomena": 107,
+    "hapax_ratio": 0.3282,
+    "top_content_words": [
+      {
+        "word": "day",
+        "count": 8
+      },
+      {
+        "word": "human",
+        "count": 6
+      },
+      {
+        "word": "being",
+        "count": 6
+      },
+      {
+        "word": "indeed",
+        "count": 4
+      },
+      {
+        "word": "lord",
+        "count": 3
+      },
+      {
+        "word": "quran",
+        "count": 3
+      },
+      {
+        "word": "swear",
+        "count": 2
+      },
+      {
+        "word": "resurrection",
+        "count": 2
+      },
+      {
+        "word": "soul",
+        "count": 2
+      },
+      {
+        "word": "does",
+        "count": 2
+      },
+      {
+        "word": "think",
+        "count": 2
+      },
+      {
+        "word": "reconstruct",
+        "count": 2
+      },
+      {
+        "word": "once",
+        "count": 2
+      },
+      {
+        "word": "moon",
+        "count": 2
+      },
+      {
+        "word": "escape",
+        "count": 2
+      },
+      {
+        "word": "everything",
+        "count": 2
+      },
+      {
+        "word": "himself",
+        "count": 2
+      },
+      {
+        "word": "faces",
+        "count": 2
+      },
+      {
+        "word": "other",
+        "count": 2
+      },
+      {
+        "word": "leg",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "76",
+    "surahName": "The Human",
+    "num_verses": 31,
+    "total_words": 438,
+    "unique_words": 217,
+    "type_token_ratio": 0.4954,
+    "avg_word_length": 4.54,
+    "avg_verse_length": 14.13,
+    "max_verse_length": 25,
+    "min_verse_length": 6,
+    "hapax_legomena": 160,
+    "hapax_ratio": 0.3653,
+    "top_content_words": [
+      {
+        "word": "him",
+        "count": 5
+      },
+      {
+        "word": "god",
+        "count": 5
+      },
+      {
+        "word": "day",
+        "count": 5
+      },
+      {
+        "word": "lord",
+        "count": 5
+      },
+      {
+        "word": "cups",
+        "count": 3
+      },
+      {
+        "word": "therein",
+        "count": 3
+      },
+      {
+        "word": "drinks",
+        "count": 3
+      },
+      {
+        "word": "silver",
+        "count": 3
+      },
+      {
+        "word": "night",
+        "count": 3
+      },
+      {
+        "word": "human",
+        "count": 2
+      },
+      {
+        "word": "created",
+        "count": 2
+      },
+      {
+        "word": "two",
+        "count": 2
+      },
+      {
+        "word": "made",
+        "count": 2
+      },
+      {
+        "word": "prepared",
+        "count": 2
+      },
+      {
+        "word": "spring",
+        "count": 2
+      },
+      {
+        "word": "servants",
+        "count": 2
+      },
+      {
+        "word": "out",
+        "count": 2
+      },
+      {
+        "word": "reward",
+        "count": 2
+      },
+      {
+        "word": "rewards",
+        "count": 2
+      },
+      {
+        "word": "any",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "77",
+    "surahName": "Dispatched",
+    "num_verses": 50,
+    "total_words": 344,
+    "unique_words": 145,
+    "type_token_ratio": 0.4215,
+    "avg_word_length": 4.19,
+    "avg_verse_length": 6.88,
+    "max_verse_length": 14,
+    "min_verse_length": 2,
+    "hapax_legomena": 100,
+    "hapax_ratio": 0.2907,
+    "top_content_words": [
+      {
+        "word": "day",
+        "count": 15
+      },
+      {
+        "word": "woe",
+        "count": 10
+      },
+      {
+        "word": "rejectors",
+        "count": 10
+      },
+      {
+        "word": "decision",
+        "count": 3
+      },
+      {
+        "word": "well",
+        "count": 2
+      },
+      {
+        "word": "thus",
+        "count": 2
+      },
+      {
+        "word": "mountains",
+        "count": 2
+      },
+      {
+        "word": "summoned",
+        "count": 2
+      },
+      {
+        "word": "generations",
+        "count": 2
+      },
+      {
+        "word": "placed",
+        "count": 2
+      },
+      {
+        "word": "drink",
+        "count": 2
+      },
+      {
+        "word": "shade",
+        "count": 2
+      },
+      {
+        "word": "enjoy",
+        "count": 2
+      },
+      {
+        "word": "eat",
+        "count": 2
+      },
+      {
+        "word": "bow",
+        "count": 2
+      },
+      {
+        "word": "down",
+        "count": 2
+      },
+      {
+        "word": "angels",
+        "count": 1
+      },
+      {
+        "word": "dispatched",
+        "count": 1
+      },
+      {
+        "word": "succession",
+        "count": 1
+      },
+      {
+        "word": "drive",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "78",
+    "surahName": "The Event",
+    "num_verses": 40,
+    "total_words": 319,
+    "unique_words": 174,
+    "type_token_ratio": 0.5455,
+    "avg_word_length": 4.48,
+    "avg_verse_length": 7.97,
+    "max_verse_length": 34,
+    "min_verse_length": 2,
+    "hapax_legomena": 128,
+    "hapax_ratio": 0.4013,
+    "top_content_words": [
+      {
+        "word": "day",
+        "count": 6
+      },
+      {
+        "word": "most",
+        "count": 3
+      },
+      {
+        "word": "created",
+        "count": 3
+      },
+      {
+        "word": "never",
+        "count": 3
+      },
+      {
+        "word": "only",
+        "count": 3
+      },
+      {
+        "word": "lord",
+        "count": 3
+      },
+      {
+        "word": "find",
+        "count": 2
+      },
+      {
+        "word": "out",
+        "count": 2
+      },
+      {
+        "word": "earth",
+        "count": 2
+      },
+      {
+        "word": "mountains",
+        "count": 2
+      },
+      {
+        "word": "one",
+        "count": 2
+      },
+      {
+        "word": "can",
+        "count": 2
+      },
+      {
+        "word": "orchards",
+        "count": 2
+      },
+      {
+        "word": "come",
+        "count": 2
+      },
+      {
+        "word": "inevitable",
+        "count": 2
+      },
+      {
+        "word": "everything",
+        "count": 2
+      },
+      {
+        "word": "retribution",
+        "count": 2
+      },
+      {
+        "word": "reward",
+        "count": 2
+      },
+      {
+        "word": "gracious",
+        "count": 2
+      },
+      {
+        "word": "questioning",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "79",
+    "surahName": "The Snatchers",
+    "num_verses": 46,
+    "total_words": 369,
+    "unique_words": 194,
+    "type_token_ratio": 0.5257,
+    "avg_word_length": 4.3,
+    "avg_verse_length": 8.02,
+    "max_verse_length": 18,
+    "min_verse_length": 4,
+    "hapax_legomena": 144,
+    "hapax_ratio": 0.3902,
+    "top_content_words": [
+      {
+        "word": "one",
+        "count": 5
+      },
+      {
+        "word": "lord",
+        "count": 5
+      },
+      {
+        "word": "day",
+        "count": 4
+      },
+      {
+        "word": "him",
+        "count": 4
+      },
+      {
+        "word": "life",
+        "count": 3
+      },
+      {
+        "word": "souls",
+        "count": 2
+      },
+      {
+        "word": "take",
+        "count": 2
+      },
+      {
+        "word": "blow",
+        "count": 2
+      },
+      {
+        "word": "turned",
+        "count": 2
+      },
+      {
+        "word": "said",
+        "count": 2
+      },
+      {
+        "word": "all",
+        "count": 2
+      },
+      {
+        "word": "about",
+        "count": 2
+      },
+      {
+        "word": "transgressed",
+        "count": 2
+      },
+      {
+        "word": "reverent",
+        "count": 2
+      },
+      {
+        "word": "great",
+        "count": 2
+      },
+      {
+        "word": "made",
+        "count": 2
+      },
+      {
+        "word": "hell",
+        "count": 2
+      },
+      {
+        "word": "abode",
+        "count": 2
+      },
+      {
+        "word": "angels",
+        "count": 1
+      },
+      {
+        "word": "snatch",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "80",
+    "surahName": "He Frowned",
+    "num_verses": 42,
+    "total_words": 256,
+    "unique_words": 147,
+    "type_token_ratio": 0.5742,
+    "avg_word_length": 4.3,
+    "avg_verse_length": 6.1,
+    "max_verse_length": 12,
+    "min_verse_length": 3,
+    "hapax_legomena": 111,
+    "hapax_ratio": 0.4336,
+    "top_content_words": [
+      {
+        "word": "him",
+        "count": 9
+      },
+      {
+        "word": "day",
+        "count": 4
+      },
+      {
+        "word": "one",
+        "count": 3
+      },
+      {
+        "word": "man",
+        "count": 2
+      },
+      {
+        "word": "came",
+        "count": 2
+      },
+      {
+        "word": "may",
+        "count": 2
+      },
+      {
+        "word": "take",
+        "count": 2
+      },
+      {
+        "word": "heed",
+        "count": 2
+      },
+      {
+        "word": "wills",
+        "count": 2
+      },
+      {
+        "word": "honorable",
+        "count": 2
+      },
+      {
+        "word": "human",
+        "count": 2
+      },
+      {
+        "word": "faces",
+        "count": 2
+      },
+      {
+        "word": "muhammad",
+        "count": 1
+      },
+      {
+        "word": "frowned",
+        "count": 1
+      },
+      {
+        "word": "turned",
+        "count": 1
+      },
+      {
+        "word": "away",
+        "count": 1
+      },
+      {
+        "word": "blind",
+        "count": 1
+      },
+      {
+        "word": "how",
+        "count": 1
+      },
+      {
+        "word": "know",
+        "count": 1
+      },
+      {
+        "word": "purify",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "81",
+    "surahName": "The Rolling",
+    "num_verses": 29,
+    "total_words": 184,
+    "unique_words": 119,
+    "type_token_ratio": 0.6467,
+    "avg_word_length": 4.27,
+    "avg_verse_length": 6.34,
+    "max_verse_length": 15,
+    "min_verse_length": 3,
+    "hapax_legomena": 98,
+    "hapax_ratio": 0.5326,
+    "top_content_words": [
+      {
+        "word": "sun",
+        "count": 1
+      },
+      {
+        "word": "rolled",
+        "count": 1
+      },
+      {
+        "word": "stars",
+        "count": 1
+      },
+      {
+        "word": "crashed",
+        "count": 1
+      },
+      {
+        "word": "each",
+        "count": 1
+      },
+      {
+        "word": "other",
+        "count": 1
+      },
+      {
+        "word": "mountains",
+        "count": 1
+      },
+      {
+        "word": "wiped",
+        "count": 1
+      },
+      {
+        "word": "out",
+        "count": 1
+      },
+      {
+        "word": "reproduction",
+        "count": 1
+      },
+      {
+        "word": "halted",
+        "count": 1
+      },
+      {
+        "word": "beasts",
+        "count": 1
+      },
+      {
+        "word": "summoned",
+        "count": 1
+      },
+      {
+        "word": "oceans",
+        "count": 1
+      },
+      {
+        "word": "set",
+        "count": 1
+      },
+      {
+        "word": "aflame",
+        "count": 1
+      },
+      {
+        "word": "souls",
+        "count": 1
+      },
+      {
+        "word": "restored",
+        "count": 1
+      },
+      {
+        "word": "bodies",
+        "count": 1
+      },
+      {
+        "word": "girl",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "82",
+    "surahName": "The Shattering",
+    "num_verses": 19,
+    "total_words": 152,
+    "unique_words": 89,
+    "type_token_ratio": 0.5855,
+    "avg_word_length": 4.45,
+    "avg_verse_length": 8.0,
+    "max_verse_length": 21,
+    "min_verse_length": 4,
+    "hapax_legomena": 66,
+    "hapax_ratio": 0.4342,
+    "top_content_words": [
+      {
+        "word": "day",
+        "count": 6
+      },
+      {
+        "word": "soul",
+        "count": 3
+      },
+      {
+        "word": "judgment",
+        "count": 3
+      },
+      {
+        "word": "caused",
+        "count": 2
+      },
+      {
+        "word": "god",
+        "count": 2
+      },
+      {
+        "word": "deserved",
+        "count": 2
+      },
+      {
+        "word": "heaven",
+        "count": 1
+      },
+      {
+        "word": "shattered",
+        "count": 1
+      },
+      {
+        "word": "planets",
+        "count": 1
+      },
+      {
+        "word": "scattered",
+        "count": 1
+      },
+      {
+        "word": "oceans",
+        "count": 1
+      },
+      {
+        "word": "exploded",
+        "count": 1
+      },
+      {
+        "word": "graves",
+        "count": 1
+      },
+      {
+        "word": "opened",
+        "count": 1
+      },
+      {
+        "word": "every",
+        "count": 1
+      },
+      {
+        "word": "find",
+        "count": 1
+      },
+      {
+        "word": "out",
+        "count": 1
+      },
+      {
+        "word": "advance",
+        "count": 1
+      },
+      {
+        "word": "regress",
+        "count": 1
+      },
+      {
+        "word": "reflect",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "83",
+    "surahName": "The Cheaters",
+    "num_verses": 36,
+    "total_words": 303,
+    "unique_words": 141,
+    "type_token_ratio": 0.4653,
+    "avg_word_length": 4.47,
+    "avg_verse_length": 8.42,
+    "max_verse_length": 15,
+    "min_verse_length": 4,
+    "hapax_legomena": 90,
+    "hapax_ratio": 0.297,
+    "top_content_words": [
+      {
+        "word": "day",
+        "count": 5
+      },
+      {
+        "word": "people",
+        "count": 4
+      },
+      {
+        "word": "indeed",
+        "count": 4
+      },
+      {
+        "word": "book",
+        "count": 4
+      },
+      {
+        "word": "used",
+        "count": 4
+      },
+      {
+        "word": "know",
+        "count": 3
+      },
+      {
+        "word": "woe",
+        "count": 2
+      },
+      {
+        "word": "lord",
+        "count": 2
+      },
+      {
+        "word": "wicked",
+        "count": 2
+      },
+      {
+        "word": "sijjeen",
+        "count": 2
+      },
+      {
+        "word": "numerically",
+        "count": 2
+      },
+      {
+        "word": "structured",
+        "count": 2
+      },
+      {
+        "word": "righteous",
+        "count": 2
+      },
+      {
+        "word": "elleyyeen",
+        "count": 2
+      },
+      {
+        "word": "close",
+        "count": 2
+      },
+      {
+        "word": "bliss",
+        "count": 2
+      },
+      {
+        "word": "luxurious",
+        "count": 2
+      },
+      {
+        "word": "furnishings",
+        "count": 2
+      },
+      {
+        "word": "watch",
+        "count": 2
+      },
+      {
+        "word": "believed",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "surah": "84",
+    "surahName": "The Rupture",
+    "num_verses": 25,
+    "total_words": 206,
+    "unique_words": 113,
+    "type_token_ratio": 0.5485,
+    "avg_word_length": 4.18,
+    "avg_verse_length": 8.24,
+    "max_verse_length": 18,
+    "min_verse_length": 4,
+    "hapax_legomena": 78,
+    "hapax_ratio": 0.3786,
+    "top_content_words": [
+      {
+        "word": "lord",
+        "count": 4
+      },
+      {
+        "word": "submit",
+        "count": 2
+      },
+      {
+        "word": "expire",
+        "count": 2
+      },
+      {
+        "word": "one",
+        "count": 2
+      },
+      {
+        "word": "receives",
+        "count": 2
+      },
+      {
+        "word": "record",
+        "count": 2
+      },
+      {
+        "word": "people",
+        "count": 2
+      },
+      {
+        "word": "stage",
+        "count": 2
+      },
+      {
+        "word": "quran",
+        "count": 2
+      },
+      {
+        "word": "time",
+        "count": 1
+      },
+      {
+        "word": "come",
+        "count": 1
+      },
+      {
+        "word": "sky",
+        "count": 1
+      },
+      {
+        "word": "ruptured",
+        "count": 1
+      },
+      {
+        "word": "earth",
+        "count": 1
+      },
+      {
+        "word": "leveled",
+        "count": 1
+      },
+      {
+        "word": "eject",
+        "count": 1
+      },
+      {
+        "word": "contents",
+        "count": 1
+      },
+      {
+        "word": "erupts",
+        "count": 1
+      },
+      {
+        "word": "humans",
+        "count": 1
+      },
+      {
+        "word": "irreversibly",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "85",
+    "surahName": "The Galaxies",
+    "num_verses": 22,
+    "total_words": 180,
+    "unique_words": 107,
+    "type_token_ratio": 0.5944,
+    "avg_word_length": 4.58,
+    "avg_verse_length": 8.18,
+    "max_verse_length": 26,
+    "min_verse_length": 3,
+    "hapax_legomena": 83,
+    "hapax_ratio": 0.4611,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 3
+      },
+      {
+        "word": "burning",
+        "count": 2
+      },
+      {
+        "word": "believing",
+        "count": 2
+      },
+      {
+        "word": "surely",
+        "count": 2
+      },
+      {
+        "word": "incurred",
+        "count": 2
+      },
+      {
+        "word": "retribution",
+        "count": 2
+      },
+      {
+        "word": "indeed",
+        "count": 2
+      },
+      {
+        "word": "glorious",
+        "count": 2
+      },
+      {
+        "word": "sky",
+        "count": 1
+      },
+      {
+        "word": "galaxies",
+        "count": 1
+      },
+      {
+        "word": "promised",
+        "count": 1
+      },
+      {
+        "word": "day",
+        "count": 1
+      },
+      {
+        "word": "witness",
+        "count": 1
+      },
+      {
+        "word": "witnessed",
+        "count": 1
+      },
+      {
+        "word": "woe",
+        "count": 1
+      },
+      {
+        "word": "people",
+        "count": 1
+      },
+      {
+        "word": "canyon",
+        "count": 1
+      },
+      {
+        "word": "ignited",
+        "count": 1
+      },
+      {
+        "word": "blazing",
+        "count": 1
+      },
+      {
+        "word": "fire",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "86",
+    "surahName": "The Bright Star",
+    "num_verses": 17,
+    "total_words": 102,
+    "unique_words": 73,
+    "type_token_ratio": 0.7157,
+    "avg_word_length": 4.2,
+    "avg_verse_length": 6.0,
+    "max_verse_length": 8,
+    "min_verse_length": 3,
+    "hapax_legomena": 59,
+    "hapax_ratio": 0.5784,
+    "top_content_words": [
+      {
+        "word": "sky",
+        "count": 2
+      },
+      {
+        "word": "taareq",
+        "count": 2
+      },
+      {
+        "word": "respite",
+        "count": 2
+      },
+      {
+        "word": "know",
+        "count": 1
+      },
+      {
+        "word": "bright",
+        "count": 1
+      },
+      {
+        "word": "star",
+        "count": 1
+      },
+      {
+        "word": "absolutely",
+        "count": 1
+      },
+      {
+        "word": "everyone",
+        "count": 1
+      },
+      {
+        "word": "well",
+        "count": 1
+      },
+      {
+        "word": "guarded",
+        "count": 1
+      },
+      {
+        "word": "let",
+        "count": 1
+      },
+      {
+        "word": "human",
+        "count": 1
+      },
+      {
+        "word": "reflect",
+        "count": 1
+      },
+      {
+        "word": "creation",
+        "count": 1
+      },
+      {
+        "word": "created",
+        "count": 1
+      },
+      {
+        "word": "ejected",
+        "count": 1
+      },
+      {
+        "word": "liquid",
+        "count": 1
+      },
+      {
+        "word": "between",
+        "count": 1
+      },
+      {
+        "word": "spine",
+        "count": 1
+      },
+      {
+        "word": "viscera",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "87",
+    "surahName": "The Most High",
+    "num_verses": 19,
+    "total_words": 145,
+    "unique_words": 94,
+    "type_token_ratio": 0.6483,
+    "avg_word_length": 4.59,
+    "avg_verse_length": 7.63,
+    "max_verse_length": 17,
+    "min_verse_length": 4,
+    "hapax_legomena": 75,
+    "hapax_ratio": 0.5172,
+    "top_content_words": [
+      {
+        "word": "name",
+        "count": 2
+      },
+      {
+        "word": "lord",
+        "count": 2
+      },
+      {
+        "word": "indeed",
+        "count": 2
+      },
+      {
+        "word": "teachings",
+        "count": 2
+      },
+      {
+        "word": "glorify",
+        "count": 1
+      },
+      {
+        "word": "most",
+        "count": 1
+      },
+      {
+        "word": "high",
+        "count": 1
+      },
+      {
+        "word": "creates",
+        "count": 1
+      },
+      {
+        "word": "shapes",
+        "count": 1
+      },
+      {
+        "word": "designs",
+        "count": 1
+      },
+      {
+        "word": "guides",
+        "count": 1
+      },
+      {
+        "word": "produces",
+        "count": 1
+      },
+      {
+        "word": "pasture",
+        "count": 1
+      },
+      {
+        "word": "turns",
+        "count": 1
+      },
+      {
+        "word": "light",
+        "count": 1
+      },
+      {
+        "word": "hay",
+        "count": 1
+      },
+      {
+        "word": "recite",
+        "count": 1
+      },
+      {
+        "word": "forget",
+        "count": 1
+      },
+      {
+        "word": "everything",
+        "count": 1
+      },
+      {
+        "word": "accordance",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "88",
+    "surahName": "Overwhelming",
+    "num_verses": 26,
+    "total_words": 170,
+    "unique_words": 104,
+    "type_token_ratio": 0.6118,
+    "avg_word_length": 4.37,
+    "avg_verse_length": 6.54,
+    "max_verse_length": 13,
+    "min_verse_length": 3,
+    "hapax_legomena": 80,
+    "hapax_ratio": 0.4706,
+    "top_content_words": [
+      {
+        "word": "how",
+        "count": 4
+      },
+      {
+        "word": "faces",
+        "count": 2
+      },
+      {
+        "word": "day",
+        "count": 2
+      },
+      {
+        "word": "spring",
+        "count": 2
+      },
+      {
+        "word": "aware",
+        "count": 1
+      },
+      {
+        "word": "overwhelming",
+        "count": 1
+      },
+      {
+        "word": "shamed",
+        "count": 1
+      },
+      {
+        "word": "laboring",
+        "count": 1
+      },
+      {
+        "word": "exhausted",
+        "count": 1
+      },
+      {
+        "word": "suffering",
+        "count": 1
+      },
+      {
+        "word": "blazing",
+        "count": 1
+      },
+      {
+        "word": "hellfire",
+        "count": 1
+      },
+      {
+        "word": "drinking",
+        "count": 1
+      },
+      {
+        "word": "flaming",
+        "count": 1
+      },
+      {
+        "word": "food",
+        "count": 1
+      },
+      {
+        "word": "except",
+        "count": 1
+      },
+      {
+        "word": "useless",
+        "count": 1
+      },
+      {
+        "word": "variety",
+        "count": 1
+      },
+      {
+        "word": "never",
+        "count": 1
+      },
+      {
+        "word": "nourishes",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "89",
+    "surahName": "Dawn",
+    "num_verses": 30,
+    "total_words": 255,
+    "unique_words": 146,
+    "type_token_ratio": 0.5725,
+    "avg_word_length": 4.46,
+    "avg_verse_length": 8.5,
+    "max_verse_length": 25,
+    "min_verse_length": 3,
+    "hapax_legomena": 102,
+    "hapax_ratio": 0.4,
+    "top_content_words": [
+      {
+        "word": "lord",
+        "count": 8
+      },
+      {
+        "word": "retribution",
+        "count": 3
+      },
+      {
+        "word": "day",
+        "count": 3
+      },
+      {
+        "word": "human",
+        "count": 2
+      },
+      {
+        "word": "being",
+        "count": 2
+      },
+      {
+        "word": "through",
+        "count": 2
+      },
+      {
+        "word": "says",
+        "count": 2
+      },
+      {
+        "word": "towards",
+        "count": 2
+      },
+      {
+        "word": "brought",
+        "count": 2
+      },
+      {
+        "word": "too",
+        "count": 2
+      },
+      {
+        "word": "crushed",
+        "count": 2
+      },
+      {
+        "word": "row",
+        "count": 2
+      },
+      {
+        "word": "confinement",
+        "count": 2
+      },
+      {
+        "word": "welcome",
+        "count": 2
+      },
+      {
+        "word": "dawn",
+        "count": 1
+      },
+      {
+        "word": "ten",
+        "count": 1
+      },
+      {
+        "word": "nights",
+        "count": 1
+      },
+      {
+        "word": "even",
+        "count": 1
+      },
+      {
+        "word": "odd",
+        "count": 1
+      },
+      {
+        "word": "night",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "90",
+    "surahName": "The Town",
+    "num_verses": 20,
+    "total_words": 151,
+    "unique_words": 91,
+    "type_token_ratio": 0.6026,
+    "avg_word_length": 4.19,
+    "avg_verse_length": 7.55,
+    "max_verse_length": 21,
+    "min_verse_length": 4,
+    "hapax_legomena": 61,
+    "hapax_ratio": 0.404,
+    "top_content_words": [
+      {
+        "word": "one",
+        "count": 6
+      },
+      {
+        "word": "him",
+        "count": 4
+      },
+      {
+        "word": "two",
+        "count": 3
+      },
+      {
+        "word": "town",
+        "count": 2
+      },
+      {
+        "word": "being",
+        "count": 2
+      },
+      {
+        "word": "does",
+        "count": 2
+      },
+      {
+        "word": "think",
+        "count": 2
+      },
+      {
+        "word": "difficult",
+        "count": 2
+      },
+      {
+        "word": "path",
+        "count": 2
+      },
+      {
+        "word": "exhorting",
+        "count": 2
+      },
+      {
+        "word": "another",
+        "count": 2
+      },
+      {
+        "word": "solemnly",
+        "count": 1
+      },
+      {
+        "word": "swear",
+        "count": 1
+      },
+      {
+        "word": "where",
+        "count": 1
+      },
+      {
+        "word": "live",
+        "count": 1
+      },
+      {
+        "word": "begetting",
+        "count": 1
+      },
+      {
+        "word": "begotten",
+        "count": 1
+      },
+      {
+        "word": "created",
+        "count": 1
+      },
+      {
+        "word": "human",
+        "count": 1
+      },
+      {
+        "word": "work",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "91",
+    "surahName": "The Sun",
+    "num_verses": 15,
+    "total_words": 114,
+    "unique_words": 66,
+    "type_token_ratio": 0.5789,
+    "avg_word_length": 4.25,
+    "avg_verse_length": 7.6,
+    "max_verse_length": 17,
+    "min_verse_length": 4,
+    "hapax_legomena": 49,
+    "hapax_ratio": 0.4298,
+    "top_content_words": [
+      {
+        "word": "him",
+        "count": 4
+      },
+      {
+        "word": "one",
+        "count": 2
+      },
+      {
+        "word": "god",
+        "count": 2
+      },
+      {
+        "word": "sun",
+        "count": 1
+      },
+      {
+        "word": "brightness",
+        "count": 1
+      },
+      {
+        "word": "moon",
+        "count": 1
+      },
+      {
+        "word": "follows",
+        "count": 1
+      },
+      {
+        "word": "day",
+        "count": 1
+      },
+      {
+        "word": "reveals",
+        "count": 1
+      },
+      {
+        "word": "night",
+        "count": 1
+      },
+      {
+        "word": "covers",
+        "count": 1
+      },
+      {
+        "word": "sky",
+        "count": 1
+      },
+      {
+        "word": "built",
+        "count": 1
+      },
+      {
+        "word": "earth",
+        "count": 1
+      },
+      {
+        "word": "sustains",
+        "count": 1
+      },
+      {
+        "word": "soul",
+        "count": 1
+      },
+      {
+        "word": "created",
+        "count": 1
+      },
+      {
+        "word": "showed",
+        "count": 1
+      },
+      {
+        "word": "evil",
+        "count": 1
+      },
+      {
+        "word": "good",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "92",
+    "surahName": "The Night",
+    "num_verses": 21,
+    "total_words": 135,
+    "unique_words": 83,
+    "type_token_ratio": 0.6148,
+    "avg_word_length": 4.5,
+    "avg_verse_length": 6.43,
+    "max_verse_length": 10,
+    "min_verse_length": 4,
+    "hapax_legomena": 62,
+    "hapax_ratio": 0.4593,
+    "top_content_words": [
+      {
+        "word": "him",
+        "count": 5
+      },
+      {
+        "word": "gives",
+        "count": 2
+      },
+      {
+        "word": "charity",
+        "count": 2
+      },
+      {
+        "word": "scripture",
+        "count": 2
+      },
+      {
+        "word": "direct",
+        "count": 2
+      },
+      {
+        "word": "towards",
+        "count": 2
+      },
+      {
+        "word": "disbelieves",
+        "count": 2
+      },
+      {
+        "word": "money",
+        "count": 2
+      },
+      {
+        "word": "seeking",
+        "count": 2
+      },
+      {
+        "word": "night",
+        "count": 1
+      },
+      {
+        "word": "covers",
+        "count": 1
+      },
+      {
+        "word": "day",
+        "count": 1
+      },
+      {
+        "word": "reveals",
+        "count": 1
+      },
+      {
+        "word": "created",
+        "count": 1
+      },
+      {
+        "word": "male",
+        "count": 1
+      },
+      {
+        "word": "female",
+        "count": 1
+      },
+      {
+        "word": "works",
+        "count": 1
+      },
+      {
+        "word": "various",
+        "count": 1
+      },
+      {
+        "word": "kinds",
+        "count": 1
+      },
+      {
+        "word": "maintains",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "93",
+    "surahName": "The Forenoon",
+    "num_verses": 11,
+    "total_words": 91,
+    "unique_words": 54,
+    "type_token_ratio": 0.5934,
+    "avg_word_length": 4.12,
+    "avg_verse_length": 8.27,
+    "max_verse_length": 12,
+    "min_verse_length": 3,
+    "hapax_legomena": 41,
+    "hapax_ratio": 0.4505,
+    "top_content_words": [
+      {
+        "word": "lord",
+        "count": 3
+      },
+      {
+        "word": "found",
+        "count": 2
+      },
+      {
+        "word": "forenoon",
+        "count": 1
+      },
+      {
+        "word": "night",
+        "count": 1
+      },
+      {
+        "word": "falls",
+        "count": 1
+      },
+      {
+        "word": "never",
+        "count": 1
+      },
+      {
+        "word": "abandoned",
+        "count": 1
+      },
+      {
+        "word": "forget",
+        "count": 1
+      },
+      {
+        "word": "hereafter",
+        "count": 1
+      },
+      {
+        "word": "far",
+        "count": 1
+      },
+      {
+        "word": "better",
+        "count": 1
+      },
+      {
+        "word": "first",
+        "count": 1
+      },
+      {
+        "word": "life",
+        "count": 1
+      },
+      {
+        "word": "give",
+        "count": 1
+      },
+      {
+        "word": "enough",
+        "count": 1
+      },
+      {
+        "word": "pleased",
+        "count": 1
+      },
+      {
+        "word": "find",
+        "count": 1
+      },
+      {
+        "word": "orphaned",
+        "count": 1
+      },
+      {
+        "word": "gave",
+        "count": 1
+      },
+      {
+        "word": "home",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "94",
+    "surahName": "Cooling the Temper",
+    "num_verses": 8,
+    "total_words": 45,
+    "unique_words": 34,
+    "type_token_ratio": 0.7556,
+    "avg_word_length": 4.4,
+    "avg_verse_length": 5.62,
+    "max_verse_length": 7,
+    "min_verse_length": 4,
+    "hapax_legomena": 26,
+    "hapax_ratio": 0.5778,
+    "top_content_words": [
+      {
+        "word": "pain",
+        "count": 2
+      },
+      {
+        "word": "there",
+        "count": 2
+      },
+      {
+        "word": "gain",
+        "count": 2
+      },
+      {
+        "word": "cool",
+        "count": 1
+      },
+      {
+        "word": "temper",
+        "count": 1
+      },
+      {
+        "word": "unloaded",
+        "count": 1
+      },
+      {
+        "word": "load",
+        "count": 1
+      },
+      {
+        "word": "sins",
+        "count": 1
+      },
+      {
+        "word": "one",
+        "count": 1
+      },
+      {
+        "word": "burdened",
+        "count": 1
+      },
+      {
+        "word": "back",
+        "count": 1
+      },
+      {
+        "word": "exalted",
+        "count": 1
+      },
+      {
+        "word": "honorable",
+        "count": 1
+      },
+      {
+        "word": "position",
+        "count": 1
+      },
+      {
+        "word": "indeed",
+        "count": 1
+      },
+      {
+        "word": "whenever",
+        "count": 1
+      },
+      {
+        "word": "possible",
+        "count": 1
+      },
+      {
+        "word": "strive",
+        "count": 1
+      },
+      {
+        "word": "seeking",
+        "count": 1
+      },
+      {
+        "word": "only",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "95",
+    "surahName": "The Fig",
+    "num_verses": 8,
+    "total_words": 64,
+    "unique_words": 51,
+    "type_token_ratio": 0.7969,
+    "avg_word_length": 4.02,
+    "avg_verse_length": 8.0,
+    "max_verse_length": 17,
+    "min_verse_length": 2,
+    "hapax_legomena": 45,
+    "hapax_ratio": 0.7031,
+    "top_content_words": [
+      {
+        "word": "wise",
+        "count": 2
+      },
+      {
+        "word": "fig",
+        "count": 1
+      },
+      {
+        "word": "olive",
+        "count": 1
+      },
+      {
+        "word": "mount",
+        "count": 1
+      },
+      {
+        "word": "sinai",
+        "count": 1
+      },
+      {
+        "word": "honored",
+        "count": 1
+      },
+      {
+        "word": "town",
+        "count": 1
+      },
+      {
+        "word": "mecca",
+        "count": 1
+      },
+      {
+        "word": "created",
+        "count": 1
+      },
+      {
+        "word": "man",
+        "count": 1
+      },
+      {
+        "word": "best",
+        "count": 1
+      },
+      {
+        "word": "design",
+        "count": 1
+      },
+      {
+        "word": "turned",
+        "count": 1
+      },
+      {
+        "word": "him",
+        "count": 1
+      },
+      {
+        "word": "lowliest",
+        "count": 1
+      },
+      {
+        "word": "lowly",
+        "count": 1
+      },
+      {
+        "word": "except",
+        "count": 1
+      },
+      {
+        "word": "believe",
+        "count": 1
+      },
+      {
+        "word": "lead",
+        "count": 1
+      },
+      {
+        "word": "righteous",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "96",
+    "surahName": "The Embryo",
+    "num_verses": 19,
+    "total_words": 129,
+    "unique_words": 83,
+    "type_token_ratio": 0.6434,
+    "avg_word_length": 4.29,
+    "avg_verse_length": 6.79,
+    "max_verse_length": 12,
+    "min_verse_length": 3,
+    "hapax_legomena": 58,
+    "hapax_ratio": 0.4496,
+    "top_content_words": [
+      {
+        "word": "him",
+        "count": 4
+      },
+      {
+        "word": "lord",
+        "count": 3
+      },
+      {
+        "word": "read",
+        "count": 2
+      },
+      {
+        "word": "created",
+        "count": 2
+      },
+      {
+        "word": "man",
+        "count": 2
+      },
+      {
+        "word": "teaches",
+        "count": 2
+      },
+      {
+        "word": "indeed",
+        "count": 2
+      },
+      {
+        "word": "forelock",
+        "count": 2
+      },
+      {
+        "word": "call",
+        "count": 2
+      },
+      {
+        "word": "name",
+        "count": 1
+      },
+      {
+        "word": "embryo",
+        "count": 1
+      },
+      {
+        "word": "most",
+        "count": 1
+      },
+      {
+        "word": "exalted",
+        "count": 1
+      },
+      {
+        "word": "means",
+        "count": 1
+      },
+      {
+        "word": "pen",
+        "count": 1
+      },
+      {
+        "word": "never",
+        "count": 1
+      },
+      {
+        "word": "knew",
+        "count": 1
+      },
+      {
+        "word": "human",
+        "count": 1
+      },
+      {
+        "word": "transgresses",
+        "count": 1
+      },
+      {
+        "word": "becomes",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "97",
+    "surahName": "Destiny",
+    "num_verses": 5,
+    "total_words": 51,
+    "unique_words": 35,
+    "type_token_ratio": 0.6863,
+    "avg_word_length": 4.18,
+    "avg_verse_length": 10.2,
+    "max_verse_length": 17,
+    "min_verse_length": 7,
+    "hapax_legomena": 29,
+    "hapax_ratio": 0.5686,
+    "top_content_words": [
+      {
+        "word": "night",
+        "count": 3
+      },
+      {
+        "word": "destiny",
+        "count": 3
+      },
+      {
+        "word": "revealed",
+        "count": 1
+      },
+      {
+        "word": "how",
+        "count": 1
+      },
+      {
+        "word": "awesome",
+        "count": 1
+      },
+      {
+        "word": "better",
+        "count": 1
+      },
+      {
+        "word": "thousand",
+        "count": 1
+      },
+      {
+        "word": "months",
+        "count": 1
+      },
+      {
+        "word": "angels",
+        "count": 1
+      },
+      {
+        "word": "spirit",
+        "count": 1
+      },
+      {
+        "word": "descend",
+        "count": 1
+      },
+      {
+        "word": "therein",
+        "count": 1
+      },
+      {
+        "word": "lord",
+        "count": 1
+      },
+      {
+        "word": "leave",
+        "count": 1
+      },
+      {
+        "word": "carry",
+        "count": 1
+      },
+      {
+        "word": "out",
+        "count": 1
+      },
+      {
+        "word": "every",
+        "count": 1
+      },
+      {
+        "word": "command",
+        "count": 1
+      },
+      {
+        "word": "peaceful",
+        "count": 1
+      },
+      {
+        "word": "until",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "98",
+    "surahName": "Proof",
+    "num_verses": 8,
+    "total_words": 166,
+    "unique_words": 87,
+    "type_token_ratio": 0.5241,
+    "avg_word_length": 4.7,
+    "avg_verse_length": 20.75,
+    "max_verse_length": 38,
+    "min_verse_length": 6,
+    "hapax_legomena": 54,
+    "hapax_ratio": 0.3253,
+    "top_content_words": [
+      {
+        "word": "scripture",
+        "count": 3
+      },
+      {
+        "word": "god",
+        "count": 3
+      },
+      {
+        "word": "disbelieved",
+        "count": 2
+      },
+      {
+        "word": "among",
+        "count": 2
+      },
+      {
+        "word": "people",
+        "count": 2
+      },
+      {
+        "word": "idol",
+        "count": 2
+      },
+      {
+        "word": "worshipers",
+        "count": 2
+      },
+      {
+        "word": "proof",
+        "count": 2
+      },
+      {
+        "word": "given",
+        "count": 2
+      },
+      {
+        "word": "religion",
+        "count": 2
+      },
+      {
+        "word": "him",
+        "count": 2
+      },
+      {
+        "word": "such",
+        "count": 2
+      },
+      {
+        "word": "forever",
+        "count": 2
+      },
+      {
+        "word": "creatures",
+        "count": 2
+      },
+      {
+        "word": "reward",
+        "count": 2
+      },
+      {
+        "word": "lord",
+        "count": 2
+      },
+      {
+        "word": "pleased",
+        "count": 2
+      },
+      {
+        "word": "well",
+        "count": 1
+      },
+      {
+        "word": "insist",
+        "count": 1
+      },
+      {
+        "word": "ways",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "99",
+    "surahName": "The Quake",
+    "num_verses": 8,
+    "total_words": 71,
+    "unique_words": 45,
+    "type_token_ratio": 0.6338,
+    "avg_word_length": 3.99,
+    "avg_verse_length": 8.88,
+    "max_verse_length": 15,
+    "min_verse_length": 6,
+    "hapax_legomena": 27,
+    "hapax_ratio": 0.3803,
+    "top_content_words": [
+      {
+        "word": "earth",
+        "count": 2
+      },
+      {
+        "word": "day",
+        "count": 2
+      },
+      {
+        "word": "whoever",
+        "count": 2
+      },
+      {
+        "word": "does",
+        "count": 2
+      },
+      {
+        "word": "atom",
+        "count": 2
+      },
+      {
+        "word": "weight",
+        "count": 2
+      },
+      {
+        "word": "see",
+        "count": 2
+      },
+      {
+        "word": "severely",
+        "count": 1
+      },
+      {
+        "word": "quaked",
+        "count": 1
+      },
+      {
+        "word": "ejects",
+        "count": 1
+      },
+      {
+        "word": "loads",
+        "count": 1
+      },
+      {
+        "word": "human",
+        "count": 1
+      },
+      {
+        "word": "wonder",
+        "count": 1
+      },
+      {
+        "word": "happening",
+        "count": 1
+      },
+      {
+        "word": "tell",
+        "count": 1
+      },
+      {
+        "word": "news",
+        "count": 1
+      },
+      {
+        "word": "lord",
+        "count": 1
+      },
+      {
+        "word": "commanded",
+        "count": 1
+      },
+      {
+        "word": "people",
+        "count": 1
+      },
+      {
+        "word": "issue",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "100",
+    "surahName": "The Gallopers",
+    "num_verses": 11,
+    "total_words": 76,
+    "unique_words": 57,
+    "type_token_ratio": 0.75,
+    "avg_word_length": 4.67,
+    "avg_verse_length": 6.91,
+    "max_verse_length": 16,
+    "min_verse_length": 2,
+    "hapax_legomena": 45,
+    "hapax_ratio": 0.5921,
+    "top_content_words": [
+      {
+        "word": "lord",
+        "count": 2
+      },
+      {
+        "word": "day",
+        "count": 2
+      },
+      {
+        "word": "out",
+        "count": 2
+      },
+      {
+        "word": "fast",
+        "count": 1
+      },
+      {
+        "word": "gallopers",
+        "count": 1
+      },
+      {
+        "word": "igniting",
+        "count": 1
+      },
+      {
+        "word": "sparks",
+        "count": 1
+      },
+      {
+        "word": "invading",
+        "count": 1
+      },
+      {
+        "word": "enemy",
+        "count": 1
+      },
+      {
+        "word": "morning",
+        "count": 1
+      },
+      {
+        "word": "striking",
+        "count": 1
+      },
+      {
+        "word": "terror",
+        "count": 1
+      },
+      {
+        "word": "therein",
+        "count": 1
+      },
+      {
+        "word": "penetrating",
+        "count": 1
+      },
+      {
+        "word": "heart",
+        "count": 1
+      },
+      {
+        "word": "territory",
+        "count": 1
+      },
+      {
+        "word": "human",
+        "count": 1
+      },
+      {
+        "word": "being",
+        "count": 1
+      },
+      {
+        "word": "unappreciative",
+        "count": 1
+      },
+      {
+        "word": "bears",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "101",
+    "surahName": "The Shocker",
+    "num_verses": 11,
+    "total_words": 68,
+    "unique_words": 45,
+    "type_token_ratio": 0.6618,
+    "avg_word_length": 4.06,
+    "avg_verse_length": 6.18,
+    "max_verse_length": 13,
+    "min_verse_length": 2,
+    "hapax_legomena": 30,
+    "hapax_ratio": 0.4412,
+    "top_content_words": [
+      {
+        "word": "shocker",
+        "count": 3
+      },
+      {
+        "word": "like",
+        "count": 2
+      },
+      {
+        "word": "him",
+        "count": 2
+      },
+      {
+        "word": "whose",
+        "count": 2
+      },
+      {
+        "word": "weights",
+        "count": 2
+      },
+      {
+        "word": "any",
+        "count": 1
+      },
+      {
+        "word": "idea",
+        "count": 1
+      },
+      {
+        "word": "day",
+        "count": 1
+      },
+      {
+        "word": "people",
+        "count": 1
+      },
+      {
+        "word": "come",
+        "count": 1
+      },
+      {
+        "word": "out",
+        "count": 1
+      },
+      {
+        "word": "swarms",
+        "count": 1
+      },
+      {
+        "word": "butterflies",
+        "count": 1
+      },
+      {
+        "word": "mountains",
+        "count": 1
+      },
+      {
+        "word": "fluffy",
+        "count": 1
+      },
+      {
+        "word": "wool",
+        "count": 1
+      },
+      {
+        "word": "heavy",
+        "count": 1
+      },
+      {
+        "word": "lead",
+        "count": 1
+      },
+      {
+        "word": "happy",
+        "count": 1
+      },
+      {
+        "word": "eternal",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "102",
+    "surahName": "Hoarding",
+    "num_verses": 8,
+    "total_words": 58,
+    "unique_words": 39,
+    "type_token_ratio": 0.6724,
+    "avg_word_length": 4.33,
+    "avg_verse_length": 7.25,
+    "max_verse_length": 14,
+    "min_verse_length": 4,
+    "hapax_legomena": 31,
+    "hapax_ratio": 0.5345,
+    "top_content_words": [
+      {
+        "word": "find",
+        "count": 3
+      },
+      {
+        "word": "out",
+        "count": 3
+      },
+      {
+        "word": "would",
+        "count": 2
+      },
+      {
+        "word": "remain",
+        "count": 1
+      },
+      {
+        "word": "preoccupied",
+        "count": 1
+      },
+      {
+        "word": "hoarding",
+        "count": 1
+      },
+      {
+        "word": "until",
+        "count": 1
+      },
+      {
+        "word": "graves",
+        "count": 1
+      },
+      {
+        "word": "indeed",
+        "count": 1
+      },
+      {
+        "word": "most",
+        "count": 1
+      },
+      {
+        "word": "assuredly",
+        "count": 1
+      },
+      {
+        "word": "only",
+        "count": 1
+      },
+      {
+        "word": "could",
+        "count": 1
+      },
+      {
+        "word": "certain",
+        "count": 1
+      },
+      {
+        "word": "envision",
+        "count": 1
+      },
+      {
+        "word": "hell",
+        "count": 1
+      },
+      {
+        "word": "see",
+        "count": 1
+      },
+      {
+        "word": "eye",
+        "count": 1
+      },
+      {
+        "word": "certainty",
+        "count": 1
+      },
+      {
+        "word": "questioned",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "103",
+    "surahName": "The Afternoon",
+    "num_verses": 3,
+    "total_words": 33,
+    "unique_words": 25,
+    "type_token_ratio": 0.7576,
+    "avg_word_length": 4.52,
+    "avg_verse_length": 11.0,
+    "max_verse_length": 24,
+    "min_verse_length": 3,
+    "hapax_legomena": 19,
+    "hapax_ratio": 0.5758,
+    "top_content_words": [
+      {
+        "word": "exhort",
+        "count": 2
+      },
+      {
+        "word": "one",
+        "count": 2
+      },
+      {
+        "word": "another",
+        "count": 2
+      },
+      {
+        "word": "afternoon",
+        "count": 1
+      },
+      {
+        "word": "human",
+        "count": 1
+      },
+      {
+        "word": "being",
+        "count": 1
+      },
+      {
+        "word": "utterly",
+        "count": 1
+      },
+      {
+        "word": "lost",
+        "count": 1
+      },
+      {
+        "word": "except",
+        "count": 1
+      },
+      {
+        "word": "believe",
+        "count": 1
+      },
+      {
+        "word": "lead",
+        "count": 1
+      },
+      {
+        "word": "righteous",
+        "count": 1
+      },
+      {
+        "word": "life",
+        "count": 1
+      },
+      {
+        "word": "uphold",
+        "count": 1
+      },
+      {
+        "word": "truth",
+        "count": 1
+      },
+      {
+        "word": "steadfast",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "104",
+    "surahName": "The Backbiter",
+    "num_verses": 9,
+    "total_words": 51,
+    "unique_words": 43,
+    "type_token_ratio": 0.8431,
+    "avg_word_length": 4.47,
+    "avg_verse_length": 5.67,
+    "max_verse_length": 8,
+    "min_verse_length": 3,
+    "hapax_legomena": 36,
+    "hapax_ratio": 0.7059,
+    "top_content_words": [
+      {
+        "word": "money",
+        "count": 2
+      },
+      {
+        "word": "devastator",
+        "count": 2
+      },
+      {
+        "word": "woe",
+        "count": 1
+      },
+      {
+        "word": "every",
+        "count": 1
+      },
+      {
+        "word": "backbiter",
+        "count": 1
+      },
+      {
+        "word": "slanderer",
+        "count": 1
+      },
+      {
+        "word": "hoards",
+        "count": 1
+      },
+      {
+        "word": "counts",
+        "count": 1
+      },
+      {
+        "word": "make",
+        "count": 1
+      },
+      {
+        "word": "him",
+        "count": 1
+      },
+      {
+        "word": "immortal",
+        "count": 1
+      },
+      {
+        "word": "never",
+        "count": 1
+      },
+      {
+        "word": "thrown",
+        "count": 1
+      },
+      {
+        "word": "know",
+        "count": 1
+      },
+      {
+        "word": "god",
+        "count": 1
+      },
+      {
+        "word": "blazing",
+        "count": 1
+      },
+      {
+        "word": "hellfire",
+        "count": 1
+      },
+      {
+        "word": "burns",
+        "count": 1
+      },
+      {
+        "word": "inside",
+        "count": 1
+      },
+      {
+        "word": "out",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "105",
+    "surahName": "The Elephant",
+    "num_verses": 5,
+    "total_words": 41,
+    "unique_words": 33,
+    "type_token_ratio": 0.8049,
+    "avg_word_length": 4.1,
+    "avg_verse_length": 8.2,
+    "max_verse_length": 13,
+    "min_verse_length": 6,
+    "hapax_legomena": 27,
+    "hapax_ratio": 0.6585,
+    "top_content_words": [
+      {
+        "word": "noted",
+        "count": 1
+      },
+      {
+        "word": "lord",
+        "count": 1
+      },
+      {
+        "word": "people",
+        "count": 1
+      },
+      {
+        "word": "elephant",
+        "count": 1
+      },
+      {
+        "word": "cause",
+        "count": 1
+      },
+      {
+        "word": "schemes",
+        "count": 1
+      },
+      {
+        "word": "backfire",
+        "count": 1
+      },
+      {
+        "word": "sent",
+        "count": 1
+      },
+      {
+        "word": "swarms",
+        "count": 1
+      },
+      {
+        "word": "birds",
+        "count": 1
+      },
+      {
+        "word": "showered",
+        "count": 1
+      },
+      {
+        "word": "hard",
+        "count": 1
+      },
+      {
+        "word": "stones",
+        "count": 1
+      },
+      {
+        "word": "made",
+        "count": 1
+      },
+      {
+        "word": "like",
+        "count": 1
+      },
+      {
+        "word": "chewed",
+        "count": 1
+      },
+      {
+        "word": "hay",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "106",
+    "surahName": "Quraish Tribe",
+    "num_verses": 4,
+    "total_words": 43,
+    "unique_words": 32,
+    "type_token_ratio": 0.7442,
+    "avg_word_length": 4.33,
+    "avg_verse_length": 10.75,
+    "max_verse_length": 17,
+    "min_verse_length": 6,
+    "hapax_legomena": 25,
+    "hapax_ratio": 0.5814,
+    "top_content_words": [
+      {
+        "word": "after",
+        "count": 2
+      },
+      {
+        "word": "should",
+        "count": 1
+      },
+      {
+        "word": "cherished",
+        "count": 1
+      },
+      {
+        "word": "quraish",
+        "count": 1
+      },
+      {
+        "word": "way",
+        "count": 1
+      },
+      {
+        "word": "cherish",
+        "count": 1
+      },
+      {
+        "word": "caravans",
+        "count": 1
+      },
+      {
+        "word": "winter",
+        "count": 1
+      },
+      {
+        "word": "summer",
+        "count": 1
+      },
+      {
+        "word": "worship",
+        "count": 1
+      },
+      {
+        "word": "lord",
+        "count": 1
+      },
+      {
+        "word": "shrine",
+        "count": 1
+      },
+      {
+        "word": "one",
+        "count": 1
+      },
+      {
+        "word": "fed",
+        "count": 1
+      },
+      {
+        "word": "hunger",
+        "count": 1
+      },
+      {
+        "word": "provided",
+        "count": 1
+      },
+      {
+        "word": "security",
+        "count": 1
+      },
+      {
+        "word": "fear",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "107",
+    "surahName": "Charity",
+    "num_verses": 7,
+    "total_words": 50,
+    "unique_words": 37,
+    "type_token_ratio": 0.74,
+    "avg_word_length": 4.38,
+    "avg_verse_length": 7.14,
+    "max_verse_length": 10,
+    "min_verse_length": 4,
+    "hapax_legomena": 31,
+    "hapax_ratio": 0.62,
+    "top_content_words": [
+      {
+        "word": "prayers",
+        "count": 2
+      },
+      {
+        "word": "know",
+        "count": 1
+      },
+      {
+        "word": "really",
+        "count": 1
+      },
+      {
+        "word": "rejects",
+        "count": 1
+      },
+      {
+        "word": "faith",
+        "count": 1
+      },
+      {
+        "word": "one",
+        "count": 1
+      },
+      {
+        "word": "mistreats",
+        "count": 1
+      },
+      {
+        "word": "orphans",
+        "count": 1
+      },
+      {
+        "word": "does",
+        "count": 1
+      },
+      {
+        "word": "advocate",
+        "count": 1
+      },
+      {
+        "word": "feeding",
+        "count": 1
+      },
+      {
+        "word": "poor",
+        "count": 1
+      },
+      {
+        "word": "woe",
+        "count": 1
+      },
+      {
+        "word": "observe",
+        "count": 1
+      },
+      {
+        "word": "contact",
+        "count": 1
+      },
+      {
+        "word": "salat",
+        "count": 1
+      },
+      {
+        "word": "totally",
+        "count": 1
+      },
+      {
+        "word": "heedless",
+        "count": 1
+      },
+      {
+        "word": "only",
+        "count": 1
+      },
+      {
+        "word": "show",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "108",
+    "surahName": "Bounty",
+    "num_verses": 3,
+    "total_words": 26,
+    "unique_words": 23,
+    "type_token_ratio": 0.8846,
+    "avg_word_length": 4.19,
+    "avg_verse_length": 8.67,
+    "max_verse_length": 12,
+    "min_verse_length": 6,
+    "hapax_legomena": 20,
+    "hapax_ratio": 0.7692,
+    "top_content_words": [
+      {
+        "word": "blessed",
+        "count": 1
+      },
+      {
+        "word": "many",
+        "count": 1
+      },
+      {
+        "word": "bounty",
+        "count": 1
+      },
+      {
+        "word": "therefore",
+        "count": 1
+      },
+      {
+        "word": "pray",
+        "count": 1
+      },
+      {
+        "word": "lord",
+        "count": 1
+      },
+      {
+        "word": "salat",
+        "count": 1
+      },
+      {
+        "word": "give",
+        "count": 1
+      },
+      {
+        "word": "charity",
+        "count": 1
+      },
+      {
+        "word": "opponent",
+        "count": 1
+      },
+      {
+        "word": "loser",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "109",
+    "surahName": "The Disbelievers",
+    "num_verses": 6,
+    "total_words": 45,
+    "unique_words": 19,
+    "type_token_ratio": 0.4222,
+    "avg_word_length": 3.93,
+    "avg_verse_length": 7.5,
+    "max_verse_length": 11,
+    "min_verse_length": 4,
+    "hapax_legomena": 8,
+    "hapax_ratio": 0.1778,
+    "top_content_words": [
+      {
+        "word": "worship",
+        "count": 8
+      },
+      {
+        "word": "ever",
+        "count": 2
+      },
+      {
+        "word": "religion",
+        "count": 2
+      },
+      {
+        "word": "say",
+        "count": 1
+      },
+      {
+        "word": "disbelievers",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "110",
+    "surahName": "Triumph",
+    "num_verses": 3,
+    "total_words": 34,
+    "unique_words": 29,
+    "type_token_ratio": 0.8529,
+    "avg_word_length": 4.59,
+    "avg_verse_length": 11.33,
+    "max_verse_length": 16,
+    "min_verse_length": 7,
+    "hapax_legomena": 25,
+    "hapax_ratio": 0.7353,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 2
+      },
+      {
+        "word": "triumph",
+        "count": 1
+      },
+      {
+        "word": "comes",
+        "count": 1
+      },
+      {
+        "word": "victory",
+        "count": 1
+      },
+      {
+        "word": "see",
+        "count": 1
+      },
+      {
+        "word": "people",
+        "count": 1
+      },
+      {
+        "word": "embracing",
+        "count": 1
+      },
+      {
+        "word": "religion",
+        "count": 1
+      },
+      {
+        "word": "throngs",
+        "count": 1
+      },
+      {
+        "word": "glorify",
+        "count": 1
+      },
+      {
+        "word": "praise",
+        "count": 1
+      },
+      {
+        "word": "lord",
+        "count": 1
+      },
+      {
+        "word": "implore",
+        "count": 1
+      },
+      {
+        "word": "him",
+        "count": 1
+      },
+      {
+        "word": "forgiveness",
+        "count": 1
+      },
+      {
+        "word": "redeemer",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "111",
+    "surahName": "Thorns",
+    "num_verses": 5,
+    "total_words": 47,
+    "unique_words": 37,
+    "type_token_ratio": 0.7872,
+    "avg_word_length": 4.4,
+    "avg_verse_length": 9.4,
+    "max_verse_length": 12,
+    "min_verse_length": 6,
+    "hapax_legomena": 29,
+    "hapax_ratio": 0.617,
+    "top_content_words": [
+      {
+        "word": "condemned",
+        "count": 2
+      },
+      {
+        "word": "works",
+        "count": 1
+      },
+      {
+        "word": "abee",
+        "count": 1
+      },
+      {
+        "word": "lahab",
+        "count": 1
+      },
+      {
+        "word": "money",
+        "count": 1
+      },
+      {
+        "word": "whatever",
+        "count": 1
+      },
+      {
+        "word": "accomplished",
+        "count": 1
+      },
+      {
+        "word": "never",
+        "count": 1
+      },
+      {
+        "word": "help",
+        "count": 1
+      },
+      {
+        "word": "him",
+        "count": 1
+      },
+      {
+        "word": "incurred",
+        "count": 1
+      },
+      {
+        "word": "blazing",
+        "count": 1
+      },
+      {
+        "word": "hell",
+        "count": 1
+      },
+      {
+        "word": "also",
+        "count": 1
+      },
+      {
+        "word": "wife",
+        "count": 1
+      },
+      {
+        "word": "led",
+        "count": 1
+      },
+      {
+        "word": "persecution",
+        "count": 1
+      },
+      {
+        "word": "resurrected",
+        "count": 1
+      },
+      {
+        "word": "rope",
+        "count": 1
+      },
+      {
+        "word": "thorns",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "112",
+    "surahName": "Absoluteness",
+    "num_verses": 4,
+    "total_words": 22,
+    "unique_words": 18,
+    "type_token_ratio": 0.8182,
+    "avg_word_length": 3.91,
+    "avg_verse_length": 5.5,
+    "max_verse_length": 8,
+    "min_verse_length": 3,
+    "hapax_legomena": 15,
+    "hapax_ratio": 0.6818,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 2
+      },
+      {
+        "word": "proclaim",
+        "count": 1
+      },
+      {
+        "word": "one",
+        "count": 1
+      },
+      {
+        "word": "only",
+        "count": 1
+      },
+      {
+        "word": "absolute",
+        "count": 1
+      },
+      {
+        "word": "never",
+        "count": 1
+      },
+      {
+        "word": "beget",
+        "count": 1
+      },
+      {
+        "word": "begotten",
+        "count": 1
+      },
+      {
+        "word": "none",
+        "count": 1
+      },
+      {
+        "word": "equals",
+        "count": 1
+      },
+      {
+        "word": "him",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "113",
+    "surahName": "Daybreak",
+    "num_verses": 5,
+    "total_words": 38,
+    "unique_words": 23,
+    "type_token_ratio": 0.6053,
+    "avg_word_length": 4.18,
+    "avg_verse_length": 7.6,
+    "max_verse_length": 9,
+    "min_verse_length": 6,
+    "hapax_legomena": 19,
+    "hapax_ratio": 0.5,
+    "top_content_words": [
+      {
+        "word": "evils",
+        "count": 4
+      },
+      {
+        "word": "say",
+        "count": 1
+      },
+      {
+        "word": "seek",
+        "count": 1
+      },
+      {
+        "word": "refuge",
+        "count": 1
+      },
+      {
+        "word": "lord",
+        "count": 1
+      },
+      {
+        "word": "daybreak",
+        "count": 1
+      },
+      {
+        "word": "among",
+        "count": 1
+      },
+      {
+        "word": "creations",
+        "count": 1
+      },
+      {
+        "word": "darkness",
+        "count": 1
+      },
+      {
+        "word": "falls",
+        "count": 1
+      },
+      {
+        "word": "troublemakers",
+        "count": 1
+      },
+      {
+        "word": "envious",
+        "count": 1
+      },
+      {
+        "word": "envy",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "surah": "114",
+    "surahName": "People",
+    "num_verses": 6,
+    "total_words": 21853,
+    "unique_words": 2672,
+    "type_token_ratio": 0.1223,
+    "avg_word_length": 4.45,
+    "avg_verse_length": 3642.17,
+    "max_verse_length": 21819,
+    "min_verse_length": 5,
+    "hapax_legomena": 1311,
+    "hapax_ratio": 0.06,
+    "top_content_words": [
+      {
+        "word": "god",
+        "count": 318
+      },
+      {
+        "word": "sura",
+        "count": 297
+      },
+      {
+        "word": "number",
+        "count": 282
+      },
+      {
+        "word": "quran",
+        "count": 234
+      },
+      {
+        "word": "verses",
+        "count": 172
+      },
+      {
+        "word": "verse",
+        "count": 160
+      },
+      {
+        "word": "total",
+        "count": 130
+      },
+      {
+        "word": "numbers",
+        "count": 124
+      },
+      {
+        "word": "suras",
+        "count": 116
+      },
+      {
+        "word": "table",
+        "count": 92
+      },
+      {
+        "word": "word",
+        "count": 89
+      },
+      {
+        "word": "all",
+        "count": 87
+      },
+      {
+        "word": "one",
+        "count": 86
+      },
+      {
+        "word": "first",
+        "count": 81
+      },
+      {
+        "word": "messenger",
+        "count": 71
+      },
+      {
+        "word": "every",
+        "count": 69
+      },
+      {
+        "word": "value",
+        "count": 68
+      },
+      {
+        "word": "initials",
+        "count": 65
+      },
+      {
+        "word": "followed",
+        "count": 60
+      },
+      {
+        "word": "multiple",
+        "count": 58
+      }
+    ]
+  }
+]

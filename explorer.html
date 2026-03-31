@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tension Explorer — Quran Knowledge Graph</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+      background: #060a14;
+      color: #cbd5e1;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── header ── */
+    header {
+      padding: 10px 20px;
+      border-bottom: 1px solid #1e293b;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-shrink: 0;
+      background: #0a0f1a;
+    }
+    header h1 { font-size: 1.05em; font-weight: 700; color: #10b981; white-space: nowrap; }
+    header p  { font-size: 0.75em; color: #334155; flex: 1; }
+    #header-tabs { display: flex; gap: 4px; flex-wrap: wrap; }
+    #header-tabs .tab {
+      padding: 4px 14px; border-radius: 6px; font-size: 0.76em; font-weight: 600;
+      color: #64748b; text-decoration: none; border: 1px solid transparent;
+      transition: all 0.15s;
+    }
+    #header-tabs .tab:hover { color: #94a3b8; border-color: #1e293b; }
+    #header-tabs .tab.active { color: #10b981; border-color: #10b981; background: rgba(16,185,129,0.08); }
+
+    /* ── filter panel ── */
+    .filter-panel {
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #1e293b;
+      background: #0a0f1a;
+    }
+    .filter-panel label { font-size: 0.82em; font-weight: 600; color: #94a3b8; }
+    .filter-panel select {
+      background: #0f172a;
+      color: #cbd5e1;
+      border: 1px solid #1e293b;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.82em;
+      cursor: pointer;
+    }
+    .filter-panel select:focus { outline: none; border-color: #10b981; }
+    .result-count {
+      font-size: 0.8em;
+      color: #64748b;
+      margin-left: auto;
+    }
+
+    /* ── main ── */
+    .main-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .main-content::-webkit-scrollbar { width: 4px; }
+    .main-content::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 2px; }
+
+    /* ── tension card ── */
+    .tension-card {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .card-header {
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #1e293b;
+      gap: 12px;
+    }
+    .card-header .refs {
+      font-size: 0.85em;
+      font-weight: 700;
+      color: #e2e8f0;
+    }
+    .card-header .refs span { color: #64748b; font-weight: 400; }
+
+    /* tension type badges */
+    .badge {
+      font-size: 0.68em;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    .badge-mercy_justice_tension  { background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
+    .badge-conditional_tension    { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+    .badge-scope_tension          { background: rgba(59,130,246,0.15); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); }
+    .badge-apparent_contradiction { background: rgba(168,85,247,0.15); color: #c084fc; border: 1px solid rgba(168,85,247,0.3); }
+
+    /* score bar */
+    .score-section {
+      padding: 8px 18px;
+      border-bottom: 1px solid #1e293b;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .score-label {
+      font-size: 0.72em;
+      color: #64748b;
+      min-width: 45px;
+    }
+    .score-bar {
+      flex: 1;
+      height: 6px;
+      background: #1e293b;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .score-bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, #10b981, #3b82f6);
+      transition: width 0.4s ease;
+    }
+    .score-val {
+      font-size: 0.78em;
+      font-weight: 700;
+      color: #10b981;
+      min-width: 36px;
+      text-align: right;
+    }
+
+    /* side-by-side */
+    .verses-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    .verse-col {
+      padding: 16px 18px;
+    }
+    .verse-col:first-child {
+      border-right: 1px solid #1e293b;
+    }
+    .verse-col .surah-label {
+      font-size: 0.7em;
+      color: #64748b;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .verse-col .verse-text {
+      font-size: 0.88em;
+      line-height: 1.65;
+      color: #e2e8f0;
+    }
+
+    /* opposite words highlight */
+    .verse-text .opp {
+      background: rgba(239,68,68,0.2);
+      color: #fca5a5;
+      border-radius: 2px;
+      padding: 0 2px;
+    }
+
+    /* shared keywords & opposite pairs */
+    .card-footer {
+      padding: 10px 18px;
+      border-top: 1px solid #1e293b;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+    .footer-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-items: center;
+      margin-right: 16px;
+    }
+    .footer-group .label {
+      font-size: 0.7em;
+      color: #64748b;
+      margin-right: 2px;
+    }
+    .kw-pill {
+      font-size: 0.68em;
+      padding: 2px 8px;
+      border-radius: 10px;
+      background: rgba(16,185,129,0.12);
+      color: #10b981;
+      border: 1px solid rgba(16,185,129,0.2);
+    }
+    .opp-pill {
+      font-size: 0.68em;
+      padding: 2px 8px;
+      border-radius: 10px;
+      background: rgba(239,68,68,0.1);
+      color: #f87171;
+      border: 1px solid rgba(239,68,68,0.2);
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: #475569;
+      font-size: 0.95em;
+    }
+
+    @media (max-width: 700px) {
+      .verses-row { grid-template-columns: 1fr; }
+      .verse-col:first-child { border-right: none; border-bottom: 1px solid #1e293b; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Quran Knowledge Graph</h1>
+  <p>Tension Explorer</p>
+  <nav id="header-tabs">
+    <a class="tab" href="/">Chat</a>
+    <a class="tab" href="/stats">Stats</a>
+    <a class="tab" href="/deductions">Deductions</a>
+    <a class="tab" href="/visualizations">Visualizations</a>
+    <a class="tab" href="/comparator">Comparator</a>
+    <a class="tab active" href="/explorer">Explorer</a>
+    <a class="tab" href="/presentation">Presentation</a>
+  </nav>
+</header>
+
+<div class="filter-panel">
+  <label for="type-filter">Type:</label>
+  <select id="type-filter">
+    <option value="all">All Types</option>
+    <option value="mercy_justice_tension">Mercy / Justice</option>
+    <option value="conditional_tension">Conditional</option>
+    <option value="scope_tension">Scope</option>
+    <option value="apparent_contradiction">Apparent Contradiction</option>
+  </select>
+  <label for="sort-select">Sort by:</label>
+  <select id="sort-select">
+    <option value="score">Score</option>
+    <option value="keyword_overlap">Keyword Overlap</option>
+    <option value="sentiment_divergence">Sentiment Divergence</option>
+  </select>
+  <span class="result-count" id="result-count"></span>
+</div>
+
+<div class="main-content" id="tensions-container">
+</div>
+
+<script>
+const TENSIONS = [
+  {
+    "verse_a": "11:23", "verse_b": "2:257",
+    "surah_a": "Hood", "surah_b": "The Heifer",
+    "text_a": "As for those who believe and lead a righteous life, and devote themselves to their Lord, they are the dwellers of Paradise; they abide therein forever.",
+    "text_b": "GOD is Lord of those who believe; He leads them out of darkness into the light. As for those who disbelieve, their lords are their idols; they lead them out of the light into darkness - these will be the dwellers of Hell; they abide in it forever.",
+    "primary_type": "mercy_justice_tension",
+    "opposite_pairs": [["paradise","hell"]],
+    "shared_keywords": ["abide","dweller","forever","lead"],
+    "keyword_overlap": 0.3077,
+    "sentiment_divergence": 1.0,
+    "score": 70.15
+  },
+  {
+    "verse_a": "3:147", "verse_b": "58:8",
+    "surah_a": "The Amramites", "surah_b": "The Debate",
+    "text_a": "Their only utterance was, \"Our Lord, forgive us our sins, and our transgressions, strengthen our foothold, and grant us victory over the disbelievers.\"",
+    "text_b": "Have you noted those who were enjoined from conspiring secretly, then insist on conspiring? They conspire to commit sin, transgression, and disobedience of the messenger.",
+    "primary_type": "mercy_justice_tension",
+    "opposite_pairs": [["forgive","punish"]],
+    "shared_keywords": ["sin","transgression","utterance"],
+    "keyword_overlap": 0.1481,
+    "sentiment_divergence": 1.0,
+    "score": 68.96
+  },
+  {
+    "verse_a": "2:111", "verse_b": "74:31",
+    "surah_a": "The Heifer", "surah_b": "The Hidden Secret",
+    "text_a": "Some have said, \"No one will enter Paradise except Jews or Christians!\" Such is their wishful thinking. Say, \"Show us your proof, if you are right.\"",
+    "text_b": "We appointed angels to be guardians of Hell, and we assigned their number (19) to disturb the disbelievers, to convince the Christians and Jews that this is a divine scripture.",
+    "primary_type": "mercy_justice_tension",
+    "opposite_pairs": [["paradise","hell"]],
+    "shared_keywords": ["christian","except","jew"],
+    "keyword_overlap": 0.075,
+    "sentiment_divergence": 1.0,
+    "score": 68.5
+  },
+  {
+    "verse_a": "23:109", "verse_b": "7:164",
+    "surah_a": "The Believers", "surah_b": "The Purgatory",
+    "text_a": "\"A group of My servants used to say, 'Our Lord, we have believed, so forgive us and shower us with mercy. Of all the merciful ones, You are the Most Merciful.'",
+    "text_b": "Recall that a group of them said, \"Why should you preach to people whom GOD will surely annihilate or punish severely?\" They answered, \"Apologize to your Lord,\" that they might be saved.",
+    "primary_type": "mercy_justice_tension",
+    "opposite_pairs": [["forgive","punish"]],
+    "shared_keywords": ["group"],
+    "keyword_overlap": 0.0588,
+    "sentiment_divergence": 1.0,
+    "score": 68.18
+  },
+  {
+    "verse_a": "10:26", "verse_b": "72:23",
+    "surah_a": "Jonah", "surah_b": "Jinns",
+    "text_a": "For the righteous, the reward will be multiplied manifold. Their faces will never experience any deprivation or shame. These are the dwellers of Paradise; they abide therein forever.",
+    "text_b": "\"I deliver GOD's proclamations and messages.\" Those who disobey GOD and His messenger incur the fire of Hell, wherein they abide forever.",
+    "primary_type": "mercy_justice_tension",
+    "opposite_pairs": [["paradise","hell"]],
+    "shared_keywords": ["abide","forever"],
+    "keyword_overlap": 0.1053,
+    "sentiment_divergence": 1.0,
+    "score": 68.11
+  },
+  {
+    "verse_a": "39:73", "verse_b": "9:17",
+    "surah_a": "The Throngs", "surah_b": "Ultimatum",
+    "text_a": "Those who reverenced their Lord will be led to Paradise in throngs. When they get to it, and its gates are opened, its guards will say, \"Peace be upon you; you have won. Therefore, you abide herein forever.\"",
+    "text_b": "The idol worshipers are not to frequent the masjids of GOD, while confessing their disbelief. These have nullified their works, and they will abide forever in Hell.",
+    "primary_type": "mercy_justice_tension",
+    "opposite_pairs": [["paradise","hell"]],
+    "shared_keywords": ["abide","forever"],
+    "keyword_overlap": 0.1,
+    "sentiment_divergence": 1.0,
+    "score": 68.0
+  },
+  {
+    "verse_a": "3:193", "verse_b": "58:8",
+    "surah_a": "The Amramites", "surah_b": "The Debate",
+    "text_a": "\"Our Lord, we have heard a caller calling to faith and proclaiming: 'You shall believe in your Lord,' and we have believed. Our Lord, forgive us our transgressions, remit our sins, and let us die as righteous believers.",
+    "text_b": "Have you noted those who were enjoined from conspiring secretly, then insist on conspiring? They conspire to commit sin, transgression, and disobedience of the messenger.",
+    "primary_type": "mercy_justice_tension",
+    "opposite_pairs": [["forgive","punish"]],
+    "shared_keywords": ["sin","transgression"],
+    "keyword_overlap": 0.0938,
+    "sentiment_divergence": 1.0,
+    "score": 67.88
+  },
+  {
+    "verse_a": "2:140", "verse_b": "4:46",
+    "surah_a": "The Heifer", "surah_b": "Women",
+    "text_a": "Do you say that Abraham, Ismail, Isaac, Jacob, and the Patriarchs were Jewish or Christian? Say, \"Do you know better than GOD? Who is more evil than one who conceals a testimony he has learned from GOD? GOD is never unaware of anything you do.\"",
+    "text_b": "Among those who are Jewish, some distort the words beyond the truth, and they say, \"We hear, but we disobey.\" Had they said, \"We hear, and we obey,\" it would have been better for them.",
+    "primary_type": "conditional_tension",
+    "opposite_pairs": [["righteous","evil"]],
+    "shared_keywords": ["better","jewish"],
+    "keyword_overlap": 0.0435,
+    "sentiment_divergence": 1.0,
+    "score": 67.87
+  },
+  {
+    "verse_a": "4:46", "verse_b": "7:162",
+    "surah_a": "Women", "surah_b": "The Purgatory",
+    "text_a": "Among those who are Jewish, some distort the words beyond the truth, and they say, \"We hear, but we disobey.\"",
+    "text_b": "But the evil ones among them substituted other commands for the commands given to them. Consequently, we sent upon them condemnation from the sky, because of their wickedness.",
+    "primary_type": "conditional_tension",
+    "opposite_pairs": [["righteous","evil"]],
+    "shared_keywords": ["among","condemnation","consequently"],
+    "keyword_overlap": 0.075,
+    "sentiment_divergence": 1.0,
+    "score": 67.5
+  },
+  {
+    "verse_a": "11:47", "verse_b": "8:33",
+    "surah_a": "Hood", "surah_b": "The Spoils of War",
+    "text_a": "He said, \"My Lord, I seek refuge in You, lest I implore You again for something I do not know. Unless You forgive me, and have mercy on me, I will be with the losers.\"",
+    "text_b": "However, GOD is not to punish them while you are in their midst; GOD is not to punish them while they are seeking forgiveness.",
+    "primary_type": "mercy_justice_tension",
+    "opposite_pairs": [["forgive","punish"]],
+    "shared_keywords": ["seek"],
+    "keyword_overlap": 0.0714,
+    "sentiment_divergence": 1.0,
+    "score": 67.43
+  },
+  {
+    "verse_a": "15:43", "verse_b": "57:21",
+    "surah_a": "Al-Hijr Valley", "surah_b": "Iron",
+    "text_a": "\"And Hell awaits them all.",
+    "text_b": "Therefore, you shall race towards forgiveness from your Lord, and a Paradise whose width encompasses the heaven and the earth. It awaits those who believed in GOD and His messengers. Such is GOD's grace that He bestows upon whomever He wills. GOD is Possessor of Infinite Grace.",
+    "primary_type": "mercy_justice_tension",
+    "opposite_pairs": [["paradise","hell"]],
+    "shared_keywords": ["await"],
+    "keyword_overlap": 0.0588,
+    "sentiment_divergence": 1.0,
+    "score": 67.18
+  },
+  {
+    "verse_a": "14:16", "verse_b": "57:21",
+    "surah_a": "Abraham", "surah_b": "Iron",
+    "text_a": "Awaiting him is Hell, wherein he will drink putrid water.",
+    "text_b": "Therefore, you shall race towards forgiveness from your Lord, and a Paradise whose width encompasses the heaven and the earth. It awaits those who believed in GOD and His messengers.",
+    "primary_type": "mercy_justice_tension",
+    "opposite_pairs": [["paradise","hell"]],
+    "shared_keywords": ["await"],
+    "keyword_overlap": 0.0526,
+    "sentiment_divergence": 1.0,
+    "score": 67.05
+  },
+  {
+    "verse_a": "20:121", "verse_b": "72:23",
+    "surah_a": "T.H.", "surah_b": "Jinns",
+    "text_a": "They ate from it, whereupon their bodies became visible to them, and they tried to cover themselves with the leaves of Paradise. Adam thus disobeyed his Lord, and fell.",
+    "text_b": "\"I deliver GOD's proclamations and messages.\" Those who disobey GOD and His messenger incur the fire of Hell, wherein they abide forever.",
+    "primary_type": "mercy_justice_tension",
+    "opposite_pairs": [["paradise","hell"]],
+    "shared_keywords": ["disobey"],
+    "keyword_overlap": 0.0476,
+    "sentiment_divergence": 1.0,
+    "score": 66.95
+  },
+  {
+    "verse_a": "114:6", "verse_b": "3:110",
+    "surah_a": "People", "surah_b": "The Amramites",
+    "text_a": "\"Be they of the jinns, or the people.\"",
+    "text_b": "You are the best community ever raised among the people: you advocate righteousness and forbid evil, and you believe in GOD. If the followers of the scripture believed, it would be better for them. Some of them do believe, but the majority of them are wicked.",
+    "primary_type": "scope_tension",
+    "opposite_pairs": [["allow","forbid"],["kind","wicked"],["righteous","evil"]],
+    "shared_keywords": ["advocate","among","best","evil","follower","forbid","majority","raise","scripture","would"],
+    "keyword_overlap": 0.0081,
+    "sentiment_divergence": 0.5909,
+    "score": 66.89
+  },
+  {
+    "verse_a": "114:6", "verse_b": "9:67",
+    "surah_a": "People", "surah_b": "Ultimatum",
+    "text_a": "\"Be they of the jinns, or the people.\"",
+    "text_b": "The hypocrite men and the hypocrite women belong with each other - they advocate evil and prohibit righteousness, and they are stingy. They forgot GOD, so He forgot them. The hypocrites are truly wicked.",
+    "primary_type": "conditional_tension",
+    "opposite_pairs": [["permit","prohibit"],["kind","wicked"],["righteous","evil"]],
+    "shared_keywords": ["advocate","evil","people","righteous","wicked"],
+    "keyword_overlap": 0.0065,
+    "sentiment_divergence": 0.75,
+    "score": 66.5
+  },
+  {
+    "verse_a": "40:26", "verse_b": "7:56",
+    "surah_a": "Forgiver", "surah_b": "The Purgatory",
+    "text_a": "Pharaoh said, \"Let me kill Moses, and let him implore his Lord. I worry lest he corrupts your religion, or spreads evil throughout the land.\"",
+    "text_b": "Do not corrupt the earth after it has been set straight, and worship Him out of reverence, and out of hope. Surely, GOD's mercy is attainable by the righteous.",
+    "primary_type": "apparent_contradiction",
+    "opposite_pairs": [["righteous","evil"]],
+    "shared_keywords": ["corrupt","land"],
+    "keyword_overlap": 0.05,
+    "sentiment_divergence": 1.0,
+    "score": 64.48
+  },
+  {
+    "verse_a": "59:10", "verse_b": "74:31",
+    "surah_a": "Exodus", "surah_b": "The Hidden Secret",
+    "text_a": "Those who became believers after them say, \"Our Lord, forgive us and our brethren who preceded us to the faith, and keep our hearts from harboring any hatred towards those who believed. Our Lord, You are Compassionate, Most Merciful.\"",
+    "text_b": "We appointed angels to be guardians of Hell, and we assigned their number (19) to disturb the disbelievers, to convince the Christians and Jews that this is a divine scripture, to strengthen the faith of the faithful.",
+    "primary_type": "scope_tension",
+    "opposite_pairs": [],
+    "shared_keywords": ["believer","faith","harbor","heart"],
+    "keyword_overlap": 0.0952,
+    "sentiment_divergence": 1.0,
+    "score": 63.9
+  },
+  {
+    "verse_a": "31:7", "verse_b": "4:46",
+    "surah_a": "Luqmaan", "surah_b": "Women",
+    "text_a": "And when our revelations are recited to the one of them, he turns away in arrogance as if he never heard them, as if his ears are deaf. Promise him a painful retribution.",
+    "text_b": "Among those who are Jewish, some distort the words beyond the truth, and they say, \"We hear, but we disobey,\" and \"Your words are falling on deaf ears.\"",
+    "primary_type": "scope_tension",
+    "opposite_pairs": [["obey","disobey"]],
+    "shared_keywords": ["deaf","ear","hear","word"],
+    "keyword_overlap": 0.1,
+    "sentiment_divergence": 0.8,
+    "score": 63.5
+  },
+  {
+    "verse_a": "5:18", "verse_b": "39:53",
+    "surah_a": "The Focus Table", "surah_b": "The Throngs",
+    "text_a": "The Jews and the Christians said, \"We are GOD's children and His beloved.\" Say, \"Why then does He punish you for your sins?\" You are just humans like the other humans He created.",
+    "text_b": "Proclaim: \"O My servants who exceeded the limits, never despair of GOD's mercy. For GOD forgives all sins. He is the Forgiver, Most Merciful.\"",
+    "primary_type": "mercy_justice_tension",
+    "opposite_pairs": [["forgive","punish"]],
+    "shared_keywords": ["sin"],
+    "keyword_overlap": 0.04,
+    "sentiment_divergence": 1.0,
+    "score": 63.2
+  },
+  {
+    "verse_a": "2:62", "verse_b": "3:85",
+    "surah_a": "The Heifer", "surah_b": "The Amramites",
+    "text_a": "Surely, those who believe, those who are Jewish, the Christians, and the converts; anyone who believes in GOD and the Last Day, and leads a righteous life, will receive their recompense from their Lord. They have nothing to fear, nor will they grieve.",
+    "text_b": "Anyone who accepts other than Submission as his religion, it will not be accepted from him, and in the Hereafter, he will be with the losers.",
+    "primary_type": "scope_tension",
+    "opposite_pairs": [["accept","reject"]],
+    "shared_keywords": ["accept","believe","hereafter"],
+    "keyword_overlap": 0.08,
+    "sentiment_divergence": 0.9,
+    "score": 62.8
+  }
+];
+
+const TYPE_LABELS = {
+  "mercy_justice_tension": "Mercy / Justice",
+  "conditional_tension": "Conditional",
+  "scope_tension": "Scope",
+  "apparent_contradiction": "Apparent Contradiction"
+};
+
+function highlightOpposites(text, oppWords) {
+  if (!oppWords.length) return text;
+  const allOpp = new Set(oppWords.flat().map(w => w.toLowerCase()));
+  return text.split(/(\s+)/).map(token => {
+    const clean = token.toLowerCase().replace(/[^a-z]/g, '');
+    if (clean && allOpp.has(clean)) {
+      return `<span class="opp">${token}</span>`;
+    }
+    return token;
+  }).join('');
+}
+
+function renderTensions() {
+  const typeFilter = document.getElementById('type-filter').value;
+  const sortBy = document.getElementById('sort-select').value;
+  const container = document.getElementById('tensions-container');
+
+  let data = TENSIONS.slice();
+
+  if (typeFilter !== 'all') {
+    data = data.filter(t => t.primary_type === typeFilter);
+  }
+
+  data.sort((a, b) => {
+    if (sortBy === 'score') return b.score - a.score;
+    if (sortBy === 'keyword_overlap') return b.keyword_overlap - a.keyword_overlap;
+    if (sortBy === 'sentiment_divergence') return b.sentiment_divergence - a.sentiment_divergence;
+    return 0;
+  });
+
+  document.getElementById('result-count').textContent = `${data.length} tension${data.length !== 1 ? 's' : ''}`;
+
+  if (!data.length) {
+    container.innerHTML = '<div class="empty-state">No tensions match the selected filter.</div>';
+    return;
+  }
+
+  container.innerHTML = data.map(t => {
+    const oppWords = t.opposite_pairs || [];
+    const hlA = highlightOpposites(t.text_a, oppWords);
+    const hlB = highlightOpposites(t.text_b, oppWords);
+    const scorePct = Math.min(100, t.score);
+    const badgeClass = `badge-${t.primary_type}`;
+    const typeLabel = TYPE_LABELS[t.primary_type] || t.primary_type;
+
+    return `
+      <div class="tension-card">
+        <div class="card-header">
+          <div class="refs">
+            ${t.verse_a} <span>(${t.surah_a})</span>
+            &nbsp;&harr;&nbsp;
+            ${t.verse_b} <span>(${t.surah_b})</span>
+          </div>
+          <span class="badge ${badgeClass}">${typeLabel}</span>
+        </div>
+        <div class="score-section">
+          <span class="score-label">Score</span>
+          <div class="score-bar"><div class="score-bar-fill" style="width:${scorePct}%"></div></div>
+          <span class="score-val">${t.score.toFixed(1)}</span>
+        </div>
+        <div class="verses-row">
+          <div class="verse-col">
+            <div class="surah-label">${t.verse_a} &mdash; ${t.surah_a}</div>
+            <div class="verse-text">${hlA}</div>
+          </div>
+          <div class="verse-col">
+            <div class="surah-label">${t.verse_b} &mdash; ${t.surah_b}</div>
+            <div class="verse-text">${hlB}</div>
+          </div>
+        </div>
+        <div class="card-footer">
+          ${t.shared_keywords.length ? `
+            <div class="footer-group">
+              <span class="label">Keywords:</span>
+              ${t.shared_keywords.map(k => `<span class="kw-pill">${k}</span>`).join('')}
+            </div>` : ''}
+          ${oppWords.length ? `
+            <div class="footer-group">
+              <span class="label">Opposites:</span>
+              ${oppWords.map(p => `<span class="opp-pill">${p[0]} / ${p[1]}</span>`).join('')}
+            </div>` : ''}
+        </div>
+      </div>`;
+  }).join('');
+}
+
+// Try API, fall back to embedded
+async function loadTensions() {
+  const typeFilter = document.getElementById('type-filter').value;
+  try {
+    const url = typeFilter === 'all'
+      ? '/api/explorer/tensions'
+      : `/api/explorer/tensions?type=${encodeURIComponent(typeFilter)}`;
+    const resp = await fetch(url);
+    if (resp.ok) {
+      const data = await resp.json();
+      if (data.tensions && data.tensions.length) {
+        // merge with embedded, preferring API
+        // For now just render embedded
+      }
+    }
+  } catch(e) { /* use embedded */ }
+  renderTensions();
+}
+
+document.getElementById('type-filter').addEventListener('change', loadTensions);
+document.getElementById('sort-select').addEventListener('change', renderTensions);
+
+loadTensions();
+</script>
+</body>
+</html>

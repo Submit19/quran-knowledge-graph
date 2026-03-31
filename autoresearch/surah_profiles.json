@@ -1,0 +1,8868 @@
+{
+  "1": {
+    "surah": 1,
+    "name": "The Key",
+    "num_verses": 7,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "worship_and_ritual"
+    ],
+    "theme_diversity": 5,
+    "narrative_complexity": 4,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment",
+        "worship_and_ritual"
+      ],
+      "conclusion": "divine_mercy_and_forgiveness"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 3,
+      "afterlife_and_judgment": 1,
+      "worship_and_ritual": 1,
+      "uncategorized": 1,
+      "divine_mercy_and_forgiveness": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 19,
+        "edge_count": 28
+      },
+      {
+        "surah": 26,
+        "edge_count": 20
+      },
+      {
+        "surah": 43,
+        "edge_count": 15
+      },
+      {
+        "surah": 2,
+        "edge_count": 14
+      },
+      {
+        "surah": 7,
+        "edge_count": 13
+      },
+      {
+        "surah": 37,
+        "edge_count": 12
+      },
+      {
+        "surah": 40,
+        "edge_count": 11
+      },
+      {
+        "surah": 3,
+        "edge_count": 11
+      },
+      {
+        "surah": 25,
+        "edge_count": 10
+      },
+      {
+        "surah": 56,
+        "edge_count": 10
+      }
+    ]
+  },
+  "2": {
+    "surah": 2,
+    "name": "The Heifer",
+    "num_verses": 286,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "worship_and_ritual"
+    ],
+    "theme_diversity": 13,
+    "narrative_complexity": 182,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "prophecy_and_revelation",
+        "worship_and_ritual"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 9,
+      "prophecy_and_revelation": 25,
+      "worship_and_ritual": 21,
+      "monotheism_and_gods_nature": 146,
+      "covenant_and_obedience": 12,
+      "moral_law_and_ethics": 19,
+      "social_law": 11,
+      "creation_and_cosmology": 9,
+      "afterlife_and_judgment": 16,
+      "divine_mercy_and_forgiveness": 5,
+      "knowledge_and_wisdom": 6,
+      "prophetic_narratives": 6,
+      "warfare_and_struggle": 1
+    },
+    "bridge_keywords": [
+      "disbelieve",
+      "earth",
+      "heaven",
+      "hide",
+      "scripture",
+      "send"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 3,
+        "edge_count": 469
+      },
+      {
+        "surah": 4,
+        "edge_count": 451
+      },
+      {
+        "surah": 5,
+        "edge_count": 331
+      },
+      {
+        "surah": 7,
+        "edge_count": 314
+      },
+      {
+        "surah": 6,
+        "edge_count": 292
+      },
+      {
+        "surah": 9,
+        "edge_count": 265
+      },
+      {
+        "surah": 26,
+        "edge_count": 226
+      },
+      {
+        "surah": 37,
+        "edge_count": 209
+      },
+      {
+        "surah": 16,
+        "edge_count": 207
+      },
+      {
+        "surah": 17,
+        "edge_count": 197
+      }
+    ]
+  },
+  "3": {
+    "surah": 3,
+    "name": "The Amramites",
+    "num_verses": 200,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 12,
+    "narrative_complexity": 135,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "prophecy_and_revelation",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 8,
+      "monotheism_and_gods_nature": 105,
+      "prophecy_and_revelation": 27,
+      "creation_and_cosmology": 5,
+      "afterlife_and_judgment": 23,
+      "warfare_and_struggle": 4,
+      "covenant_and_obedience": 9,
+      "moral_law_and_ethics": 9,
+      "prophetic_narratives": 4,
+      "worship_and_ritual": 2,
+      "social_law": 1,
+      "divine_mercy_and_forgiveness": 3
+    },
+    "bridge_keywords": [
+      "disbelieve",
+      "earth",
+      "give",
+      "heaven",
+      "hide",
+      "may",
+      "observe",
+      "scripture",
+      "send"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 469
+      },
+      {
+        "surah": 4,
+        "edge_count": 246
+      },
+      {
+        "surah": 5,
+        "edge_count": 201
+      },
+      {
+        "surah": 9,
+        "edge_count": 201
+      },
+      {
+        "surah": 6,
+        "edge_count": 192
+      },
+      {
+        "surah": 26,
+        "edge_count": 191
+      },
+      {
+        "surah": 7,
+        "edge_count": 189
+      },
+      {
+        "surah": 37,
+        "edge_count": 155
+      },
+      {
+        "surah": 8,
+        "edge_count": 154
+      },
+      {
+        "surah": 16,
+        "edge_count": 150
+      }
+    ]
+  },
+  "4": {
+    "surah": 4,
+    "name": "Women",
+    "num_verses": 176,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 12,
+    "narrative_complexity": 122,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "prophecy_and_revelation",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 89,
+      "moral_law_and_ethics": 12,
+      "social_law": 8,
+      "afterlife_and_judgment": 13,
+      "uncategorized": 7,
+      "creation_and_cosmology": 4,
+      "worship_and_ritual": 8,
+      "prophecy_and_revelation": 14,
+      "covenant_and_obedience": 11,
+      "warfare_and_struggle": 3,
+      "divine_mercy_and_forgiveness": 4,
+      "prophetic_narratives": 3
+    },
+    "bridge_keywords": [
+      "commit",
+      "concern",
+      "consult",
+      "die",
+      "give",
+      "go",
+      "may",
+      "observe",
+      "retribution",
+      "thing",
+      "woman"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 451
+      },
+      {
+        "surah": 3,
+        "edge_count": 246
+      },
+      {
+        "surah": 5,
+        "edge_count": 211
+      },
+      {
+        "surah": 9,
+        "edge_count": 211
+      },
+      {
+        "surah": 33,
+        "edge_count": 178
+      },
+      {
+        "surah": 6,
+        "edge_count": 176
+      },
+      {
+        "surah": 7,
+        "edge_count": 159
+      },
+      {
+        "surah": 26,
+        "edge_count": 158
+      },
+      {
+        "surah": 24,
+        "edge_count": 138
+      },
+      {
+        "surah": 17,
+        "edge_count": 130
+      }
+    ]
+  },
+  "5": {
+    "surah": 5,
+    "name": "The Feast",
+    "num_verses": 120,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "worship_and_ritual"
+    ],
+    "theme_diversity": 11,
+    "narrative_complexity": 78,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "worship_and_ritual",
+      "development": [
+        "monotheism_and_gods_nature",
+        "prophecy_and_revelation",
+        "covenant_and_obedience"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "worship_and_ritual": 10,
+      "monotheism_and_gods_nature": 63,
+      "social_law": 1,
+      "covenant_and_obedience": 9,
+      "prophecy_and_revelation": 18,
+      "creation_and_cosmology": 2,
+      "prophetic_narratives": 3,
+      "afterlife_and_judgment": 6,
+      "warfare_and_struggle": 2,
+      "moral_law_and_ethics": 4,
+      "uncategorized": 2
+    },
+    "bridge_keywords": [
+      "commit",
+      "concern",
+      "consult",
+      "die",
+      "earth",
+      "everything",
+      "go",
+      "heaven",
+      "know",
+      "life",
+      "make",
+      "retribution",
+      "secret",
+      "thing",
+      "woman"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 331
+      },
+      {
+        "surah": 4,
+        "edge_count": 211
+      },
+      {
+        "surah": 3,
+        "edge_count": 201
+      },
+      {
+        "surah": 7,
+        "edge_count": 152
+      },
+      {
+        "surah": 26,
+        "edge_count": 149
+      },
+      {
+        "surah": 9,
+        "edge_count": 141
+      },
+      {
+        "surah": 6,
+        "edge_count": 112
+      },
+      {
+        "surah": 22,
+        "edge_count": 81
+      },
+      {
+        "surah": 18,
+        "edge_count": 75
+      },
+      {
+        "surah": 16,
+        "edge_count": 69
+      }
+    ]
+  },
+  "6": {
+    "surah": 6,
+    "name": "Livestock",
+    "num_verses": 165,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "creation_and_cosmology"
+    ],
+    "theme_diversity": 13,
+    "narrative_complexity": 104,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "prophecy_and_revelation",
+        "uncategorized"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 83,
+      "moral_law_and_ethics": 9,
+      "creation_and_cosmology": 11,
+      "prophecy_and_revelation": 21,
+      "afterlife_and_judgment": 10,
+      "uncategorized": 11,
+      "warfare_and_struggle": 1,
+      "worship_and_ritual": 5,
+      "divine_mercy_and_forgiveness": 1,
+      "covenant_and_obedience": 8,
+      "prophetic_narratives": 3,
+      "knowledge_and_wisdom": 1,
+      "social_law": 1
+    },
+    "bridge_keywords": [
+      "earth",
+      "everything",
+      "heaven",
+      "idol",
+      "know",
+      "life",
+      "make",
+      "retribution",
+      "secret"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 292
+      },
+      {
+        "surah": 7,
+        "edge_count": 217
+      },
+      {
+        "surah": 3,
+        "edge_count": 192
+      },
+      {
+        "surah": 26,
+        "edge_count": 183
+      },
+      {
+        "surah": 4,
+        "edge_count": 176
+      },
+      {
+        "surah": 37,
+        "edge_count": 167
+      },
+      {
+        "surah": 10,
+        "edge_count": 132
+      },
+      {
+        "surah": 16,
+        "edge_count": 131
+      },
+      {
+        "surah": 20,
+        "edge_count": 115
+      },
+      {
+        "surah": 5,
+        "edge_count": 112
+      }
+    ]
+  },
+  "7": {
+    "surah": 7,
+    "name": "The Purgatory",
+    "num_verses": 206,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "uncategorized"
+    ],
+    "theme_diversity": 13,
+    "narrative_complexity": 161,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "afterlife_and_judgment",
+      "development": [
+        "monotheism_and_gods_nature",
+        "prophecy_and_revelation",
+        "uncategorized"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "prophecy_and_revelation": 31,
+      "covenant_and_obedience": 13,
+      "afterlife_and_judgment": 19,
+      "uncategorized": 24,
+      "monotheism_and_gods_nature": 65,
+      "creation_and_cosmology": 6,
+      "worship_and_ritual": 6,
+      "moral_law_and_ethics": 18,
+      "divine_mercy_and_forgiveness": 6,
+      "prophetic_narratives": 12,
+      "mathematical_miracle": 1,
+      "social_law": 2,
+      "warfare_and_struggle": 3
+    },
+    "bridge_keywords": [
+      "attain",
+      "idol",
+      "recite",
+      "retribution"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 359
+      },
+      {
+        "surah": 2,
+        "edge_count": 314
+      },
+      {
+        "surah": 20,
+        "edge_count": 234
+      },
+      {
+        "surah": 37,
+        "edge_count": 224
+      },
+      {
+        "surah": 6,
+        "edge_count": 217
+      },
+      {
+        "surah": 3,
+        "edge_count": 189
+      },
+      {
+        "surah": 23,
+        "edge_count": 181
+      },
+      {
+        "surah": 10,
+        "edge_count": 162
+      },
+      {
+        "surah": 4,
+        "edge_count": 159
+      },
+      {
+        "surah": 11,
+        "edge_count": 157
+      }
+    ]
+  },
+  "8": {
+    "surah": 8,
+    "name": "The Spoils of War",
+    "num_verses": 75,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "warfare_and_struggle",
+      "covenant_and_obedience"
+    ],
+    "theme_diversity": 10,
+    "narrative_complexity": 46,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "covenant_and_obedience",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 46,
+      "worship_and_ritual": 4,
+      "moral_law_and_ethics": 3,
+      "warfare_and_struggle": 6,
+      "creation_and_cosmology": 1,
+      "prophecy_and_revelation": 2,
+      "afterlife_and_judgment": 5,
+      "covenant_and_obedience": 6,
+      "uncategorized": 1,
+      "divine_mercy_and_forgiveness": 1
+    },
+    "bridge_keywords": [
+      "attain",
+      "disbelieve",
+      "earth",
+      "give",
+      "make",
+      "peace",
+      "recite",
+      "sign",
+      "treaty"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 166
+      },
+      {
+        "surah": 3,
+        "edge_count": 154
+      },
+      {
+        "surah": 4,
+        "edge_count": 108
+      },
+      {
+        "surah": 9,
+        "edge_count": 107
+      },
+      {
+        "surah": 26,
+        "edge_count": 89
+      },
+      {
+        "surah": 7,
+        "edge_count": 78
+      },
+      {
+        "surah": 5,
+        "edge_count": 65
+      },
+      {
+        "surah": 16,
+        "edge_count": 58
+      },
+      {
+        "surah": 33,
+        "edge_count": 58
+      },
+      {
+        "surah": 6,
+        "edge_count": 58
+      }
+    ]
+  },
+  "9": {
+    "surah": 9,
+    "name": "Ultimatum",
+    "num_verses": 127,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 10,
+    "narrative_complexity": 75,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "prophecy_and_revelation",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 80,
+      "afterlife_and_judgment": 9,
+      "worship_and_ritual": 6,
+      "covenant_and_obedience": 5,
+      "warfare_and_struggle": 6,
+      "prophecy_and_revelation": 10,
+      "moral_law_and_ethics": 4,
+      "uncategorized": 4,
+      "prophetic_narratives": 2,
+      "divine_mercy_and_forgiveness": 1
+    },
+    "bridge_keywords": [
+      "disbelieve",
+      "disbeliever",
+      "earth",
+      "give",
+      "heed",
+      "know",
+      "make",
+      "peace",
+      "revelation",
+      "righteous",
+      "sign",
+      "take",
+      "treaty",
+      "would",
+      "year"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 265
+      },
+      {
+        "surah": 4,
+        "edge_count": 211
+      },
+      {
+        "surah": 3,
+        "edge_count": 201
+      },
+      {
+        "surah": 5,
+        "edge_count": 141
+      },
+      {
+        "surah": 8,
+        "edge_count": 107
+      },
+      {
+        "surah": 7,
+        "edge_count": 104
+      },
+      {
+        "surah": 33,
+        "edge_count": 100
+      },
+      {
+        "surah": 6,
+        "edge_count": 89
+      },
+      {
+        "surah": 26,
+        "edge_count": 88
+      },
+      {
+        "surah": 37,
+        "edge_count": 76
+      }
+    ]
+  },
+  "10": {
+    "surah": 10,
+    "name": "Jonah",
+    "num_verses": 109,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 11,
+    "narrative_complexity": 78,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "covenant_and_obedience",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "prophecy_and_revelation": 11,
+      "monotheism_and_gods_nature": 48,
+      "afterlife_and_judgment": 11,
+      "creation_and_cosmology": 7,
+      "covenant_and_obedience": 10,
+      "moral_law_and_ethics": 8,
+      "worship_and_ritual": 2,
+      "knowledge_and_wisdom": 2,
+      "uncategorized": 3,
+      "divine_mercy_and_forgiveness": 1,
+      "prophetic_narratives": 6
+    },
+    "bridge_keywords": [
+      "bestow",
+      "bless",
+      "disbeliever",
+      "except",
+      "good",
+      "grace",
+      "heed",
+      "keep",
+      "know",
+      "proclaim",
+      "revelation",
+      "righteous",
+      "take",
+      "worship",
+      "would",
+      "year"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 7,
+        "edge_count": 162
+      },
+      {
+        "surah": 2,
+        "edge_count": 155
+      },
+      {
+        "surah": 26,
+        "edge_count": 150
+      },
+      {
+        "surah": 6,
+        "edge_count": 132
+      },
+      {
+        "surah": 37,
+        "edge_count": 128
+      },
+      {
+        "surah": 3,
+        "edge_count": 117
+      },
+      {
+        "surah": 20,
+        "edge_count": 112
+      },
+      {
+        "surah": 11,
+        "edge_count": 97
+      },
+      {
+        "surah": 16,
+        "edge_count": 91
+      },
+      {
+        "surah": 4,
+        "edge_count": 79
+      }
+    ]
+  },
+  "11": {
+    "surah": 11,
+    "name": "Hood",
+    "num_verses": 123,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "uncategorized"
+    ],
+    "theme_diversity": 12,
+    "narrative_complexity": 100,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment",
+        "uncategorized"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 47,
+      "divine_mercy_and_forgiveness": 6,
+      "uncategorized": 13,
+      "creation_and_cosmology": 4,
+      "afterlife_and_judgment": 19,
+      "prophecy_and_revelation": 11,
+      "covenant_and_obedience": 7,
+      "moral_law_and_ethics": 6,
+      "prophetic_narratives": 6,
+      "social_law": 2,
+      "knowledge_and_wisdom": 1,
+      "worship_and_ritual": 1
+    },
+    "bridge_keywords": [
+      "bestow",
+      "bless",
+      "except",
+      "good",
+      "grace",
+      "history",
+      "keep",
+      "narrate",
+      "proclaim",
+      "unaware",
+      "worship"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 210
+      },
+      {
+        "surah": 7,
+        "edge_count": 157
+      },
+      {
+        "surah": 2,
+        "edge_count": 153
+      },
+      {
+        "surah": 37,
+        "edge_count": 136
+      },
+      {
+        "surah": 6,
+        "edge_count": 109
+      },
+      {
+        "surah": 20,
+        "edge_count": 101
+      },
+      {
+        "surah": 10,
+        "edge_count": 97
+      },
+      {
+        "surah": 3,
+        "edge_count": 95
+      },
+      {
+        "surah": 18,
+        "edge_count": 87
+      },
+      {
+        "surah": 15,
+        "edge_count": 83
+      }
+    ]
+  },
+  "12": {
+    "surah": 12,
+    "name": "Joseph",
+    "num_verses": 111,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "uncategorized",
+      "prophecy_and_revelation"
+    ],
+    "theme_diversity": 10,
+    "narrative_complexity": 69,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "prophecy_and_revelation",
+      "development": [
+        "monotheism_and_gods_nature",
+        "uncategorized",
+        "prophetic_narratives"
+      ],
+      "conclusion": "prophecy_and_revelation"
+    },
+    "category_distribution": {
+      "prophecy_and_revelation": 11,
+      "creation_and_cosmology": 2,
+      "social_law": 7,
+      "monotheism_and_gods_nature": 52,
+      "prophetic_narratives": 9,
+      "moral_law_and_ethics": 7,
+      "uncategorized": 16,
+      "knowledge_and_wisdom": 2,
+      "afterlife_and_judgment": 2,
+      "covenant_and_obedience": 3
+    },
+    "bridge_keywords": [
+      "earth",
+      "history",
+      "narrate",
+      "proof",
+      "scripture",
+      "see",
+      "think",
+      "unaware",
+      "understand"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 169
+      },
+      {
+        "surah": 2,
+        "edge_count": 145
+      },
+      {
+        "surah": 7,
+        "edge_count": 119
+      },
+      {
+        "surah": 37,
+        "edge_count": 118
+      },
+      {
+        "surah": 3,
+        "edge_count": 99
+      },
+      {
+        "surah": 4,
+        "edge_count": 84
+      },
+      {
+        "surah": 6,
+        "edge_count": 82
+      },
+      {
+        "surah": 20,
+        "edge_count": 77
+      },
+      {
+        "surah": 19,
+        "edge_count": 72
+      },
+      {
+        "surah": 21,
+        "edge_count": 70
+      }
+    ]
+  },
+  "13": {
+    "surah": 13,
+    "name": "Thunder",
+    "num_verses": 43,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "creation_and_cosmology",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 8,
+    "narrative_complexity": 30,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "creation_and_cosmology",
+      "development": [
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment",
+        "creation_and_cosmology"
+      ],
+      "conclusion": "prophecy_and_revelation"
+    },
+    "category_distribution": {
+      "prophecy_and_revelation": 4,
+      "monotheism_and_gods_nature": 22,
+      "creation_and_cosmology": 6,
+      "afterlife_and_judgment": 5,
+      "covenant_and_obedience": 2,
+      "worship_and_ritual": 1,
+      "moral_law_and_ethics": 2,
+      "uncategorized": 1
+    },
+    "bridge_keywords": [
+      "disbeliever",
+      "earth",
+      "every",
+      "life",
+      "messenger",
+      "possess",
+      "proof",
+      "scripture",
+      "see",
+      "think",
+      "understand"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 78
+      },
+      {
+        "surah": 3,
+        "edge_count": 51
+      },
+      {
+        "surah": 6,
+        "edge_count": 46
+      },
+      {
+        "surah": 16,
+        "edge_count": 41
+      },
+      {
+        "surah": 5,
+        "edge_count": 41
+      },
+      {
+        "surah": 26,
+        "edge_count": 39
+      },
+      {
+        "surah": 9,
+        "edge_count": 37
+      },
+      {
+        "surah": 7,
+        "edge_count": 35
+      },
+      {
+        "surah": 20,
+        "edge_count": 35
+      },
+      {
+        "surah": 4,
+        "edge_count": 35
+      }
+    ]
+  },
+  "14": {
+    "surah": 14,
+    "name": "Abraham",
+    "num_verses": 52,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "creation_and_cosmology"
+    ],
+    "theme_diversity": 8,
+    "narrative_complexity": 30,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment",
+        "creation_and_cosmology"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 30,
+      "creation_and_cosmology": 4,
+      "divine_mercy_and_forgiveness": 1,
+      "worship_and_ritual": 4,
+      "afterlife_and_judgment": 7,
+      "covenant_and_obedience": 1,
+      "moral_law_and_ethics": 2,
+      "uncategorized": 3
+    },
+    "bridge_keywords": [
+      "disbeliever",
+      "earth",
+      "every",
+      "let",
+      "life",
+      "messenger",
+      "possess",
+      "scripture"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 104
+      },
+      {
+        "surah": 26,
+        "edge_count": 61
+      },
+      {
+        "surah": 7,
+        "edge_count": 61
+      },
+      {
+        "surah": 16,
+        "edge_count": 55
+      },
+      {
+        "surah": 6,
+        "edge_count": 54
+      },
+      {
+        "surah": 37,
+        "edge_count": 54
+      },
+      {
+        "surah": 4,
+        "edge_count": 52
+      },
+      {
+        "surah": 3,
+        "edge_count": 49
+      },
+      {
+        "surah": 18,
+        "edge_count": 43
+      },
+      {
+        "surah": 21,
+        "edge_count": 41
+      }
+    ]
+  },
+  "15": {
+    "surah": 15,
+    "name": "Al-Hijr Valley",
+    "num_verses": 99,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "monotheism_and_gods_nature"
+    ],
+    "theme_diversity": 10,
+    "narrative_complexity": 75,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "prophecy_and_revelation",
+      "development": [
+        "uncategorized",
+        "prophecy_and_revelation",
+        "creation_and_cosmology"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "prophecy_and_revelation": 16,
+      "covenant_and_obedience": 6,
+      "uncategorized": 39,
+      "creation_and_cosmology": 10,
+      "monotheism_and_gods_nature": 12,
+      "afterlife_and_judgment": 6,
+      "worship_and_ritual": 2,
+      "moral_law_and_ethics": 5,
+      "prophetic_narratives": 2,
+      "knowledge_and_wisdom": 1
+    },
+    "bridge_keywords": [
+      "beside",
+      "let",
+      "set"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 124
+      },
+      {
+        "surah": 7,
+        "edge_count": 116
+      },
+      {
+        "surah": 37,
+        "edge_count": 115
+      },
+      {
+        "surah": 2,
+        "edge_count": 107
+      },
+      {
+        "surah": 6,
+        "edge_count": 101
+      },
+      {
+        "surah": 3,
+        "edge_count": 84
+      },
+      {
+        "surah": 11,
+        "edge_count": 83
+      },
+      {
+        "surah": 20,
+        "edge_count": 74
+      },
+      {
+        "surah": 21,
+        "edge_count": 73
+      },
+      {
+        "surah": 27,
+        "edge_count": 71
+      }
+    ]
+  },
+  "16": {
+    "surah": 16,
+    "name": "The Bee",
+    "num_verses": 128,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "creation_and_cosmology",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 10,
+    "narrative_complexity": 78,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "creation_and_cosmology",
+      "development": [
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment",
+        "creation_and_cosmology"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 71,
+      "prophecy_and_revelation": 10,
+      "creation_and_cosmology": 14,
+      "uncategorized": 5,
+      "afterlife_and_judgment": 11,
+      "moral_law_and_ethics": 7,
+      "covenant_and_obedience": 7,
+      "worship_and_ritual": 1,
+      "warfare_and_struggle": 1,
+      "knowledge_and_wisdom": 1
+    },
+    "bridge_keywords": [
+      "beside",
+      "set"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 207
+      },
+      {
+        "surah": 3,
+        "edge_count": 150
+      },
+      {
+        "surah": 26,
+        "edge_count": 144
+      },
+      {
+        "surah": 37,
+        "edge_count": 135
+      },
+      {
+        "surah": 6,
+        "edge_count": 131
+      },
+      {
+        "surah": 7,
+        "edge_count": 128
+      },
+      {
+        "surah": 4,
+        "edge_count": 119
+      },
+      {
+        "surah": 20,
+        "edge_count": 94
+      },
+      {
+        "surah": 10,
+        "edge_count": 91
+      },
+      {
+        "surah": 23,
+        "edge_count": 86
+      }
+    ]
+  },
+  "17": {
+    "surah": 17,
+    "name": "The Children of Israel",
+    "num_verses": 111,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 11,
+    "narrative_complexity": 88,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "prophecy_and_revelation",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 42,
+      "prophetic_narratives": 2,
+      "prophecy_and_revelation": 19,
+      "social_law": 4,
+      "moral_law_and_ethics": 9,
+      "afterlife_and_judgment": 14,
+      "warfare_and_struggle": 1,
+      "uncategorized": 9,
+      "creation_and_cosmology": 6,
+      "covenant_and_obedience": 3,
+      "worship_and_ritual": 2
+    },
+    "bridge_keywords": [
+      "beget",
+      "knowledge",
+      "possess",
+      "praise",
+      "scripture",
+      "son",
+      "utter"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 197
+      },
+      {
+        "surah": 7,
+        "edge_count": 130
+      },
+      {
+        "surah": 4,
+        "edge_count": 130
+      },
+      {
+        "surah": 26,
+        "edge_count": 125
+      },
+      {
+        "surah": 37,
+        "edge_count": 104
+      },
+      {
+        "surah": 6,
+        "edge_count": 99
+      },
+      {
+        "surah": 18,
+        "edge_count": 86
+      },
+      {
+        "surah": 20,
+        "edge_count": 82
+      },
+      {
+        "surah": 3,
+        "edge_count": 79
+      },
+      {
+        "surah": 16,
+        "edge_count": 69
+      }
+    ]
+  },
+  "18": {
+    "surah": 18,
+    "name": "The Cave",
+    "num_verses": 110,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "uncategorized",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 12,
+    "narrative_complexity": 85,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "prophecy_and_revelation",
+      "development": [
+        "monotheism_and_gods_nature",
+        "uncategorized",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "afterlife_and_judgment"
+    },
+    "category_distribution": {
+      "prophecy_and_revelation": 8,
+      "moral_law_and_ethics": 10,
+      "uncategorized": 22,
+      "monotheism_and_gods_nature": 37,
+      "afterlife_and_judgment": 11,
+      "creation_and_cosmology": 8,
+      "divine_mercy_and_forgiveness": 2,
+      "mathematical_miracle": 2,
+      "warfare_and_struggle": 2,
+      "covenant_and_obedience": 2,
+      "prophetic_narratives": 3,
+      "knowledge_and_wisdom": 3
+    },
+    "bridge_keywords": [
+      "beget",
+      "knowledge",
+      "possess",
+      "praise",
+      "scripture",
+      "son",
+      "utter"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 37,
+        "edge_count": 161
+      },
+      {
+        "surah": 2,
+        "edge_count": 159
+      },
+      {
+        "surah": 26,
+        "edge_count": 115
+      },
+      {
+        "surah": 7,
+        "edge_count": 111
+      },
+      {
+        "surah": 4,
+        "edge_count": 109
+      },
+      {
+        "surah": 3,
+        "edge_count": 97
+      },
+      {
+        "surah": 6,
+        "edge_count": 87
+      },
+      {
+        "surah": 11,
+        "edge_count": 87
+      },
+      {
+        "surah": 17,
+        "edge_count": 86
+      },
+      {
+        "surah": 20,
+        "edge_count": 80
+      }
+    ]
+  },
+  "19": {
+    "surah": 19,
+    "name": "Mary",
+    "num_verses": 98,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "uncategorized",
+      "prophecy_and_revelation"
+    ],
+    "theme_diversity": 11,
+    "narrative_complexity": 71,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "uncategorized",
+        "prophecy_and_revelation"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 13,
+      "monotheism_and_gods_nature": 35,
+      "social_law": 4,
+      "moral_law_and_ethics": 7,
+      "prophecy_and_revelation": 10,
+      "afterlife_and_judgment": 9,
+      "creation_and_cosmology": 6,
+      "prophetic_narratives": 5,
+      "worship_and_ritual": 5,
+      "covenant_and_obedience": 3,
+      "divine_mercy_and_forgiveness": 1
+    },
+    "bridge_keywords": [
+      "gracious",
+      "quran"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 37,
+        "edge_count": 155
+      },
+      {
+        "surah": 2,
+        "edge_count": 134
+      },
+      {
+        "surah": 7,
+        "edge_count": 117
+      },
+      {
+        "surah": 3,
+        "edge_count": 114
+      },
+      {
+        "surah": 26,
+        "edge_count": 108
+      },
+      {
+        "surah": 4,
+        "edge_count": 107
+      },
+      {
+        "surah": 23,
+        "edge_count": 97
+      },
+      {
+        "surah": 20,
+        "edge_count": 96
+      },
+      {
+        "surah": 6,
+        "edge_count": 81
+      },
+      {
+        "surah": 43,
+        "edge_count": 79
+      }
+    ]
+  },
+  "20": {
+    "surah": 20,
+    "name": "T.H.",
+    "num_verses": 135,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "prophetic_narratives"
+    ],
+    "theme_diversity": 13,
+    "narrative_complexity": 112,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "monotheism_and_gods_nature",
+        "prophetic_narratives"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 36,
+      "prophecy_and_revelation": 17,
+      "creation_and_cosmology": 5,
+      "monotheism_and_gods_nature": 33,
+      "prophetic_narratives": 18,
+      "afterlife_and_judgment": 10,
+      "worship_and_ritual": 4,
+      "covenant_and_obedience": 2,
+      "knowledge_and_wisdom": 2,
+      "social_law": 1,
+      "divine_mercy_and_forgiveness": 2,
+      "warfare_and_struggle": 2,
+      "moral_law_and_ethics": 3
+    },
+    "bridge_keywords": [
+      "gracious",
+      "messenger",
+      "miracle",
+      "previous",
+      "quran",
+      "show",
+      "u",
+      "would"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 7,
+        "edge_count": 234
+      },
+      {
+        "surah": 26,
+        "edge_count": 230
+      },
+      {
+        "surah": 2,
+        "edge_count": 181
+      },
+      {
+        "surah": 37,
+        "edge_count": 133
+      },
+      {
+        "surah": 6,
+        "edge_count": 115
+      },
+      {
+        "surah": 10,
+        "edge_count": 112
+      },
+      {
+        "surah": 3,
+        "edge_count": 106
+      },
+      {
+        "surah": 28,
+        "edge_count": 105
+      },
+      {
+        "surah": 11,
+        "edge_count": 101
+      },
+      {
+        "surah": 23,
+        "edge_count": 99
+      }
+    ]
+  },
+  "21": {
+    "surah": 21,
+    "name": "The Prophets",
+    "num_verses": 112,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "prophecy_and_revelation"
+    ],
+    "theme_diversity": 13,
+    "narrative_complexity": 94,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "prophecy_and_revelation",
+      "development": [
+        "monotheism_and_gods_nature",
+        "uncategorized",
+        "creation_and_cosmology"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "worship_and_ritual": 2,
+      "monotheism_and_gods_nature": 25,
+      "creation_and_cosmology": 10,
+      "prophecy_and_revelation": 11,
+      "uncategorized": 26,
+      "divine_mercy_and_forgiveness": 3,
+      "moral_law_and_ethics": 6,
+      "afterlife_and_judgment": 11,
+      "covenant_and_obedience": 3,
+      "prophetic_narratives": 7,
+      "knowledge_and_wisdom": 4,
+      "social_law": 3,
+      "warfare_and_struggle": 1
+    },
+    "bridge_keywords": [
+      "give",
+      "messenger",
+      "miracle",
+      "previous",
+      "retribution",
+      "show",
+      "soon",
+      "turn",
+      "u",
+      "would"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 176
+      },
+      {
+        "surah": 37,
+        "edge_count": 163
+      },
+      {
+        "surah": 7,
+        "edge_count": 156
+      },
+      {
+        "surah": 26,
+        "edge_count": 121
+      },
+      {
+        "surah": 3,
+        "edge_count": 111
+      },
+      {
+        "surah": 6,
+        "edge_count": 110
+      },
+      {
+        "surah": 38,
+        "edge_count": 81
+      },
+      {
+        "surah": 23,
+        "edge_count": 80
+      },
+      {
+        "surah": 20,
+        "edge_count": 78
+      },
+      {
+        "surah": 10,
+        "edge_count": 77
+      }
+    ]
+  },
+  "22": {
+    "surah": 22,
+    "name": "Pilgrimage",
+    "num_verses": 78,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "worship_and_ritual",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 9,
+    "narrative_complexity": 48,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "worship_and_ritual",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 37,
+      "afterlife_and_judgment": 8,
+      "creation_and_cosmology": 5,
+      "prophecy_and_revelation": 6,
+      "uncategorized": 5,
+      "moral_law_and_ethics": 4,
+      "worship_and_ritual": 10,
+      "covenant_and_obedience": 2,
+      "prophetic_narratives": 1
+    },
+    "bridge_keywords": [
+      "charity",
+      "contact",
+      "give",
+      "obligatory",
+      "prayer",
+      "retribution",
+      "salat",
+      "soon",
+      "turn",
+      "zakat"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 176
+      },
+      {
+        "surah": 3,
+        "edge_count": 101
+      },
+      {
+        "surah": 26,
+        "edge_count": 96
+      },
+      {
+        "surah": 5,
+        "edge_count": 81
+      },
+      {
+        "surah": 4,
+        "edge_count": 79
+      },
+      {
+        "surah": 6,
+        "edge_count": 79
+      },
+      {
+        "surah": 11,
+        "edge_count": 71
+      },
+      {
+        "surah": 37,
+        "edge_count": 70
+      },
+      {
+        "surah": 7,
+        "edge_count": 66
+      },
+      {
+        "surah": 9,
+        "edge_count": 66
+      }
+    ]
+  },
+  "23": {
+    "surah": 23,
+    "name": "The Believers",
+    "num_verses": 118,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "uncategorized",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 10,
+    "narrative_complexity": 90,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "monotheism_and_gods_nature",
+        "uncategorized",
+        "creation_and_cosmology"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "uncategorized": 26,
+      "worship_and_ritual": 2,
+      "moral_law_and_ethics": 11,
+      "covenant_and_obedience": 3,
+      "afterlife_and_judgment": 12,
+      "creation_and_cosmology": 12,
+      "monotheism_and_gods_nature": 39,
+      "social_law": 2,
+      "prophecy_and_revelation": 9,
+      "divine_mercy_and_forgiveness": 2
+    },
+    "bridge_keywords": [
+      "charity",
+      "contact",
+      "give",
+      "merciful",
+      "obligatory",
+      "prayer",
+      "salat",
+      "zakat"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 7,
+        "edge_count": 181
+      },
+      {
+        "surah": 26,
+        "edge_count": 178
+      },
+      {
+        "surah": 37,
+        "edge_count": 150
+      },
+      {
+        "surah": 2,
+        "edge_count": 139
+      },
+      {
+        "surah": 3,
+        "edge_count": 104
+      },
+      {
+        "surah": 20,
+        "edge_count": 99
+      },
+      {
+        "surah": 4,
+        "edge_count": 99
+      },
+      {
+        "surah": 6,
+        "edge_count": 97
+      },
+      {
+        "surah": 19,
+        "edge_count": 97
+      },
+      {
+        "surah": 16,
+        "edge_count": 86
+      }
+    ]
+  },
+  "24": {
+    "surah": 24,
+    "name": "Light",
+    "num_verses": 64,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "moral_law_and_ethics"
+    ],
+    "theme_diversity": 9,
+    "narrative_complexity": 35,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment",
+        "worship_and_ritual"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "prophecy_and_revelation": 3,
+      "monotheism_and_gods_nature": 38,
+      "social_law": 2,
+      "moral_law_and_ethics": 4,
+      "afterlife_and_judgment": 6,
+      "divine_mercy_and_forgiveness": 1,
+      "covenant_and_obedience": 3,
+      "worship_and_ritual": 4,
+      "creation_and_cosmology": 3
+    },
+    "bridge_keywords": [
+      "belong",
+      "bless",
+      "code",
+      "earth",
+      "everything",
+      "heaven",
+      "merciful",
+      "possess",
+      "reveal"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 4,
+        "edge_count": 138
+      },
+      {
+        "surah": 2,
+        "edge_count": 125
+      },
+      {
+        "surah": 26,
+        "edge_count": 97
+      },
+      {
+        "surah": 3,
+        "edge_count": 73
+      },
+      {
+        "surah": 5,
+        "edge_count": 69
+      },
+      {
+        "surah": 9,
+        "edge_count": 68
+      },
+      {
+        "surah": 7,
+        "edge_count": 57
+      },
+      {
+        "surah": 6,
+        "edge_count": 57
+      },
+      {
+        "surah": 33,
+        "edge_count": 53
+      },
+      {
+        "surah": 12,
+        "edge_count": 46
+      }
+    ]
+  },
+  "25": {
+    "surah": 25,
+    "name": "The Statute Book",
+    "num_verses": 77,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 11,
+    "narrative_complexity": 58,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "prophecy_and_revelation",
+      "development": [
+        "monotheism_and_gods_nature",
+        "prophecy_and_revelation",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "prophecy_and_revelation": 15,
+      "creation_and_cosmology": 6,
+      "mathematical_miracle": 1,
+      "covenant_and_obedience": 3,
+      "afterlife_and_judgment": 11,
+      "monotheism_and_gods_nature": 24,
+      "social_law": 2,
+      "moral_law_and_ethics": 3,
+      "uncategorized": 10,
+      "prophetic_narratives": 1,
+      "divine_mercy_and_forgiveness": 1
+    },
+    "bridge_keywords": [
+      "belong",
+      "bless",
+      "code",
+      "earth",
+      "everything",
+      "heaven",
+      "possess",
+      "reveal"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 107
+      },
+      {
+        "surah": 2,
+        "edge_count": 84
+      },
+      {
+        "surah": 7,
+        "edge_count": 84
+      },
+      {
+        "surah": 37,
+        "edge_count": 80
+      },
+      {
+        "surah": 5,
+        "edge_count": 59
+      },
+      {
+        "surah": 3,
+        "edge_count": 58
+      },
+      {
+        "surah": 20,
+        "edge_count": 58
+      },
+      {
+        "surah": 17,
+        "edge_count": 57
+      },
+      {
+        "surah": 19,
+        "edge_count": 55
+      },
+      {
+        "surah": 16,
+        "edge_count": 53
+      }
+    ]
+  },
+  "26": {
+    "surah": 26,
+    "name": "The Poets",
+    "num_verses": 227,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "prophecy_and_revelation"
+    ],
+    "theme_diversity": 13,
+    "narrative_complexity": 174,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "uncategorized",
+        "monotheism_and_gods_nature",
+        "prophecy_and_revelation"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "uncategorized": 67,
+      "prophecy_and_revelation": 28,
+      "monotheism_and_gods_nature": 59,
+      "covenant_and_obedience": 9,
+      "creation_and_cosmology": 7,
+      "prophetic_narratives": 11,
+      "warfare_and_struggle": 2,
+      "social_law": 4,
+      "afterlife_and_judgment": 19,
+      "worship_and_ritual": 5,
+      "moral_law_and_ethics": 12,
+      "divine_mercy_and_forgiveness": 1,
+      "knowledge_and_wisdom": 3
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 7,
+        "edge_count": 359
+      },
+      {
+        "surah": 20,
+        "edge_count": 230
+      },
+      {
+        "surah": 2,
+        "edge_count": 226
+      },
+      {
+        "surah": 37,
+        "edge_count": 223
+      },
+      {
+        "surah": 11,
+        "edge_count": 210
+      },
+      {
+        "surah": 3,
+        "edge_count": 191
+      },
+      {
+        "surah": 6,
+        "edge_count": 183
+      },
+      {
+        "surah": 23,
+        "edge_count": 178
+      },
+      {
+        "surah": 12,
+        "edge_count": 169
+      },
+      {
+        "surah": 4,
+        "edge_count": 158
+      }
+    ]
+  },
+  "27": {
+    "surah": 27,
+    "name": "The Ant",
+    "num_verses": 93,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "uncategorized",
+      "prophecy_and_revelation"
+    ],
+    "theme_diversity": 14,
+    "narrative_complexity": 72,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "afterlife_and_judgment",
+      "development": [
+        "monotheism_and_gods_nature",
+        "uncategorized",
+        "prophecy_and_revelation"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "prophecy_and_revelation": 9,
+      "moral_law_and_ethics": 9,
+      "worship_and_ritual": 1,
+      "afterlife_and_judgment": 8,
+      "monotheism_and_gods_nature": 29,
+      "prophetic_narratives": 6,
+      "divine_mercy_and_forgiveness": 2,
+      "covenant_and_obedience": 4,
+      "creation_and_cosmology": 4,
+      "uncategorized": 14,
+      "social_law": 3,
+      "mathematical_miracle": 2,
+      "warfare_and_struggle": 1,
+      "knowledge_and_wisdom": 1
+    },
+    "bridge_keywords": [
+      "make",
+      "proof",
+      "recite"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 143
+      },
+      {
+        "surah": 26,
+        "edge_count": 139
+      },
+      {
+        "surah": 7,
+        "edge_count": 114
+      },
+      {
+        "surah": 37,
+        "edge_count": 111
+      },
+      {
+        "surah": 6,
+        "edge_count": 99
+      },
+      {
+        "surah": 4,
+        "edge_count": 79
+      },
+      {
+        "surah": 3,
+        "edge_count": 76
+      },
+      {
+        "surah": 15,
+        "edge_count": 71
+      },
+      {
+        "surah": 10,
+        "edge_count": 71
+      },
+      {
+        "surah": 21,
+        "edge_count": 70
+      }
+    ]
+  },
+  "28": {
+    "surah": 28,
+    "name": "History",
+    "num_verses": 88,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "prophecy_and_revelation"
+    ],
+    "theme_diversity": 9,
+    "narrative_complexity": 56,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "creation_and_cosmology",
+      "development": [
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment",
+        "prophecy_and_revelation"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 4,
+      "prophecy_and_revelation": 10,
+      "prophetic_narratives": 7,
+      "creation_and_cosmology": 6,
+      "monotheism_and_gods_nature": 41,
+      "moral_law_and_ethics": 6,
+      "knowledge_and_wisdom": 1,
+      "warfare_and_struggle": 2,
+      "afterlife_and_judgment": 11
+    },
+    "bridge_keywords": [
+      "commit",
+      "make",
+      "proof",
+      "recite",
+      "sin"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 132
+      },
+      {
+        "surah": 7,
+        "edge_count": 122
+      },
+      {
+        "surah": 2,
+        "edge_count": 113
+      },
+      {
+        "surah": 20,
+        "edge_count": 105
+      },
+      {
+        "surah": 37,
+        "edge_count": 104
+      },
+      {
+        "surah": 3,
+        "edge_count": 91
+      },
+      {
+        "surah": 4,
+        "edge_count": 72
+      },
+      {
+        "surah": 6,
+        "edge_count": 59
+      },
+      {
+        "surah": 10,
+        "edge_count": 58
+      },
+      {
+        "surah": 23,
+        "edge_count": 58
+      }
+    ]
+  },
+  "29": {
+    "surah": 29,
+    "name": "The Spider",
+    "num_verses": 69,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "covenant_and_obedience"
+    ],
+    "theme_diversity": 12,
+    "narrative_complexity": 49,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment",
+        "prophecy_and_revelation"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 4,
+      "covenant_and_obedience": 6,
+      "monotheism_and_gods_nature": 26,
+      "afterlife_and_judgment": 9,
+      "moral_law_and_ethics": 4,
+      "divine_mercy_and_forgiveness": 1,
+      "worship_and_ritual": 4,
+      "prophecy_and_revelation": 5,
+      "prophetic_narratives": 3,
+      "social_law": 2,
+      "creation_and_cosmology": 4,
+      "knowledge_and_wisdom": 1
+    },
+    "bridge_keywords": [
+      "commit",
+      "sin"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 125
+      },
+      {
+        "surah": 26,
+        "edge_count": 101
+      },
+      {
+        "surah": 37,
+        "edge_count": 93
+      },
+      {
+        "surah": 7,
+        "edge_count": 90
+      },
+      {
+        "surah": 3,
+        "edge_count": 89
+      },
+      {
+        "surah": 6,
+        "edge_count": 71
+      },
+      {
+        "surah": 11,
+        "edge_count": 66
+      },
+      {
+        "surah": 4,
+        "edge_count": 66
+      },
+      {
+        "surah": 16,
+        "edge_count": 62
+      },
+      {
+        "surah": 9,
+        "edge_count": 55
+      }
+    ]
+  },
+  "30": {
+    "surah": 30,
+    "name": "The Romans",
+    "num_verses": 60,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "uncategorized"
+    ],
+    "theme_diversity": 12,
+    "narrative_complexity": 39,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "creation_and_cosmology",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 6,
+      "warfare_and_struggle": 2,
+      "monotheism_and_gods_nature": 21,
+      "afterlife_and_judgment": 7,
+      "covenant_and_obedience": 3,
+      "moral_law_and_ethics": 4,
+      "creation_and_cosmology": 6,
+      "prophecy_and_revelation": 6,
+      "knowledge_and_wisdom": 1,
+      "worship_and_ritual": 2,
+      "divine_mercy_and_forgiveness": 1,
+      "social_law": 1
+    },
+    "bridge_keywords": [
+      "proof"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 96
+      },
+      {
+        "surah": 7,
+        "edge_count": 73
+      },
+      {
+        "surah": 6,
+        "edge_count": 67
+      },
+      {
+        "surah": 16,
+        "edge_count": 62
+      },
+      {
+        "surah": 3,
+        "edge_count": 58
+      },
+      {
+        "surah": 26,
+        "edge_count": 57
+      },
+      {
+        "surah": 4,
+        "edge_count": 52
+      },
+      {
+        "surah": 17,
+        "edge_count": 46
+      },
+      {
+        "surah": 10,
+        "edge_count": 46
+      },
+      {
+        "surah": 37,
+        "edge_count": 42
+      }
+    ]
+  },
+  "31": {
+    "surah": 31,
+    "name": "Luqmaan",
+    "num_verses": 34,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "creation_and_cosmology",
+      "moral_law_and_ethics"
+    ],
+    "theme_diversity": 8,
+    "narrative_complexity": 21,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "monotheism_and_gods_nature",
+        "creation_and_cosmology",
+        "worship_and_ritual"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 2,
+      "prophecy_and_revelation": 2,
+      "moral_law_and_ethics": 3,
+      "worship_and_ritual": 2,
+      "monotheism_and_gods_nature": 19,
+      "creation_and_cosmology": 4,
+      "covenant_and_obedience": 1,
+      "afterlife_and_judgment": 1
+    },
+    "bridge_keywords": [
+      "proof",
+      "revelation",
+      "truth"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 67
+      },
+      {
+        "surah": 4,
+        "edge_count": 41
+      },
+      {
+        "surah": 3,
+        "edge_count": 39
+      },
+      {
+        "surah": 6,
+        "edge_count": 37
+      },
+      {
+        "surah": 7,
+        "edge_count": 37
+      },
+      {
+        "surah": 22,
+        "edge_count": 36
+      },
+      {
+        "surah": 17,
+        "edge_count": 31
+      },
+      {
+        "surah": 16,
+        "edge_count": 30
+      },
+      {
+        "surah": 14,
+        "edge_count": 29
+      },
+      {
+        "surah": 26,
+        "edge_count": 28
+      }
+    ]
+  },
+  "32": {
+    "surah": 32,
+    "name": "Prostration",
+    "num_verses": 30,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "uncategorized"
+    ],
+    "theme_diversity": 8,
+    "narrative_complexity": 22,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment",
+        "creation_and_cosmology"
+      ],
+      "conclusion": "warfare_and_struggle"
+    },
+    "category_distribution": {
+      "uncategorized": 5,
+      "prophecy_and_revelation": 3,
+      "monotheism_and_gods_nature": 9,
+      "afterlife_and_judgment": 7,
+      "creation_and_cosmology": 3,
+      "worship_and_ritual": 1,
+      "moral_law_and_ethics": 1,
+      "warfare_and_struggle": 1
+    },
+    "bridge_keywords": [
+      "give",
+      "revelation",
+      "truth"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 51
+      },
+      {
+        "surah": 26,
+        "edge_count": 47
+      },
+      {
+        "surah": 37,
+        "edge_count": 37
+      },
+      {
+        "surah": 6,
+        "edge_count": 37
+      },
+      {
+        "surah": 7,
+        "edge_count": 35
+      },
+      {
+        "surah": 11,
+        "edge_count": 25
+      },
+      {
+        "surah": 16,
+        "edge_count": 25
+      },
+      {
+        "surah": 20,
+        "edge_count": 24
+      },
+      {
+        "surah": 3,
+        "edge_count": 23
+      },
+      {
+        "surah": 10,
+        "edge_count": 23
+      }
+    ]
+  },
+  "33": {
+    "surah": 33,
+    "name": "The Parties",
+    "num_verses": 73,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 10,
+    "narrative_complexity": 44,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "prophecy_and_revelation",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 43,
+      "prophetic_narratives": 1,
+      "afterlife_and_judgment": 5,
+      "uncategorized": 2,
+      "warfare_and_struggle": 4,
+      "prophecy_and_revelation": 8,
+      "worship_and_ritual": 2,
+      "social_law": 5,
+      "covenant_and_obedience": 2,
+      "creation_and_cosmology": 1
+    },
+    "bridge_keywords": [
+      "earth",
+      "forgive",
+      "give",
+      "heaven",
+      "merciful"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 4,
+        "edge_count": 178
+      },
+      {
+        "surah": 2,
+        "edge_count": 147
+      },
+      {
+        "surah": 9,
+        "edge_count": 100
+      },
+      {
+        "surah": 26,
+        "edge_count": 97
+      },
+      {
+        "surah": 3,
+        "edge_count": 90
+      },
+      {
+        "surah": 7,
+        "edge_count": 68
+      },
+      {
+        "surah": 5,
+        "edge_count": 60
+      },
+      {
+        "surah": 8,
+        "edge_count": 58
+      },
+      {
+        "surah": 20,
+        "edge_count": 56
+      },
+      {
+        "surah": 24,
+        "edge_count": 53
+      }
+    ]
+  },
+  "34": {
+    "surah": 34,
+    "name": "Sheba",
+    "num_verses": 54,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "creation_and_cosmology"
+    ],
+    "theme_diversity": 8,
+    "narrative_complexity": 43,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment",
+        "prophecy_and_revelation"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 21,
+      "creation_and_cosmology": 6,
+      "moral_law_and_ethics": 3,
+      "prophecy_and_revelation": 7,
+      "afterlife_and_judgment": 6,
+      "uncategorized": 6,
+      "prophetic_narratives": 1,
+      "covenant_and_obedience": 4
+    },
+    "bridge_keywords": [
+      "could",
+      "earth",
+      "forgive",
+      "heaven",
+      "merciful"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 72
+      },
+      {
+        "surah": 26,
+        "edge_count": 69
+      },
+      {
+        "surah": 7,
+        "edge_count": 67
+      },
+      {
+        "surah": 6,
+        "edge_count": 61
+      },
+      {
+        "surah": 37,
+        "edge_count": 59
+      },
+      {
+        "surah": 10,
+        "edge_count": 56
+      },
+      {
+        "surah": 18,
+        "edge_count": 47
+      },
+      {
+        "surah": 4,
+        "edge_count": 40
+      },
+      {
+        "surah": 27,
+        "edge_count": 39
+      },
+      {
+        "surah": 11,
+        "edge_count": 39
+      }
+    ]
+  },
+  "35": {
+    "surah": 35,
+    "name": "Initiator",
+    "num_verses": 45,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "creation_and_cosmology"
+    ],
+    "theme_diversity": 8,
+    "narrative_complexity": 30,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment",
+        "creation_and_cosmology"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 25,
+      "afterlife_and_judgment": 5,
+      "covenant_and_obedience": 1,
+      "moral_law_and_ethics": 2,
+      "creation_and_cosmology": 4,
+      "uncategorized": 3,
+      "worship_and_ritual": 2,
+      "prophecy_and_revelation": 3
+    },
+    "bridge_keywords": [
+      "could"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 77
+      },
+      {
+        "surah": 6,
+        "edge_count": 43
+      },
+      {
+        "surah": 7,
+        "edge_count": 41
+      },
+      {
+        "surah": 3,
+        "edge_count": 39
+      },
+      {
+        "surah": 18,
+        "edge_count": 39
+      },
+      {
+        "surah": 5,
+        "edge_count": 39
+      },
+      {
+        "surah": 16,
+        "edge_count": 37
+      },
+      {
+        "surah": 17,
+        "edge_count": 35
+      },
+      {
+        "surah": 26,
+        "edge_count": 35
+      },
+      {
+        "surah": 37,
+        "edge_count": 34
+      }
+    ]
+  },
+  "36": {
+    "surah": 36,
+    "name": "Y.S.",
+    "num_verses": 83,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "uncategorized",
+      "prophecy_and_revelation"
+    ],
+    "theme_diversity": 10,
+    "narrative_complexity": 64,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "monotheism_and_gods_nature",
+        "uncategorized",
+        "prophecy_and_revelation"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 19,
+      "prophecy_and_revelation": 10,
+      "monotheism_and_gods_nature": 24,
+      "moral_law_and_ethics": 1,
+      "covenant_and_obedience": 6,
+      "afterlife_and_judgment": 8,
+      "creation_and_cosmology": 7,
+      "divine_mercy_and_forgiveness": 3,
+      "worship_and_ritual": 2,
+      "knowledge_and_wisdom": 3
+    },
+    "bridge_keywords": [
+      "earth",
+      "heaven"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 124
+      },
+      {
+        "surah": 2,
+        "edge_count": 104
+      },
+      {
+        "surah": 7,
+        "edge_count": 95
+      },
+      {
+        "surah": 6,
+        "edge_count": 83
+      },
+      {
+        "surah": 37,
+        "edge_count": 83
+      },
+      {
+        "surah": 20,
+        "edge_count": 69
+      },
+      {
+        "surah": 23,
+        "edge_count": 68
+      },
+      {
+        "surah": 19,
+        "edge_count": 64
+      },
+      {
+        "surah": 16,
+        "edge_count": 63
+      },
+      {
+        "surah": 21,
+        "edge_count": 62
+      }
+    ]
+  },
+  "37": {
+    "surah": 37,
+    "name": "The Arrangers",
+    "num_verses": 182,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 10,
+    "narrative_complexity": 139,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "uncategorized": 69,
+      "prophecy_and_revelation": 11,
+      "monotheism_and_gods_nature": 42,
+      "creation_and_cosmology": 5,
+      "afterlife_and_judgment": 19,
+      "moral_law_and_ethics": 13,
+      "worship_and_ritual": 6,
+      "covenant_and_obedience": 8,
+      "prophetic_narratives": 7,
+      "social_law": 2
+    },
+    "bridge_keywords": [
+      "earth",
+      "heaven"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 7,
+        "edge_count": 224
+      },
+      {
+        "surah": 26,
+        "edge_count": 223
+      },
+      {
+        "surah": 2,
+        "edge_count": 209
+      },
+      {
+        "surah": 6,
+        "edge_count": 167
+      },
+      {
+        "surah": 21,
+        "edge_count": 163
+      },
+      {
+        "surah": 18,
+        "edge_count": 161
+      },
+      {
+        "surah": 3,
+        "edge_count": 155
+      },
+      {
+        "surah": 19,
+        "edge_count": 155
+      },
+      {
+        "surah": 23,
+        "edge_count": 150
+      },
+      {
+        "surah": 43,
+        "edge_count": 143
+      }
+    ]
+  },
+  "38": {
+    "surah": 38,
+    "name": "S.",
+    "num_verses": 88,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 13,
+    "narrative_complexity": 69,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "prophecy_and_revelation",
+      "development": [
+        "uncategorized",
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "prophecy_and_revelation": 8,
+      "covenant_and_obedience": 2,
+      "uncategorized": 21,
+      "monotheism_and_gods_nature": 15,
+      "worship_and_ritual": 3,
+      "moral_law_and_ethics": 11,
+      "creation_and_cosmology": 5,
+      "warfare_and_struggle": 2,
+      "prophetic_narratives": 6,
+      "afterlife_and_judgment": 12,
+      "divine_mercy_and_forgiveness": 1,
+      "social_law": 1,
+      "knowledge_and_wisdom": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 128
+      },
+      {
+        "surah": 37,
+        "edge_count": 122
+      },
+      {
+        "surah": 2,
+        "edge_count": 102
+      },
+      {
+        "surah": 7,
+        "edge_count": 91
+      },
+      {
+        "surah": 21,
+        "edge_count": 81
+      },
+      {
+        "surah": 20,
+        "edge_count": 74
+      },
+      {
+        "surah": 15,
+        "edge_count": 70
+      },
+      {
+        "surah": 3,
+        "edge_count": 68
+      },
+      {
+        "surah": 16,
+        "edge_count": 62
+      },
+      {
+        "surah": 4,
+        "edge_count": 60
+      }
+    ]
+  },
+  "39": {
+    "surah": 39,
+    "name": "The Throngs",
+    "num_verses": 75,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "prophecy_and_revelation"
+    ],
+    "theme_diversity": 9,
+    "narrative_complexity": 51,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment",
+        "uncategorized"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 39,
+      "prophecy_and_revelation": 6,
+      "creation_and_cosmology": 5,
+      "uncategorized": 5,
+      "afterlife_and_judgment": 12,
+      "covenant_and_obedience": 2,
+      "moral_law_and_ethics": 4,
+      "divine_mercy_and_forgiveness": 1,
+      "knowledge_and_wisdom": 1
+    },
+    "bridge_keywords": [
+      "destiny",
+      "disbelieve",
+      "messenger",
+      "retribution",
+      "revelation"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 114
+      },
+      {
+        "surah": 37,
+        "edge_count": 113
+      },
+      {
+        "surah": 3,
+        "edge_count": 107
+      },
+      {
+        "surah": 6,
+        "edge_count": 94
+      },
+      {
+        "surah": 7,
+        "edge_count": 92
+      },
+      {
+        "surah": 26,
+        "edge_count": 91
+      },
+      {
+        "surah": 16,
+        "edge_count": 84
+      },
+      {
+        "surah": 4,
+        "edge_count": 75
+      },
+      {
+        "surah": 10,
+        "edge_count": 67
+      },
+      {
+        "surah": 18,
+        "edge_count": 50
+      }
+    ]
+  },
+  "40": {
+    "surah": 40,
+    "name": "Forgiver",
+    "num_verses": 85,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "prophecy_and_revelation"
+    ],
+    "theme_diversity": 13,
+    "narrative_complexity": 57,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment",
+        "prophecy_and_revelation"
+      ],
+      "conclusion": "prophecy_and_revelation"
+    },
+    "category_distribution": {
+      "uncategorized": 3,
+      "monotheism_and_gods_nature": 39,
+      "afterlife_and_judgment": 17,
+      "divine_mercy_and_forgiveness": 2,
+      "covenant_and_obedience": 3,
+      "prophecy_and_revelation": 7,
+      "knowledge_and_wisdom": 2,
+      "prophetic_narratives": 5,
+      "warfare_and_struggle": 1,
+      "social_law": 1,
+      "creation_and_cosmology": 3,
+      "worship_and_ritual": 1,
+      "moral_law_and_ethics": 1
+    },
+    "bridge_keywords": [
+      "destiny",
+      "disbelieve",
+      "messenger",
+      "retribution",
+      "revelation"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 114
+      },
+      {
+        "surah": 7,
+        "edge_count": 107
+      },
+      {
+        "surah": 37,
+        "edge_count": 105
+      },
+      {
+        "surah": 6,
+        "edge_count": 98
+      },
+      {
+        "surah": 2,
+        "edge_count": 94
+      },
+      {
+        "surah": 3,
+        "edge_count": 93
+      },
+      {
+        "surah": 4,
+        "edge_count": 73
+      },
+      {
+        "surah": 23,
+        "edge_count": 62
+      },
+      {
+        "surah": 16,
+        "edge_count": 60
+      },
+      {
+        "surah": 11,
+        "edge_count": 59
+      }
+    ]
+  },
+  "41": {
+    "surah": 41,
+    "name": "Detailed",
+    "num_verses": 54,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "moral_law_and_ethics",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 8,
+    "narrative_complexity": 39,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "prophecy_and_revelation",
+      "development": [
+        "monotheism_and_gods_nature",
+        "moral_law_and_ethics",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 4,
+      "monotheism_and_gods_nature": 23,
+      "prophecy_and_revelation": 5,
+      "moral_law_and_ethics": 8,
+      "creation_and_cosmology": 5,
+      "afterlife_and_judgment": 6,
+      "social_law": 1,
+      "covenant_and_obedience": 2
+    },
+    "bridge_keywords": [
+      "belong"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 81
+      },
+      {
+        "surah": 7,
+        "edge_count": 80
+      },
+      {
+        "surah": 26,
+        "edge_count": 64
+      },
+      {
+        "surah": 3,
+        "edge_count": 63
+      },
+      {
+        "surah": 6,
+        "edge_count": 50
+      },
+      {
+        "surah": 37,
+        "edge_count": 49
+      },
+      {
+        "surah": 27,
+        "edge_count": 43
+      },
+      {
+        "surah": 16,
+        "edge_count": 39
+      },
+      {
+        "surah": 21,
+        "edge_count": 38
+      },
+      {
+        "surah": 11,
+        "edge_count": 38
+      }
+    ]
+  },
+  "42": {
+    "surah": 42,
+    "name": "Consultation",
+    "num_verses": 53,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "uncategorized",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 10,
+    "narrative_complexity": 40,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment",
+        "moral_law_and_ethics"
+      ],
+      "conclusion": "creation_and_cosmology"
+    },
+    "category_distribution": {
+      "uncategorized": 6,
+      "monotheism_and_gods_nature": 22,
+      "creation_and_cosmology": 5,
+      "afterlife_and_judgment": 6,
+      "prophetic_narratives": 1,
+      "covenant_and_obedience": 1,
+      "moral_law_and_ethics": 4,
+      "prophecy_and_revelation": 6,
+      "divine_mercy_and_forgiveness": 1,
+      "worship_and_ritual": 1
+    },
+    "bridge_keywords": [
+      "belong",
+      "may",
+      "render",
+      "scripture"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 3,
+        "edge_count": 83
+      },
+      {
+        "surah": 2,
+        "edge_count": 79
+      },
+      {
+        "surah": 4,
+        "edge_count": 69
+      },
+      {
+        "surah": 6,
+        "edge_count": 68
+      },
+      {
+        "surah": 7,
+        "edge_count": 62
+      },
+      {
+        "surah": 26,
+        "edge_count": 56
+      },
+      {
+        "surah": 5,
+        "edge_count": 46
+      },
+      {
+        "surah": 16,
+        "edge_count": 43
+      },
+      {
+        "surah": 37,
+        "edge_count": 43
+      },
+      {
+        "surah": 39,
+        "edge_count": 40
+      }
+    ]
+  },
+  "43": {
+    "surah": 43,
+    "name": "Ornaments",
+    "num_verses": 89,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "uncategorized"
+    ],
+    "theme_diversity": 12,
+    "narrative_complexity": 66,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "prophecy_and_revelation",
+      "development": [
+        "monotheism_and_gods_nature",
+        "prophecy_and_revelation",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 12,
+      "prophecy_and_revelation": 18,
+      "knowledge_and_wisdom": 1,
+      "covenant_and_obedience": 4,
+      "creation_and_cosmology": 7,
+      "monotheism_and_gods_nature": 21,
+      "divine_mercy_and_forgiveness": 1,
+      "moral_law_and_ethics": 7,
+      "worship_and_ritual": 2,
+      "prophetic_narratives": 4,
+      "afterlife_and_judgment": 11,
+      "warfare_and_struggle": 1
+    },
+    "bridge_keywords": [
+      "may",
+      "render",
+      "scripture"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 147
+      },
+      {
+        "surah": 37,
+        "edge_count": 143
+      },
+      {
+        "surah": 7,
+        "edge_count": 113
+      },
+      {
+        "surah": 2,
+        "edge_count": 109
+      },
+      {
+        "surah": 6,
+        "edge_count": 101
+      },
+      {
+        "surah": 3,
+        "edge_count": 81
+      },
+      {
+        "surah": 19,
+        "edge_count": 79
+      },
+      {
+        "surah": 20,
+        "edge_count": 77
+      },
+      {
+        "surah": 21,
+        "edge_count": 76
+      },
+      {
+        "surah": 16,
+        "edge_count": 75
+      }
+    ]
+  },
+  "44": {
+    "surah": 44,
+    "name": "Smoke",
+    "num_verses": 59,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 9,
+    "narrative_complexity": 37,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "prophecy_and_revelation",
+      "development": [
+        "uncategorized",
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "uncategorized": 20,
+      "prophecy_and_revelation": 7,
+      "monotheism_and_gods_nature": 11,
+      "creation_and_cosmology": 5,
+      "afterlife_and_judgment": 10,
+      "covenant_and_obedience": 1,
+      "social_law": 2,
+      "prophetic_narratives": 1,
+      "moral_law_and_ethics": 2
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 112
+      },
+      {
+        "surah": 37,
+        "edge_count": 86
+      },
+      {
+        "surah": 2,
+        "edge_count": 76
+      },
+      {
+        "surah": 7,
+        "edge_count": 67
+      },
+      {
+        "surah": 23,
+        "edge_count": 57
+      },
+      {
+        "surah": 3,
+        "edge_count": 51
+      },
+      {
+        "surah": 20,
+        "edge_count": 50
+      },
+      {
+        "surah": 16,
+        "edge_count": 49
+      },
+      {
+        "surah": 6,
+        "edge_count": 48
+      },
+      {
+        "surah": 56,
+        "edge_count": 47
+      }
+    ]
+  },
+  "45": {
+    "surah": 45,
+    "name": "Kneeling",
+    "num_verses": 37,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "creation_and_cosmology"
+    ],
+    "theme_diversity": 9,
+    "narrative_complexity": 32,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "monotheism_and_gods_nature",
+        "prophecy_and_revelation",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 2,
+      "monotheism_and_gods_nature": 12,
+      "creation_and_cosmology": 5,
+      "prophecy_and_revelation": 6,
+      "moral_law_and_ethics": 4,
+      "afterlife_and_judgment": 5,
+      "covenant_and_obedience": 1,
+      "divine_mercy_and_forgiveness": 1,
+      "knowledge_and_wisdom": 1
+    },
+    "bridge_keywords": [
+      "almighty",
+      "earth",
+      "heaven",
+      "revelation",
+      "wise"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 65
+      },
+      {
+        "surah": 3,
+        "edge_count": 45
+      },
+      {
+        "surah": 26,
+        "edge_count": 39
+      },
+      {
+        "surah": 6,
+        "edge_count": 39
+      },
+      {
+        "surah": 4,
+        "edge_count": 38
+      },
+      {
+        "surah": 16,
+        "edge_count": 38
+      },
+      {
+        "surah": 7,
+        "edge_count": 33
+      },
+      {
+        "surah": 37,
+        "edge_count": 30
+      },
+      {
+        "surah": 39,
+        "edge_count": 29
+      },
+      {
+        "surah": 18,
+        "edge_count": 25
+      }
+    ]
+  },
+  "46": {
+    "surah": 46,
+    "name": "The Dunes",
+    "num_verses": 35,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "prophecy_and_revelation"
+    ],
+    "theme_diversity": 7,
+    "narrative_complexity": 26,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment",
+        "prophecy_and_revelation"
+      ],
+      "conclusion": "afterlife_and_judgment"
+    },
+    "category_distribution": {
+      "uncategorized": 2,
+      "monotheism_and_gods_nature": 12,
+      "creation_and_cosmology": 2,
+      "afterlife_and_judgment": 8,
+      "prophecy_and_revelation": 6,
+      "social_law": 1,
+      "moral_law_and_ethics": 4
+    },
+    "bridge_keywords": [
+      "almighty",
+      "earth",
+      "heaven",
+      "revelation",
+      "truth",
+      "wise"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 55
+      },
+      {
+        "surah": 2,
+        "edge_count": 50
+      },
+      {
+        "surah": 7,
+        "edge_count": 46
+      },
+      {
+        "surah": 37,
+        "edge_count": 35
+      },
+      {
+        "surah": 3,
+        "edge_count": 34
+      },
+      {
+        "surah": 11,
+        "edge_count": 31
+      },
+      {
+        "surah": 4,
+        "edge_count": 30
+      },
+      {
+        "surah": 21,
+        "edge_count": 28
+      },
+      {
+        "surah": 6,
+        "edge_count": 27
+      },
+      {
+        "surah": 28,
+        "edge_count": 26
+      }
+    ]
+  },
+  "47": {
+    "surah": 47,
+    "name": "Muhammad",
+    "num_verses": 38,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "covenant_and_obedience",
+      "prophecy_and_revelation"
+    ],
+    "theme_diversity": 8,
+    "narrative_complexity": 27,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "prophecy_and_revelation",
+        "covenant_and_obedience"
+      ],
+      "conclusion": "moral_law_and_ethics"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 22,
+      "covenant_and_obedience": 4,
+      "divine_mercy_and_forgiveness": 1,
+      "afterlife_and_judgment": 1,
+      "uncategorized": 2,
+      "prophecy_and_revelation": 4,
+      "moral_law_and_ethics": 3,
+      "warfare_and_struggle": 1
+    },
+    "bridge_keywords": [
+      "truth"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 69
+      },
+      {
+        "surah": 3,
+        "edge_count": 53
+      },
+      {
+        "surah": 6,
+        "edge_count": 50
+      },
+      {
+        "surah": 4,
+        "edge_count": 43
+      },
+      {
+        "surah": 7,
+        "edge_count": 40
+      },
+      {
+        "surah": 26,
+        "edge_count": 39
+      },
+      {
+        "surah": 9,
+        "edge_count": 38
+      },
+      {
+        "surah": 16,
+        "edge_count": 30
+      },
+      {
+        "surah": 37,
+        "edge_count": 28
+      },
+      {
+        "surah": 43,
+        "edge_count": 27
+      }
+    ]
+  },
+  "48": {
+    "surah": 48,
+    "name": "Victory",
+    "num_verses": 29,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "covenant_and_obedience"
+    ],
+    "theme_diversity": 6,
+    "narrative_complexity": 13,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "prophecy_and_revelation",
+      "development": [
+        "monotheism_and_gods_nature",
+        "prophecy_and_revelation",
+        "covenant_and_obedience"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "prophecy_and_revelation": 4,
+      "monotheism_and_gods_nature": 21,
+      "covenant_and_obedience": 1,
+      "worship_and_ritual": 1,
+      "afterlife_and_judgment": 1,
+      "warfare_and_struggle": 1
+    },
+    "bridge_keywords": [
+      "messenger"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 9,
+        "edge_count": 76
+      },
+      {
+        "surah": 3,
+        "edge_count": 59
+      },
+      {
+        "surah": 2,
+        "edge_count": 56
+      },
+      {
+        "surah": 4,
+        "edge_count": 51
+      },
+      {
+        "surah": 33,
+        "edge_count": 44
+      },
+      {
+        "surah": 8,
+        "edge_count": 39
+      },
+      {
+        "surah": 5,
+        "edge_count": 37
+      },
+      {
+        "surah": 26,
+        "edge_count": 24
+      },
+      {
+        "surah": 7,
+        "edge_count": 23
+      },
+      {
+        "surah": 37,
+        "edge_count": 21
+      }
+    ]
+  },
+  "49": {
+    "surah": 49,
+    "name": "The Walls",
+    "num_verses": 18,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "covenant_and_obedience",
+      "prophecy_and_revelation"
+    ],
+    "theme_diversity": 5,
+    "narrative_complexity": 9,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "covenant_and_obedience",
+        "prophecy_and_revelation"
+      ],
+      "conclusion": "creation_and_cosmology"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 13,
+      "prophecy_and_revelation": 1,
+      "knowledge_and_wisdom": 1,
+      "covenant_and_obedience": 2,
+      "creation_and_cosmology": 1
+    },
+    "bridge_keywords": [
+      "earth",
+      "messenger"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 45
+      },
+      {
+        "surah": 4,
+        "edge_count": 30
+      },
+      {
+        "surah": 9,
+        "edge_count": 27
+      },
+      {
+        "surah": 3,
+        "edge_count": 26
+      },
+      {
+        "surah": 26,
+        "edge_count": 22
+      },
+      {
+        "surah": 5,
+        "edge_count": 21
+      },
+      {
+        "surah": 6,
+        "edge_count": 19
+      },
+      {
+        "surah": 8,
+        "edge_count": 18
+      },
+      {
+        "surah": 37,
+        "edge_count": 16
+      },
+      {
+        "surah": 33,
+        "edge_count": 15
+      }
+    ]
+  },
+  "50": {
+    "surah": 50,
+    "name": "Q.",
+    "num_verses": 45,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "creation_and_cosmology"
+    ],
+    "theme_diversity": 9,
+    "narrative_complexity": 34,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "creation_and_cosmology",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "afterlife_and_judgment"
+    },
+    "category_distribution": {
+      "prophecy_and_revelation": 4,
+      "uncategorized": 15,
+      "afterlife_and_judgment": 8,
+      "moral_law_and_ethics": 3,
+      "creation_and_cosmology": 5,
+      "prophetic_narratives": 2,
+      "social_law": 3,
+      "monotheism_and_gods_nature": 4,
+      "worship_and_ritual": 1
+    },
+    "bridge_keywords": [
+      "earth"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 76
+      },
+      {
+        "surah": 37,
+        "edge_count": 50
+      },
+      {
+        "surah": 2,
+        "edge_count": 45
+      },
+      {
+        "surah": 20,
+        "edge_count": 43
+      },
+      {
+        "surah": 7,
+        "edge_count": 41
+      },
+      {
+        "surah": 11,
+        "edge_count": 40
+      },
+      {
+        "surah": 36,
+        "edge_count": 36
+      },
+      {
+        "surah": 3,
+        "edge_count": 34
+      },
+      {
+        "surah": 6,
+        "edge_count": 33
+      },
+      {
+        "surah": 54,
+        "edge_count": 32
+      }
+    ]
+  },
+  "51": {
+    "surah": 51,
+    "name": "Drivers of the Winds",
+    "num_verses": 60,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "creation_and_cosmology",
+      "monotheism_and_gods_nature"
+    ],
+    "theme_diversity": 9,
+    "narrative_complexity": 46,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "creation_and_cosmology",
+        "monotheism_and_gods_nature"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "uncategorized": 22,
+      "creation_and_cosmology": 10,
+      "afterlife_and_judgment": 7,
+      "moral_law_and_ethics": 3,
+      "monotheism_and_gods_nature": 9,
+      "prophecy_and_revelation": 5,
+      "prophetic_narratives": 1,
+      "social_law": 2,
+      "knowledge_and_wisdom": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 112
+      },
+      {
+        "surah": 37,
+        "edge_count": 96
+      },
+      {
+        "surah": 7,
+        "edge_count": 73
+      },
+      {
+        "surah": 2,
+        "edge_count": 69
+      },
+      {
+        "surah": 15,
+        "edge_count": 58
+      },
+      {
+        "surah": 4,
+        "edge_count": 51
+      },
+      {
+        "surah": 11,
+        "edge_count": 49
+      },
+      {
+        "surah": 3,
+        "edge_count": 49
+      },
+      {
+        "surah": 27,
+        "edge_count": 46
+      },
+      {
+        "surah": 21,
+        "edge_count": 46
+      }
+    ]
+  },
+  "52": {
+    "surah": 52,
+    "name": "Mount Sinai",
+    "num_verses": 49,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "monotheism_and_gods_nature"
+    ],
+    "theme_diversity": 7,
+    "narrative_complexity": 32,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "prophecy_and_revelation",
+      "development": [
+        "uncategorized",
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "afterlife_and_judgment"
+    },
+    "category_distribution": {
+      "uncategorized": 20,
+      "prophecy_and_revelation": 3,
+      "worship_and_ritual": 1,
+      "creation_and_cosmology": 6,
+      "monotheism_and_gods_nature": 8,
+      "afterlife_and_judgment": 9,
+      "moral_law_and_ethics": 2
+    },
+    "bridge_keywords": [
+      "star"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 37,
+        "edge_count": 76
+      },
+      {
+        "surah": 2,
+        "edge_count": 58
+      },
+      {
+        "surah": 6,
+        "edge_count": 51
+      },
+      {
+        "surah": 56,
+        "edge_count": 51
+      },
+      {
+        "surah": 26,
+        "edge_count": 51
+      },
+      {
+        "surah": 7,
+        "edge_count": 47
+      },
+      {
+        "surah": 20,
+        "edge_count": 45
+      },
+      {
+        "surah": 21,
+        "edge_count": 41
+      },
+      {
+        "surah": 23,
+        "edge_count": 40
+      },
+      {
+        "surah": 11,
+        "edge_count": 39
+      }
+    ]
+  },
+  "53": {
+    "surah": 53,
+    "name": "The Stars",
+    "num_verses": 62,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "moral_law_and_ethics"
+    ],
+    "theme_diversity": 10,
+    "narrative_complexity": 37,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "monotheism_and_gods_nature",
+        "moral_law_and_ethics"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "creation_and_cosmology": 4,
+      "uncategorized": 27,
+      "prophecy_and_revelation": 4,
+      "afterlife_and_judgment": 1,
+      "monotheism_and_gods_nature": 16,
+      "covenant_and_obedience": 1,
+      "moral_law_and_ethics": 5,
+      "knowledge_and_wisdom": 2,
+      "prophetic_narratives": 1,
+      "worship_and_ritual": 1
+    },
+    "bridge_keywords": [
+      "star"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 6,
+        "edge_count": 82
+      },
+      {
+        "surah": 37,
+        "edge_count": 62
+      },
+      {
+        "surah": 2,
+        "edge_count": 61
+      },
+      {
+        "surah": 20,
+        "edge_count": 59
+      },
+      {
+        "surah": 7,
+        "edge_count": 58
+      },
+      {
+        "surah": 11,
+        "edge_count": 58
+      },
+      {
+        "surah": 4,
+        "edge_count": 57
+      },
+      {
+        "surah": 21,
+        "edge_count": 50
+      },
+      {
+        "surah": 18,
+        "edge_count": 48
+      },
+      {
+        "surah": 43,
+        "edge_count": 45
+      }
+    ]
+  },
+  "54": {
+    "surah": 54,
+    "name": "The Moon",
+    "num_verses": 55,
+    "primary_theme": "afterlife_and_judgment",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "uncategorized"
+    ],
+    "theme_diversity": 10,
+    "narrative_complexity": 49,
+    "thematic_center": "afterlife_and_judgment",
+    "narrative_arc": {
+      "opening": "creation_and_cosmology",
+      "development": [
+        "afterlife_and_judgment",
+        "uncategorized",
+        "prophecy_and_revelation"
+      ],
+      "conclusion": "knowledge_and_wisdom"
+    },
+    "category_distribution": {
+      "creation_and_cosmology": 4,
+      "prophecy_and_revelation": 10,
+      "covenant_and_obedience": 2,
+      "uncategorized": 10,
+      "knowledge_and_wisdom": 3,
+      "afterlife_and_judgment": 13,
+      "prophetic_narratives": 4,
+      "warfare_and_struggle": 3,
+      "monotheism_and_gods_nature": 5,
+      "moral_law_and_ethics": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 87
+      },
+      {
+        "surah": 37,
+        "edge_count": 69
+      },
+      {
+        "surah": 7,
+        "edge_count": 68
+      },
+      {
+        "surah": 3,
+        "edge_count": 59
+      },
+      {
+        "surah": 36,
+        "edge_count": 45
+      },
+      {
+        "surah": 15,
+        "edge_count": 44
+      },
+      {
+        "surah": 11,
+        "edge_count": 43
+      },
+      {
+        "surah": 21,
+        "edge_count": 42
+      },
+      {
+        "surah": 2,
+        "edge_count": 42
+      },
+      {
+        "surah": 16,
+        "edge_count": 38
+      }
+    ]
+  },
+  "55": {
+    "surah": 55,
+    "name": "Most Gracious",
+    "num_verses": 78,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "uncategorized",
+      "creation_and_cosmology"
+    ],
+    "theme_diversity": 9,
+    "narrative_complexity": 68,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "uncategorized",
+        "creation_and_cosmology"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 38,
+      "prophecy_and_revelation": 1,
+      "knowledge_and_wisdom": 1,
+      "creation_and_cosmology": 11,
+      "worship_and_ritual": 1,
+      "covenant_and_obedience": 3,
+      "moral_law_and_ethics": 2,
+      "uncategorized": 15,
+      "afterlife_and_judgment": 6
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 16,
+        "edge_count": 78
+      },
+      {
+        "surah": 6,
+        "edge_count": 62
+      },
+      {
+        "surah": 37,
+        "edge_count": 50
+      },
+      {
+        "surah": 26,
+        "edge_count": 48
+      },
+      {
+        "surah": 2,
+        "edge_count": 45
+      },
+      {
+        "surah": 56,
+        "edge_count": 45
+      },
+      {
+        "surah": 18,
+        "edge_count": 41
+      },
+      {
+        "surah": 23,
+        "edge_count": 41
+      },
+      {
+        "surah": 21,
+        "edge_count": 40
+      },
+      {
+        "surah": 40,
+        "edge_count": 40
+      }
+    ]
+  },
+  "56": {
+    "surah": 56,
+    "name": "The Inevitable",
+    "num_verses": 96,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "creation_and_cosmology",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 8,
+    "narrative_complexity": 48,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "creation_and_cosmology",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 63,
+      "creation_and_cosmology": 9,
+      "moral_law_and_ethics": 2,
+      "monotheism_and_gods_nature": 7,
+      "afterlife_and_judgment": 8,
+      "covenant_and_obedience": 3,
+      "prophecy_and_revelation": 3,
+      "prophetic_narratives": 1
+    },
+    "bridge_keywords": [
+      "glorify"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 37,
+        "edge_count": 141
+      },
+      {
+        "surah": 26,
+        "edge_count": 106
+      },
+      {
+        "surah": 2,
+        "edge_count": 89
+      },
+      {
+        "surah": 6,
+        "edge_count": 81
+      },
+      {
+        "surah": 7,
+        "edge_count": 73
+      },
+      {
+        "surah": 19,
+        "edge_count": 67
+      },
+      {
+        "surah": 16,
+        "edge_count": 66
+      },
+      {
+        "surah": 3,
+        "edge_count": 65
+      },
+      {
+        "surah": 20,
+        "edge_count": 64
+      },
+      {
+        "surah": 23,
+        "edge_count": 60
+      }
+    ]
+  },
+  "57": {
+    "surah": 57,
+    "name": "Iron",
+    "num_verses": 29,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "creation_and_cosmology"
+    ],
+    "theme_diversity": 7,
+    "narrative_complexity": 14,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment",
+        "prophecy_and_revelation"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 16,
+      "creation_and_cosmology": 3,
+      "knowledge_and_wisdom": 1,
+      "afterlife_and_judgment": 4,
+      "warfare_and_struggle": 1,
+      "prophecy_and_revelation": 3,
+      "divine_mercy_and_forgiveness": 1
+    },
+    "bridge_keywords": [
+      "forgiver",
+      "glorify",
+      "know"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 77
+      },
+      {
+        "surah": 3,
+        "edge_count": 50
+      },
+      {
+        "surah": 4,
+        "edge_count": 44
+      },
+      {
+        "surah": 5,
+        "edge_count": 34
+      },
+      {
+        "surah": 33,
+        "edge_count": 27
+      },
+      {
+        "surah": 9,
+        "edge_count": 26
+      },
+      {
+        "surah": 7,
+        "edge_count": 25
+      },
+      {
+        "surah": 6,
+        "edge_count": 25
+      },
+      {
+        "surah": 24,
+        "edge_count": 23
+      },
+      {
+        "surah": 35,
+        "edge_count": 20
+      }
+    ]
+  },
+  "58": {
+    "surah": 58,
+    "name": "The Debate",
+    "num_verses": 22,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "social_law"
+    ],
+    "theme_diversity": 7,
+    "narrative_complexity": 9,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "social_law",
+      "development": [
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment",
+        "prophecy_and_revelation"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "social_law": 1,
+      "monotheism_and_gods_nature": 15,
+      "prophecy_and_revelation": 1,
+      "afterlife_and_judgment": 2,
+      "knowledge_and_wisdom": 1,
+      "worship_and_ritual": 1,
+      "covenant_and_obedience": 1
+    },
+    "bridge_keywords": [
+      "almighty",
+      "forgiver",
+      "heart",
+      "know"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 51
+      },
+      {
+        "surah": 9,
+        "edge_count": 42
+      },
+      {
+        "surah": 4,
+        "edge_count": 41
+      },
+      {
+        "surah": 26,
+        "edge_count": 31
+      },
+      {
+        "surah": 5,
+        "edge_count": 27
+      },
+      {
+        "surah": 7,
+        "edge_count": 25
+      },
+      {
+        "surah": 22,
+        "edge_count": 24
+      },
+      {
+        "surah": 3,
+        "edge_count": 23
+      },
+      {
+        "surah": 33,
+        "edge_count": 19
+      },
+      {
+        "surah": 37,
+        "edge_count": 18
+      }
+    ]
+  },
+  "59": {
+    "surah": 59,
+    "name": "Exodus",
+    "num_verses": 24,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "uncategorized"
+    ],
+    "theme_diversity": 5,
+    "narrative_complexity": 14,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment",
+        "uncategorized"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 16,
+      "afterlife_and_judgment": 3,
+      "uncategorized": 2,
+      "warfare_and_struggle": 2,
+      "prophecy_and_revelation": 1
+    },
+    "bridge_keywords": [
+      "almighty",
+      "everything",
+      "heart"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 55
+      },
+      {
+        "surah": 3,
+        "edge_count": 35
+      },
+      {
+        "surah": 26,
+        "edge_count": 34
+      },
+      {
+        "surah": 9,
+        "edge_count": 32
+      },
+      {
+        "surah": 18,
+        "edge_count": 22
+      },
+      {
+        "surah": 8,
+        "edge_count": 21
+      },
+      {
+        "surah": 16,
+        "edge_count": 21
+      },
+      {
+        "surah": 4,
+        "edge_count": 20
+      },
+      {
+        "surah": 5,
+        "edge_count": 20
+      },
+      {
+        "surah": 7,
+        "edge_count": 19
+      }
+    ]
+  },
+  "60": {
+    "surah": 60,
+    "name": "The Test",
+    "num_verses": 13,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "covenant_and_obedience",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 5,
+    "narrative_complexity": 7,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "covenant_and_obedience",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 8,
+      "covenant_and_obedience": 2,
+      "afterlife_and_judgment": 1,
+      "warfare_and_struggle": 1,
+      "moral_law_and_ethics": 1
+    },
+    "bridge_keywords": [
+      "everything"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 41
+      },
+      {
+        "surah": 4,
+        "edge_count": 29
+      },
+      {
+        "surah": 3,
+        "edge_count": 25
+      },
+      {
+        "surah": 5,
+        "edge_count": 25
+      },
+      {
+        "surah": 33,
+        "edge_count": 20
+      },
+      {
+        "surah": 9,
+        "edge_count": 14
+      },
+      {
+        "surah": 8,
+        "edge_count": 14
+      },
+      {
+        "surah": 16,
+        "edge_count": 11
+      },
+      {
+        "surah": 59,
+        "edge_count": 11
+      },
+      {
+        "surah": 20,
+        "edge_count": 10
+      }
+    ]
+  },
+  "61": {
+    "surah": 61,
+    "name": "The Column",
+    "num_verses": 14,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 5,
+    "narrative_complexity": 10,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "prophecy_and_revelation",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "prophetic_narratives"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 8,
+      "covenant_and_obedience": 1,
+      "prophecy_and_revelation": 2,
+      "afterlife_and_judgment": 2,
+      "prophetic_narratives": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 36
+      },
+      {
+        "surah": 3,
+        "edge_count": 30
+      },
+      {
+        "surah": 5,
+        "edge_count": 24
+      },
+      {
+        "surah": 4,
+        "edge_count": 23
+      },
+      {
+        "surah": 9,
+        "edge_count": 21
+      },
+      {
+        "surah": 8,
+        "edge_count": 13
+      },
+      {
+        "surah": 26,
+        "edge_count": 12
+      },
+      {
+        "surah": 33,
+        "edge_count": 12
+      },
+      {
+        "surah": 10,
+        "edge_count": 12
+      },
+      {
+        "surah": 40,
+        "edge_count": 10
+      }
+    ]
+  },
+  "62": {
+    "surah": 62,
+    "name": "Friday",
+    "num_verses": 11,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "uncategorized"
+    ],
+    "theme_diversity": 4,
+    "narrative_complexity": 5,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "prophecy_and_revelation",
+        "uncategorized"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 8,
+      "prophecy_and_revelation": 1,
+      "uncategorized": 1,
+      "worship_and_ritual": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 30
+      },
+      {
+        "surah": 3,
+        "edge_count": 21
+      },
+      {
+        "surah": 4,
+        "edge_count": 18
+      },
+      {
+        "surah": 5,
+        "edge_count": 16
+      },
+      {
+        "surah": 7,
+        "edge_count": 15
+      },
+      {
+        "surah": 6,
+        "edge_count": 15
+      },
+      {
+        "surah": 24,
+        "edge_count": 12
+      },
+      {
+        "surah": 18,
+        "edge_count": 11
+      },
+      {
+        "surah": 8,
+        "edge_count": 10
+      },
+      {
+        "surah": 20,
+        "edge_count": 10
+      }
+    ]
+  },
+  "63": {
+    "surah": 63,
+    "name": "The Hypocrites",
+    "num_verses": 11,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "covenant_and_obedience",
+      "creation_and_cosmology"
+    ],
+    "theme_diversity": 3,
+    "narrative_complexity": 4,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "covenant_and_obedience",
+        "creation_and_cosmology"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 9,
+      "covenant_and_obedience": 1,
+      "creation_and_cosmology": 1
+    },
+    "bridge_keywords": [
+      "everything"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 19
+      },
+      {
+        "surah": 9,
+        "edge_count": 18
+      },
+      {
+        "surah": 4,
+        "edge_count": 17
+      },
+      {
+        "surah": 6,
+        "edge_count": 14
+      },
+      {
+        "surah": 11,
+        "edge_count": 11
+      },
+      {
+        "surah": 7,
+        "edge_count": 11
+      },
+      {
+        "surah": 33,
+        "edge_count": 10
+      },
+      {
+        "surah": 23,
+        "edge_count": 10
+      },
+      {
+        "surah": 26,
+        "edge_count": 10
+      },
+      {
+        "surah": 3,
+        "edge_count": 9
+      }
+    ]
+  },
+  "64": {
+    "surah": 64,
+    "name": "Mutual Blaming",
+    "num_verses": 18,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "creation_and_cosmology",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 7,
+    "narrative_complexity": 13,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "creation_and_cosmology",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 9,
+      "creation_and_cosmology": 2,
+      "afterlife_and_judgment": 2,
+      "covenant_and_obedience": 2,
+      "prophecy_and_revelation": 1,
+      "divine_mercy_and_forgiveness": 1,
+      "moral_law_and_ethics": 1
+    },
+    "bridge_keywords": [
+      "everything"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 3,
+        "edge_count": 36
+      },
+      {
+        "surah": 2,
+        "edge_count": 35
+      },
+      {
+        "surah": 26,
+        "edge_count": 26
+      },
+      {
+        "surah": 4,
+        "edge_count": 22
+      },
+      {
+        "surah": 6,
+        "edge_count": 21
+      },
+      {
+        "surah": 5,
+        "edge_count": 18
+      },
+      {
+        "surah": 16,
+        "edge_count": 17
+      },
+      {
+        "surah": 11,
+        "edge_count": 16
+      },
+      {
+        "surah": 9,
+        "edge_count": 15
+      },
+      {
+        "surah": 40,
+        "edge_count": 14
+      }
+    ]
+  },
+  "65": {
+    "surah": 65,
+    "name": "Divorce",
+    "num_verses": 12,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "social_law",
+      "uncategorized"
+    ],
+    "theme_diversity": 4,
+    "narrative_complexity": 7,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "social_law",
+        "uncategorized"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 8,
+      "social_law": 2,
+      "uncategorized": 1,
+      "prophecy_and_revelation": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 42
+      },
+      {
+        "surah": 4,
+        "edge_count": 24
+      },
+      {
+        "surah": 26,
+        "edge_count": 23
+      },
+      {
+        "surah": 39,
+        "edge_count": 14
+      },
+      {
+        "surah": 22,
+        "edge_count": 13
+      },
+      {
+        "surah": 5,
+        "edge_count": 13
+      },
+      {
+        "surah": 7,
+        "edge_count": 12
+      },
+      {
+        "surah": 16,
+        "edge_count": 12
+      },
+      {
+        "surah": 37,
+        "edge_count": 12
+      },
+      {
+        "surah": 33,
+        "edge_count": 11
+      }
+    ]
+  },
+  "66": {
+    "surah": 66,
+    "name": "Prohibition",
+    "num_verses": 12,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "social_law",
+      "covenant_and_obedience"
+    ],
+    "theme_diversity": 5,
+    "narrative_complexity": 7,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "social_law",
+        "covenant_and_obedience"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 8,
+      "social_law": 1,
+      "covenant_and_obedience": 1,
+      "prophecy_and_revelation": 1,
+      "prophetic_narratives": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 4,
+        "edge_count": 29
+      },
+      {
+        "surah": 2,
+        "edge_count": 25
+      },
+      {
+        "surah": 9,
+        "edge_count": 23
+      },
+      {
+        "surah": 33,
+        "edge_count": 22
+      },
+      {
+        "surah": 3,
+        "edge_count": 17
+      },
+      {
+        "surah": 5,
+        "edge_count": 16
+      },
+      {
+        "surah": 24,
+        "edge_count": 14
+      },
+      {
+        "surah": 6,
+        "edge_count": 13
+      },
+      {
+        "surah": 7,
+        "edge_count": 12
+      },
+      {
+        "surah": 16,
+        "edge_count": 11
+      }
+    ]
+  },
+  "67": {
+    "surah": 67,
+    "name": "Kingship",
+    "num_verses": 30,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "uncategorized",
+      "creation_and_cosmology"
+    ],
+    "theme_diversity": 6,
+    "narrative_complexity": 23,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "uncategorized",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 14,
+      "creation_and_cosmology": 4,
+      "uncategorized": 5,
+      "afterlife_and_judgment": 3,
+      "knowledge_and_wisdom": 1,
+      "covenant_and_obedience": 3
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 51
+      },
+      {
+        "surah": 7,
+        "edge_count": 45
+      },
+      {
+        "surah": 2,
+        "edge_count": 44
+      },
+      {
+        "surah": 37,
+        "edge_count": 42
+      },
+      {
+        "surah": 3,
+        "edge_count": 29
+      },
+      {
+        "surah": 17,
+        "edge_count": 28
+      },
+      {
+        "surah": 5,
+        "edge_count": 25
+      },
+      {
+        "surah": 16,
+        "edge_count": 24
+      },
+      {
+        "surah": 36,
+        "edge_count": 23
+      },
+      {
+        "surah": 11,
+        "edge_count": 22
+      }
+    ]
+  },
+  "68": {
+    "surah": 68,
+    "name": "The Pen",
+    "num_verses": 52,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "covenant_and_obedience"
+    ],
+    "theme_diversity": 9,
+    "narrative_complexity": 35,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "monotheism_and_gods_nature",
+        "covenant_and_obedience"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 24,
+      "monotheism_and_gods_nature": 11,
+      "divine_mercy_and_forgiveness": 1,
+      "covenant_and_obedience": 4,
+      "moral_law_and_ethics": 1,
+      "social_law": 1,
+      "prophecy_and_revelation": 4,
+      "afterlife_and_judgment": 4,
+      "worship_and_ritual": 2
+    },
+    "bridge_keywords": [
+      "disbelieve"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 7,
+        "edge_count": 65
+      },
+      {
+        "surah": 2,
+        "edge_count": 64
+      },
+      {
+        "surah": 3,
+        "edge_count": 53
+      },
+      {
+        "surah": 4,
+        "edge_count": 52
+      },
+      {
+        "surah": 18,
+        "edge_count": 51
+      },
+      {
+        "surah": 26,
+        "edge_count": 46
+      },
+      {
+        "surah": 6,
+        "edge_count": 43
+      },
+      {
+        "surah": 37,
+        "edge_count": 39
+      },
+      {
+        "surah": 20,
+        "edge_count": 38
+      },
+      {
+        "surah": 21,
+        "edge_count": 37
+      }
+    ]
+  },
+  "69": {
+    "surah": 69,
+    "name": "Incontestable",
+    "num_verses": 52,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "monotheism_and_gods_nature"
+    ],
+    "theme_diversity": 9,
+    "narrative_complexity": 37,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "afterlife_and_judgment",
+        "monotheism_and_gods_nature"
+      ],
+      "conclusion": "moral_law_and_ethics"
+    },
+    "category_distribution": {
+      "uncategorized": 26,
+      "covenant_and_obedience": 3,
+      "creation_and_cosmology": 2,
+      "prophetic_narratives": 1,
+      "monotheism_and_gods_nature": 7,
+      "knowledge_and_wisdom": 1,
+      "afterlife_and_judgment": 8,
+      "prophecy_and_revelation": 2,
+      "moral_law_and_ethics": 2
+    },
+    "bridge_keywords": [
+      "disbelieve",
+      "disbeliever"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 53
+      },
+      {
+        "surah": 7,
+        "edge_count": 52
+      },
+      {
+        "surah": 18,
+        "edge_count": 40
+      },
+      {
+        "surah": 11,
+        "edge_count": 39
+      },
+      {
+        "surah": 17,
+        "edge_count": 38
+      },
+      {
+        "surah": 37,
+        "edge_count": 37
+      },
+      {
+        "surah": 21,
+        "edge_count": 36
+      },
+      {
+        "surah": 20,
+        "edge_count": 36
+      },
+      {
+        "surah": 56,
+        "edge_count": 34
+      },
+      {
+        "surah": 36,
+        "edge_count": 33
+      }
+    ]
+  },
+  "70": {
+    "surah": 70,
+    "name": "The Heights",
+    "num_verses": 44,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "monotheism_and_gods_nature"
+    ],
+    "theme_diversity": 10,
+    "narrative_complexity": 33,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "afterlife_and_judgment",
+      "development": [
+        "uncategorized",
+        "afterlife_and_judgment",
+        "monotheism_and_gods_nature"
+      ],
+      "conclusion": "afterlife_and_judgment"
+    },
+    "category_distribution": {
+      "afterlife_and_judgment": 9,
+      "uncategorized": 17,
+      "monotheism_and_gods_nature": 5,
+      "prophecy_and_revelation": 1,
+      "creation_and_cosmology": 4,
+      "mathematical_miracle": 1,
+      "social_law": 1,
+      "worship_and_ritual": 2,
+      "covenant_and_obedience": 2,
+      "warfare_and_struggle": 2
+    },
+    "bridge_keywords": [
+      "disbeliever"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 69
+      },
+      {
+        "surah": 26,
+        "edge_count": 54
+      },
+      {
+        "surah": 6,
+        "edge_count": 43
+      },
+      {
+        "surah": 7,
+        "edge_count": 42
+      },
+      {
+        "surah": 19,
+        "edge_count": 41
+      },
+      {
+        "surah": 37,
+        "edge_count": 38
+      },
+      {
+        "surah": 4,
+        "edge_count": 37
+      },
+      {
+        "surah": 9,
+        "edge_count": 34
+      },
+      {
+        "surah": 17,
+        "edge_count": 33
+      },
+      {
+        "surah": 20,
+        "edge_count": 32
+      }
+    ]
+  },
+  "71": {
+    "surah": 71,
+    "name": "Noah",
+    "num_verses": 28,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "creation_and_cosmology"
+    ],
+    "theme_diversity": 7,
+    "narrative_complexity": 19,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "prophecy_and_revelation",
+      "development": [
+        "monotheism_and_gods_nature",
+        "uncategorized",
+        "creation_and_cosmology"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "prophecy_and_revelation": 1,
+      "uncategorized": 10,
+      "worship_and_ritual": 1,
+      "monotheism_and_gods_nature": 10,
+      "moral_law_and_ethics": 1,
+      "creation_and_cosmology": 4,
+      "social_law": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 62
+      },
+      {
+        "surah": 7,
+        "edge_count": 37
+      },
+      {
+        "surah": 3,
+        "edge_count": 27
+      },
+      {
+        "surah": 11,
+        "edge_count": 26
+      },
+      {
+        "surah": 37,
+        "edge_count": 24
+      },
+      {
+        "surah": 4,
+        "edge_count": 24
+      },
+      {
+        "surah": 23,
+        "edge_count": 22
+      },
+      {
+        "surah": 9,
+        "edge_count": 22
+      },
+      {
+        "surah": 12,
+        "edge_count": 21
+      },
+      {
+        "surah": 35,
+        "edge_count": 19
+      }
+    ]
+  },
+  "72": {
+    "surah": 72,
+    "name": "Jinns",
+    "num_verses": 28,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "uncategorized"
+    ],
+    "theme_diversity": 8,
+    "narrative_complexity": 19,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "prophecy_and_revelation",
+      "development": [
+        "monotheism_and_gods_nature",
+        "prophecy_and_revelation",
+        "uncategorized"
+      ],
+      "conclusion": "prophecy_and_revelation"
+    },
+    "category_distribution": {
+      "prophecy_and_revelation": 5,
+      "monotheism_and_gods_nature": 13,
+      "creation_and_cosmology": 2,
+      "afterlife_and_judgment": 1,
+      "uncategorized": 3,
+      "moral_law_and_ethics": 1,
+      "covenant_and_obedience": 1,
+      "mathematical_miracle": 2
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 37,
+        "edge_count": 52
+      },
+      {
+        "surah": 7,
+        "edge_count": 33
+      },
+      {
+        "surah": 26,
+        "edge_count": 30
+      },
+      {
+        "surah": 18,
+        "edge_count": 28
+      },
+      {
+        "surah": 16,
+        "edge_count": 26
+      },
+      {
+        "surah": 3,
+        "edge_count": 26
+      },
+      {
+        "surah": 21,
+        "edge_count": 25
+      },
+      {
+        "surah": 17,
+        "edge_count": 24
+      },
+      {
+        "surah": 20,
+        "edge_count": 23
+      },
+      {
+        "surah": 19,
+        "edge_count": 23
+      }
+    ]
+  },
+  "73": {
+    "surah": 73,
+    "name": "Cloaked",
+    "num_verses": 20,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "prophecy_and_revelation"
+    ],
+    "theme_diversity": 7,
+    "narrative_complexity": 13,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "afterlife_and_judgment",
+        "prophecy_and_revelation",
+        "uncategorized"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 5,
+      "creation_and_cosmology": 2,
+      "uncategorized": 2,
+      "prophecy_and_revelation": 4,
+      "moral_law_and_ethics": 1,
+      "afterlife_and_judgment": 5,
+      "divine_mercy_and_forgiveness": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 31
+      },
+      {
+        "surah": 7,
+        "edge_count": 29
+      },
+      {
+        "surah": 20,
+        "edge_count": 24
+      },
+      {
+        "surah": 26,
+        "edge_count": 22
+      },
+      {
+        "surah": 4,
+        "edge_count": 18
+      },
+      {
+        "surah": 17,
+        "edge_count": 18
+      },
+      {
+        "surah": 11,
+        "edge_count": 17
+      },
+      {
+        "surah": 69,
+        "edge_count": 15
+      },
+      {
+        "surah": 3,
+        "edge_count": 15
+      },
+      {
+        "surah": 8,
+        "edge_count": 15
+      }
+    ]
+  },
+  "74": {
+    "surah": 74,
+    "name": "The Hidden Secret",
+    "num_verses": 56,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "monotheism_and_gods_nature"
+    ],
+    "theme_diversity": 11,
+    "narrative_complexity": 37,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "afterlife_and_judgment",
+        "monotheism_and_gods_nature"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 29,
+      "monotheism_and_gods_nature": 7,
+      "prophetic_narratives": 2,
+      "afterlife_and_judgment": 8,
+      "social_law": 1,
+      "prophecy_and_revelation": 1,
+      "knowledge_and_wisdom": 1,
+      "creation_and_cosmology": 4,
+      "mathematical_miracle": 1,
+      "worship_and_ritual": 1,
+      "warfare_and_struggle": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 7,
+        "edge_count": 61
+      },
+      {
+        "surah": 2,
+        "edge_count": 60
+      },
+      {
+        "surah": 11,
+        "edge_count": 44
+      },
+      {
+        "surah": 3,
+        "edge_count": 42
+      },
+      {
+        "surah": 20,
+        "edge_count": 40
+      },
+      {
+        "surah": 6,
+        "edge_count": 38
+      },
+      {
+        "surah": 9,
+        "edge_count": 36
+      },
+      {
+        "surah": 26,
+        "edge_count": 35
+      },
+      {
+        "surah": 27,
+        "edge_count": 33
+      },
+      {
+        "surah": 18,
+        "edge_count": 33
+      }
+    ]
+  },
+  "75": {
+    "surah": 75,
+    "name": "Resurrection",
+    "num_verses": 40,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "creation_and_cosmology",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 8,
+    "narrative_complexity": 27,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "afterlife_and_judgment",
+        "creation_and_cosmology"
+      ],
+      "conclusion": "creation_and_cosmology"
+    },
+    "category_distribution": {
+      "afterlife_and_judgment": 7,
+      "uncategorized": 16,
+      "creation_and_cosmology": 8,
+      "monotheism_and_gods_nature": 3,
+      "prophecy_and_revelation": 3,
+      "worship_and_ritual": 1,
+      "covenant_and_obedience": 1,
+      "social_law": 1
+    },
+    "bridge_keywords": [
+      "create",
+      "make"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 50
+      },
+      {
+        "surah": 3,
+        "edge_count": 45
+      },
+      {
+        "surah": 6,
+        "edge_count": 44
+      },
+      {
+        "surah": 7,
+        "edge_count": 42
+      },
+      {
+        "surah": 18,
+        "edge_count": 41
+      },
+      {
+        "surah": 9,
+        "edge_count": 39
+      },
+      {
+        "surah": 4,
+        "edge_count": 39
+      },
+      {
+        "surah": 5,
+        "edge_count": 35
+      },
+      {
+        "surah": 22,
+        "edge_count": 33
+      },
+      {
+        "surah": 20,
+        "edge_count": 32
+      }
+    ]
+  },
+  "76": {
+    "surah": 76,
+    "name": "The Human",
+    "num_verses": 31,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 7,
+    "narrative_complexity": 19,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "creation_and_cosmology",
+      "development": [
+        "uncategorized",
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "creation_and_cosmology": 4,
+      "uncategorized": 9,
+      "afterlife_and_judgment": 6,
+      "monotheism_and_gods_nature": 8,
+      "worship_and_ritual": 2,
+      "moral_law_and_ethics": 1,
+      "prophecy_and_revelation": 1
+    },
+    "bridge_keywords": [
+      "create",
+      "make"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 37,
+        "edge_count": 61
+      },
+      {
+        "surah": 26,
+        "edge_count": 50
+      },
+      {
+        "surah": 56,
+        "edge_count": 50
+      },
+      {
+        "surah": 2,
+        "edge_count": 32
+      },
+      {
+        "surah": 7,
+        "edge_count": 25
+      },
+      {
+        "surah": 4,
+        "edge_count": 25
+      },
+      {
+        "surah": 43,
+        "edge_count": 20
+      },
+      {
+        "surah": 55,
+        "edge_count": 20
+      },
+      {
+        "surah": 38,
+        "edge_count": 19
+      },
+      {
+        "surah": 77,
+        "edge_count": 19
+      }
+    ]
+  },
+  "77": {
+    "surah": 77,
+    "name": "Dispatched",
+    "num_verses": 50,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "creation_and_cosmology"
+    ],
+    "theme_diversity": 8,
+    "narrative_complexity": 33,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "afterlife_and_judgment",
+        "creation_and_cosmology"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "prophecy_and_revelation": 3,
+      "uncategorized": 19,
+      "moral_law_and_ethics": 2,
+      "creation_and_cosmology": 6,
+      "afterlife_and_judgment": 16,
+      "covenant_and_obedience": 2,
+      "monotheism_and_gods_nature": 1,
+      "worship_and_ritual": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 37,
+        "edge_count": 58
+      },
+      {
+        "surah": 6,
+        "edge_count": 54
+      },
+      {
+        "surah": 2,
+        "edge_count": 50
+      },
+      {
+        "surah": 7,
+        "edge_count": 48
+      },
+      {
+        "surah": 21,
+        "edge_count": 48
+      },
+      {
+        "surah": 26,
+        "edge_count": 46
+      },
+      {
+        "surah": 43,
+        "edge_count": 44
+      },
+      {
+        "surah": 51,
+        "edge_count": 43
+      },
+      {
+        "surah": 25,
+        "edge_count": 41
+      },
+      {
+        "surah": 56,
+        "edge_count": 38
+      }
+    ]
+  },
+  "78": {
+    "surah": 78,
+    "name": "The Event",
+    "num_verses": 40,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "creation_and_cosmology",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 6,
+    "narrative_complexity": 18,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "creation_and_cosmology",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 16,
+      "creation_and_cosmology": 8,
+      "monotheism_and_gods_nature": 5,
+      "afterlife_and_judgment": 7,
+      "prophecy_and_revelation": 2,
+      "moral_law_and_ethics": 2
+    },
+    "bridge_keywords": [
+      "angel",
+      "disbeliever",
+      "take"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 37,
+        "edge_count": 42
+      },
+      {
+        "surah": 2,
+        "edge_count": 39
+      },
+      {
+        "surah": 26,
+        "edge_count": 38
+      },
+      {
+        "surah": 18,
+        "edge_count": 37
+      },
+      {
+        "surah": 16,
+        "edge_count": 34
+      },
+      {
+        "surah": 6,
+        "edge_count": 32
+      },
+      {
+        "surah": 23,
+        "edge_count": 30
+      },
+      {
+        "surah": 7,
+        "edge_count": 29
+      },
+      {
+        "surah": 3,
+        "edge_count": 29
+      },
+      {
+        "surah": 39,
+        "edge_count": 29
+      }
+    ]
+  },
+  "79": {
+    "surah": 79,
+    "name": "The Snatchers",
+    "num_verses": 46,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "creation_and_cosmology"
+    ],
+    "theme_diversity": 8,
+    "narrative_complexity": 35,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "creation_and_cosmology",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "prophecy_and_revelation": 2,
+      "uncategorized": 17,
+      "monotheism_and_gods_nature": 9,
+      "afterlife_and_judgment": 6,
+      "covenant_and_obedience": 2,
+      "creation_and_cosmology": 7,
+      "prophetic_narratives": 2,
+      "knowledge_and_wisdom": 1
+    },
+    "bridge_keywords": [
+      "angel",
+      "disbeliever",
+      "muhammad",
+      "take"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 51
+      },
+      {
+        "surah": 2,
+        "edge_count": 50
+      },
+      {
+        "surah": 20,
+        "edge_count": 45
+      },
+      {
+        "surah": 7,
+        "edge_count": 38
+      },
+      {
+        "surah": 23,
+        "edge_count": 35
+      },
+      {
+        "surah": 36,
+        "edge_count": 33
+      },
+      {
+        "surah": 37,
+        "edge_count": 32
+      },
+      {
+        "surah": 11,
+        "edge_count": 32
+      },
+      {
+        "surah": 18,
+        "edge_count": 31
+      },
+      {
+        "surah": 17,
+        "edge_count": 30
+      }
+    ]
+  },
+  "80": {
+    "surah": 80,
+    "name": "He Frowned",
+    "num_verses": 42,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "creation_and_cosmology",
+      "social_law"
+    ],
+    "theme_diversity": 7,
+    "narrative_complexity": 25,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "creation_and_cosmology",
+        "monotheism_and_gods_nature"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "uncategorized": 24,
+      "social_law": 3,
+      "prophecy_and_revelation": 3,
+      "monotheism_and_gods_nature": 3,
+      "moral_law_and_ethics": 1,
+      "creation_and_cosmology": 6,
+      "afterlife_and_judgment": 2
+    },
+    "bridge_keywords": [
+      "muhammad"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 49
+      },
+      {
+        "surah": 6,
+        "edge_count": 45
+      },
+      {
+        "surah": 23,
+        "edge_count": 40
+      },
+      {
+        "surah": 16,
+        "edge_count": 38
+      },
+      {
+        "surah": 12,
+        "edge_count": 37
+      },
+      {
+        "surah": 7,
+        "edge_count": 36
+      },
+      {
+        "surah": 36,
+        "edge_count": 34
+      },
+      {
+        "surah": 25,
+        "edge_count": 31
+      },
+      {
+        "surah": 3,
+        "edge_count": 28
+      },
+      {
+        "surah": 21,
+        "edge_count": 28
+      }
+    ]
+  },
+  "81": {
+    "surah": 81,
+    "name": "The Rolling",
+    "num_verses": 29,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "creation_and_cosmology",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 7,
+    "narrative_complexity": 15,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "creation_and_cosmology",
+      "development": [
+        "uncategorized",
+        "afterlife_and_judgment",
+        "creation_and_cosmology"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "creation_and_cosmology": 4,
+      "uncategorized": 14,
+      "warfare_and_struggle": 1,
+      "afterlife_and_judgment": 4,
+      "prophecy_and_revelation": 2,
+      "monotheism_and_gods_nature": 2,
+      "covenant_and_obedience": 2
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 7,
+        "edge_count": 35
+      },
+      {
+        "surah": 3,
+        "edge_count": 34
+      },
+      {
+        "surah": 26,
+        "edge_count": 34
+      },
+      {
+        "surah": 6,
+        "edge_count": 29
+      },
+      {
+        "surah": 4,
+        "edge_count": 27
+      },
+      {
+        "surah": 17,
+        "edge_count": 25
+      },
+      {
+        "surah": 18,
+        "edge_count": 22
+      },
+      {
+        "surah": 21,
+        "edge_count": 22
+      },
+      {
+        "surah": 16,
+        "edge_count": 22
+      },
+      {
+        "surah": 20,
+        "edge_count": 22
+      }
+    ]
+  },
+  "82": {
+    "surah": 82,
+    "name": "The Shattering",
+    "num_verses": 19,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "monotheism_and_gods_nature"
+    ],
+    "theme_diversity": 5,
+    "narrative_complexity": 12,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "afterlife_and_judgment",
+      "development": [
+        "uncategorized",
+        "afterlife_and_judgment",
+        "monotheism_and_gods_nature"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "afterlife_and_judgment": 6,
+      "uncategorized": 7,
+      "monotheism_and_gods_nature": 4,
+      "covenant_and_obedience": 1,
+      "moral_law_and_ethics": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 21
+      },
+      {
+        "surah": 40,
+        "edge_count": 21
+      },
+      {
+        "surah": 26,
+        "edge_count": 21
+      },
+      {
+        "surah": 6,
+        "edge_count": 19
+      },
+      {
+        "surah": 11,
+        "edge_count": 18
+      },
+      {
+        "surah": 37,
+        "edge_count": 16
+      },
+      {
+        "surah": 21,
+        "edge_count": 16
+      },
+      {
+        "surah": 7,
+        "edge_count": 15
+      },
+      {
+        "surah": 38,
+        "edge_count": 15
+      },
+      {
+        "surah": 51,
+        "edge_count": 15
+      }
+    ]
+  },
+  "83": {
+    "surah": 83,
+    "name": "The Cheaters",
+    "num_verses": 36,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 7,
+    "narrative_complexity": 20,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "prophecy_and_revelation",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "uncategorized": 20,
+      "moral_law_and_ethics": 2,
+      "afterlife_and_judgment": 4,
+      "monotheism_and_gods_nature": 2,
+      "prophecy_and_revelation": 5,
+      "covenant_and_obedience": 2,
+      "social_law": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 37,
+        "edge_count": 63
+      },
+      {
+        "surah": 26,
+        "edge_count": 57
+      },
+      {
+        "surah": 7,
+        "edge_count": 40
+      },
+      {
+        "surah": 2,
+        "edge_count": 33
+      },
+      {
+        "surah": 55,
+        "edge_count": 33
+      },
+      {
+        "surah": 77,
+        "edge_count": 31
+      },
+      {
+        "surah": 11,
+        "edge_count": 31
+      },
+      {
+        "surah": 6,
+        "edge_count": 30
+      },
+      {
+        "surah": 56,
+        "edge_count": 30
+      },
+      {
+        "surah": 20,
+        "edge_count": 28
+      }
+    ]
+  },
+  "84": {
+    "surah": 84,
+    "name": "The Rupture",
+    "num_verses": 25,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "uncategorized",
+      "creation_and_cosmology"
+    ],
+    "theme_diversity": 7,
+    "narrative_complexity": 21,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "creation_and_cosmology",
+      "development": [
+        "uncategorized",
+        "monotheism_and_gods_nature",
+        "creation_and_cosmology"
+      ],
+      "conclusion": "afterlife_and_judgment"
+    },
+    "category_distribution": {
+      "creation_and_cosmology": 4,
+      "monotheism_and_gods_nature": 7,
+      "uncategorized": 6,
+      "afterlife_and_judgment": 4,
+      "covenant_and_obedience": 2,
+      "prophecy_and_revelation": 1,
+      "moral_law_and_ethics": 1
+    },
+    "bridge_keywords": [
+      "promise"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 41
+      },
+      {
+        "surah": 3,
+        "edge_count": 39
+      },
+      {
+        "surah": 7,
+        "edge_count": 29
+      },
+      {
+        "surah": 6,
+        "edge_count": 26
+      },
+      {
+        "surah": 20,
+        "edge_count": 22
+      },
+      {
+        "surah": 37,
+        "edge_count": 21
+      },
+      {
+        "surah": 36,
+        "edge_count": 19
+      },
+      {
+        "surah": 17,
+        "edge_count": 19
+      },
+      {
+        "surah": 16,
+        "edge_count": 19
+      },
+      {
+        "surah": 4,
+        "edge_count": 19
+      }
+    ]
+  },
+  "85": {
+    "surah": 85,
+    "name": "The Galaxies",
+    "num_verses": 22,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 9,
+    "narrative_complexity": 18,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "creation_and_cosmology",
+      "development": [
+        "uncategorized",
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "prophecy_and_revelation"
+    },
+    "category_distribution": {
+      "creation_and_cosmology": 2,
+      "afterlife_and_judgment": 3,
+      "social_law": 1,
+      "uncategorized": 6,
+      "monotheism_and_gods_nature": 5,
+      "moral_law_and_ethics": 2,
+      "prophetic_narratives": 1,
+      "covenant_and_obedience": 1,
+      "prophecy_and_revelation": 1
+    },
+    "bridge_keywords": [
+      "promise"
+    ],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 24
+      },
+      {
+        "surah": 3,
+        "edge_count": 20
+      },
+      {
+        "surah": 7,
+        "edge_count": 20
+      },
+      {
+        "surah": 36,
+        "edge_count": 18
+      },
+      {
+        "surah": 40,
+        "edge_count": 18
+      },
+      {
+        "surah": 4,
+        "edge_count": 18
+      },
+      {
+        "surah": 37,
+        "edge_count": 18
+      },
+      {
+        "surah": 2,
+        "edge_count": 16
+      },
+      {
+        "surah": 9,
+        "edge_count": 16
+      },
+      {
+        "surah": 27,
+        "edge_count": 15
+      }
+    ]
+  },
+  "86": {
+    "surah": 86,
+    "name": "The Bright Star",
+    "num_verses": 17,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "creation_and_cosmology",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 3,
+    "narrative_complexity": 9,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "creation_and_cosmology",
+      "development": [
+        "uncategorized",
+        "creation_and_cosmology",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "creation_and_cosmology": 6,
+      "uncategorized": 10,
+      "afterlife_and_judgment": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 16,
+        "edge_count": 16
+      },
+      {
+        "surah": 6,
+        "edge_count": 15
+      },
+      {
+        "surah": 15,
+        "edge_count": 14
+      },
+      {
+        "surah": 17,
+        "edge_count": 11
+      },
+      {
+        "surah": 37,
+        "edge_count": 10
+      },
+      {
+        "surah": 3,
+        "edge_count": 10
+      },
+      {
+        "surah": 2,
+        "edge_count": 9
+      },
+      {
+        "surah": 7,
+        "edge_count": 9
+      },
+      {
+        "surah": 50,
+        "edge_count": 9
+      },
+      {
+        "surah": 18,
+        "edge_count": 9
+      }
+    ]
+  },
+  "87": {
+    "surah": 87,
+    "name": "The Most High",
+    "num_verses": 19,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 7,
+    "narrative_complexity": 11,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "uncategorized",
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "prophetic_narratives"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 4,
+      "creation_and_cosmology": 1,
+      "uncategorized": 9,
+      "prophecy_and_revelation": 1,
+      "worship_and_ritual": 1,
+      "afterlife_and_judgment": 2,
+      "prophetic_narratives": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 40
+      },
+      {
+        "surah": 6,
+        "edge_count": 31
+      },
+      {
+        "surah": 7,
+        "edge_count": 29
+      },
+      {
+        "surah": 20,
+        "edge_count": 27
+      },
+      {
+        "surah": 3,
+        "edge_count": 24
+      },
+      {
+        "surah": 9,
+        "edge_count": 22
+      },
+      {
+        "surah": 37,
+        "edge_count": 16
+      },
+      {
+        "surah": 23,
+        "edge_count": 16
+      },
+      {
+        "surah": 4,
+        "edge_count": 16
+      },
+      {
+        "surah": 16,
+        "edge_count": 15
+      }
+    ]
+  },
+  "88": {
+    "surah": 88,
+    "name": "Overwhelming",
+    "num_verses": 26,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "creation_and_cosmology"
+    ],
+    "theme_diversity": 6,
+    "narrative_complexity": 12,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "knowledge_and_wisdom",
+      "development": [
+        "uncategorized",
+        "creation_and_cosmology",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "knowledge_and_wisdom": 1,
+      "afterlife_and_judgment": 4,
+      "uncategorized": 15,
+      "creation_and_cosmology": 4,
+      "covenant_and_obedience": 1,
+      "monotheism_and_gods_nature": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 28
+      },
+      {
+        "surah": 16,
+        "edge_count": 21
+      },
+      {
+        "surah": 2,
+        "edge_count": 21
+      },
+      {
+        "surah": 3,
+        "edge_count": 21
+      },
+      {
+        "surah": 76,
+        "edge_count": 17
+      },
+      {
+        "surah": 56,
+        "edge_count": 17
+      },
+      {
+        "surah": 37,
+        "edge_count": 16
+      },
+      {
+        "surah": 15,
+        "edge_count": 15
+      },
+      {
+        "surah": 25,
+        "edge_count": 14
+      },
+      {
+        "surah": 36,
+        "edge_count": 14
+      }
+    ]
+  },
+  "89": {
+    "surah": 89,
+    "name": "Dawn",
+    "num_verses": 30,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "moral_law_and_ethics"
+    ],
+    "theme_diversity": 7,
+    "narrative_complexity": 20,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "monotheism_and_gods_nature",
+        "uncategorized",
+        "moral_law_and_ethics"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 9,
+      "creation_and_cosmology": 3,
+      "monotheism_and_gods_nature": 9,
+      "prophetic_narratives": 1,
+      "covenant_and_obedience": 1,
+      "moral_law_and_ethics": 4,
+      "afterlife_and_judgment": 3
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 42
+      },
+      {
+        "surah": 4,
+        "edge_count": 36
+      },
+      {
+        "surah": 7,
+        "edge_count": 27
+      },
+      {
+        "surah": 20,
+        "edge_count": 22
+      },
+      {
+        "surah": 26,
+        "edge_count": 22
+      },
+      {
+        "surah": 17,
+        "edge_count": 21
+      },
+      {
+        "surah": 3,
+        "edge_count": 21
+      },
+      {
+        "surah": 11,
+        "edge_count": 19
+      },
+      {
+        "surah": 37,
+        "edge_count": 18
+      },
+      {
+        "surah": 33,
+        "edge_count": 18
+      }
+    ]
+  },
+  "90": {
+    "surah": 90,
+    "name": "The Town",
+    "num_verses": 20,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "creation_and_cosmology"
+    ],
+    "theme_diversity": 5,
+    "narrative_complexity": 13,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "monotheism_and_gods_nature",
+        "creation_and_cosmology"
+      ],
+      "conclusion": "prophecy_and_revelation"
+    },
+    "category_distribution": {
+      "uncategorized": 13,
+      "creation_and_cosmology": 1,
+      "monotheism_and_gods_nature": 4,
+      "moral_law_and_ethics": 1,
+      "prophecy_and_revelation": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 3,
+        "edge_count": 28
+      },
+      {
+        "surah": 2,
+        "edge_count": 26
+      },
+      {
+        "surah": 18,
+        "edge_count": 24
+      },
+      {
+        "surah": 4,
+        "edge_count": 23
+      },
+      {
+        "surah": 16,
+        "edge_count": 22
+      },
+      {
+        "surah": 9,
+        "edge_count": 19
+      },
+      {
+        "surah": 7,
+        "edge_count": 17
+      },
+      {
+        "surah": 23,
+        "edge_count": 17
+      },
+      {
+        "surah": 37,
+        "edge_count": 17
+      },
+      {
+        "surah": 55,
+        "edge_count": 17
+      }
+    ]
+  },
+  "91": {
+    "surah": 91,
+    "name": "The Sun",
+    "num_verses": 15,
+    "primary_theme": "creation_and_cosmology",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "covenant_and_obedience"
+    ],
+    "theme_diversity": 6,
+    "narrative_complexity": 7,
+    "thematic_center": "creation_and_cosmology",
+    "narrative_arc": {
+      "opening": "creation_and_cosmology",
+      "development": [
+        "creation_and_cosmology",
+        "monotheism_and_gods_nature",
+        "covenant_and_obedience"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "creation_and_cosmology": 6,
+      "prophecy_and_revelation": 1,
+      "moral_law_and_ethics": 1,
+      "monotheism_and_gods_nature": 4,
+      "covenant_and_obedience": 2,
+      "uncategorized": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 7,
+        "edge_count": 17
+      },
+      {
+        "surah": 9,
+        "edge_count": 17
+      },
+      {
+        "surah": 11,
+        "edge_count": 16
+      },
+      {
+        "surah": 21,
+        "edge_count": 11
+      },
+      {
+        "surah": 2,
+        "edge_count": 11
+      },
+      {
+        "surah": 23,
+        "edge_count": 11
+      },
+      {
+        "surah": 20,
+        "edge_count": 11
+      },
+      {
+        "surah": 18,
+        "edge_count": 10
+      },
+      {
+        "surah": 26,
+        "edge_count": 10
+      },
+      {
+        "surah": 6,
+        "edge_count": 9
+      }
+    ]
+  },
+  "92": {
+    "surah": 92,
+    "name": "The Night",
+    "num_verses": 21,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "moral_law_and_ethics",
+      "prophecy_and_revelation"
+    ],
+    "theme_diversity": 7,
+    "narrative_complexity": 14,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "creation_and_cosmology",
+      "development": [
+        "uncategorized",
+        "moral_law_and_ethics",
+        "prophecy_and_revelation"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "creation_and_cosmology": 2,
+      "prophecy_and_revelation": 3,
+      "moral_law_and_ethics": 4,
+      "uncategorized": 9,
+      "afterlife_and_judgment": 1,
+      "covenant_and_obedience": 1,
+      "monotheism_and_gods_nature": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 48
+      },
+      {
+        "surah": 3,
+        "edge_count": 30
+      },
+      {
+        "surah": 7,
+        "edge_count": 23
+      },
+      {
+        "surah": 4,
+        "edge_count": 23
+      },
+      {
+        "surah": 23,
+        "edge_count": 22
+      },
+      {
+        "surah": 18,
+        "edge_count": 17
+      },
+      {
+        "surah": 6,
+        "edge_count": 16
+      },
+      {
+        "surah": 16,
+        "edge_count": 16
+      },
+      {
+        "surah": 9,
+        "edge_count": 16
+      },
+      {
+        "surah": 21,
+        "edge_count": 15
+      }
+    ]
+  },
+  "93": {
+    "surah": 93,
+    "name": "The Forenoon",
+    "num_verses": 11,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "moral_law_and_ethics"
+    ],
+    "theme_diversity": 5,
+    "narrative_complexity": 9,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "monotheism_and_gods_nature",
+        "moral_law_and_ethics"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 4,
+      "creation_and_cosmology": 1,
+      "monotheism_and_gods_nature": 3,
+      "afterlife_and_judgment": 1,
+      "moral_law_and_ethics": 2
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 20
+      },
+      {
+        "surah": 4,
+        "edge_count": 15
+      },
+      {
+        "surah": 3,
+        "edge_count": 13
+      },
+      {
+        "surah": 7,
+        "edge_count": 13
+      },
+      {
+        "surah": 20,
+        "edge_count": 12
+      },
+      {
+        "surah": 18,
+        "edge_count": 10
+      },
+      {
+        "surah": 16,
+        "edge_count": 9
+      },
+      {
+        "surah": 17,
+        "edge_count": 9
+      },
+      {
+        "surah": 26,
+        "edge_count": 9
+      },
+      {
+        "surah": 11,
+        "edge_count": 9
+      }
+    ]
+  },
+  "94": {
+    "surah": 94,
+    "name": "Cooling the Temper",
+    "num_verses": 8,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "warfare_and_struggle"
+    ],
+    "theme_diversity": 3,
+    "narrative_complexity": 4,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "monotheism_and_gods_nature",
+        "warfare_and_struggle"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 5,
+      "monotheism_and_gods_nature": 2,
+      "warfare_and_struggle": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 9,
+        "edge_count": 18
+      },
+      {
+        "surah": 2,
+        "edge_count": 13
+      },
+      {
+        "surah": 17,
+        "edge_count": 9
+      },
+      {
+        "surah": 4,
+        "edge_count": 9
+      },
+      {
+        "surah": 7,
+        "edge_count": 8
+      },
+      {
+        "surah": 6,
+        "edge_count": 7
+      },
+      {
+        "surah": 20,
+        "edge_count": 6
+      },
+      {
+        "surah": 23,
+        "edge_count": 6
+      },
+      {
+        "surah": 3,
+        "edge_count": 6
+      },
+      {
+        "surah": 5,
+        "edge_count": 6
+      }
+    ]
+  },
+  "95": {
+    "surah": 95,
+    "name": "The Fig",
+    "num_verses": 8,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "creation_and_cosmology",
+      "moral_law_and_ethics"
+    ],
+    "theme_diversity": 5,
+    "narrative_complexity": 5,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "creation_and_cosmology",
+        "moral_law_and_ethics"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 4,
+      "creation_and_cosmology": 1,
+      "moral_law_and_ethics": 1,
+      "covenant_and_obedience": 1,
+      "monotheism_and_gods_nature": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 6,
+        "edge_count": 12
+      },
+      {
+        "surah": 2,
+        "edge_count": 10
+      },
+      {
+        "surah": 7,
+        "edge_count": 10
+      },
+      {
+        "surah": 3,
+        "edge_count": 10
+      },
+      {
+        "surah": 4,
+        "edge_count": 9
+      },
+      {
+        "surah": 29,
+        "edge_count": 7
+      },
+      {
+        "surah": 37,
+        "edge_count": 7
+      },
+      {
+        "surah": 19,
+        "edge_count": 6
+      },
+      {
+        "surah": 23,
+        "edge_count": 6
+      },
+      {
+        "surah": 27,
+        "edge_count": 6
+      }
+    ]
+  },
+  "96": {
+    "surah": 96,
+    "name": "The Embryo",
+    "num_verses": 19,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "uncategorized",
+      "covenant_and_obedience"
+    ],
+    "theme_diversity": 8,
+    "narrative_complexity": 17,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "uncategorized",
+        "monotheism_and_gods_nature",
+        "covenant_and_obedience"
+      ],
+      "conclusion": "worship_and_ritual"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 5,
+      "creation_and_cosmology": 2,
+      "knowledge_and_wisdom": 1,
+      "social_law": 1,
+      "uncategorized": 5,
+      "covenant_and_obedience": 3,
+      "afterlife_and_judgment": 1,
+      "worship_and_ritual": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 39
+      },
+      {
+        "surah": 17,
+        "edge_count": 30
+      },
+      {
+        "surah": 3,
+        "edge_count": 29
+      },
+      {
+        "surah": 7,
+        "edge_count": 27
+      },
+      {
+        "surah": 18,
+        "edge_count": 20
+      },
+      {
+        "surah": 4,
+        "edge_count": 18
+      },
+      {
+        "surah": 11,
+        "edge_count": 16
+      },
+      {
+        "surah": 20,
+        "edge_count": 16
+      },
+      {
+        "surah": 9,
+        "edge_count": 16
+      },
+      {
+        "surah": 26,
+        "edge_count": 16
+      }
+    ]
+  },
+  "97": {
+    "surah": 97,
+    "name": "Destiny",
+    "num_verses": 5,
+    "primary_theme": "creation_and_cosmology",
+    "secondary_themes": [
+      "prophecy_and_revelation",
+      "monotheism_and_gods_nature"
+    ],
+    "theme_diversity": 4,
+    "narrative_complexity": 3,
+    "thematic_center": "creation_and_cosmology",
+    "narrative_arc": {
+      "opening": "prophecy_and_revelation",
+      "development": [
+        "creation_and_cosmology",
+        "monotheism_and_gods_nature"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "prophecy_and_revelation": 1,
+      "creation_and_cosmology": 2,
+      "monotheism_and_gods_nature": 1,
+      "uncategorized": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 11
+      },
+      {
+        "surah": 38,
+        "edge_count": 8
+      },
+      {
+        "surah": 13,
+        "edge_count": 7
+      },
+      {
+        "surah": 3,
+        "edge_count": 6
+      },
+      {
+        "surah": 26,
+        "edge_count": 6
+      },
+      {
+        "surah": 37,
+        "edge_count": 4
+      },
+      {
+        "surah": 25,
+        "edge_count": 4
+      },
+      {
+        "surah": 67,
+        "edge_count": 3
+      },
+      {
+        "surah": 24,
+        "edge_count": 3
+      },
+      {
+        "surah": 41,
+        "edge_count": 3
+      }
+    ]
+  },
+  "98": {
+    "surah": 98,
+    "name": "Proof",
+    "num_verses": 8,
+    "primary_theme": "prophecy_and_revelation",
+    "secondary_themes": [
+      "uncategorized",
+      "worship_and_ritual"
+    ],
+    "theme_diversity": 5,
+    "narrative_complexity": 6,
+    "thematic_center": "prophecy_and_revelation",
+    "narrative_arc": {
+      "opening": "prophecy_and_revelation",
+      "development": [
+        "prophecy_and_revelation",
+        "uncategorized",
+        "worship_and_ritual"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "prophecy_and_revelation": 4,
+      "uncategorized": 1,
+      "worship_and_ritual": 1,
+      "moral_law_and_ethics": 1,
+      "monotheism_and_gods_nature": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 23
+      },
+      {
+        "surah": 9,
+        "edge_count": 16
+      },
+      {
+        "surah": 3,
+        "edge_count": 15
+      },
+      {
+        "surah": 37,
+        "edge_count": 15
+      },
+      {
+        "surah": 4,
+        "edge_count": 11
+      },
+      {
+        "surah": 18,
+        "edge_count": 10
+      },
+      {
+        "surah": 39,
+        "edge_count": 10
+      },
+      {
+        "surah": 8,
+        "edge_count": 9
+      },
+      {
+        "surah": 5,
+        "edge_count": 8
+      },
+      {
+        "surah": 23,
+        "edge_count": 7
+      }
+    ]
+  },
+  "99": {
+    "surah": 99,
+    "name": "The Quake",
+    "num_verses": 8,
+    "primary_theme": "creation_and_cosmology",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "moral_law_and_ethics"
+    ],
+    "theme_diversity": 4,
+    "narrative_complexity": 4,
+    "thematic_center": "creation_and_cosmology",
+    "narrative_arc": {
+      "opening": "creation_and_cosmology",
+      "development": [
+        "creation_and_cosmology",
+        "afterlife_and_judgment",
+        "monotheism_and_gods_nature"
+      ],
+      "conclusion": "moral_law_and_ethics"
+    },
+    "category_distribution": {
+      "creation_and_cosmology": 3,
+      "afterlife_and_judgment": 2,
+      "monotheism_and_gods_nature": 1,
+      "moral_law_and_ethics": 2
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 7,
+        "edge_count": 18
+      },
+      {
+        "surah": 2,
+        "edge_count": 15
+      },
+      {
+        "surah": 12,
+        "edge_count": 12
+      },
+      {
+        "surah": 27,
+        "edge_count": 10
+      },
+      {
+        "surah": 4,
+        "edge_count": 10
+      },
+      {
+        "surah": 18,
+        "edge_count": 10
+      },
+      {
+        "surah": 10,
+        "edge_count": 10
+      },
+      {
+        "surah": 20,
+        "edge_count": 9
+      },
+      {
+        "surah": 16,
+        "edge_count": 9
+      },
+      {
+        "surah": 11,
+        "edge_count": 9
+      }
+    ]
+  },
+  "100": {
+    "surah": 100,
+    "name": "The Gallopers",
+    "num_verses": 11,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "worship_and_ritual"
+    ],
+    "theme_diversity": 6,
+    "narrative_complexity": 9,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "worship_and_ritual",
+      "development": [
+        "uncategorized",
+        "warfare_and_struggle",
+        "monotheism_and_gods_nature"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "worship_and_ritual": 1,
+      "uncategorized": 5,
+      "warfare_and_struggle": 1,
+      "monotheism_and_gods_nature": 2,
+      "social_law": 1,
+      "afterlife_and_judgment": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 19
+      },
+      {
+        "surah": 3,
+        "edge_count": 13
+      },
+      {
+        "surah": 4,
+        "edge_count": 11
+      },
+      {
+        "surah": 9,
+        "edge_count": 11
+      },
+      {
+        "surah": 5,
+        "edge_count": 9
+      },
+      {
+        "surah": 11,
+        "edge_count": 9
+      },
+      {
+        "surah": 17,
+        "edge_count": 9
+      },
+      {
+        "surah": 43,
+        "edge_count": 8
+      },
+      {
+        "surah": 6,
+        "edge_count": 8
+      },
+      {
+        "surah": 22,
+        "edge_count": 7
+      }
+    ]
+  },
+  "101": {
+    "surah": 101,
+    "name": "The Shocker",
+    "num_verses": 11,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 4,
+    "narrative_complexity": 5,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "monotheism_and_gods_nature",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "uncategorized": 7,
+      "afterlife_and_judgment": 1,
+      "creation_and_cosmology": 1,
+      "monotheism_and_gods_nature": 2
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 18,
+        "edge_count": 11
+      },
+      {
+        "surah": 23,
+        "edge_count": 9
+      },
+      {
+        "surah": 7,
+        "edge_count": 7
+      },
+      {
+        "surah": 2,
+        "edge_count": 7
+      },
+      {
+        "surah": 3,
+        "edge_count": 7
+      },
+      {
+        "surah": 69,
+        "edge_count": 6
+      },
+      {
+        "surah": 41,
+        "edge_count": 6
+      },
+      {
+        "surah": 20,
+        "edge_count": 6
+      },
+      {
+        "surah": 11,
+        "edge_count": 6
+      },
+      {
+        "surah": 16,
+        "edge_count": 5
+      }
+    ]
+  },
+  "102": {
+    "surah": 102,
+    "name": "Hoarding",
+    "num_verses": 8,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "afterlife_and_judgment"
+    ],
+    "theme_diversity": 2,
+    "narrative_complexity": 3,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "afterlife_and_judgment"
+      ],
+      "conclusion": "afterlife_and_judgment"
+    },
+    "category_distribution": {
+      "uncategorized": 6,
+      "afterlife_and_judgment": 2
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 26,
+        "edge_count": 10
+      },
+      {
+        "surah": 15,
+        "edge_count": 7
+      },
+      {
+        "surah": 16,
+        "edge_count": 7
+      },
+      {
+        "surah": 7,
+        "edge_count": 5
+      },
+      {
+        "surah": 9,
+        "edge_count": 5
+      },
+      {
+        "surah": 21,
+        "edge_count": 5
+      },
+      {
+        "surah": 36,
+        "edge_count": 5
+      },
+      {
+        "surah": 27,
+        "edge_count": 5
+      },
+      {
+        "surah": 45,
+        "edge_count": 4
+      },
+      {
+        "surah": 70,
+        "edge_count": 4
+      }
+    ]
+  },
+  "103": {
+    "surah": 103,
+    "name": "The Afternoon",
+    "num_verses": 3,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "creation_and_cosmology",
+      "moral_law_and_ethics"
+    ],
+    "theme_diversity": 3,
+    "narrative_complexity": 2,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "creation_and_cosmology"
+      ],
+      "conclusion": "moral_law_and_ethics"
+    },
+    "category_distribution": {
+      "uncategorized": 1,
+      "creation_and_cosmology": 1,
+      "moral_law_and_ethics": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 6,
+        "edge_count": 4
+      },
+      {
+        "surah": 37,
+        "edge_count": 4
+      },
+      {
+        "surah": 12,
+        "edge_count": 3
+      },
+      {
+        "surah": 39,
+        "edge_count": 3
+      },
+      {
+        "surah": 78,
+        "edge_count": 2
+      },
+      {
+        "surah": 7,
+        "edge_count": 2
+      },
+      {
+        "surah": 23,
+        "edge_count": 2
+      },
+      {
+        "surah": 27,
+        "edge_count": 2
+      },
+      {
+        "surah": 19,
+        "edge_count": 2
+      },
+      {
+        "surah": 26,
+        "edge_count": 2
+      }
+    ]
+  },
+  "104": {
+    "surah": 104,
+    "name": "The Backbiter",
+    "num_verses": 9,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "mathematical_miracle",
+      "monotheism_and_gods_nature"
+    ],
+    "theme_diversity": 3,
+    "narrative_complexity": 4,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "mathematical_miracle",
+        "monotheism_and_gods_nature"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "uncategorized": 7,
+      "mathematical_miracle": 1,
+      "monotheism_and_gods_nature": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 77,
+        "edge_count": 11
+      },
+      {
+        "surah": 3,
+        "edge_count": 8
+      },
+      {
+        "surah": 68,
+        "edge_count": 7
+      },
+      {
+        "surah": 26,
+        "edge_count": 7
+      },
+      {
+        "surah": 92,
+        "edge_count": 6
+      },
+      {
+        "surah": 51,
+        "edge_count": 5
+      },
+      {
+        "surah": 37,
+        "edge_count": 5
+      },
+      {
+        "surah": 9,
+        "edge_count": 5
+      },
+      {
+        "surah": 38,
+        "edge_count": 5
+      },
+      {
+        "surah": 40,
+        "edge_count": 5
+      }
+    ]
+  },
+  "105": {
+    "surah": 105,
+    "name": "The Elephant",
+    "num_verses": 5,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "prophecy_and_revelation"
+    ],
+    "theme_diversity": 3,
+    "narrative_complexity": 3,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "uncategorized",
+        "prophecy_and_revelation"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 1,
+      "uncategorized": 3,
+      "prophecy_and_revelation": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 27,
+        "edge_count": 9
+      },
+      {
+        "surah": 6,
+        "edge_count": 7
+      },
+      {
+        "surah": 56,
+        "edge_count": 6
+      },
+      {
+        "surah": 12,
+        "edge_count": 6
+      },
+      {
+        "surah": 4,
+        "edge_count": 5
+      },
+      {
+        "surah": 3,
+        "edge_count": 5
+      },
+      {
+        "surah": 7,
+        "edge_count": 4
+      },
+      {
+        "surah": 35,
+        "edge_count": 4
+      },
+      {
+        "surah": 19,
+        "edge_count": 4
+      },
+      {
+        "surah": 40,
+        "edge_count": 3
+      }
+    ]
+  },
+  "106": {
+    "surah": 106,
+    "name": "Quraish Tribe",
+    "num_verses": 4,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "worship_and_ritual",
+      "monotheism_and_gods_nature"
+    ],
+    "theme_diversity": 3,
+    "narrative_complexity": 2,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "worship_and_ritual"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "uncategorized": 2,
+      "worship_and_ritual": 1,
+      "monotheism_and_gods_nature": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 12,
+        "edge_count": 5
+      },
+      {
+        "surah": 6,
+        "edge_count": 5
+      },
+      {
+        "surah": 11,
+        "edge_count": 4
+      },
+      {
+        "surah": 2,
+        "edge_count": 4
+      },
+      {
+        "surah": 26,
+        "edge_count": 4
+      },
+      {
+        "surah": 9,
+        "edge_count": 3
+      },
+      {
+        "surah": 18,
+        "edge_count": 3
+      },
+      {
+        "surah": 4,
+        "edge_count": 3
+      },
+      {
+        "surah": 22,
+        "edge_count": 3
+      },
+      {
+        "surah": 3,
+        "edge_count": 3
+      }
+    ]
+  },
+  "107": {
+    "surah": 107,
+    "name": "Charity",
+    "num_verses": 7,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "worship_and_ritual",
+      "covenant_and_obedience"
+    ],
+    "theme_diversity": 5,
+    "narrative_complexity": 5,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "covenant_and_obedience",
+      "development": [
+        "uncategorized",
+        "worship_and_ritual",
+        "monotheism_and_gods_nature"
+      ],
+      "conclusion": "moral_law_and_ethics"
+    },
+    "category_distribution": {
+      "covenant_and_obedience": 1,
+      "monotheism_and_gods_nature": 1,
+      "uncategorized": 2,
+      "worship_and_ritual": 2,
+      "moral_law_and_ethics": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 26
+      },
+      {
+        "surah": 4,
+        "edge_count": 18
+      },
+      {
+        "surah": 3,
+        "edge_count": 14
+      },
+      {
+        "surah": 6,
+        "edge_count": 13
+      },
+      {
+        "surah": 23,
+        "edge_count": 12
+      },
+      {
+        "surah": 5,
+        "edge_count": 10
+      },
+      {
+        "surah": 7,
+        "edge_count": 10
+      },
+      {
+        "surah": 77,
+        "edge_count": 10
+      },
+      {
+        "surah": 10,
+        "edge_count": 8
+      },
+      {
+        "surah": 8,
+        "edge_count": 8
+      }
+    ]
+  },
+  "108": {
+    "surah": 108,
+    "name": "Bounty",
+    "num_verses": 3,
+    "primary_theme": "divine_mercy_and_forgiveness",
+    "secondary_themes": [
+      "monotheism_and_gods_nature",
+      "uncategorized"
+    ],
+    "theme_diversity": 3,
+    "narrative_complexity": 2,
+    "thematic_center": "divine_mercy_and_forgiveness",
+    "narrative_arc": {
+      "opening": "divine_mercy_and_forgiveness",
+      "development": [
+        "monotheism_and_gods_nature"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "divine_mercy_and_forgiveness": 1,
+      "monotheism_and_gods_nature": 1,
+      "uncategorized": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 12
+      },
+      {
+        "surah": 5,
+        "edge_count": 6
+      },
+      {
+        "surah": 9,
+        "edge_count": 6
+      },
+      {
+        "surah": 4,
+        "edge_count": 6
+      },
+      {
+        "surah": 19,
+        "edge_count": 5
+      },
+      {
+        "surah": 3,
+        "edge_count": 5
+      },
+      {
+        "surah": 7,
+        "edge_count": 5
+      },
+      {
+        "surah": 56,
+        "edge_count": 4
+      },
+      {
+        "surah": 17,
+        "edge_count": 4
+      },
+      {
+        "surah": 12,
+        "edge_count": 3
+      }
+    ]
+  },
+  "109": {
+    "surah": 109,
+    "name": "The Disbelievers",
+    "num_verses": 6,
+    "primary_theme": "worship_and_ritual",
+    "secondary_themes": [
+      "uncategorized"
+    ],
+    "theme_diversity": 2,
+    "narrative_complexity": 2,
+    "thematic_center": "worship_and_ritual",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "worship_and_ritual"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "uncategorized": 2,
+      "worship_and_ritual": 4
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 3,
+        "edge_count": 4
+      },
+      {
+        "surah": 2,
+        "edge_count": 4
+      },
+      {
+        "surah": 12,
+        "edge_count": 3
+      },
+      {
+        "surah": 30,
+        "edge_count": 3
+      },
+      {
+        "surah": 39,
+        "edge_count": 3
+      },
+      {
+        "surah": 9,
+        "edge_count": 3
+      },
+      {
+        "surah": 21,
+        "edge_count": 2
+      },
+      {
+        "surah": 42,
+        "edge_count": 2
+      },
+      {
+        "surah": 16,
+        "edge_count": 2
+      },
+      {
+        "surah": 10,
+        "edge_count": 2
+      }
+    ]
+  },
+  "110": {
+    "surah": 110,
+    "name": "Triumph",
+    "num_verses": 3,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [],
+    "theme_diversity": 1,
+    "narrative_complexity": 0,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 3
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 4,
+        "edge_count": 6
+      },
+      {
+        "surah": 2,
+        "edge_count": 5
+      },
+      {
+        "surah": 39,
+        "edge_count": 5
+      },
+      {
+        "surah": 23,
+        "edge_count": 4
+      },
+      {
+        "surah": 3,
+        "edge_count": 4
+      },
+      {
+        "surah": 37,
+        "edge_count": 4
+      },
+      {
+        "surah": 48,
+        "edge_count": 4
+      },
+      {
+        "surah": 30,
+        "edge_count": 4
+      },
+      {
+        "surah": 9,
+        "edge_count": 4
+      },
+      {
+        "surah": 10,
+        "edge_count": 3
+      }
+    ]
+  },
+  "111": {
+    "surah": 111,
+    "name": "Thorns",
+    "num_verses": 5,
+    "primary_theme": "uncategorized",
+    "secondary_themes": [
+      "afterlife_and_judgment",
+      "social_law"
+    ],
+    "theme_diversity": 3,
+    "narrative_complexity": 3,
+    "thematic_center": "uncategorized",
+    "narrative_arc": {
+      "opening": "uncategorized",
+      "development": [
+        "uncategorized",
+        "afterlife_and_judgment",
+        "social_law"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "uncategorized": 3,
+      "afterlife_and_judgment": 1,
+      "social_law": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 4,
+        "edge_count": 9
+      },
+      {
+        "surah": 7,
+        "edge_count": 7
+      },
+      {
+        "surah": 3,
+        "edge_count": 7
+      },
+      {
+        "surah": 19,
+        "edge_count": 5
+      },
+      {
+        "surah": 23,
+        "edge_count": 5
+      },
+      {
+        "surah": 26,
+        "edge_count": 5
+      },
+      {
+        "surah": 15,
+        "edge_count": 5
+      },
+      {
+        "surah": 5,
+        "edge_count": 4
+      },
+      {
+        "surah": 68,
+        "edge_count": 4
+      },
+      {
+        "surah": 17,
+        "edge_count": 3
+      }
+    ]
+  },
+  "112": {
+    "surah": 112,
+    "name": "Absoluteness",
+    "num_verses": 4,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "uncategorized"
+    ],
+    "theme_diversity": 2,
+    "narrative_complexity": 1,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "uncategorized"
+      ],
+      "conclusion": "uncategorized"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 2,
+      "uncategorized": 2
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 3,
+        "edge_count": 7
+      },
+      {
+        "surah": 2,
+        "edge_count": 6
+      },
+      {
+        "surah": 19,
+        "edge_count": 6
+      },
+      {
+        "surah": 17,
+        "edge_count": 5
+      },
+      {
+        "surah": 16,
+        "edge_count": 4
+      },
+      {
+        "surah": 39,
+        "edge_count": 4
+      },
+      {
+        "surah": 11,
+        "edge_count": 4
+      },
+      {
+        "surah": 21,
+        "edge_count": 4
+      },
+      {
+        "surah": 4,
+        "edge_count": 4
+      },
+      {
+        "surah": 43,
+        "edge_count": 3
+      }
+    ]
+  },
+  "113": {
+    "surah": 113,
+    "name": "Daybreak",
+    "num_verses": 5,
+    "primary_theme": "moral_law_and_ethics",
+    "secondary_themes": [
+      "monotheism_and_gods_nature"
+    ],
+    "theme_diversity": 2,
+    "narrative_complexity": 1,
+    "thematic_center": "moral_law_and_ethics",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "moral_law_and_ethics"
+      ],
+      "conclusion": "moral_law_and_ethics"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 1,
+      "moral_law_and_ethics": 4
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 40,
+        "edge_count": 5
+      },
+      {
+        "surah": 7,
+        "edge_count": 4
+      },
+      {
+        "surah": 18,
+        "edge_count": 4
+      },
+      {
+        "surah": 36,
+        "edge_count": 4
+      },
+      {
+        "surah": 9,
+        "edge_count": 3
+      },
+      {
+        "surah": 3,
+        "edge_count": 3
+      },
+      {
+        "surah": 28,
+        "edge_count": 3
+      },
+      {
+        "surah": 4,
+        "edge_count": 3
+      },
+      {
+        "surah": 23,
+        "edge_count": 3
+      },
+      {
+        "surah": 33,
+        "edge_count": 3
+      }
+    ]
+  },
+  "114": {
+    "surah": 114,
+    "name": "People",
+    "num_verses": 6,
+    "primary_theme": "monotheism_and_gods_nature",
+    "secondary_themes": [
+      "moral_law_and_ethics",
+      "uncategorized"
+    ],
+    "theme_diversity": 3,
+    "narrative_complexity": 3,
+    "thematic_center": "monotheism_and_gods_nature",
+    "narrative_arc": {
+      "opening": "monotheism_and_gods_nature",
+      "development": [
+        "monotheism_and_gods_nature",
+        "moral_law_and_ethics",
+        "uncategorized"
+      ],
+      "conclusion": "monotheism_and_gods_nature"
+    },
+    "category_distribution": {
+      "monotheism_and_gods_nature": 4,
+      "moral_law_and_ethics": 1,
+      "uncategorized": 1
+    },
+    "bridge_keywords": [],
+    "most_connected_surahs": [
+      {
+        "surah": 2,
+        "edge_count": 140
+      },
+      {
+        "surah": 4,
+        "edge_count": 71
+      },
+      {
+        "surah": 6,
+        "edge_count": 62
+      },
+      {
+        "surah": 3,
+        "edge_count": 61
+      },
+      {
+        "surah": 9,
+        "edge_count": 56
+      },
+      {
+        "surah": 7,
+        "edge_count": 56
+      },
+      {
+        "surah": 12,
+        "edge_count": 47
+      },
+      {
+        "surah": 5,
+        "edge_count": 41
+      },
+      {
+        "surah": 18,
+        "edge_count": 40
+      },
+      {
+        "surah": 17,
+        "edge_count": 37
+      }
+    ]
+  }
+}

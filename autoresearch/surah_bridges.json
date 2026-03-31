@@ -1,0 +1,3692 @@
+{
+  "1-2": {
+    "surah_a": 1,
+    "surah_b": 2,
+    "ending_theme_a": "divine_mercy_and_forgiveness",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 14,
+    "cross_edge_examples": [
+      {
+        "from": "1:1",
+        "to": "2:31",
+        "score": 0.59766
+      },
+      {
+        "from": "1:1",
+        "to": "2:224",
+        "score": 0.425533
+      },
+      {
+        "from": "1:1",
+        "to": "2:163",
+        "score": 0.669167
+      },
+      {
+        "from": "1:1",
+        "to": "2:33",
+        "score": 0.534259
+      },
+      {
+        "from": "1:2",
+        "to": "2:29",
+        "score": 0.480163
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "2-3": {
+    "surah_a": 2,
+    "surah_b": 3,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [
+      "disbelieve",
+      "earth",
+      "heaven",
+      "hide",
+      "scripture",
+      "send"
+    ],
+    "num_bridge_keywords": 6,
+    "cross_edges": 469,
+    "cross_edge_examples": [
+      {
+        "from": "2:2",
+        "to": "3:124",
+        "score": 0.397826
+      },
+      {
+        "from": "2:2",
+        "to": "3:41",
+        "score": 0.346346
+      },
+      {
+        "from": "2:2",
+        "to": "3:96",
+        "score": 0.402218
+      },
+      {
+        "from": "2:5",
+        "to": "3:104",
+        "score": 0.533176
+      },
+      {
+        "from": "2:8",
+        "to": "3:114",
+        "score": 0.523852
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "3-4": {
+    "surah_a": 3,
+    "surah_b": 4,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [
+      "give",
+      "may",
+      "observe"
+    ],
+    "num_bridge_keywords": 3,
+    "cross_edges": 246,
+    "cross_edge_examples": [
+      {
+        "from": "3:5",
+        "to": "4:42",
+        "score": 0.48055
+      },
+      {
+        "from": "3:5",
+        "to": "4:108",
+        "score": 0.588929
+      },
+      {
+        "from": "3:6",
+        "to": "4:165",
+        "score": 0.650706
+      },
+      {
+        "from": "3:6",
+        "to": "4:56",
+        "score": 0.562215
+      },
+      {
+        "from": "3:6",
+        "to": "4:158",
+        "score": 0.812272
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "4-5": {
+    "surah_a": 4,
+    "surah_b": 5,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "worship_and_ritual",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "commit",
+      "concern",
+      "consult",
+      "die",
+      "go",
+      "retribution",
+      "thing",
+      "woman"
+    ],
+    "num_bridge_keywords": 8,
+    "cross_edges": 211,
+    "cross_edge_examples": [
+      {
+        "from": "4:1",
+        "to": "5:23",
+        "score": 0.509888
+      },
+      {
+        "from": "4:1",
+        "to": "5:107",
+        "score": 0.487305
+      },
+      {
+        "from": "4:3",
+        "to": "5:21",
+        "score": 0.485029
+      },
+      {
+        "from": "4:4",
+        "to": "5:5",
+        "score": 0.711793
+      },
+      {
+        "from": "4:4",
+        "to": "5:45",
+        "score": 0.532183
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "5-6": {
+    "surah_a": 5,
+    "surah_b": 6,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [
+      "earth",
+      "everything",
+      "heaven",
+      "know",
+      "life",
+      "make",
+      "secret"
+    ],
+    "num_bridge_keywords": 7,
+    "cross_edges": 112,
+    "cross_edge_examples": [
+      {
+        "from": "5:1",
+        "to": "6:145",
+        "score": 0.398157
+      },
+      {
+        "from": "5:1",
+        "to": "6:138",
+        "score": 1.144036
+      },
+      {
+        "from": "5:1",
+        "to": "6:139",
+        "score": 0.803853
+      },
+      {
+        "from": "5:1",
+        "to": "6:142",
+        "score": 0.484837
+      },
+      {
+        "from": "5:3",
+        "to": "6:146",
+        "score": 0.602873
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "6-7": {
+    "surah_a": 6,
+    "surah_b": 7,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "afterlife_and_judgment",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "idol",
+      "retribution"
+    ],
+    "num_bridge_keywords": 2,
+    "cross_edges": 217,
+    "cross_edge_examples": [
+      {
+        "from": "6:1",
+        "to": "7:166",
+        "score": 0.389567
+      },
+      {
+        "from": "6:2",
+        "to": "7:34",
+        "score": 0.789322
+      },
+      {
+        "from": "6:2",
+        "to": "7:12",
+        "score": 0.40855
+      },
+      {
+        "from": "6:4",
+        "to": "7:132",
+        "score": 0.77527
+      },
+      {
+        "from": "6:5",
+        "to": "7:16",
+        "score": 0.490008
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "7-8": {
+    "surah_a": 7,
+    "surah_b": 8,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [
+      "attain",
+      "recite"
+    ],
+    "num_bridge_keywords": 2,
+    "cross_edges": 78,
+    "cross_edge_examples": [
+      {
+        "from": "7:2",
+        "to": "8:49",
+        "score": 0.666946
+      },
+      {
+        "from": "7:10",
+        "to": "8:26",
+        "score": 0.604481
+      },
+      {
+        "from": "7:18",
+        "to": "8:65",
+        "score": 0.411204
+      },
+      {
+        "from": "7:29",
+        "to": "8:39",
+        "score": 0.628583
+      },
+      {
+        "from": "7:30",
+        "to": "8:40",
+        "score": 0.467688
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "8-9": {
+    "surah_a": 8,
+    "surah_b": 9,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [
+      "disbelieve",
+      "earth",
+      "give",
+      "make",
+      "peace",
+      "sign",
+      "treaty"
+    ],
+    "num_bridge_keywords": 7,
+    "cross_edges": 107,
+    "cross_edge_examples": [
+      {
+        "from": "8:1",
+        "to": "9:71",
+        "score": 0.432191
+      },
+      {
+        "from": "8:2",
+        "to": "9:124",
+        "score": 0.794911
+      },
+      {
+        "from": "8:3",
+        "to": "9:54",
+        "score": 1.204881
+      },
+      {
+        "from": "8:3",
+        "to": "9:11",
+        "score": 1.292406
+      },
+      {
+        "from": "8:3",
+        "to": "9:18",
+        "score": 1.252304
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "10-11": {
+    "surah_a": 10,
+    "surah_b": 11,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [
+      "bestow",
+      "bless",
+      "except",
+      "good",
+      "grace",
+      "keep",
+      "proclaim",
+      "worship"
+    ],
+    "num_bridge_keywords": 8,
+    "cross_edges": 97,
+    "cross_edge_examples": [
+      {
+        "from": "10:3",
+        "to": "11:96",
+        "score": 0.409211
+      },
+      {
+        "from": "10:3",
+        "to": "11:123",
+        "score": 0.591702
+      },
+      {
+        "from": "10:8",
+        "to": "11:4",
+        "score": 0.531255
+      },
+      {
+        "from": "10:12",
+        "to": "11:37",
+        "score": 0.510509
+      },
+      {
+        "from": "10:12",
+        "to": "11:100",
+        "score": 0.551067
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "9-10": {
+    "surah_a": 9,
+    "surah_b": 10,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [
+      "disbeliever",
+      "heed",
+      "know",
+      "revelation",
+      "righteous",
+      "take",
+      "would",
+      "year"
+    ],
+    "num_bridge_keywords": 8,
+    "cross_edges": 58,
+    "cross_edge_examples": [
+      {
+        "from": "9:1",
+        "to": "10:109",
+        "score": 0.443731
+      },
+      {
+        "from": "9:3",
+        "to": "10:4",
+        "score": 0.440028
+      },
+      {
+        "from": "9:9",
+        "to": "10:88",
+        "score": 0.358538
+      },
+      {
+        "from": "9:11",
+        "to": "10:87",
+        "score": 0.951702
+      },
+      {
+        "from": "9:12",
+        "to": "10:105",
+        "score": 0.566085
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "11-12": {
+    "surah_a": 11,
+    "surah_b": 12,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "prophecy_and_revelation",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "history",
+      "narrate",
+      "unaware"
+    ],
+    "num_bridge_keywords": 3,
+    "cross_edges": 60,
+    "cross_edge_examples": [
+      {
+        "from": "11:1",
+        "to": "12:6",
+        "score": 0.592069
+      },
+      {
+        "from": "11:2",
+        "to": "12:96",
+        "score": 0.689733
+      },
+      {
+        "from": "11:3",
+        "to": "12:29",
+        "score": 0.547208
+      },
+      {
+        "from": "11:11",
+        "to": "12:90",
+        "score": 0.617056
+      },
+      {
+        "from": "11:18",
+        "to": "12:27",
+        "score": 0.481264
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "12-13": {
+    "surah_a": 12,
+    "surah_b": 13,
+    "ending_theme_a": "prophecy_and_revelation",
+    "opening_theme_b": "creation_and_cosmology",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "earth",
+      "proof",
+      "scripture",
+      "see",
+      "think",
+      "understand"
+    ],
+    "num_bridge_keywords": 6,
+    "cross_edges": 23,
+    "cross_edge_examples": [
+      {
+        "from": "12:1",
+        "to": "13:1",
+        "score": 0.622439
+      },
+      {
+        "from": "12:2",
+        "to": "13:37",
+        "score": 0.470948
+      },
+      {
+        "from": "12:25",
+        "to": "13:23",
+        "score": 0.421597
+      },
+      {
+        "from": "12:28",
+        "to": "13:42",
+        "score": 0.523831
+      },
+      {
+        "from": "12:31",
+        "to": "13:23",
+        "score": 0.522849
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "13-14": {
+    "surah_a": 13,
+    "surah_b": 14,
+    "ending_theme_a": "prophecy_and_revelation",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "disbeliever",
+      "earth",
+      "every",
+      "life",
+      "messenger",
+      "possess",
+      "scripture"
+    ],
+    "num_bridge_keywords": 7,
+    "cross_edges": 26,
+    "cross_edge_examples": [
+      {
+        "from": "13:2",
+        "to": "14:33",
+        "score": 0.55682
+      },
+      {
+        "from": "13:3",
+        "to": "14:32",
+        "score": 0.707105
+      },
+      {
+        "from": "13:4",
+        "to": "14:25",
+        "score": 0.563904
+      },
+      {
+        "from": "13:5",
+        "to": "14:49",
+        "score": 0.393486
+      },
+      {
+        "from": "13:6",
+        "to": "14:15",
+        "score": 0.585485
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "14-15": {
+    "surah_a": 14,
+    "surah_b": 15,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "prophecy_and_revelation",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "let"
+    ],
+    "num_bridge_keywords": 1,
+    "cross_edges": 19,
+    "cross_edge_examples": [
+      {
+        "from": "14:13",
+        "to": "15:34",
+        "score": 0.497104
+      },
+      {
+        "from": "14:15",
+        "to": "15:60",
+        "score": 0.454426
+      },
+      {
+        "from": "14:16",
+        "to": "15:43",
+        "score": 0.697788
+      },
+      {
+        "from": "14:16",
+        "to": "15:22",
+        "score": 0.771285
+      },
+      {
+        "from": "14:17",
+        "to": "15:43",
+        "score": 0.550962
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "15-16": {
+    "surah_a": 15,
+    "surah_b": 16,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "creation_and_cosmology",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "beside",
+      "set"
+    ],
+    "num_bridge_keywords": 2,
+    "cross_edges": 64,
+    "cross_edge_examples": [
+      {
+        "from": "15:2",
+        "to": "16:102",
+        "score": 0.4506
+      },
+      {
+        "from": "15:2",
+        "to": "16:89",
+        "score": 0.422643
+      },
+      {
+        "from": "15:3",
+        "to": "16:117",
+        "score": 0.45146
+      },
+      {
+        "from": "15:4",
+        "to": "16:61",
+        "score": 1.228617
+      },
+      {
+        "from": "15:5",
+        "to": "16:61",
+        "score": 1.129687
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "16-17": {
+    "surah_a": 16,
+    "surah_b": 17,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 69,
+    "cross_edge_examples": [
+      {
+        "from": "16:1",
+        "to": "17:43",
+        "score": 0.694303
+      },
+      {
+        "from": "16:2",
+        "to": "17:3",
+        "score": 0.713424
+      },
+      {
+        "from": "16:3",
+        "to": "17:43",
+        "score": 0.745018
+      },
+      {
+        "from": "16:6",
+        "to": "17:26",
+        "score": 0.405303
+      },
+      {
+        "from": "16:11",
+        "to": "17:51",
+        "score": 0.480031
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "18-19": {
+    "surah_a": 18,
+    "surah_b": 19,
+    "ending_theme_a": "afterlife_and_judgment",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 66,
+    "cross_edge_examples": [
+      {
+        "from": "18:2",
+        "to": "19:97",
+        "score": 0.845588
+      },
+      {
+        "from": "18:4",
+        "to": "19:88",
+        "score": 1.175602
+      },
+      {
+        "from": "18:4",
+        "to": "19:20",
+        "score": 0.451953
+      },
+      {
+        "from": "18:4",
+        "to": "19:91",
+        "score": 1.090655
+      },
+      {
+        "from": "18:4",
+        "to": "19:92",
+        "score": 1.040036
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "17-18": {
+    "surah_a": 17,
+    "surah_b": 18,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "prophecy_and_revelation",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "beget",
+      "knowledge",
+      "possess",
+      "praise",
+      "scripture",
+      "son",
+      "utter"
+    ],
+    "num_bridge_keywords": 7,
+    "cross_edges": 86,
+    "cross_edge_examples": [
+      {
+        "from": "17:5",
+        "to": "18:98",
+        "score": 0.808513
+      },
+      {
+        "from": "17:5",
+        "to": "18:24",
+        "score": 0.559364
+      },
+      {
+        "from": "17:5",
+        "to": "18:99",
+        "score": 0.679607
+      },
+      {
+        "from": "17:7",
+        "to": "18:8",
+        "score": 0.348497
+      },
+      {
+        "from": "17:8",
+        "to": "18:59",
+        "score": 0.59773
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "19-20": {
+    "surah_a": 19,
+    "surah_b": 20,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "gracious",
+      "quran"
+    ],
+    "num_bridge_keywords": 2,
+    "cross_edges": 96,
+    "cross_edge_examples": [
+      {
+        "from": "19:3",
+        "to": "20:11",
+        "score": 0.787339
+      },
+      {
+        "from": "19:3",
+        "to": "20:7",
+        "score": 0.469345
+      },
+      {
+        "from": "19:5",
+        "to": "20:36",
+        "score": 0.404425
+      },
+      {
+        "from": "19:9",
+        "to": "20:26",
+        "score": 0.748464
+      },
+      {
+        "from": "19:10",
+        "to": "20:42",
+        "score": 0.475715
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "20-21": {
+    "surah_a": 20,
+    "surah_b": 21,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "prophecy_and_revelation",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "messenger",
+      "miracle",
+      "previous",
+      "show",
+      "u",
+      "would"
+    ],
+    "num_bridge_keywords": 6,
+    "cross_edges": 78,
+    "cross_edge_examples": [
+      {
+        "from": "20:3",
+        "to": "21:90",
+        "score": 0.459272
+      },
+      {
+        "from": "20:4",
+        "to": "21:22",
+        "score": 0.416535
+      },
+      {
+        "from": "20:5",
+        "to": "21:22",
+        "score": 0.453814
+      },
+      {
+        "from": "20:8",
+        "to": "21:98",
+        "score": 0.485836
+      },
+      {
+        "from": "20:10",
+        "to": "21:69",
+        "score": 0.52319
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "21-22": {
+    "surah_a": 21,
+    "surah_b": 22,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "give",
+      "retribution",
+      "soon",
+      "turn"
+    ],
+    "num_bridge_keywords": 4,
+    "cross_edges": 48,
+    "cross_edge_examples": [
+      {
+        "from": "21:6",
+        "to": "22:45",
+        "score": 0.759109
+      },
+      {
+        "from": "21:6",
+        "to": "22:48",
+        "score": 0.812394
+      },
+      {
+        "from": "21:11",
+        "to": "22:48",
+        "score": 0.666998
+      },
+      {
+        "from": "21:11",
+        "to": "22:45",
+        "score": 0.633657
+      },
+      {
+        "from": "21:15",
+        "to": "22:55",
+        "score": 0.442281
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "22-23": {
+    "surah_a": 22,
+    "surah_b": 23,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "charity",
+      "contact",
+      "give",
+      "obligatory",
+      "prayer",
+      "salat",
+      "zakat"
+    ],
+    "num_bridge_keywords": 7,
+    "cross_edges": 51,
+    "cross_edge_examples": [
+      {
+        "from": "22:1",
+        "to": "23:95",
+        "score": 0.436752
+      },
+      {
+        "from": "22:3",
+        "to": "23:97",
+        "score": 0.382051
+      },
+      {
+        "from": "22:5",
+        "to": "23:13",
+        "score": 0.728861
+      },
+      {
+        "from": "22:5",
+        "to": "23:14",
+        "score": 0.893327
+      },
+      {
+        "from": "22:5",
+        "to": "23:82",
+        "score": 0.682828
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "23-24": {
+    "surah_a": 23,
+    "surah_b": 24,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "merciful"
+    ],
+    "num_bridge_keywords": 1,
+    "cross_edges": 33,
+    "cross_edge_examples": [
+      {
+        "from": "23:2",
+        "to": "24:56",
+        "score": 1.074528
+      },
+      {
+        "from": "23:4",
+        "to": "24:37",
+        "score": 1.064377
+      },
+      {
+        "from": "23:4",
+        "to": "24:56",
+        "score": 1.245134
+      },
+      {
+        "from": "23:5",
+        "to": "24:60",
+        "score": 0.360228
+      },
+      {
+        "from": "23:5",
+        "to": "24:31",
+        "score": 0.643015
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "25-26": {
+    "surah_a": 25,
+    "surah_b": 26,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 107,
+    "cross_edge_examples": [
+      {
+        "from": "25:1",
+        "to": "26:89",
+        "score": 0.504042
+      },
+      {
+        "from": "25:1",
+        "to": "26:115",
+        "score": 0.465599
+      },
+      {
+        "from": "25:3",
+        "to": "26:73",
+        "score": 0.822769
+      },
+      {
+        "from": "25:4",
+        "to": "26:93",
+        "score": 0.529557
+      },
+      {
+        "from": "25:4",
+        "to": "26:31",
+        "score": 0.495925
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "24-25": {
+    "surah_a": 24,
+    "surah_b": 25,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "prophecy_and_revelation",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "belong",
+      "bless",
+      "code",
+      "earth",
+      "everything",
+      "heaven",
+      "possess",
+      "reveal"
+    ],
+    "num_bridge_keywords": 8,
+    "cross_edges": 15,
+    "cross_edge_examples": [
+      {
+        "from": "24:2",
+        "to": "25:39",
+        "score": 0.354611
+      },
+      {
+        "from": "24:5",
+        "to": "25:70",
+        "score": 0.729782
+      },
+      {
+        "from": "24:5",
+        "to": "25:71",
+        "score": 0.395417
+      },
+      {
+        "from": "24:13",
+        "to": "25:4",
+        "score": 0.417658
+      },
+      {
+        "from": "24:16",
+        "to": "25:21",
+        "score": 0.456138
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "26-27": {
+    "surah_a": 26,
+    "surah_b": 27,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "afterlife_and_judgment",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 139,
+    "cross_edge_examples": [
+      {
+        "from": "26:2",
+        "to": "27:28",
+        "score": 0.523732
+      },
+      {
+        "from": "26:2",
+        "to": "27:1",
+        "score": 1.036831
+      },
+      {
+        "from": "26:2",
+        "to": "27:29",
+        "score": 0.52252
+      },
+      {
+        "from": "26:4",
+        "to": "27:90",
+        "score": 0.424228
+      },
+      {
+        "from": "26:6",
+        "to": "27:51",
+        "score": 0.434939
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "27-28": {
+    "surah_a": 27,
+    "surah_b": 28,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "creation_and_cosmology",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "make",
+      "proof",
+      "recite"
+    ],
+    "num_bridge_keywords": 3,
+    "cross_edges": 57,
+    "cross_edge_examples": [
+      {
+        "from": "27:1",
+        "to": "28:2",
+        "score": 1.437411
+      },
+      {
+        "from": "27:7",
+        "to": "28:29",
+        "score": 1.245556
+      },
+      {
+        "from": "27:8",
+        "to": "28:30",
+        "score": 0.558936
+      },
+      {
+        "from": "27:10",
+        "to": "28:7",
+        "score": 0.574346
+      },
+      {
+        "from": "27:10",
+        "to": "28:21",
+        "score": 0.709195
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "28-29": {
+    "surah_a": 28,
+    "surah_b": 29,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [
+      "commit",
+      "sin"
+    ],
+    "num_bridge_keywords": 2,
+    "cross_edges": 35,
+    "cross_edge_examples": [
+      {
+        "from": "28:6",
+        "to": "29:57",
+        "score": 0.446574
+      },
+      {
+        "from": "28:6",
+        "to": "29:39",
+        "score": 0.709841
+      },
+      {
+        "from": "28:8",
+        "to": "29:39",
+        "score": 0.669223
+      },
+      {
+        "from": "28:15",
+        "to": "29:24",
+        "score": 0.464739
+      },
+      {
+        "from": "28:24",
+        "to": "29:6",
+        "score": 0.461402
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "29-30": {
+    "surah_a": 29,
+    "surah_b": 30,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 33,
+    "cross_edge_examples": [
+      {
+        "from": "29:5",
+        "to": "30:16",
+        "score": 0.485685
+      },
+      {
+        "from": "29:7",
+        "to": "30:45",
+        "score": 0.423913
+      },
+      {
+        "from": "29:19",
+        "to": "30:27",
+        "score": 1.19056
+      },
+      {
+        "from": "29:19",
+        "to": "30:11",
+        "score": 1.395621
+      },
+      {
+        "from": "29:20",
+        "to": "30:42",
+        "score": 0.450867
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "31-32": {
+    "surah_a": 31,
+    "surah_b": 32,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "revelation",
+      "truth"
+    ],
+    "num_bridge_keywords": 2,
+    "cross_edges": 9,
+    "cross_edge_examples": [
+      {
+        "from": "31:2",
+        "to": "32:2",
+        "score": 0.460518
+      },
+      {
+        "from": "31:5",
+        "to": "32:13",
+        "score": 0.412753
+      },
+      {
+        "from": "31:7",
+        "to": "32:15",
+        "score": 0.725618
+      },
+      {
+        "from": "31:15",
+        "to": "32:20",
+        "score": 0.563397
+      },
+      {
+        "from": "31:18",
+        "to": "32:15",
+        "score": 0.40431
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "30-31": {
+    "surah_a": 30,
+    "surah_b": 31,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "proof"
+    ],
+    "num_bridge_keywords": 1,
+    "cross_edges": 14,
+    "cross_edge_examples": [
+      {
+        "from": "30:8",
+        "to": "31:29",
+        "score": 0.636664
+      },
+      {
+        "from": "30:18",
+        "to": "31:25",
+        "score": 0.456731
+      },
+      {
+        "from": "30:23",
+        "to": "31:31",
+        "score": 0.58281
+      },
+      {
+        "from": "30:27",
+        "to": "31:16",
+        "score": 0.358955
+      },
+      {
+        "from": "30:29",
+        "to": "31:11",
+        "score": 0.583857
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "32-33": {
+    "surah_a": 32,
+    "surah_b": 33,
+    "ending_theme_a": "warfare_and_struggle",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "give"
+    ],
+    "num_bridge_keywords": 1,
+    "cross_edges": 6,
+    "cross_edge_examples": [
+      {
+        "from": "32:10",
+        "to": "33:56",
+        "score": 0.429477
+      },
+      {
+        "from": "32:16",
+        "to": "33:37",
+        "score": 0.418797
+      },
+      {
+        "from": "32:19",
+        "to": "33:62",
+        "score": 0.408032
+      },
+      {
+        "from": "32:20",
+        "to": "33:53",
+        "score": 0.545737
+      },
+      {
+        "from": "32:24",
+        "to": "33:6",
+        "score": 0.469905
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "33-34": {
+    "surah_a": 33,
+    "surah_b": 34,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [
+      "earth",
+      "forgive",
+      "heaven",
+      "merciful"
+    ],
+    "num_bridge_keywords": 4,
+    "cross_edges": 16,
+    "cross_edge_examples": [
+      {
+        "from": "33:2",
+        "to": "34:1",
+        "score": 0.427365
+      },
+      {
+        "from": "33:4",
+        "to": "34:15",
+        "score": 0.408668
+      },
+      {
+        "from": "33:5",
+        "to": "34:25",
+        "score": 0.411952
+      },
+      {
+        "from": "33:21",
+        "to": "34:5",
+        "score": 0.505602
+      },
+      {
+        "from": "33:22",
+        "to": "34:29",
+        "score": 0.63576
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "34-35": {
+    "surah_a": 34,
+    "surah_b": 35,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "could"
+    ],
+    "num_bridge_keywords": 1,
+    "cross_edges": 31,
+    "cross_edge_examples": [
+      {
+        "from": "34:1",
+        "to": "35:34",
+        "score": 0.500268
+      },
+      {
+        "from": "34:3",
+        "to": "35:38",
+        "score": 0.699159
+      },
+      {
+        "from": "34:4",
+        "to": "35:7",
+        "score": 0.70461
+      },
+      {
+        "from": "34:6",
+        "to": "35:15",
+        "score": 0.480461
+      },
+      {
+        "from": "34:11",
+        "to": "35:19",
+        "score": 0.424394
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "36-37": {
+    "surah_a": 36,
+    "surah_b": 37,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "earth",
+      "heaven"
+    ],
+    "num_bridge_keywords": 2,
+    "cross_edges": 83,
+    "cross_edge_examples": [
+      {
+        "from": "36:3",
+        "to": "37:38",
+        "score": 0.59875
+      },
+      {
+        "from": "36:6",
+        "to": "37:73",
+        "score": 0.640577
+      },
+      {
+        "from": "36:6",
+        "to": "37:177",
+        "score": 0.539438
+      },
+      {
+        "from": "36:10",
+        "to": "37:73",
+        "score": 0.589291
+      },
+      {
+        "from": "36:10",
+        "to": "37:177",
+        "score": 0.496249
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "35-36": {
+    "surah_a": 35,
+    "surah_b": 36,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 28,
+    "cross_edge_examples": [
+      {
+        "from": "35:3",
+        "to": "36:81",
+        "score": 0.418008
+      },
+      {
+        "from": "35:5",
+        "to": "36:63",
+        "score": 0.463583
+      },
+      {
+        "from": "35:6",
+        "to": "36:60",
+        "score": 0.781536
+      },
+      {
+        "from": "35:6",
+        "to": "36:77",
+        "score": 0.438888
+      },
+      {
+        "from": "35:7",
+        "to": "36:11",
+        "score": 0.608307
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "37-38": {
+    "surah_a": 37,
+    "surah_b": 38,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "prophecy_and_revelation",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 122,
+    "cross_edge_examples": [
+      {
+        "from": "37:3",
+        "to": "38:44",
+        "score": 0.524499
+      },
+      {
+        "from": "37:7",
+        "to": "38:37",
+        "score": 0.459576
+      },
+      {
+        "from": "37:8",
+        "to": "38:69",
+        "score": 0.830065
+      },
+      {
+        "from": "37:10",
+        "to": "38:39",
+        "score": 0.410822
+      },
+      {
+        "from": "37:13",
+        "to": "38:29",
+        "score": 0.411213
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "38-39": {
+    "surah_a": 38,
+    "surah_b": 39,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 44,
+    "cross_edge_examples": [
+      {
+        "from": "38:6",
+        "to": "39:10",
+        "score": 0.640038
+      },
+      {
+        "from": "38:7",
+        "to": "39:32",
+        "score": 0.411326
+      },
+      {
+        "from": "38:9",
+        "to": "39:1",
+        "score": 0.466319
+      },
+      {
+        "from": "38:10",
+        "to": "39:44",
+        "score": 0.464755
+      },
+      {
+        "from": "38:15",
+        "to": "39:25",
+        "score": 0.420695
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "39-40": {
+    "surah_a": 39,
+    "surah_b": 40,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [
+      "destiny",
+      "disbelieve",
+      "messenger",
+      "retribution",
+      "revelation"
+    ],
+    "num_bridge_keywords": 5,
+    "cross_edges": 49,
+    "cross_edge_examples": [
+      {
+        "from": "39:1",
+        "to": "40:8",
+        "score": 0.785764
+      },
+      {
+        "from": "39:1",
+        "to": "40:2",
+        "score": 0.541518
+      },
+      {
+        "from": "39:2",
+        "to": "40:14",
+        "score": 0.731818
+      },
+      {
+        "from": "39:2",
+        "to": "40:65",
+        "score": 0.913073
+      },
+      {
+        "from": "39:3",
+        "to": "40:14",
+        "score": 0.655378
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "40-41": {
+    "surah_a": 40,
+    "surah_b": 41,
+    "ending_theme_a": "prophecy_and_revelation",
+    "opening_theme_b": "prophecy_and_revelation",
+    "theme_continues": true,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 22,
+    "cross_edge_examples": [
+      {
+        "from": "40:2",
+        "to": "41:12",
+        "score": 0.650053
+      },
+      {
+        "from": "40:3",
+        "to": "41:32",
+        "score": 0.720603
+      },
+      {
+        "from": "40:9",
+        "to": "41:37",
+        "score": 0.55676
+      },
+      {
+        "from": "40:16",
+        "to": "41:31",
+        "score": 0.452251
+      },
+      {
+        "from": "40:27",
+        "to": "41:38",
+        "score": 0.437586
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "41-42": {
+    "surah_a": 41,
+    "surah_b": 42,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "belong"
+    ],
+    "num_bridge_keywords": 1,
+    "cross_edges": 16,
+    "cross_edge_examples": [
+      {
+        "from": "41:6",
+        "to": "42:13",
+        "score": 0.574361
+      },
+      {
+        "from": "41:6",
+        "to": "42:3",
+        "score": 0.496166
+      },
+      {
+        "from": "41:8",
+        "to": "42:16",
+        "score": 0.71399
+      },
+      {
+        "from": "41:15",
+        "to": "42:19",
+        "score": 0.481362
+      },
+      {
+        "from": "41:25",
+        "to": "42:7",
+        "score": 0.529955
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "42-43": {
+    "surah_a": 42,
+    "surah_b": 43,
+    "ending_theme_a": "creation_and_cosmology",
+    "opening_theme_b": "prophecy_and_revelation",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "may",
+      "render",
+      "scripture"
+    ],
+    "num_bridge_keywords": 3,
+    "cross_edges": 24,
+    "cross_edge_examples": [
+      {
+        "from": "42:3",
+        "to": "43:9",
+        "score": 0.456049
+      },
+      {
+        "from": "42:7",
+        "to": "43:3",
+        "score": 0.43922
+      },
+      {
+        "from": "42:9",
+        "to": "43:11",
+        "score": 0.703197
+      },
+      {
+        "from": "42:13",
+        "to": "43:28",
+        "score": 0.51281
+      },
+      {
+        "from": "42:15",
+        "to": "43:43",
+        "score": 0.689308
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "43-44": {
+    "surah_a": 43,
+    "surah_b": 44,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "prophecy_and_revelation",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 41,
+    "cross_edge_examples": [
+      {
+        "from": "43:2",
+        "to": "44:2",
+        "score": 0.830694
+      },
+      {
+        "from": "43:2",
+        "to": "44:13",
+        "score": 0.672005
+      },
+      {
+        "from": "43:4",
+        "to": "44:49",
+        "score": 0.475306
+      },
+      {
+        "from": "43:4",
+        "to": "44:17",
+        "score": 0.458269
+      },
+      {
+        "from": "43:6",
+        "to": "44:34",
+        "score": 0.555025
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "44-45": {
+    "surah_a": 44,
+    "surah_b": 45,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": true,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 15,
+    "cross_edge_examples": [
+      {
+        "from": "44:7",
+        "to": "45:32",
+        "score": 0.405068
+      },
+      {
+        "from": "44:7",
+        "to": "45:20",
+        "score": 0.507185
+      },
+      {
+        "from": "44:7",
+        "to": "45:4",
+        "score": 0.48349
+      },
+      {
+        "from": "44:11",
+        "to": "45:11",
+        "score": 0.56411
+      },
+      {
+        "from": "44:11",
+        "to": "45:8",
+        "score": 0.489355
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "46-47": {
+    "surah_a": 46,
+    "surah_b": 47,
+    "ending_theme_a": "afterlife_and_judgment",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "truth"
+    ],
+    "num_bridge_keywords": 1,
+    "cross_edges": 4,
+    "cross_edge_examples": [
+      {
+        "from": "46:26",
+        "to": "47:24",
+        "score": 0.384942
+      },
+      {
+        "from": "46:27",
+        "to": "47:13",
+        "score": 0.98671
+      },
+      {
+        "from": "46:27",
+        "to": "47:37",
+        "score": 0.485047
+      },
+      {
+        "from": "46:29",
+        "to": "47:16",
+        "score": 0.617101
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "45-46": {
+    "surah_a": 45,
+    "surah_b": 46,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "almighty",
+      "earth",
+      "heaven",
+      "revelation",
+      "wise"
+    ],
+    "num_bridge_keywords": 5,
+    "cross_edges": 12,
+    "cross_edge_examples": [
+      {
+        "from": "45:2",
+        "to": "46:2",
+        "score": 1.077532
+      },
+      {
+        "from": "45:5",
+        "to": "46:33",
+        "score": 0.582021
+      },
+      {
+        "from": "45:8",
+        "to": "46:26",
+        "score": 0.639376
+      },
+      {
+        "from": "45:8",
+        "to": "46:24",
+        "score": 0.488398
+      },
+      {
+        "from": "45:16",
+        "to": "46:15",
+        "score": 0.452701
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "47-48": {
+    "surah_a": 47,
+    "surah_b": 48,
+    "ending_theme_a": "moral_law_and_ethics",
+    "opening_theme_b": "prophecy_and_revelation",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 14,
+    "cross_edge_examples": [
+      {
+        "from": "47:2",
+        "to": "48:4",
+        "score": 0.383475
+      },
+      {
+        "from": "47:2",
+        "to": "48:26",
+        "score": 0.612846
+      },
+      {
+        "from": "47:2",
+        "to": "48:18",
+        "score": 0.386391
+      },
+      {
+        "from": "47:5",
+        "to": "48:26",
+        "score": 0.468015
+      },
+      {
+        "from": "47:5",
+        "to": "48:18",
+        "score": 0.501655
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "48-49": {
+    "surah_a": 48,
+    "surah_b": 49,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [
+      "messenger"
+    ],
+    "num_bridge_keywords": 1,
+    "cross_edges": 7,
+    "cross_edge_examples": [
+      {
+        "from": "48:4",
+        "to": "49:1",
+        "score": 0.599789
+      },
+      {
+        "from": "48:4",
+        "to": "49:8",
+        "score": 0.663039
+      },
+      {
+        "from": "48:5",
+        "to": "49:13",
+        "score": 0.535052
+      },
+      {
+        "from": "48:16",
+        "to": "49:9",
+        "score": 0.531541
+      },
+      {
+        "from": "48:16",
+        "to": "49:14",
+        "score": 0.518869
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "49-50": {
+    "surah_a": 49,
+    "surah_b": 50,
+    "ending_theme_a": "creation_and_cosmology",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "earth"
+    ],
+    "num_bridge_keywords": 1,
+    "cross_edges": 1,
+    "cross_edge_examples": [
+      {
+        "from": "49:5",
+        "to": "50:39",
+        "score": 0.473358
+      }
+    ],
+    "narrative_bridge": false
+  },
+  "50-51": {
+    "surah_a": 50,
+    "surah_b": 51,
+    "ending_theme_a": "afterlife_and_judgment",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 25,
+    "cross_edge_examples": [
+      {
+        "from": "50:2",
+        "to": "51:50",
+        "score": 0.405882
+      },
+      {
+        "from": "50:2",
+        "to": "51:51",
+        "score": 0.403093
+      },
+      {
+        "from": "50:4",
+        "to": "51:45",
+        "score": 0.439201
+      },
+      {
+        "from": "50:5",
+        "to": "51:42",
+        "score": 0.582526
+      },
+      {
+        "from": "50:6",
+        "to": "51:47",
+        "score": 0.818683
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "51-52": {
+    "surah_a": 51,
+    "surah_b": 52,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "prophecy_and_revelation",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 20,
+    "cross_edge_examples": [
+      {
+        "from": "51:1",
+        "to": "52:27",
+        "score": 0.526018
+      },
+      {
+        "from": "51:4",
+        "to": "52:48",
+        "score": 0.424697
+      },
+      {
+        "from": "51:7",
+        "to": "52:9",
+        "score": 0.426151
+      },
+      {
+        "from": "51:10",
+        "to": "52:11",
+        "score": 0.687738
+      },
+      {
+        "from": "51:11",
+        "to": "52:12",
+        "score": 1.414041
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "52-53": {
+    "surah_a": 52,
+    "surah_b": 53,
+    "ending_theme_a": "afterlife_and_judgment",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "star"
+    ],
+    "num_bridge_keywords": 1,
+    "cross_edges": 14,
+    "cross_edge_examples": [
+      {
+        "from": "52:5",
+        "to": "53:32",
+        "score": 0.370776
+      },
+      {
+        "from": "52:10",
+        "to": "53:51",
+        "score": 0.741463
+      },
+      {
+        "from": "52:21",
+        "to": "53:41",
+        "score": 0.458772
+      },
+      {
+        "from": "52:24",
+        "to": "53:10",
+        "score": 0.442865
+      },
+      {
+        "from": "52:26",
+        "to": "53:45",
+        "score": 0.51513
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "53-54": {
+    "surah_a": 53,
+    "surah_b": 54,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "creation_and_cosmology",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 20,
+    "cross_edge_examples": [
+      {
+        "from": "53:2",
+        "to": "54:29",
+        "score": 0.545478
+      },
+      {
+        "from": "53:11",
+        "to": "54:2",
+        "score": 0.536953
+      },
+      {
+        "from": "53:12",
+        "to": "54:2",
+        "score": 0.579602
+      },
+      {
+        "from": "53:13",
+        "to": "54:2",
+        "score": 0.59228
+      },
+      {
+        "from": "53:17",
+        "to": "54:50",
+        "score": 0.437163
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "55-56": {
+    "surah_a": 55,
+    "surah_b": 56,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 45,
+    "cross_edge_examples": [
+      {
+        "from": "55:5",
+        "to": "56:37",
+        "score": 0.585081
+      },
+      {
+        "from": "55:6",
+        "to": "56:75",
+        "score": 0.622068
+      },
+      {
+        "from": "55:6",
+        "to": "56:52",
+        "score": 0.546544
+      },
+      {
+        "from": "55:6",
+        "to": "56:72",
+        "score": 0.623773
+      },
+      {
+        "from": "55:7",
+        "to": "56:61",
+        "score": 0.45745
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "54-55": {
+    "surah_a": 54,
+    "surah_b": 55,
+    "ending_theme_a": "knowledge_and_wisdom",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 12,
+    "cross_edge_examples": [
+      {
+        "from": "54:1",
+        "to": "55:5",
+        "score": 0.455493
+      },
+      {
+        "from": "54:12",
+        "to": "55:50",
+        "score": 0.478312
+      },
+      {
+        "from": "54:20",
+        "to": "55:68",
+        "score": 0.417329
+      },
+      {
+        "from": "54:20",
+        "to": "55:11",
+        "score": 0.391456
+      },
+      {
+        "from": "54:20",
+        "to": "55:6",
+        "score": 0.439558
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "56-57": {
+    "surah_a": 56,
+    "surah_b": 57,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [
+      "glorify"
+    ],
+    "num_bridge_keywords": 1,
+    "cross_edges": 13,
+    "cross_edge_examples": [
+      {
+        "from": "56:2",
+        "to": "57:22",
+        "score": 0.556375
+      },
+      {
+        "from": "56:24",
+        "to": "57:19",
+        "score": 0.457228
+      },
+      {
+        "from": "56:27",
+        "to": "57:13",
+        "score": 0.523833
+      },
+      {
+        "from": "56:31",
+        "to": "57:20",
+        "score": 0.422734
+      },
+      {
+        "from": "56:33",
+        "to": "57:11",
+        "score": 0.420255
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "57-58": {
+    "surah_a": 57,
+    "surah_b": 58,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "social_law",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "forgiver",
+      "know"
+    ],
+    "num_bridge_keywords": 2,
+    "cross_edges": 3,
+    "cross_edge_examples": [
+      {
+        "from": "57:10",
+        "to": "58:11",
+        "score": 0.401566
+      },
+      {
+        "from": "57:12",
+        "to": "58:22",
+        "score": 0.830147
+      },
+      {
+        "from": "57:25",
+        "to": "58:21",
+        "score": 0.564262
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "58-59": {
+    "surah_a": 58,
+    "surah_b": 59,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [
+      "almighty",
+      "heart"
+    ],
+    "num_bridge_keywords": 2,
+    "cross_edges": 6,
+    "cross_edge_examples": [
+      {
+        "from": "58:6",
+        "to": "59:19",
+        "score": 0.562838
+      },
+      {
+        "from": "58:8",
+        "to": "59:17",
+        "score": 0.547113
+      },
+      {
+        "from": "58:17",
+        "to": "59:17",
+        "score": 0.804081
+      },
+      {
+        "from": "58:20",
+        "to": "59:11",
+        "score": 0.393982
+      },
+      {
+        "from": "58:20",
+        "to": "59:4",
+        "score": 0.628477
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "59-60": {
+    "surah_a": 59,
+    "surah_b": 60,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [
+      "everything"
+    ],
+    "num_bridge_keywords": 1,
+    "cross_edges": 11,
+    "cross_edge_examples": [
+      {
+        "from": "59:1",
+        "to": "60:5",
+        "score": 0.787066
+      },
+      {
+        "from": "59:2",
+        "to": "60:9",
+        "score": 0.489541
+      },
+      {
+        "from": "59:2",
+        "to": "60:8",
+        "score": 0.503276
+      },
+      {
+        "from": "59:3",
+        "to": "60:11",
+        "score": 0.440446
+      },
+      {
+        "from": "59:8",
+        "to": "60:9",
+        "score": 0.518995
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "60-61": {
+    "surah_a": 60,
+    "surah_b": 61,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 2,
+    "cross_edge_examples": [
+      {
+        "from": "60:5",
+        "to": "61:1",
+        "score": 0.744825
+      },
+      {
+        "from": "60:8",
+        "to": "61:4",
+        "score": 0.568215
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "61-62": {
+    "surah_a": 61,
+    "surah_b": 62,
+    "ending_theme_a": "prophetic_narratives",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 3,
+    "cross_edge_examples": [
+      {
+        "from": "61:1",
+        "to": "62:1",
+        "score": 1.104633
+      },
+      {
+        "from": "61:1",
+        "to": "62:3",
+        "score": 0.805983
+      },
+      {
+        "from": "61:11",
+        "to": "62:11",
+        "score": 0.646381
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "63-64": {
+    "surah_a": 63,
+    "surah_b": 64,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [
+      "everything"
+    ],
+    "num_bridge_keywords": 1,
+    "cross_edges": 2,
+    "cross_edge_examples": [
+      {
+        "from": "63:4",
+        "to": "64:14",
+        "score": 0.583226
+      },
+      {
+        "from": "63:11",
+        "to": "64:8",
+        "score": 0.428465
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "62-63": {
+    "surah_a": 62,
+    "surah_b": 63,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 0,
+    "cross_edge_examples": [],
+    "narrative_bridge": true
+  },
+  "64-65": {
+    "surah_a": 64,
+    "surah_b": 65,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 4,
+    "cross_edge_examples": [
+      {
+        "from": "64:5",
+        "to": "65:9",
+        "score": 1.173826
+      },
+      {
+        "from": "64:7",
+        "to": "65:8",
+        "score": 0.702072
+      },
+      {
+        "from": "64:9",
+        "to": "65:11",
+        "score": 1.20148
+      },
+      {
+        "from": "64:13",
+        "to": "65:3",
+        "score": 0.439328
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "65-66": {
+    "surah_a": 65,
+    "surah_b": 66,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 2,
+    "cross_edge_examples": [
+      {
+        "from": "65:11",
+        "to": "66:8",
+        "score": 1.14984
+      },
+      {
+        "from": "65:12",
+        "to": "66:8",
+        "score": 0.492636
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "66-67": {
+    "surah_a": 66,
+    "surah_b": 67,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 1,
+    "cross_edge_examples": [
+      {
+        "from": "66:9",
+        "to": "67:6",
+        "score": 1.191821
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "67-68": {
+    "surah_a": 67,
+    "surah_b": 68,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 9,
+    "cross_edge_examples": [
+      {
+        "from": "67:11",
+        "to": "68:31",
+        "score": 0.549981
+      },
+      {
+        "from": "67:12",
+        "to": "68:3",
+        "score": 0.921748
+      },
+      {
+        "from": "67:16",
+        "to": "68:40",
+        "score": 0.619954
+      },
+      {
+        "from": "67:17",
+        "to": "68:19",
+        "score": 0.446915
+      },
+      {
+        "from": "67:17",
+        "to": "68:40",
+        "score": 0.545743
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "68-69": {
+    "surah_a": 68,
+    "surah_b": 69,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "disbelieve"
+    ],
+    "num_bridge_keywords": 1,
+    "cross_edges": 20,
+    "cross_edge_examples": [
+      {
+        "from": "68:3",
+        "to": "69:21",
+        "score": 0.553126
+      },
+      {
+        "from": "68:8",
+        "to": "69:49",
+        "score": 0.812121
+      },
+      {
+        "from": "68:12",
+        "to": "69:9",
+        "score": 0.541122
+      },
+      {
+        "from": "68:12",
+        "to": "69:37",
+        "score": 0.654235
+      },
+      {
+        "from": "68:14",
+        "to": "69:28",
+        "score": 0.50849
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "70-71": {
+    "surah_a": 70,
+    "surah_b": 71,
+    "ending_theme_a": "afterlife_and_judgment",
+    "opening_theme_b": "prophecy_and_revelation",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 3,
+    "cross_edge_examples": [
+      {
+        "from": "70:24",
+        "to": "71:12",
+        "score": 0.428173
+      },
+      {
+        "from": "70:27",
+        "to": "71:3",
+        "score": 0.533589
+      },
+      {
+        "from": "70:27",
+        "to": "71:13",
+        "score": 0.640004
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "69-70": {
+    "surah_a": 69,
+    "surah_b": 70,
+    "ending_theme_a": "moral_law_and_ethics",
+    "opening_theme_b": "afterlife_and_judgment",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "disbeliever"
+    ],
+    "num_bridge_keywords": 1,
+    "cross_edges": 15,
+    "cross_edge_examples": [
+      {
+        "from": "69:9",
+        "to": "70:31",
+        "score": 0.592216
+      },
+      {
+        "from": "69:10",
+        "to": "70:27",
+        "score": 0.58139
+      },
+      {
+        "from": "69:10",
+        "to": "70:28",
+        "score": 0.542247
+      },
+      {
+        "from": "69:14",
+        "to": "70:9",
+        "score": 0.371098
+      },
+      {
+        "from": "69:15",
+        "to": "70:1",
+        "score": 0.569444
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "71-72": {
+    "surah_a": 71,
+    "surah_b": 72,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "prophecy_and_revelation",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 2,
+    "cross_edge_examples": [
+      {
+        "from": "71:6",
+        "to": "72:17",
+        "score": 0.493056
+      },
+      {
+        "from": "71:25",
+        "to": "72:22",
+        "score": 0.441878
+      }
+    ],
+    "narrative_bridge": false
+  },
+  "72-73": {
+    "surah_a": 72,
+    "surah_b": 73,
+    "ending_theme_a": "prophecy_and_revelation",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 2,
+    "cross_edge_examples": [
+      {
+        "from": "72:11",
+        "to": "73:3",
+        "score": 0.558923
+      },
+      {
+        "from": "72:17",
+        "to": "73:5",
+        "score": 0.457052
+      }
+    ],
+    "narrative_bridge": false
+  },
+  "73-74": {
+    "surah_a": 73,
+    "surah_b": 74,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 8,
+    "cross_edge_examples": [
+      {
+        "from": "73:7",
+        "to": "74:6",
+        "score": 0.625438
+      },
+      {
+        "from": "73:7",
+        "to": "74:12",
+        "score": 0.613625
+      },
+      {
+        "from": "73:8",
+        "to": "74:7",
+        "score": 0.587493
+      },
+      {
+        "from": "73:11",
+        "to": "74:11",
+        "score": 0.471803
+      },
+      {
+        "from": "73:16",
+        "to": "74:17",
+        "score": 0.632837
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "74-75": {
+    "surah_a": 74,
+    "surah_b": 75,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 11,
+    "cross_edge_examples": [
+      {
+        "from": "74:16",
+        "to": "75:15",
+        "score": 0.47663
+      },
+      {
+        "from": "74:19",
+        "to": "75:24",
+        "score": 0.683523
+      },
+      {
+        "from": "74:20",
+        "to": "75:24",
+        "score": 0.683523
+      },
+      {
+        "from": "74:21",
+        "to": "75:23",
+        "score": 1.0
+      },
+      {
+        "from": "74:23",
+        "to": "75:33",
+        "score": 0.739621
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "76-77": {
+    "surah_a": 76,
+    "surah_b": 77,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 19,
+    "cross_edge_examples": [
+      {
+        "from": "76:2",
+        "to": "77:20",
+        "score": 0.544365
+      },
+      {
+        "from": "76:5",
+        "to": "77:44",
+        "score": 0.650019
+      },
+      {
+        "from": "76:5",
+        "to": "77:43",
+        "score": 0.383481
+      },
+      {
+        "from": "76:6",
+        "to": "77:41",
+        "score": 0.5238
+      },
+      {
+        "from": "76:9",
+        "to": "77:44",
+        "score": 0.414599
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "75-76": {
+    "surah_a": 75,
+    "surah_b": 76,
+    "ending_theme_a": "creation_and_cosmology",
+    "opening_theme_b": "creation_and_cosmology",
+    "theme_continues": true,
+    "bridge_keywords": [
+      "create",
+      "make"
+    ],
+    "num_bridge_keywords": 2,
+    "cross_edges": 10,
+    "cross_edge_examples": [
+      {
+        "from": "75:9",
+        "to": "76:13",
+        "score": 0.403736
+      },
+      {
+        "from": "75:20",
+        "to": "76:27",
+        "score": 0.623216
+      },
+      {
+        "from": "75:21",
+        "to": "76:27",
+        "score": 0.500809
+      },
+      {
+        "from": "75:23",
+        "to": "76:20",
+        "score": 0.633445
+      },
+      {
+        "from": "75:23",
+        "to": "76:19",
+        "score": 0.571595
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "77-78": {
+    "surah_a": 77,
+    "surah_b": 78,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": true,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 21,
+    "cross_edge_examples": [
+      {
+        "from": "77:3",
+        "to": "78:14",
+        "score": 0.607665
+      },
+      {
+        "from": "77:4",
+        "to": "78:11",
+        "score": 0.612907
+      },
+      {
+        "from": "77:9",
+        "to": "78:19",
+        "score": 0.682367
+      },
+      {
+        "from": "77:10",
+        "to": "78:20",
+        "score": 0.578218
+      },
+      {
+        "from": "77:10",
+        "to": "78:7",
+        "score": 0.651904
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "78-79": {
+    "surah_a": 78,
+    "surah_b": 79,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "angel",
+      "disbeliever",
+      "take"
+    ],
+    "num_bridge_keywords": 3,
+    "cross_edges": 9,
+    "cross_edge_examples": [
+      {
+        "from": "78:7",
+        "to": "79:32",
+        "score": 0.654709
+      },
+      {
+        "from": "78:8",
+        "to": "79:4",
+        "score": 0.461118
+      },
+      {
+        "from": "78:14",
+        "to": "79:31",
+        "score": 0.469632
+      },
+      {
+        "from": "78:15",
+        "to": "79:31",
+        "score": 0.487339
+      },
+      {
+        "from": "78:16",
+        "to": "79:5",
+        "score": 0.67547
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "79-80": {
+    "surah_a": 79,
+    "surah_b": 80,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": true,
+    "bridge_keywords": [
+      "muhammad"
+    ],
+    "num_bridge_keywords": 1,
+    "cross_edges": 10,
+    "cross_edge_examples": [
+      {
+        "from": "79:4",
+        "to": "80:8",
+        "score": 0.815511
+      },
+      {
+        "from": "79:7",
+        "to": "80:33",
+        "score": 0.621671
+      },
+      {
+        "from": "79:10",
+        "to": "80:21",
+        "score": 0.654026
+      },
+      {
+        "from": "79:19",
+        "to": "80:9",
+        "score": 0.688104
+      },
+      {
+        "from": "79:26",
+        "to": "80:9",
+        "score": 0.761747
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "81-82": {
+    "surah_a": 81,
+    "surah_b": 82,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "afterlife_and_judgment",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 3,
+    "cross_edge_examples": [
+      {
+        "from": "81:6",
+        "to": "82:3",
+        "score": 0.640517
+      },
+      {
+        "from": "81:10",
+        "to": "82:12",
+        "score": 0.759222
+      },
+      {
+        "from": "81:19",
+        "to": "82:6",
+        "score": 0.644844
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "80-81": {
+    "surah_a": 80,
+    "surah_b": 81,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "creation_and_cosmology",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 4,
+    "cross_edge_examples": [
+      {
+        "from": "80:4",
+        "to": "81:27",
+        "score": 0.68014
+      },
+      {
+        "from": "80:13",
+        "to": "81:19",
+        "score": 0.736876
+      },
+      {
+        "from": "80:16",
+        "to": "81:19",
+        "score": 0.745961
+      },
+      {
+        "from": "80:32",
+        "to": "81:20",
+        "score": 0.448522
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "82-83": {
+    "surah_a": 82,
+    "surah_b": 83,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 9,
+    "cross_edge_examples": [
+      {
+        "from": "82:10",
+        "to": "83:33",
+        "score": 0.558784
+      },
+      {
+        "from": "82:13",
+        "to": "83:22",
+        "score": 1.169646
+      },
+      {
+        "from": "82:13",
+        "to": "83:24",
+        "score": 0.565988
+      },
+      {
+        "from": "82:14",
+        "to": "83:29",
+        "score": 0.54163
+      },
+      {
+        "from": "82:14",
+        "to": "83:7",
+        "score": 0.507404
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "83-84": {
+    "surah_a": 83,
+    "surah_b": 84,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "creation_and_cosmology",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 5,
+    "cross_edge_examples": [
+      {
+        "from": "83:2",
+        "to": "84:10",
+        "score": 0.467101
+      },
+      {
+        "from": "83:13",
+        "to": "84:21",
+        "score": 0.49901
+      },
+      {
+        "from": "83:17",
+        "to": "84:13",
+        "score": 0.475152
+      },
+      {
+        "from": "83:29",
+        "to": "84:13",
+        "score": 0.457724
+      },
+      {
+        "from": "83:31",
+        "to": "84:13",
+        "score": 0.480382
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "84-85": {
+    "surah_a": 84,
+    "surah_b": 85,
+    "ending_theme_a": "afterlife_and_judgment",
+    "opening_theme_b": "creation_and_cosmology",
+    "theme_continues": false,
+    "bridge_keywords": [
+      "promise"
+    ],
+    "num_bridge_keywords": 1,
+    "cross_edges": 4,
+    "cross_edge_examples": [
+      {
+        "from": "84:1",
+        "to": "85:1",
+        "score": 0.630093
+      },
+      {
+        "from": "84:12",
+        "to": "85:10",
+        "score": 0.519598
+      },
+      {
+        "from": "84:12",
+        "to": "85:7",
+        "score": 0.706084
+      },
+      {
+        "from": "84:24",
+        "to": "85:2",
+        "score": 0.785589
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "85-86": {
+    "surah_a": 85,
+    "surah_b": 86,
+    "ending_theme_a": "prophecy_and_revelation",
+    "opening_theme_b": "creation_and_cosmology",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 2,
+    "cross_edge_examples": [
+      {
+        "from": "85:1",
+        "to": "86:1",
+        "score": 0.484984
+      },
+      {
+        "from": "85:1",
+        "to": "86:11",
+        "score": 0.56924
+      }
+    ],
+    "narrative_bridge": false
+  },
+  "86-87": {
+    "surah_a": 86,
+    "surah_b": 87,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 0,
+    "cross_edge_examples": [],
+    "narrative_bridge": false
+  },
+  "87-88": {
+    "surah_a": 87,
+    "surah_b": 88,
+    "ending_theme_a": "prophetic_narratives",
+    "opening_theme_b": "knowledge_and_wisdom",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 2,
+    "cross_edge_examples": [
+      {
+        "from": "87:9",
+        "to": "88:21",
+        "score": 0.995112
+      },
+      {
+        "from": "87:12",
+        "to": "88:4",
+        "score": 1.061258
+      }
+    ],
+    "narrative_bridge": false
+  },
+  "88-89": {
+    "surah_a": 88,
+    "surah_b": 89,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": true,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 4,
+    "cross_edge_examples": [
+      {
+        "from": "88:8",
+        "to": "89:15",
+        "score": 0.566495
+      },
+      {
+        "from": "88:10",
+        "to": "89:30",
+        "score": 0.609155
+      },
+      {
+        "from": "88:15",
+        "to": "89:22",
+        "score": 0.765029
+      },
+      {
+        "from": "88:16",
+        "to": "89:12",
+        "score": 0.634794
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "89-90": {
+    "surah_a": 89,
+    "surah_b": 90,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 6,
+    "cross_edge_examples": [
+      {
+        "from": "89:7",
+        "to": "90:2",
+        "score": 0.630929
+      },
+      {
+        "from": "89:7",
+        "to": "90:1",
+        "score": 0.5448
+      },
+      {
+        "from": "89:17",
+        "to": "90:15",
+        "score": 0.602638
+      },
+      {
+        "from": "89:18",
+        "to": "90:16",
+        "score": 0.609344
+      },
+      {
+        "from": "89:19",
+        "to": "90:15",
+        "score": 0.532208
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "91-92": {
+    "surah_a": 91,
+    "surah_b": 92,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "creation_and_cosmology",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 1,
+    "cross_edge_examples": [
+      {
+        "from": "91:4",
+        "to": "92:1",
+        "score": 0.791208
+      }
+    ],
+    "narrative_bridge": false
+  },
+  "90-91": {
+    "surah_a": 90,
+    "surah_b": 91,
+    "ending_theme_a": "prophecy_and_revelation",
+    "opening_theme_b": "creation_and_cosmology",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 2,
+    "cross_edge_examples": [
+      {
+        "from": "90:4",
+        "to": "91:9",
+        "score": 0.547931
+      },
+      {
+        "from": "90:10",
+        "to": "91:8",
+        "score": 0.605329
+      }
+    ],
+    "narrative_bridge": false
+  },
+  "92-93": {
+    "surah_a": 92,
+    "surah_b": 93,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 2,
+    "cross_edge_examples": [
+      {
+        "from": "92:8",
+        "to": "93:8",
+        "score": 0.587193
+      },
+      {
+        "from": "92:11",
+        "to": "93:2",
+        "score": 0.627342
+      }
+    ],
+    "narrative_bridge": false
+  },
+  "93-94": {
+    "surah_a": 93,
+    "surah_b": 94,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 0,
+    "cross_edge_examples": [],
+    "narrative_bridge": false
+  },
+  "94-95": {
+    "surah_a": 94,
+    "surah_b": 95,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 0,
+    "cross_edge_examples": [],
+    "narrative_bridge": false
+  },
+  "95-96": {
+    "surah_a": 95,
+    "surah_b": 96,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": true,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 2,
+    "cross_edge_examples": [
+      {
+        "from": "95:4",
+        "to": "96:2",
+        "score": 0.535294
+      },
+      {
+        "from": "95:4",
+        "to": "96:5",
+        "score": 0.568764
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "96-97": {
+    "surah_a": 96,
+    "surah_b": 97,
+    "ending_theme_a": "worship_and_ritual",
+    "opening_theme_b": "prophecy_and_revelation",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 3,
+    "cross_edge_examples": [
+      {
+        "from": "96:8",
+        "to": "97:3",
+        "score": 0.526877
+      },
+      {
+        "from": "96:8",
+        "to": "97:2",
+        "score": 0.603252
+      },
+      {
+        "from": "96:8",
+        "to": "97:1",
+        "score": 0.639802
+      }
+    ],
+    "narrative_bridge": true
+  },
+  "97-98": {
+    "surah_a": 97,
+    "surah_b": 98,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "prophecy_and_revelation",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 0,
+    "cross_edge_examples": [],
+    "narrative_bridge": false
+  },
+  "98-99": {
+    "surah_a": 98,
+    "surah_b": 99,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "creation_and_cosmology",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 0,
+    "cross_edge_examples": [],
+    "narrative_bridge": false
+  },
+  "100-101": {
+    "surah_a": 100,
+    "surah_b": 101,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 0,
+    "cross_edge_examples": [],
+    "narrative_bridge": false
+  },
+  "99-100": {
+    "surah_a": 99,
+    "surah_b": 100,
+    "ending_theme_a": "moral_law_and_ethics",
+    "opening_theme_b": "worship_and_ritual",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 0,
+    "cross_edge_examples": [],
+    "narrative_bridge": false
+  },
+  "101-102": {
+    "surah_a": 101,
+    "surah_b": 102,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": true,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 0,
+    "cross_edge_examples": [],
+    "narrative_bridge": true
+  },
+  "102-103": {
+    "surah_a": 102,
+    "surah_b": 103,
+    "ending_theme_a": "afterlife_and_judgment",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 0,
+    "cross_edge_examples": [],
+    "narrative_bridge": false
+  },
+  "103-104": {
+    "surah_a": 103,
+    "surah_b": 104,
+    "ending_theme_a": "moral_law_and_ethics",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 0,
+    "cross_edge_examples": [],
+    "narrative_bridge": false
+  },
+  "104-105": {
+    "surah_a": 104,
+    "surah_b": 105,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 0,
+    "cross_edge_examples": [],
+    "narrative_bridge": false
+  },
+  "105-106": {
+    "surah_a": 105,
+    "surah_b": 106,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": true,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 0,
+    "cross_edge_examples": [],
+    "narrative_bridge": true
+  },
+  "106-107": {
+    "surah_a": 106,
+    "surah_b": 107,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "covenant_and_obedience",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 1,
+    "cross_edge_examples": [
+      {
+        "from": "106:4",
+        "to": "107:3",
+        "score": 0.569291
+      }
+    ],
+    "narrative_bridge": false
+  },
+  "108-109": {
+    "surah_a": 108,
+    "surah_b": 109,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": true,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 0,
+    "cross_edge_examples": [],
+    "narrative_bridge": true
+  },
+  "107-108": {
+    "surah_a": 107,
+    "surah_b": 108,
+    "ending_theme_a": "moral_law_and_ethics",
+    "opening_theme_b": "divine_mercy_and_forgiveness",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 1,
+    "cross_edge_examples": [
+      {
+        "from": "107:7",
+        "to": "108:2",
+        "score": 0.561937
+      }
+    ],
+    "narrative_bridge": false
+  },
+  "109-110": {
+    "surah_a": 109,
+    "surah_b": 110,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 1,
+    "cross_edge_examples": [
+      {
+        "from": "109:6",
+        "to": "110:2",
+        "score": 0.634722
+      }
+    ],
+    "narrative_bridge": false
+  },
+  "110-111": {
+    "surah_a": 110,
+    "surah_b": 111,
+    "ending_theme_a": "monotheism_and_gods_nature",
+    "opening_theme_b": "uncategorized",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 0,
+    "cross_edge_examples": [],
+    "narrative_bridge": false
+  },
+  "111-112": {
+    "surah_a": 111,
+    "surah_b": 112,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 0,
+    "cross_edge_examples": [],
+    "narrative_bridge": false
+  },
+  "112-113": {
+    "surah_a": 112,
+    "surah_b": 113,
+    "ending_theme_a": "uncategorized",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 0,
+    "cross_edge_examples": [],
+    "narrative_bridge": false
+  },
+  "113-114": {
+    "surah_a": 113,
+    "surah_b": 114,
+    "ending_theme_a": "moral_law_and_ethics",
+    "opening_theme_b": "monotheism_and_gods_nature",
+    "theme_continues": false,
+    "bridge_keywords": [],
+    "num_bridge_keywords": 0,
+    "cross_edges": 1,
+    "cross_edge_examples": [
+      {
+        "from": "113:1",
+        "to": "114:1",
+        "score": 1.405567
+      }
+    ],
+    "narrative_bridge": false
+  }
+}

@@ -81,6 +81,22 @@ def _fetch_verses(session, verse_ids: set) -> dict:
 
 app = FastAPI()
 
+# ── deductions API ────────────────────────────────────────────────────────────
+try:
+    from deductions_api import deductions_router
+    app.include_router(deductions_router)
+    print("  Deductions API loaded")
+except ImportError as e:
+    print(f"  Deductions API not available: {e}")
+
+# ── comparator / explorer API ────────────────────────────────────────────────
+try:
+    from comparator_api import comparator_router
+    app.include_router(comparator_router)
+    print("  Comparator/Explorer API loaded")
+except ImportError as e:
+    print(f"  Comparator/Explorer API not available: {e}")
+
 TOOL_LABELS = {
     "search_keyword":  "Searching keywords",
     "get_verse":       "Looking up verse",

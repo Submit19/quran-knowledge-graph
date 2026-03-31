@@ -1,0 +1,5483 @@
+[
+  {
+    "surah": "109",
+    "surahName": "The Disbelievers",
+    "num_verses": 6,
+    "symmetry_score": 100.0,
+    "lcs_length": 3,
+    "half_length": 3,
+    "center_theme": "worship_and_ritual",
+    "category_sequence_summary": [
+      "worship_and_ritual(4)",
+      "uncategorized(2)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "109:1",
+          "109:6"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "109:2",
+          "109:5"
+        ],
+        "front_dominant": "worship_and_ritual",
+        "back_dominant": "worship_and_ritual",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "109:3",
+          "109:4"
+        ],
+        "front_dominant": "worship_and_ritual",
+        "back_dominant": "worship_and_ritual",
+        "category_overlap": 1.0
+      }
+    ]
+  },
+  {
+    "surah": "63",
+    "surahName": "The Hypocrites",
+    "num_verses": 11,
+    "symmetry_score": 80.0,
+    "lcs_length": 4,
+    "half_length": 5,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(10)",
+      "knowledge_and_wisdom(1)"
+    ],
+    "num_mirror_pairs": 5,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "63:1",
+          "63:11"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "63:2",
+          "63:10"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "63:3",
+          "63:9"
+        ],
+        "front_dominant": "knowledge_and_wisdom",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "63:4",
+          "63:8"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "63:5",
+          "63:7"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      }
+    ]
+  },
+  {
+    "surah": "90",
+    "surahName": "The Town",
+    "num_verses": 20,
+    "symmetry_score": 80.0,
+    "lcs_length": 8,
+    "half_length": 10,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(15)",
+      "monotheism_and_gods_nature(4)",
+      "creation_and_cosmology(1)"
+    ],
+    "num_mirror_pairs": 5,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "90:1",
+          "90:19"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "90:3",
+          "90:17"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "90:5",
+          "90:15"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "90:7",
+          "90:13"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "90:9",
+          "90:11"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      }
+    ]
+  },
+  {
+    "surah": "80",
+    "surahName": "He Frowned",
+    "num_verses": 42,
+    "symmetry_score": 76.19,
+    "lcs_length": 16,
+    "half_length": 21,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(28)",
+      "creation_and_cosmology(5)",
+      "monotheism_and_gods_nature(3)",
+      "social_law(2)",
+      "afterlife_and_judgment(2)",
+      "prophecy_and_revelation(1)",
+      "moral_law_and_ethics(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "80:1",
+          "80:37"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.2
+      },
+      {
+        "pair": [
+          "80:7",
+          "80:31"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "80:13",
+          "80:25"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.667
+      }
+    ]
+  },
+  {
+    "surah": "59",
+    "surahName": "Exodus",
+    "num_verses": 24,
+    "symmetry_score": 75.0,
+    "lcs_length": 9,
+    "half_length": 12,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(17)",
+      "afterlife_and_judgment(3)",
+      "uncategorized(3)",
+      "warfare_and_struggle(1)"
+    ],
+    "num_mirror_pairs": 4,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "59:1",
+          "59:22"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "59:4",
+          "59:19"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "59:7",
+          "59:16"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "59:10",
+          "59:13"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.25
+      }
+    ]
+  },
+  {
+    "surah": "104",
+    "surahName": "The Backbiter",
+    "num_verses": 9,
+    "symmetry_score": 75.0,
+    "lcs_length": 3,
+    "half_length": 4,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(8)",
+      "monotheism_and_gods_nature(1)"
+    ],
+    "num_mirror_pairs": 4,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "104:1",
+          "104:9"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "104:2",
+          "104:8"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "104:3",
+          "104:7"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "104:4",
+          "104:6"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      }
+    ]
+  },
+  {
+    "surah": "9",
+    "surahName": "Ultimatum",
+    "num_verses": 127,
+    "symmetry_score": 73.02,
+    "lcs_length": 46,
+    "half_length": 63,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(87)",
+      "afterlife_and_judgment(9)",
+      "worship_and_ritual(6)",
+      "prophecy_and_revelation(6)",
+      "uncategorized(5)",
+      "covenant_and_obedience(4)",
+      "warfare_and_struggle(4)",
+      "moral_law_and_ethics(3)",
+      "prophetic_narratives(2)",
+      "knowledge_and_wisdom(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "9:1",
+          "9:110"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "9:19",
+          "9:92"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.4
+      },
+      {
+        "pair": [
+          "9:37",
+          "9:74"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.375
+      }
+    ]
+  },
+  {
+    "surah": "35",
+    "surahName": "Initiator",
+    "num_verses": 45,
+    "symmetry_score": 72.73,
+    "lcs_length": 16,
+    "half_length": 22,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(27)",
+      "afterlife_and_judgment(4)",
+      "uncategorized(4)",
+      "creation_and_cosmology(3)",
+      "covenant_and_obedience(2)",
+      "moral_law_and_ethics(2)",
+      "worship_and_ritual(2)",
+      "prophecy_and_revelation(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "35:1",
+          "35:40"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "35:7",
+          "35:34"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.25
+      },
+      {
+        "pair": [
+          "35:13",
+          "35:28"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      }
+    ]
+  },
+  {
+    "surah": "48",
+    "surahName": "Victory",
+    "num_verses": 29,
+    "symmetry_score": 71.43,
+    "lcs_length": 10,
+    "half_length": 14,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(22)",
+      "prophecy_and_revelation(3)",
+      "covenant_and_obedience(1)",
+      "moral_law_and_ethics(1)",
+      "worship_and_ritual(1)",
+      "afterlife_and_judgment(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "48:1",
+          "48:26"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "48:5",
+          "48:22"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "48:9",
+          "48:18"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      }
+    ]
+  },
+  {
+    "surah": "71",
+    "surahName": "Noah",
+    "num_verses": 28,
+    "symmetry_score": 71.43,
+    "lcs_length": 10,
+    "half_length": 14,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(12)",
+      "uncategorized(11)",
+      "creation_and_cosmology(2)",
+      "afterlife_and_judgment(1)",
+      "worship_and_ritual(1)",
+      "moral_law_and_ethics(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "71:1",
+          "71:25"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "71:5",
+          "71:21"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.667
+      },
+      {
+        "pair": [
+          "71:9",
+          "71:17"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.667
+      }
+    ]
+  },
+  {
+    "surah": "74",
+    "surahName": "The Hidden Secret",
+    "num_verses": 56,
+    "symmetry_score": 71.43,
+    "lcs_length": 20,
+    "half_length": 28,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(34)",
+      "afterlife_and_judgment(8)",
+      "monotheism_and_gods_nature(7)",
+      "creation_and_cosmology(4)",
+      "prophetic_narratives(1)",
+      "mathematical_miracle(1)",
+      "worship_and_ritual(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "74:1",
+          "74:49"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "74:9",
+          "74:41"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "74:17",
+          "74:33"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      }
+    ]
+  },
+  {
+    "surah": "14",
+    "surahName": "Abraham",
+    "num_verses": 52,
+    "symmetry_score": 69.23,
+    "lcs_length": 18,
+    "half_length": 26,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(33)",
+      "afterlife_and_judgment(6)",
+      "uncategorized(4)",
+      "creation_and_cosmology(3)",
+      "worship_and_ritual(3)",
+      "moral_law_and_ethics(2)",
+      "divine_mercy_and_forgiveness(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "14:1",
+          "14:46"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "14:8",
+          "14:39"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.167
+      },
+      {
+        "pair": [
+          "14:15",
+          "14:32"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.2
+      }
+    ]
+  },
+  {
+    "surah": "33",
+    "surahName": "The Parties",
+    "num_verses": 73,
+    "symmetry_score": 66.67,
+    "lcs_length": 24,
+    "half_length": 36,
+    "center_theme": "social_law",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(45)",
+      "prophecy_and_revelation(6)",
+      "afterlife_and_judgment(5)",
+      "uncategorized(4)",
+      "warfare_and_struggle(4)",
+      "social_law(4)",
+      "prophetic_narratives(1)",
+      "worship_and_ritual(1)",
+      "knowledge_and_wisdom(1)",
+      "covenant_and_obedience(1)",
+      "creation_and_cosmology(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "33:1",
+          "33:64"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "33:11",
+          "33:54"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.75
+      },
+      {
+        "pair": [
+          "33:21",
+          "33:44"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.4
+      }
+    ]
+  },
+  {
+    "surah": "49",
+    "surahName": "The Walls",
+    "num_verses": 18,
+    "symmetry_score": 66.67,
+    "lcs_length": 6,
+    "half_length": 9,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(14)",
+      "covenant_and_obedience(2)",
+      "prophecy_and_revelation(1)",
+      "knowledge_and_wisdom(1)"
+    ],
+    "num_mirror_pairs": 4,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "49:1",
+          "49:17"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "49:3",
+          "49:15"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "49:5",
+          "49:13"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "49:7",
+          "49:11"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "covenant_and_obedience",
+        "category_overlap": 0.5
+      }
+    ]
+  },
+  {
+    "surah": "65",
+    "surahName": "Divorce",
+    "num_verses": 12,
+    "symmetry_score": 66.67,
+    "lcs_length": 4,
+    "half_length": 6,
+    "center_theme": "social_law",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(9)",
+      "social_law(2)",
+      "uncategorized(1)"
+    ],
+    "num_mirror_pairs": 6,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "65:1",
+          "65:12"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "65:2",
+          "65:11"
+        ],
+        "front_dominant": "social_law",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "65:3",
+          "65:10"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "65:4",
+          "65:9"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "65:5",
+          "65:8"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "65:6",
+          "65:7"
+        ],
+        "front_dominant": "social_law",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      }
+    ]
+  },
+  {
+    "surah": "4",
+    "surahName": "Women",
+    "num_verses": 176,
+    "symmetry_score": 65.91,
+    "lcs_length": 58,
+    "half_length": 88,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(105)",
+      "afterlife_and_judgment(13)",
+      "uncategorized(11)",
+      "moral_law_and_ethics(9)",
+      "covenant_and_obedience(9)",
+      "worship_and_ritual(8)",
+      "prophecy_and_revelation(8)",
+      "divine_mercy_and_forgiveness(4)",
+      "social_law(3)",
+      "warfare_and_struggle(3)",
+      "prophetic_narratives(3)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "4:1",
+          "4:152"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.2
+      },
+      {
+        "pair": [
+          "4:26",
+          "4:127"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.625
+      },
+      {
+        "pair": [
+          "4:51",
+          "4:102"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.556
+      }
+    ]
+  },
+  {
+    "surah": "3",
+    "surahName": "The Amramites",
+    "num_verses": 200,
+    "symmetry_score": 65.0,
+    "lcs_length": 65,
+    "half_length": 100,
+    "center_theme": "covenant_and_obedience",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(124)",
+      "afterlife_and_judgment(20)",
+      "prophecy_and_revelation(14)",
+      "uncategorized(10)",
+      "moral_law_and_ethics(10)",
+      "covenant_and_obedience(9)",
+      "prophetic_narratives(4)",
+      "creation_and_cosmology(3)",
+      "worship_and_ritual(2)",
+      "divine_mercy_and_forgiveness(2)",
+      "warfare_and_struggle(2)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "3:1",
+          "3:173"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.714
+      },
+      {
+        "pair": [
+          "3:29",
+          "3:145"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.444
+      },
+      {
+        "pair": [
+          "3:57",
+          "3:117"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.4
+      }
+    ]
+  },
+  {
+    "surah": "57",
+    "surahName": "Iron",
+    "num_verses": 29,
+    "symmetry_score": 64.29,
+    "lcs_length": 9,
+    "half_length": 14,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(20)",
+      "afterlife_and_judgment(3)",
+      "knowledge_and_wisdom(1)",
+      "warfare_and_struggle(1)",
+      "moral_law_and_ethics(1)",
+      "prophetic_narratives(1)",
+      "prophecy_and_revelation(1)",
+      "divine_mercy_and_forgiveness(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "57:1",
+          "57:26"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "prophetic_narratives",
+        "category_overlap": 0.2
+      },
+      {
+        "pair": [
+          "57:5",
+          "57:22"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "57:9",
+          "57:18"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.25
+      }
+    ]
+  },
+  {
+    "surah": "81",
+    "surahName": "The Rolling",
+    "num_verses": 29,
+    "symmetry_score": 64.29,
+    "lcs_length": 9,
+    "half_length": 14,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(20)",
+      "afterlife_and_judgment(3)",
+      "creation_and_cosmology(2)",
+      "prophecy_and_revelation(2)",
+      "monotheism_and_gods_nature(2)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "81:1",
+          "81:26"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.25
+      },
+      {
+        "pair": [
+          "81:5",
+          "81:22"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "81:9",
+          "81:18"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.25
+      }
+    ]
+  },
+  {
+    "surah": "77",
+    "surahName": "Dispatched",
+    "num_verses": 50,
+    "symmetry_score": 64.0,
+    "lcs_length": 16,
+    "half_length": 25,
+    "center_theme": "creation_and_cosmology",
+    "category_sequence_summary": [
+      "uncategorized(24)",
+      "afterlife_and_judgment(16)",
+      "creation_and_cosmology(4)",
+      "moral_law_and_ethics(2)",
+      "covenant_and_obedience(2)",
+      "monotheism_and_gods_nature(1)",
+      "worship_and_ritual(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "77:1",
+          "77:44"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.25
+      },
+      {
+        "pair": [
+          "77:8",
+          "77:37"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "77:15",
+          "77:30"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      }
+    ]
+  },
+  {
+    "surah": "37",
+    "surahName": "The Arrangers",
+    "num_verses": 182,
+    "symmetry_score": 63.74,
+    "lcs_length": 58,
+    "half_length": 91,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(87)",
+      "monotheism_and_gods_nature(43)",
+      "afterlife_and_judgment(17)",
+      "moral_law_and_ethics(11)",
+      "prophetic_narratives(7)",
+      "prophecy_and_revelation(4)",
+      "worship_and_ritual(4)",
+      "creation_and_cosmology(3)",
+      "covenant_and_obedience(3)",
+      "social_law(3)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "37:1",
+          "37:157"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.571
+      },
+      {
+        "pair": [
+          "37:27",
+          "37:131"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.625
+      },
+      {
+        "pair": [
+          "37:53",
+          "37:105"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.444
+      }
+    ]
+  },
+  {
+    "surah": "58",
+    "surahName": "The Debate",
+    "num_verses": 22,
+    "symmetry_score": 63.64,
+    "lcs_length": 7,
+    "half_length": 11,
+    "center_theme": "knowledge_and_wisdom",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(16)",
+      "social_law(1)",
+      "warfare_and_struggle(1)",
+      "afterlife_and_judgment(1)",
+      "knowledge_and_wisdom(1)",
+      "worship_and_ritual(1)",
+      "covenant_and_obedience(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "58:1",
+          "58:20"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "58:4",
+          "58:17"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "58:7",
+          "58:14"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      }
+    ]
+  },
+  {
+    "surah": "70",
+    "surahName": "The Heights",
+    "num_verses": 44,
+    "symmetry_score": 63.64,
+    "lcs_length": 14,
+    "half_length": 22,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(23)",
+      "afterlife_and_judgment(10)",
+      "monotheism_and_gods_nature(5)",
+      "creation_and_cosmology(2)",
+      "worship_and_ritual(2)",
+      "social_law(1)",
+      "warfare_and_struggle(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "70:1",
+          "70:39"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "70:7",
+          "70:33"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "70:13",
+          "70:27"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.333
+      }
+    ]
+  },
+  {
+    "surah": "47",
+    "surahName": "Muhammad",
+    "num_verses": 38,
+    "symmetry_score": 63.16,
+    "lcs_length": 12,
+    "half_length": 19,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(23)",
+      "uncategorized(4)",
+      "covenant_and_obedience(3)",
+      "moral_law_and_ethics(3)",
+      "prophecy_and_revelation(2)",
+      "divine_mercy_and_forgiveness(1)",
+      "afterlife_and_judgment(1)",
+      "warfare_and_struggle(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "47:1",
+          "47:34"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "47:6",
+          "47:29"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "47:11",
+          "47:24"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.25
+      }
+    ]
+  },
+  {
+    "surah": "24",
+    "surahName": "Light",
+    "num_verses": 64,
+    "symmetry_score": 62.5,
+    "lcs_length": 20,
+    "half_length": 32,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(41)",
+      "afterlife_and_judgment(6)",
+      "covenant_and_obedience(5)",
+      "moral_law_and_ethics(5)",
+      "worship_and_ritual(3)",
+      "uncategorized(1)",
+      "divine_mercy_and_forgiveness(1)",
+      "creation_and_cosmology(1)",
+      "prophecy_and_revelation(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "24:1",
+          "24:56"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.167
+      },
+      {
+        "pair": [
+          "24:10",
+          "24:47"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "24:19",
+          "24:38"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.167
+      }
+    ]
+  },
+  {
+    "surah": "56",
+    "surahName": "The Inevitable",
+    "num_verses": 96,
+    "symmetry_score": 62.5,
+    "lcs_length": 30,
+    "half_length": 48,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(72)",
+      "monotheism_and_gods_nature(7)",
+      "creation_and_cosmology(5)",
+      "afterlife_and_judgment(4)",
+      "covenant_and_obedience(3)",
+      "prophecy_and_revelation(3)",
+      "prophetic_narratives(1)",
+      "moral_law_and_ethics(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "56:1",
+          "56:84"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "56:14",
+          "56:71"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.2
+      },
+      {
+        "pair": [
+          "56:27",
+          "56:58"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.667
+      }
+    ]
+  },
+  {
+    "surah": "86",
+    "surahName": "The Bright Star",
+    "num_verses": 17,
+    "symmetry_score": 62.5,
+    "lcs_length": 5,
+    "half_length": 8,
+    "center_theme": "afterlife_and_judgment",
+    "category_sequence_summary": [
+      "uncategorized(11)",
+      "creation_and_cosmology(5)",
+      "afterlife_and_judgment(1)"
+    ],
+    "num_mirror_pairs": 4,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "86:1",
+          "86:16"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "86:3",
+          "86:14"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "86:5",
+          "86:12"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "creation_and_cosmology",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "86:7",
+          "86:10"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      }
+    ]
+  },
+  {
+    "surah": "8",
+    "surahName": "The Spoils of War",
+    "num_verses": 75,
+    "symmetry_score": 62.16,
+    "lcs_length": 23,
+    "half_length": 37,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(51)",
+      "worship_and_ritual(4)",
+      "moral_law_and_ethics(4)",
+      "afterlife_and_judgment(4)",
+      "covenant_and_obedience(4)",
+      "warfare_and_struggle(3)",
+      "uncategorized(3)",
+      "creation_and_cosmology(1)",
+      "divine_mercy_and_forgiveness(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "8:1",
+          "8:66"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.2
+      },
+      {
+        "pair": [
+          "8:11",
+          "8:56"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "8:21",
+          "8:46"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.167
+      }
+    ]
+  },
+  {
+    "surah": "39",
+    "surahName": "The Throngs",
+    "num_verses": 75,
+    "symmetry_score": 62.16,
+    "lcs_length": 23,
+    "half_length": 37,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(45)",
+      "afterlife_and_judgment(12)",
+      "uncategorized(5)",
+      "moral_law_and_ethics(4)",
+      "creation_and_cosmology(3)",
+      "prophecy_and_revelation(3)",
+      "covenant_and_obedience(1)",
+      "worship_and_ritual(1)",
+      "knowledge_and_wisdom(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "39:1",
+          "39:66"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.2
+      },
+      {
+        "pair": [
+          "39:11",
+          "39:56"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.4
+      },
+      {
+        "pair": [
+          "39:21",
+          "39:46"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.571
+      }
+    ]
+  },
+  {
+    "surah": "12",
+    "surahName": "Joseph",
+    "num_verses": 111,
+    "symmetry_score": 61.82,
+    "lcs_length": 34,
+    "half_length": 55,
+    "center_theme": "moral_law_and_ethics",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(52)",
+      "uncategorized(18)",
+      "prophetic_narratives(10)",
+      "prophecy_and_revelation(9)",
+      "social_law(7)",
+      "moral_law_and_ethics(6)",
+      "afterlife_and_judgment(3)",
+      "covenant_and_obedience(3)",
+      "creation_and_cosmology(2)",
+      "knowledge_and_wisdom(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "12:1",
+          "12:97"
+        ],
+        "front_dominant": "prophecy_and_revelation",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.444
+      },
+      {
+        "pair": [
+          "12:16",
+          "12:82"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.667
+      },
+      {
+        "pair": [
+          "12:31",
+          "12:67"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.75
+      }
+    ]
+  },
+  {
+    "surah": "88",
+    "surahName": "Overwhelming",
+    "num_verses": 26,
+    "symmetry_score": 61.54,
+    "lcs_length": 8,
+    "half_length": 13,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(16)",
+      "afterlife_and_judgment(4)",
+      "knowledge_and_wisdom(2)",
+      "creation_and_cosmology(2)",
+      "covenant_and_obedience(1)",
+      "monotheism_and_gods_nature(1)"
+    ],
+    "num_mirror_pairs": 4,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "88:1",
+          "88:24"
+        ],
+        "front_dominant": "knowledge_and_wisdom",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "88:4",
+          "88:21"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "88:7",
+          "88:18"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "creation_and_cosmology",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "88:10",
+          "88:15"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.333
+      }
+    ]
+  },
+  {
+    "surah": "16",
+    "surahName": "The Bee",
+    "num_verses": 128,
+    "symmetry_score": 60.94,
+    "lcs_length": 39,
+    "half_length": 64,
+    "center_theme": "prophecy_and_revelation",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(78)",
+      "creation_and_cosmology(10)",
+      "afterlife_and_judgment(10)",
+      "prophecy_and_revelation(9)",
+      "uncategorized(8)",
+      "moral_law_and_ethics(7)",
+      "covenant_and_obedience(5)",
+      "worship_and_ritual(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "16:1",
+          "16:111"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.429
+      },
+      {
+        "pair": [
+          "16:19",
+          "16:93"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "16:37",
+          "16:75"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      }
+    ]
+  },
+  {
+    "surah": "32",
+    "surahName": "Prostration",
+    "num_verses": 30,
+    "symmetry_score": 60.0,
+    "lcs_length": 9,
+    "half_length": 15,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(10)",
+      "afterlife_and_judgment(7)",
+      "uncategorized(6)",
+      "prophecy_and_revelation(2)",
+      "creation_and_cosmology(2)",
+      "worship_and_ritual(1)",
+      "moral_law_and_ethics(1)",
+      "warfare_and_struggle(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "32:1",
+          "32:27"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "creation_and_cosmology",
+        "category_overlap": 0.167
+      },
+      {
+        "pair": [
+          "32:5",
+          "32:23"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.4
+      },
+      {
+        "pair": [
+          "32:9",
+          "32:19"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.333
+      }
+    ]
+  },
+  {
+    "surah": "62",
+    "surahName": "Friday",
+    "num_verses": 11,
+    "symmetry_score": 60.0,
+    "lcs_length": 3,
+    "half_length": 5,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(8)",
+      "prophecy_and_revelation(1)",
+      "uncategorized(1)",
+      "worship_and_ritual(1)"
+    ],
+    "num_mirror_pairs": 5,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "62:1",
+          "62:11"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "62:2",
+          "62:10"
+        ],
+        "front_dominant": "prophecy_and_revelation",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "62:3",
+          "62:9"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "worship_and_ritual",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "62:4",
+          "62:8"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "62:5",
+          "62:7"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      }
+    ]
+  },
+  {
+    "surah": "78",
+    "surahName": "The Event",
+    "num_verses": 40,
+    "symmetry_score": 60.0,
+    "lcs_length": 12,
+    "half_length": 20,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(24)",
+      "afterlife_and_judgment(7)",
+      "monotheism_and_gods_nature(5)",
+      "creation_and_cosmology(2)",
+      "prophecy_and_revelation(1)",
+      "moral_law_and_ethics(1)"
+    ],
+    "num_mirror_pairs": 4,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "78:1",
+          "78:36"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "78:6",
+          "78:31"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.25
+      },
+      {
+        "pair": [
+          "78:11",
+          "78:26"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.667
+      },
+      {
+        "pair": [
+          "78:16",
+          "78:21"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      }
+    ]
+  },
+  {
+    "surah": "89",
+    "surahName": "Dawn",
+    "num_verses": 30,
+    "symmetry_score": 60.0,
+    "lcs_length": 9,
+    "half_length": 15,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "uncategorized(12)",
+      "monotheism_and_gods_nature(9)",
+      "moral_law_and_ethics(3)",
+      "afterlife_and_judgment(3)",
+      "creation_and_cosmology(2)",
+      "prophetic_narratives(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "89:1",
+          "89:27"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.25
+      },
+      {
+        "pair": [
+          "89:5",
+          "89:23"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.667
+      },
+      {
+        "pair": [
+          "89:9",
+          "89:19"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.2
+      }
+    ]
+  },
+  {
+    "surah": "92",
+    "surahName": "The Night",
+    "num_verses": 21,
+    "symmetry_score": 60.0,
+    "lcs_length": 6,
+    "half_length": 10,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(12)",
+      "moral_law_and_ethics(3)",
+      "afterlife_and_judgment(2)",
+      "prophecy_and_revelation(2)",
+      "creation_and_cosmology(1)",
+      "monotheism_and_gods_nature(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "92:1",
+          "92:19"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.25
+      },
+      {
+        "pair": [
+          "92:4",
+          "92:16"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "moral_law_and_ethics",
+        "category_overlap": 0.667
+      },
+      {
+        "pair": [
+          "92:7",
+          "92:13"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.333
+      }
+    ]
+  },
+  {
+    "surah": "101",
+    "surahName": "The Shocker",
+    "num_verses": 11,
+    "symmetry_score": 60.0,
+    "lcs_length": 3,
+    "half_length": 5,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(8)",
+      "monotheism_and_gods_nature(2)",
+      "afterlife_and_judgment(1)"
+    ],
+    "num_mirror_pairs": 5,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "101:1",
+          "101:11"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "101:2",
+          "101:10"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "101:3",
+          "101:9"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "101:4",
+          "101:8"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "101:5",
+          "101:7"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      }
+    ]
+  },
+  {
+    "surah": "6",
+    "surahName": "Livestock",
+    "num_verses": 165,
+    "symmetry_score": 59.76,
+    "lcs_length": 49,
+    "half_length": 82,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(90)",
+      "uncategorized(15)",
+      "prophecy_and_revelation(14)",
+      "afterlife_and_judgment(12)",
+      "creation_and_cosmology(9)",
+      "covenant_and_obedience(8)",
+      "moral_law_and_ethics(6)",
+      "worship_and_ritual(5)",
+      "prophetic_narratives(3)",
+      "knowledge_and_wisdom(2)",
+      "social_law(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "6:1",
+          "6:143"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.444
+      },
+      {
+        "pair": [
+          "6:24",
+          "6:120"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.375
+      },
+      {
+        "pair": [
+          "6:47",
+          "6:97"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      }
+    ]
+  },
+  {
+    "surah": "15",
+    "surahName": "Al-Hijr Valley",
+    "num_verses": 99,
+    "symmetry_score": 59.18,
+    "lcs_length": 29,
+    "half_length": 49,
+    "center_theme": "afterlife_and_judgment",
+    "category_sequence_summary": [
+      "uncategorized(51)",
+      "monotheism_and_gods_nature(13)",
+      "creation_and_cosmology(9)",
+      "prophecy_and_revelation(6)",
+      "afterlife_and_judgment(5)",
+      "moral_law_and_ethics(5)",
+      "covenant_and_obedience(3)",
+      "prophetic_narratives(3)",
+      "worship_and_ritual(2)",
+      "social_law(1)",
+      "knowledge_and_wisdom(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "15:1",
+          "15:86"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.8
+      },
+      {
+        "pair": [
+          "15:15",
+          "15:72"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "15:29",
+          "15:58"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.333
+      }
+    ]
+  },
+  {
+    "surah": "22",
+    "surahName": "Pilgrimage",
+    "num_verses": 78,
+    "symmetry_score": 58.97,
+    "lcs_length": 23,
+    "half_length": 39,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(47)",
+      "afterlife_and_judgment(8)",
+      "worship_and_ritual(7)",
+      "uncategorized(6)",
+      "creation_and_cosmology(4)",
+      "moral_law_and_ethics(4)",
+      "prophetic_narratives(2)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "22:1",
+          "22:68"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "22:12",
+          "22:57"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "22:23",
+          "22:46"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      }
+    ]
+  },
+  {
+    "surah": "5",
+    "surahName": "The Feast",
+    "num_verses": 120,
+    "symmetry_score": 58.33,
+    "lcs_length": 35,
+    "half_length": 60,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(71)",
+      "prophecy_and_revelation(14)",
+      "worship_and_ritual(10)",
+      "covenant_and_obedience(8)",
+      "moral_law_and_ethics(5)",
+      "afterlife_and_judgment(5)",
+      "prophetic_narratives(3)",
+      "uncategorized(3)",
+      "creation_and_cosmology(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "5:1",
+          "5:104"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.667
+      },
+      {
+        "pair": [
+          "5:18",
+          "5:87"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.222
+      },
+      {
+        "pair": [
+          "5:35",
+          "5:70"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      }
+    ]
+  },
+  {
+    "surah": "69",
+    "surahName": "Incontestable",
+    "num_verses": 52,
+    "symmetry_score": 57.69,
+    "lcs_length": 15,
+    "half_length": 26,
+    "center_theme": "afterlife_and_judgment",
+    "category_sequence_summary": [
+      "uncategorized(30)",
+      "monotheism_and_gods_nature(7)",
+      "afterlife_and_judgment(7)",
+      "covenant_and_obedience(2)",
+      "moral_law_and_ethics(2)",
+      "prophetic_narratives(1)",
+      "knowledge_and_wisdom(1)",
+      "creation_and_cosmology(1)",
+      "prophecy_and_revelation(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "69:1",
+          "69:46"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "69:8",
+          "69:39"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.286
+      },
+      {
+        "pair": [
+          "69:15",
+          "69:32"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      }
+    ]
+  },
+  {
+    "surah": "61",
+    "surahName": "The Column",
+    "num_verses": 14,
+    "symmetry_score": 57.14,
+    "lcs_length": 4,
+    "half_length": 7,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(8)",
+      "prophecy_and_revelation(2)",
+      "covenant_and_obedience(1)",
+      "afterlife_and_judgment(1)",
+      "uncategorized(1)",
+      "prophetic_narratives(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "61:1",
+          "61:13"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "61:3",
+          "61:11"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "61:5",
+          "61:9"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "prophecy_and_revelation",
+        "category_overlap": 0.333
+      }
+    ]
+  },
+  {
+    "surah": "72",
+    "surahName": "Jinns",
+    "num_verses": 28,
+    "symmetry_score": 57.14,
+    "lcs_length": 8,
+    "half_length": 14,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(14)",
+      "prophecy_and_revelation(4)",
+      "uncategorized(4)",
+      "creation_and_cosmology(2)",
+      "afterlife_and_judgment(2)",
+      "moral_law_and_ethics(1)",
+      "mathematical_miracle(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "72:1",
+          "72:25"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "72:5",
+          "72:21"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "72:9",
+          "72:17"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      }
+    ]
+  },
+  {
+    "surah": "55",
+    "surahName": "Most Gracious",
+    "num_verses": 78,
+    "symmetry_score": 56.41,
+    "lcs_length": 22,
+    "half_length": 39,
+    "center_theme": "afterlife_and_judgment",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(38)",
+      "uncategorized(19)",
+      "creation_and_cosmology(10)",
+      "afterlife_and_judgment(6)",
+      "covenant_and_obedience(2)",
+      "prophecy_and_revelation(1)",
+      "worship_and_ritual(1)",
+      "moral_law_and_ethics(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "55:1",
+          "55:68"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.429
+      },
+      {
+        "pair": [
+          "55:12",
+          "55:57"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.75
+      },
+      {
+        "pair": [
+          "55:23",
+          "55:46"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      }
+    ]
+  },
+  {
+    "surah": "2",
+    "surahName": "The Heifer",
+    "num_verses": 286,
+    "symmetry_score": 55.94,
+    "lcs_length": 80,
+    "half_length": 143,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(159)",
+      "moral_law_and_ethics(21)",
+      "worship_and_ritual(17)",
+      "afterlife_and_judgment(17)",
+      "covenant_and_obedience(16)",
+      "uncategorized(12)",
+      "prophecy_and_revelation(12)",
+      "prophetic_narratives(9)",
+      "creation_and_cosmology(8)",
+      "social_law(6)",
+      "divine_mercy_and_forgiveness(4)",
+      "knowledge_and_wisdom(4)",
+      "warfare_and_struggle(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "2:1",
+          "2:247"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.417
+      },
+      {
+        "pair": [
+          "2:41",
+          "2:207"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.417
+      },
+      {
+        "pair": [
+          "2:81",
+          "2:167"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.583
+      }
+    ]
+  },
+  {
+    "surah": "23",
+    "surahName": "The Believers",
+    "num_verses": 118,
+    "symmetry_score": 55.93,
+    "lcs_length": 33,
+    "half_length": 59,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(40)",
+      "uncategorized(37)",
+      "afterlife_and_judgment(12)",
+      "moral_law_and_ethics(11)",
+      "creation_and_cosmology(6)",
+      "prophecy_and_revelation(4)",
+      "worship_and_ritual(2)",
+      "covenant_and_obedience(2)",
+      "divine_mercy_and_forgiveness(2)",
+      "social_law(1)",
+      "prophetic_narratives(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "23:1",
+          "23:103"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "23:17",
+          "23:87"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "23:33",
+          "23:71"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.444
+      }
+    ]
+  },
+  {
+    "surah": "64",
+    "surahName": "Mutual Blaming",
+    "num_verses": 18,
+    "symmetry_score": 55.56,
+    "lcs_length": 5,
+    "half_length": 9,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(12)",
+      "creation_and_cosmology(1)",
+      "afterlife_and_judgment(1)",
+      "covenant_and_obedience(1)",
+      "prophecy_and_revelation(1)",
+      "divine_mercy_and_forgiveness(1)",
+      "moral_law_and_ethics(1)"
+    ],
+    "num_mirror_pairs": 4,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "64:1",
+          "64:17"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "64:3",
+          "64:15"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "64:5",
+          "64:13"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "64:7",
+          "64:11"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      }
+    ]
+  },
+  {
+    "surah": "87",
+    "surahName": "The Most High",
+    "num_verses": 19,
+    "symmetry_score": 55.56,
+    "lcs_length": 5,
+    "half_length": 9,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(11)",
+      "monotheism_and_gods_nature(4)",
+      "prophecy_and_revelation(1)",
+      "worship_and_ritual(1)",
+      "afterlife_and_judgment(1)",
+      "prophetic_narratives(1)"
+    ],
+    "num_mirror_pairs": 4,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "87:1",
+          "87:18"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "87:3",
+          "87:16"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "87:5",
+          "87:14"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "87:7",
+          "87:12"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      }
+    ]
+  },
+  {
+    "surah": "25",
+    "surahName": "The Statute Book",
+    "num_verses": 77,
+    "symmetry_score": 55.26,
+    "lcs_length": 21,
+    "half_length": 38,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(30)",
+      "uncategorized(16)",
+      "afterlife_and_judgment(12)",
+      "prophecy_and_revelation(7)",
+      "moral_law_and_ethics(4)",
+      "social_law(2)",
+      "creation_and_cosmology(2)",
+      "mathematical_miracle(1)",
+      "prophetic_narratives(1)",
+      "knowledge_and_wisdom(1)",
+      "covenant_and_obedience(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "25:1",
+          "25:67"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.571
+      },
+      {
+        "pair": [
+          "25:12",
+          "25:56"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.667
+      },
+      {
+        "pair": [
+          "25:23",
+          "25:45"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.429
+      }
+    ]
+  },
+  {
+    "surah": "40",
+    "surahName": "Forgiver",
+    "num_verses": 85,
+    "symmetry_score": 54.76,
+    "lcs_length": 23,
+    "half_length": 42,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(42)",
+      "afterlife_and_judgment(15)",
+      "prophetic_narratives(6)",
+      "prophecy_and_revelation(5)",
+      "uncategorized(4)",
+      "covenant_and_obedience(3)",
+      "knowledge_and_wisdom(3)",
+      "creation_and_cosmology(3)",
+      "divine_mercy_and_forgiveness(1)",
+      "warfare_and_struggle(1)",
+      "worship_and_ritual(1)",
+      "moral_law_and_ethics(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "40:1",
+          "40:74"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.444
+      },
+      {
+        "pair": [
+          "40:13",
+          "40:62"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.286
+      },
+      {
+        "pair": [
+          "40:25",
+          "40:50"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.375
+      }
+    ]
+  },
+  {
+    "surah": "50",
+    "surahName": "Q.",
+    "num_verses": 45,
+    "symmetry_score": 54.55,
+    "lcs_length": 12,
+    "half_length": 22,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(16)",
+      "afterlife_and_judgment(9)",
+      "creation_and_cosmology(6)",
+      "monotheism_and_gods_nature(4)",
+      "moral_law_and_ethics(3)",
+      "social_law(3)",
+      "prophecy_and_revelation(2)",
+      "prophetic_narratives(2)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "50:1",
+          "50:40"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.8
+      },
+      {
+        "pair": [
+          "50:7",
+          "50:34"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "50:13",
+          "50:28"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.286
+      }
+    ]
+  },
+  {
+    "surah": "52",
+    "surahName": "Mount Sinai",
+    "num_verses": 49,
+    "symmetry_score": 54.17,
+    "lcs_length": 13,
+    "half_length": 24,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(24)",
+      "afterlife_and_judgment(8)",
+      "monotheism_and_gods_nature(7)",
+      "creation_and_cosmology(5)",
+      "prophecy_and_revelation(2)",
+      "moral_law_and_ethics(2)",
+      "worship_and_ritual(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "52:1",
+          "52:43"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "52:8",
+          "52:36"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.4
+      },
+      {
+        "pair": [
+          "52:15",
+          "52:29"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.25
+      }
+    ]
+  },
+  {
+    "surah": "11",
+    "surahName": "Hood",
+    "num_verses": 123,
+    "symmetry_score": 54.1,
+    "lcs_length": 33,
+    "half_length": 61,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(51)",
+      "afterlife_and_judgment(20)",
+      "uncategorized(17)",
+      "prophetic_narratives(9)",
+      "moral_law_and_ethics(7)",
+      "divine_mercy_and_forgiveness(4)",
+      "prophecy_and_revelation(4)",
+      "creation_and_cosmology(3)",
+      "covenant_and_obedience(3)",
+      "social_law(2)",
+      "worship_and_ritual(2)",
+      "knowledge_and_wisdom(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "11:1",
+          "11:107"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "11:18",
+          "11:90"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "11:35",
+          "11:73"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.556
+      }
+    ]
+  },
+  {
+    "surah": "26",
+    "surahName": "The Poets",
+    "num_verses": 227,
+    "symmetry_score": 53.98,
+    "lcs_length": 61,
+    "half_length": 113,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(86)",
+      "monotheism_and_gods_nature(60)",
+      "prophecy_and_revelation(16)",
+      "prophetic_narratives(15)",
+      "afterlife_and_judgment(15)",
+      "moral_law_and_ethics(11)",
+      "creation_and_cosmology(6)",
+      "covenant_and_obedience(6)",
+      "knowledge_and_wisdom(4)",
+      "worship_and_ritual(3)",
+      "warfare_and_struggle(2)",
+      "social_law(2)",
+      "divine_mercy_and_forgiveness(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "26:1",
+          "26:196"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "26:33",
+          "26:164"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.545
+      },
+      {
+        "pair": [
+          "26:65",
+          "26:132"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.545
+      }
+    ]
+  },
+  {
+    "surah": "68",
+    "surahName": "The Pen",
+    "num_verses": 52,
+    "symmetry_score": 53.85,
+    "lcs_length": 14,
+    "half_length": 26,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(29)",
+      "monotheism_and_gods_nature(11)",
+      "covenant_and_obedience(3)",
+      "afterlife_and_judgment(3)",
+      "prophecy_and_revelation(3)",
+      "worship_and_ritual(2)",
+      "moral_law_and_ethics(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "68:1",
+          "68:46"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.667
+      },
+      {
+        "pair": [
+          "68:8",
+          "68:39"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.4
+      },
+      {
+        "pair": [
+          "68:15",
+          "68:32"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.75
+      }
+    ]
+  },
+  {
+    "surah": "10",
+    "surahName": "Jonah",
+    "num_verses": 109,
+    "symmetry_score": 53.7,
+    "lcs_length": 29,
+    "half_length": 54,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(55)",
+      "afterlife_and_judgment(13)",
+      "uncategorized(7)",
+      "covenant_and_obedience(7)",
+      "moral_law_and_ethics(6)",
+      "prophetic_narratives(6)",
+      "creation_and_cosmology(5)",
+      "prophecy_and_revelation(4)",
+      "knowledge_and_wisdom(2)",
+      "divine_mercy_and_forgiveness(2)",
+      "worship_and_ritual(2)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "10:1",
+          "10:95"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.75
+      },
+      {
+        "pair": [
+          "10:16",
+          "10:80"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.222
+      },
+      {
+        "pair": [
+          "10:31",
+          "10:65"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.429
+      }
+    ]
+  },
+  {
+    "surah": "67",
+    "surahName": "Kingship",
+    "num_verses": 30,
+    "symmetry_score": 53.33,
+    "lcs_length": 8,
+    "half_length": 15,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(15)",
+      "uncategorized(7)",
+      "afterlife_and_judgment(3)",
+      "knowledge_and_wisdom(2)",
+      "creation_and_cosmology(2)",
+      "covenant_and_obedience(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "67:1",
+          "67:27"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "67:5",
+          "67:23"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.667
+      },
+      {
+        "pair": [
+          "67:9",
+          "67:19"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      }
+    ]
+  },
+  {
+    "surah": "76",
+    "surahName": "The Human",
+    "num_verses": 31,
+    "symmetry_score": 53.33,
+    "lcs_length": 8,
+    "half_length": 15,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(10)",
+      "monotheism_and_gods_nature(9)",
+      "afterlife_and_judgment(5)",
+      "creation_and_cosmology(3)",
+      "worship_and_ritual(2)",
+      "moral_law_and_ethics(1)",
+      "prophecy_and_revelation(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "76:1",
+          "76:28"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "76:5",
+          "76:24"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.4
+      },
+      {
+        "pair": [
+          "76:9",
+          "76:20"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      }
+    ]
+  },
+  {
+    "surah": "31",
+    "surahName": "Luqmaan",
+    "num_verses": 34,
+    "symmetry_score": 52.94,
+    "lcs_length": 9,
+    "half_length": 17,
+    "center_theme": "worship_and_ritual",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(22)",
+      "creation_and_cosmology(3)",
+      "uncategorized(2)",
+      "moral_law_and_ethics(2)",
+      "worship_and_ritual(2)",
+      "prophecy_and_revelation(1)",
+      "covenant_and_obedience(1)",
+      "afterlife_and_judgment(1)"
+    ],
+    "num_mirror_pairs": 4,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "31:1",
+          "31:31"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "31:5",
+          "31:27"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "31:9",
+          "31:23"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "31:13",
+          "31:19"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.25
+      }
+    ]
+  },
+  {
+    "surah": "46",
+    "surahName": "The Dunes",
+    "num_verses": 35,
+    "symmetry_score": 52.94,
+    "lcs_length": 9,
+    "half_length": 17,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(14)",
+      "afterlife_and_judgment(8)",
+      "moral_law_and_ethics(4)",
+      "uncategorized(3)",
+      "prophecy_and_revelation(3)",
+      "creation_and_cosmology(1)",
+      "covenant_and_obedience(1)",
+      "divine_mercy_and_forgiveness(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "46:1",
+          "46:31"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "46:6",
+          "46:26"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.167
+      },
+      {
+        "pair": [
+          "46:11",
+          "46:21"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.5
+      }
+    ]
+  },
+  {
+    "surah": "17",
+    "surahName": "The Children of Israel",
+    "num_verses": 111,
+    "symmetry_score": 52.73,
+    "lcs_length": 29,
+    "half_length": 55,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(43)",
+      "afterlife_and_judgment(15)",
+      "uncategorized(15)",
+      "prophecy_and_revelation(13)",
+      "moral_law_and_ethics(9)",
+      "creation_and_cosmology(5)",
+      "prophetic_narratives(3)",
+      "covenant_and_obedience(3)",
+      "social_law(2)",
+      "worship_and_ritual(2)",
+      "warfare_and_struggle(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "17:1",
+          "17:97"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.556
+      },
+      {
+        "pair": [
+          "17:16",
+          "17:82"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "17:31",
+          "17:67"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.625
+      }
+    ]
+  },
+  {
+    "surah": "13",
+    "surahName": "Thunder",
+    "num_verses": 43,
+    "symmetry_score": 52.38,
+    "lcs_length": 11,
+    "half_length": 21,
+    "center_theme": "worship_and_ritual",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(25)",
+      "creation_and_cosmology(5)",
+      "afterlife_and_judgment(5)",
+      "prophecy_and_revelation(3)",
+      "moral_law_and_ethics(2)",
+      "worship_and_ritual(1)",
+      "uncategorized(1)",
+      "covenant_and_obedience(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "13:1",
+          "13:38"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "prophecy_and_revelation",
+        "category_overlap": 0.25
+      },
+      {
+        "pair": [
+          "13:7",
+          "13:32"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "13:13",
+          "13:26"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.2
+      }
+    ]
+  },
+  {
+    "surah": "38",
+    "surahName": "S.",
+    "num_verses": 88,
+    "symmetry_score": 52.27,
+    "lcs_length": 23,
+    "half_length": 44,
+    "center_theme": "prophecy_and_revelation",
+    "category_sequence_summary": [
+      "uncategorized(29)",
+      "monotheism_and_gods_nature(15)",
+      "afterlife_and_judgment(14)",
+      "moral_law_and_ethics(10)",
+      "prophetic_narratives(6)",
+      "prophecy_and_revelation(5)",
+      "creation_and_cosmology(3)",
+      "worship_and_ritual(3)",
+      "covenant_and_obedience(1)",
+      "social_law(1)",
+      "knowledge_and_wisdom(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "38:1",
+          "38:77"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.375
+      },
+      {
+        "pair": [
+          "38:13",
+          "38:65"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "38:25",
+          "38:53"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.5
+      }
+    ]
+  },
+  {
+    "surah": "54",
+    "surahName": "The Moon",
+    "num_verses": 55,
+    "symmetry_score": 51.85,
+    "lcs_length": 14,
+    "half_length": 27,
+    "center_theme": "afterlife_and_judgment",
+    "category_sequence_summary": [
+      "uncategorized(15)",
+      "afterlife_and_judgment(14)",
+      "prophecy_and_revelation(7)",
+      "monotheism_and_gods_nature(6)",
+      "prophetic_narratives(4)",
+      "creation_and_cosmology(3)",
+      "knowledge_and_wisdom(3)",
+      "warfare_and_struggle(2)",
+      "moral_law_and_ethics(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "54:1",
+          "54:49"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.286
+      },
+      {
+        "pair": [
+          "54:8",
+          "54:42"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.429
+      },
+      {
+        "pair": [
+          "54:15",
+          "54:35"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.6
+      }
+    ]
+  },
+  {
+    "surah": "53",
+    "surahName": "The Stars",
+    "num_verses": 62,
+    "symmetry_score": 51.61,
+    "lcs_length": 16,
+    "half_length": 31,
+    "center_theme": "moral_law_and_ethics",
+    "category_sequence_summary": [
+      "uncategorized(30)",
+      "monotheism_and_gods_nature(16)",
+      "moral_law_and_ethics(5)",
+      "creation_and_cosmology(3)",
+      "afterlife_and_judgment(2)",
+      "prophecy_and_revelation(2)",
+      "knowledge_and_wisdom(2)",
+      "prophetic_narratives(1)",
+      "worship_and_ritual(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "53:1",
+          "53:55"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "53:9",
+          "53:47"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.25
+      },
+      {
+        "pair": [
+          "53:17",
+          "53:39"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      }
+    ]
+  },
+  {
+    "surah": "7",
+    "surahName": "The Purgatory",
+    "num_verses": 206,
+    "symmetry_score": 51.46,
+    "lcs_length": 53,
+    "half_length": 103,
+    "center_theme": "prophetic_narratives",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(74)",
+      "uncategorized(33)",
+      "afterlife_and_judgment(21)",
+      "moral_law_and_ethics(19)",
+      "prophecy_and_revelation(15)",
+      "prophetic_narratives(14)",
+      "covenant_and_obedience(9)",
+      "creation_and_cosmology(7)",
+      "worship_and_ritual(6)",
+      "divine_mercy_and_forgiveness(6)",
+      "social_law(1)",
+      "warfare_and_struggle(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "7:1",
+          "7:178"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.9
+      },
+      {
+        "pair": [
+          "7:30",
+          "7:149"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.8
+      },
+      {
+        "pair": [
+          "7:59",
+          "7:120"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.455
+      }
+    ]
+  },
+  {
+    "surah": "20",
+    "surahName": "T.H.",
+    "num_verses": 135,
+    "symmetry_score": 50.75,
+    "lcs_length": 34,
+    "half_length": 67,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(45)",
+      "monotheism_and_gods_nature(36)",
+      "prophetic_narratives(18)",
+      "afterlife_and_judgment(11)",
+      "prophecy_and_revelation(5)",
+      "creation_and_cosmology(5)",
+      "worship_and_ritual(5)",
+      "moral_law_and_ethics(4)",
+      "knowledge_and_wisdom(2)",
+      "warfare_and_struggle(2)",
+      "covenant_and_obedience(1)",
+      "social_law(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "20:1",
+          "20:117"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.625
+      },
+      {
+        "pair": [
+          "20:20",
+          "20:98"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.75
+      },
+      {
+        "pair": [
+          "20:39",
+          "20:79"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.556
+      }
+    ]
+  },
+  {
+    "surah": "21",
+    "surahName": "The Prophets",
+    "num_verses": 112,
+    "symmetry_score": 50.0,
+    "lcs_length": 28,
+    "half_length": 56,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "uncategorized(34)",
+      "monotheism_and_gods_nature(26)",
+      "afterlife_and_judgment(11)",
+      "prophetic_narratives(10)",
+      "creation_and_cosmology(9)",
+      "moral_law_and_ethics(7)",
+      "prophecy_and_revelation(4)",
+      "social_law(3)",
+      "worship_and_ritual(2)",
+      "knowledge_and_wisdom(2)",
+      "divine_mercy_and_forgiveness(2)",
+      "covenant_and_obedience(1)",
+      "warfare_and_struggle(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "21:1",
+          "21:97"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.222
+      },
+      {
+        "pair": [
+          "21:17",
+          "21:81"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "21:33",
+          "21:65"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "prophetic_narratives",
+        "category_overlap": 0.444
+      }
+    ]
+  },
+  {
+    "surah": "28",
+    "surahName": "History",
+    "num_verses": 88,
+    "symmetry_score": 50.0,
+    "lcs_length": 22,
+    "half_length": 44,
+    "center_theme": "prophetic_narratives",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(43)",
+      "afterlife_and_judgment(12)",
+      "prophetic_narratives(8)",
+      "prophecy_and_revelation(6)",
+      "creation_and_cosmology(6)",
+      "moral_law_and_ethics(5)",
+      "uncategorized(4)",
+      "covenant_and_obedience(2)",
+      "knowledge_and_wisdom(1)",
+      "warfare_and_struggle(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "28:1",
+          "28:77"
+        ],
+        "front_dominant": "prophetic_narratives",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.286
+      },
+      {
+        "pair": [
+          "28:13",
+          "28:65"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "28:25",
+          "28:53"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.429
+      }
+    ]
+  },
+  {
+    "surah": "29",
+    "surahName": "The Spider",
+    "num_verses": 69,
+    "symmetry_score": 50.0,
+    "lcs_length": 17,
+    "half_length": 34,
+    "center_theme": "knowledge_and_wisdom",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(28)",
+      "afterlife_and_judgment(9)",
+      "uncategorized(5)",
+      "covenant_and_obedience(5)",
+      "creation_and_cosmology(4)",
+      "knowledge_and_wisdom(4)",
+      "worship_and_ritual(4)",
+      "prophecy_and_revelation(3)",
+      "prophetic_narratives(3)",
+      "moral_law_and_ethics(2)",
+      "social_law(2)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "29:1",
+          "29:61"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.667
+      },
+      {
+        "pair": [
+          "29:10",
+          "29:52"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.571
+      },
+      {
+        "pair": [
+          "29:19",
+          "29:43"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "worship_and_ritual",
+        "category_overlap": 0.143
+      }
+    ]
+  },
+  {
+    "surah": "45",
+    "surahName": "Kneeling",
+    "num_verses": 37,
+    "symmetry_score": 50.0,
+    "lcs_length": 9,
+    "half_length": 18,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(15)",
+      "afterlife_and_judgment(6)",
+      "uncategorized(5)",
+      "moral_law_and_ethics(4)",
+      "creation_and_cosmology(3)",
+      "prophecy_and_revelation(1)",
+      "covenant_and_obedience(1)",
+      "divine_mercy_and_forgiveness(1)",
+      "knowledge_and_wisdom(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "45:1",
+          "45:33"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "45:6",
+          "45:28"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "moral_law_and_ethics",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "45:11",
+          "45:23"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.167
+      }
+    ]
+  },
+  {
+    "surah": "60",
+    "surahName": "The Test",
+    "num_verses": 13,
+    "symmetry_score": 50.0,
+    "lcs_length": 3,
+    "half_length": 6,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(8)",
+      "covenant_and_obedience(2)",
+      "afterlife_and_judgment(1)",
+      "warfare_and_struggle(1)",
+      "moral_law_and_ethics(1)"
+    ],
+    "num_mirror_pairs": 6,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "60:1",
+          "60:13"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "60:2",
+          "60:12"
+        ],
+        "front_dominant": "covenant_and_obedience",
+        "back_dominant": "moral_law_and_ethics",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "60:3",
+          "60:11"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "warfare_and_struggle",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "60:4",
+          "60:10"
+        ],
+        "front_dominant": "covenant_and_obedience",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "60:5",
+          "60:9"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "60:6",
+          "60:8"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      }
+    ]
+  },
+  {
+    "surah": "66",
+    "surahName": "Prohibition",
+    "num_verses": 12,
+    "symmetry_score": 50.0,
+    "lcs_length": 3,
+    "half_length": 6,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(9)",
+      "uncategorized(1)",
+      "prophecy_and_revelation(1)",
+      "prophetic_narratives(1)"
+    ],
+    "num_mirror_pairs": 6,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "66:1",
+          "66:12"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "66:2",
+          "66:11"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "66:3",
+          "66:10"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "prophetic_narratives",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "66:4",
+          "66:9"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "prophecy_and_revelation",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "66:5",
+          "66:8"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "66:6",
+          "66:7"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.0
+      }
+    ]
+  },
+  {
+    "surah": "73",
+    "surahName": "Cloaked",
+    "num_verses": 20,
+    "symmetry_score": 50.0,
+    "lcs_length": 5,
+    "half_length": 10,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "afterlife_and_judgment(6)",
+      "monotheism_and_gods_nature(5)",
+      "prophecy_and_revelation(4)",
+      "uncategorized(3)",
+      "creation_and_cosmology(1)",
+      "moral_law_and_ethics(1)"
+    ],
+    "num_mirror_pairs": 5,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "73:1",
+          "73:19"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "73:3",
+          "73:17"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "73:5",
+          "73:15"
+        ],
+        "front_dominant": "prophecy_and_revelation",
+        "back_dominant": "prophecy_and_revelation",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "73:7",
+          "73:13"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "73:9",
+          "73:11"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.333
+      }
+    ]
+  },
+  {
+    "surah": "75",
+    "surahName": "Resurrection",
+    "num_verses": 40,
+    "symmetry_score": 50.0,
+    "lcs_length": 10,
+    "half_length": 20,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(18)",
+      "afterlife_and_judgment(7)",
+      "creation_and_cosmology(7)",
+      "monotheism_and_gods_nature(3)",
+      "prophecy_and_revelation(3)",
+      "worship_and_ritual(1)",
+      "social_law(1)"
+    ],
+    "num_mirror_pairs": 4,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "75:1",
+          "75:36"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.667
+      },
+      {
+        "pair": [
+          "75:6",
+          "75:31"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.2
+      },
+      {
+        "pair": [
+          "75:11",
+          "75:26"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.4
+      },
+      {
+        "pair": [
+          "75:16",
+          "75:21"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.25
+      }
+    ]
+  },
+  {
+    "surah": "94",
+    "surahName": "Cooling the Temper",
+    "num_verses": 8,
+    "symmetry_score": 50.0,
+    "lcs_length": 2,
+    "half_length": 4,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(5)",
+      "monotheism_and_gods_nature(2)",
+      "warfare_and_struggle(1)"
+    ],
+    "num_mirror_pairs": 4,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "94:1",
+          "94:8"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "94:2",
+          "94:7"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "warfare_and_struggle",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "94:3",
+          "94:6"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "94:4",
+          "94:5"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 1.0
+      }
+    ]
+  },
+  {
+    "surah": "98",
+    "surahName": "Proof",
+    "num_verses": 8,
+    "symmetry_score": 50.0,
+    "lcs_length": 2,
+    "half_length": 4,
+    "center_theme": "prophecy_and_revelation",
+    "category_sequence_summary": [
+      "prophecy_and_revelation(3)",
+      "monotheism_and_gods_nature(2)",
+      "uncategorized(1)",
+      "worship_and_ritual(1)",
+      "moral_law_and_ethics(1)"
+    ],
+    "num_mirror_pairs": 4,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "98:1",
+          "98:8"
+        ],
+        "front_dominant": "prophecy_and_revelation",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "98:2",
+          "98:7"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "moral_law_and_ethics",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "98:3",
+          "98:6"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "prophecy_and_revelation",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "98:4",
+          "98:5"
+        ],
+        "front_dominant": "prophecy_and_revelation",
+        "back_dominant": "worship_and_ritual",
+        "category_overlap": 0.0
+      }
+    ]
+  },
+  {
+    "surah": "102",
+    "surahName": "Hoarding",
+    "num_verses": 8,
+    "symmetry_score": 50.0,
+    "lcs_length": 2,
+    "half_length": 4,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(6)",
+      "afterlife_and_judgment(2)"
+    ],
+    "num_mirror_pairs": 4,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "102:1",
+          "102:8"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "102:2",
+          "102:7"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "102:3",
+          "102:6"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "102:4",
+          "102:5"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 1.0
+      }
+    ]
+  },
+  {
+    "surah": "36",
+    "surahName": "Y.S.",
+    "num_verses": 83,
+    "symmetry_score": 48.78,
+    "lcs_length": 20,
+    "half_length": 41,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(27)",
+      "monotheism_and_gods_nature(26)",
+      "prophecy_and_revelation(7)",
+      "afterlife_and_judgment(7)",
+      "covenant_and_obedience(4)",
+      "creation_and_cosmology(4)",
+      "divine_mercy_and_forgiveness(2)",
+      "worship_and_ritual(2)",
+      "knowledge_and_wisdom(2)",
+      "social_law(1)",
+      "mathematical_miracle(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "36:1",
+          "36:73"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.286
+      },
+      {
+        "pair": [
+          "36:12",
+          "36:62"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.375
+      },
+      {
+        "pair": [
+          "36:23",
+          "36:51"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.6
+      }
+    ]
+  },
+  {
+    "surah": "34",
+    "surahName": "Sheba",
+    "num_verses": 54,
+    "symmetry_score": 48.15,
+    "lcs_length": 13,
+    "half_length": 27,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(23)",
+      "uncategorized(11)",
+      "afterlife_and_judgment(7)",
+      "moral_law_and_ethics(4)",
+      "creation_and_cosmology(2)",
+      "prophetic_narratives(2)",
+      "prophecy_and_revelation(2)",
+      "social_law(1)",
+      "worship_and_ritual(1)",
+      "covenant_and_obedience(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "34:1",
+          "34:48"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.286
+      },
+      {
+        "pair": [
+          "34:8",
+          "34:41"
+        ],
+        "front_dominant": "prophetic_narratives",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.286
+      },
+      {
+        "pair": [
+          "34:15",
+          "34:34"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.6
+      }
+    ]
+  },
+  {
+    "surah": "41",
+    "surahName": "Detailed",
+    "num_verses": 54,
+    "symmetry_score": 48.15,
+    "lcs_length": 13,
+    "half_length": 27,
+    "center_theme": "moral_law_and_ethics",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(25)",
+      "moral_law_and_ethics(8)",
+      "uncategorized(6)",
+      "afterlife_and_judgment(6)",
+      "prophecy_and_revelation(4)",
+      "creation_and_cosmology(3)",
+      "social_law(1)",
+      "covenant_and_obedience(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "41:1",
+          "41:48"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.6
+      },
+      {
+        "pair": [
+          "41:8",
+          "41:41"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.286
+      },
+      {
+        "pair": [
+          "41:15",
+          "41:34"
+        ],
+        "front_dominant": "moral_law_and_ethics",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      }
+    ]
+  },
+  {
+    "surah": "27",
+    "surahName": "The Ant",
+    "num_verses": 93,
+    "symmetry_score": 47.83,
+    "lcs_length": 22,
+    "half_length": 46,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(33)",
+      "uncategorized(22)",
+      "moral_law_and_ethics(9)",
+      "prophetic_narratives(8)",
+      "afterlife_and_judgment(7)",
+      "prophecy_and_revelation(3)",
+      "social_law(2)",
+      "mathematical_miracle(2)",
+      "knowledge_and_wisdom(2)",
+      "creation_and_cosmology(2)",
+      "worship_and_ritual(1)",
+      "divine_mercy_and_forgiveness(1)",
+      "covenant_and_obedience(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "27:1",
+          "27:81"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.556
+      },
+      {
+        "pair": [
+          "27:14",
+          "27:68"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.222
+      },
+      {
+        "pair": [
+          "27:27",
+          "27:55"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.25
+      }
+    ]
+  },
+  {
+    "surah": "79",
+    "surahName": "The Snatchers",
+    "num_verses": 46,
+    "symmetry_score": 47.83,
+    "lcs_length": 11,
+    "half_length": 23,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(23)",
+      "monotheism_and_gods_nature(9)",
+      "afterlife_and_judgment(6)",
+      "creation_and_cosmology(4)",
+      "prophetic_narratives(2)",
+      "prophecy_and_revelation(1)",
+      "knowledge_and_wisdom(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "79:1",
+          "79:41"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "79:7",
+          "79:35"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "79:13",
+          "79:29"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "creation_and_cosmology",
+        "category_overlap": 0.25
+      }
+    ]
+  },
+  {
+    "surah": "19",
+    "surahName": "Mary",
+    "num_verses": 98,
+    "symmetry_score": 46.94,
+    "lcs_length": 23,
+    "half_length": 49,
+    "center_theme": "prophetic_narratives",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(37)",
+      "uncategorized(14)",
+      "afterlife_and_judgment(9)",
+      "prophecy_and_revelation(8)",
+      "moral_law_and_ethics(6)",
+      "creation_and_cosmology(6)",
+      "prophetic_narratives(5)",
+      "worship_and_ritual(5)",
+      "covenant_and_obedience(4)",
+      "social_law(3)",
+      "divine_mercy_and_forgiveness(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "19:1",
+          "19:85"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.429
+      },
+      {
+        "pair": [
+          "19:15",
+          "19:71"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.444
+      },
+      {
+        "pair": [
+          "19:29",
+          "19:57"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.556
+      }
+    ]
+  },
+  {
+    "surah": "30",
+    "surahName": "The Romans",
+    "num_verses": 60,
+    "symmetry_score": 46.67,
+    "lcs_length": 14,
+    "half_length": 30,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(22)",
+      "uncategorized(10)",
+      "afterlife_and_judgment(8)",
+      "creation_and_cosmology(6)",
+      "moral_law_and_ethics(4)",
+      "warfare_and_struggle(2)",
+      "worship_and_ritual(2)",
+      "covenant_and_obedience(2)",
+      "knowledge_and_wisdom(1)",
+      "divine_mercy_and_forgiveness(1)",
+      "social_law(1)",
+      "prophecy_and_revelation(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "30:1",
+          "30:53"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "30:9",
+          "30:45"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "moral_law_and_ethics",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "30:17",
+          "30:37"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.333
+      }
+    ]
+  },
+  {
+    "surah": "51",
+    "surahName": "Drivers of the Winds",
+    "num_verses": 60,
+    "symmetry_score": 46.67,
+    "lcs_length": 14,
+    "half_length": 30,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "uncategorized(24)",
+      "creation_and_cosmology(9)",
+      "monotheism_and_gods_nature(9)",
+      "afterlife_and_judgment(7)",
+      "moral_law_and_ethics(3)",
+      "prophetic_narratives(2)",
+      "social_law(2)",
+      "knowledge_and_wisdom(2)",
+      "prophecy_and_revelation(1)",
+      "worship_and_ritual(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "51:1",
+          "51:53"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "51:9",
+          "51:45"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "creation_and_cosmology",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "51:17",
+          "51:37"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      }
+    ]
+  },
+  {
+    "surah": "42",
+    "surahName": "Consultation",
+    "num_verses": 53,
+    "symmetry_score": 46.15,
+    "lcs_length": 12,
+    "half_length": 26,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(28)",
+      "uncategorized(7)",
+      "creation_and_cosmology(5)",
+      "afterlife_and_judgment(4)",
+      "moral_law_and_ethics(3)",
+      "prophecy_and_revelation(2)",
+      "prophetic_narratives(1)",
+      "covenant_and_obedience(1)",
+      "divine_mercy_and_forgiveness(1)",
+      "worship_and_ritual(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "42:1",
+          "42:47"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.2
+      },
+      {
+        "pair": [
+          "42:8",
+          "42:40"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.167
+      },
+      {
+        "pair": [
+          "42:15",
+          "42:33"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.143
+      }
+    ]
+  },
+  {
+    "surah": "43",
+    "surahName": "Ornaments",
+    "num_verses": 89,
+    "symmetry_score": 45.45,
+    "lcs_length": 20,
+    "half_length": 44,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(27)",
+      "uncategorized(25)",
+      "afterlife_and_judgment(10)",
+      "prophecy_and_revelation(9)",
+      "prophetic_narratives(5)",
+      "moral_law_and_ethics(4)",
+      "creation_and_cosmology(3)",
+      "worship_and_ritual(2)",
+      "covenant_and_obedience(2)",
+      "knowledge_and_wisdom(1)",
+      "warfare_and_struggle(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "43:1",
+          "43:78"
+        ],
+        "front_dominant": "prophecy_and_revelation",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.286
+      },
+      {
+        "pair": [
+          "43:13",
+          "43:66"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "43:25",
+          "43:54"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.4
+      }
+    ]
+  },
+  {
+    "surah": "85",
+    "surahName": "The Galaxies",
+    "num_verses": 22,
+    "symmetry_score": 45.45,
+    "lcs_length": 5,
+    "half_length": 11,
+    "center_theme": "moral_law_and_ethics",
+    "category_sequence_summary": [
+      "uncategorized(6)",
+      "monotheism_and_gods_nature(6)",
+      "afterlife_and_judgment(3)",
+      "moral_law_and_ethics(2)",
+      "creation_and_cosmology(1)",
+      "social_law(1)",
+      "prophetic_narratives(1)",
+      "covenant_and_obedience(1)",
+      "prophecy_and_revelation(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "85:1",
+          "85:20"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "85:4",
+          "85:17"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.25
+      },
+      {
+        "pair": [
+          "85:7",
+          "85:14"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "moral_law_and_ethics",
+        "category_overlap": 0.667
+      }
+    ]
+  },
+  {
+    "surah": "44",
+    "surahName": "Smoke",
+    "num_verses": 59,
+    "symmetry_score": 44.83,
+    "lcs_length": 13,
+    "half_length": 29,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(27)",
+      "monotheism_and_gods_nature(12)",
+      "afterlife_and_judgment(8)",
+      "prophecy_and_revelation(5)",
+      "creation_and_cosmology(4)",
+      "covenant_and_obedience(1)",
+      "prophetic_narratives(1)",
+      "moral_law_and_ethics(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "44:1",
+          "44:52"
+        ],
+        "front_dominant": "prophecy_and_revelation",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.4
+      },
+      {
+        "pair": [
+          "44:9",
+          "44:44"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.4
+      },
+      {
+        "pair": [
+          "44:17",
+          "44:36"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.333
+      }
+    ]
+  },
+  {
+    "surah": "83",
+    "surahName": "The Cheaters",
+    "num_verses": 36,
+    "symmetry_score": 44.44,
+    "lcs_length": 8,
+    "half_length": 18,
+    "center_theme": "prophecy_and_revelation",
+    "category_sequence_summary": [
+      "uncategorized(23)",
+      "afterlife_and_judgment(4)",
+      "prophecy_and_revelation(4)",
+      "moral_law_and_ethics(2)",
+      "monotheism_and_gods_nature(2)",
+      "covenant_and_obedience(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "83:1",
+          "83:32"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "83:6",
+          "83:27"
+        ],
+        "front_dominant": "prophecy_and_revelation",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.25
+      },
+      {
+        "pair": [
+          "83:11",
+          "83:22"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.25
+      }
+    ]
+  },
+  {
+    "surah": "18",
+    "surahName": "The Cave",
+    "num_verses": 110,
+    "symmetry_score": 43.64,
+    "lcs_length": 24,
+    "half_length": 55,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(41)",
+      "uncategorized(25)",
+      "afterlife_and_judgment(11)",
+      "moral_law_and_ethics(10)",
+      "creation_and_cosmology(7)",
+      "prophecy_and_revelation(4)",
+      "prophetic_narratives(3)",
+      "knowledge_and_wisdom(3)",
+      "mathematical_miracle(2)",
+      "covenant_and_obedience(2)",
+      "divine_mercy_and_forgiveness(1)",
+      "warfare_and_struggle(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "18:1",
+          "18:96"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "18:16",
+          "18:81"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.375
+      },
+      {
+        "pair": [
+          "18:31",
+          "18:66"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.375
+      }
+    ]
+  },
+  {
+    "surah": "84",
+    "surahName": "The Rupture",
+    "num_verses": 25,
+    "symmetry_score": 41.67,
+    "lcs_length": 5,
+    "half_length": 12,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(7)",
+      "uncategorized(6)",
+      "creation_and_cosmology(4)",
+      "afterlife_and_judgment(4)",
+      "prophecy_and_revelation(2)",
+      "covenant_and_obedience(1)",
+      "moral_law_and_ethics(1)"
+    ],
+    "num_mirror_pairs": 4,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "84:1",
+          "84:23"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.25
+      },
+      {
+        "pair": [
+          "84:4",
+          "84:20"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "prophecy_and_revelation",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "84:7",
+          "84:17"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "creation_and_cosmology",
+        "category_overlap": 0.25
+      },
+      {
+        "pair": [
+          "84:10",
+          "84:14"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 1.0
+      }
+    ]
+  },
+  {
+    "surah": "100",
+    "surahName": "The Gallopers",
+    "num_verses": 11,
+    "symmetry_score": 40.0,
+    "lcs_length": 2,
+    "half_length": 5,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "uncategorized(5)",
+      "monotheism_and_gods_nature(2)",
+      "worship_and_ritual(1)",
+      "warfare_and_struggle(1)",
+      "social_law(1)",
+      "afterlife_and_judgment(1)"
+    ],
+    "num_mirror_pairs": 5,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "100:1",
+          "100:11"
+        ],
+        "front_dominant": "worship_and_ritual",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "100:2",
+          "100:10"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "100:3",
+          "100:9"
+        ],
+        "front_dominant": "warfare_and_struggle",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "100:4",
+          "100:8"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "100:5",
+          "100:7"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "social_law",
+        "category_overlap": 0.0
+      }
+    ]
+  },
+  {
+    "surah": "82",
+    "surahName": "The Shattering",
+    "num_verses": 19,
+    "symmetry_score": 33.33,
+    "lcs_length": 3,
+    "half_length": 9,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(7)",
+      "afterlife_and_judgment(6)",
+      "monotheism_and_gods_nature(4)",
+      "covenant_and_obedience(1)",
+      "moral_law_and_ethics(1)"
+    ],
+    "num_mirror_pairs": 4,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "82:1",
+          "82:18"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.333
+      },
+      {
+        "pair": [
+          "82:3",
+          "82:16"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "82:5",
+          "82:14"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "82:7",
+          "82:12"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.333
+      }
+    ]
+  },
+  {
+    "surah": "96",
+    "surahName": "The Embryo",
+    "num_verses": 19,
+    "symmetry_score": 33.33,
+    "lcs_length": 3,
+    "half_length": 9,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(8)",
+      "monotheism_and_gods_nature(5)",
+      "social_law(2)",
+      "creation_and_cosmology(1)",
+      "covenant_and_obedience(1)",
+      "afterlife_and_judgment(1)",
+      "worship_and_ritual(1)"
+    ],
+    "num_mirror_pairs": 4,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "96:1",
+          "96:18"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "96:3",
+          "96:16"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      },
+      {
+        "pair": [
+          "96:5",
+          "96:14"
+        ],
+        "front_dominant": "social_law",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "96:7",
+          "96:12"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.5
+      }
+    ]
+  },
+  {
+    "surah": "107",
+    "surahName": "Charity",
+    "num_verses": 7,
+    "symmetry_score": 33.33,
+    "lcs_length": 1,
+    "half_length": 3,
+    "center_theme": "worship_and_ritual",
+    "category_sequence_summary": [
+      "uncategorized(3)",
+      "covenant_and_obedience(1)",
+      "monotheism_and_gods_nature(1)",
+      "worship_and_ritual(1)",
+      "moral_law_and_ethics(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "107:1",
+          "107:7"
+        ],
+        "front_dominant": "covenant_and_obedience",
+        "back_dominant": "moral_law_and_ethics",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "107:2",
+          "107:6"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "107:3",
+          "107:5"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "uncategorized",
+        "category_overlap": 1.0
+      }
+    ]
+  },
+  {
+    "surah": "114",
+    "surahName": "People",
+    "num_verses": 6,
+    "symmetry_score": 33.33,
+    "lcs_length": 1,
+    "half_length": 3,
+    "center_theme": "monotheism_and_gods_nature",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(4)",
+      "uncategorized(2)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "114:1",
+          "114:6"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 1.0
+      },
+      {
+        "pair": [
+          "114:2",
+          "114:5"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "114:3",
+          "114:4"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.0
+      }
+    ]
+  },
+  {
+    "surah": "95",
+    "surahName": "The Fig",
+    "num_verses": 8,
+    "symmetry_score": 25.0,
+    "lcs_length": 1,
+    "half_length": 4,
+    "center_theme": "social_law",
+    "category_sequence_summary": [
+      "uncategorized(4)",
+      "social_law(1)",
+      "moral_law_and_ethics(1)",
+      "covenant_and_obedience(1)",
+      "monotheism_and_gods_nature(1)"
+    ],
+    "num_mirror_pairs": 4,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "95:1",
+          "95:8"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "95:2",
+          "95:7"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "covenant_and_obedience",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "95:3",
+          "95:6"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "moral_law_and_ethics",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "95:4",
+          "95:5"
+        ],
+        "front_dominant": "social_law",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.0
+      }
+    ]
+  },
+  {
+    "surah": "99",
+    "surahName": "The Quake",
+    "num_verses": 8,
+    "symmetry_score": 25.0,
+    "lcs_length": 1,
+    "half_length": 4,
+    "center_theme": "afterlife_and_judgment",
+    "category_sequence_summary": [
+      "creation_and_cosmology(3)",
+      "afterlife_and_judgment(2)",
+      "moral_law_and_ethics(2)",
+      "monotheism_and_gods_nature(1)"
+    ],
+    "num_mirror_pairs": 4,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "99:1",
+          "99:8"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "moral_law_and_ethics",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "99:2",
+          "99:7"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "moral_law_and_ethics",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "99:3",
+          "99:6"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "afterlife_and_judgment",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "99:4",
+          "99:5"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      }
+    ]
+  },
+  {
+    "surah": "93",
+    "surahName": "The Forenoon",
+    "num_verses": 11,
+    "symmetry_score": 20.0,
+    "lcs_length": 1,
+    "half_length": 5,
+    "center_theme": "uncategorized",
+    "category_sequence_summary": [
+      "uncategorized(5)",
+      "monotheism_and_gods_nature(3)",
+      "creation_and_cosmology(1)",
+      "afterlife_and_judgment(1)",
+      "moral_law_and_ethics(1)"
+    ],
+    "num_mirror_pairs": 5,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "93:1",
+          "93:11"
+        ],
+        "front_dominant": "uncategorized",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "93:2",
+          "93:10"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "93:3",
+          "93:9"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "moral_law_and_ethics",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "93:4",
+          "93:8"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "93:5",
+          "93:7"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.0
+      }
+    ]
+  },
+  {
+    "surah": "91",
+    "surahName": "The Sun",
+    "num_verses": 15,
+    "symmetry_score": 14.29,
+    "lcs_length": 1,
+    "half_length": 7,
+    "center_theme": "moral_law_and_ethics",
+    "category_sequence_summary": [
+      "creation_and_cosmology(5)",
+      "monotheism_and_gods_nature(4)",
+      "uncategorized(3)",
+      "afterlife_and_judgment(1)",
+      "moral_law_and_ethics(1)",
+      "covenant_and_obedience(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "91:1",
+          "91:14"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "91:3",
+          "91:12"
+        ],
+        "front_dominant": "afterlife_and_judgment",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "91:5",
+          "91:10"
+        ],
+        "front_dominant": "creation_and_cosmology",
+        "back_dominant": "monotheism_and_gods_nature",
+        "category_overlap": 0.0
+      }
+    ]
+  },
+  {
+    "surah": "1",
+    "surahName": "The Key",
+    "num_verses": 7,
+    "symmetry_score": 0.0,
+    "lcs_length": 0,
+    "half_length": 3,
+    "center_theme": "afterlife_and_judgment",
+    "category_sequence_summary": [
+      "monotheism_and_gods_nature(3)",
+      "uncategorized(2)",
+      "afterlife_and_judgment(1)",
+      "worship_and_ritual(1)"
+    ],
+    "num_mirror_pairs": 3,
+    "mirror_pairs": [
+      {
+        "pair": [
+          "1:1",
+          "1:7"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "1:2",
+          "1:6"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "uncategorized",
+        "category_overlap": 0.0
+      },
+      {
+        "pair": [
+          "1:3",
+          "1:5"
+        ],
+        "front_dominant": "monotheism_and_gods_nature",
+        "back_dominant": "worship_and_ritual",
+        "category_overlap": 0.0
+      }
+    ]
+  }
+]

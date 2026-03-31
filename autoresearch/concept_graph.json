@@ -1,0 +1,7076 @@
+{
+  "concepts": [
+    {
+      "id": "monotheism",
+      "verse_count": 592,
+      "keywords": [
+        "almighty",
+        "creator",
+        "eternal",
+        "god",
+        "lord",
+        "one",
+        "sovereign"
+      ],
+      "description": "The oneness and supremacy of God (Tawhid)"
+    },
+    {
+      "id": "creation",
+      "verse_count": 188,
+      "keywords": [
+        "create",
+        "earth",
+        "fashion",
+        "heavens",
+        "originate",
+        "universe"
+      ],
+      "description": "God's creation of the universe and all things"
+    },
+    {
+      "id": "judgment_day",
+      "verse_count": 113,
+      "keywords": [
+        "account",
+        "day",
+        "judgment",
+        "reckoning",
+        "resurrection",
+        "scale",
+        "trumpet"
+      ],
+      "description": "The Day of Judgment and final reckoning"
+    },
+    {
+      "id": "prayer",
+      "verse_count": 85,
+      "keywords": [
+        "bow",
+        "contact",
+        "mosque",
+        "prayer",
+        "prostrate",
+        "salat",
+        "worship"
+      ],
+      "description": "Ritual prayer and worship (Salat)"
+    },
+    {
+      "id": "charity",
+      "verse_count": 68,
+      "keywords": [
+        "alms",
+        "charity",
+        "give",
+        "needy",
+        "poor",
+        "spend",
+        "zakat"
+      ],
+      "description": "Obligatory and voluntary charity (Zakat/Sadaqah)"
+    },
+    {
+      "id": "death",
+      "verse_count": 46,
+      "keywords": [
+        "death",
+        "die",
+        "grave",
+        "life",
+        "mortal",
+        "soul"
+      ],
+      "description": "Death, mortality, and the transition to the hereafter"
+    },
+    {
+      "id": "hell",
+      "verse_count": 43,
+      "keywords": [
+        "doom",
+        "fire",
+        "hell",
+        "punishment",
+        "retribution",
+        "torment"
+      ],
+      "description": "Hellfire and divine punishment (Jahannam)"
+    },
+    {
+      "id": "divine_attributes",
+      "verse_count": 43,
+      "keywords": [
+        "gracious",
+        "hearing",
+        "living",
+        "merciful",
+        "omniscient",
+        "seeing",
+        "wise"
+      ],
+      "description": "The names and attributes of God (Asma ul-Husna)"
+    },
+    {
+      "id": "prophets",
+      "verse_count": 38,
+      "keywords": [
+        "messenger",
+        "mission",
+        "prophet",
+        "revelation",
+        "sent"
+      ],
+      "description": "The role and mission of prophets and messengers"
+    },
+    {
+      "id": "scripture",
+      "verse_count": 37,
+      "keywords": [
+        "book",
+        "gospel",
+        "psalm",
+        "quran",
+        "recite",
+        "scripture",
+        "torah"
+      ],
+      "description": "Divine scriptures and revealed books"
+    },
+    {
+      "id": "dietary_law",
+      "verse_count": 31,
+      "keywords": [
+        "drink",
+        "eat",
+        "food",
+        "forbidden",
+        "intoxicant",
+        "lawful",
+        "meat"
+      ],
+      "description": "Dietary laws and permissible food (Halal/Haram)"
+    },
+    {
+      "id": "moses_narrative",
+      "verse_count": 28,
+      "keywords": [
+        "egypt",
+        "israelite",
+        "moses",
+        "pharaoh",
+        "plague",
+        "staff"
+      ],
+      "description": "The story of Moses and Pharaoh"
+    },
+    {
+      "id": "community",
+      "verse_count": 27,
+      "keywords": [
+        "community",
+        "congregation",
+        "nation",
+        "people",
+        "tribe",
+        "unity"
+      ],
+      "description": "The Muslim community and social cohesion (Ummah)"
+    },
+    {
+      "id": "nature_signs",
+      "verse_count": 23,
+      "keywords": [
+        "moon",
+        "mountain",
+        "night",
+        "rain",
+        "sea",
+        "star",
+        "sun",
+        "wind"
+      ],
+      "description": "Natural phenomena as signs of God's existence"
+    },
+    {
+      "id": "free_will",
+      "verse_count": 21,
+      "keywords": [
+        "accountable",
+        "choose",
+        "freedom",
+        "test",
+        "trial",
+        "will"
+      ],
+      "description": "Human free will, divine testing, and accountability"
+    },
+    {
+      "id": "jesus_narrative",
+      "verse_count": 20,
+      "keywords": [
+        "disciple",
+        "gospel",
+        "jesus",
+        "mary",
+        "miracle",
+        "virgin"
+      ],
+      "description": "The story of Jesus and Mary"
+    },
+    {
+      "id": "truth",
+      "verse_count": 17,
+      "keywords": [
+        "falsehood",
+        "honest",
+        "lie",
+        "sincere",
+        "truth",
+        "upright"
+      ],
+      "description": "Truth, honesty, and sincerity"
+    },
+    {
+      "id": "abraham_narrative",
+      "verse_count": 16,
+      "keywords": [
+        "abraham",
+        "idol",
+        "isaac",
+        "ishmael",
+        "sacrifice",
+        "star"
+      ],
+      "description": "The story of Abraham, father of monotheism"
+    },
+    {
+      "id": "faith",
+      "verse_count": 15,
+      "keywords": [
+        "believe",
+        "conviction",
+        "faith",
+        "submit",
+        "trust"
+      ],
+      "description": "Belief and faith in God (Iman)"
+    },
+    {
+      "id": "covenant",
+      "verse_count": 14,
+      "keywords": [
+        "covenant",
+        "fulfill",
+        "oath",
+        "pledge",
+        "promise"
+      ],
+      "description": "Divine covenants and sacred pledges"
+    },
+    {
+      "id": "paradise",
+      "verse_count": 13,
+      "keywords": [
+        "bliss",
+        "eternal",
+        "garden",
+        "heaven",
+        "paradise",
+        "reward",
+        "river"
+      ],
+      "description": "Paradise and eternal reward (Jannah)"
+    },
+    {
+      "id": "disbelief",
+      "verse_count": 13,
+      "keywords": [
+        "deny",
+        "disbelieve",
+        "hypocrite",
+        "idol",
+        "polytheist",
+        "reject"
+      ],
+      "description": "Disbelief, idolatry, and hypocrisy (Kufr/Shirk)"
+    },
+    {
+      "id": "repentance",
+      "verse_count": 12,
+      "keywords": [
+        "atone",
+        "forgive",
+        "mercy",
+        "pardon",
+        "repent",
+        "return"
+      ],
+      "description": "Repentance and seeking God's forgiveness (Tawbah)"
+    },
+    {
+      "id": "knowledge",
+      "verse_count": 12,
+      "keywords": [
+        "knowledge",
+        "learn",
+        "reflect",
+        "teach",
+        "understand",
+        "wisdom"
+      ],
+      "description": "Knowledge, wisdom, and intellectual pursuit"
+    },
+    {
+      "id": "pilgrimage",
+      "verse_count": 11,
+      "keywords": [
+        "hajj",
+        "kaaba",
+        "mecca",
+        "pilgrimage",
+        "sacred",
+        "shrine"
+      ],
+      "description": "Pilgrimage to Mecca (Hajj)"
+    },
+    {
+      "id": "family_law",
+      "verse_count": 11,
+      "keywords": [
+        "divorce",
+        "dowry",
+        "husband",
+        "inherit",
+        "marry",
+        "wife"
+      ],
+      "description": "Marriage, divorce, and family relations"
+    },
+    {
+      "id": "satan",
+      "verse_count": 10,
+      "keywords": [
+        "devil",
+        "evil",
+        "jinn",
+        "mislead",
+        "satan",
+        "whisper"
+      ],
+      "description": "Satan, jinn, and forces of evil"
+    },
+    {
+      "id": "gratitude",
+      "verse_count": 10,
+      "keywords": [
+        "appreciate",
+        "glorify",
+        "grateful",
+        "praise",
+        "thankful"
+      ],
+      "description": "Gratitude toward God and appreciation of blessings"
+    },
+    {
+      "id": "obedience",
+      "verse_count": 10,
+      "keywords": [
+        "command",
+        "devote",
+        "follow",
+        "obey",
+        "stray",
+        "submit"
+      ],
+      "description": "Obedience to God and His messengers"
+    },
+    {
+      "id": "human_nature",
+      "verse_count": 9,
+      "keywords": [
+        "clay",
+        "desire",
+        "human",
+        "nafs",
+        "soul",
+        "spirit"
+      ],
+      "description": "Human nature, the soul, and inner struggle"
+    },
+    {
+      "id": "noah_narrative",
+      "verse_count": 5,
+      "keywords": [
+        "ark",
+        "drown",
+        "flood",
+        "generation",
+        "noah"
+      ],
+      "description": "The story of Noah and the great flood"
+    },
+    {
+      "id": "warfare",
+      "verse_count": 4,
+      "keywords": [
+        "battle",
+        "defend",
+        "fight",
+        "persecute",
+        "strive",
+        "war"
+      ],
+      "description": "Rules of warfare and struggle (Jihad)"
+    },
+    {
+      "id": "fasting",
+      "verse_count": 3,
+      "keywords": [
+        "abstain",
+        "dawn",
+        "fast",
+        "month",
+        "ramadan"
+      ],
+      "description": "Fasting during Ramadan and beyond (Sawm)"
+    },
+    {
+      "id": "resurrection",
+      "verse_count": 2,
+      "keywords": [
+        "body",
+        "bone",
+        "gather",
+        "raise",
+        "restore",
+        "resurrect"
+      ],
+      "description": "Physical resurrection and bodily restoration"
+    },
+    {
+      "id": "predestination",
+      "verse_count": 2,
+      "keywords": [
+        "decree",
+        "fate",
+        "knowledge",
+        "ordain",
+        "plan",
+        "predetermine"
+      ],
+      "description": "Divine decree and predestination (Qadr)"
+    },
+    {
+      "id": "remembrance",
+      "verse_count": 2,
+      "keywords": [
+        "commemorate",
+        "dhikr",
+        "glorify",
+        "invoke",
+        "mention",
+        "remember"
+      ],
+      "description": "Remembrance and mindfulness of God (Dhikr)"
+    },
+    {
+      "id": "angels",
+      "verse_count": 1,
+      "keywords": [
+        "angel",
+        "descend",
+        "gabriel",
+        "guardian",
+        "wing"
+      ],
+      "description": "Angels and their roles in creation"
+    },
+    {
+      "id": "economic_ethics",
+      "verse_count": 1,
+      "keywords": [
+        "contract",
+        "debt",
+        "property",
+        "trade",
+        "usury",
+        "wealth"
+      ],
+      "description": "Economic principles and prohibition of usury"
+    },
+    {
+      "id": "patience",
+      "verse_count": 0,
+      "keywords": [
+        "endure",
+        "forbear",
+        "patience",
+        "perseverance",
+        "steadfast"
+      ],
+      "description": "Patience and perseverance in faith (Sabr)"
+    },
+    {
+      "id": "justice",
+      "verse_count": 0,
+      "keywords": [
+        "balance",
+        "equity",
+        "fair",
+        "judge",
+        "justice",
+        "oppression"
+      ],
+      "description": "Divine and social justice"
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "economic_ethics",
+      "to": "prayer",
+      "weight": 1.0,
+      "co_occurrence": 1.0,
+      "ordering_bias": 1.0,
+      "evidence_verses": []
+    },
+    {
+      "from": "economic_ethics",
+      "to": "charity",
+      "weight": 1.0,
+      "co_occurrence": 1.0,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "30:39"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "nature_signs",
+      "weight": 1.0,
+      "co_occurrence": 1.0,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "monotheism",
+      "weight": 1.0,
+      "co_occurrence": 1.0,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "monotheism",
+      "weight": 0.6769,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.6769,
+      "evidence_verses": [
+        "114:6",
+        "2:286",
+        "66:8"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "scripture",
+      "weight": 0.6667,
+      "co_occurrence": 0.6667,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6",
+        "2:185"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "community",
+      "weight": 0.6667,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.6667,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "economic_ethics",
+      "to": "monotheism",
+      "weight": 0.6667,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.6667,
+      "evidence_verses": []
+    },
+    {
+      "from": "faith",
+      "to": "monotheism",
+      "weight": 0.6386,
+      "co_occurrence": 0.8667,
+      "ordering_bias": 0.7368,
+      "evidence_verses": [
+        "2:285",
+        "42:10",
+        "42:36",
+        "60:4",
+        "8:2",
+        "8:72"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "monotheism",
+      "weight": 0.6364,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.6364,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "monotheism",
+      "weight": 0.5776,
+      "co_occurrence": 0.8,
+      "ordering_bias": 0.722,
+      "evidence_verses": [
+        "114:6",
+        "4:119"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "monotheism",
+      "weight": 0.5345,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5345,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "monotheism",
+      "weight": 0.518,
+      "co_occurrence": 0.9,
+      "ordering_bias": 0.5755,
+      "evidence_verses": [
+        "114:6",
+        "49:9",
+        "6:150"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "monotheism",
+      "weight": 0.5011,
+      "co_occurrence": 0.9091,
+      "ordering_bias": 0.5512,
+      "evidence_verses": [
+        "114:6",
+        "2:228",
+        "33:37",
+        "4:129",
+        "4:25"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "monotheism",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "prayer",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "charity",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "fasting",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "pilgrimage",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "judgment_day",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "paradise",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "hell",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "prophets",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "scripture",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "satan",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "creation",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "covenant",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "gratitude",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "repentance",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "truth",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "free_will",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "faith",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "angels",
+      "to": "disbelief",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "moses_narrative",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "abraham_narrative",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "jesus_narrative",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "noah_narrative",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "family_law",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "economic_ethics",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "angels",
+      "to": "warfare",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "angels",
+      "to": "knowledge",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "human_nature",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "community",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "dietary_law",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "death",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "divine_attributes",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "obedience",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "nature_signs",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "resurrection",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "predestination",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "angels",
+      "to": "remembrance",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "remembrance",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "economic_ethics",
+      "to": "paradise",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "economic_ethics",
+      "to": "community",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "resurrection",
+      "to": "hell",
+      "weight": 0.5,
+      "co_occurrence": 0.5,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "dietary_law",
+      "weight": 0.5,
+      "co_occurrence": 0.5,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "prayer",
+      "weight": 0.5,
+      "co_occurrence": 0.5,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "charity",
+      "weight": 0.5,
+      "co_occurrence": 0.5,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "judgment_day",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6",
+        "30:56"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "creation",
+      "weight": 0.5,
+      "co_occurrence": 0.5,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "free_will",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "faith",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "predestination",
+      "to": "disbelief",
+      "weight": 0.5,
+      "co_occurrence": 0.5,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "economic_ethics",
+      "weight": 0.5,
+      "co_occurrence": 0.5,
+      "ordering_bias": 1.0,
+      "evidence_verses": []
+    },
+    {
+      "from": "predestination",
+      "to": "knowledge",
+      "weight": 0.5,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "death",
+      "weight": 0.5,
+      "co_occurrence": 0.5,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "judgment_day",
+      "weight": 0.5,
+      "co_occurrence": 0.5,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "prophets",
+      "weight": 0.5,
+      "co_occurrence": 0.5,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "scripture",
+      "weight": 0.5,
+      "co_occurrence": 0.5,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "creation",
+      "weight": 0.5,
+      "co_occurrence": 0.5,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "nature_signs",
+      "weight": 0.5,
+      "co_occurrence": 0.5,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "covenant",
+      "weight": 0.4444,
+      "co_occurrence": 0.6667,
+      "ordering_bias": 0.6667,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "dietary_law",
+      "weight": 0.4444,
+      "co_occurrence": 0.6667,
+      "ordering_bias": 0.6667,
+      "evidence_verses": [
+        "114:6",
+        "2:187"
+      ]
+    },
+    {
+      "from": "warfare",
+      "to": "community",
+      "weight": 0.4286,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.8571,
+      "evidence_verses": []
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "monotheism",
+      "weight": 0.4284,
+      "co_occurrence": 0.7,
+      "ordering_bias": 0.6119,
+      "evidence_verses": [
+        "114:6",
+        "27:60",
+        "2:253",
+        "3:45",
+        "4:171",
+        "5:112",
+        "5:114",
+        "5:45"
+      ]
+    },
+    {
+      "from": "creation",
+      "to": "monotheism",
+      "weight": 0.4179,
+      "co_occurrence": 0.7979,
+      "ordering_bias": 0.5238,
+      "evidence_verses": [
+        "10:3",
+        "114:6",
+        "11:123",
+        "13:16",
+        "14:2",
+        "14:32",
+        "14:38",
+        "14:48",
+        "17:102",
+        "18:14"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "divine_attributes",
+      "weight": 0.4167,
+      "co_occurrence": 0.4167,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "charity",
+      "to": "monotheism",
+      "weight": 0.3999,
+      "co_occurrence": 0.6912,
+      "ordering_bias": 0.5785,
+      "evidence_verses": [
+        "114:6",
+        "22:78",
+        "2:262",
+        "2:271",
+        "2:272",
+        "4:38",
+        "4:77",
+        "73:20",
+        "9:71"
+      ]
+    },
+    {
+      "from": "prophets",
+      "to": "monotheism",
+      "weight": 0.3953,
+      "co_occurrence": 0.6842,
+      "ordering_bias": 0.5778,
+      "evidence_verses": [
+        "114:6",
+        "2:285",
+        "48:28",
+        "4:171",
+        "9:40"
+      ]
+    },
+    {
+      "from": "pilgrimage",
+      "to": "monotheism",
+      "weight": 0.3863,
+      "co_occurrence": 0.9091,
+      "ordering_bias": 0.4249,
+      "evidence_verses": [
+        "114:6",
+        "5:2"
+      ]
+    },
+    {
+      "from": "abraham_narrative",
+      "to": "disbelief",
+      "weight": 0.375,
+      "co_occurrence": 0.375,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "divine_attributes",
+      "to": "monotheism",
+      "weight": 0.3727,
+      "co_occurrence": 0.8837,
+      "ordering_bias": 0.4217,
+      "evidence_verses": [
+        "114:6",
+        "24:58",
+        "2:163",
+        "48:4",
+        "4:11",
+        "4:170",
+        "59:22",
+        "66:2",
+        "6:128"
+      ]
+    },
+    {
+      "from": "hell",
+      "to": "free_will",
+      "weight": 0.3663,
+      "co_occurrence": 0.4884,
+      "ordering_bias": 0.75,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "hell",
+      "to": "monotheism",
+      "weight": 0.3655,
+      "co_occurrence": 0.7209,
+      "ordering_bias": 0.5069,
+      "evidence_verses": [
+        "114:6",
+        "17:97",
+        "29:68",
+        "2:126",
+        "2:178",
+        "3:191",
+        "40:49",
+        "4:14",
+        "7:38",
+        "9:109"
+      ]
+    },
+    {
+      "from": "pilgrimage",
+      "to": "abraham_narrative",
+      "weight": 0.3636,
+      "co_occurrence": 0.3636,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "dietary_law",
+      "weight": 0.3636,
+      "co_occurrence": 0.4545,
+      "ordering_bias": 0.8,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "disbelief",
+      "to": "monotheism",
+      "weight": 0.3621,
+      "co_occurrence": 0.6923,
+      "ordering_bias": 0.523,
+      "evidence_verses": [
+        "114:6",
+        "6:150"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "free_will",
+      "weight": 0.3571,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.7143,
+      "evidence_verses": [
+        "114:6",
+        "7:155"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "monotheism",
+      "weight": 0.3519,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.3519,
+      "evidence_verses": [
+        "114:6",
+        "40:55",
+        "42:5"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "divine_attributes",
+      "weight": 0.3519,
+      "co_occurrence": 0.5455,
+      "ordering_bias": 0.6452,
+      "evidence_verses": [
+        "114:6",
+        "60:10"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "monotheism",
+      "weight": 0.3492,
+      "co_occurrence": 0.5556,
+      "ordering_bias": 0.6286,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "death",
+      "to": "monotheism",
+      "weight": 0.3453,
+      "co_occurrence": 0.6087,
+      "ordering_bias": 0.5673,
+      "evidence_verses": [
+        "114:6",
+        "2:133",
+        "2:258",
+        "31:34",
+        "44:8",
+        "46:17",
+        "67:2",
+        "6:162",
+        "6:70",
+        "9:116"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "gratitude",
+      "weight": 0.3333,
+      "co_occurrence": 0.6667,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "truth",
+      "weight": 0.3333,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "free_will",
+      "weight": 0.3333,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "disbelief",
+      "weight": 0.3333,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "moses_narrative",
+      "weight": 0.3333,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "abraham_narrative",
+      "weight": 0.3333,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "knowledge",
+      "weight": 0.3333,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "divine_attributes",
+      "weight": 0.3333,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "nature_signs",
+      "weight": 0.3333,
+      "co_occurrence": 0.6667,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "remembrance",
+      "weight": 0.3333,
+      "co_occurrence": 0.6667,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "faith",
+      "to": "community",
+      "weight": 0.3333,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "58:22"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "monotheism",
+      "weight": 0.3333,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.3333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "repentance",
+      "weight": 0.3333,
+      "co_occurrence": 1.0,
+      "ordering_bias": 0.3333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "prayer",
+      "weight": 0.3333,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.6667,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "paradise",
+      "to": "monotheism",
+      "weight": 0.3233,
+      "co_occurrence": 0.6154,
+      "ordering_bias": 0.5254,
+      "evidence_verses": [
+        "10:25",
+        "114:6",
+        "57:21"
+      ]
+    },
+    {
+      "from": "judgment_day",
+      "to": "free_will",
+      "weight": 0.3182,
+      "co_occurrence": 0.5487,
+      "ordering_bias": 0.58,
+      "evidence_verses": [
+        "114:6",
+        "16:92"
+      ]
+    },
+    {
+      "from": "pilgrimage",
+      "to": "community",
+      "weight": 0.3117,
+      "co_occurrence": 0.5455,
+      "ordering_bias": 0.5714,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "free_will",
+      "weight": 0.3,
+      "co_occurrence": 0.3,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6",
+        "18:50"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "obedience",
+      "weight": 0.3,
+      "co_occurrence": 0.3,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "free_will",
+      "to": "monotheism",
+      "weight": 0.2925,
+      "co_occurrence": 0.6667,
+      "ordering_bias": 0.4387,
+      "evidence_verses": [
+        "114:6",
+        "12:76",
+        "16:92",
+        "5:48",
+        "64:7"
+      ]
+    },
+    {
+      "from": "charity",
+      "to": "prayer",
+      "weight": 0.2924,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5848,
+      "evidence_verses": [
+        "114:6",
+        "14:31",
+        "19:31",
+        "19:55",
+        "21:73",
+        "22:35",
+        "22:41",
+        "22:78",
+        "24:37",
+        "24:56"
+      ]
+    },
+    {
+      "from": "knowledge",
+      "to": "predestination",
+      "weight": 0.2917,
+      "co_occurrence": 0.5833,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "community",
+      "to": "monotheism",
+      "weight": 0.2917,
+      "co_occurrence": 0.5926,
+      "ordering_bias": 0.4922,
+      "evidence_verses": [
+        "10:19",
+        "114:6",
+        "11:118",
+        "11:92",
+        "2:213",
+        "4:75"
+      ]
+    },
+    {
+      "from": "prayer",
+      "to": "monotheism",
+      "weight": 0.2852,
+      "co_occurrence": 0.6235,
+      "ordering_bias": 0.4574,
+      "evidence_verses": [
+        "114:6",
+        "14:40",
+        "22:78",
+        "35:18",
+        "4:142",
+        "4:77",
+        "5:106",
+        "6:162",
+        "73:20",
+        "9:71"
+      ]
+    },
+    {
+      "from": "judgment_day",
+      "to": "monotheism",
+      "weight": 0.2773,
+      "co_occurrence": 0.531,
+      "ordering_bias": 0.5223,
+      "evidence_verses": [
+        "114:6",
+        "11:60",
+        "11:66",
+        "16:124",
+        "16:92",
+        "17:97",
+        "22:17",
+        "28:61",
+        "29:25",
+        "32:25"
+      ]
+    },
+    {
+      "from": "covenant",
+      "to": "monotheism",
+      "weight": 0.2767,
+      "co_occurrence": 0.5714,
+      "ordering_bias": 0.4842,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "scripture",
+      "to": "monotheism",
+      "weight": 0.2758,
+      "co_occurrence": 0.5946,
+      "ordering_bias": 0.4638,
+      "evidence_verses": [
+        "10:37",
+        "114:6",
+        "2:105",
+        "2:129",
+        "3:50",
+        "6:114"
+      ]
+    },
+    {
+      "from": "dietary_law",
+      "to": "monotheism",
+      "weight": 0.274,
+      "co_occurrence": 0.5806,
+      "ordering_bias": 0.4719,
+      "evidence_verses": [
+        "114:6",
+        "16:115",
+        "22:30",
+        "23:50",
+        "2:173",
+        "2:259",
+        "5:3",
+        "6:145"
+      ]
+    },
+    {
+      "from": "knowledge",
+      "to": "scripture",
+      "weight": 0.2708,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5417,
+      "evidence_verses": [
+        "114:6",
+        "2:129",
+        "2:151",
+        "3:164",
+        "3:48",
+        "62:2"
+      ]
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "scripture",
+      "weight": 0.2689,
+      "co_occurrence": 0.4,
+      "ordering_bias": 0.6721,
+      "evidence_verses": [
+        "114:6",
+        "5:110",
+        "5:46"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "prayer",
+      "weight": 0.2667,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 0.8,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "judgment_day",
+      "weight": 0.2667,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 0.8,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "hell",
+      "weight": 0.2667,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 0.8,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "faith",
+      "to": "obedience",
+      "weight": 0.2667,
+      "co_occurrence": 0.2667,
+      "ordering_bias": 1.0,
+      "evidence_verses": []
+    },
+    {
+      "from": "abraham_narrative",
+      "to": "monotheism",
+      "weight": 0.2628,
+      "co_occurrence": 0.5625,
+      "ordering_bias": 0.4671,
+      "evidence_verses": [
+        "114:6",
+        "2:133",
+        "2:136",
+        "2:140",
+        "3:84",
+        "42:13"
+      ]
+    },
+    {
+      "from": "disbelief",
+      "to": "hell",
+      "weight": 0.2591,
+      "co_occurrence": 0.6154,
+      "ordering_bias": 0.4211,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "faith",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "abraham_narrative",
+      "to": "obedience",
+      "weight": 0.25,
+      "co_occurrence": 0.25,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "warfare",
+      "to": "free_will",
+      "weight": 0.25,
+      "co_occurrence": 0.25,
+      "ordering_bias": 1.0,
+      "evidence_verses": []
+    },
+    {
+      "from": "obedience",
+      "to": "free_will",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "fasting",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "pilgrimage",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "judgment_day",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "paradise",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "angels",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "covenant",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "gratitude",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "truth",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "faith",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "resurrection",
+      "to": "disbelief",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "abraham_narrative",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "jesus_narrative",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "noah_narrative",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "family_law",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "economic_ethics",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "resurrection",
+      "to": "warfare",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "resurrection",
+      "to": "knowledge",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "human_nature",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "death",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "divine_attributes",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "obedience",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "predestination",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "remembrance",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "fasting",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "pilgrimage",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "paradise",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "hell",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "prophets",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "scripture",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "angels",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "satan",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "covenant",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "gratitude",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "repentance",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "truth",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "moses_narrative",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "abraham_narrative",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "jesus_narrative",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "noah_narrative",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "family_law",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "warfare",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "predestination",
+      "to": "human_nature",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "community",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "dietary_law",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "divine_attributes",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "obedience",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "nature_signs",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "resurrection",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "predestination",
+      "to": "remembrance",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "fasting",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "pilgrimage",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "paradise",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "hell",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "angels",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "satan",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "gratitude",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "repentance",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "truth",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "free_will",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "moses_narrative",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "jesus_narrative",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "noah_narrative",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "family_law",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "economic_ethics",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "remembrance",
+      "to": "warfare",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "remembrance",
+      "to": "knowledge",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "human_nature",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "death",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "obedience",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "resurrection",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "predestination",
+      "weight": 0.25,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "community",
+      "weight": 0.2455,
+      "co_occurrence": 0.3,
+      "ordering_bias": 0.8182,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "warfare",
+      "to": "monotheism",
+      "weight": 0.2397,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.4793,
+      "evidence_verses": [
+        "9:13"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "creation",
+      "weight": 0.2381,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 0.7143,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "hell",
+      "weight": 0.2323,
+      "co_occurrence": 0.2727,
+      "ordering_bias": 0.8519,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "death",
+      "to": "free_will",
+      "weight": 0.2319,
+      "co_occurrence": 0.3478,
+      "ordering_bias": 0.6667,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "abraham_narrative",
+      "to": "moses_narrative",
+      "weight": 0.2222,
+      "co_occurrence": 0.25,
+      "ordering_bias": 0.8889,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "knowledge",
+      "to": "prophets",
+      "weight": 0.2222,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.4444,
+      "evidence_verses": [
+        "114:6",
+        "62:2"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "scripture",
+      "weight": 0.2222,
+      "co_occurrence": 0.2222,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6",
+        "5:110"
+      ]
+    },
+    {
+      "from": "nature_signs",
+      "to": "monotheism",
+      "weight": 0.2193,
+      "co_occurrence": 0.6522,
+      "ordering_bias": 0.3363,
+      "evidence_verses": [
+        "10:22",
+        "10:5",
+        "114:6",
+        "13:2",
+        "35:13",
+        "7:54"
+      ]
+    },
+    {
+      "from": "pilgrimage",
+      "to": "hell",
+      "weight": 0.2139,
+      "co_occurrence": 0.3636,
+      "ordering_bias": 0.5882,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "truth",
+      "to": "monotheism",
+      "weight": 0.2135,
+      "co_occurrence": 0.5294,
+      "ordering_bias": 0.4034,
+      "evidence_verses": [
+        "10:32",
+        "114:6",
+        "13:16",
+        "47:3"
+      ]
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "free_will",
+      "weight": 0.2019,
+      "co_occurrence": 0.35,
+      "ordering_bias": 0.5769,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "knowledge",
+      "weight": 0.2,
+      "co_occurrence": 0.3,
+      "ordering_bias": 0.6667,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "repentance",
+      "weight": 0.2,
+      "co_occurrence": 0.2,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6",
+        "40:7"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "community",
+      "weight": 0.2,
+      "co_occurrence": 0.2,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "faith",
+      "to": "death",
+      "weight": 0.2,
+      "co_occurrence": 0.2,
+      "ordering_bias": 1.0,
+      "evidence_verses": []
+    },
+    {
+      "from": "noah_narrative",
+      "to": "pilgrimage",
+      "weight": 0.2,
+      "co_occurrence": 0.2,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "community",
+      "weight": 0.2,
+      "co_occurrence": 0.6,
+      "ordering_bias": 0.3333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "community",
+      "weight": 0.1964,
+      "co_occurrence": 0.25,
+      "ordering_bias": 0.7857,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "knowledge",
+      "to": "monotheism",
+      "weight": 0.1945,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.3891,
+      "evidence_verses": [
+        "114:6",
+        "2:129"
+      ]
+    },
+    {
+      "from": "abraham_narrative",
+      "to": "jesus_narrative",
+      "weight": 0.1923,
+      "co_occurrence": 0.3125,
+      "ordering_bias": 0.6154,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "divine_attributes",
+      "weight": 0.1895,
+      "co_occurrence": 0.3,
+      "ordering_bias": 0.6316,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "abraham_narrative",
+      "to": "noah_narrative",
+      "weight": 0.1875,
+      "co_occurrence": 0.1875,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "community",
+      "to": "prophets",
+      "weight": 0.1852,
+      "co_occurrence": 0.3704,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6",
+        "23:44",
+        "7:94"
+      ]
+    },
+    {
+      "from": "pilgrimage",
+      "to": "fasting",
+      "weight": 0.1818,
+      "co_occurrence": 0.1818,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "pilgrimage",
+      "to": "obedience",
+      "weight": 0.1818,
+      "co_occurrence": 0.1818,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "pilgrimage",
+      "to": "nature_signs",
+      "weight": 0.1818,
+      "co_occurrence": 0.1818,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "community",
+      "to": "free_will",
+      "weight": 0.1811,
+      "co_occurrence": 0.2963,
+      "ordering_bias": 0.6111,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "prayer",
+      "to": "charity",
+      "weight": 0.1807,
+      "co_occurrence": 0.4353,
+      "ordering_bias": 0.4152,
+      "evidence_verses": [
+        "114:6",
+        "14:31",
+        "19:31",
+        "19:55",
+        "21:73",
+        "22:35",
+        "22:41",
+        "22:78",
+        "24:37",
+        "24:56"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "creation",
+      "weight": 0.1761,
+      "co_occurrence": 0.3,
+      "ordering_bias": 0.587,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "moses_narrative",
+      "to": "community",
+      "weight": 0.1732,
+      "co_occurrence": 0.3571,
+      "ordering_bias": 0.4848,
+      "evidence_verses": [
+        "114:6",
+        "2:60",
+        "7:160"
+      ]
+    },
+    {
+      "from": "moses_narrative",
+      "to": "monotheism",
+      "weight": 0.1715,
+      "co_occurrence": 0.3929,
+      "ordering_bias": 0.4365,
+      "evidence_verses": [
+        "114:6",
+        "14:6",
+        "2:61"
+      ]
+    },
+    {
+      "from": "faith",
+      "to": "prophets",
+      "weight": 0.1714,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.8571,
+      "evidence_verses": [
+        "2:285"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "paradise",
+      "weight": 0.1667,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "prophets",
+      "weight": 0.1667,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "angels",
+      "weight": 0.1667,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "jesus_narrative",
+      "weight": 0.1667,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "noah_narrative",
+      "weight": 0.1667,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "economic_ethics",
+      "weight": 0.1667,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "fasting",
+      "to": "human_nature",
+      "weight": 0.1667,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "obedience",
+      "weight": 0.1667,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "resurrection",
+      "weight": 0.1667,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "predestination",
+      "weight": 0.1667,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "obedience",
+      "weight": 0.1667,
+      "co_occurrence": 0.1667,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "knowledge",
+      "to": "obedience",
+      "weight": 0.1667,
+      "co_occurrence": 0.1667,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "free_will",
+      "weight": 0.1667,
+      "co_occurrence": 0.2222,
+      "ordering_bias": 0.75,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "remembrance",
+      "to": "divine_attributes",
+      "weight": 0.1667,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.3333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "scripture",
+      "to": "prophets",
+      "weight": 0.1622,
+      "co_occurrence": 0.3243,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6",
+        "62:2",
+        "7:157"
+      ]
+    },
+    {
+      "from": "charity",
+      "to": "free_will",
+      "weight": 0.1618,
+      "co_occurrence": 0.2353,
+      "ordering_bias": 0.6875,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "pilgrimage",
+      "to": "covenant",
+      "weight": 0.1591,
+      "co_occurrence": 0.2727,
+      "ordering_bias": 0.5833,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "free_will",
+      "weight": 0.1558,
+      "co_occurrence": 0.1818,
+      "ordering_bias": 0.8571,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "nature_signs",
+      "to": "judgment_day",
+      "weight": 0.1553,
+      "co_occurrence": 0.4348,
+      "ordering_bias": 0.3571,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "dietary_law",
+      "to": "divine_attributes",
+      "weight": 0.1548,
+      "co_occurrence": 0.1935,
+      "ordering_bias": 0.8,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "paradise",
+      "to": "free_will",
+      "weight": 0.1538,
+      "co_occurrence": 0.3846,
+      "ordering_bias": 0.4,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "disbelief",
+      "to": "obedience",
+      "weight": 0.1538,
+      "co_occurrence": 0.3077,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6",
+        "6:150"
+      ]
+    },
+    {
+      "from": "disbelief",
+      "to": "remembrance",
+      "weight": 0.1538,
+      "co_occurrence": 0.1538,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "prophets",
+      "weight": 0.1522,
+      "co_occurrence": 0.35,
+      "ordering_bias": 0.4348,
+      "evidence_verses": [
+        "114:6",
+        "2:87",
+        "4:171"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "divine_attributes",
+      "weight": 0.15,
+      "co_occurrence": 0.3,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "nature_signs",
+      "weight": 0.15,
+      "co_occurrence": 0.3,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "moses_narrative",
+      "weight": 0.15,
+      "co_occurrence": 0.15,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "warfare",
+      "weight": 0.15,
+      "co_occurrence": 0.3,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "obedience",
+      "to": "divine_attributes",
+      "weight": 0.15,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.75,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "covenant",
+      "to": "noah_narrative",
+      "weight": 0.1429,
+      "co_occurrence": 0.1429,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "covenant",
+      "to": "remembrance",
+      "weight": 0.1429,
+      "co_occurrence": 0.1429,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "nature_signs",
+      "to": "creation",
+      "weight": 0.1428,
+      "co_occurrence": 0.3043,
+      "ordering_bias": 0.4691,
+      "evidence_verses": [
+        "114:6",
+        "22:18",
+        "29:61",
+        "39:5",
+        "7:54"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "judgment_day",
+      "weight": 0.1421,
+      "co_occurrence": 0.3,
+      "ordering_bias": 0.4737,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "warfare",
+      "to": "hell",
+      "weight": 0.1389,
+      "co_occurrence": 0.25,
+      "ordering_bias": 0.5556,
+      "evidence_verses": []
+    },
+    {
+      "from": "knowledge",
+      "to": "free_will",
+      "weight": 0.1389,
+      "co_occurrence": 0.25,
+      "ordering_bias": 0.5556,
+      "evidence_verses": [
+        "114:6",
+        "2:102"
+      ]
+    },
+    {
+      "from": "knowledge",
+      "to": "community",
+      "weight": 0.1389,
+      "co_occurrence": 0.25,
+      "ordering_bias": 0.5556,
+      "evidence_verses": [
+        "114:6",
+        "21:74"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "judgment_day",
+      "weight": 0.1379,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.6897,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "monotheism",
+      "to": "free_will",
+      "weight": 0.1365,
+      "co_occurrence": 0.2432,
+      "ordering_bias": 0.5613,
+      "evidence_verses": [
+        "114:6",
+        "12:76",
+        "16:92",
+        "5:48",
+        "64:7"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "death",
+      "weight": 0.1333,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 0.4,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "knowledge",
+      "weight": 0.1333,
+      "co_occurrence": 0.1667,
+      "ordering_bias": 0.8,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "community",
+      "weight": 0.1333,
+      "co_occurrence": 0.25,
+      "ordering_bias": 0.5333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "faith",
+      "to": "remembrance",
+      "weight": 0.1333,
+      "co_occurrence": 0.1333,
+      "ordering_bias": 1.0,
+      "evidence_verses": []
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "truth",
+      "weight": 0.1333,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.6667,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "noah_narrative",
+      "to": "free_will",
+      "weight": 0.1333,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.6667,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "community",
+      "weight": 0.1333,
+      "co_occurrence": 0.1818,
+      "ordering_bias": 0.7333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "prayer",
+      "weight": 0.1333,
+      "co_occurrence": 0.2222,
+      "ordering_bias": 0.6,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "hell",
+      "weight": 0.1333,
+      "co_occurrence": 0.4,
+      "ordering_bias": 0.3333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "scripture",
+      "to": "jesus_narrative",
+      "weight": 0.1329,
+      "co_occurrence": 0.4054,
+      "ordering_bias": 0.3279,
+      "evidence_verses": [
+        "114:6",
+        "5:110",
+        "5:46"
+      ]
+    },
+    {
+      "from": "pilgrimage",
+      "to": "free_will",
+      "weight": 0.1322,
+      "co_occurrence": 0.3636,
+      "ordering_bias": 0.3636,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "moses_narrative",
+      "weight": 0.1304,
+      "co_occurrence": 0.25,
+      "ordering_bias": 0.5217,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "hell",
+      "to": "judgment_day",
+      "weight": 0.1301,
+      "co_occurrence": 0.2326,
+      "ordering_bias": 0.5593,
+      "evidence_verses": [
+        "114:6",
+        "17:97",
+        "2:174",
+        "39:60",
+        "40:46"
+      ]
+    },
+    {
+      "from": "knowledge",
+      "to": "moses_narrative",
+      "weight": 0.1296,
+      "co_occurrence": 0.1667,
+      "ordering_bias": 0.7778,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "dietary_law",
+      "to": "community",
+      "weight": 0.129,
+      "co_occurrence": 0.2581,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6",
+        "2:60"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "prayer",
+      "weight": 0.1286,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.6429,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "charity",
+      "to": "community",
+      "weight": 0.1283,
+      "co_occurrence": 0.1912,
+      "ordering_bias": 0.6712,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "disbelief",
+      "to": "satan",
+      "weight": 0.1282,
+      "co_occurrence": 0.1538,
+      "ordering_bias": 0.8333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "community",
+      "to": "scripture",
+      "weight": 0.1279,
+      "co_occurrence": 0.2222,
+      "ordering_bias": 0.5758,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "prophets",
+      "weight": 0.125,
+      "co_occurrence": 0.25,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "predestination",
+      "weight": 0.125,
+      "co_occurrence": 0.25,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "abraham_narrative",
+      "to": "remembrance",
+      "weight": 0.125,
+      "co_occurrence": 0.125,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "warfare",
+      "to": "disbelief",
+      "weight": 0.125,
+      "co_occurrence": 0.25,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "knowledge",
+      "to": "paradise",
+      "weight": 0.125,
+      "co_occurrence": 0.25,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "resurrection",
+      "to": "creation",
+      "weight": 0.125,
+      "co_occurrence": 0.5,
+      "ordering_bias": 0.25,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "paradise",
+      "to": "creation",
+      "weight": 0.1224,
+      "co_occurrence": 0.2308,
+      "ordering_bias": 0.5306,
+      "evidence_verses": [
+        "114:6",
+        "11:108"
+      ]
+    },
+    {
+      "from": "abraham_narrative",
+      "to": "prophets",
+      "weight": 0.1205,
+      "co_occurrence": 0.1875,
+      "ordering_bias": 0.6429,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "repentance",
+      "weight": 0.12,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.6,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "obedience",
+      "weight": 0.12,
+      "co_occurrence": 0.3,
+      "ordering_bias": 0.4,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "covenant",
+      "to": "free_will",
+      "weight": 0.119,
+      "co_occurrence": 0.2857,
+      "ordering_bias": 0.4167,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "prophets",
+      "to": "truth",
+      "weight": 0.1184,
+      "co_occurrence": 0.1579,
+      "ordering_bias": 0.75,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "truth",
+      "to": "disbelief",
+      "weight": 0.1176,
+      "co_occurrence": 0.2353,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "truth",
+      "to": "noah_narrative",
+      "weight": 0.1176,
+      "co_occurrence": 0.1176,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "warfare",
+      "to": "charity",
+      "weight": 0.1172,
+      "co_occurrence": 0.25,
+      "ordering_bias": 0.4688,
+      "evidence_verses": []
+    },
+    {
+      "from": "divine_attributes",
+      "to": "free_will",
+      "weight": 0.1163,
+      "co_occurrence": 0.2326,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "hell",
+      "weight": 0.1143,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5714,
+      "evidence_verses": [
+        "114:6",
+        "40:7"
+      ]
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "human_nature",
+      "weight": 0.1143,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5714,
+      "evidence_verses": [
+        "114:6",
+        "5:110"
+      ]
+    },
+    {
+      "from": "death",
+      "to": "judgment_day",
+      "weight": 0.1115,
+      "co_occurrence": 0.1957,
+      "ordering_bias": 0.5701,
+      "evidence_verses": [
+        "114:6",
+        "3:185",
+        "45:26"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "judgment_day",
+      "weight": 0.1114,
+      "co_occurrence": 0.1818,
+      "ordering_bias": 0.6129,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "pilgrimage",
+      "weight": 0.1111,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "hell",
+      "weight": 0.1111,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "covenant",
+      "weight": 0.1111,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "faith",
+      "weight": 0.1111,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 1.0,
+      "evidence_verses": []
+    },
+    {
+      "from": "human_nature",
+      "to": "disbelief",
+      "weight": 0.1111,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "abraham_narrative",
+      "weight": 0.1111,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "knowledge",
+      "weight": 0.1111,
+      "co_occurrence": 0.2222,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "community",
+      "weight": 0.1111,
+      "co_occurrence": 0.2222,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "divine_attributes",
+      "weight": 0.1111,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "obedience",
+      "weight": 0.1111,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "nature_signs",
+      "weight": 0.1111,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "remembrance",
+      "weight": 0.1111,
+      "co_occurrence": 0.2222,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "covenant",
+      "to": "charity",
+      "weight": 0.1094,
+      "co_occurrence": 0.3571,
+      "ordering_bias": 0.3065,
+      "evidence_verses": [
+        "114:6",
+        "2:270"
+      ]
+    },
+    {
+      "from": "moses_narrative",
+      "to": "creation",
+      "weight": 0.1089,
+      "co_occurrence": 0.25,
+      "ordering_bias": 0.4356,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "death",
+      "weight": 0.1078,
+      "co_occurrence": 0.1667,
+      "ordering_bias": 0.6471,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "abraham_narrative",
+      "to": "free_will",
+      "weight": 0.1071,
+      "co_occurrence": 0.1875,
+      "ordering_bias": 0.5714,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "pilgrimage",
+      "to": "prayer",
+      "weight": 0.1067,
+      "co_occurrence": 0.2727,
+      "ordering_bias": 0.3913,
+      "evidence_verses": [
+        "114:6",
+        "33:33"
+      ]
+    },
+    {
+      "from": "faith",
+      "to": "abraham_narrative",
+      "weight": 0.1067,
+      "co_occurrence": 0.1333,
+      "ordering_bias": 0.8,
+      "evidence_verses": []
+    },
+    {
+      "from": "judgment_day",
+      "to": "community",
+      "weight": 0.1058,
+      "co_occurrence": 0.1947,
+      "ordering_bias": 0.5432,
+      "evidence_verses": [
+        "114:6",
+        "4:41"
+      ]
+    },
+    {
+      "from": "prophets",
+      "to": "scripture",
+      "weight": 0.1053,
+      "co_occurrence": 0.2105,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6",
+        "62:2",
+        "7:157"
+      ]
+    },
+    {
+      "from": "knowledge",
+      "to": "jesus_narrative",
+      "weight": 0.1042,
+      "co_occurrence": 0.1667,
+      "ordering_bias": 0.625,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "prophets",
+      "to": "jesus_narrative",
+      "weight": 0.1041,
+      "co_occurrence": 0.1842,
+      "ordering_bias": 0.5652,
+      "evidence_verses": [
+        "114:6",
+        "2:87",
+        "4:171"
+      ]
+    },
+    {
+      "from": "community",
+      "to": "truth",
+      "weight": 0.1037,
+      "co_occurrence": 0.1481,
+      "ordering_bias": 0.7,
+      "evidence_verses": [
+        "114:6",
+        "40:5"
+      ]
+    },
+    {
+      "from": "prayer",
+      "to": "community",
+      "weight": 0.1029,
+      "co_occurrence": 0.1882,
+      "ordering_bias": 0.5469,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "moses_narrative",
+      "to": "prophets",
+      "weight": 0.1029,
+      "co_occurrence": 0.25,
+      "ordering_bias": 0.4118,
+      "evidence_verses": [
+        "114:6",
+        "43:46"
+      ]
+    },
+    {
+      "from": "paradise",
+      "to": "death",
+      "weight": 0.1026,
+      "co_occurrence": 0.3077,
+      "ordering_bias": 0.3333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "pilgrimage",
+      "to": "disbelief",
+      "weight": 0.1023,
+      "co_occurrence": 0.2727,
+      "ordering_bias": 0.375,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "dietary_law",
+      "to": "nature_signs",
+      "weight": 0.1004,
+      "co_occurrence": 0.129,
+      "ordering_bias": 0.7778,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "disbelief",
+      "to": "divine_attributes",
+      "weight": 0.1003,
+      "co_occurrence": 0.1538,
+      "ordering_bias": 0.6522,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "fasting",
+      "weight": 0.1,
+      "co_occurrence": 0.1,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "pilgrimage",
+      "weight": 0.1,
+      "co_occurrence": 0.1,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "moses_narrative",
+      "weight": 0.1,
+      "co_occurrence": 0.1,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "warfare",
+      "weight": 0.1,
+      "co_occurrence": 0.1,
+      "ordering_bias": 1.0,
+      "evidence_verses": []
+    },
+    {
+      "from": "satan",
+      "to": "resurrection",
+      "weight": 0.1,
+      "co_occurrence": 0.1,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "predestination",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "remembrance",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "covenant",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "free_will",
+      "weight": 0.1,
+      "co_occurrence": 0.1,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "knowledge",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "human_nature",
+      "weight": 0.1,
+      "co_occurrence": 0.1,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "dietary_law",
+      "weight": 0.1,
+      "co_occurrence": 0.1,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "predestination",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "faith",
+      "to": "repentance",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "faith",
+      "to": "free_will",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "noah_narrative",
+      "to": "fasting",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "noah_narrative",
+      "to": "angels",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "noah_narrative",
+      "to": "satan",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "noah_narrative",
+      "to": "gratitude",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "noah_narrative",
+      "to": "faith",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "noah_narrative",
+      "to": "disbelief",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "noah_narrative",
+      "to": "jesus_narrative",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "noah_narrative",
+      "to": "family_law",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "noah_narrative",
+      "to": "economic_ethics",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "noah_narrative",
+      "to": "warfare",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "noah_narrative",
+      "to": "knowledge",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "noah_narrative",
+      "to": "human_nature",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "noah_narrative",
+      "to": "divine_attributes",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "noah_narrative",
+      "to": "obedience",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "noah_narrative",
+      "to": "resurrection",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "noah_narrative",
+      "to": "predestination",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "noah_narrative",
+      "to": "remembrance",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "paradise",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "disbelief",
+      "weight": 0.1,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6",
+        "6:150"
+      ]
+    },
+    {
+      "from": "scripture",
+      "to": "knowledge",
+      "weight": 0.0991,
+      "co_occurrence": 0.2162,
+      "ordering_bias": 0.4583,
+      "evidence_verses": [
+        "114:6",
+        "2:129",
+        "2:151",
+        "3:164",
+        "3:48",
+        "62:2"
+      ]
+    },
+    {
+      "from": "faith",
+      "to": "judgment_day",
+      "weight": 0.0989,
+      "co_occurrence": 0.1333,
+      "ordering_bias": 0.7419,
+      "evidence_verses": []
+    },
+    {
+      "from": "disbelief",
+      "to": "judgment_day",
+      "weight": 0.0989,
+      "co_occurrence": 0.1538,
+      "ordering_bias": 0.6429,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "monotheism",
+      "to": "divine_attributes",
+      "weight": 0.0987,
+      "co_occurrence": 0.1706,
+      "ordering_bias": 0.5783,
+      "evidence_verses": [
+        "114:6",
+        "24:58",
+        "2:163",
+        "48:4",
+        "4:11",
+        "4:170",
+        "59:22",
+        "66:2",
+        "6:128"
+      ]
+    },
+    {
+      "from": "fasting",
+      "to": "charity",
+      "weight": 0.098,
+      "co_occurrence": 0.3333,
+      "ordering_bias": 0.2941,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "death",
+      "to": "knowledge",
+      "weight": 0.0978,
+      "co_occurrence": 0.1304,
+      "ordering_bias": 0.75,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "moses_narrative",
+      "to": "truth",
+      "weight": 0.0974,
+      "co_occurrence": 0.1071,
+      "ordering_bias": 0.9091,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "death",
+      "to": "hell",
+      "weight": 0.0973,
+      "co_occurrence": 0.1739,
+      "ordering_bias": 0.5593,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "faith",
+      "weight": 0.0971,
+      "co_occurrence": 0.15,
+      "ordering_bias": 0.6471,
+      "evidence_verses": []
+    },
+    {
+      "from": "disbelief",
+      "to": "pilgrimage",
+      "weight": 0.0962,
+      "co_occurrence": 0.1538,
+      "ordering_bias": 0.625,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "disbelief",
+      "to": "community",
+      "weight": 0.0962,
+      "co_occurrence": 0.1538,
+      "ordering_bias": 0.625,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "hell",
+      "weight": 0.0952,
+      "co_occurrence": 0.1667,
+      "ordering_bias": 0.5714,
+      "evidence_verses": [
+        "114:6",
+        "40:7"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "jesus_narrative",
+      "weight": 0.0952,
+      "co_occurrence": 0.2222,
+      "ordering_bias": 0.4286,
+      "evidence_verses": [
+        "114:6",
+        "5:110"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "dietary_law",
+      "weight": 0.0952,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.8571,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "charity",
+      "to": "judgment_day",
+      "weight": 0.0945,
+      "co_occurrence": 0.1618,
+      "ordering_bias": 0.5843,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "free_will",
+      "to": "community",
+      "weight": 0.0926,
+      "co_occurrence": 0.2381,
+      "ordering_bias": 0.3889,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "prophets",
+      "to": "community",
+      "weight": 0.0921,
+      "co_occurrence": 0.1842,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6",
+        "23:44",
+        "7:94"
+      ]
+    },
+    {
+      "from": "monotheism",
+      "to": "community",
+      "weight": 0.0918,
+      "co_occurrence": 0.1807,
+      "ordering_bias": 0.5078,
+      "evidence_verses": [
+        "10:19",
+        "114:6",
+        "11:118",
+        "11:92",
+        "2:213",
+        "4:75"
+      ]
+    },
+    {
+      "from": "scripture",
+      "to": "community",
+      "weight": 0.0917,
+      "co_occurrence": 0.2162,
+      "ordering_bias": 0.4242,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "pilgrimage",
+      "to": "warfare",
+      "weight": 0.0909,
+      "co_occurrence": 0.0909,
+      "ordering_bias": 1.0,
+      "evidence_verses": []
+    },
+    {
+      "from": "family_law",
+      "to": "fasting",
+      "weight": 0.0909,
+      "co_occurrence": 0.0909,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "pilgrimage",
+      "weight": 0.0909,
+      "co_occurrence": 0.0909,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "truth",
+      "weight": 0.0909,
+      "co_occurrence": 0.0909,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "moses_narrative",
+      "weight": 0.0909,
+      "co_occurrence": 0.0909,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "knowledge",
+      "weight": 0.0909,
+      "co_occurrence": 0.0909,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "nature_signs",
+      "weight": 0.0909,
+      "co_occurrence": 0.0909,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "creation",
+      "to": "divine_attributes",
+      "weight": 0.0898,
+      "co_occurrence": 0.1383,
+      "ordering_bias": 0.6496,
+      "evidence_verses": [
+        "114:6",
+        "48:4",
+        "4:170"
+      ]
+    },
+    {
+      "from": "judgment_day",
+      "to": "hell",
+      "weight": 0.0897,
+      "co_occurrence": 0.2035,
+      "ordering_bias": 0.4407,
+      "evidence_verses": [
+        "114:6",
+        "17:97",
+        "2:174",
+        "39:60",
+        "40:46"
+      ]
+    },
+    {
+      "from": "abraham_narrative",
+      "to": "community",
+      "weight": 0.0893,
+      "co_occurrence": 0.1875,
+      "ordering_bias": 0.4762,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "creation",
+      "weight": 0.0889,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.4444,
+      "evidence_verses": [
+        "114:6",
+        "42:5"
+      ]
+    },
+    {
+      "from": "noah_narrative",
+      "to": "monotheism",
+      "weight": 0.0882,
+      "co_occurrence": 0.6,
+      "ordering_bias": 0.1471,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "judgment_day",
+      "weight": 0.088,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.44,
+      "evidence_verses": [
+        "114:6",
+        "38:26"
+      ]
+    },
+    {
+      "from": "faith",
+      "to": "prayer",
+      "weight": 0.0877,
+      "co_occurrence": 0.1333,
+      "ordering_bias": 0.6579,
+      "evidence_verses": []
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "creation",
+      "weight": 0.0862,
+      "co_occurrence": 0.15,
+      "ordering_bias": 0.5747,
+      "evidence_verses": [
+        "114:6",
+        "27:60",
+        "4:171"
+      ]
+    },
+    {
+      "from": "disbelief",
+      "to": "free_will",
+      "weight": 0.0855,
+      "co_occurrence": 0.3846,
+      "ordering_bias": 0.2222,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "creation",
+      "to": "free_will",
+      "weight": 0.0836,
+      "co_occurrence": 0.1649,
+      "ordering_bias": 0.5068,
+      "evidence_verses": [
+        "114:6",
+        "11:7"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "hell",
+      "weight": 0.0833,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.8333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "family_law",
+      "weight": 0.0833,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.8333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "fasting",
+      "weight": 0.0833,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "pilgrimage",
+      "weight": 0.0833,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "paradise",
+      "weight": 0.0833,
+      "co_occurrence": 0.1667,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "covenant",
+      "weight": 0.0833,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "truth",
+      "weight": 0.0833,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "abraham_narrative",
+      "weight": 0.0833,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "jesus_narrative",
+      "weight": 0.0833,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "noah_narrative",
+      "weight": 0.0833,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "family_law",
+      "weight": 0.0833,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "warfare",
+      "weight": 0.0833,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 1.0,
+      "evidence_verses": []
+    },
+    {
+      "from": "repentance",
+      "to": "human_nature",
+      "weight": 0.0833,
+      "co_occurrence": 0.1667,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "remembrance",
+      "weight": 0.0833,
+      "co_occurrence": 0.1667,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "abraham_narrative",
+      "to": "divine_attributes",
+      "weight": 0.0833,
+      "co_occurrence": 0.125,
+      "ordering_bias": 0.6667,
+      "evidence_verses": [
+        "114:6",
+        "12:6"
+      ]
+    },
+    {
+      "from": "knowledge",
+      "to": "satan",
+      "weight": 0.0833,
+      "co_occurrence": 0.25,
+      "ordering_bias": 0.3333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "knowledge",
+      "to": "disbelief",
+      "weight": 0.0833,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "knowledge",
+      "to": "divine_attributes",
+      "weight": 0.0833,
+      "co_occurrence": 0.1667,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "knowledge",
+      "to": "nature_signs",
+      "weight": 0.0833,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "knowledge",
+      "to": "resurrection",
+      "weight": 0.0833,
+      "co_occurrence": 0.1667,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "death",
+      "weight": 0.0833,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.75,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "death",
+      "to": "creation",
+      "weight": 0.0831,
+      "co_occurrence": 0.1522,
+      "ordering_bias": 0.5459,
+      "evidence_verses": [
+        "114:6",
+        "12:101",
+        "57:2",
+        "7:158",
+        "9:116"
+      ]
+    },
+    {
+      "from": "death",
+      "to": "community",
+      "weight": 0.083,
+      "co_occurrence": 0.1522,
+      "ordering_bias": 0.5455,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "charity",
+      "weight": 0.0829,
+      "co_occurrence": 0.1818,
+      "ordering_bias": 0.4559,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "pilgrimage",
+      "to": "charity",
+      "weight": 0.0816,
+      "co_occurrence": 0.3636,
+      "ordering_bias": 0.2245,
+      "evidence_verses": [
+        "114:6",
+        "33:33"
+      ]
+    },
+    {
+      "from": "covenant",
+      "to": "moses_narrative",
+      "weight": 0.0816,
+      "co_occurrence": 0.1429,
+      "ordering_bias": 0.5714,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "scripture",
+      "weight": 0.0813,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.8125,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "prophets",
+      "weight": 0.08,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.4,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "judgment_day",
+      "to": "death",
+      "weight": 0.0799,
+      "co_occurrence": 0.1858,
+      "ordering_bias": 0.4299,
+      "evidence_verses": [
+        "114:6",
+        "3:185",
+        "45:26"
+      ]
+    },
+    {
+      "from": "pilgrimage",
+      "to": "knowledge",
+      "weight": 0.0795,
+      "co_occurrence": 0.0909,
+      "ordering_bias": 0.875,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "death",
+      "weight": 0.0794,
+      "co_occurrence": 0.15,
+      "ordering_bias": 0.5294,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "prophets",
+      "to": "obedience",
+      "weight": 0.0789,
+      "co_occurrence": 0.1316,
+      "ordering_bias": 0.6,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "abraham_narrative",
+      "to": "prayer",
+      "weight": 0.0781,
+      "co_occurrence": 0.125,
+      "ordering_bias": 0.625,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "dietary_law",
+      "weight": 0.0778,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.7778,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "prophets",
+      "to": "moses_narrative",
+      "weight": 0.0774,
+      "co_occurrence": 0.1316,
+      "ordering_bias": 0.5882,
+      "evidence_verses": [
+        "114:6",
+        "43:46"
+      ]
+    },
+    {
+      "from": "scripture",
+      "to": "moses_narrative",
+      "weight": 0.0772,
+      "co_occurrence": 0.1351,
+      "ordering_bias": 0.5714,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "paradise",
+      "to": "repentance",
+      "weight": 0.0769,
+      "co_occurrence": 0.1538,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "paradise",
+      "to": "noah_narrative",
+      "weight": 0.0769,
+      "co_occurrence": 0.0769,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "paradise",
+      "to": "human_nature",
+      "weight": 0.0769,
+      "co_occurrence": 0.0769,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "disbelief",
+      "to": "gratitude",
+      "weight": 0.0769,
+      "co_occurrence": 0.0769,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "disbelief",
+      "to": "nature_signs",
+      "weight": 0.0769,
+      "co_occurrence": 0.0769,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "divine_attributes",
+      "to": "prophets",
+      "weight": 0.0766,
+      "co_occurrence": 0.1628,
+      "ordering_bias": 0.4706,
+      "evidence_verses": [
+        "114:6",
+        "22:52"
+      ]
+    },
+    {
+      "from": "covenant",
+      "to": "dietary_law",
+      "weight": 0.0765,
+      "co_occurrence": 0.1429,
+      "ordering_bias": 0.5357,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "dietary_law",
+      "weight": 0.0764,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 0.9167,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "covenant",
+      "to": "scripture",
+      "weight": 0.0762,
+      "co_occurrence": 0.1429,
+      "ordering_bias": 0.5333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "scripture",
+      "weight": 0.0758,
+      "co_occurrence": 0.0909,
+      "ordering_bias": 0.8333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "warfare",
+      "to": "prophets",
+      "weight": 0.075,
+      "co_occurrence": 0.25,
+      "ordering_bias": 0.3,
+      "evidence_verses": []
+    },
+    {
+      "from": "free_will",
+      "to": "disbelief",
+      "weight": 0.0741,
+      "co_occurrence": 0.0952,
+      "ordering_bias": 0.7778,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "prophets",
+      "weight": 0.0741,
+      "co_occurrence": 0.2222,
+      "ordering_bias": 0.3333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "community",
+      "to": "noah_narrative",
+      "weight": 0.0741,
+      "co_occurrence": 0.0741,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "community",
+      "to": "dietary_law",
+      "weight": 0.0741,
+      "co_occurrence": 0.1481,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6",
+        "2:60"
+      ]
+    },
+    {
+      "from": "community",
+      "to": "obedience",
+      "weight": 0.0741,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.6667,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "community",
+      "to": "resurrection",
+      "weight": 0.0741,
+      "co_occurrence": 0.0741,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "monotheism",
+      "to": "creation",
+      "weight": 0.074,
+      "co_occurrence": 0.1554,
+      "ordering_bias": 0.4762,
+      "evidence_verses": [
+        "10:3",
+        "114:6",
+        "11:123",
+        "13:16",
+        "14:2",
+        "14:32",
+        "14:38",
+        "14:48",
+        "17:102",
+        "18:14"
+      ]
+    },
+    {
+      "from": "knowledge",
+      "to": "truth",
+      "weight": 0.0729,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 0.875,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "pilgrimage",
+      "to": "moses_narrative",
+      "weight": 0.0727,
+      "co_occurrence": 0.0909,
+      "ordering_bias": 0.8,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "scripture",
+      "to": "obedience",
+      "weight": 0.0721,
+      "co_occurrence": 0.1081,
+      "ordering_bias": 0.6667,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "hell",
+      "to": "community",
+      "weight": 0.0719,
+      "co_occurrence": 0.1395,
+      "ordering_bias": 0.5152,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "prayer",
+      "to": "free_will",
+      "weight": 0.0715,
+      "co_occurrence": 0.1647,
+      "ordering_bias": 0.434,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "covenant",
+      "to": "paradise",
+      "weight": 0.0714,
+      "co_occurrence": 0.0714,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "covenant",
+      "to": "jesus_narrative",
+      "weight": 0.0714,
+      "co_occurrence": 0.1429,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6",
+        "33:7"
+      ]
+    },
+    {
+      "from": "covenant",
+      "to": "economic_ethics",
+      "weight": 0.0714,
+      "co_occurrence": 0.1429,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "covenant",
+      "to": "community",
+      "weight": 0.0714,
+      "co_occurrence": 0.1429,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "covenant",
+      "to": "nature_signs",
+      "weight": 0.0714,
+      "co_occurrence": 0.0714,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "free_will",
+      "to": "faith",
+      "weight": 0.0714,
+      "co_occurrence": 0.1429,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "free_will",
+      "to": "moses_narrative",
+      "weight": 0.0714,
+      "co_occurrence": 0.0952,
+      "ordering_bias": 0.75,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "truth",
+      "to": "community",
+      "weight": 0.0706,
+      "co_occurrence": 0.2353,
+      "ordering_bias": 0.3,
+      "evidence_verses": [
+        "114:6",
+        "40:5"
+      ]
+    },
+    {
+      "from": "prophets",
+      "to": "creation",
+      "weight": 0.0702,
+      "co_occurrence": 0.1579,
+      "ordering_bias": 0.4444,
+      "evidence_verses": [
+        "114:6",
+        "4:171",
+        "7:158"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "prophets",
+      "weight": 0.07,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.7,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "charity",
+      "weight": 0.07,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 0.84,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "divine_attributes",
+      "to": "paradise",
+      "weight": 0.0698,
+      "co_occurrence": 0.0698,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "abraham_narrative",
+      "weight": 0.0695,
+      "co_occurrence": 0.0909,
+      "ordering_bias": 0.7647,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "disbelief",
+      "to": "prophets",
+      "weight": 0.0684,
+      "co_occurrence": 0.1538,
+      "ordering_bias": 0.4444,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "pilgrimage",
+      "to": "divine_attributes",
+      "weight": 0.0682,
+      "co_occurrence": 0.0909,
+      "ordering_bias": 0.75,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "faith",
+      "weight": 0.0682,
+      "co_occurrence": 0.2727,
+      "ordering_bias": 0.25,
+      "evidence_verses": []
+    },
+    {
+      "from": "community",
+      "to": "judgment_day",
+      "weight": 0.0677,
+      "co_occurrence": 0.1481,
+      "ordering_bias": 0.4568,
+      "evidence_verses": [
+        "114:6",
+        "4:41"
+      ]
+    },
+    {
+      "from": "community",
+      "to": "divine_attributes",
+      "weight": 0.0675,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.6071,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "hell",
+      "to": "disbelief",
+      "weight": 0.0673,
+      "co_occurrence": 0.1163,
+      "ordering_bias": 0.5789,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "truth",
+      "weight": 0.0667,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.6667,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "abraham_narrative",
+      "weight": 0.0667,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.6667,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "nature_signs",
+      "weight": 0.0667,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.6667,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "prayer",
+      "weight": 0.0667,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.3333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "truth",
+      "weight": 0.0667,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.6667,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "faith",
+      "to": "satan",
+      "weight": 0.0667,
+      "co_occurrence": 0.0667,
+      "ordering_bias": 1.0,
+      "evidence_verses": []
+    },
+    {
+      "from": "moses_narrative",
+      "to": "dietary_law",
+      "weight": 0.0667,
+      "co_occurrence": 0.1429,
+      "ordering_bias": 0.4667,
+      "evidence_verses": [
+        "114:6",
+        "2:60"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "scripture",
+      "weight": 0.0667,
+      "co_occurrence": 0.2,
+      "ordering_bias": 0.3333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "covenant",
+      "weight": 0.0661,
+      "co_occurrence": 0.0909,
+      "ordering_bias": 0.7273,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "judgment_day",
+      "weight": 0.0657,
+      "co_occurrence": 0.1667,
+      "ordering_bias": 0.3939,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "pilgrimage",
+      "to": "dietary_law",
+      "weight": 0.0655,
+      "co_occurrence": 0.1818,
+      "ordering_bias": 0.36,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "prayer",
+      "to": "judgment_day",
+      "weight": 0.0654,
+      "co_occurrence": 0.1176,
+      "ordering_bias": 0.5561,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "dietary_law",
+      "to": "remembrance",
+      "weight": 0.0645,
+      "co_occurrence": 0.0645,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "prayer",
+      "to": "faith",
+      "weight": 0.0644,
+      "co_occurrence": 0.1882,
+      "ordering_bias": 0.3421,
+      "evidence_verses": []
+    },
+    {
+      "from": "covenant",
+      "to": "disbelief",
+      "weight": 0.0643,
+      "co_occurrence": 0.0714,
+      "ordering_bias": 0.9,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "dietary_law",
+      "to": "death",
+      "weight": 0.0638,
+      "co_occurrence": 0.1613,
+      "ordering_bias": 0.3953,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "free_will",
+      "to": "truth",
+      "weight": 0.0635,
+      "co_occurrence": 0.0952,
+      "ordering_bias": 0.6667,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "moses_narrative",
+      "to": "paradise",
+      "weight": 0.0635,
+      "co_occurrence": 0.0714,
+      "ordering_bias": 0.8889,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "scripture",
+      "to": "prayer",
+      "weight": 0.0634,
+      "co_occurrence": 0.1081,
+      "ordering_bias": 0.5868,
+      "evidence_verses": [
+        "114:6",
+        "29:45",
+        "35:29"
+      ]
+    },
+    {
+      "from": "hell",
+      "to": "prophets",
+      "weight": 0.0628,
+      "co_occurrence": 0.1163,
+      "ordering_bias": 0.54,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "prophets",
+      "to": "prayer",
+      "weight": 0.0627,
+      "co_occurrence": 0.1053,
+      "ordering_bias": 0.596,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "nature_signs",
+      "weight": 0.0625,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 0.75,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "moses_narrative",
+      "to": "nature_signs",
+      "weight": 0.0625,
+      "co_occurrence": 0.0714,
+      "ordering_bias": 0.875,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "abraham_narrative",
+      "to": "gratitude",
+      "weight": 0.0625,
+      "co_occurrence": 0.0625,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "hell",
+      "to": "knowledge",
+      "weight": 0.0624,
+      "co_occurrence": 0.0698,
+      "ordering_bias": 0.8947,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "disbelief",
+      "to": "prayer",
+      "weight": 0.0623,
+      "co_occurrence": 0.1538,
+      "ordering_bias": 0.4048,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "charity",
+      "weight": 0.0621,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.6207,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "charity",
+      "to": "obedience",
+      "weight": 0.0618,
+      "co_occurrence": 0.1029,
+      "ordering_bias": 0.6,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "hell",
+      "to": "death",
+      "weight": 0.0615,
+      "co_occurrence": 0.1395,
+      "ordering_bias": 0.4407,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "nature_signs",
+      "to": "death",
+      "weight": 0.0614,
+      "co_occurrence": 0.1304,
+      "ordering_bias": 0.4706,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "death",
+      "weight": 0.0611,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.6111,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "free_will",
+      "to": "pilgrimage",
+      "weight": 0.0606,
+      "co_occurrence": 0.0952,
+      "ordering_bias": 0.6364,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "prophets",
+      "weight": 0.0606,
+      "co_occurrence": 0.1818,
+      "ordering_bias": 0.3333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "creation",
+      "weight": 0.06,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.6,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "dietary_law",
+      "to": "free_will",
+      "weight": 0.06,
+      "co_occurrence": 0.129,
+      "ordering_bias": 0.4651,
+      "evidence_verses": [
+        "114:6",
+        "25:20"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "satan",
+      "weight": 0.06,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.6,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "nature_signs",
+      "weight": 0.06,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.6,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "paradise",
+      "to": "nature_signs",
+      "weight": 0.0598,
+      "co_occurrence": 0.0769,
+      "ordering_bias": 0.7778,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "scripture",
+      "weight": 0.0595,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 0.7143,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "charity",
+      "to": "prophets",
+      "weight": 0.0593,
+      "co_occurrence": 0.1618,
+      "ordering_bias": 0.3667,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "truth",
+      "to": "paradise",
+      "weight": 0.0588,
+      "co_occurrence": 0.0588,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "truth",
+      "to": "free_will",
+      "weight": 0.0588,
+      "co_occurrence": 0.1765,
+      "ordering_bias": 0.3333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "truth",
+      "to": "obedience",
+      "weight": 0.0588,
+      "co_occurrence": 0.0588,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "truth",
+      "to": "predestination",
+      "weight": 0.0588,
+      "co_occurrence": 0.1176,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "prophets",
+      "to": "disbelief",
+      "weight": 0.0585,
+      "co_occurrence": 0.1053,
+      "ordering_bias": 0.5556,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "pilgrimage",
+      "to": "prophets",
+      "weight": 0.0584,
+      "co_occurrence": 0.2727,
+      "ordering_bias": 0.2143,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "nature_signs",
+      "to": "community",
+      "weight": 0.058,
+      "co_occurrence": 0.1739,
+      "ordering_bias": 0.3333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "death",
+      "to": "nature_signs",
+      "weight": 0.0575,
+      "co_occurrence": 0.1087,
+      "ordering_bias": 0.5294,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "death",
+      "weight": 0.0574,
+      "co_occurrence": 0.0909,
+      "ordering_bias": 0.6316,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "prayer",
+      "to": "pilgrimage",
+      "weight": 0.0573,
+      "co_occurrence": 0.0941,
+      "ordering_bias": 0.6087,
+      "evidence_verses": [
+        "114:6",
+        "33:33"
+      ]
+    },
+    {
+      "from": "community",
+      "to": "moses_narrative",
+      "weight": 0.0572,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.5152,
+      "evidence_verses": [
+        "114:6",
+        "2:60",
+        "7:160"
+      ]
+    },
+    {
+      "from": "covenant",
+      "to": "obedience",
+      "weight": 0.0571,
+      "co_occurrence": 0.0714,
+      "ordering_bias": 0.8,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "faith",
+      "to": "disbelief",
+      "weight": 0.0571,
+      "co_occurrence": 0.0667,
+      "ordering_bias": 0.8571,
+      "evidence_verses": []
+    },
+    {
+      "from": "free_will",
+      "to": "scripture",
+      "weight": 0.0565,
+      "co_occurrence": 0.0952,
+      "ordering_bias": 0.5938,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "knowledge",
+      "weight": 0.0562,
+      "co_occurrence": 0.15,
+      "ordering_bias": 0.375,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "disbelief",
+      "weight": 0.0556,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 0.6667,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "resurrection",
+      "weight": 0.0556,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 0.6667,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "charity",
+      "weight": 0.0556,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "fasting",
+      "weight": 0.0556,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "angels",
+      "weight": 0.0556,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "satan",
+      "weight": 0.0556,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "repentance",
+      "weight": 0.0556,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "truth",
+      "weight": 0.0556,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "moses_narrative",
+      "weight": 0.0556,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "noah_narrative",
+      "weight": 0.0556,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "family_law",
+      "weight": 0.0556,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "economic_ethics",
+      "weight": 0.0556,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "human_nature",
+      "to": "warfare",
+      "weight": 0.0556,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "human_nature",
+      "to": "resurrection",
+      "weight": 0.0556,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "predestination",
+      "weight": 0.0556,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "prophets",
+      "to": "covenant",
+      "weight": 0.0553,
+      "co_occurrence": 0.0789,
+      "ordering_bias": 0.7,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "scripture",
+      "to": "free_will",
+      "weight": 0.0549,
+      "co_occurrence": 0.1351,
+      "ordering_bias": 0.4062,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "prayer",
+      "weight": 0.0545,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5455,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "hell",
+      "to": "nature_signs",
+      "weight": 0.0543,
+      "co_occurrence": 0.0698,
+      "ordering_bias": 0.7778,
+      "evidence_verses": [
+        "114:6",
+        "22:18"
+      ]
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "charity",
+      "weight": 0.0543,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5429,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "death",
+      "to": "human_nature",
+      "weight": 0.0543,
+      "co_occurrence": 0.2174,
+      "ordering_bias": 0.25,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "repentance",
+      "to": "prayer",
+      "weight": 0.0542,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 0.65,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "scripture",
+      "to": "resurrection",
+      "weight": 0.0541,
+      "co_occurrence": 0.0541,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "free_will",
+      "to": "prayer",
+      "weight": 0.0539,
+      "co_occurrence": 0.0952,
+      "ordering_bias": 0.566,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "community",
+      "to": "hell",
+      "weight": 0.0539,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.4848,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "dietary_law",
+      "to": "scripture",
+      "weight": 0.0539,
+      "co_occurrence": 0.0968,
+      "ordering_bias": 0.5571,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "covenant",
+      "to": "death",
+      "weight": 0.0536,
+      "co_occurrence": 0.1429,
+      "ordering_bias": 0.375,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "abraham_narrative",
+      "to": "nature_signs",
+      "weight": 0.0536,
+      "co_occurrence": 0.0625,
+      "ordering_bias": 0.8571,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "truth",
+      "to": "creation",
+      "weight": 0.0535,
+      "co_occurrence": 0.1176,
+      "ordering_bias": 0.4545,
+      "evidence_verses": [
+        "114:6",
+        "13:16"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "prayer",
+      "weight": 0.0532,
+      "co_occurrence": 0.0909,
+      "ordering_bias": 0.5849,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "knowledge",
+      "to": "covenant",
+      "weight": 0.053,
+      "co_occurrence": 0.0833,
+      "ordering_bias": 0.6364,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "human_nature",
+      "to": "creation",
+      "weight": 0.0523,
+      "co_occurrence": 0.1111,
+      "ordering_bias": 0.4706,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "nature_signs",
+      "to": "obedience",
+      "weight": 0.0522,
+      "co_occurrence": 0.1304,
+      "ordering_bias": 0.4,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "covenant",
+      "to": "knowledge",
+      "weight": 0.0519,
+      "co_occurrence": 0.1429,
+      "ordering_bias": 0.3636,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "dietary_law",
+      "to": "prayer",
+      "weight": 0.0518,
+      "co_occurrence": 0.0968,
+      "ordering_bias": 0.5357,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "paradise",
+      "to": "hell",
+      "weight": 0.0513,
+      "co_occurrence": 0.1538,
+      "ordering_bias": 0.3333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "disbelief",
+      "to": "repentance",
+      "weight": 0.0513,
+      "co_occurrence": 0.1538,
+      "ordering_bias": 0.3333,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "charity",
+      "to": "covenant",
+      "weight": 0.051,
+      "co_occurrence": 0.0735,
+      "ordering_bias": 0.6935,
+      "evidence_verses": [
+        "114:6",
+        "2:270"
+      ]
+    },
+    {
+      "from": "covenant",
+      "to": "truth",
+      "weight": 0.051,
+      "co_occurrence": 0.0714,
+      "ordering_bias": 0.7143,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "moses_narrative",
+      "to": "hell",
+      "weight": 0.051,
+      "co_occurrence": 0.1429,
+      "ordering_bias": 0.3571,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "free_will",
+      "to": "dietary_law",
+      "weight": 0.0509,
+      "co_occurrence": 0.0952,
+      "ordering_bias": 0.5349,
+      "evidence_verses": [
+        "114:6",
+        "25:20"
+      ]
+    },
+    {
+      "from": "judgment_day",
+      "to": "knowledge",
+      "weight": 0.0506,
+      "co_occurrence": 0.0708,
+      "ordering_bias": 0.7143,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "creation",
+      "to": "community",
+      "weight": 0.0506,
+      "co_occurrence": 0.0957,
+      "ordering_bias": 0.5289,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "family_law",
+      "to": "warfare",
+      "weight": 0.0505,
+      "co_occurrence": 0.0909,
+      "ordering_bias": 0.5556,
+      "evidence_verses": []
+    },
+    {
+      "from": "truth",
+      "to": "faith",
+      "weight": 0.0504,
+      "co_occurrence": 0.1765,
+      "ordering_bias": 0.2857,
+      "evidence_verses": []
+    },
+    {
+      "from": "prayer",
+      "to": "nature_signs",
+      "weight": 0.05,
+      "co_occurrence": 0.0706,
+      "ordering_bias": 0.7083,
+      "evidence_verses": [
+        "114:6",
+        "41:37"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "paradise",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "angels",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "covenant",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "gratitude",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "jesus_narrative",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "noah_narrative",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "satan",
+      "to": "economic_ethics",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "satan",
+      "to": "human_nature",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "fasting",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "pilgrimage",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "paradise",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "scripture",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "angels",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "satan",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "moses_narrative",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "jesus_narrative",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "noah_narrative",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "family_law",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "gratitude",
+      "to": "economic_ethics",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "gratitude",
+      "to": "warfare",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "gratitude",
+      "to": "resurrection",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "abraham_narrative",
+      "to": "faith",
+      "weight": 0.05,
+      "co_occurrence": 0.25,
+      "ordering_bias": 0.2,
+      "evidence_verses": []
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "paradise",
+      "weight": 0.05,
+      "co_occurrence": 0.05,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "covenant",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6",
+        "33:7"
+      ]
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "noah_narrative",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "obedience",
+      "weight": 0.05,
+      "co_occurrence": 0.05,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "nature_signs",
+      "weight": 0.05,
+      "co_occurrence": 0.05,
+      "ordering_bias": 1.0,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "resurrection",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "predestination",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "jesus_narrative",
+      "to": "remembrance",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "fasting",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "angels",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "moses_narrative",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "noah_narrative",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "family_law",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "economic_ethics",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": []
+    },
+    {
+      "from": "obedience",
+      "to": "resurrection",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "predestination",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "from": "obedience",
+      "to": "remembrance",
+      "weight": 0.05,
+      "co_occurrence": 0.1,
+      "ordering_bias": 0.5,
+      "evidence_verses": [
+        "114:6"
+      ]
+    }
+  ],
+  "foundations": [
+    "monotheism",
+    "community",
+    "free_will",
+    "creation",
+    "prophets",
+    "divine_attributes",
+    "judgment_day",
+    "hell",
+    "scripture",
+    "obedience"
+  ],
+  "advanced": [
+    "family_law",
+    "gratitude",
+    "human_nature",
+    "resurrection",
+    "economic_ethics",
+    "abraham_narrative",
+    "covenant",
+    "warfare",
+    "predestination",
+    "angels"
+  ],
+  "learning_paths": [
+    [
+      "monotheism",
+      "predestination",
+      "knowledge",
+      "satan",
+      "disbelief",
+      "abraham_narrative",
+      "pilgrimage",
+      "angels"
+    ],
+    [
+      "community",
+      "fasting",
+      "angels",
+      "noah_narrative",
+      "truth",
+      "prophets",
+      "remembrance",
+      "gratitude"
+    ],
+    [
+      "free_will",
+      "hell",
+      "disbelief",
+      "abraham_narrative",
+      "pilgrimage",
+      "angels",
+      "noah_narrative",
+      "covenant"
+    ],
+    [
+      "creation",
+      "predestination",
+      "knowledge",
+      "satan",
+      "disbelief",
+      "abraham_narrative",
+      "pilgrimage",
+      "angels"
+    ],
+    [
+      "prophets",
+      "remembrance",
+      "disbelief",
+      "abraham_narrative",
+      "pilgrimage",
+      "angels",
+      "noah_narrative",
+      "covenant"
+    ]
+  ],
+  "stats": {
+    "total_concepts": 40,
+    "matched_concepts": 38,
+    "total_dependency_edges": 630,
+    "total_verses_analyzed": 6234
+  }
+}
