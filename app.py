@@ -293,13 +293,33 @@ async def _agent_stream(message: str, history: list):
             msgs.append({"role": "user", "content": message})
 
             full_text = ""
+            system_prompt = SYSTEM_PROMPT
+
+            # ── semantic entropy: uncertainty check (5 Haiku probes) ──
+            try:
+                from uncertainty import assess_uncertainty
+                uc = assess_uncertainty(message, ai, n_probes=5)
+                q.put({"t": "uncertainty", "d": uc})
+
+                if uc.get("should_abstain"):
+                    # High uncertainty — add qualifier to system prompt
+                    system_prompt = SYSTEM_PROMPT + (
+                        "\n\nIMPORTANT: The system has detected HIGH UNCERTAINTY "
+                        "for this question (semantic entropy: %.2f). "
+                        "Be extra cautious: only state what you can directly verify "
+                        "from the graph tools. If the Quran does not clearly address "
+                        "this topic, say so honestly rather than speculating."
+                        % uc["entropy"]
+                    )
+            except Exception as ue:
+                print(f"  [uncertainty] error: {ue}")
 
             with driver.session(database=NEO4J_DB) as session:
                 while True:
                     resp = ai.messages.create(
                         model=CLAUDE_MODEL,
                         max_tokens=cfg.llm_max_tokens(),
-                        system=SYSTEM_PROMPT,
+                        system=system_prompt,
                         tools=TOOLS,
                         messages=msgs,
                     )

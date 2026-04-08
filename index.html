@@ -1247,6 +1247,13 @@
                 const body = currentBubble.querySelector('.bubble-body');
                 if (body) body.innerHTML = renderMarkdown(expandVrefLists(ev.d));
               }
+            } else if (ev.t === 'uncertainty') {
+              if (currentBubble && ev.d && ev.d.confidence === 'low') {
+                const uc = document.createElement('div');
+                uc.style.cssText = 'font-size:0.72em;padding:3px 10px;border-radius:10px;margin-bottom:6px;display:inline-block;background:rgba(239,68,68,0.12);color:#ef4444;';
+                uc.textContent = `Low confidence — responses varied (entropy: ${ev.d.entropy})`;
+                currentBubble.insertBefore(uc, currentBubble.firstChild);
+              }
             } else if (ev.t === 'verification') {
               if (currentBubble && ev.d) {
                 const v = ev.d;
