@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "quran-graph",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-u", "app.py"],
+      "port": 8081
+    }
+  ]
+}

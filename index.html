@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quran Knowledge Graph</title>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.160/build/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/3d-force-graph@1/dist/3d-force-graph.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/3d-force-graph@1.73.4/dist/3d-force-graph.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -182,6 +183,19 @@
       font-size: 0.75em; color: #10b981; font-weight: 700;
       font-style: normal; display: block; margin-bottom: 4px;
     }
+    #tooltip-arabic {
+      font-family: 'Amiri', 'Traditional Arabic', serif;
+      direction: rtl; text-align: right; font-size: 1.05em;
+      line-height: 1.9; color: #e2e8f0; font-style: normal;
+      margin-bottom: 6px; border-bottom: 1px solid #1e293b;
+      padding-bottom: 6px;
+    }
+    #tooltip-arabic:empty { display: none; }
+    .arabic-text {
+      font-family: 'Amiri', 'Traditional Arabic', serif;
+      direction: rtl; text-align: right; font-size: 1.05em;
+      line-height: 1.9; color: #e2e8f0;
+    }
 
     /* ── graph panel (RIGHT) ── */
     #graph-panel {
@@ -275,10 +289,6 @@
   <div id="app" style="display:flex;flex-direction:column;height:100dvh;">
     <header>
       <h1>Quran Knowledge Graph</h1>
-      <nav id="header-tabs">
-        <a href="/" class="tab active">Explorer</a>
-        <a href="/stats" class="tab">Stats</a>
-      </nav>
       <p>6,236 verses on the globe &nbsp;|&nbsp; Connections light up as Claude explores &nbsp;|&nbsp; WASD to fly &nbsp;|&nbsp; Drag to orbit &nbsp;|&nbsp; Scroll to zoom</p>
     </header>
     <div id="main">
@@ -310,7 +320,7 @@
     </div>
   </div>
 
-  <div id="tooltip"><span id="tooltip-ref"></span><span id="tooltip-text"></span></div>
+  <div id="tooltip"><span id="tooltip-ref"></span><div id="tooltip-arabic"></div><span id="tooltip-text"></span></div>
 
   <script>
     // ── marked config ────────────────────────────────────────────────────────────
@@ -344,8 +354,12 @@
     const C_VERSE_IDLE     = new THREE.Color('#0f4c3a');   // all other verses (dim)
     const C_KEYWORD_ACTIVE = new THREE.Color('#fde68a');
     const C_KEYWORD_IDLE   = new THREE.Color('#d97706');
+    const C_ARABIC_ROOT    = new THREE.Color('#f59e0b');   // amber for Arabic root nodes
+    const C_ARABIC_FORM    = new THREE.Color('#d97706');   // darker amber for derived forms
 
     function nodeBaseColor(node) {
+      if (node.type === 'arabicRoot') return C_ARABIC_ROOT;
+      if (node.type === 'arabicForm') return C_ARABIC_FORM;
       if (node.type === 'keyword') return node.active ? C_KEYWORD_ACTIVE : C_KEYWORD_IDLE;
       if (node.active)       return C_VERSE_ACTIVE;
       if (node.inConv)       return C_VERSE_CONV;
@@ -359,7 +373,7 @@
       canvas.width = w; canvas.height = h;
       const ctx = canvas.getContext('2d');
       ctx.font = 'bold 24px monospace';
-      ctx.fillStyle = type === 'keyword' ? '#fde68a' : '#a7f3d0';
+      ctx.fillStyle = type === 'keyword' ? '#fde68a' : (type === 'arabicRoot' || type === 'arabicForm') ? '#fbbf24' : '#a7f3d0';
       ctx.shadowColor = '#000'; ctx.shadowBlur = 5;
       ctx.fillText(text, 6, 38);
       const tex = new THREE.CanvasTexture(canvas);
@@ -746,7 +760,11 @@
         .nodeThreeObject(buildNodeObj)
         .nodeThreeObjectExtend(false)
         .nodeLabel(() => '')
-        .linkColor(link => link.type === 'mentions' ? '#78350f' : '#164e63')
+        .linkColor(link => {
+          if (link.type === 'mentions') return '#78350f';
+          if (link.type === 'mentions_root' || link.type === 'derives' || link.type === 'appears_in') return '#92400e';
+          return '#164e63';
+        })
         .linkWidth(link => link.type === 'related' ? 0.8 : 0.4)
         .linkOpacity(0.6)
         .linkDirectionalParticles(link => link.type === 'related' ? 3 : 0)
@@ -767,10 +785,25 @@
           const bodyEl  = document.getElementById('node-info-body');
           if (node.type === 'verse') {
             titleEl.textContent = `[${node.verseId}]  ${node.surahName || ''}`;
-            bodyEl.textContent  = node.text || '(no text cached — ask Claude about this verse)';
+            bodyEl.innerHTML = '';
+            if (node.arabicText) {
+              const ar = document.createElement('div');
+              ar.className = 'arabic-text';
+              ar.style.marginBottom = '8px';
+              ar.style.paddingBottom = '8px';
+              ar.style.borderBottom = '1px solid #1e293b';
+              ar.textContent = node.arabicText;
+              bodyEl.appendChild(ar);
+            }
+            const en = document.createElement('div');
+            en.textContent = node.text || '(no text cached — ask Claude about this verse)';
+            bodyEl.appendChild(en);
+          } else if (node.type === 'arabicRoot') {
+            titleEl.textContent = `Root: ${node.label}`;
+            bodyEl.textContent = node.gloss || 'Arabic root node';
           } else {
             titleEl.textContent = `Keyword: ${node.label}`;
-            bodyEl.textContent  = 'Click a verse node to read its text.';
+            bodyEl.textContent = 'Click a verse node to read its text.';
           }
           infoEl.style.display = 'block';
         })
@@ -1085,16 +1118,24 @@
     // ── verse tooltip ────────────────────────────────────────────────────────────
     const VREF_SPLIT = /(\[\d+:\d+\])/;
     const VREF_MATCH = /^\[(\d+:\d+)\]$/;
+    // Expand "[26:108, 26:110, 26:126]" → "[26:108] [26:110] [26:126]"
+    const VREF_LIST = /\[(\d+:\d+(?:\s*,\s*\d+:\d+)+)\]/g;
+    function expandVrefLists(text) {
+      return text.replace(VREF_LIST, (_, inner) =>
+        inner.split(/\s*,\s*/).map(r => `[${r}]`).join(' ')
+      );
+    }
 
     function wrapVerseRefs(container, verses) {
       const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
       const targets = [];
       let node;
       while ((node = walker.nextNode())) {
-        if (/\[\d+:\d+\]/.test(node.textContent)) targets.push(node);
+        if (/\[\d+:\d+/.test(node.textContent)) targets.push(node);
       }
       targets.forEach(tn => {
-        const parts = tn.textContent.split(VREF_SPLIT);
+        const expanded = expandVrefLists(tn.textContent);
+        const parts = expanded.split(VREF_SPLIT);
         if (parts.length <= 1) return;
         const frag = document.createDocumentFragment();
         parts.forEach(part => {
@@ -1102,7 +1143,15 @@
           if (m) {
             const span = document.createElement('span');
             span.className = 'vref'; span.textContent = part;
-            span.dataset.vid = m[1]; span.dataset.v = verses[m[1]] || '';
+            span.dataset.vid = m[1];
+            const vdata = verses[m[1]];
+            if (typeof vdata === 'object' && vdata) {
+              span.dataset.v = vdata.text || '';
+              span.dataset.ar = vdata.arabic || '';
+            } else {
+              span.dataset.v = vdata || '';
+              span.dataset.ar = '';
+            }
             frag.appendChild(span);
           } else if (part) {
             frag.appendChild(document.createTextNode(part));
@@ -1112,14 +1161,16 @@
       });
     }
 
-    const tooltip     = document.getElementById('tooltip');
-    const tooltipRef  = document.getElementById('tooltip-ref');
-    const tooltipText = document.getElementById('tooltip-text');
+    const tooltip      = document.getElementById('tooltip');
+    const tooltipRef   = document.getElementById('tooltip-ref');
+    const tooltipAr    = document.getElementById('tooltip-arabic');
+    const tooltipText  = document.getElementById('tooltip-text');
 
     document.addEventListener('mouseover', e => {
       const el = e.target.closest('.vref');
       if (!el || !el.dataset.v) return;
       tooltipRef.textContent  = el.dataset.vid;
+      tooltipAr.textContent   = el.dataset.ar || '';
       tooltipText.textContent = el.dataset.v;
       tooltip.style.display   = 'block';
       tooltip.style.visibility = 'hidden';

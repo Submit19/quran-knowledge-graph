@@ -41,6 +41,7 @@ load_dotenv()
 _load_env()
 
 sys.path.insert(0, str(Path(__file__).parent))
+import config as cfg
 from chat import TOOLS, SYSTEM_PROMPT, dispatch_tool
 
 # ── clients ────────────────────────────────────────────────────────────────────
@@ -50,7 +51,7 @@ NEO4J_USER     = os.getenv("NEO4J_USER",     "neo4j")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "")
 NEO4J_DB       = os.getenv("NEO4J_DATABASE", "quran")
 ANTHROPIC_KEY  = os.getenv("ANTHROPIC_API_KEY", "")
-CLAUDE_MODEL   = "claude-sonnet-4-5"
+CLAUDE_MODEL   = cfg.llm_model()
 
 print("Connecting to Neo4j...")
 driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
@@ -64,7 +65,15 @@ ai = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
 
 # ── helpers ────────────────────────────────────────────────────────────────────
 
-_BRACKET_REF = re.compile(r'\[(\d+:\d+)\]')
+_BRACKET_REF = re.compile(r'(\d+:\d+)')
+_BRACKET_CONTEXT = re.compile(r'\[[\d:,\s]+\]')
+
+def _extract_verse_refs(text: str) -> set:
+    """Extract all verse refs like 2:255 from bracketed contexts [2:255] or [26:108, 26:110]."""
+    refs = set()
+    for block in _BRACKET_CONTEXT.findall(text):
+        refs.update(_BRACKET_REF.findall(block))
+    return refs
 
 def _fetch_verses(session, verse_ids: set) -> dict:
     if not verse_ids:
@@ -72,22 +81,24 @@ def _fetch_verses(session, verse_ids: set) -> dict:
     result = session.run(
         "UNWIND $ids AS vid "
         "MATCH (v:Verse {reference: vid}) "
-        "RETURN v.reference AS id, v.text AS text",
+        "RETURN v.reference AS id, v.text AS text, v.arabicText AS arabic",
         ids=list(verse_ids),
     )
-    return {r["id"]: r["text"] for r in result}
+    return {r["id"]: {"text": r["text"], "arabic": r["arabic"] or ""} for r in result}
 
 # ── FastAPI ────────────────────────────────────────────────────────────────────
 
 app = FastAPI()
 
 TOOL_LABELS = {
-    "search_keyword":  "Searching keywords",
-    "get_verse":       "Looking up verse",
-    "traverse_topic":  "Traversing topic",
-    "find_path":       "Finding path",
-    "explore_surah":   "Exploring surah",
-    "semantic_search": "Semantic search",
+    "search_keyword":        "Searching keywords",
+    "get_verse":             "Looking up verse",
+    "traverse_topic":        "Traversing topic",
+    "find_path":             "Finding path",
+    "explore_surah":         "Exploring surah",
+    "semantic_search":       "Semantic search",
+    "search_arabic_root":    "Searching Arabic root",
+    "compare_arabic_usage":  "Comparing Arabic usage",
 }
 
 
@@ -103,7 +114,7 @@ def _graph_for_tool(name: str, inp: dict, result: dict):
     links = []
     active = []
 
-    def vnode(vid, sname="", text=""):
+    def vnode(vid, sname="", text="", arabic=""):
         nid = f"v:{vid}"
         if nid not in nodes:
             try:
@@ -112,7 +123,8 @@ def _graph_for_tool(name: str, inp: dict, result: dict):
                 surah = 0
             nodes[nid] = {"id": nid, "type": "verse", "label": f"[{vid}]",
                           "verseId": vid, "surah": surah,
-                          "surahName": sname, "text": (text or "")[:200]}
+                          "surahName": sname, "text": (text or "")[:200],
+                          "arabicText": (arabic or "")[:300]}
         return nid
 
     def knode(kw):
@@ -127,26 +139,27 @@ def _graph_for_tool(name: str, inp: dict, result: dict):
     try:
         if name == "get_verse" and "verse_id" in result:
             vid = result["verse_id"]
-            v = vnode(vid, result.get("surah_name", ""), result.get("text", ""))
+            v = vnode(vid, result.get("surah_name", ""), result.get("text", ""), result.get("arabic_text", ""))
             active.append(v)
             for kw in result.get("keywords", [])[:10]:
                 k = knode(kw); link(v, k, "mentions")
-            for cv in result.get("connected_verses", [])[:8]:
+            for cv in result.get("connected_verses", [])[:cfg.vis("get_verse_max_connected")]:
                 cv_n = vnode(cv["verse_id"], cv.get("surah_name",""), cv.get("text",""))
                 link(v, cv_n, "related")
-                for kw in cv.get("shared_keywords", [])[:3]:
+                for kw in cv.get("shared_keywords", [])[:cfg.vis("get_verse_max_kw_per_neighbour")]:
                     k = knode(kw); link(cv_n, k, "mentions")
 
         elif name == "search_keyword" and "keyword" in result:
             kw = result["keyword"]
             k = knode(kw); active.append(k)
             count = 0
+            _max_kw = cfg.vis("search_keyword_max_nodes")
             for surah_verses in result.get("by_surah", {}).values():
                 for v_data in surah_verses[:3]:
-                    if count >= 15: break
-                    v = vnode(v_data["verse_id"], "", v_data.get("text",""))
+                    if count >= _max_kw: break
+                    v = vnode(v_data["verse_id"], "", v_data.get("text",""), v_data.get("arabic_text",""))
                     link(v, k, "mentions"); count += 1
-                if count >= 15: break
+                if count >= _max_kw: break
 
         elif name == "traverse_topic":
             direct_ids = {v["verse_id"] for v in result.get("direct_matches", [])}
@@ -171,15 +184,43 @@ def _graph_for_tool(name: str, inp: dict, result: dict):
                     active.append(v)
                 if i > 0:
                     link(f"v:{path[i-1]['verse_id']}", v, "related")
-                for kw in step.get("bridge_keywords", [])[:3]:
+                for kw in step.get("bridge_keywords", [])[:cfg.vis("find_path_max_bridge_kw")]:
                     k = knode(kw); link(v, k, "mentions")
 
         elif name == "explore_surah" and "verses" in result:
             sname = result.get("surah_name", "")
-            for v_data in result.get("verses", [])[:30]:
+            for v_data in result.get("verses", [])[:cfg.vis("explore_surah_max_verses")]:
                 v = vnode(v_data["verse_id"], sname, v_data.get("text",""))
             # mark first 5 as active
             active = list(nodes.keys())[:5]
+
+        elif name == "search_arabic_root" and "root" in result:
+            root = result["root"]
+            rnid = f"r:{root}"
+            nodes[rnid] = {"id": rnid, "type": "arabicRoot", "label": root,
+                           "gloss": result.get("gloss", "")}
+            active.append(rnid)
+            count = 0
+            for surah_verses in result.get("by_surah", {}).values():
+                for v_data in surah_verses[:3]:
+                    if count >= 15: break
+                    v = vnode(v_data["verse_id"], "", v_data.get("text",""), v_data.get("arabic_text",""))
+                    link(v, rnid, "mentions_root"); count += 1
+                if count >= 15: break
+
+        elif name == "compare_arabic_usage" and "root" in result:
+            root = result["root"]
+            rnid = f"r:{root}"
+            nodes[rnid] = {"id": rnid, "type": "arabicRoot", "label": root,
+                           "gloss": result.get("gloss", "")}
+            active.append(rnid)
+            for form_data in result.get("forms", [])[:8]:
+                fnid = f"f:{form_data['form']}"
+                nodes[fnid] = {"id": fnid, "type": "arabicForm", "label": form_data["form"]}
+                link(rnid, fnid, "derives")
+                for v_data in form_data.get("sample_verses", [])[:3]:
+                    v = vnode(v_data["verse_id"], v_data.get("surah_name",""), v_data.get("text",""), v_data.get("arabic_text",""))
+                    link(fnid, v, "appears_in")
 
     except Exception as e:
         print(f"  [graph] extract error ({name}): {e}")
@@ -246,7 +287,7 @@ async def _agent_stream(message: str, history: list):
                 while True:
                     resp = ai.messages.create(
                         model=CLAUDE_MODEL,
-                        max_tokens=4096,
+                        max_tokens=cfg.llm_max_tokens(),
                         system=SYSTEM_PROMPT,
                         tools=TOOLS,
                         messages=msgs,
@@ -315,7 +356,7 @@ async def _agent_stream(message: str, history: list):
                     msgs.append({"role": "user",      "content": tool_results})
 
                 # Fetch verse texts for all refs in the response
-                refs   = set(_BRACKET_REF.findall(full_text))
+                refs   = _extract_verse_refs(full_text)
                 verses = _fetch_verses(session, refs)
                 q.put({"t": "done", "verses": verses})
 

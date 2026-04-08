@@ -22,6 +22,7 @@ import sys
 from dotenv import load_dotenv
 from neo4j import GraphDatabase
 import anthropic
+import config as cfg
 
 # ── env loading ────────────────────────────────────────────────────────────────
 
@@ -45,7 +46,7 @@ NEO4J_URI      = os.getenv("NEO4J_URI", "bolt://localhost:7687")
 NEO4J_USER     = os.getenv("NEO4J_USER", "neo4j")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "")
 ANTHROPIC_KEY  = os.getenv("ANTHROPIC_API_KEY", "")
-MODEL          = "claude-sonnet-4-5"
+MODEL          = cfg.llm_model()
 
 # ── reuse lemmatizer ───────────────────────────────────────────────────────────
 
@@ -60,7 +61,7 @@ def _get_sem_model():
     global _sem_model
     if _sem_model is None:
         from sentence_transformers import SentenceTransformer
-        _sem_model = SentenceTransformer("all-MiniLM-L6-v2")
+        _sem_model = SentenceTransformer(cfg.embedding_model())
     return _sem_model
 
 # ── graph tool implementations ─────────────────────────────────────────────────
@@ -76,8 +77,8 @@ def tool_search_keyword(session, keyword: str) -> dict:
     if not exists:
         # Fuzzy fallback: suggest similar keywords
         similar = [r["kw"] for r in session.run(
-            "MATCH (k:Keyword) WHERE k.keyword STARTS WITH $prefix RETURN k.keyword AS kw LIMIT 8",
-            prefix=kw[:4]
+            "MATCH (k:Keyword) WHERE k.keyword STARTS WITH $prefix RETURN k.keyword AS kw LIMIT $lim",
+            prefix=kw[:cfg.search_keyword_fuzzy_prefix()], lim=cfg.search_keyword_fuzzy_limit()
         )]
         return {
             "error": f"Keyword '{kw}' not in graph",
@@ -89,7 +90,8 @@ def tool_search_keyword(session, keyword: str) -> dict:
     rows = list(session.run("""
         MATCH (k:Keyword {keyword: $kw})<-[r:MENTIONS]-(v:Verse)
         RETURN v.surah AS surah, v.surahName AS surahName,
-               v.verseId AS verseId, v.text AS text, r.score AS score
+               v.verseId AS verseId, v.text AS text, v.arabicText AS arabic,
+               r.score AS score
         ORDER BY r.score DESC
     """, kw=kw))
 
@@ -99,7 +101,8 @@ def tool_search_keyword(session, keyword: str) -> dict:
         by_surah.setdefault(sname, []).append({
             "verse_id": row["verseId"],
             "score": round(row["score"], 4),
-            "text": row["text"]
+            "text": row["text"],
+            "arabic_text": row["arabic"] or "",
         })
 
     return {
@@ -119,15 +122,15 @@ def tool_get_verse(session, verse_id: str) -> dict:
     v = row["v"]
     keywords = [r["kw"] for r in session.run("""
         MATCH (v:Verse {verseId: $id})-[r:MENTIONS]->(k:Keyword)
-        RETURN k.keyword AS kw ORDER BY r.score DESC LIMIT 15
-    """, id=verse_id)]
+        RETURN k.keyword AS kw ORDER BY r.score DESC LIMIT $lim
+    """, id=verse_id, lim=cfg.get_verse_keyword_limit())]
 
     neighbours = list(session.run("""
         MATCH (v:Verse {verseId: $id})-[r:RELATED_TO]-(other:Verse)
         RETURN other.verseId AS otherId, other.surahName AS surahName,
                other.text AS text, r.score AS score
-        ORDER BY r.score DESC LIMIT 12
-    """, id=verse_id))
+        ORDER BY r.score DESC LIMIT $lim
+    """, id=verse_id, lim=cfg.get_verse_neighbour_limit()))
 
     # Batch: fetch shared keywords for ALL neighbours in one query
     neighbour_ids = [r["otherId"] for r in neighbours]
@@ -136,9 +139,9 @@ def tool_get_verse(session, verse_id: str) -> dict:
         shared_rows = session.run("""
             UNWIND $otherIds AS oid
             MATCH (v1:Verse {verseId: $v1})-[:MENTIONS]->(k:Keyword)<-[:MENTIONS]-(v2:Verse {verseId: oid})
-            WITH oid, collect(k.keyword)[..5] AS kws
+            WITH oid, collect(k.keyword)[..$skLim] AS kws
             RETURN oid, kws
-        """, v1=verse_id, otherIds=neighbour_ids)
+        """, v1=verse_id, otherIds=neighbour_ids, skLim=cfg.get_verse_shared_kw_limit())
         for sr in shared_rows:
             shared_map[sr["oid"]] = sr["kws"]
 
@@ -150,11 +153,21 @@ def tool_get_verse(session, verse_id: str) -> dict:
         "connection_score": round(r["score"], 4)
     } for r in neighbours]
 
+    # Fetch top Arabic roots for this verse
+    arabic_roots = [{"root": r["root"], "gloss": r["gloss"] or "", "forms": r["forms"] or []}
+                    for r in session.run("""
+        MATCH (v:Verse {verseId: $id})-[m:MENTIONS_ROOT]->(r:ArabicRoot)
+        RETURN r.root AS root, r.gloss AS gloss, m.forms AS forms
+        ORDER BY m.count DESC LIMIT 10
+    """, id=verse_id)]
+
     return {
         "verse_id": verse_id,
         "surah": v["surah"],
         "surah_name": v["surahName"],
         "text": v["text"],
+        "arabic_text": v.get("arabicText", "") or "",
+        "arabic_roots": arabic_roots,
         "keywords": keywords,
         "connected_verses": connected
     }
@@ -190,8 +203,7 @@ def tool_traverse_topic(session, keywords: list[str], hops: int = 1) -> dict:
         "score": round(r["total"], 4)
     } for r in direct]
 
-    # Use only top 30 direct matches as seeds for hop traversal (keeps query fast)
-    seed_ids = direct_ids[:30]
+    seed_ids = direct_ids[:cfg.traverse_seed_limit()]
 
     # 1-hop — top 60 thematically connected verses not already in direct matches
     hop1 = list(session.run("""
@@ -201,8 +213,8 @@ def tool_traverse_topic(session, keywords: list[str], hops: int = 1) -> dict:
         WITH n, sum(r.score) AS score, collect(sid) AS via
         RETURN n.verseId AS verseId, n.surahName AS surahName,
                n.text AS text, score, via
-        ORDER BY score DESC LIMIT 60
-    """, seedIds=seed_ids, allDirectIds=direct_ids))
+        ORDER BY score DESC LIMIT $lim
+    """, seedIds=seed_ids, allDirectIds=direct_ids, lim=cfg.traverse_hop1_limit()))
 
     hop1_ids = [r["verseId"] for r in hop1]
     hop1_results = [{
@@ -223,8 +235,8 @@ def tool_traverse_topic(session, keywords: list[str], hops: int = 1) -> dict:
             WITH h2, count(*) AS connections
             RETURN h2.verseId AS verseId, h2.surahName AS surahName,
                    h2.text AS text, connections
-            ORDER BY connections DESC LIMIT 40
-        """, h1Ids=hop1_ids, exclude=list(exclude)))
+            ORDER BY connections DESC LIMIT $lim
+        """, h1Ids=hop1_ids, exclude=list(exclude), lim=cfg.traverse_hop2_limit()))
         hop2_results = [{
             "verse_id": r["verseId"],
             "surah_name": r["surahName"],
@@ -251,12 +263,12 @@ def tool_find_path(session, verse_id_1: str, verse_id_2: str) -> dict:
 
     result = session.run("""
         MATCH (v1:Verse {verseId: $v1}), (v2:Verse {verseId: $v2}),
-              path = shortestPath((v1)-[:RELATED_TO*..6]-(v2))
+              path = shortestPath((v1)-[:RELATED_TO*..%d]-(v2))""" % cfg.find_path_max_depth() + """
         RETURN path, length(path) AS hops LIMIT 1
     """, v1=v1, v2=v2).single()
 
     if not result:
-        return {"error": f"No path found between [{v1}] and [{v2}] within 6 hops"}
+        return {"error": f"No path found between [{v1}] and [{v2}] within {cfg.find_path_max_depth()} hops"}
 
     nodes = result["path"].nodes
 
@@ -268,9 +280,9 @@ def tool_find_path(session, verse_id_1: str, verse_id_2: str) -> dict:
         bridge_rows = session.run("""
             UNWIND $pairs AS pair
             MATCH (a:Verse {verseId: pair.a})-[:MENTIONS]->(k:Keyword)<-[:MENTIONS]-(b:Verse {verseId: pair.b})
-            WITH pair.a AS fromId, pair.b AS toId, collect(k.keyword)[..5] AS kws
+            WITH pair.a AS fromId, pair.b AS toId, collect(k.keyword)[..$bkLim] AS kws
             RETURN fromId, toId, kws
-        """, pairs=pairs)
+        """, pairs=pairs, bkLim=cfg.find_path_bridge_kw_limit())
         for br in bridge_rows:
             bridge_map[(br["fromId"], br["toId"])] = br["kws"]
 
@@ -317,8 +329,8 @@ def tool_explore_surah(session, surah_number: int) -> dict:
         WHERE other.surah <> $s
         WITH other.surah AS otherSurah, other.surahName AS otherName, count(*) AS connections
         RETURN otherSurah, otherName, connections
-        ORDER BY connections DESC LIMIT 10
-    """, vids=verse_ids, s=surah_number))
+        ORDER BY connections DESC LIMIT $lim
+    """, vids=verse_ids, s=surah_number, lim=cfg.explore_surah_cross_limit()))
 
     return {
         "surah": surah_number,
@@ -330,6 +342,123 @@ def tool_explore_surah(session, surah_number: int) -> dict:
             "surah_name": r["otherName"],
             "connections": r["connections"]
         } for r in cross]
+    }
+
+
+def tool_search_arabic_root(session, root: str) -> dict:
+    """Find all verses containing a specific Arabic tri-literal root."""
+    root = root.strip()
+
+    # Check if root exists
+    row = session.run(
+        "MATCH (r:ArabicRoot {root: $root}) RETURN r.root AS root, r.gloss AS gloss, r.verseCount AS vc",
+        root=root,
+    ).single()
+
+    if not row:
+        # Try Buckwalter lookup
+        row = session.run(
+            "MATCH (r:ArabicRoot {rootBW: $bw}) RETURN r.root AS root, r.gloss AS gloss, r.verseCount AS vc",
+            bw=root,
+        ).single()
+
+    if not row:
+        # Fuzzy: suggest roots starting with same first letter
+        similar = [r["root"] + (" (" + r["gloss"] + ")" if r["gloss"] else "")
+                   for r in session.run(
+            "MATCH (r:ArabicRoot) WHERE r.root STARTS WITH $prefix RETURN r.root, r.gloss LIMIT 8",
+            prefix=root[:1] if root else "",
+        )]
+        return {"error": f"Root '{root}' not found", "suggestions": similar}
+
+    actual_root = row["root"]
+    gloss = row["gloss"] or ""
+
+    verses = list(session.run("""
+        MATCH (r:ArabicRoot {root: $root})<-[m:MENTIONS_ROOT]-(v:Verse)
+        RETURN v.verseId AS verseId, v.surah AS surah, v.surahName AS surahName,
+               v.text AS text, v.arabicText AS arabic,
+               m.count AS count, m.forms AS forms
+        ORDER BY m.count DESC, v.surah, v.verseNum
+    """, root=actual_root))
+
+    by_surah = {}
+    for r in verses:
+        sname = f"Surah {r['surah']}: {r['surahName']}"
+        by_surah.setdefault(sname, []).append({
+            "verse_id": r["verseId"],
+            "text": r["text"],
+            "arabic_text": r["arabic"] or "",
+            "root_count": r["count"],
+            "forms_used": r["forms"] or [],
+        })
+
+    return {
+        "root": actual_root,
+        "gloss": gloss,
+        "total_verses": len(verses),
+        "by_surah": by_surah,
+    }
+
+
+def tool_compare_arabic_usage(session, root: str) -> dict:
+    """Compare how different forms of an Arabic root are used across the Quran."""
+    root = root.strip()
+
+    row = session.run(
+        "MATCH (r:ArabicRoot {root: $root}) RETURN r.root AS root, r.gloss AS gloss",
+        root=root,
+    ).single()
+    if not row:
+        row = session.run(
+            "MATCH (r:ArabicRoot {rootBW: $bw}) RETURN r.root AS root, r.gloss AS gloss",
+            bw=root,
+        ).single()
+    if not row:
+        return {"error": f"Root '{root}' not found. Use search_arabic_root for suggestions."}
+
+    actual_root = row["root"]
+    gloss = row["gloss"] or ""
+
+    verses = list(session.run("""
+        MATCH (r:ArabicRoot {root: $root})<-[m:MENTIONS_ROOT]-(v:Verse)
+        RETURN v.verseId AS verseId, v.surah AS surah, v.surahName AS surahName,
+               v.text AS text, v.arabicText AS arabic, m.forms AS forms
+        ORDER BY v.surah, v.verseNum
+    """, root=actual_root))
+
+    # Group by surface form
+    by_form = {}
+    for r in verses:
+        for form in (r["forms"] or []):
+            by_form.setdefault(form, []).append({
+                "verse_id": r["verseId"],
+                "surah_name": r["surahName"],
+                "text": r["text"],
+                "arabic_text": r["arabic"] or "",
+            })
+
+    # Limit forms and verses per form
+    try:
+        max_forms = cfg.raw().get("arabic", {}).get("compare_arabic_usage", {}).get("max_forms_per_root", 20)
+        max_per_form = cfg.raw().get("arabic", {}).get("compare_arabic_usage", {}).get("max_verses_per_form", 10)
+    except Exception:
+        max_forms, max_per_form = 20, 10
+
+    form_summary = []
+    for form, vlist in sorted(by_form.items(), key=lambda x: -len(x[1]))[:max_forms]:
+        form_summary.append({
+            "form": form,
+            "total_occurrences": len(vlist),
+            "sample_verses": vlist[:max_per_form],
+        })
+
+    return {
+        "root": actual_root,
+        "gloss": gloss,
+        "total_verses": len(verses),
+        "total_forms": len(by_form),
+        "forms": form_summary,
     }
 
 
@@ -492,41 +621,50 @@ TOOLS = [
             },
             "required": ["query"]
         }
+    },
+    {
+        "name": "search_arabic_root",
+        "description": (
+            "Find all Quran verses containing a specific Arabic tri-literal root. "
+            "Arabic roots connect words that share a common origin — e.g. root k-t-b "
+            "(ك ت ب) yields kitab/book, kataba/wrote, maktub/written. Use this to trace "
+            "how an Arabic concept appears across the entire Quran with all its derived forms. "
+            "Accepts Arabic script (e.g. 'رحم') or Buckwalter transliteration (e.g. 'rHm')."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "root": {
+                    "type": "string",
+                    "description": "Arabic root in Arabic letters (e.g. 'رحم', 'كتب', 'علم') or Buckwalter (e.g. 'rHm', 'ktb', 'Elm')"
+                }
+            },
+            "required": ["root"]
+        }
+    },
+    {
+        "name": "compare_arabic_usage",
+        "description": (
+            "Compare how different forms of an Arabic root are used across the Quran. "
+            "Shows each derived word form and the verses where it appears, revealing how "
+            "the same root carries different meanings in different contexts. For example, "
+            "root r-H-m (رحم) yields raHman (most gracious), raHim (merciful), raHmah (mercy) — "
+            "each used in different theological contexts. Use this for linguistic analysis."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "root": {
+                    "type": "string",
+                    "description": "Arabic root to analyse (e.g. 'رحم' or 'rHm')"
+                }
+            },
+            "required": ["root"]
+        }
     }
 ]
 
-SYSTEM_PROMPT = """You are a knowledgeable Quran scholar and graph analyst with access to a \
-knowledge graph of all 6,234 verses from Rashad Khalifa's translation of the Quran \
-(The Final Testament). The graph connects verses through shared rare keywords using TF-IDF \
-weighting, revealing thematic relationships across surahs.
-
-You have 6 tools to explore the graph:
-- search_keyword:  find ALL verses that explicitly mention a keyword (exact lemma match, no limit)
-- semantic_search: find verses CONCEPTUALLY related to a query using vector similarity — catches verses that express the same idea with different words (e.g. redemption, divine acceptance, wiping away sins — all conceptually "forgiveness" without using the word)
-- get_verse:       deep-dive into a specific verse and its graph connections
-- traverse_topic:  multi-keyword search + graph traversal (all direct matches + connected verses)
-- find_path:       shortest thematic path between two verses
-- explore_surah:   map a surah's content and cross-surah connections
-
-EXHAUSTIVE SEARCH MANDATE — for every topical question:
-1. Identify ALL relevant keyword variants and call search_keyword for each
-2. ALWAYS also call semantic_search with a descriptive phrase — this catches conceptually related verses that use completely different vocabulary (e.g. a verse about God "redeeming" or "absolving" someone won't show up in a keyword search for "forgiveness" but will rank highly in semantic search)
-3. Also call traverse_topic with all keywords combined
-4. Deduplicate across all three methods and report the TOTAL unique verse count upfront
-5. Organise your answer by theme — synthesise what the Quran says as a whole
-6. When semantic_search surfaces a verse that doesn't use the keyword but is clearly conceptually related, explicitly note WHY it belongs — this is a key insight for the user
-
-CITATION RULES — these are MANDATORY, no exceptions:
-- EVERY claim, point, or statement you make MUST be grounded in specific verses from the graph tools. Do NOT make any theological statement without a verse citation.
-- Always cite verse references inline using bracket notation like [2:255] or [36:1]. The UI renders these as hoverable tooltips showing the full verse text — so cite generously.
-- When listing or discussing verses, ALWAYS include the reference even if you've mentioned it before. The user relies on these references to verify and explore further.
-- If you cannot find a verse to support a point, do NOT make the point. You are a graph-backed research tool, not a general-purpose Islamic scholar. Stay grounded in what the data shows.
-- Prefer quoting or paraphrasing the actual verse text alongside the reference where it strengthens the answer.
-- NEVER give a thematic summary without verse references. Every paragraph should contain at least one [surah:verse] citation.
-
-The user expects the FULL picture: explicit mentions AND conceptual parallels.
-This is Khalifa's translation — note where topics relate to his unique interpretations
-(e.g. the mathematical miracle of 19, the Messenger of the Covenant)."""
+SYSTEM_PROMPT = cfg.system_prompt()
 
 
 # ── agentic tool-use loop ──────────────────────────────────────────────────────
@@ -546,6 +684,10 @@ def dispatch_tool(session, tool_name: str, tool_input: dict) -> str:
             result = tool_explore_surah(session, **tool_input)
         elif tool_name == "semantic_search":
             result = tool_semantic_search(session, **tool_input)
+        elif tool_name == "search_arabic_root":
+            result = tool_search_arabic_root(session, **tool_input)
+        elif tool_name == "compare_arabic_usage":
+            result = tool_compare_arabic_usage(session, **tool_input)
         else:
             result = {"error": f"Unknown tool: {tool_name}"}
     except Exception as e:
@@ -568,7 +710,7 @@ def run_agent_turn(
     while True:
         response = client.messages.create(
             model=MODEL,
-            max_tokens=4096,
+            max_tokens=cfg.llm_max_tokens(),
             system=SYSTEM_PROMPT,
             tools=TOOLS,
             messages=conversation,

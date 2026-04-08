@@ -1,0 +1,146 @@
+[
+  {
+    "id": "q01_forgiveness",
+    "question": "What does the Quran say about forgiveness?",
+    "expected_citations": ["2:286", "3:135", "4:110", "39:53", "42:25", "42:37", "66:8"],
+    "expected_themes": ["repentance", "divine mercy", "turning back to God"],
+    "difficulty": "easy",
+    "notes": "Core topic with many direct keyword hits + semantic parallels"
+  },
+  {
+    "id": "q02_patience",
+    "question": "How does the Quran describe patience and perseverance?",
+    "expected_citations": ["2:153", "2:155", "3:200", "11:115", "16:127", "39:10", "103:3"],
+    "expected_themes": ["steadfastness", "endurance", "reward for patience"],
+    "difficulty": "easy",
+    "notes": "Tests keyword search for 'patience' + 'steadfast' + semantic overlap"
+  },
+  {
+    "id": "q03_charity",
+    "question": "What are the principles of charity in the Quran?",
+    "expected_citations": ["2:261", "2:262", "2:264", "2:267", "2:271", "2:274", "9:60", "57:18", "76:8"],
+    "expected_themes": ["spending in the cause of God", "obligatory charity", "secret giving"],
+    "difficulty": "medium",
+    "notes": "Keyword 'charity' + 'spend' + 'alms' should cover most hits"
+  },
+  {
+    "id": "q04_creation",
+    "question": "How does the Quran describe the creation of the heavens and earth?",
+    "expected_citations": ["2:164", "7:54", "10:3", "11:7", "21:30", "25:59", "41:9", "41:10", "41:11", "41:12", "50:38", "51:47"],
+    "expected_themes": ["six days", "heavens and earth", "water as origin", "expansion of universe"],
+    "difficulty": "medium",
+    "notes": "Tests multi-keyword traverse: creation + heavens + earth + days"
+  },
+  {
+    "id": "q05_nineteen",
+    "question": "What is the significance of the number 19 in the Quran?",
+    "expected_citations": ["74:30", "74:31", "74:32", "74:33", "74:34", "74:35"],
+    "expected_themes": ["mathematical miracle", "over it is nineteen", "proof for believers"],
+    "difficulty": "medium",
+    "notes": "Khalifa-specific topic. Tests if semantic search finds related verses beyond Sura 74"
+  },
+  {
+    "id": "q06_marriage",
+    "question": "What does the Quran say about marriage and choosing a spouse?",
+    "expected_citations": ["2:221", "4:3", "4:4", "4:25", "24:32", "24:33", "30:21", "33:50"],
+    "expected_themes": ["mutual love and mercy", "dowry", "believing spouse", "prohibition of forcing"],
+    "difficulty": "medium",
+    "notes": "Tests keyword diversity: marriage, spouse, wife, wed, dowry"
+  },
+  {
+    "id": "q07_dietary_laws",
+    "question": "What foods are prohibited and permitted in the Quran?",
+    "expected_citations": ["2:168", "2:172", "2:173", "5:3", "5:4", "5:5", "5:90", "6:118", "6:119", "6:145", "16:114", "16:115"],
+    "expected_themes": ["pork", "blood", "carrion", "intoxicants", "dedicated to other than God"],
+    "difficulty": "medium",
+    "notes": "Tests precise retrieval — specific rulings with clear verse set"
+  },
+  {
+    "id": "q08_abraham_path",
+    "question": "Trace the thematic connection between Abraham's story in Surah 2 and Surah 37",
+    "expected_citations": ["2:124", "2:125", "2:126", "2:127", "2:130", "2:131", "37:83", "37:99", "37:100", "37:101", "37:102", "37:103", "37:104", "37:105", "37:106", "37:107"],
+    "expected_themes": ["sacrifice", "building the Ka'ba", "monotheism", "submission to God"],
+    "difficulty": "hard",
+    "notes": "Tests find_path and cross-surah traversal"
+  },
+  {
+    "id": "q09_justice",
+    "question": "What does the Quran say about justice and fairness, even toward enemies?",
+    "expected_citations": ["4:58", "4:135", "5:8", "6:152", "16:90", "42:15", "49:9", "57:25"],
+    "expected_themes": ["equity", "witnesses for God", "fairness toward those you dislike"],
+    "difficulty": "hard",
+    "notes": "Tests semantic search finding 'equity' and 'fairness' as conceptual parallels to 'justice'"
+  },
+  {
+    "id": "q10_previous_scriptures",
+    "question": "How does the Quran describe its relationship to previous scriptures (Torah, Gospel)?",
+    "expected_citations": ["2:41", "2:89", "2:97", "3:3", "3:4", "5:46", "5:48", "10:37", "12:111", "46:12"],
+    "expected_themes": ["confirmation", "criterion", "Torah and Gospel", "guidance"],
+    "difficulty": "hard",
+    "notes": "Tests keyword variety: scripture, Torah, Gospel, book, revelation, confirm"
+  },
+  {
+    "id": "q11_surah_overview",
+    "question": "Give me an overview of Surah 55 (The Focus) and its connections to other surahs",
+    "expected_citations": ["55:1", "55:2", "55:3", "55:4", "55:13", "55:26", "55:27", "55:46"],
+    "expected_themes": ["blessings of God", "which favors do you deny", "jinn and humans"],
+    "difficulty": "medium",
+    "notes": "Tests explore_surah tool specifically"
+  },
+  {
+    "id": "q12_ablution",
+    "question": "What are the requirements for ablution (wudu) before prayer?",
+    "expected_citations": ["4:43", "5:6"],
+    "expected_themes": ["washing", "face", "hands", "feet", "dry ablution"],
+    "difficulty": "easy",
+    "notes": "Very narrow topic — tests precision. The graph's strongest edge (4:43 <-> 5:6, score 3.82)"
+  },
+  {
+    "id": "q13_afterlife",
+    "question": "Describe the Quran's depiction of the Day of Judgment",
+    "expected_citations": ["56:1", "56:2", "56:3", "56:4", "56:7", "69:13", "69:14", "69:15", "75:1", "75:6", "81:1", "82:1", "84:1", "99:1", "99:2", "99:3", "99:4", "99:5"],
+    "expected_themes": ["resurrection", "accountability", "heaven and hell", "earth shaking", "records of deeds"],
+    "difficulty": "hard",
+    "notes": "Broad topic spanning many surahs — tests comprehensiveness"
+  },
+  {
+    "id": "q14_women_rights",
+    "question": "What rights does the Quran grant to women?",
+    "expected_citations": ["2:228", "2:229", "2:231", "2:233", "4:7", "4:11", "4:12", "4:19", "4:32", "4:34", "9:71", "33:35"],
+    "expected_themes": ["inheritance", "divorce rights", "mutual consultation", "equality of reward"],
+    "difficulty": "hard",
+    "notes": "Tests multi-keyword: women, wives, mothers, daughters, inheritance, divorce"
+  },
+  {
+    "id": "q15_messenger_covenant",
+    "question": "What does the Quran say about the Messenger of the Covenant?",
+    "expected_citations": ["3:81", "33:7", "33:40"],
+    "expected_themes": ["covenant with prophets", "Rashad Khalifa's interpretation", "messenger after Muhammad"],
+    "difficulty": "hard",
+    "notes": "Khalifa-specific interpretation — tests if the system captures this unique angle"
+  },
+  {
+    "id": "q16_arabic_root_rhm",
+    "question": "Trace the usage of the Arabic root r-h-m (رحم — mercy/compassion) across the Quran. How do its different derived forms carry different meanings?",
+    "expected_citations": ["1:1", "1:3", "2:163", "6:12", "6:54", "7:151", "12:64", "21:107", "39:53"],
+    "expected_themes": ["Rahman vs Rahim distinction", "God's mercy as attribute", "mercy in human relations"],
+    "difficulty": "medium",
+    "notes": "Tests search_arabic_root and compare_arabic_usage tools. Should show Rahman, Rahim, Rahmah forms."
+  },
+  {
+    "id": "q17_arabic_root_ktb",
+    "question": "What Arabic root connects the concepts of 'book', 'prescribed', and 'wrote' in the Quran? Show how the same root is used differently.",
+    "expected_citations": ["2:2", "2:183", "2:187", "2:216", "2:246", "3:3", "5:48", "6:59", "18:49"],
+    "expected_themes": ["scripture as kitab", "fasting prescribed (kutiba)", "divine recording"],
+    "difficulty": "hard",
+    "notes": "Tests if Claude discovers root k-t-b and uses compare_arabic_usage to show kitab/kutiba/maktub forms"
+  },
+  {
+    "id": "q18_arabic_root_slm",
+    "question": "Explore the Arabic root s-l-m (سلم) — how does it connect 'Islam', 'peace', and 'submission' in the Quran?",
+    "expected_citations": ["2:112", "2:131", "2:208", "3:19", "3:85", "5:3", "6:54", "10:25", "39:22"],
+    "expected_themes": ["submission to God", "Islam as religion name", "peace greeting", "wholeness"],
+    "difficulty": "medium",
+    "notes": "Tests root analysis showing how salam/Islam/Muslim/aslama derive from same root"
+  }
+]

@@ -1,0 +1,92 @@
+# ============================================================================
+# Quran Knowledge Graph — Pipeline Configuration
+# ============================================================================
+# All tunable parameters in one place. The autoresearch optimizer can modify
+# this file and re-run evaluate.py to measure the effect.
+# ============================================================================
+
+# --- LLM -------------------------------------------------------------------
+llm:
+  model: "claude-sonnet-4-5"
+  max_tokens: 4096
+
+# --- Embedding model --------------------------------------------------------
+embedding:
+  model: "all-MiniLM-L6-v2"
+  dimensions: 384
+
+# --- Retrieval knobs --------------------------------------------------------
+retrieval:
+  semantic_search:
+    default_top_k: 40
+    max_top_k: 80
+  traverse_topic:
+    seed_limit: 30          # top direct matches used as hop seeds
+    hop1_limit: 60          # max verses returned from 1-hop expansion
+    hop2_limit: 40          # max verses returned from 2-hop expansion
+    max_hops: 2
+  get_verse:
+    keyword_limit: 15       # top keywords returned per verse
+    neighbour_limit: 12     # max RELATED_TO neighbours returned
+    shared_kw_limit: 5      # shared keywords per neighbour pair
+  find_path:
+    max_depth: 6            # shortestPath max hops
+    bridge_kw_limit: 5      # bridge keywords per path step
+  explore_surah:
+    cross_surah_limit: 10   # top connected surahs returned
+  search_keyword:
+    fuzzy_prefix_len: 4     # prefix length for fuzzy fallback suggestions
+    fuzzy_limit: 8          # max fuzzy suggestions returned
+
+# --- Graph visualisation (frontend extraction) ------------------------------
+visualisation:
+  search_keyword_max_nodes: 15
+  get_verse_max_connected: 8
+  get_verse_max_kw_per_neighbour: 3
+  explore_surah_max_verses: 30
+  find_path_max_bridge_kw: 3
+
+# --- System prompt ----------------------------------------------------------
+# Can be an inline string or a path to a .txt file (relative to project root).
+# The optimizer may swap between prompt variants stored as separate files.
+system_prompt: "prompts/system_prompt.txt"
+
+# --- Arabic layer -----------------------------------------------------------
+arabic:
+  source_file: "data/quran-arabic-raw.json"
+  morphology_file: "data/quran-morphology.txt"
+  reading: "hafs"                            # Hafs ʿan ʿĀṣim
+  morphology_backend: "corpus"               # "corpus" (pre-built data) | "camel" | "isri"
+  root_min_verses: 2                         # min verses a root must appear in
+  root_max_verses: 500                       # max verses (filter ultra-common)
+  root_stoplist:                              # high-frequency low-signal roots
+    - "قول"                                   # q-w-l (say)
+    - "كون"                                   # k-w-n (be)
+    - "أله"                                   # >-l-h (God) — already captured by English
+  related_by_root_max_edges: 12              # cap per verse
+
+# --- Arabic retrieval knobs -------------------------------------------------
+  search_arabic_root:
+    fuzzy_limit: 8
+  compare_arabic_usage:
+    max_forms_per_root: 20
+    max_verses_per_form: 10
+
+# --- Scoring thresholds (for future retrieval gating) -----------------------
+scoring:
+  related_to_min_score: 0.1    # minimum RELATED_TO score to consider
+  mentions_min_score: 0.04     # minimum MENTIONS score to consider
+
+# --- Evaluation (used by evaluate.py) --------------------------------------
+evaluation:
+  test_dataset: "test_dataset.json"
+  metrics:
+    - citation_recall       # fraction of expected citations found
+    - citation_precision    # fraction of produced citations that are relevant
+    - grounding_rate        # fraction of claims backed by a citation
+    - answer_relevance      # semantic similarity of answer to question
+  composite_weights:
+    citation_recall: 0.35
+    citation_precision: 0.25
+    grounding_rate: 0.30
+    answer_relevance: 0.10
