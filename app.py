@@ -99,6 +99,7 @@ TOOL_LABELS = {
     "semantic_search":       "Semantic search",
     "search_arabic_root":    "Searching Arabic root",
     "compare_arabic_usage":  "Comparing Arabic usage",
+    "query_typed_edges":     "Querying typed edges",
 }
 
 
@@ -207,6 +208,16 @@ def _graph_for_tool(name: str, inp: dict, result: dict):
                     v = vnode(v_data["verse_id"], "", v_data.get("text",""), v_data.get("arabic_text",""))
                     link(v, rnid, "mentions_root"); count += 1
                 if count >= 15: break
+
+        elif name == "query_typed_edges" and "by_type" in result:
+            vid = result.get("verse_id", "")
+            v_center = vnode(vid)
+            active.append(v_center)
+            for rtype, edges in result.get("by_type", {}).items():
+                ltype = rtype.lower()
+                for e in edges[:8]:
+                    v = vnode(e["verse_id"], e.get("surah_name",""), e.get("text",""), e.get("arabic_text",""))
+                    link(v_center, v, ltype)
 
         elif name == "compare_arabic_usage" and "root" in result:
             root = result["root"]

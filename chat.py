@@ -161,6 +161,21 @@ def tool_get_verse(session, verse_id: str) -> dict:
         ORDER BY m.count DESC LIMIT 10
     """, id=verse_id)]
 
+    # Typed edges summary (SUPPORTS, ELABORATES, etc.)
+    typed_rows = list(session.run("""
+        MATCH (v:Verse {verseId: $id})-[r]-(other:Verse)
+        WHERE type(r) IN ['SUPPORTS','ELABORATES','QUALIFIES','CONTRASTS','REPEATS']
+        RETURN other.verseId AS otherId, type(r) AS relType,
+               r.score AS score, r.confidence AS confidence
+        ORDER BY r.score DESC LIMIT 15
+    """, id=verse_id))
+    typed_edges = {}
+    for tr in typed_rows:
+        typed_edges.setdefault(tr["relType"], []).append({
+            "verse_id": tr["otherId"],
+            "score": round(tr["score"], 4) if tr["score"] else None,
+        })
+
     return {
         "verse_id": verse_id,
         "surah": v["surah"],
@@ -169,7 +184,8 @@ def tool_get_verse(session, verse_id: str) -> dict:
         "arabic_text": v.get("arabicText", "") or "",
         "arabic_roots": arabic_roots,
         "keywords": keywords,
-        "connected_verses": connected
+        "connected_verses": connected,
+        "typed_edges": typed_edges,
     }
 
 
@@ -462,6 +478,56 @@ def tool_compare_arabic_usage(session, root: str) -> dict:
     }
 
 
+def tool_query_typed_edges(session, verse_id: str, edge_type: str = None) -> dict:
+    """Query verses connected by a specific relationship type (SUPPORTS, ELABORATES, etc.)."""
+    verse_id = verse_id.strip().replace(" ", ":")
+    row = session.run("MATCH (v:Verse {verseId: $id}) RETURN v", id=verse_id).single()
+    if not row:
+        return {"error": f"Verse [{verse_id}] not found. Format: surah:verse e.g. 2:255"}
+
+    valid_types = ['SUPPORTS', 'ELABORATES', 'QUALIFIES', 'CONTRASTS', 'REPEATS']
+
+    if edge_type:
+        edge_type = edge_type.upper()
+        if edge_type not in valid_types:
+            return {"error": f"Unknown edge type '{edge_type}'. Valid: {valid_types}"}
+        rows = list(session.run("""
+            MATCH (v:Verse {verseId: $id})-[r:""" + edge_type + """]-(other:Verse)
+            RETURN other.verseId AS otherId, other.surahName AS surahName,
+                   other.text AS text, other.arabicText AS arabic,
+                   r.score AS score, r.confidence AS confidence,
+                   $etype AS relType
+            ORDER BY r.score DESC LIMIT 12
+        """, id=verse_id, etype=edge_type))
+    else:
+        rows = list(session.run("""
+            MATCH (v:Verse {verseId: $id})-[r]-(other:Verse)
+            WHERE type(r) IN ['SUPPORTS','ELABORATES','QUALIFIES','CONTRASTS','REPEATS']
+            RETURN other.verseId AS otherId, other.surahName AS surahName,
+                   other.text AS text, other.arabicText AS arabic,
+                   type(r) AS relType, r.score AS score
+            ORDER BY r.score DESC LIMIT 20
+        """, id=verse_id))
+
+    by_type = {}
+    for r in rows:
+        rtype = r["relType"]
+        by_type.setdefault(rtype, []).append({
+            "verse_id": r["otherId"],
+            "surah_name": r["surahName"],
+            "text": r["text"],
+            "arabic_text": r["arabic"] or "",
+            "score": round(r["score"], 4) if r["score"] else None,
+        })
+
+    return {
+        "verse_id": verse_id,
+        "edge_type_filter": edge_type,
+        "total_results": len(rows),
+        "by_type": by_type,
+    }
+
+
 def tool_semantic_search(session, query: str, top_k: int = 40) -> dict:
     """Find verses conceptually similar to a query using vector embeddings."""
     model = _get_sem_model()
@@ -623,6 +689,31 @@ TOOLS = [
         }
     },
     {
+        "name": "query_typed_edges",
+        "description": (
+            "Find verses connected to a given verse by a specific relationship type: "
+            "SUPPORTS (independent evidence), ELABORATES (expands with detail), "
+            "QUALIFIES (adds condition/exception), CONTRASTS (complementary perspective), "
+            "REPEATS (near-verbatim across surahs). Use this after get_verse to understand "
+            "HOW verses relate, not just THAT they relate."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "verse_id": {
+                    "type": "string",
+                    "description": "Verse reference e.g. '2:255'"
+                },
+                "edge_type": {
+                    "type": "string",
+                    "enum": ["SUPPORTS", "ELABORATES", "QUALIFIES", "CONTRASTS", "REPEATS"],
+                    "description": "Optional: filter to one relationship type. Omit to get all typed edges."
+                }
+            },
+            "required": ["verse_id"]
+        }
+    },
+    {
         "name": "search_arabic_root",
         "description": (
             "Find all Quran verses containing a specific Arabic tri-literal root. "
@@ -684,6 +775,8 @@ def dispatch_tool(session, tool_name: str, tool_input: dict) -> str:
             result = tool_explore_surah(session, **tool_input)
         elif tool_name == "semantic_search":
             result = tool_semantic_search(session, **tool_input)
+        elif tool_name == "query_typed_edges":
+            result = tool_query_typed_edges(session, **tool_input)
         elif tool_name == "search_arabic_root":
             result = tool_search_arabic_root(session, **tool_input)
         elif tool_name == "compare_arabic_usage":

@@ -763,9 +763,17 @@
         .linkColor(link => {
           if (link.type === 'mentions') return '#78350f';
           if (link.type === 'mentions_root' || link.type === 'derives' || link.type === 'appears_in') return '#92400e';
+          if (link.type === 'supports')   return '#10b981';  // green
+          if (link.type === 'elaborates') return '#6366f1';  // indigo
+          if (link.type === 'qualifies')  return '#f59e0b';  // amber
+          if (link.type === 'contrasts')  return '#ef4444';  // red
+          if (link.type === 'repeats')    return '#64748b';  // slate
           return '#164e63';
         })
-        .linkWidth(link => link.type === 'related' ? 0.8 : 0.4)
+        .linkWidth(link => {
+          if (['supports','elaborates','qualifies','contrasts','repeats'].includes(link.type)) return 1.2;
+          return link.type === 'related' ? 0.8 : 0.4;
+        })
         .linkOpacity(0.6)
         .linkDirectionalParticles(link => link.type === 'related' ? 3 : 0)
         .linkDirectionalParticleWidth(1.4)

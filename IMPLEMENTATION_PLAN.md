@@ -1,52 +1,84 @@
-# Implementation Plan: Hallucination Reduction + Arabic Text
+# Implementation Plan: Hallucination Reduction
 
-**Status:** Planning (not yet implemented)
-**Phases:** 6 phases, each independently deployable
-
----
-
-## Overview
-
-Upgrade the Quran Knowledge Graph from a proof-of-concept to a production-grade, citation-verified system with 4-layer hallucination defense and bilingual Arabic+English support.
-
-```
-                  User Question
-                       |
-              [Layer 1: Retrieval Gate]
-              Cross-encoder reranking +
-              Corrective RAG fallback
-                       |
-              [Layer 2: KG Grounding]
-              Typed edges (SUPPORTS, QUALIFIES, etc.)
-              surfaced through tools
-                       |
-              [Claude Agentic Loop]
-              Tools query Neo4j, stream via SSE
-                       |
-              [Layer 3: Citation Verification]
-              NLI entailment check on every
-              [sura:verse] citation
-                       |
-              [Layer 4: Constrained Output]
-              Citation density enforcement +
-              re-generation trigger
-                       |
-                  Verified Response
-                  (Arabic + English)
-```
+**Status:** Phase 1 ready to implement
+**Baseline:** `v1.0-arabic-baseline` (tag) — Arabic integration + eval harness complete
 
 ---
 
-## Phase 1: Wire Typed Edges into Tools (Layer 2)
+## What's Already Done
+
+| Component | Status |
+|-----------|--------|
+| Arabic text (Hafs ʿan ʿĀṣim, Uthmani) on all 6,234 verses | Done |
+| Arabic root morphology: 1,223 roots, 36K edges | Done |
+| `search_arabic_root` + `compare_arabic_usage` tools | Done |
+| Bilingual frontend (Amiri font, RTL tooltips) | Done |
+| Pipeline config externalization (`pipeline_config.yaml` + `config.py`) | Done |
+| Evaluation harness (`evaluate.py` + 18-question `test_dataset.json`) | Done |
+| Typed edge classification script (`classify_edges.py`) | Done (script exists, edges may need running) |
+| `.gitignore` + secrets cleanup | Done |
+
+---
+
+## Architecture
+
+```
+USER QUERY
+    |
+[Layer 5] Semantic Entropy (5x Haiku)     <- Abstain if high entropy
+    |
+[Layer 1] Retrieval                        <- Current Neo4j (graph + vector + keyword)
+    |                                         + rank_bm25 (in-process, no Elasticsearch)
+    |                                         + cross-encoder reranking
+    |                                         + FILCO sentence filtering
+    |                                         + LLMLingua-2 compression
+    |                                         + lost-in-middle reordering
+[Layer 2] KG Grounding                     <- Typed edges (SUPPORTS, ELABORATES, etc.)
+    |                                         + Arabic roots (done)
+[Layer 3] Claude Agentic Loop              <- tool_choice enforcement
+    |                                         + 8 tools (current) + query_typed_edges
+[Layer 4] Post-Gen Verification            <- MiniCheck (always-on)
+    |                                         + HHEM threshold gate
+    |                                         + SelfCheckGPT (borderline only)
+    |                                         + Conformal Prediction wrapper
+[Layer 5] Constrained Output               <- Citation density check
+    |                                         + re-generation trigger
+[Eval] DeepEval + RAGChecker               <- Feeds autoresearch loop
+```
+
+---
+
+## QIS Score (Quality-Integrity-Safety)
+
+```python
+QIS_SCORE = (
+    0.30 * citation_recall          # % of expected citations found
+  + 0.25 * citation_precision       # MiniCheck: % of citations that support their claim
+  + 0.20 * grounding_rate           # % of paragraphs with >= 1 citation
+  + 0.15 * hhem_score               # HHEM calibrated hallucination score
+  + 0.10 * abstention_accuracy      # correct refusal on unanswerable questions
+)
+```
+
+---
+
+## Phase 1: Wire Typed Edges into Tools
 
 **Impact:** High | **Effort:** Low | **Risk:** None
-**Dependencies:** None — typed edges already exist in Neo4j
+**Dependencies:** Run `classify_edges.py` if typed edges don't exist yet
 
-### 1.1 New tool: `query_typed_edges`
+### 1.1 Verify typed edges exist in Neo4j
+
+```cypher
+MATCH ()-[r]->() WHERE type(r) IN ['SUPPORTS','ELABORATES','QUALIFIES','CONTRASTS','REPEATS']
+RETURN type(r) AS t, count(r) AS c
+```
+
+If empty, run `py classify_edges.py` first.
+
+### 1.2 New tool: `query_typed_edges`
 
 **File:** `chat.py`
-
-Add 7th tool that lets Claude query by relationship type:
 
 ```python
 def tool_typed_edges(session, verse_id: str, edge_type: str = None) -> dict:
@@ -55,12 +87,10 @@ def tool_typed_edges(session, verse_id: str, edge_type: str = None) -> dict:
         rows = session.run("""
             MATCH (v:Verse {verseId: $id})-[r:""" + edge_type + """]-(other:Verse)
             RETURN other.verseId AS otherId, other.surahName AS surahName,
-                   other.text AS text, r.score AS score,
-                   r.confidence AS confidence
+                   other.text AS text, r.score AS score, r.confidence AS confidence
             ORDER BY r.score DESC LIMIT 12
         """, id=verse_id)
     else:
-        # Return all typed edges grouped by type
         rows = session.run("""
             MATCH (v:Verse {verseId: $id})-[r]-(other:Verse)
             WHERE type(r) IN ['SUPPORTS','ELABORATES','QUALIFIES','CONTRASTS','REPEATS']
@@ -70,428 +100,114 @@ def tool_typed_edges(session, verse_id: str, edge_type: str = None) -> dict:
         """, id=verse_id)
 ```
 
-Tool schema:
-```json
-{
-  "name": "query_typed_edges",
-  "description": "Find verses connected by a specific relationship type: SUPPORTS (evidence), ELABORATES (expands detail), QUALIFIES (adds condition/exception), CONTRASTS (complementary perspective), REPEATS (near-verbatim). Use this after get_verse to understand HOW verses relate.",
-  "input_schema": {
-    "properties": {
-      "verse_id": {"type": "string", "description": "Verse reference e.g. '2:255'"},
-      "edge_type": {"type": "string", "enum": ["SUPPORTS","ELABORATES","QUALIFIES","CONTRASTS","REPEATS"], "description": "Optional: filter to one type. Omit to get all typed edges."}
-    },
-    "required": ["verse_id"]
-  }
-}
-```
+### 1.3 Enrich `get_verse` with typed edge info
 
-### 1.2 Enrich `get_verse` results with typed edge info
+After existing RELATED_TO query, add typed edge summary.
 
-**File:** `chat.py`, function `tool_get_verse`
+### 1.4 Update system prompt with typed edge descriptions
 
-After the existing RELATED_TO neighbour query, add:
-
-```python
-typed_rows = session.run("""
-    MATCH (v:Verse {verseId: $id})-[r]-(other:Verse)
-    WHERE type(r) IN ['SUPPORTS','ELABORATES','QUALIFIES','CONTRASTS','REPEATS']
-    RETURN other.verseId AS otherId, type(r) AS relType, r.confidence AS confidence
-""", id=verse_id)
-typed_map = {}
-for tr in typed_rows:
-    typed_map.setdefault(tr["otherId"], []).append(tr["relType"])
-```
-
-Merge into the `connected` list: each neighbour gets a `"relationship_types"` field.
-
-### 1.3 Update system prompt
-
-**File:** `chat.py`, `SYSTEM_PROMPT`
-
-Add after the tool list:
-
-```
-The graph has typed relationships between verses:
-- SUPPORTS: verse provides independent evidence for another's claim
-- ELABORATES: verse expands on another with more detail
-- QUALIFIES: verse adds a condition or exception to another
-- CONTRASTS: verses present complementary perspectives on the same topic
-- REPEATS: near-verbatim repetition across surahs
-
-Use query_typed_edges after get_verse to understand HOW verses relate.
-When citing, note the relationship: "[5:6] elaborates the ablution rules in [4:43]"
-"[16:115] qualifies the food prohibition in [2:173] with a duress exception"
-```
-
-### 1.4 Frontend: color-coded link types
-
-**File:** `app.py` (`_graph_for_tool`), `index.html`
-
-In `_graph_for_tool`, when typed edge data is in tool results, pass type through:
-```python
-link(v1, v2, "supports")   # instead of always "related"
-```
-
-In `index.html`, update link colors:
-```javascript
-const LINK_COLORS = {
-  related:    '#164e63',
-  mentions:   '#78350f',
-  supports:   '#10b981',   // green
-  elaborates: '#6366f1',   // indigo
-  qualifies:  '#f59e0b',   // amber
-  repeats:    '#64748b',   // slate
-  contrasts:  '#ef4444',   // red
-};
-```
-
-Add legend entries for each type.
+### 1.5 Frontend: color-coded link types in 3D graph
 
 ---
 
-## Phase 2: Retrieval Quality Gating (Layer 1)
+## Phase 2: Retrieval Quality Gating
 
 **Impact:** High | **Effort:** Medium | **Risk:** Low
 **Dependencies:** None
 
-### 2.1 Create `retrieval_gate.py`
+### 2.1 Cross-encoder reranking (`retrieval_gate.py`)
 
-New file with cross-encoder reranking:
-
-```python
-from sentence_transformers import CrossEncoder
-
-_reranker = None
-def _get_reranker():
-    global _reranker
-    if _reranker is None:
-        _reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
-    return _reranker
-
-def rerank_verses(query: str, verses: list[dict], top_k: int = 20) -> list[dict]:
-    """Rerank verses by cross-encoder relevance to the query."""
-    model = _get_reranker()
-    pairs = [(query, v.get("text", "") or v.get("english", "")) for v in verses]
-    scores = model.predict(pairs)
-    for v, s in zip(verses, scores):
-        v["relevance_score"] = float(s)
-    verses.sort(key=lambda v: v["relevance_score"], reverse=True)
-    return verses[:top_k]
-
-def assess_retrieval_quality(verses: list[dict], threshold: float = 0.3) -> str:
-    """Return 'good', 'marginal', or 'poor' based on top scores."""
-    if not verses:
-        return "poor"
-    top_score = max(v.get("relevance_score", 0) for v in verses)
-    if top_score >= threshold:
-        return "good"
-    elif top_score >= 0.1:
-        return "marginal"
-    return "poor"
-```
-
-Model: `cross-encoder/ms-marco-MiniLM-L-6-v2` (~80MB, fast CPU inference).
-
-### 2.2 Wire into tool dispatch with Corrective RAG
-
-**File:** `chat.py`, `dispatch_tool`
-
-Wrap tool results through the reranker. If quality is "poor", trigger fallback:
+Model: `cross-encoder/ms-marco-MiniLM-L-6-v2` (~80MB, fast CPU)
 
 ```python
-def dispatch_tool(session, tool_name, tool_input, user_query=None):
-    result = _call_tool(session, tool_name, tool_input)
-
-    if user_query and tool_name in ("search_keyword", "semantic_search"):
-        verses = _extract_verses_from_result(result)
-        if verses:
-            reranked = rerank_verses(user_query, verses)
-            quality = assess_retrieval_quality(reranked)
-
-            if quality == "poor" and tool_name == "search_keyword":
-                # Corrective RAG: fall back to semantic search
-                fallback = _call_tool(session, "semantic_search", {"query": user_query})
-                result["fallback_results"] = fallback
-                result["retrieval_note"] = "Keyword search had low relevance. Semantic search results appended."
-
-    return result
+def rerank_verses(query, verses, top_k=20) -> list[dict]
+def assess_retrieval_quality(verses, threshold=0.3) -> str  # "good"|"marginal"|"poor"
 ```
 
-**Key:** Pass `user_query` through the streaming pipeline so `dispatch_tool` can access it.
+### 2.2 FILCO sentence filtering
 
-### 2.3 Thread user query through the pipeline
+CPU-only, inline. For each retrieved verse, score individual sentences against the query. Drop sentences below threshold before stuffing context.
 
-**File:** `app.py`, `_agent_stream`
+### 2.3 Lost-in-middle reordering
 
-The user's original message is available in `_agent_stream(message, history)`. Pass it to `dispatch_tool`:
+Reorder retrieved verses: most relevant at start AND end (U-shape). Middle positions get lower-relevance items. Trivial — just sort order change.
 
-```python
-tool_result = dispatch_tool(session, tool_name, tool_input, user_query=message)
-```
+### 2.4 Corrective RAG fallback
+
+If keyword search quality is "poor", auto-trigger semantic search as fallback. Pass `user_query` through the pipeline.
+
+### 2.5 LLMLingua-2 compression (defer if latency too high)
+
+Compress retrieved context before Claude calls. Runs a small model (~300MB). May add 1-2s latency. Implement last in this phase and A/B test.
+
+### 2.6 rank_bm25 in-process
+
+Add BM25 as a third retrieval path alongside keyword and semantic. Pure Python, no Elasticsearch. `pip install rank-bm25`.
 
 ---
 
-## Phase 3: Citation Verification (Layer 3)
+## Phase 3: Post-Generation Verification
 
-**Impact:** Very High | **Effort:** High | **Risk:** Medium (latency)
-**Dependencies:** Benefits from Phase 2 reranker
+**Impact:** Very High | **Effort:** High | **Risk:** Medium (latency + cost)
+**Dependencies:** Benefits from Phase 2
 
-### 3.1 Create `citation_verifier.py`
+### 3.1 MiniCheck (primary, always-on)
 
-New file with three functions:
+Verify every claim against cited verse text. Options:
+- **Local:** Download model, run on CPU/GPU (~2GB)
+- **Modal.com:** Serverless endpoint, pay-per-call
 
-**Claim decomposition** (uses Haiku for speed):
-```python
-def decompose_claims(text: str, client) -> list[dict]:
-    """Decompose response into atomic claims with their cited verses."""
-    resp = client.messages.create(
-        model="claude-haiku-4-5-20251001",
-        max_tokens=2000,
-        messages=[{"role": "user", "content": f"""
-Decompose this text into atomic claims. For each claim, list any [sura:verse] citations.
-Return JSON array: [{{"claim": "...", "citations": ["2:255", "3:18"]}}]
-Only include factual/theological claims, not transitions or questions.
+Returns `{claim, cited_verse, entailment_score}` for each citation.
 
-Text: {text}
-"""}]
-    )
-    return json.loads(resp.content[0].text)
-```
+### 3.2 HHEM v2.1 (threshold gate)
 
-**NLI verification** (uses cross-encoder):
-```python
-from sentence_transformers import CrossEncoder
+Vectara API — single HTTP call per response. Returns calibrated hallucination probability [0,1]. If > 0.5, flag response for review. Near-zero integration effort.
 
-_nli_model = None
-def _get_nli():
-    global _nli_model
-    if _nli_model is None:
-        _nli_model = CrossEncoder('cross-encoder/nli-deberta-v3-xsmall')
-    return _nli_model
+### 3.3 SelfCheckGPT (borderline fallback)
 
-def verify_citation(claim: str, verse_text: str) -> dict:
-    """Check if verse_text entails the claim. Returns {label, score}."""
-    model = _get_nli()
-    scores = model.predict([(verse_text, claim)])
-    # deberta NLI outputs [contradiction, neutral, entailment]
-    labels = ["contradiction", "neutral", "entailment"]
-    idx = scores[0].argmax()
-    return {"label": labels[idx], "score": float(scores[0][idx])}
-```
+Only triggered when HHEM score is in the "uncertain" range (0.3-0.7). Generates 3-5 variant responses via Haiku, checks consistency. High divergence = likely hallucination.
 
-**Full response verification:**
-```python
-def verify_response(text: str, verse_texts: dict, client) -> dict:
-    claims = decompose_claims(text, client)
-    results = []
-    for c in claims:
-        verified_citations = []
-        for ref in c["citations"]:
-            vtext = verse_texts.get(ref, "")
-            if vtext:
-                nli = verify_citation(c["claim"], vtext)
-                verified_citations.append({"ref": ref, **nli})
-        results.append({
-            "claim": c["claim"],
-            "citations": verified_citations,
-            "has_citation": len(c["citations"]) > 0,
-            "supported": any(vc["label"] == "entailment" for vc in verified_citations),
-        })
+### 3.4 Conformal Prediction wrapper
 
-    total = len(results)
-    cited = sum(1 for r in results if r["has_citation"])
-    supported = sum(1 for r in results if r["supported"])
+Pure Python. Calibrate on eval set to get statistical guarantees: "with 95% confidence, this citation is correct." Wraps MiniCheck scores.
 
-    return {
-        "citation_recall": cited / total if total else 1.0,
-        "citation_precision": supported / cited if cited else 1.0,
-        "total_claims": total,
-        "flagged": [r for r in results if r["has_citation"] and not r["supported"]],
-        "uncited": [r for r in results if not r["has_citation"]],
-    }
-```
+### 3.5 Frontend: verification badge
 
-### 3.2 Wire into SSE pipeline
-
-**File:** `app.py`, `_agent_stream` function
-
-After the agentic loop completes and `full_text` is assembled:
-
-```python
-# Existing: fetch verse texts for tooltips
-refs = set(_BRACKET_REF.findall(full_text))
-verses = _fetch_verses(session, refs)
-
-# NEW: verify citations
-from citation_verifier import verify_response
-verification = verify_response(full_text, verses, ai)
-
-# Send verification as new SSE event
-q.put({"t": "verification", "d": verification})
-
-# Then send done event as before
-q.put({"t": "done", "verses": verses})
-```
-
-### 3.3 Frontend verification badge
-
-**File:** `index.html`
-
-Handle `verification` event in the SSE reader:
-
-```javascript
-if (ev.t === 'verification') {
-    const v = ev.d;
-    const badge = document.createElement('div');
-    badge.className = 'verification-badge';
-    if (v.citation_precision >= 0.9 && v.citation_recall >= 0.9) {
-        badge.innerHTML = 'Citations verified';
-        badge.classList.add('verified-good');
-    } else {
-        badge.innerHTML = `${v.flagged.length} citation(s) need review`;
-        badge.classList.add('verified-warn');
-    }
-    currentBubble.appendChild(badge);
-}
-```
-
-CSS:
-```css
-.verification-badge {
-    font-size: 0.7em; padding: 2px 8px; border-radius: 10px;
-    margin-top: 6px; display: inline-block;
-}
-.verified-good { background: rgba(16,185,129,0.15); color: #10b981; }
-.verified-warn { background: rgba(245,158,11,0.15); color: #f59e0b; }
-```
+SSE event `{t: "verification", d: {precision, recall, flagged}}`. Display green/amber badge on each response.
 
 ---
 
-## Phase 4: Constrained Output (Layer 4)
+## Phase 4: Constrained Output
 
 **Impact:** Medium | **Effort:** Low | **Risk:** Low
-**Dependencies:** Phase 3 (citation extraction logic)
+**Dependencies:** Phase 3 claim extraction logic
 
 ### 4.1 Citation density check
 
-**File:** `app.py`
-
-After the agentic loop, before verification:
-
-```python
-def _check_citation_density(text):
-    paragraphs = [p for p in text.split('\n\n') if len(p.strip()) > 50]
-    uncited = [p for p in paragraphs if not _BRACKET_REF.search(p)]
-    return uncited, len(paragraphs)
-
-uncited, total = _check_citation_density(full_text)
-citation_rate = 1 - len(uncited) / total if total else 1.0
-```
+Count paragraphs without `[sura:verse]` citations. If > 30% uncited, trigger one retry.
 
 ### 4.2 Re-generation trigger
 
-If more than 30% of substantive paragraphs lack citations, trigger one retry:
+Append instruction: "Add citations to every claim, or remove unsupported claims." Cap at 1 retry.
 
-```python
-if citation_rate < 0.7 and not retried:
-    retried = True
-    msgs.append({"role": "assistant", "content": full_text})
-    msgs.append({"role": "user", "content":
-        "Your response has paragraphs without [sura:verse] citations. "
-        "Add citations to every claim, or remove unsupported claims."
-    })
-    # Re-enter agentic loop (same code, one more pass)
-    ...
-```
+### 4.3 Warning SSE event
 
-Cap at 1 retry. If still uncited after retry, emit warning event and proceed.
-
-### 4.3 Warning event
-
-```python
-if uncited:
-    q.put({"t": "warning", "d": f"{len(uncited)} paragraph(s) lack verse citations"})
-```
+If still uncited after retry, emit `{t: "warning", d: "N paragraph(s) lack citations"}`.
 
 ---
 
-## Phase 5: Arabic Text Integration
+## Phase 5: Uncertainty Quantification
 
-**Impact:** High | **Effort:** Medium | **Risk:** Low
-**Dependencies:** None — fully independent, parallelize with Phases 1-4
+**Impact:** Medium | **Effort:** Low | **Risk:** Low (cost: ~5 Haiku calls per uncertain query)
+**Dependencies:** None
 
-### 5.1 Source and load Arabic text
+### 5.1 Semantic Entropy
 
-**New file:** `load_arabic.py`
+For each query, generate 5 responses with Haiku (temperature 0.7). Cluster by semantic similarity. High entropy (many distinct clusters) = model is uncertain = abstain or flag.
 
-Source: tanzil.net Uthmani script (public domain, widely accepted).
+### 5.2 Wire into Layer 5 gate
 
-```python
-def load_arabic():
-    """Download and parse Arabic Quran text, update Neo4j."""
-    # Parse tanzil.net format: sura|verse|text
-    # Match to existing verseId format
-    # SET v.arabic = arabic_text for each verse
-```
-
-Skip 9:128-129 (excluded in Khalifa translation).
-
-### 5.2 Generate Arabic embeddings
-
-**New file:** `embed_arabic.py`
-
-Model: `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` (384-dim, supports Arabic + English cross-lingual).
-
-```python
-model = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')
-# Encode arabic text -> store as v.arabic_embedding
-# Create vector index: verse_arabic_embedding
-```
-
-### 5.3 Update tools to return Arabic
-
-**File:** `chat.py` — all 6 tool functions
-
-Add `v.arabic AS arabic` to every Cypher RETURN clause. Include in result dicts.
-
-### 5.4 Add bilingual semantic search
-
-**File:** `chat.py`
-
-Extend `semantic_search` with `language` parameter:
-- `"english"` (default): uses existing `verse_embedding` index
-- `"arabic"`: uses new `verse_arabic_embedding` index
-- `"auto"`: detect query language, use appropriate index
-
-### 5.5 Arabic keyword search
-
-**New file:** `build_arabic_keywords.py`
-
-Use `pyarabic` for Arabic root extraction. Create `ArabicKeyword` nodes or extend existing `Keyword` nodes with `arabic_form` property.
-
-### 5.6 Frontend: bilingual display
-
-**File:** `index.html`, `app.py`
-
-Update `_fetch_verses` to return both texts:
-```python
-RETURN v.reference AS id, v.text AS text, v.arabic AS arabic
-```
-
-Update `done` event payload:
-```json
-{"verses": {"2:255": {"text": "English...", "arabic": "Arabic..."}}}
-```
-
-Update tooltip rendering:
-```html
-<div class="tooltip-arabic" dir="rtl" style="font-family:'Amiri',serif;">
-  Arabic text here
-</div>
-<div class="tooltip-english">English text here</div>
-```
-
-Add Amiri font from Google Fonts CDN for proper Arabic rendering.
+Run BEFORE retrieval. If entropy is very high, respond with "I'm not confident I can answer this accurately from the Quran" instead of generating a potentially hallucinated response.
 
 ---
 
@@ -500,52 +216,93 @@ Add Amiri font from Google Fonts CDN for proper Arabic rendering.
 **Impact:** Medium | **Effort:** Low | **Risk:** None
 **Dependencies:** After all other phases
 
-Update `SYSTEM_PROMPT` to:
-- Document all new tools (typed edges, Arabic search)
+- Document all new tools (typed edges)
 - Strengthen citation mandate with verification awareness
 - Add typed-edge language guidance
-- Add Arabic text display instructions
 - Add note about retrieval confidence levels
+- Add abstention instruction for uncertain topics
+
+---
+
+## Phase 7: Evaluation Expansion
+
+**Impact:** High | **Effort:** Medium | **Risk:** None
+**Dependencies:** None — can run in parallel
+
+### 7.1 Expand test dataset to ~200 questions
+
+- **100 standard** — clear Quranic topics with well-known verses
+- **50 edge cases** — ambiguous topics, commonly misattributed verses
+- **50 unanswerable** — questions the Quran doesn't address (tests abstention)
+
+### 7.2 Add HHEM + abstention metrics to evaluate.py
+
+Update `pipeline_config.yaml` composite weights to match QIS_SCORE formula.
+
+### 7.3 Integrate DeepEval + RAGChecker
+
+Automated evaluation infrastructure that feeds the autoresearch loop.
 
 ---
 
 ## Implementation Order
 
 ```
-Week 1:  Phase 1 (typed edges) + Phase 5.1-5.2 (Arabic data load)
-Week 2:  Phase 2 (retrieval gate) + Phase 5.3-5.4 (Arabic in tools)
-Week 3:  Phase 3 (citation verification)
-Week 4:  Phase 4 (constrained output) + Phase 5.5-5.6 (Arabic frontend)
-Week 5:  Phase 6 (prompt refinement) + testing + tuning
+Step 0:  Run baseline eval (py evaluate.py --ids q01,q02,q03)
+Step 1:  Phase 1 — typed edges in tools (low effort, high value)
+Step 2:  Phase 2.1-2.4 — retrieval gating (cross-encoder + CRAG + FILCO + reorder)
+Step 3:  Phase 3.1-3.2 — MiniCheck + HHEM (core verification)
+Step 4:  Phase 4 — constrained output (citation density)
+Step 5:  Phase 7.1 — expand eval set to 200 questions
+Step 6:  Run autoresearch loop to optimize pipeline_config.yaml
+Step 7:  Phase 3.3-3.4 — SelfCheckGPT + Conformal (borderline cases)
+Step 8:  Phase 5 — Semantic Entropy (uncertainty gate)
+Step 9:  Phase 2.5-2.6 — LLMLingua-2 + BM25 (optimization)
+Step 10: Phase 6 — system prompt refinement
 ```
 
-Phases 1+5 can run in parallel. Phases 2+5 can overlap. Phase 3 before Phase 4.
+Re-evaluate after each step. Let the ARL tell you which methods actually move the QIS score.
 
 ---
+
+## What We're NOT Doing (and Why)
+
+| Method | Reason to skip |
+|--------|---------------|
+| CAD, DoLa, ITI, RepE, SEPs, NeuroLogic, SynCheck/FOD | Require open-weight model logit access. Claude API doesn't expose logits. |
+| FLARE, RankRAG, R-Tuning, FactTune/DPO | Require model fine-tuning or training. |
+| Pinecone + Elasticsearch | 3 data stores for 6,234 verses is overengineering. Neo4j vector index + in-process BM25 covers it. |
+| 6 verification methods simultaneously | Redundant. MiniCheck + HHEM covers 90% of cases. Add SelfCheckGPT for borderline only. |
+| Multi-agent debate | $0.008/query for marginal gain at this scale. |
+| LINC formal verification | Translating Quranic verse semantics into FOL is a research project, not engineering. |
+
+---
+
+## New Dependencies (cumulative)
+
+| Package | Phase | Size | Purpose |
+|---------|-------|------|---------|
+| `rank-bm25` | 2 | ~50KB | In-process BM25 ranking |
+| `cross-encoder/ms-marco-MiniLM-L-6-v2` | 2 | ~80MB | Retrieval reranking |
+| `cross-encoder/nli-deberta-v3-xsmall` | 3 | ~180MB | Citation entailment (MiniCheck) |
+| `vectara-hhem` or API call | 3 | API | Hallucination scoring |
+| `deepeval` | 7 | ~20MB | Eval framework |
 
 ## New Files
 
 | File | Phase | Purpose |
 |------|-------|---------|
-| `retrieval_gate.py` | 2 | Cross-encoder reranking + CRAG fallback |
-| `citation_verifier.py` | 3 | NLI-based citation verification |
-| `load_arabic.py` | 5 | Arabic text sourcing + Neo4j loading |
-| `embed_arabic.py` | 5 | Arabic embedding generation |
-| `build_arabic_keywords.py` | 5 | Arabic root keyword extraction |
+| `retrieval_gate.py` | 2 | Cross-encoder reranking + FILCO + CRAG |
+| `citation_verifier.py` | 3 | MiniCheck + HHEM + SelfCheckGPT |
+| `uncertainty.py` | 5 | Semantic Entropy |
 
 ## Modified Files
 
 | File | Phases | Changes |
 |------|--------|---------|
-| `chat.py` | 1,2,5,6 | New tool, typed edge enrichment, Arabic in tools, prompt update |
-| `app.py` | 1,3,4,5 | Link types in graph_update, verification SSE event, citation check, Arabic in tooltips |
-| `index.html` | 1,3,4,5 | Link colors, verification badge, warning banner, Arabic tooltip display |
-
-## New Dependencies
-
-| Package | Phase | Size | Purpose |
-|---------|-------|------|---------|
-| `cross-encoder/ms-marco-MiniLM-L-6-v2` | 2 | ~80MB | Retrieval reranking |
-| `cross-encoder/nli-deberta-v3-xsmall` | 3 | ~180MB | Citation entailment |
-| `paraphrase-multilingual-MiniLM-L12-v2` | 5 | ~500MB | Arabic embeddings |
-| `pyarabic` | 5 | ~5MB | Arabic root extraction |
+| `chat.py` | 1,2,6 | New tool, reranker integration, prompt |
+| `app.py` | 1,3,4 | Typed edges in graph, verification SSE, citation check |
+| `index.html` | 1,3,4 | Link colors, verification badge, warning |
+| `evaluate.py` | 7 | HHEM metric, abstention metric |
+| `pipeline_config.yaml` | All | New config knobs per phase |
+| `test_dataset.json` | 7 | Expand to ~200 questions |
