@@ -142,5 +142,1608 @@
     "expected_themes": ["submission to God", "Islam as religion name", "peace greeting", "wholeness"],
     "difficulty": "medium",
     "notes": "Tests root analysis showing how salam/Islam/Muslim/aslama derive from same root"
+  },
+
+  {
+    "id": "q19_prophet_noah",
+    "question": "What does the Quran say about Prophet Noah and the great flood?",
+    "expected_citations": ["7:59", "7:64", "11:25", "11:36", "11:37", "11:40", "11:42", "11:43", "11:44", "23:23", "26:105", "26:106", "26:119", "54:9", "54:10", "54:11", "54:12", "71:1", "71:5", "71:26"],
+    "expected_themes": ["warning to people", "building the ark", "flood as punishment", "son who drowned", "God's salvation"],
+    "difficulty": "easy",
+    "notes": "Major prophet with extensive narrative across multiple surahs including Surah 71 dedicated to him"
+  },
+  {
+    "id": "q20_prophet_moses",
+    "question": "How does the Quran describe Moses' encounter with Pharaoh?",
+    "expected_citations": ["7:103", "7:104", "7:105", "7:106", "7:107", "7:108", "7:109", "7:120", "7:121", "7:122", "10:75", "10:76", "10:77", "20:24", "20:42", "20:43", "20:44", "26:10", "26:11", "26:16", "26:17", "28:32"],
+    "expected_themes": ["miracles", "staff turning to serpent", "Pharaoh's arrogance", "demand to free Israelites", "sorcerers believe"],
+    "difficulty": "easy",
+    "notes": "Most narrated prophet in the Quran — tests retrieval across many surahs"
+  },
+  {
+    "id": "q21_prophet_joseph",
+    "question": "Summarize the story of Prophet Joseph as told in the Quran",
+    "expected_citations": ["12:3", "12:4", "12:5", "12:8", "12:9", "12:10", "12:15", "12:19", "12:20", "12:21", "12:23", "12:24", "12:28", "12:31", "12:33", "12:36", "12:43", "12:54", "12:58", "12:90", "12:93", "12:100"],
+    "expected_themes": ["dream interpretation", "brothers' jealousy", "temptation", "prison", "rise to power", "family reunion"],
+    "difficulty": "medium",
+    "notes": "Unique as the only prophet with a continuous narrative in a single surah (12)"
+  },
+  {
+    "id": "q22_prophet_jesus",
+    "question": "What does the Quran say about Jesus (Isa), his birth, miracles, and nature?",
+    "expected_citations": ["3:42", "3:45", "3:46", "3:47", "3:48", "3:49", "3:55", "4:157", "4:171", "5:46", "5:72", "5:75", "5:110", "5:112", "5:114", "5:116", "19:16", "19:17", "19:19", "19:22", "19:30", "19:34"],
+    "expected_themes": ["virgin birth", "miracles", "not divine", "word of God", "disciples", "not crucified"],
+    "difficulty": "medium",
+    "notes": "Tests retrieval of a figure with theological significance across multiple surahs"
+  },
+  {
+    "id": "q23_prophet_muhammad",
+    "question": "How does the Quran describe the role and character of Prophet Muhammad?",
+    "expected_citations": ["3:144", "7:157", "9:128", "21:107", "33:21", "33:40", "33:45", "33:46", "34:28", "47:2", "48:29", "68:4"],
+    "expected_themes": ["seal of prophets", "mercy to the worlds", "beautiful example", "human messenger", "warner and bearer of good news"],
+    "difficulty": "medium",
+    "notes": "Note: 9:128 is excluded in Khalifa's translation — tests awareness of this. System should not cite 9:128-129."
+  },
+  {
+    "id": "q24_prayer_salat",
+    "question": "What does the Quran say about the obligation and practice of prayer (salat)?",
+    "expected_citations": ["2:3", "2:43", "2:45", "2:238", "4:43", "4:101", "4:103", "5:6", "11:114", "17:78", "20:14", "20:130", "29:45", "62:9"],
+    "expected_themes": ["obligation", "times of prayer", "Friday prayer", "shortening in travel", "humility in prayer"],
+    "difficulty": "easy",
+    "notes": "Pillar of Islam — core topic with many keyword hits on 'prayer' and 'salat'"
+  },
+  {
+    "id": "q25_fasting",
+    "question": "What does the Quran say about fasting during Ramadan?",
+    "expected_citations": ["2:183", "2:184", "2:185", "2:187"],
+    "expected_themes": ["Ramadan", "prescribed fasting", "exemptions for illness and travel", "night permission"],
+    "difficulty": "easy",
+    "notes": "Concentrated in a few verses of Surah 2 — tests precision on a narrow topic"
+  },
+  {
+    "id": "q26_pilgrimage_hajj",
+    "question": "What are the Quranic instructions regarding pilgrimage (Hajj)?",
+    "expected_citations": ["2:158", "2:189", "2:196", "2:197", "2:198", "2:199", "2:200", "2:203", "3:97", "5:1", "5:2", "5:95", "5:96", "22:26", "22:27", "22:28", "22:29"],
+    "expected_themes": ["duty to visit Ka'ba", "rituals of Hajj", "Safa and Marwa", "sacred months", "provision for the journey"],
+    "difficulty": "medium",
+    "notes": "Tests retrieval from Al-Baqarah and Al-Hajj mainly"
+  },
+  {
+    "id": "q27_zakat_obligatory",
+    "question": "What does the Quran say about obligatory charity (Zakat) and its recipients?",
+    "expected_citations": ["2:43", "2:110", "2:177", "2:277", "9:5", "9:11", "9:18", "9:60", "9:71", "9:103", "22:78", "23:4", "73:20"],
+    "expected_themes": ["obligation of zakat", "categories of recipients", "purification of wealth", "paired with prayer"],
+    "difficulty": "easy",
+    "notes": "Frequently paired with salat — tests if system finds both dedicated verses and co-occurrence patterns"
+  },
+  {
+    "id": "q28_truthfulness",
+    "question": "What does the Quran say about truthfulness and honesty?",
+    "expected_citations": ["2:42", "3:17", "9:119", "33:23", "33:24", "33:35", "39:33", "49:15", "57:19"],
+    "expected_themes": ["truthful believers", "not mixing truth with falsehood", "witness honestly", "reward for truthful"],
+    "difficulty": "easy",
+    "notes": "Tests keyword 'truthful' + 'truth' + semantic overlap with honesty"
+  },
+  {
+    "id": "q29_gratitude",
+    "question": "How does the Quran describe gratitude and thankfulness to God?",
+    "expected_citations": ["2:152", "2:172", "7:10", "14:7", "16:14", "16:78", "16:114", "27:40", "31:12", "31:14", "34:13", "55:13"],
+    "expected_themes": ["remember God and He remembers you", "ingratitude as sin", "gratitude increases blessings", "few are grateful"],
+    "difficulty": "easy",
+    "notes": "Tests keyword 'grateful' + 'thankful' + 'appreciation'"
+  },
+  {
+    "id": "q30_hypocrisy",
+    "question": "What does the Quran say about hypocrites (munafiqun)?",
+    "expected_citations": ["2:8", "2:9", "2:10", "2:11", "2:12", "2:13", "2:14", "4:138", "4:142", "4:145", "9:64", "9:67", "9:68", "63:1", "63:2", "63:3", "63:4"],
+    "expected_themes": ["deceiving God", "lowest pit of hell", "saying what they don't believe", "sick hearts"],
+    "difficulty": "easy",
+    "notes": "Surah 63 is dedicated to hypocrites — tests concentrated + distributed retrieval"
+  },
+  {
+    "id": "q31_usury_interest",
+    "question": "What does the Quran say about usury (riba) and interest?",
+    "expected_citations": ["2:275", "2:276", "2:278", "2:279", "2:280", "3:130", "4:161", "30:39"],
+    "expected_themes": ["prohibition of usury", "trade vs usury distinction", "war from God", "forgive debts"],
+    "difficulty": "easy",
+    "notes": "Strong keyword match on 'usury' and 'interest' — concentrated in Surah 2"
+  },
+  {
+    "id": "q32_orphans",
+    "question": "What does the Quran say about the care and rights of orphans?",
+    "expected_citations": ["2:83", "2:177", "2:215", "2:220", "4:2", "4:3", "4:6", "4:8", "4:10", "4:36", "4:127", "6:152", "17:34", "76:8", "89:17", "93:6", "93:9", "107:2"],
+    "expected_themes": ["protect orphan property", "kindness to orphans", "not consuming their wealth", "punishment for exploiting"],
+    "difficulty": "easy",
+    "notes": "Tests keyword 'orphan' across multiple surahs — clear moral teaching"
+  },
+  {
+    "id": "q33_parents_honor",
+    "question": "What does the Quran say about honoring and caring for parents?",
+    "expected_citations": ["2:83", "4:36", "6:151", "17:23", "17:24", "29:8", "31:14", "31:15", "46:15"],
+    "expected_themes": ["kindness to parents", "not saying uff", "mother's hardship", "worship God and honor parents"],
+    "difficulty": "easy",
+    "notes": "Paired with monotheism in many verses — tests conceptual co-occurrence"
+  },
+  {
+    "id": "q34_neighbors",
+    "question": "What does the Quran say about treating neighbors?",
+    "expected_citations": ["4:36"],
+    "expected_themes": ["kindness to neighbors", "near and far neighbors", "duties of community"],
+    "difficulty": "easy",
+    "notes": "Very narrow — mainly one verse. Tests precision and whether system avoids over-retrieval"
+  },
+  {
+    "id": "q35_testimony_witness",
+    "question": "What does the Quran say about bearing witness and testimony?",
+    "expected_citations": ["2:140", "2:143", "2:282", "2:283", "4:6", "4:135", "5:8", "5:106", "5:107", "5:108", "24:4", "24:6", "24:7", "24:8", "65:2"],
+    "expected_themes": ["just witnesses", "witnessing contracts", "not concealing testimony", "four witnesses for adultery"],
+    "difficulty": "medium",
+    "notes": "Tests keyword 'witness' + 'testimony' across legal contexts"
+  },
+  {
+    "id": "q36_oaths",
+    "question": "What does the Quran say about oaths and vows?",
+    "expected_citations": ["2:224", "2:225", "2:226", "2:227", "5:89", "16:91", "16:92", "16:94", "66:2"],
+    "expected_themes": ["fulfilling oaths", "expiation for broken oaths", "not using God's name carelessly"],
+    "difficulty": "medium",
+    "notes": "Tests keyword 'oath' + 'vow' + 'swear' — mix of legal and moral"
+  },
+  {
+    "id": "q37_warfare_rules",
+    "question": "What rules does the Quran set for warfare and combat?",
+    "expected_citations": ["2:190", "2:191", "2:192", "2:193", "2:194", "2:216", "2:217", "4:90", "8:39", "8:61", "9:5", "9:6", "9:36", "22:39", "22:40", "47:4"],
+    "expected_themes": ["fight those who fight you", "do not transgress", "cease if they cease", "self-defense", "sacred months"],
+    "difficulty": "medium",
+    "notes": "Tests nuanced retrieval where context matters — 2:190 is key for 'do not aggress'"
+  },
+  {
+    "id": "q38_peace",
+    "question": "What does the Quran say about peace and peaceful resolution of conflict?",
+    "expected_citations": ["2:208", "4:90", "4:128", "8:61", "10:25", "25:63", "49:9", "49:10", "59:23"],
+    "expected_themes": ["enter peace wholeheartedly", "peace as God's name", "reconciliation", "if they incline to peace"],
+    "difficulty": "medium",
+    "notes": "Tests semantic search for 'peace' + 'reconcile' + 'cease fighting'"
+  },
+  {
+    "id": "q39_nature_signs",
+    "question": "How does the Quran use natural phenomena as signs of God?",
+    "expected_citations": ["2:164", "3:190", "6:95", "6:99", "10:5", "13:3", "13:4", "16:10", "16:11", "16:12", "16:13", "16:14", "16:65", "16:66", "16:67", "16:68", "16:69", "30:20", "30:21", "30:22", "30:24", "36:33", "36:34", "36:36"],
+    "expected_themes": ["alternation of day and night", "rain and vegetation", "diversity of creation", "signs for those who reflect"],
+    "difficulty": "medium",
+    "notes": "Tests broad semantic retrieval — Surah 16 (The Bee) has dense concentration of nature signs"
+  },
+  {
+    "id": "q40_astronomy",
+    "question": "What does the Quran say about celestial bodies — the sun, moon, and stars?",
+    "expected_citations": ["6:76", "6:77", "6:78", "6:97", "7:54", "10:5", "14:33", "16:12", "16:16", "21:33", "25:61", "36:38", "36:39", "36:40", "41:37", "53:49", "55:5", "71:16", "81:1", "81:2", "86:3"],
+    "expected_themes": ["sun and moon in orbit", "stars as guides", "not worship celestial bodies", "Abraham's reasoning"],
+    "difficulty": "medium",
+    "notes": "Tests retrieval across cosmological references and Abraham's story in Surah 6"
+  },
+  {
+    "id": "q41_embryology",
+    "question": "What does the Quran say about human embryological development?",
+    "expected_citations": ["22:5", "23:12", "23:13", "23:14", "32:7", "32:8", "32:9", "39:6", "40:67", "75:37", "75:38", "76:2", "77:20", "77:21", "77:22", "96:1", "96:2"],
+    "expected_themes": ["clay", "drop of semen", "clinging clot", "lump of flesh", "bones then flesh", "stages of creation"],
+    "difficulty": "medium",
+    "notes": "Tests scientific-interest verses — concentrated in Surahs 23 and 32"
+  },
+  {
+    "id": "q42_water",
+    "question": "How does the Quran describe the importance and role of water?",
+    "expected_citations": ["2:164", "16:10", "16:65", "20:53", "21:30", "23:18", "24:45", "25:48", "25:49", "25:54", "35:27", "54:11", "54:12", "56:68", "56:69", "56:70"],
+    "expected_themes": ["water as origin of life", "rain from sky", "rivers and springs", "purification"],
+    "difficulty": "easy",
+    "notes": "Tests keyword 'water' + 'rain' + 'river' — abundant across Quran"
+  },
+  {
+    "id": "q43_mountains",
+    "question": "What does the Quran say about mountains and their function?",
+    "expected_citations": ["13:3", "15:19", "16:15", "16:81", "21:31", "27:61", "31:10", "41:10", "50:7", "77:27", "78:7", "79:32", "88:19"],
+    "expected_themes": ["mountains as pegs/stabilizers", "lest earth should shake", "creation sign"],
+    "difficulty": "easy",
+    "notes": "Tests keyword 'mountain' — consistent metaphor throughout"
+  },
+  {
+    "id": "q44_animals",
+    "question": "What animals are mentioned in the Quran and what significance do they carry?",
+    "expected_citations": ["2:26", "2:65", "2:67", "2:68", "2:69", "2:71", "5:3", "5:4", "6:38", "6:142", "6:143", "6:144", "7:40", "7:166", "16:5", "16:66", "16:68", "16:69", "22:36", "24:45", "27:17", "27:18", "29:41", "105:3"],
+    "expected_themes": ["bee", "cow", "camel", "ants", "spider", "birds", "all creatures worship God"],
+    "difficulty": "medium",
+    "notes": "Tests diverse keyword retrieval — many surahs named after animals"
+  },
+  {
+    "id": "q45_trees_plants",
+    "question": "What does the Quran say about trees, plants, and agriculture?",
+    "expected_citations": ["6:99", "6:141", "13:4", "14:24", "14:25", "14:26", "16:10", "16:11", "16:67", "36:33", "36:34", "36:35", "36:36", "55:6", "55:11", "55:12", "80:24", "80:25", "80:26", "80:27", "80:28", "80:29", "80:30", "80:31", "80:32"],
+    "expected_themes": ["good tree parable", "date palms", "grapes and olives", "grain and provision", "signs in agriculture"],
+    "difficulty": "medium",
+    "notes": "Tests retrieval of agricultural metaphors and literal references"
+  },
+  {
+    "id": "q46_paradise",
+    "question": "How does the Quran describe Paradise (Jannah) and its pleasures?",
+    "expected_citations": ["2:25", "3:15", "3:133", "3:136", "4:57", "9:72", "13:35", "18:31", "22:23", "36:55", "36:56", "36:57", "36:58", "44:51", "44:52", "44:53", "44:54", "47:15", "55:46", "55:54", "55:56", "55:62", "56:10", "56:11", "56:17", "56:18", "56:19", "56:20", "56:22", "76:12", "76:13", "76:14", "76:15"],
+    "expected_themes": ["gardens beneath which rivers flow", "pure spouses", "fruits", "peace and greeting", "eternal abode"],
+    "difficulty": "medium",
+    "notes": "Extremely broad — tests how system handles a topic with many relevant verses"
+  },
+  {
+    "id": "q47_hellfire",
+    "question": "How does the Quran describe Hell (Jahannam) and its punishments?",
+    "expected_citations": ["2:24", "4:56", "4:145", "9:68", "14:16", "14:17", "18:29", "22:19", "22:20", "22:21", "22:22", "37:62", "37:63", "37:64", "37:65", "37:66", "37:67", "37:68", "44:43", "44:44", "44:45", "44:46", "44:47", "44:48", "44:49", "56:41", "56:42", "56:43", "56:44", "56:51", "56:52", "56:53", "56:54", "56:55", "56:56", "69:30", "69:31", "69:32"],
+    "expected_themes": ["fire", "boiling water", "tree of Zaqqum", "eternal punishment", "layers of hell"],
+    "difficulty": "medium",
+    "notes": "Dark topic — tests retrieval of punishment descriptions across Quran"
+  },
+  {
+    "id": "q48_gods_names",
+    "question": "What names and attributes of God are mentioned in the Quran?",
+    "expected_citations": ["1:1", "1:2", "1:3", "2:255", "7:180", "17:110", "20:8", "57:1", "57:2", "57:3", "57:4", "57:5", "57:6", "59:22", "59:23", "59:24", "62:1", "112:1", "112:2", "112:3", "112:4"],
+    "expected_themes": ["Most Gracious", "Most Merciful", "The King", "The Holy", "The Almighty", "beautiful names"],
+    "difficulty": "medium",
+    "notes": "Tests retrieval of divine attribute clusters — end of Surah 59 has concentrated names"
+  },
+  {
+    "id": "q49_angels",
+    "question": "What does the Quran say about angels and their roles?",
+    "expected_citations": ["2:30", "2:31", "2:34", "2:97", "2:98", "2:177", "2:285", "4:97", "6:61", "8:9", "8:12", "16:2", "16:28", "16:32", "32:11", "35:1", "39:42", "66:6", "69:17", "70:4", "82:10", "82:11", "82:12", "97:4"],
+    "expected_themes": ["Gabriel", "angel of death", "prostration to Adam", "recording deeds", "carriers of the throne", "messengers with wings"],
+    "difficulty": "medium",
+    "notes": "Tests keyword 'angel' + specific angel names across distributed passages"
+  },
+  {
+    "id": "q50_jinn",
+    "question": "What does the Quran say about the jinn?",
+    "expected_citations": ["6:100", "6:112", "6:128", "6:130", "7:38", "7:179", "15:27", "18:50", "27:17", "34:12", "34:14", "46:29", "46:30", "46:31", "46:32", "51:56", "55:15", "55:33", "72:1", "72:2", "72:3", "72:4", "72:5", "72:6", "72:11", "72:14", "72:15", "114:6"],
+    "expected_themes": ["created from fire", "jinn who believe", "jinn and humans created to worship", "Solomon and jinn"],
+    "difficulty": "medium",
+    "notes": "Surah 72 (Al-Jinn) is dedicated — plus scattered references in other surahs"
+  },
+  {
+    "id": "q51_satan_iblis",
+    "question": "How does the Quran describe Satan (Iblis) and his role?",
+    "expected_citations": ["2:34", "2:36", "2:168", "2:208", "2:268", "4:117", "4:118", "4:119", "4:120", "7:11", "7:12", "7:13", "7:14", "7:15", "7:16", "7:17", "7:20", "7:22", "7:27", "14:22", "15:28", "15:31", "15:32", "15:33", "15:34", "15:35", "15:36", "15:39", "17:61", "17:62", "17:63", "17:64", "17:65", "18:50", "20:116", "20:117", "20:120", "36:60", "38:71", "38:74", "38:75", "38:76", "38:77", "38:78", "38:79", "38:80", "38:81", "38:82", "38:83", "38:84", "38:85"],
+    "expected_themes": ["refusal to prostrate", "arrogance", "enmity to humans", "whispers", "respite until Day of Judgment"],
+    "difficulty": "medium",
+    "notes": "Tests retrieval of the Iblis narrative repeated across 7+ surahs"
+  },
+  {
+    "id": "q52_covenant_bani_israel",
+    "question": "What covenants did God make with the Children of Israel according to the Quran?",
+    "expected_citations": ["2:40", "2:47", "2:63", "2:83", "2:84", "2:93", "3:187", "5:12", "5:13", "5:70", "7:134", "7:169", "20:80", "20:86"],
+    "expected_themes": ["covenant at Mount Sinai", "favors bestowed", "breaking the covenant", "establishing prayer and charity"],
+    "difficulty": "medium",
+    "notes": "Tests keyword 'Children of Israel' + 'covenant' + 'pledge'"
+  },
+  {
+    "id": "q53_resurrection",
+    "question": "What arguments does the Quran present for the resurrection of the dead?",
+    "expected_citations": ["2:259", "2:260", "17:49", "17:51", "19:66", "19:67", "22:5", "22:6", "22:7", "30:19", "30:27", "36:77", "36:78", "36:79", "36:80", "36:81", "36:82", "36:83", "41:39", "50:3", "50:4", "50:15", "75:3", "75:4", "75:36", "75:37", "75:38", "75:39", "75:40", "80:17", "80:18", "80:19", "80:20", "80:21", "80:22", "86:5", "86:6", "86:7", "86:8"],
+    "expected_themes": ["dry earth revived by rain", "first creation as proof", "reassembling bones", "not harder than creating heavens"],
+    "difficulty": "medium",
+    "notes": "Argument-based — tests if system finds analogical reasoning verses"
+  },
+  {
+    "id": "q54_monotheism_tawhid",
+    "question": "What does the Quran say about the oneness of God (tawhid)?",
+    "expected_citations": ["2:163", "2:255", "3:2", "3:18", "4:171", "6:19", "6:102", "6:103", "7:59", "11:14", "16:22", "16:51", "20:14", "21:22", "21:25", "23:91", "37:35", "38:65", "39:4", "47:19", "59:22", "59:23", "112:1", "112:2", "112:3", "112:4"],
+    "expected_themes": ["no god except He", "no partners", "unique creator", "logical argument against polytheism"],
+    "difficulty": "easy",
+    "notes": "Most fundamental Quranic concept — tests if system retrieves core theological verses"
+  },
+  {
+    "id": "q55_idol_worship",
+    "question": "How does the Quran condemn idol worship and polytheism?",
+    "expected_citations": ["4:48", "4:116", "6:22", "6:23", "6:74", "6:76", "6:78", "6:80", "6:136", "6:137", "16:20", "16:21", "16:73", "21:51", "21:52", "21:57", "21:58", "21:66", "21:67", "22:73", "25:3", "29:17", "37:91", "37:93", "37:95", "39:3", "39:38"],
+    "expected_themes": ["idols cannot create", "unforgivable sin", "Abraham smashes idols", "logical arguments against idolatry"],
+    "difficulty": "medium",
+    "notes": "Tests keyword 'idol' + 'worship other than God' + Abraham's idol narrative"
+  },
+  {
+    "id": "q56_exodus",
+    "question": "How does the Quran describe the Exodus — the parting of the sea and Pharaoh's drowning?",
+    "expected_citations": ["2:49", "2:50", "7:127", "7:128", "7:129", "7:130", "7:133", "7:136", "7:137", "7:138", "10:90", "10:91", "10:92", "20:77", "20:78", "20:79", "26:52", "26:60", "26:61", "26:62", "26:63", "26:64", "26:65", "26:66", "26:67", "26:68", "44:23", "44:24", "44:25"],
+    "expected_themes": ["parting the sea", "Pharaoh drowns", "body preserved", "children of Israel saved"],
+    "difficulty": "medium",
+    "notes": "Tests cross-surah narrative retrieval — Exodus told in at least 6 surahs"
+  },
+  {
+    "id": "q57_sodom",
+    "question": "How does the Quran describe the story of Lot and the destruction of Sodom?",
+    "expected_citations": ["7:80", "7:81", "7:82", "7:83", "7:84", "11:77", "11:78", "11:79", "11:80", "11:81", "11:82", "11:83", "15:58", "15:59", "15:60", "15:61", "15:66", "15:73", "15:74", "26:160", "26:161", "26:165", "26:166", "26:167", "26:172", "26:173", "26:174", "27:54", "27:55", "27:56", "27:57", "27:58", "29:28", "29:29", "29:31", "29:32", "29:33", "29:34"],
+    "expected_themes": ["Lot's warning", "homosexuality condemned", "angels visit", "wife who stayed behind", "city destroyed"],
+    "difficulty": "medium",
+    "notes": "Narrative across multiple surahs — tests cross-reference retrieval"
+  },
+  {
+    "id": "q58_adam_creation",
+    "question": "How does the Quran describe the creation of Adam and the fall from Paradise?",
+    "expected_citations": ["2:30", "2:31", "2:33", "2:34", "2:35", "2:36", "2:37", "2:38", "7:11", "7:19", "7:20", "7:22", "7:23", "7:24", "7:25", "15:26", "15:28", "15:29", "20:115", "20:116", "20:117", "20:120", "20:121", "20:122", "20:123", "38:71", "38:72", "38:73", "38:76"],
+    "expected_themes": ["khalifa on earth", "teaching names", "forbidden tree", "repentance", "Satan's deception"],
+    "difficulty": "medium",
+    "notes": "Creation narrative repeated in multiple surahs with different emphases"
+  },
+  {
+    "id": "q59_david_solomon",
+    "question": "What does the Quran say about Prophets David and Solomon?",
+    "expected_citations": ["2:251", "4:163", "21:78", "21:79", "21:81", "21:82", "27:15", "27:16", "27:17", "27:18", "27:19", "27:20", "27:22", "27:38", "27:39", "27:40", "27:44", "34:10", "34:11", "34:12", "34:13", "34:14", "38:17", "38:18", "38:21", "38:24", "38:26", "38:30"],
+    "expected_themes": ["Psalms given to David", "wisdom", "Solomon's kingdom", "jinn serving Solomon", "ants and Sheba"],
+    "difficulty": "medium",
+    "notes": "Tests retrieval of two related prophets across Surahs 21, 27, 34, 38"
+  },
+  {
+    "id": "q60_mary",
+    "question": "What does the Quran say about Mary (Maryam)?",
+    "expected_citations": ["3:35", "3:36", "3:37", "3:42", "3:43", "3:44", "3:45", "3:47", "19:16", "19:17", "19:18", "19:19", "19:20", "19:21", "19:22", "19:23", "19:24", "19:25", "19:26", "19:27", "21:91", "23:50", "66:12"],
+    "expected_themes": ["chosen above all women", "virgin birth", "provision from God", "Zachariah's guardianship"],
+    "difficulty": "medium",
+    "notes": "Only woman named in the Quran — Surah 19 named after her"
+  },
+  {
+    "id": "q61_modesty_dress",
+    "question": "What does the Quran say about modesty and dress code?",
+    "expected_citations": ["7:26", "7:31", "24:30", "24:31", "33:53", "33:59"],
+    "expected_themes": ["lower gaze", "cover adornments", "best garment is righteousness", "jilbab"],
+    "difficulty": "medium",
+    "notes": "Contentious topic — relatively few direct verses, tests precision"
+  },
+  {
+    "id": "q62_trade_commerce",
+    "question": "What does the Quran say about trade, commerce, and business ethics?",
+    "expected_citations": ["2:275", "2:282", "2:283", "4:29", "4:161", "6:152", "7:85", "11:84", "11:85", "17:35", "26:181", "26:182", "26:183", "55:9", "83:1", "83:2", "83:3"],
+    "expected_themes": ["honest measurements", "written contracts", "mutual consent", "no cheating"],
+    "difficulty": "medium",
+    "notes": "Tests Shu'ayb's story (fair measurement) + commercial law verses"
+  },
+  {
+    "id": "q63_knowledge_learning",
+    "question": "How does the Quran encourage seeking knowledge and learning?",
+    "expected_citations": ["2:31", "2:32", "2:269", "3:18", "4:162", "9:122", "16:43", "20:114", "35:28", "39:9", "58:11", "96:1", "96:3", "96:4", "96:5"],
+    "expected_themes": ["read/recite", "pen", "those who know vs those who don't", "God taught Adam the names"],
+    "difficulty": "easy",
+    "notes": "Tests keyword 'knowledge' + 'know' + 'read' + 'pen' — first revelation in 96:1"
+  },
+  {
+    "id": "q64_alcohol_intoxicants",
+    "question": "What does the Quran say about alcohol and intoxicants?",
+    "expected_citations": ["2:219", "4:43", "5:90", "5:91"],
+    "expected_themes": ["sin greater than benefit", "do not approach prayer intoxicated", "devil's work", "abomination"],
+    "difficulty": "easy",
+    "notes": "Tests the graduated prohibition narrative — from partial to complete"
+  },
+  {
+    "id": "q65_gambling",
+    "question": "What does the Quran say about gambling?",
+    "expected_citations": ["2:219", "5:90", "5:91"],
+    "expected_themes": ["sin greater than benefit", "abomination from devil's work", "causes enmity"],
+    "difficulty": "easy",
+    "notes": "Narrow topic — co-located with intoxicants verses"
+  },
+  {
+    "id": "q66_prophet_shuayb",
+    "question": "What does the Quran say about Prophet Shu'ayb and the people of Midian?",
+    "expected_citations": ["7:85", "7:86", "7:87", "7:88", "7:91", "7:92", "7:93", "11:84", "11:85", "11:87", "11:91", "11:94", "26:176", "26:177", "26:181", "26:183", "26:189", "29:36"],
+    "expected_themes": ["fair measurement", "don't cheat people", "earthquake punishment", "economic justice"],
+    "difficulty": "medium",
+    "notes": "Tests retrieval of a lesser-known prophet narrative"
+  },
+  {
+    "id": "q67_dhul_qarnayn",
+    "question": "Who is Dhul-Qarnayn and what does the Quran say about his journeys?",
+    "expected_citations": ["18:83", "18:84", "18:85", "18:86", "18:89", "18:90", "18:92", "18:93", "18:94", "18:95", "18:96", "18:97", "18:98"],
+    "expected_themes": ["travels east and west", "Gog and Magog barrier", "just ruler", "power from God"],
+    "difficulty": "medium",
+    "notes": "Concentrated in Surah 18 — tests precision and narrative coherence"
+  },
+  {
+    "id": "q68_gog_magog",
+    "question": "What does the Quran say about Gog and Magog (Ya'juj and Ma'juj)?",
+    "expected_citations": ["18:94", "18:95", "18:96", "18:97", "18:98", "18:99", "21:96", "21:97"],
+    "expected_themes": ["barrier built by Dhul-Qarnayn", "released before Day of Judgment", "corruption on earth"],
+    "difficulty": "medium",
+    "notes": "Narrow eschatological topic — only two surah locations"
+  },
+  {
+    "id": "q69_night_journey",
+    "question": "What does the Quran say about the Night Journey (Isra)?",
+    "expected_citations": ["17:1"],
+    "expected_themes": ["journey from Sacred Mosque to Farthest Mosque", "glory to God", "signs shown"],
+    "difficulty": "easy",
+    "notes": "Single verse topic — tests extreme precision and whether system avoids padding with unrelated verses"
+  },
+  {
+    "id": "q70_people_cave",
+    "question": "What does the Quran say about the People of the Cave (Ashab al-Kahf)?",
+    "expected_citations": ["18:9", "18:10", "18:11", "18:12", "18:13", "18:14", "18:16", "18:17", "18:18", "18:19", "18:21", "18:22", "18:25", "18:26"],
+    "expected_themes": ["youth who believed", "sleeping for centuries", "God's sign", "debate about their number"],
+    "difficulty": "medium",
+    "notes": "Concentrated in Surah 18 — tests narrative extraction"
+  },
+  {
+    "id": "q71_backbiting_slander",
+    "question": "What does the Quran say about backbiting, slander, and gossip?",
+    "expected_citations": ["4:112", "4:148", "24:11", "24:12", "24:15", "24:16", "24:19", "33:58", "49:11", "49:12", "68:10", "68:11", "104:1"],
+    "expected_themes": ["eating dead brother's flesh", "spreading rumors", "verify news", "woe to slanderers"],
+    "difficulty": "easy",
+    "notes": "Tests keyword 'backbite' + 'slander' + 'gossip' + semantic parallels"
+  },
+  {
+    "id": "q72_arrogance_pride",
+    "question": "How does the Quran warn against arrogance and pride?",
+    "expected_citations": ["2:34", "4:36", "4:173", "7:13", "7:36", "7:40", "7:146", "16:23", "17:37", "28:76", "28:78", "28:81", "31:18", "39:60", "39:72", "40:35", "40:56", "40:76", "45:37", "46:20"],
+    "expected_themes": ["Iblis as archetype of arrogance", "Qarun's downfall", "God dislikes the arrogant", "do not walk proudly"],
+    "difficulty": "easy",
+    "notes": "Tests keyword 'arrogant' + 'pride' + 'haughty' + Iblis narrative"
+  },
+  {
+    "id": "q73_death_dying",
+    "question": "What does the Quran say about death and the process of dying?",
+    "expected_citations": ["2:28", "3:145", "3:185", "4:78", "6:61", "6:93", "21:35", "23:99", "23:100", "29:57", "32:11", "39:42", "44:56", "47:27", "50:19", "56:83", "56:84", "56:85", "56:86", "56:87", "62:8", "75:26", "75:27", "75:28", "75:29"],
+    "expected_themes": ["every soul will taste death", "angel of death", "soul taken at sleep", "appointed time", "no escape"],
+    "difficulty": "medium",
+    "notes": "Tests keyword 'death' + 'die' + 'soul' in multiple contexts"
+  },
+  {
+    "id": "q74_supplication_dua",
+    "question": "What does the Quran say about supplication (dua) and calling upon God?",
+    "expected_citations": ["2:186", "2:200", "2:201", "3:8", "3:38", "7:55", "7:56", "7:180", "14:40", "14:41", "17:11", "21:83", "21:87", "21:89", "23:118", "25:74", "27:62", "40:14", "40:60"],
+    "expected_themes": ["God is near", "call upon Me I will respond", "prophets' prayers", "beautiful names"],
+    "difficulty": "easy",
+    "notes": "Tests keyword 'pray' + 'call upon' + 'supplicate' — examples from prophets"
+  },
+  {
+    "id": "q75_social_justice",
+    "question": "What does the Quran say about social justice and helping the poor?",
+    "expected_citations": ["2:177", "2:215", "4:36", "4:135", "9:60", "51:19", "69:34", "70:24", "70:25", "76:8", "89:17", "89:18", "89:19", "89:20", "90:11", "90:12", "90:13", "90:14", "90:15", "90:16", "107:1", "107:2", "107:3", "107:4", "107:5", "107:6", "107:7"],
+    "expected_themes": ["feeding the poor", "caring for needy", "freeing slaves", "condemning hoarding wealth"],
+    "difficulty": "medium",
+    "notes": "Tests social ethic verses — Surah 107 (Small Kindness) is key"
+  },
+  {
+    "id": "q76_promises_of_god",
+    "question": "What promises does God make in the Quran?",
+    "expected_citations": ["2:152", "2:186", "3:139", "4:122", "8:30", "9:111", "14:7", "24:55", "30:6", "39:20", "40:51", "40:77"],
+    "expected_themes": ["victory for believers", "remembrance", "answered prayers", "reward in hereafter"],
+    "difficulty": "medium",
+    "notes": "Tests semantic retrieval for 'promise' across diverse contexts"
+  },
+  {
+    "id": "q77_tawbah_repentance",
+    "question": "How does the Quran describe the process and conditions of repentance?",
+    "expected_citations": ["2:37", "2:54", "3:89", "3:135", "4:17", "4:18", "4:110", "5:39", "6:54", "9:104", "9:118", "11:3", "11:52", "11:61", "11:90", "20:82", "25:70", "25:71", "39:53", "42:25", "66:8"],
+    "expected_themes": ["sincere repentance", "God accepts repentance", "not at time of death", "replacing bad with good"],
+    "difficulty": "medium",
+    "notes": "Overlaps with q01 but focuses on the mechanism/conditions rather than general forgiveness"
+  },
+  {
+    "id": "q78_fitna_trial",
+    "question": "What does the Quran say about trials, tests, and tribulations (fitna)?",
+    "expected_citations": ["2:155", "2:156", "2:214", "3:186", "6:53", "11:7", "18:7", "21:35", "25:20", "29:2", "29:3", "29:10", "33:11", "47:31", "64:15", "67:2", "76:2"],
+    "expected_themes": ["tested through hardship and wealth", "patience in trial", "do people think they won't be tested", "life as test"],
+    "difficulty": "medium",
+    "notes": "Tests keyword 'test' + 'trial' + 'tribulation' + semantic parallels"
+  },
+  {
+    "id": "q79_heaven_earth_creation_days",
+    "question": "In how many days did God create the heavens and earth according to the Quran?",
+    "expected_citations": ["7:54", "10:3", "11:7", "25:59", "32:4", "41:9", "41:10", "41:12", "50:38", "57:4"],
+    "expected_themes": ["six days", "periods of creation", "throne", "no fatigue"],
+    "difficulty": "easy",
+    "notes": "Specific factual question — tests targeted retrieval of 'six days' creation passages"
+  },
+  {
+    "id": "q80_quran_self_description",
+    "question": "How does the Quran describe itself?",
+    "expected_citations": ["2:2", "2:185", "3:138", "4:82", "6:19", "10:37", "12:1", "12:2", "13:37", "14:1", "15:1", "15:9", "16:89", "17:9", "25:1", "36:2", "38:29", "39:23", "41:2", "41:3", "41:42", "43:3", "56:77", "56:80", "85:21", "85:22"],
+    "expected_themes": ["guidance", "criterion", "light", "protected from corruption", "clear Arabic", "no contradiction"],
+    "difficulty": "medium",
+    "notes": "Meta-topic — tests if system can find self-referential verses"
+  },
+  {
+    "id": "q81_iron",
+    "question": "What does the Quran say about iron?",
+    "expected_citations": ["18:96", "22:21", "34:10", "34:11", "57:25"],
+    "expected_themes": ["sent down iron", "great might", "David and ironworking", "Dhul-Qarnayn's wall"],
+    "difficulty": "easy",
+    "notes": "Narrow topic — Surah 57 (Al-Hadid/The Iron) is key"
+  },
+  {
+    "id": "q82_honey_bees",
+    "question": "What does the Quran say about bees and honey?",
+    "expected_citations": ["16:68", "16:69"],
+    "expected_themes": ["God inspired the bee", "honey as healing", "different colors"],
+    "difficulty": "easy",
+    "notes": "Extremely narrow — just two verses. Tests precision"
+  },
+  {
+    "id": "q83_inheritance_law",
+    "question": "What are the Quranic rules for inheritance distribution?",
+    "expected_citations": ["4:7", "4:8", "4:11", "4:12", "4:33", "4:176"],
+    "expected_themes": ["shares for sons and daughters", "spouse shares", "parents shares", "siblings"],
+    "difficulty": "hard",
+    "notes": "Complex legal topic concentrated in Surah 4 — tests retrieval of technical verses"
+  },
+  {
+    "id": "q84_divorce",
+    "question": "What does the Quran say about divorce procedures and rights?",
+    "expected_citations": ["2:226", "2:227", "2:228", "2:229", "2:230", "2:231", "2:232", "2:234", "2:235", "2:236", "2:237", "2:241", "4:20", "4:35", "4:128", "4:130", "33:49", "58:1", "58:2", "58:3", "58:4", "65:1", "65:2", "65:4", "65:6", "65:7"],
+    "expected_themes": ["waiting period", "reconciliation attempt", "three pronouncements", "no taking back dowry", "khul'"],
+    "difficulty": "hard",
+    "notes": "Complex legal topic — Surah 65 (At-Talaq) dedicated to divorce"
+  },
+  {
+    "id": "q85_birds_quran",
+    "question": "What role do birds play in the Quran?",
+    "expected_citations": ["2:260", "3:49", "5:110", "6:38", "16:79", "21:79", "22:31", "24:41", "27:16", "27:17", "27:20", "34:10", "38:19", "67:19", "105:3", "105:4"],
+    "expected_themes": ["birds praising God", "hoopoe and Solomon", "birds with Abraham", "birds in the sky as sign"],
+    "difficulty": "easy",
+    "notes": "Tests keyword 'bird' across narrative and cosmological contexts"
+  },
+  {
+    "id": "q86_surah_fatiha",
+    "question": "What is the significance of Surah Al-Fatiha (The Opener)?",
+    "expected_citations": ["1:1", "1:2", "1:3", "1:4", "1:5", "1:6", "1:7", "15:87"],
+    "expected_themes": ["opening of the Quran", "seven oft-repeated", "praise to God", "guidance prayer"],
+    "difficulty": "easy",
+    "notes": "Tests explore_surah on the first and most frequently recited surah"
+  },
+  {
+    "id": "q87_ayat_al_kursi",
+    "question": "What is the Verse of the Throne (Ayat al-Kursi) and what does it teach?",
+    "expected_citations": ["2:255"],
+    "expected_themes": ["God's sovereignty", "no slumber or sleep", "knowledge encompasses all", "kursi extends over heavens and earth"],
+    "difficulty": "easy",
+    "notes": "Single verse question — the most famous individual verse in the Quran"
+  },
+  {
+    "id": "q88_last_two_surahs",
+    "question": "What protection do the last two surahs of the Quran (Al-Falaq and An-Nas) offer?",
+    "expected_citations": ["113:1", "113:2", "113:3", "113:4", "113:5", "114:1", "114:2", "114:3", "114:4", "114:5", "114:6"],
+    "expected_themes": ["seeking refuge in God", "evil of darkness", "evil of envy", "whisperer who retreats"],
+    "difficulty": "easy",
+    "notes": "Two short surahs — tests explore_surah and complete retrieval"
+  },
+  {
+    "id": "q89_community_ummah",
+    "question": "What does the Quran say about the concept of community (ummah)?",
+    "expected_citations": ["2:143", "3:104", "3:110", "3:113", "3:114", "5:48", "10:19", "11:118", "16:93", "21:92", "23:52", "49:13"],
+    "expected_themes": ["best community", "moderate nation", "enjoin good forbid evil", "diversity of nations"],
+    "difficulty": "medium",
+    "notes": "Tests keyword 'nation' + 'community' + 'people' in collective identity context"
+  },
+  {
+    "id": "q90_consultation_shura",
+    "question": "What does the Quran say about consultation (shura) in decision-making?",
+    "expected_citations": ["3:159", "42:38"],
+    "expected_themes": ["mutual consultation", "consulting in affairs", "praise for those who consult"],
+    "difficulty": "easy",
+    "notes": "Very narrow — two key verses. Surah 42 is named Ash-Shura"
+  },
+  {
+    "id": "q91_prophet_hud",
+    "question": "What does the Quran say about Prophet Hud and the people of 'Ad?",
+    "expected_citations": ["7:65", "7:66", "7:67", "7:68", "7:69", "7:70", "7:72", "11:50", "11:52", "11:58", "11:59", "11:60", "26:123", "26:124", "26:128", "26:129", "26:130", "26:139", "41:15", "41:16", "46:21", "46:24", "46:25", "69:6", "69:7", "69:8", "89:6", "89:7", "89:8"],
+    "expected_themes": ["windstorm punishment", "great builders", "arrogance", "Ad destroyed"],
+    "difficulty": "medium",
+    "notes": "Tests retrieval of an Arabian prophet narrative across multiple surahs"
+  },
+  {
+    "id": "q92_prophet_saleh",
+    "question": "What does the Quran say about Prophet Saleh and the people of Thamud?",
+    "expected_citations": ["7:73", "7:74", "7:76", "7:77", "7:78", "7:79", "11:61", "11:62", "11:64", "11:65", "11:66", "11:67", "11:68", "26:141", "26:142", "26:155", "26:156", "26:157", "26:158", "27:45", "27:48", "27:51", "27:52", "54:23", "54:27", "54:29", "54:31", "69:4", "69:5", "91:11", "91:12", "91:13", "91:14"],
+    "expected_themes": ["she-camel as sign", "hamstringing the camel", "earthquake/blast punishment", "carved homes in mountains"],
+    "difficulty": "medium",
+    "notes": "Tests retrieval of the Thamud narrative — the she-camel is the distinctive element"
+  },
+  {
+    "id": "q93_prophet_jonah",
+    "question": "What does the Quran say about Prophet Jonah (Yunus)?",
+    "expected_citations": ["6:86", "10:98", "21:87", "21:88", "37:139", "37:140", "37:141", "37:142", "37:143", "37:144", "37:145", "37:146", "37:148", "68:48", "68:49", "68:50"],
+    "expected_themes": ["swallowed by whale", "repentance in darkness", "glorifying God", "his people believed"],
+    "difficulty": "medium",
+    "notes": "Surah 10 named after him but main narrative is in 37 and 21"
+  },
+  {
+    "id": "q94_prophet_jacob",
+    "question": "What does the Quran say about Prophet Jacob (Yaqub)?",
+    "expected_citations": ["2:132", "2:133", "2:136", "2:140", "11:71", "12:4", "12:11", "12:18", "12:67", "12:68", "12:83", "12:84", "12:86", "12:87", "12:93", "12:96", "12:98", "19:6", "19:49"],
+    "expected_themes": ["patience over Joseph's loss", "beautiful patience", "sight restored", "inheritance of prophethood"],
+    "difficulty": "medium",
+    "notes": "Mostly in context of Joseph's story — tests extraction of a secondary character"
+  },
+  {
+    "id": "q95_queen_sheba",
+    "question": "What does the Quran say about the Queen of Sheba and her encounter with Solomon?",
+    "expected_citations": ["27:22", "27:23", "27:24", "27:25", "27:26", "27:27", "27:28", "27:29", "27:30", "27:31", "27:32", "27:33", "27:34", "27:35", "27:36", "27:37", "27:38", "27:39", "27:40", "27:41", "27:42", "27:43", "27:44"],
+    "expected_themes": ["hoopoe's report", "sun worship", "Solomon's letter", "palace of glass", "submission to God"],
+    "difficulty": "medium",
+    "notes": "Concentrated narrative in Surah 27 — tests precision on one passage"
+  },
+  {
+    "id": "q96_killing_prohibition",
+    "question": "What does the Quran say about the prohibition of killing and murder?",
+    "expected_citations": ["2:178", "4:29", "4:92", "4:93", "5:27", "5:28", "5:30", "5:32", "6:151", "17:31", "17:33", "25:68"],
+    "expected_themes": ["killing one person like killing all humanity", "do not kill your children", "no killing except for just cause", "Cain and Abel"],
+    "difficulty": "easy",
+    "notes": "Tests retrieval of 5:32 — one of the most quoted verses globally"
+  },
+  {
+    "id": "q97_light_verse",
+    "question": "What is the Verse of Light (Ayat an-Nur) and what does it mean?",
+    "expected_citations": ["24:35"],
+    "expected_themes": ["God is the light of heavens and earth", "lamp in a niche", "olive tree", "light upon light"],
+    "difficulty": "medium",
+    "notes": "Single famous verse — tests retrieval of a specific, well-known passage"
+  },
+  {
+    "id": "q98_sleeping_dreaming",
+    "question": "What does the Quran say about sleep and dreams?",
+    "expected_citations": ["6:60", "12:4", "12:36", "12:43", "12:100", "25:47", "30:23", "37:102", "39:42", "48:27", "78:9"],
+    "expected_themes": ["sleep as minor death", "Joseph's dream interpretation", "Abraham's dream", "sleep as sign"],
+    "difficulty": "medium",
+    "notes": "Tests keyword 'sleep' + 'dream' across narrative and cosmological contexts"
+  },
+  {
+    "id": "q99_surah_yasin",
+    "question": "What are the main themes of Surah Ya-Sin (Surah 36)?",
+    "expected_citations": ["36:1", "36:2", "36:3", "36:7", "36:13", "36:33", "36:36", "36:37", "36:38", "36:40", "36:51", "36:55", "36:68", "36:77", "36:79", "36:82", "36:83"],
+    "expected_themes": ["messengers to a city", "signs in nature", "resurrection argument", "dead earth revived", "Be and it is"],
+    "difficulty": "medium",
+    "notes": "Tests explore_surah on a frequently recited surah"
+  },
+  {
+    "id": "q100_surah_kahf",
+    "question": "What are the four main stories in Surah Al-Kahf (Surah 18)?",
+    "expected_citations": ["18:9", "18:10", "18:13", "18:60", "18:62", "18:65", "18:66", "18:71", "18:74", "18:78", "18:79", "18:80", "18:82", "18:83", "18:86", "18:94", "18:98", "18:102", "18:103", "18:104"],
+    "expected_themes": ["People of the Cave", "Moses and Khidr", "Dhul-Qarnayn", "rich man's garden", "trials of faith"],
+    "difficulty": "hard",
+    "notes": "Tests whether system can extract four distinct narratives from one surah"
+  },
+  {
+    "id": "q101_envy_jealousy",
+    "question": "What does the Quran say about envy and jealousy?",
+    "expected_citations": ["2:109", "4:32", "4:54", "113:5"],
+    "expected_themes": ["seeking refuge from envy", "do not wish for what others have", "envy as spiritual harm"],
+    "difficulty": "easy",
+    "notes": "Narrow topic — tests keyword 'envy' + 'jealous'"
+  },
+  {
+    "id": "q102_corruption_earth",
+    "question": "What does the Quran say about corruption and mischief on earth?",
+    "expected_citations": ["2:11", "2:12", "2:27", "2:30", "2:205", "5:32", "5:33", "5:64", "7:56", "7:74", "7:85", "11:85", "11:116", "26:152", "28:77", "29:36", "30:41"],
+    "expected_themes": ["do not cause corruption", "hypocrites claim reform", "punishment for spreading corruption", "environmental destruction"],
+    "difficulty": "medium",
+    "notes": "Tests keyword 'corruption' + 'mischief' + 'fasad' concept"
+  },
+  {
+    "id": "q103_sea_ships",
+    "question": "What does the Quran say about the sea and ships?",
+    "expected_citations": ["2:164", "10:22", "14:32", "16:14", "17:66", "17:70", "22:65", "30:46", "31:31", "35:12", "42:32", "42:33", "45:12", "55:24"],
+    "expected_themes": ["ships as signs", "provision from the sea", "danger at sea", "sailing by God's grace"],
+    "difficulty": "easy",
+    "notes": "Tests keyword 'sea' + 'ship' + 'sail'"
+  },
+  {
+    "id": "q104_time",
+    "question": "How does the Quran discuss the concept of time?",
+    "expected_citations": ["10:45", "17:12", "22:47", "23:112", "23:113", "23:114", "30:55", "32:5", "70:4", "79:46", "103:1", "103:2", "103:3"],
+    "expected_themes": ["time as oath", "relative nature of time", "day with God is 1000 years", "brevity of worldly life"],
+    "difficulty": "medium",
+    "notes": "Tests abstract concept retrieval — Surah 103 (Al-Asr/The Afternoon) swears by time"
+  },
+  {
+    "id": "q105_prophets_list",
+    "question": "Which prophets are mentioned by name in the Quran?",
+    "expected_citations": ["6:83", "6:84", "6:85", "6:86", "6:87", "21:48", "21:51", "21:69", "21:72", "21:73", "21:74", "21:76", "21:78", "21:83", "21:85", "21:86", "21:87", "21:89", "33:7"],
+    "expected_themes": ["25 named prophets", "chain of prophethood", "guidance through generations"],
+    "difficulty": "easy",
+    "notes": "Tests retrieval of concentrated prophet-listing passages, especially Surah 6:83-87"
+  },
+  {
+    "id": "q106_zakir_remembrance",
+    "question": "What does the Quran say about remembrance of God (dhikr)?",
+    "expected_citations": ["2:152", "3:41", "7:205", "13:28", "18:24", "20:14", "20:34", "24:37", "29:45", "33:41", "33:42", "39:23", "62:10", "73:8", "87:15"],
+    "expected_themes": ["hearts find peace in remembrance", "remember God often", "morning and evening", "prayer as remembrance"],
+    "difficulty": "easy",
+    "notes": "Tests keyword 'remember' + 'remembrance' + 'commemorate' + 'mention'"
+  },
+  {
+    "id": "q107_heaven_rivers",
+    "question": "What types of rivers does the Quran describe in Paradise?",
+    "expected_citations": ["47:15"],
+    "expected_themes": ["rivers of water", "rivers of milk", "rivers of wine", "rivers of honey"],
+    "difficulty": "easy",
+    "notes": "Concentrated in one verse — tests precision"
+  },
+  {
+    "id": "q108_previous_nations",
+    "question": "What lessons does the Quran draw from the destruction of previous nations?",
+    "expected_citations": ["3:137", "6:6", "7:4", "7:5", "10:13", "10:14", "15:79", "22:45", "22:46", "25:38", "25:39", "26:189", "28:58", "29:14", "29:40", "30:9", "40:21", "40:82", "46:25", "47:10", "54:51"],
+    "expected_themes": ["travel the earth and see", "destroyed for their sins", "lessons for those who reflect", "none could escape"],
+    "difficulty": "medium",
+    "notes": "Tests broad retrieval of historical-warning verses across many surahs"
+  },
+  {
+    "id": "q109_soul_nafs",
+    "question": "What does the Quran say about the soul (nafs) and its states?",
+    "expected_citations": ["12:53", "75:2", "79:40", "89:27", "89:28", "89:29", "89:30", "91:7", "91:8", "91:9", "91:10"],
+    "expected_themes": ["commanding soul", "self-blaming soul", "soul at peace", "purification of soul"],
+    "difficulty": "medium",
+    "notes": "Tests retrieval of three-state model of the soul across surahs"
+  },
+  {
+    "id": "q110_poverty_wealth",
+    "question": "What does the Quran say about poverty, wealth, and contentment?",
+    "expected_citations": ["2:268", "3:14", "4:32", "9:34", "9:35", "14:7", "17:26", "17:29", "17:30", "20:131", "28:76", "28:77", "28:78", "34:39", "57:20", "89:15", "89:16", "92:5", "92:18", "93:8", "104:2", "104:3"],
+    "expected_themes": ["wealth as test", "Qarun's wealth", "do not hoard", "God expands and restricts provision"],
+    "difficulty": "medium",
+    "notes": "Tests keyword 'wealth' + 'rich' + 'poor' + 'provision' across moral teachings"
+  },
+  {
+    "id": "q111_spiritual_heart",
+    "question": "What does the Quran say about the spiritual heart and its conditions?",
+    "expected_citations": ["2:7", "2:10", "2:74", "2:88", "3:7", "3:8", "6:25", "7:100", "7:101", "8:2", "13:28", "22:46", "26:89", "33:4", "39:22", "39:23", "47:24", "50:33", "83:14"],
+    "expected_themes": ["sealed hearts", "diseased hearts", "hearts that tremble at God's mention", "sound heart", "rust on hearts"],
+    "difficulty": "medium",
+    "notes": "Tests keyword 'heart' across spiritual/metaphorical contexts"
+  },
+  {
+    "id": "q112_tongue_speech",
+    "question": "What does the Quran say about guarding one's tongue and speech?",
+    "expected_citations": ["4:148", "17:36", "17:53", "23:3", "24:15", "33:70", "49:6", "49:11", "49:12", "50:18", "104:1"],
+    "expected_themes": ["say what is best", "verify before speaking", "vain talk", "slander", "every word recorded"],
+    "difficulty": "medium",
+    "notes": "Tests semantic retrieval for speech ethics across legal and moral contexts"
+  },
+  {
+    "id": "q113_intercession_day_judgment",
+    "question": "What does the Quran say about intercession on the Day of Judgment?",
+    "expected_citations": ["2:48", "2:123", "2:254", "2:255", "6:51", "6:70", "6:94", "10:3", "19:87", "20:109", "21:28", "34:23", "39:44", "43:86", "53:26", "74:48"],
+    "expected_themes": ["no intercession except by God's permission", "no soul helps another", "all intercession belongs to God"],
+    "difficulty": "medium",
+    "notes": "Tests nuanced theology — Khalifa's translation emphasizes God's sole authority over intercession"
+  },
+  {
+    "id": "q114_surah_baqarah_overview",
+    "question": "What are the major themes of Surah Al-Baqarah (Surah 2)?",
+    "expected_citations": ["2:1", "2:2", "2:3", "2:21", "2:30", "2:40", "2:124", "2:142", "2:153", "2:168", "2:177", "2:183", "2:196", "2:219", "2:222", "2:255", "2:261", "2:275", "2:282", "2:285", "2:286"],
+    "expected_themes": ["guidance for righteous", "stories of past nations", "legal rulings", "monotheism", "prayer direction change"],
+    "difficulty": "hard",
+    "notes": "Longest surah — tests explore_surah on a surah with extremely diverse content"
+  },
+  {
+    "id": "q115_evil_eye",
+    "question": "Does the Quran mention the evil eye?",
+    "expected_citations": ["12:67", "68:51", "113:5"],
+    "expected_themes": ["Jacob's warning to sons", "disbelievers' gazes", "envy"],
+    "difficulty": "medium",
+    "notes": "Tests retrieval on a topic where verses are indirect/interpretive"
+  },
+  {
+    "id": "q116_fire_creation_jinn",
+    "question": "What does the Quran say about the creation of jinn from fire?",
+    "expected_citations": ["7:12", "15:27", "38:76", "55:15"],
+    "expected_themes": ["smokeless fire", "Iblis made from fire", "different from human creation"],
+    "difficulty": "easy",
+    "notes": "Narrow topic — tests keyword 'fire' in creation context specifically"
+  },
+  {
+    "id": "q117_light_darkness",
+    "question": "How does the Quran use light and darkness as metaphors?",
+    "expected_citations": ["2:17", "2:19", "2:257", "5:16", "6:1", "6:122", "13:16", "14:1", "14:5", "24:35", "24:40", "33:43", "35:20", "39:69", "57:12", "57:13", "57:19", "57:28", "65:11"],
+    "expected_themes": ["light as guidance", "darkness as disbelief", "God brings from darkness to light", "Verse of Light"],
+    "difficulty": "medium",
+    "notes": "Tests metaphorical/thematic retrieval rather than literal keyword matching"
+  },
+  {
+    "id": "q118_khalifa_mathematical_code",
+    "question": "What evidence does the Quran present for its mathematical structure based on the number 19?",
+    "expected_citations": ["74:30", "74:31", "74:32", "74:33", "74:34", "74:35", "74:36", "74:37"],
+    "expected_themes": ["mathematical miracle", "one of the great miracles", "removes doubt from believers", "proof of divine authorship"],
+    "difficulty": "hard",
+    "notes": "Khalifa-specific — tests how system handles a topic unique to this translation's interpretive framework"
+  },
+
+  {
+    "id": "q119_abrogation_debate",
+    "question": "Does the Quran support the concept of abrogation (naskh) — some verses canceling others?",
+    "expected_citations": ["2:106", "13:39", "16:101", "17:86", "22:52", "87:6", "87:7"],
+    "expected_themes": ["substitution of verses", "divine will", "mother of the book", "nothing is forgotten"],
+    "difficulty": "hard",
+    "notes": "Edge case: 2:106 and 16:101 are commonly cited for abrogation but Khalifa's translation reinterprets 'ayah' as miracle/sign rather than verse. Tests interpretive nuance."
+  },
+  {
+    "id": "q120_verse_sword",
+    "question": "What is the 'Verse of the Sword' (9:5) and does it override peace verses?",
+    "expected_citations": ["9:1", "9:2", "9:3", "9:4", "9:5", "9:6", "9:7", "9:12", "9:13", "9:14", "9:36"],
+    "expected_themes": ["context of treaty violation", "not a blanket command", "exceptions and conditions", "self-defense"],
+    "difficulty": "hard",
+    "notes": "Edge case: 9:5 is commonly quoted out of context. 9:4 and 9:6 provide crucial qualification. Tests whether system retrieves surrounding context."
+  },
+  {
+    "id": "q121_compulsion_religion",
+    "question": "Does the Quran allow forced conversion? How do we reconcile 'no compulsion in religion' with fighting verses?",
+    "expected_citations": ["2:256", "2:190", "2:193", "8:39", "9:5", "9:29", "10:99", "18:29", "109:6"],
+    "expected_themes": ["no compulsion", "freedom of belief", "fighting is defensive", "to you your religion"],
+    "difficulty": "hard",
+    "notes": "Edge case: apparent tension between 2:256 and fighting verses. Tests whether system surfaces both sides."
+  },
+  {
+    "id": "q122_wife_beating_4_34",
+    "question": "What does verse 4:34 say about the treatment of wives, and how is it interpreted?",
+    "expected_citations": ["2:228", "2:231", "4:19", "4:34", "4:35", "4:128", "30:21"],
+    "expected_themes": ["guardianship", "step-by-step process", "reconciliation", "Khalifa's translation of 'idribuhunna'"],
+    "difficulty": "hard",
+    "notes": "Edge case: 4:34 is heavily debated. Khalifa translates the controversial word differently from traditional translations. Tests awareness of translation-specific interpretation."
+  },
+  {
+    "id": "q123_slavery_quran",
+    "question": "What does the Quran say about slavery and the freeing of slaves?",
+    "expected_citations": ["2:177", "4:25", "4:36", "4:92", "5:89", "9:60", "24:32", "24:33", "47:4", "58:3", "90:12", "90:13"],
+    "expected_themes": ["freeing slaves as atonement", "kind treatment", "allow them to earn freedom", "manumission encouraged"],
+    "difficulty": "hard",
+    "notes": "Edge case: Quran acknowledges slavery's existence in that society but consistently encourages freeing slaves. Tests nuanced moral-historical retrieval."
+  },
+  {
+    "id": "q124_predestination_free_will",
+    "question": "Does the Quran teach predestination or free will? How do we reconcile verses about God's will with human accountability?",
+    "expected_citations": ["2:7", "2:26", "2:272", "3:145", "6:39", "6:111", "6:125", "7:30", "7:178", "10:99", "10:100", "13:11", "14:4", "16:93", "18:29", "32:13", "35:8", "74:31", "76:3", "76:29", "76:30", "81:28", "81:29"],
+    "expected_themes": ["God guides whom He wills", "humans choose", "sealed hearts after rejection", "accountability implies choice"],
+    "difficulty": "hard",
+    "notes": "Edge case: one of the deepest theological tensions in the Quran. Tests whether system surfaces verses on both sides."
+  },
+  {
+    "id": "q125_who_goes_heaven",
+    "question": "Can non-Muslims enter Paradise according to the Quran?",
+    "expected_citations": ["2:62", "2:112", "3:85", "3:113", "3:114", "3:115", "3:199", "4:123", "4:124", "5:48", "5:69", "22:17"],
+    "expected_themes": ["believers Jews Christians Sabians", "whoever believes in God and Last Day", "Islam as submission", "religious pluralism debate"],
+    "difficulty": "hard",
+    "notes": "Edge case: 2:62 and 5:69 suggest inclusivism while 3:85 seems exclusivist. Khalifa's interpretation of 'Islam' as generic 'submission' rather than specific religion is key."
+  },
+  {
+    "id": "q126_khalifa_exclusion_9_128_129",
+    "question": "Why does Rashad Khalifa's translation exclude verses 9:128-129?",
+    "expected_citations": ["9:127", "74:30", "74:31"],
+    "expected_themes": ["mathematical code of 19", "false verses", "initialed surahs", "gematrical structure"],
+    "difficulty": "hard",
+    "notes": "Edge case: unique to Khalifa's translation. System should explain the mathematical argument. The expected citations are indirect — 9:127 is the last included verse and 74:30-31 is the basis for the code."
+  },
+  {
+    "id": "q127_satanic_verses_controversy",
+    "question": "Does the Quran address the so-called 'Satanic Verses' incident?",
+    "expected_citations": ["17:73", "17:74", "17:75", "22:52", "22:53", "53:19", "53:20", "53:21", "53:22", "53:23"],
+    "expected_themes": ["Satan's interference with revelation", "God nullifies Satan's input", "idols have no power", "mere names you invented"],
+    "difficulty": "hard",
+    "notes": "Edge case: 22:52 is the primary verse cited. The incident itself is not explicitly narrated — tests whether system correctly notes this is about external tradition projected onto the text."
+  },
+  {
+    "id": "q128_women_testimony_half",
+    "question": "Does the Quran value women's testimony as half of a man's?",
+    "expected_citations": ["2:282", "24:4", "24:6", "24:7", "24:8", "24:9", "65:2"],
+    "expected_themes": ["specific financial context", "li'an gives equal weight", "not a general rule", "context-dependent"],
+    "difficulty": "hard",
+    "notes": "Edge case: 2:282 is about financial contracts specifically. 24:6-9 (li'an) gives a woman's oath equal weight. Tests whether system provides context."
+  },
+  {
+    "id": "q129_apostasy_punishment",
+    "question": "Does the Quran prescribe a worldly punishment for apostasy?",
+    "expected_citations": ["2:217", "2:256", "3:86", "3:87", "3:88", "3:89", "3:90", "3:91", "4:137", "4:88", "4:89", "4:90", "5:54", "16:106", "47:25", "47:26", "47:27"],
+    "expected_themes": ["no worldly punishment specified", "punishment in hereafter", "no compulsion", "God judges"],
+    "difficulty": "hard",
+    "notes": "Edge case: the Quran mentions apostasy frequently but never prescribes capital punishment — the death penalty comes from hadith. Tests whether system notes the absence of worldly punishment."
+  },
+  {
+    "id": "q130_age_aisha",
+    "question": "What does the Quran say about the age of Aisha at marriage?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Edge case that borders on unanswerable: Aisha is not mentioned by name in the Quran at all. This information comes entirely from hadith. Tests whether system correctly states the Quran does not address this."
+  },
+  {
+    "id": "q131_jihad_meaning",
+    "question": "What does the Quran mean by 'jihad' — is it warfare or spiritual struggle?",
+    "expected_citations": ["2:218", "3:142", "4:95", "8:72", "8:74", "8:75", "9:16", "9:20", "9:24", "9:41", "9:44", "9:73", "9:81", "9:86", "22:78", "25:52", "29:6", "29:69", "47:31", "49:15", "60:1", "61:11"],
+    "expected_themes": ["striving in God's cause", "both spiritual and physical", "great jihad with the Quran", "context determines meaning"],
+    "difficulty": "hard",
+    "notes": "Edge case: 25:52 describes jihad with the Quran (not warfare). 22:78 is broad. Tests whether system shows the full semantic range."
+  },
+  {
+    "id": "q132_polygamy_conditions",
+    "question": "What conditions does the Quran set for polygamy, and does it actually discourage it?",
+    "expected_citations": ["4:3", "4:19", "4:20", "4:129"],
+    "expected_themes": ["justice between wives", "impossibility of perfect fairness", "orphan context", "one wife preferred"],
+    "difficulty": "hard",
+    "notes": "Edge case: 4:3 permits up to four but 4:129 says you can never be perfectly fair. Khalifa's footnotes emphasize monogamy as the ideal."
+  },
+  {
+    "id": "q133_houris_paradise",
+    "question": "What does the Quran mean by 'houris' (hur) in Paradise — are they sexual companions?",
+    "expected_citations": ["44:54", "52:20", "55:56", "55:72", "55:74", "56:22", "56:35", "56:36"],
+    "expected_themes": ["pure companions", "large eyes", "created anew", "Khalifa interprets as non-sexual"],
+    "difficulty": "hard",
+    "notes": "Edge case: Khalifa's translation and interpretation differ from traditional — translates as 'bring together' rather than sexual context. Tests translation-specific awareness."
+  },
+  {
+    "id": "q134_stoning_adultery",
+    "question": "Does the Quran prescribe stoning as punishment for adultery?",
+    "expected_citations": ["4:15", "4:16", "4:25", "24:2", "24:3", "24:4", "24:5"],
+    "expected_themes": ["lashing not stoning", "four witnesses required", "no stoning verse in Quran", "hadith vs Quran"],
+    "difficulty": "hard",
+    "notes": "Edge case: the Quran prescribes lashing (24:2), not stoning. Stoning comes from hadith and the alleged 'verse of stoning' not in the Quran. Tests whether system notes the absence."
+  },
+  {
+    "id": "q135_music_permissibility",
+    "question": "Does the Quran explicitly prohibit music?",
+    "expected_citations": ["17:64", "31:6", "53:59", "53:60", "53:61"],
+    "expected_themes": ["idle talk interpretation", "no explicit prohibition", "vain discourse", "scholarly disagreement"],
+    "difficulty": "hard",
+    "notes": "Edge case: 31:6 ('idle talk/lahw al-hadith') is commonly cited but interpretation varies widely. Tests whether system acknowledges ambiguity."
+  },
+  {
+    "id": "q136_images_statues",
+    "question": "Does the Quran prohibit making images or statues?",
+    "expected_citations": ["5:90", "21:51", "21:52", "21:57", "21:58", "34:13"],
+    "expected_themes": ["idol worship context", "no blanket prohibition on images", "Solomon had statues made", "context matters"],
+    "difficulty": "hard",
+    "notes": "Edge case: 34:13 mentions jinn making statues for Solomon with no condemnation. Image prohibition is from hadith, not Quran."
+  },
+  {
+    "id": "q137_evolution_creation",
+    "question": "Is the Quran compatible with evolutionary theory?",
+    "expected_citations": ["15:26", "15:28", "15:29", "21:30", "23:12", "23:14", "24:45", "29:20", "32:7", "32:8", "32:9", "71:14", "71:17"],
+    "expected_themes": ["stages of creation", "created from water", "created from clay", "debate on literal vs metaphorical"],
+    "difficulty": "hard",
+    "notes": "Edge case: the Quran describes stages but also special creation of Adam. 71:14 mentions 'phases' (atwaran). Tests ability to present both readings."
+  },
+  {
+    "id": "q138_jizya_tax",
+    "question": "What does the Quran say about the jizya tax on non-Muslims?",
+    "expected_citations": ["9:29"],
+    "expected_themes": ["tribute from People of the Book", "historical context", "protection in exchange"],
+    "difficulty": "hard",
+    "notes": "Edge case: single verse (9:29) with enormous historical impact. Tests whether system provides context vs. isolation."
+  },
+  {
+    "id": "q139_temporary_marriage",
+    "question": "Does the Quran permit temporary marriage (mut'a)?",
+    "expected_citations": ["4:24", "4:25"],
+    "expected_themes": ["istimta'tum interpretation", "Sunni vs Shia reading", "permanent vs temporary"],
+    "difficulty": "hard",
+    "notes": "Edge case: 4:24 is interpreted differently by Sunni and Shia scholars. Khalifa's translation leans toward permanent marriage."
+  },
+  {
+    "id": "q140_earth_flat_round",
+    "question": "Does the Quran say the earth is flat or round?",
+    "expected_citations": ["2:22", "13:3", "15:19", "20:53", "39:5", "43:10", "50:7", "51:48", "71:19", "78:6", "79:30", "88:20", "91:6"],
+    "expected_themes": ["spread out", "egg-shaped debate", "dahaha interpretation", "carpet metaphor vs spherical"],
+    "difficulty": "hard",
+    "notes": "Edge case: 79:30 (dahaha) is debated — 'egg-shaped' vs 'spread out'. Tests awareness of linguistic controversy."
+  },
+  {
+    "id": "q141_punishment_theft",
+    "question": "What is the Quranic punishment for theft?",
+    "expected_citations": ["5:38", "5:39"],
+    "expected_themes": ["cutting the hand", "repentance", "conditions and context", "deterrent interpretation"],
+    "difficulty": "hard",
+    "notes": "Edge case: 5:38 is literal but conditions for implementation are debated. Khalifa translates it literally. Tests whether system provides 5:39 (repentance) as companion."
+  },
+  {
+    "id": "q142_triple_talaq",
+    "question": "Does the Quran support instant triple divorce (saying 'I divorce you' three times at once)?",
+    "expected_citations": ["2:228", "2:229", "2:230", "2:231", "65:1", "65:2"],
+    "expected_themes": ["waiting period between each", "not instant", "three separate occasions", "Quranic process is gradual"],
+    "difficulty": "hard",
+    "notes": "Edge case: the Quran clearly describes a gradual process (2:229-230), contradicting the instant triple talaq practice. Tests whether system surfaces the procedural verses."
+  },
+  {
+    "id": "q143_interest_modern_banking",
+    "question": "How do the Quran's prohibitions on usury (riba) apply to modern banking?",
+    "expected_citations": ["2:275", "2:276", "2:278", "2:279", "2:280", "3:130", "4:161", "30:39"],
+    "expected_themes": ["prohibition of riba", "trade vs interest", "debate on scope", "modern application not in Quran"],
+    "difficulty": "hard",
+    "notes": "Edge case: the Quran prohibits riba clearly but doesn't define modern banking instruments. Tests whether system notes the gap between text and modern application."
+  },
+  {
+    "id": "q144_marrying_people_of_book",
+    "question": "Can Muslims marry Christians and Jews according to the Quran?",
+    "expected_citations": ["2:221", "5:5", "60:10"],
+    "expected_themes": ["food and marriage of People of Book permitted", "do not marry idol worshippers", "believing women restriction"],
+    "difficulty": "hard",
+    "notes": "Edge case: 5:5 permits it for men; 2:221 and 60:10 create asymmetry for women. Tests gender-specific nuance."
+  },
+  {
+    "id": "q145_death_jesus",
+    "question": "Did Jesus die on the cross according to the Quran?",
+    "expected_citations": ["3:55", "4:157", "4:158", "4:159", "5:117", "19:33"],
+    "expected_themes": ["not crucified", "made to appear so", "raised to God", "debate on physical death"],
+    "difficulty": "hard",
+    "notes": "Edge case: 4:157 denies crucifixion but 3:55 and 19:33 mention 'death' — the relationship is debated. Khalifa interprets 3:55 as physical death."
+  },
+  {
+    "id": "q146_adoption_quran",
+    "question": "What does the Quran say about adoption?",
+    "expected_citations": ["33:4", "33:5", "33:37", "33:40"],
+    "expected_themes": ["adopted sons not same as biological", "call them by their fathers' names", "Zaid context"],
+    "difficulty": "hard",
+    "notes": "Edge case: the Quran changed adoption practices. 33:4-5 disallows giving adopted children the father's name. Historical context of Zaid matters."
+  },
+  {
+    "id": "q147_domestic_violence",
+    "question": "Does the Quran condone domestic violence?",
+    "expected_citations": ["2:231", "4:19", "4:34", "4:35", "4:128", "65:6"],
+    "expected_themes": ["step-by-step process", "Khalifa's alternative translation", "kindness commanded", "reconciliation emphasis"],
+    "difficulty": "hard",
+    "notes": "Edge case: 4:34 is the focal point but must be read with 4:19, 4:128, 2:231 which command kindness. Khalifa translates the word differently."
+  },
+  {
+    "id": "q148_age_universe",
+    "question": "Does the Quran specify the age of the universe?",
+    "expected_citations": ["7:54", "10:3", "11:7", "25:59", "32:4", "41:9", "41:10", "41:12", "50:38", "70:4"],
+    "expected_themes": ["six days of creation", "day with God is variable", "1000 years or 50000 years", "not literal 24-hour days"],
+    "difficulty": "hard",
+    "notes": "Edge case: 'six days' appears repeatedly but 22:47 and 70:4 give different divine-day lengths, making literal calculation impossible."
+  },
+  {
+    "id": "q149_black_magic_sorcery",
+    "question": "What does the Quran say about black magic and sorcery?",
+    "expected_citations": ["2:102", "7:116", "7:117", "7:118", "7:119", "10:77", "10:81", "20:66", "20:67", "20:68", "20:69", "113:4"],
+    "expected_themes": ["Harut and Marut", "sorcerers of Pharaoh", "magic is real but evil", "seeking refuge"],
+    "difficulty": "medium",
+    "notes": "Edge case: 2:102 is a complex verse about angels teaching magic. Tests nuanced retrieval."
+  },
+  {
+    "id": "q150_prophet_ishmael",
+    "question": "What does the Quran say about Prophet Ishmael and his role?",
+    "expected_citations": ["2:125", "2:127", "2:133", "2:136", "2:140", "6:86", "14:39", "19:54", "19:55", "21:85", "37:101", "37:102", "37:107", "38:48"],
+    "expected_themes": ["building Ka'ba with Abraham", "sacrifice narrative", "patient and righteous", "progenitor of Arabs"],
+    "difficulty": "medium",
+    "notes": "Tests retrieval of Ishmael in connection with Abraham — the sacrifice in 37:102 is debated (Ishmael vs Isaac)"
+  },
+  {
+    "id": "q151_children_killing_prohibition",
+    "question": "How does the Quran address the pre-Islamic practice of killing children?",
+    "expected_citations": ["6:137", "6:140", "6:151", "16:58", "16:59", "17:31", "60:12", "81:8", "81:9"],
+    "expected_themes": ["infanticide condemned", "female infanticide specifically", "killing from poverty", "children questioned on Judgment Day"],
+    "difficulty": "medium",
+    "notes": "Tests retrieval of both general infanticide and female-specific infanticide verses"
+  },
+  {
+    "id": "q152_khalifa_appendices",
+    "question": "What Quranic verses does Rashad Khalifa use to support his claim as the Messenger of the Covenant?",
+    "expected_citations": ["3:81", "33:7", "33:40", "72:27", "72:28", "74:30", "74:31", "74:35"],
+    "expected_themes": ["covenant of prophets", "mathematical proof", "purifying the message", "Messenger of the Covenant distinct from prophet"],
+    "difficulty": "hard",
+    "notes": "Khalifa-specific — tests deep knowledge of his interpretive framework"
+  },
+  {
+    "id": "q153_angels_prostrate_adam",
+    "question": "Why does the Quran say angels prostrated to Adam if worship belongs only to God?",
+    "expected_citations": ["2:34", "7:11", "7:12", "15:29", "15:30", "15:31", "17:61", "18:50", "20:116", "38:72", "38:73", "38:74"],
+    "expected_themes": ["prostration of respect not worship", "God's command", "Iblis's refusal", "humans as God's representatives"],
+    "difficulty": "hard",
+    "notes": "Edge case: apparent theological tension. Tests whether system identifies the distinction between prostration of respect and worship."
+  },
+  {
+    "id": "q154_khalifa_contact_prayer",
+    "question": "What does the Quran say about the contact prayers and how does Khalifa's interpretation differ?",
+    "expected_citations": ["2:3", "2:43", "2:238", "4:43", "4:101", "4:103", "5:6", "11:114", "17:78", "20:14", "24:58", "30:17", "30:18", "62:9"],
+    "expected_themes": ["five prayer times", "Khalifa's term 'Contact Prayers'", "Salat as direct connection", "Quran-alone prayer derivation"],
+    "difficulty": "hard",
+    "notes": "Khalifa-specific — he uses 'Contact Prayers' for Salat. Tests whether system captures this unique terminology."
+  },
+  {
+    "id": "q155_political_system",
+    "question": "Does the Quran prescribe a specific political system or form of government?",
+    "expected_citations": ["3:159", "4:58", "4:59", "42:38"],
+    "expected_themes": ["consultation", "trusts to rightful owners", "obey those in authority", "no specific system named"],
+    "difficulty": "hard",
+    "notes": "Edge case: the Quran gives principles (consultation, justice) but no specific system. Tests whether system notes the absence of a prescribed model."
+  },
+  {
+    "id": "q156_dna_genetics",
+    "question": "Does the Quran reference genetics or DNA?",
+    "expected_citations": ["76:2", "86:5", "86:6", "86:7"],
+    "expected_themes": ["mixed drop", "emanating fluid", "backbone and ribs debate", "not explicit genetics"],
+    "difficulty": "hard",
+    "notes": "Edge case: some claim 76:2 or 86:5-7 allude to genetics, but the connection is interpretive. Tests whether system is measured in claims."
+  },
+  {
+    "id": "q157_tattoos_body_modification",
+    "question": "Does the Quran prohibit tattoos or body modifications?",
+    "expected_citations": ["4:119"],
+    "expected_themes": ["altering God's creation", "Satan's promise", "no explicit tattoo mention"],
+    "difficulty": "hard",
+    "notes": "Edge case: 4:119 mentions altering creation but in context of Satan's whisper. Tattoo prohibition is primarily from hadith, not Quran."
+  },
+  {
+    "id": "q158_homosexuality",
+    "question": "What does the Quran say about homosexuality?",
+    "expected_citations": ["4:15", "4:16", "7:80", "7:81", "7:82", "7:84", "11:78", "11:79", "11:82", "15:73", "26:165", "26:166", "27:54", "27:55", "29:28", "29:29"],
+    "expected_themes": ["Lot's people", "condemned practice", "punishment narrative", "debate on scope and interpretation"],
+    "difficulty": "hard",
+    "notes": "Edge case: the Lot narrative is clear but modern debate exists about whether it condemns consensual homosexuality or specifically rape/assault. Tests whether system surfaces the relevant passages."
+  },
+  {
+    "id": "q159_suicide",
+    "question": "What does the Quran say about suicide?",
+    "expected_citations": ["2:195", "4:29", "4:30"],
+    "expected_themes": ["do not kill yourselves", "do not throw yourselves into destruction", "God is merciful"],
+    "difficulty": "hard",
+    "notes": "Edge case: 4:29 is the primary verse but 'anfusakum' can mean 'yourselves' or 'each other'. 2:195 is about self-destruction generally."
+  },
+  {
+    "id": "q160_khalifa_initialed_surahs",
+    "question": "What are the Quranic initials (Huroof Muqatta'at) and how does Khalifa interpret them?",
+    "expected_citations": ["2:1", "3:1", "7:1", "10:1", "11:1", "12:1", "13:1", "14:1", "15:1", "19:1", "20:1", "26:1", "27:1", "28:1", "29:1", "30:1", "31:1", "32:1", "36:1", "38:1", "40:1", "41:1", "42:1", "42:2", "43:1", "44:1", "45:1", "46:1", "50:1", "68:1"],
+    "expected_themes": ["mysterious letters", "mathematical pattern of 19", "29 initialed surahs", "proof of divine authorship"],
+    "difficulty": "hard",
+    "notes": "Khalifa-specific — the initials are central to his mathematical miracle claim. Tests whether system can enumerate them."
+  },
+  {
+    "id": "q161_animal_slaughter",
+    "question": "What method of animal slaughter does the Quran prescribe?",
+    "expected_citations": ["2:173", "5:3", "6:118", "6:121", "6:138", "6:145", "22:36", "22:37"],
+    "expected_themes": ["God's name must be mentioned", "prohibited animals", "hunt with trained animals", "sacrifice not about blood"],
+    "difficulty": "hard",
+    "notes": "Edge case: the Quran mentions God's name requirement but doesn't detail the physical method. Specific halal slaughter procedures come from hadith."
+  },
+  {
+    "id": "q162_heaven_guaranteed",
+    "question": "Can anyone be guaranteed Paradise according to the Quran?",
+    "expected_citations": ["2:80", "2:111", "3:24", "4:122", "4:123", "4:124", "7:46", "7:48", "9:72", "19:60", "19:61", "57:12", "64:9"],
+    "expected_themes": ["no one is guaranteed", "wishful thinking condemned", "only God knows", "deeds matter"],
+    "difficulty": "hard",
+    "notes": "Edge case: 2:80 and 2:111 refute claims of guaranteed salvation. Tests whether system finds the anti-guarantee verses."
+  },
+  {
+    "id": "q163_hadith_authority",
+    "question": "Does the Quran validate or authorize hadith as a source of religious law?",
+    "expected_citations": ["6:38", "6:114", "6:115", "7:185", "12:111", "16:89", "17:46", "18:27", "31:6", "39:23", "45:6", "68:37", "69:44", "77:50"],
+    "expected_themes": ["Quran as fully detailed", "what hadith after God's", "nothing left out of the book", "Quran-alone position"],
+    "difficulty": "hard",
+    "notes": "Edge case: Khalifa's translation is strongly Quran-alone. 6:114, 6:38, 12:111, 45:6 are key verses for this position. Tests translation-specific emphasis."
+  },
+  {
+    "id": "q164_beating_children",
+    "question": "Does the Quran address physical discipline of children?",
+    "expected_citations": [],
+    "expected_themes": ["not directly addressed"],
+    "difficulty": "hard",
+    "notes": "Edge case bordering on unanswerable: the Quran doesn't directly address physical discipline of children. General kindness verses might be relevant but there's no specific verse."
+  },
+  {
+    "id": "q165_nikab_face_covering",
+    "question": "Does the Quran require women to cover their faces (niqab)?",
+    "expected_citations": ["24:31", "33:53", "33:59"],
+    "expected_themes": ["cover adornments", "jilbab", "no explicit face-covering command", "modesty principles"],
+    "difficulty": "hard",
+    "notes": "Edge case: 33:59 mentions drawing garments but doesn't specify face covering. Niqab requirement comes from scholarly interpretation, not explicit Quranic text."
+  },
+  {
+    "id": "q166_interfaith_dialogue",
+    "question": "Does the Quran encourage interfaith dialogue?",
+    "expected_citations": ["2:256", "3:64", "5:48", "10:99", "16:125", "22:67", "29:46", "42:15", "109:1", "109:6"],
+    "expected_themes": ["call to common word", "argue in the best way", "diversity is divine will", "no compulsion"],
+    "difficulty": "hard",
+    "notes": "Edge case: 29:46 specifically addresses 'argue with People of Book in best way'. Tests thematic compilation."
+  },
+  {
+    "id": "q167_dreams_interpretation",
+    "question": "What authority does the Quran give to dream interpretation?",
+    "expected_citations": ["12:4", "12:5", "12:6", "12:36", "12:37", "12:41", "12:43", "12:44", "12:45", "12:46", "12:47", "12:99", "12:100", "37:102", "48:27"],
+    "expected_themes": ["Joseph as dream interpreter", "Abraham's dream", "God teaches interpretation", "not everyone can interpret"],
+    "difficulty": "hard",
+    "notes": "Edge case: dreams are significant in Joseph's story and Abraham's sacrifice, but the Quran doesn't establish a general framework for dream interpretation."
+  },
+  {
+    "id": "q168_khalifa_shahada",
+    "question": "How does Khalifa's translation affect the understanding of the Shahada (testimony of faith)?",
+    "expected_citations": ["3:18", "3:81", "33:40", "37:35", "39:45", "47:19", "63:1"],
+    "expected_themes": ["Quran-alone testimony", "no mention of Muhammad in Shahada from Quran", "63:1 exposes lip-service", "monotheistic focus"],
+    "difficulty": "hard",
+    "notes": "Khalifa-specific: he argues the Shahada should only mention God, based on 39:45 and 63:1. Tests deep knowledge of his interpretive positions."
+  },
+
+  {
+    "id": "q169_quantum_physics",
+    "question": "What does the Quran say about quantum physics?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: the Quran does not address quantum physics. Tests system's ability to abstain and say the topic is not addressed."
+  },
+  {
+    "id": "q170_democracy",
+    "question": "Does the Quran prescribe democracy as a system of government?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: the Quran does not mention democracy. While 42:38 (shura/consultation) is sometimes loosely connected, democracy as a system is not addressed."
+  },
+  {
+    "id": "q171_internet",
+    "question": "What does the Quran say about the internet and social media?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: modern technology not addressed. Tests abstention from forced analogies."
+  },
+  {
+    "id": "q172_napoleon",
+    "question": "What does the Quran say about Napoleon Bonaparte?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: Napoleon is not a Quranic figure. Tests abstention."
+  },
+  {
+    "id": "q173_dinosaurs",
+    "question": "Does the Quran mention dinosaurs?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: dinosaurs are not mentioned in the Quran. Tests whether system avoids stretching vague creation verses."
+  },
+  {
+    "id": "q174_vaccines",
+    "question": "What does the Quran say about vaccines and vaccination?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: modern medical technology not addressed. Tests abstention."
+  },
+  {
+    "id": "q175_america",
+    "question": "Does the Quran mention the Americas or the United States?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: modern nation-states not mentioned. Tests abstention."
+  },
+  {
+    "id": "q176_stock_market",
+    "question": "What does the Quran say about investing in the stock market?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: the stock market is not addressed. While riba verses exist, the specific mechanism of stocks is absent."
+  },
+  {
+    "id": "q177_cloning",
+    "question": "What does the Quran say about human cloning?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: cloning is not addressed. Tests abstention from over-applying 4:119 or creation verses."
+  },
+  {
+    "id": "q178_copyright",
+    "question": "Does the Quran address copyright and intellectual property?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: modern legal concept not in the Quran. Tests abstention."
+  },
+  {
+    "id": "q179_mars_colonization",
+    "question": "What does the Quran say about colonizing Mars or other planets?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: space colonization not addressed. Tests abstention from over-reading 55:33."
+  },
+  {
+    "id": "q180_nuclear_weapons",
+    "question": "Does the Quran mention nuclear weapons or weapons of mass destruction?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: modern weapons not addressed. Tests abstention."
+  },
+  {
+    "id": "q181_cryptocurrency",
+    "question": "What does the Quran say about Bitcoin and cryptocurrency?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: modern financial technology not addressed. Tests abstention."
+  },
+  {
+    "id": "q182_yoga",
+    "question": "Does the Quran mention or address the practice of yoga?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: yoga is not a Quranic topic. Tests abstention."
+  },
+  {
+    "id": "q183_confucius",
+    "question": "Does the Quran mention Confucius or Chinese philosophy?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: Confucius and Chinese philosophy not mentioned. Tests abstention."
+  },
+  {
+    "id": "q184_electricity",
+    "question": "What does the Quran say about electricity?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: electricity as a phenomenon is not addressed. Tests abstention from stretching lightning verses."
+  },
+  {
+    "id": "q185_australia",
+    "question": "Does the Quran mention Australia or the Aboriginal peoples?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: specific modern geography not addressed. Tests abstention."
+  },
+  {
+    "id": "q186_artificial_intelligence",
+    "question": "What does the Quran say about artificial intelligence?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: AI is not a Quranic topic. Tests abstention."
+  },
+  {
+    "id": "q187_smoking_tobacco",
+    "question": "Does the Quran explicitly prohibit smoking or tobacco?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: tobacco was unknown in 7th century Arabia. While general health/harm verses exist, smoking is not explicitly addressed."
+  },
+  {
+    "id": "q188_organ_transplant",
+    "question": "What does the Quran say about organ transplantation?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: modern medical procedure not addressed. Tests abstention."
+  },
+  {
+    "id": "q189_buddha",
+    "question": "Does the Quran mention the Buddha or Buddhism?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: Buddha is not mentioned by name. Some speculate Dhul-Kifl could be Buddha but this is unsupported."
+  },
+  {
+    "id": "q190_roman_empire_fall",
+    "question": "Does the Quran predict or describe the fall of the Roman Empire?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: while 30:2-5 mentions Romans' defeat and future victory, the fall of the empire centuries later is not addressed."
+  },
+  {
+    "id": "q191_plastic_pollution",
+    "question": "What does the Quran say about plastic pollution and environmental conservation?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: modern environmental issues not addressed. While general stewardship verses exist (2:30), plastic is not mentioned."
+  },
+  {
+    "id": "q192_blood_transfusion",
+    "question": "Does the Quran permit or prohibit blood transfusions?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: blood transfusion is a modern medical procedure. The prohibition of consuming blood (2:173) is about food, not medical treatment."
+  },
+  {
+    "id": "q193_printing_press",
+    "question": "What does the Quran say about the printing press or mass publication?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: technology not addressed. Tests abstention."
+  },
+  {
+    "id": "q194_exact_date_judgment",
+    "question": "What is the exact date of the Day of Judgment according to the Quran?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: the Quran explicitly says no one knows the Hour (7:187, 31:34, 33:63, 41:47, 43:85, 67:26, 79:42-44). The question is inherently unanswerable BY DESIGN in the Quran."
+  },
+  {
+    "id": "q195_football_sports",
+    "question": "What does the Quran say about playing football or competitive sports?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: sports not addressed. Tests abstention."
+  },
+  {
+    "id": "q196_photographing_people",
+    "question": "Does the Quran prohibit photographing people?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: photography didn't exist. The prohibition comes from hadith about image-making, not the Quran."
+  },
+  {
+    "id": "q197_genghis_khan",
+    "question": "Does the Quran mention Genghis Khan or the Mongol invasions?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: post-Quranic historical figures. Some claim Gog/Magog = Mongols but this is unsupported interpretation."
+  },
+  {
+    "id": "q198_climate_change",
+    "question": "What does the Quran say about climate change?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: modern climate science not addressed. While 30:41 mentions 'corruption on land and sea,' interpreting it as climate change is a stretch."
+  },
+  {
+    "id": "q199_minimum_wage",
+    "question": "Does the Quran specify a minimum wage?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: specific economic policy not addressed. While general fairness verses exist, no wage floor is specified."
+  },
+  {
+    "id": "q200_space_travel",
+    "question": "What does the Quran say about space travel and astronauts?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: space travel not addressed. Tests abstention from over-reading 55:33 which some stretch to mean space travel."
+  },
+  {
+    "id": "q201_television",
+    "question": "Does the Quran mention television or broadcasting?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: modern technology not addressed. Tests abstention."
+  },
+  {
+    "id": "q202_shakespeare",
+    "question": "Does the Quran reference Shakespeare or Western literature?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: Western literary figures not mentioned. Tests abstention."
+  },
+  {
+    "id": "q203_insurance",
+    "question": "What does the Quran say about insurance policies?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: modern financial instruments not addressed. Tests abstention."
+  },
+  {
+    "id": "q204_pandas",
+    "question": "Does the Quran mention pandas or penguins?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: specific non-Arabian animals not mentioned. Tests abstention."
+  },
+  {
+    "id": "q205_birth_control",
+    "question": "What does the Quran say about contraception and birth control?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: contraception is not explicitly addressed in the Quran. Rulings come from hadith and scholarly reasoning."
+  },
+  {
+    "id": "q206_atlantis",
+    "question": "Does the Quran mention the lost city of Atlantis?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: Atlantis is a Greek myth not mentioned in the Quran. Some speculatively connect it to Iram (89:7) but this is unsupported."
+  },
+  {
+    "id": "q207_chess",
+    "question": "Does the Quran address the permissibility of playing chess?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: chess is not mentioned. Permissibility debate comes from hadith and scholarly opinion."
+  },
+  {
+    "id": "q208_pyramids",
+    "question": "What does the Quran say about the Egyptian pyramids?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: the pyramids are not mentioned by name. 28:38 and 40:36-37 mention Pharaoh building a tower but this is not the pyramids."
+  },
+  {
+    "id": "q209_zodiac_horoscope",
+    "question": "Does the Quran endorse or address astrology and horoscopes?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: astrology/horoscopes as a practice are not addressed. Stars are mentioned as navigation aids and signs, not for fortune-telling."
+  },
+  {
+    "id": "q210_robots",
+    "question": "What does the Quran say about robots and automation?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: modern technology not addressed. Tests abstention."
+  },
+  {
+    "id": "q211_arabic_root_amn",
+    "question": "Trace the Arabic root a-m-n (أمن) across the Quran — how does it connect 'faith' (iman), 'security' (amn), and 'trustworthy' (amin)?",
+    "expected_citations": ["2:3", "2:8", "2:62", "2:126", "2:256", "3:110", "4:136", "6:82", "7:96", "12:64", "14:35", "24:55", "27:89", "28:57", "44:51", "49:14", "95:3", "106:4"],
+    "expected_themes": ["faith as root meaning", "security in Mecca", "trustworthy messenger", "believers vs those who claim belief"],
+    "difficulty": "medium",
+    "notes": "Tests search_arabic_root for a-m-n showing iman/amin/amn/mu'min forms"
+  },
+  {
+    "id": "q212_arabic_root_hkm",
+    "question": "Explore the Arabic root h-k-m (حكم) — how does it connect 'wisdom' (hikmah), 'judgment' (hukm), and 'rule/authority' (hakim)?",
+    "expected_citations": ["2:129", "2:231", "2:251", "2:269", "3:48", "3:79", "4:35", "4:58", "4:105", "5:1", "5:42", "5:44", "5:45", "5:47", "5:48", "5:49", "6:89", "12:22", "21:74", "21:79", "31:12", "38:20", "38:26"],
+    "expected_themes": ["divine wisdom", "judgment between people", "ruling with justice", "wisdom given to prophets"],
+    "difficulty": "hard",
+    "notes": "Tests Arabic root tool for h-k-m showing hikmah/hukm/hakim/hakam/yuhakkimu forms"
+  },
+  {
+    "id": "q213_arabic_root_ayn_lm",
+    "question": "Trace the Arabic root ayn-l-m (علم) — how does it connect 'knowledge' (ilm), 'the All-Knowing' (Alim), and 'taught' (allama)?",
+    "expected_citations": ["2:31", "2:32", "2:33", "2:239", "2:255", "2:282", "3:18", "6:59", "12:76", "18:65", "20:114", "27:15", "31:27", "55:2", "55:4", "58:11", "96:4", "96:5"],
+    "expected_themes": ["God as the All-Knowing", "God taught Adam the names", "taught by the pen", "knowledge elevated status"],
+    "difficulty": "medium",
+    "notes": "Tests Arabic root tool for ayn-l-m — one of the most frequent roots in the Quran"
+  },
+  {
+    "id": "q214_arabic_root_qwl",
+    "question": "How does the Arabic root q-w-l (قول) appear across the Quran in different forms?",
+    "expected_citations": ["2:8", "2:30", "2:34", "2:80", "2:111", "2:113", "2:118", "2:135", "3:78", "4:46", "7:12", "18:29", "36:82", "41:30"],
+    "expected_themes": ["divine speech (Be and it is)", "human claims", "prophetic dialogue", "false statements"],
+    "difficulty": "medium",
+    "notes": "Tests Arabic root tool for q-w-l (say/speech) — extremely high frequency root with qala/qul/qawl forms"
+  },
+  {
+    "id": "q215_arabic_root_nzl",
+    "question": "Trace the Arabic root n-z-l (نزل) — how does it connect revelation, rain, and provisions from heaven?",
+    "expected_citations": ["2:4", "2:22", "2:23", "2:97", "2:164", "2:176", "3:3", "3:4", "4:136", "5:48", "6:7", "6:92", "16:64", "16:65", "17:105", "20:2", "25:1", "25:48", "39:6", "57:25", "76:23", "97:1"],
+    "expected_themes": ["Quran sent down", "rain sent down", "iron sent down", "provisions sent down", "unified concept of divine sending"],
+    "difficulty": "hard",
+    "notes": "Tests Arabic root for n-z-l showing nazzala/anzala/tanzil/nuzul forms across revelation and nature"
+  },
+  {
+    "id": "q216_arabic_root_shr_k",
+    "question": "Explore the Arabic root sh-r-k (شرك) — how does it define 'associating partners with God' (shirk) across the Quran?",
+    "expected_citations": ["2:22", "3:64", "3:151", "4:36", "4:48", "4:116", "5:72", "6:1", "6:19", "6:22", "6:136", "6:137", "6:163", "9:31", "10:18", "12:106", "13:33", "16:1", "16:3", "22:31", "31:13", "39:65"],
+    "expected_themes": ["unforgivable sin", "hidden shirk", "associating partners", "mushrikun", "Luqman's warning"],
+    "difficulty": "hard",
+    "notes": "Tests Arabic root tool for sh-r-k showing shirk/mushrik/mushrikun/ushrika/yushrikuna forms"
+  },
+  {
+    "id": "q217_specific_date_revelation",
+    "question": "On what exact calendar date was the Quran first revealed?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: the Quran says it was revealed in Ramadan (2:185) and on the Night of Destiny (97:1) but gives no specific calendar date."
+  },
+  {
+    "id": "q218_number_rakats",
+    "question": "How many units (rak'ahs) does the Quran specify for each prayer?",
+    "expected_citations": [],
+    "expected_themes": [],
+    "difficulty": "hard",
+    "notes": "Unanswerable: the Quran commands prayer but does not specify the number of rak'ahs. This detail comes from hadith/prophetic practice."
   }
 ]
