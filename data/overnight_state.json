@@ -1,0 +1,39 @@
+{
+  "session_id": "ad8cbfae-c6b6-4793-8947-ab963285774d",
+  "started_at": "2026-04-22T23:26",
+  "plan": "Overnight cache seeding via Phase 6 (160 fresh questions) through agentic pipeline.",
+  "preserved_state": {
+    "enhanced_semantic_search": "shipped in chat.py tool_semantic_search (VectorCypherRetriever pattern: returns verse + 5 related + 5 Arabic roots + typed edges in one query)",
+    "reasoning_memory": "shipped in reasoning_memory.py, wired into app_free.py (start_query/log_tool_call/finish + vector playbook retrieval via find_similar_queries)",
+    "verse_analysis_files": "20 enriched verses in data/verse_analysis/*.json (v2.1 prompt)",
+    "verse_analysis_decision": "SKIPPED for seeding — one-shot A/B test showed citation-format drift overwhelmed signal. Revisit only if/when agentic pipeline gets a VA lookup tool.",
+    "committed_commits": ["a65cb74"],
+    "cache_entries_before_phase6": 500
+  },
+  "running_processes": {
+    "app_free_server": { "task_id": "biwtnh2th", "port": 8085, "model": "qwen3:8b (Ollama, GPU)" },
+    "overnight_seed_phase6": { "task_id": "bii5d9gdj", "questions": 160, "state_file": "overnight_seed.state.json", "log": "overnight_seed.log" }
+  },
+  "watchdog_chain": {
+    "cadence": "45-60 min",
+    "checks": [
+      "Neo4j connectivity",
+      "app_free.py HTTP 200 on :8085",
+      "Phase 6 task status via task-notification",
+      "Cache growth (data/answer_cache.json entry count)",
+      "Phase 6 log tail for errors"
+    ],
+    "recovery": {
+      "app_server_down": "restart: python app_free.py",
+      "phase6_failed": "inspect log, reset cooldowns, re-run phase6",
+      "openrouter_quota_done": "engine auto-flips to LOCAL_ONLY_MODE on 3 back-to-back 429s",
+      "neo4j_down": "notify user to restart Neo4j Desktop"
+    }
+  },
+  "morning_deliverables": [
+    "Cache grown from 500 toward 660 (target)",
+    "Commit + push progress",
+    "Summary report like OVERNIGHT_REPORT.md",
+    "Stop app server only if user asks"
+  ]
+}

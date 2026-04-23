@@ -72,10 +72,12 @@ def save_answer(question: str, answer: str, verses: dict | None = None):
 
     entries = _load_cache()
 
-    # dedupe: if an almost-identical question exists (similarity > 0.95), update it
+    # dedupe: if a near-identical question exists (similarity > 0.98), update it
+    # 0.98 threshold lets semantic siblings ("Ramadan fasting" vs "fasting in Ramadan exceptions")
+    # coexist while still catching exact/trivial rephrases.
     for entry in entries:
         sim = float(np.dot(emb, entry["embedding"]))
-        if sim > 0.95:
+        if sim > 0.98:
             entry["answer"] = answer
             entry["verses"] = verses or {}
             entry["timestamp"] = time.time()
@@ -90,10 +92,11 @@ def save_answer(question: str, answer: str, verses: dict | None = None):
         "timestamp": time.time(),
     })
 
-    # cap at 500 entries — evict oldest if needed
-    if len(entries) > 500:
+    # cap at 5000 entries — evict oldest if needed.
+    # Previous cap of 500 was tight; we're seeding aggressively now.
+    if len(entries) > 5000:
         entries.sort(key=lambda e: e["timestamp"])
-        entries = entries[-500:]
+        entries = entries[-5000:]
 
     _save_cache(entries)
     print(f"  [cache] saved answer ({len(entries)} total)")
