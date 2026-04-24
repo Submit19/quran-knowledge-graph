@@ -242,13 +242,11 @@ def main():
         phase_file = write_phase_file(phase_num, qs)
         print(f"[run_next] wrote {phase_file.name}")
 
-    # Run it
+    # Run it — exec with __name__ == "__main__" so the phase file's main block fires
     sys.argv = ["phase", "--port", str(args.port), "--hours", str(args.hours)]
-    # import the file and call its main
-    import importlib.util
-    spec = importlib.util.spec_from_file_location(f"phase{phase_num}", phase_file)
-    mod = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(mod)
+    code = phase_file.read_text(encoding="utf-8")
+    ns = {"__name__": "__main__", "__file__": str(phase_file)}
+    exec(compile(code, str(phase_file), "exec"), ns)
 
 
 if __name__ == "__main__":
