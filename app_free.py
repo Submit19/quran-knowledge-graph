@@ -111,6 +111,13 @@ OLLAMA_TOOLS = [
         "parameters": {"type": "object",
                        "properties": {"surah_number": {"type": "integer", "description": "1-114"}},
                        "required": ["surah_number"]}}},
+    {"type": "function", "function": {
+        "name": "get_code19_features",
+        "description": "Khalifa Code-19 arithmetic features (verse counts, mysterious-letter frequencies, divisibility-by-19). Use for any claim about the mathematical miracle of 19. Cannot be hallucinated — pure arithmetic over Arabic text.",
+        "parameters": {"type": "object",
+                       "properties": {"scope": {"type": "string", "enum": ["global", "sura", "verse"]},
+                                      "target": {"type": "string", "description": "sura number or verseId — required unless scope=global"}},
+                       "required": ["scope"]}}},
 ]
 
 # Parse --model early so it's available at module level

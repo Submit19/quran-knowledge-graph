@@ -1,0 +1,310 @@
+{
+  "computed_at": "2026-04-27T11:42:28.562661+00:00",
+  "total_numbered_verses": 6234,
+  "unnumbered_basmalahs": 112,
+  "khalifa_total": 6346,
+  "khalifa_total_div_19": true,
+  "khalifa_total_div_by_19_quotient": 334,
+  "num_surahs": 114,
+  "num_surahs_div_19": true,
+  "num_mysterious_letter_surahs": 29,
+  "global_letter_counts": {
+    "alif": 38381,
+    "lam": 38086,
+    "mim": 26725,
+    "ra": 12397,
+    "sad": 2073,
+    "kaf": 10493,
+    "ha": 14844,
+    "ya": 21916,
+    "ain": 9398,
+    "ta": 1273,
+    "sin": 6007,
+    "qaf": 7032,
+    "nun": 27262,
+    "ha_heavy": 4137
+  },
+  "per_mysterious_letter_surah": {
+    "2": {
+      "letters": "ALM",
+      "verses": 286,
+      "letter_counts": {
+        "alif": 3161,
+        "lam": 3198,
+        "mim": 2192
+      },
+      "all_div_19": false
+    },
+    "3": {
+      "letters": "ALM",
+      "verses": 200,
+      "letter_counts": {
+        "alif": 1759,
+        "lam": 1888,
+        "mim": 1246
+      },
+      "all_div_19": false
+    },
+    "7": {
+      "letters": "ALMS",
+      "verses": 206,
+      "letter_counts": {
+        "alif": 1727,
+        "lam": 1526,
+        "mim": 1161,
+        "sad": 98
+      },
+      "all_div_19": false
+    },
+    "10": {
+      "letters": "ALR",
+      "verses": 109,
+      "letter_counts": {
+        "alif": 901,
+        "lam": 909,
+        "ra": 255
+      },
+      "all_div_19": false
+    },
+    "11": {
+      "letters": "ALR",
+      "verses": 123,
+      "letter_counts": {
+        "alif": 868,
+        "lam": 791,
+        "ra": 323
+      },
+      "all_div_19": false
+    },
+    "12": {
+      "letters": "ALR",
+      "verses": 111,
+      "letter_counts": {
+        "alif": 818,
+        "lam": 808,
+        "ra": 255
+      },
+      "all_div_19": false
+    },
+    "13": {
+      "letters": "ALMR",
+      "verses": 43,
+      "letter_counts": {
+        "alif": 415,
+        "lam": 476,
+        "mim": 257,
+        "ra": 135
+      },
+      "all_div_19": false
+    },
+    "14": {
+      "letters": "ALR",
+      "verses": 52,
+      "letter_counts": {
+        "alif": 400,
+        "lam": 448,
+        "ra": 158
+      },
+      "all_div_19": false
+    },
+    "15": {
+      "letters": "ALR",
+      "verses": 99,
+      "letter_counts": {
+        "alif": 319,
+        "lam": 319,
+        "ra": 94
+      },
+      "all_div_19": false
+    },
+    "19": {
+      "letters": "KhYAinS",
+      "verses": 98,
+      "letter_counts": {
+        "kaf": 137,
+        "ha": 148,
+        "ya": 311,
+        "ain": 117,
+        "sad": 26
+      },
+      "all_div_19": false
+    },
+    "20": {
+      "letters": "Th",
+      "verses": 135,
+      "letter_counts": {
+        "ta": 28,
+        "ha": 214
+      },
+      "all_div_19": false
+    },
+    "26": {
+      "letters": "TSinM",
+      "verses": 227,
+      "letter_counts": {
+        "ta": 33,
+        "sin": 93,
+        "mim": 481
+      },
+      "all_div_19": false
+    },
+    "27": {
+      "letters": "TSin",
+      "verses": 93,
+      "letter_counts": {
+        "ta": 27,
+        "sin": 93
+      },
+      "all_div_19": false
+    },
+    "28": {
+      "letters": "TSinM",
+      "verses": 88,
+      "letter_counts": {
+        "ta": 19,
+        "sin": 101,
+        "mim": 457
+      },
+      "all_div_19": false
+    },
+    "29": {
+      "letters": "ALM",
+      "verses": 69,
+      "letter_counts": {
+        "alif": 526,
+        "lam": 550,
+        "mim": 341
+      },
+      "all_div_19": false
+    },
+    "30": {
+      "letters": "ALM",
+      "verses": 60,
+      "letter_counts": {
+        "alif": 370,
+        "lam": 390,
+        "mim": 314
+      },
+      "all_div_19": false
+    },
+    "31": {
+      "letters": "ALM",
+      "verses": 34,
+      "letter_counts": {
+        "alif": 241,
+        "lam": 293,
+        "mim": 170
+      },
+      "all_div_19": false
+    },
+    "32": {
+      "letters": "ALM",
+      "verses": 30,
+      "letter_counts": {
+        "alif": 177,
+        "lam": 151,
+        "mim": 155
+      },
+      "all_div_19": false
+    },
+    "36": {
+      "letters": "YSin",
+      "verses": 83,
+      "letter_counts": {
+        "ya": 212,
+        "sin": 47
+      },
+      "all_div_19": false
+    },
+    "38": {
+      "letters": "S",
+      "verses": 88,
+      "letter_counts": {
+        "sad": 29
+      },
+      "all_div_19": false
+    },
+    "40": {
+      "letters": "HM",
+      "verses": 85,
+      "letter_counts": {
+        "ha_heavy": 62,
+        "mim": 377
+      },
+      "all_div_19": false
+    },
+    "41": {
+      "letters": "HM",
+      "verses": 54,
+      "letter_counts": {
+        "ha_heavy": 46,
+        "mim": 273
+      },
+      "all_div_19": false
+    },
+    "42": {
+      "letters": "HMAinSinQ",
+      "verses": 53,
+      "letter_counts": {
+        "ha_heavy": 51,
+        "mim": 297,
+        "ain": 98,
+        "sin": 53,
+        "qaf": 57
+      },
+      "all_div_19": false
+    },
+    "43": {
+      "letters": "HM",
+      "verses": 89,
+      "letter_counts": {
+        "ha_heavy": 42,
+        "mim": 321
+      },
+      "all_div_19": false
+    },
+    "44": {
+      "letters": "HM",
+      "verses": 59,
+      "letter_counts": {
+        "ha_heavy": 14,
+        "mim": 147
+      },
+      "all_div_19": false
+    },
+    "45": {
+      "letters": "HM",
+      "verses": 37,
+      "letter_counts": {
+        "ha_heavy": 29,
+        "mim": 197
+      },
+      "all_div_19": false
+    },
+    "46": {
+      "letters": "HM",
+      "verses": 35,
+      "letter_counts": {
+        "ha_heavy": 34,
+        "mim": 222
+      },
+      "all_div_19": false
+    },
+    "50": {
+      "letters": "Q",
+      "verses": 45,
+      "letter_counts": {
+        "qaf": 57
+      },
+      "all_div_19": true
+    },
+    "68": {
+      "letters": "N",
+      "verses": 52,
+      "letter_counts": {
+        "nun": 131
+      },
+      "all_div_19": false
+    }
+  }
+}

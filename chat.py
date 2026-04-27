@@ -993,6 +993,123 @@ def tool_search_morphological_pattern(session, pattern: str = None,
     }
 
 
+def tool_get_code19_features(session, scope: str, target: str = None) -> dict:
+    """
+    Retrieve Khalifa-style Code-19 mathematical features.
+
+    Args:
+        scope: "global" | "sura" | "verse"
+        target: required for scope="sura" (sura number, e.g. "50")
+                or scope="verse" (verseId, e.g. "2:255")
+
+    Returns counts and divisibility-by-19 indicators that have been precomputed
+    by build_code19_features.py over the immutable Arabic text. These figures
+    are arithmetic (not interpretation) and cannot be hallucinated.
+    """
+    if scope == "global":
+        # Read the precomputed summary file
+        from pathlib import Path
+        import json as _json
+        p = Path(__file__).parent / "data" / "code19_summary.json"
+        if not p.exists():
+            return {"error": "data/code19_summary.json not found — run build_code19_features.py"}
+        try:
+            data = _json.loads(p.read_text(encoding="utf-8"))
+        except Exception as e:
+            return {"error": f"failed to read code19_summary.json: {e}"}
+        return {
+            "found": True,
+            "scope": "global",
+            "khalifa_total_verses": data.get("khalifa_total"),
+            "khalifa_total_div_19": data.get("khalifa_total_div_19"),
+            "quotient": data.get("khalifa_total_div_by_19_quotient"),
+            "numbered_verses": data.get("total_numbered_verses"),
+            "unnumbered_basmalahs": data.get("unnumbered_basmalahs"),
+            "num_surahs": data.get("num_surahs"),
+            "num_surahs_div_19": data.get("num_surahs_div_19"),
+            "num_mysterious_letter_surahs": data.get("num_mysterious_letter_surahs"),
+            "global_letter_counts": data.get("global_letter_counts"),
+            "key_examples": [
+                {"sura": 50, "letters": "Q", "letter_counts": data["per_mysterious_letter_surah"].get("50", {}).get("letter_counts")},
+                {"sura": 42, "letters": "HMASQ", "letter_counts": data["per_mysterious_letter_surah"].get("42", {}).get("letter_counts")},
+                {"sura": 68, "letters": "N", "letter_counts": data["per_mysterious_letter_surah"].get("68", {}).get("letter_counts")},
+                {"sura": 38, "letters": "S", "letter_counts": data["per_mysterious_letter_surah"].get("38", {}).get("letter_counts")},
+                {"sura": 36, "letters": "YSin", "letter_counts": data["per_mysterious_letter_surah"].get("36", {}).get("letter_counts")},
+            ],
+        }
+
+    elif scope == "sura":
+        if target is None:
+            return {"error": "scope='sura' requires target (sura number, e.g. '50')"}
+        try:
+            num = int(str(target).split(":")[0])
+        except ValueError:
+            return {"error": f"invalid sura target: {target}"}
+        row = session.run("""
+            MATCH (su:Sura {number: $n})
+            RETURN su.number AS num, su.verses_count AS verses,
+                   su.mysterious_letters AS ml,
+                   su.ml_letter_counts_json AS counts_json,
+                   su.ml_div_19_json AS div19_json,
+                   su.mod19_verse_count AS mod19_vc
+        """, n=num).single()
+        if row is None or row["num"] is None:
+            return {"found": False, "error": f"Sura {num} not found or features not stamped"}
+        import json as _json
+        counts = _json.loads(row["counts_json"]) if row["counts_json"] else {}
+        div19 = _json.loads(row["div19_json"]) if row["div19_json"] else {}
+        return {
+            "found": True,
+            "scope": "sura",
+            "sura": num,
+            "verses_count": row["verses"],
+            "mysterious_letters": row["ml"],
+            "letter_counts": counts,
+            "all_letter_counts_div_19": all(div19.values()) if div19 else None,
+            "per_letter_div_19": div19,
+            "verses_count_mod_19": row["mod19_vc"],
+        }
+
+    elif scope == "verse":
+        if target is None:
+            return {"error": "scope='verse' requires target (verseId, e.g. '2:255')"}
+        row = session.run("""
+            MATCH (v:Verse {verseId: $vid})
+            RETURN v.verseId AS id, v.surah AS sura, v.verseNum AS vn,
+                   v.position_in_sura AS pos,
+                   v.is_initial_verse AS init,
+                   v.ar_char_count AS char_count, v.ar_word_count AS word_count,
+                   v.letter_alif AS alif, v.letter_lam AS lam, v.letter_mim AS mim,
+                   v.letter_ra AS ra, v.letter_sad AS sad, v.letter_kaf AS kaf,
+                   v.letter_ha AS ha, v.letter_ha_heavy AS ha_heavy,
+                   v.letter_ya AS ya, v.letter_ain AS ain, v.letter_ta AS ta,
+                   v.letter_sin AS sin, v.letter_qaf AS qaf, v.letter_nun AS nun
+        """, vid=str(target)).single()
+        if row is None or row["id"] is None:
+            return {"found": False, "error": f"verse {target} not found"}
+        return {
+            "found": True,
+            "scope": "verse",
+            "verse_id": row["id"],
+            "sura": row["sura"],
+            "verseNum": row["vn"],
+            "position_in_sura": row["pos"],
+            "is_initial_verse": row["init"],
+            "ar_char_count": row["char_count"],
+            "ar_word_count": row["word_count"],
+            "letter_counts": {
+                "alif": row["alif"], "lam": row["lam"], "mim": row["mim"],
+                "ra": row["ra"], "sad": row["sad"], "kaf": row["kaf"],
+                "ha": row["ha"], "ha_heavy": row["ha_heavy"],
+                "ya": row["ya"], "ain": row["ain"], "ta": row["ta"],
+                "sin": row["sin"], "qaf": row["qaf"], "nun": row["nun"],
+            },
+        }
+
+    else:
+        return {"error": f"unknown scope: {scope}; use 'global' | 'sura' | 'verse'"}
+
+
 # ── tool schema (Anthropic tool_use format) ────────────────────────────────────
 
 TOOLS = [
@@ -1308,6 +1425,34 @@ TOOLS = [
                 }
             }
         }
+    },
+    {
+        "name": "get_code19_features",
+        "description": (
+            "Retrieve Khalifa-style Code-19 mathematical features (verse counts, "
+            "mysterious-letter frequencies, divisibility-by-19 indicators). These "
+            "are arithmetic over the immutable Arabic text and CANNOT be hallucinated — "
+            "use this when discussing the mathematical miracle of 19, the count of "
+            "Q in Surahs 50/42, the count of N in Surah 68, or any claim that "
+            "Khalifa makes about verse-arithmetic. "
+            "scope='global' returns project-wide totals; scope='sura' takes a sura "
+            "number; scope='verse' takes a verseId like '2:255'."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "scope": {
+                    "type": "string",
+                    "enum": ["global", "sura", "verse"],
+                    "description": "What level to query"
+                },
+                "target": {
+                    "type": "string",
+                    "description": "For scope='sura': sura number (e.g. '50'). For scope='verse': verseId (e.g. '2:255'). Omit for scope='global'."
+                }
+            },
+            "required": ["scope"]
+        }
     }
 ]
 
@@ -1349,6 +1494,8 @@ def dispatch_tool(session, tool_name: str, tool_input: dict, user_query: str = N
             result = tool_lookup_wujuh(session, **tool_input)
         elif tool_name == "search_morphological_pattern":
             result = tool_search_morphological_pattern(session, **tool_input)
+        elif tool_name == "get_code19_features":
+            result = tool_get_code19_features(session, **tool_input)
         else:
             result = {"error": f"Unknown tool: {tool_name}"}
 
