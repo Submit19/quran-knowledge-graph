@@ -55,15 +55,38 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_graph import tokenize_and_lemmatize
 
 # ── semantic model (loaded once, reused across requests) ───────────────────────
+#
+# Two-index design: pick which embedding model + index `tool_semantic_search`
+# uses via the SEMANTIC_SEARCH_INDEX env var. Default keeps the legacy
+# all-MiniLM-L6-v2 path so nothing breaks; flip to BGE-M3 by setting:
+#   SEMANTIC_SEARCH_INDEX=verse_embedding_m3
+# (after running `python embed_verses_m3.py` to populate it)
 
-_sem_model = None
+_SEMANTIC_INDEX = os.environ.get("SEMANTIC_SEARCH_INDEX", "verse_embedding").strip()
 
-def _get_sem_model():
-    global _sem_model
-    if _sem_model is None:
+# Map: index name -> embedding model name
+_INDEX_TO_MODEL = {
+    "verse_embedding":      None,                # uses cfg.embedding_model() (= all-MiniLM-L6-v2)
+    "verse_embedding_m3":   "BAAI/bge-m3",       # English BGE-M3
+    "verse_embedding_m3_ar": "BAAI/bge-m3",      # Arabic BGE-M3 — same model, different index
+}
+
+_sem_models = {}     # name -> SentenceTransformer
+
+def _get_sem_model_for(index_name: str = None):
+    """Return the right SentenceTransformer for the active vector index."""
+    idx = index_name or _SEMANTIC_INDEX
+    name = _INDEX_TO_MODEL.get(idx)
+    if name is None:
+        name = cfg.embedding_model()
+    if name not in _sem_models:
         from sentence_transformers import SentenceTransformer
-        _sem_model = SentenceTransformer(cfg.embedding_model())
-    return _sem_model
+        _sem_models[name] = SentenceTransformer(name)
+    return _sem_models[name]
+
+# Back-compat alias
+def _get_sem_model():
+    return _get_sem_model_for(_SEMANTIC_INDEX)
 
 # ── graph tool implementations ─────────────────────────────────────────────────
 
@@ -545,11 +568,12 @@ def tool_semantic_search(session, query: str, top_k: int = 40) -> dict:
     hits plus their graph context, reducing the need for follow-up get_verse
     calls on every hit.
     """
-    model = _get_sem_model()
+    # Pick model + index dynamically (env-driven so we can A/B test BGE-M3)
+    model = _get_sem_model_for(_SEMANTIC_INDEX)
     vec = model.encode([query], normalize_embeddings=True, convert_to_numpy=True)[0].tolist()
 
-    results = session.run("""
-        CALL db.index.vector.queryNodes('verse_embedding', $k, $vec)
+    cypher = """
+        CALL db.index.vector.queryNodes($index, $k, $vec)
         YIELD node, score
         WHERE node.verseId IS NOT NULL
         WITH node, score ORDER BY score DESC
@@ -566,7 +590,8 @@ def tool_semantic_search(session, query: str, top_k: int = 40) -> dict:
         RETURN node.verseId AS verseId, node.surahName AS surahName,
                node.surah AS surah, node.text AS text, score,
                related_verses, arabic_roots, typed_edges
-    """, k=top_k, vec=vec).data()
+    """
+    results = session.run(cypher, index=_SEMANTIC_INDEX, k=top_k, vec=vec).data()
 
     by_surah = {}
     for r in results:

@@ -118,6 +118,35 @@ ANTHROPIC_API_KEY=sk-ant-...
 
 Neo4j database name: `quran` (set via `NEO4J_DATABASE` env var).
 
+### Optional env vars (added 2026-04)
+
+```
+# Citation verification (post-response NLI/MiniCheck check). Off by default.
+ENABLE_CITATION_VERIFY=1
+CITATION_VERIFIER_MODEL=nli|minicheck    # default 'nli'
+MINICHECK_MODEL=flan-t5-large            # roberta-large | deberta-v3-large | flan-t5-large
+MINICHECK_THRESHOLD=0.5                  # support probability cutoff
+
+# Switch which Neo4j vector index tool_semantic_search uses
+SEMANTIC_SEARCH_INDEX=verse_embedding             # default (all-MiniLM-L6-v2, 384-dim)
+                     |verse_embedding_m3          # BGE-M3 over English (1024-dim)
+                     |verse_embedding_m3_ar       # BGE-M3 over Arabic (1024-dim)
+```
+
+## New Tools and Scripts (2026-04)
+
+- `build_code19_features.py` — stamps Verse and Sura nodes with arithmetic
+  features for Khalifa's Code-19 (letter counts of mysterious-letters,
+  verse counts mod 19). Idempotent. Output: `data/code19_summary.json`.
+- `analyze_graph_structure.py` — Network Science snapshot
+  (degree distribution, hubs, betweenness, modularity, components).
+  Output: `data/graph_stats.json`.
+- `embed_verses_m3.py` — re-embed verses with BGE-M3 (1024-dim multilingual,
+  EN + AR). Additive, doesn't touch the legacy `embedding` property.
+- `backfill_embedding_provenance.py` — one-shot to stamp existing
+  embeddings with provenance metadata.
+- New chat tool: `get_code19_features(scope, target)`.
+
 ## Dependencies
 
 Core: `anthropic`, `neo4j`, `fastapi`, `uvicorn`, `sentence-transformers`, `pyyaml`, `python-dotenv`, `nltk`, `scikit-learn`, `numpy`
