@@ -1486,8 +1486,105 @@ SYSTEM_PROMPT = cfg.system_prompt()
 
 # ── agentic tool-use loop ──────────────────────────────────────────────────────
 
+# ── tool-result cache (Nixon "1-second cache transforms your API" pattern) ────
+#
+# Same agentic loop often calls identical tools multiple times across turns.
+# A short-TTL LRU cache avoids re-querying Neo4j for the same args inside a
+# single conversation. Off by default for safety; flip on with env vars.
+#
+#   TOOL_CACHE_TTL_SEC=30   (0 = disabled, default = 30s)
+#   TOOL_CACHE_MAX=256      (max entries, FIFO-on-insert eviction)
+#
+# Stats are tracked in _TOOL_CACHE_STATS — call get_tool_cache_stats() to read.
+
+import threading
+
+_TOOL_CACHE_TTL = float(os.environ.get("TOOL_CACHE_TTL_SEC", "30"))
+_TOOL_CACHE_MAX = int(os.environ.get("TOOL_CACHE_MAX", "256"))
+_TOOL_CACHE: dict = {}             # key -> (expires_at_ts, result_json)
+_TOOL_CACHE_LOCK = threading.Lock()
+_TOOL_CACHE_STATS = {"hits": 0, "misses": 0, "stores": 0, "evictions": 0,
+                     "expired": 0, "skipped": 0}
+
+
+def _tool_cache_key(tool_name: str, tool_input: dict, user_query: str | None) -> str:
+    """Stable key over (tool, args, user_query, active vector index)."""
+    args_json = json.dumps(tool_input or {}, sort_keys=True, ensure_ascii=False)
+    uq = (user_query or "")[:200]   # cap to avoid pathological keys
+    return f"{tool_name}|{_SEMANTIC_INDEX}|{args_json}|{uq}"
+
+
+def _tool_cache_get(key: str):
+    if _TOOL_CACHE_TTL <= 0:
+        return None
+    import time
+    now = time.time()
+    with _TOOL_CACHE_LOCK:
+        entry = _TOOL_CACHE.get(key)
+        if entry is None:
+            _TOOL_CACHE_STATS["misses"] += 1
+            return None
+        expires, value = entry
+        if expires < now:
+            del _TOOL_CACHE[key]
+            _TOOL_CACHE_STATS["expired"] += 1
+            _TOOL_CACHE_STATS["misses"] += 1
+            return None
+        _TOOL_CACHE_STATS["hits"] += 1
+        return value
+
+
+def _tool_cache_put(key: str, value: str, has_error: bool = False):
+    if _TOOL_CACHE_TTL <= 0 or has_error:
+        if has_error:
+            _TOOL_CACHE_STATS["skipped"] += 1
+        return
+    import time
+    expires = time.time() + _TOOL_CACHE_TTL
+    with _TOOL_CACHE_LOCK:
+        # FIFO-style eviction if over cap
+        if len(_TOOL_CACHE) >= _TOOL_CACHE_MAX:
+            # drop the oldest (smallest expires_at)
+            try:
+                oldest_key = min(_TOOL_CACHE, key=lambda k: _TOOL_CACHE[k][0])
+                del _TOOL_CACHE[oldest_key]
+                _TOOL_CACHE_STATS["evictions"] += 1
+            except ValueError:
+                pass
+        _TOOL_CACHE[key] = (expires, value)
+        _TOOL_CACHE_STATS["stores"] += 1
+
+
+def get_tool_cache_stats() -> dict:
+    """Return a snapshot of cache stats — useful for observability."""
+    with _TOOL_CACHE_LOCK:
+        total = _TOOL_CACHE_STATS["hits"] + _TOOL_CACHE_STATS["misses"]
+        hit_rate = _TOOL_CACHE_STATS["hits"] / total if total else 0.0
+        return {
+            **dict(_TOOL_CACHE_STATS),
+            "size": len(_TOOL_CACHE),
+            "max_size": _TOOL_CACHE_MAX,
+            "ttl_sec": _TOOL_CACHE_TTL,
+            "hit_rate": round(hit_rate, 4),
+            "total_lookups": total,
+        }
+
+
+def clear_tool_cache():
+    """Drop everything in the cache. For tests + cache busting after writes."""
+    with _TOOL_CACHE_LOCK:
+        _TOOL_CACHE.clear()
+        for k in _TOOL_CACHE_STATS:
+            _TOOL_CACHE_STATS[k] = 0
+
+
 def dispatch_tool(session, tool_name: str, tool_input: dict, user_query: str = None) -> str:
     """Call the appropriate graph function, apply retrieval gating, return JSON."""
+    cache_key = _tool_cache_key(tool_name, tool_input, user_query)
+    cached = _tool_cache_get(cache_key)
+    if cached is not None:
+        return cached
+
     try:
         if tool_name == "search_keyword":
             result = tool_search_keyword(session, **tool_input)
@@ -1534,7 +1631,10 @@ def dispatch_tool(session, tool_name: str, tool_input: dict, user_query: str = N
 
     except Exception as e:
         result = {"error": str(e)}
-    return json.dumps(result, ensure_ascii=False)
+    payload = json.dumps(result, ensure_ascii=False)
+    has_error = isinstance(result, dict) and "error" in result
+    _tool_cache_put(cache_key, payload, has_error=has_error)
+    return payload
 
 
 def run_agent_turn(
