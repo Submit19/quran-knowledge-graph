@@ -167,6 +167,83 @@ def _build_subgraph(session, seed_ids: set[str], hops: int = 1,
     return g
 
 
+def ppr_rerank(session, candidate_ids: list[str], seed_scores: dict[str, float] = None,
+               top_k: int = 20, pagerank_alpha: float = 0.5,
+               include_similar_phrase: bool = True) -> list[tuple[str, float]]:
+    """
+    Use PPR purely as a re-ranker over a candidate set produced by some
+    other retriever (hybrid_search, semantic_search, etc.). NOT a retriever.
+
+    This is the salvage-pattern from the QRCD negative result + Eifrem's
+    "page rank or stars" structural fusion advice: don't replace dense
+    retrieval, refine its top-K with graph structure.
+
+    Args:
+        candidate_ids  : list of verseIds to re-rank (typically top 20-50
+                         from hybrid_search or semantic_search)
+        seed_scores    : optional dict[verseId -> personalisation weight].
+                         If None, uses uniform weight on candidates.
+        top_k          : returned ranked candidates
+        pagerank_alpha : 1 - damping. Higher = more local, less random.
+        include_similar_phrase: pull SIMILAR_PHRASE edges into the subgraph
+
+    Returns: [(verseId, ppr_score), ...] sorted desc.
+    """
+    import networkx as nx
+    if not candidate_ids:
+        return []
+    seeds = list(set(candidate_ids))
+
+    # Build subgraph anchored on candidates
+    sp_clause = "OR type(r) = 'SIMILAR_PHRASE'" if include_similar_phrase else ""
+    rows = session.run(f"""
+        MATCH (v:Verse) WHERE v.verseId IN $seeds
+        OPTIONAL MATCH (v)-[r]-(o:Verse)
+        WHERE type(r) = 'RELATED_TO'
+           OR type(r) IN ['SUPPORTS','ELABORATES','QUALIFIES','CONTRASTS','REPEATS']
+           {sp_clause}
+        WITH v, r, o LIMIT 6000
+        RETURN v.verseId AS src, type(r) AS et, o.verseId AS dst,
+               coalesce(r.score, 1.0) AS w
+    """, seeds=seeds).data()
+
+    g = nx.Graph()
+    for r in rows:
+        if r["src"] and r["dst"]:
+            w = float(r["w"] or 1.0)
+            if r["et"] == "SIMILAR_PHRASE":
+                w = 2.0
+            elif r["et"] in ("SUPPORTS","ELABORATES","QUALIFIES","CONTRASTS","REPEATS"):
+                w = 1.5
+            g.add_edge(r["src"], r["dst"], weight=w)
+    for vid in seeds:
+        if vid not in g:
+            g.add_node(vid)
+
+    # Personalisation: only candidates get nonzero seed weight
+    if seed_scores:
+        pers = {n: float(seed_scores.get(n, 0.0)) for n in g if n in candidate_ids}
+    else:
+        pers = {n: 1.0 / len(seeds) for n in g if n in candidate_ids}
+    if not pers:
+        return []
+
+    try:
+        pr = nx.pagerank(g, alpha=1 - pagerank_alpha,
+                         personalization=pers, weight="weight",
+                         max_iter=200, tol=1e-6)
+    except Exception:
+        # Fall back to seed_scores order if PPR fails
+        return sorted(seed_scores.items() if seed_scores else [(v, 1.0) for v in candidate_ids],
+                      key=lambda x: -x[1])[:top_k]
+
+    # Restrict ranking to candidates only — we're a re-ranker, not a retriever
+    candidate_set = set(candidate_ids)
+    ranked = sorted(((v, s) for v, s in pr.items() if v in candidate_set),
+                    key=lambda x: -x[1])
+    return ranked[:top_k]
+
+
 def hipporag_search(session, query: str,
                     top_k_seed_verses: int = 30,
                     top_k_past_queries: int = 5,
