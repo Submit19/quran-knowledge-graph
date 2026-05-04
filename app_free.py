@@ -908,7 +908,11 @@ async def _agent_stream(message: str, history: list,
                             summary = "Done"
                             tool_ok = False
 
-                        # Record this tool call in reasoning memory
+                        # Record this tool call in reasoning memory.
+                        # Pass the raw result_str so we can lay down
+                        # (:ReasoningTrace)-[:RETRIEVED]->(:Verse) edges that
+                        # accumulate a learnable signal of which verses each
+                        # tool returns for which kinds of queries.
                         if rec is not None:
                             try:
                                 rec.log_tool_call(
@@ -917,6 +921,7 @@ async def _agent_stream(message: str, history: list,
                                     summary=summary, ok=tool_ok,
                                     duration_ms=tool_duration_ms,
                                     result_citation_count=result_cite_count,
+                                    result_payload=result_str,
                                 )
                             except Exception as _e:
                                 print(f"  [reasoning_memory] log_tool_call failed: {_e}")

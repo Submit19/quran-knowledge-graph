@@ -106,6 +106,9 @@ class ReasoningMemory:
             s.run("CREATE INDEX trace_id IF NOT EXISTS FOR (t:ReasoningTrace) ON (t.traceId)")
             s.run("CREATE INDEX toolcall_id IF NOT EXISTS FOR (tc:ToolCall) ON (tc.callId)")
             s.run("CREATE INDEX toolcall_name IF NOT EXISTS FOR (tc:ToolCall) ON (tc.tool_name)")
+            # Indexes on the new (:ReasoningTrace)-[:RETRIEVED]->(:Verse) layer
+            # so we can quickly aggregate "what tool returned this verse most"
+            s.run("CREATE INDEX retrieved_tool IF NOT EXISTS FOR ()-[r:RETRIEVED]->() ON (r.tool)")
             # Citation checks (NLI verdicts persisted from citation_verifier.py)
             s.run("CREATE INDEX citation_check_id IF NOT EXISTS FOR (cc:CitationCheck) ON (cc.checkId)")
             s.run("CREATE INDEX citation_check_ref IF NOT EXISTS FOR (cc:CitationCheck) ON (cc.ref)")
@@ -187,12 +190,49 @@ class QueryRecorder:
 
     def log_tool_call(self, turn: int, order: int, tool_name: str, args: dict,
                        summary: str, ok: bool, duration_ms: int,
-                       result_citation_count: int = 0):
+                       result_citation_count: int = 0,
+                       result_payload: str | dict | None = None):
+        """
+        Log a tool call. If `result_payload` is provided, also extract any
+        verse references from it and write (:ReasoningTrace)-[:RETRIEVED]->(:Verse)
+        edges with provenance. Each edge carries:
+          - tool          : name of the tool that returned the verse
+          - rank          : 1-based position in the order verses appeared in the result
+          - turn          : agent turn number
+          - call_id       : link back to the ToolCall node
+
+        These edges create a learnable signal: which verses does this corpus's
+        agentic loop keep retrieving, for what kinds of queries, via which tools?
+        """
         call_id = str(uuid.uuid4())
         args_json = json.dumps(args, ensure_ascii=False)[:500]
         self.turn_count = max(self.turn_count, turn)
         self.tool_call_count += 1
         step_order = self.tool_call_count  # global ordering across turns
+
+        # Extract verse refs from the result payload (if provided + tool succeeded)
+        verse_refs: list[str] = []
+        if ok and result_payload is not None:
+            try:
+                if isinstance(result_payload, dict):
+                    payload_str = json.dumps(result_payload, ensure_ascii=False)
+                else:
+                    payload_str = str(result_payload)
+                # Match standard verseId pattern; cap to first 100 to keep edges bounded
+                import re as _re
+                seen = set()
+                for m in _re.finditer(r'\b(\d{1,3}:\d{1,3})\b', payload_str):
+                    ref = m.group(1)
+                    s, v = ref.split(":")
+                    si, vi = int(s), int(v)
+                    if 1 <= si <= 114 and 1 <= vi <= 286 and ref not in seen:
+                        verse_refs.append(ref)
+                        seen.add(ref)
+                        if len(verse_refs) >= 100:
+                            break
+            except Exception:
+                verse_refs = []
+
         with self.memory.driver.session(database=self.memory.db) as s:
             s.run("""
                 MATCH (t:ReasoningTrace {traceId: $tid})
@@ -207,6 +247,21 @@ class QueryRecorder:
                  name=tool_name, args=args_json, sum=summary[:300], ok=ok,
                  dur=duration_ms, cites=result_citation_count,
                  step_order=step_order)
+
+            # Write the RETRIEVED edges in one batch (only if we found refs)
+            if verse_refs:
+                rows = [{"ref": ref, "rank": i}
+                        for i, ref in enumerate(verse_refs, 1)]
+                s.run("""
+                    MATCH (t:ReasoningTrace {traceId: $tid})
+                    UNWIND $rows AS row
+                    MATCH (v:Verse {verseId: row.ref})
+                    MERGE (t)-[r:RETRIEVED {tool: $tool, call_id: $cid}]->(v)
+                    SET r.rank = row.rank,
+                        r.turn = $turn,
+                        r.ts = datetime()
+                """, tid=self.trace_id, tool=tool_name, cid=call_id,
+                     turn=turn, rows=rows)
 
     def finish(self, answer_text: str, citation_count: int, status: str = "completed"):
         total_ms = int((time.time() - self.start_time) * 1000)
