@@ -22,3 +22,4 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-07T12:50 | measure_per_tool_latency | cypher_analysis | DONE |  | wrote ralph_analysis_measure_per_tool_latency.md |
 | 2026-05-07T12:51 | measure_cache_hit_rate | cypher_analysis | DONE |  | wrote ralph_analysis_measure_cache_hit_rate.md |
 | 2026-05-07T12:51 | propose_speed_tunings | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_propose_speed_tunings.md (review before use) |
+| 2026-05-07T12:52 | propose_streaming_progress_indicator | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_propose_streaming_progress_indicator.md (review before use) |
