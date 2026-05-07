@@ -24,3 +24,4 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-07T12:51 | propose_speed_tunings | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_propose_speed_tunings.md (review before use) |
 | 2026-05-07T12:52 | propose_streaming_progress_indicator | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_propose_streaming_progress_indicator.md (review before use) |
 | 2026-05-07T12:53 | measure_reranker_speed_vs_quality | cleanup | DONE |  | Run eval twice — once with reranker on, once with RERANK_DISABLED=1 — compare ti |
+| 2026-05-07T12:56 | propose_citation_tooltip_v2 | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_propose_citation_tooltip_v2.md (review before use) |

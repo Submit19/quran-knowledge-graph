@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-07T12:53:42.148558+00:00",
-  "tick_count": 11,
+  "last_tick": "2026-05-07T12:57:41.560223+00:00",
+  "tick_count": 12,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -10,7 +10,8 @@
     "measure_cache_hit_rate",
     "propose_speed_tunings",
     "propose_streaming_progress_indicator",
-    "measure_reranker_speed_vs_quality"
+    "measure_reranker_speed_vs_quality",
+    "propose_citation_tooltip_v2"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -279,6 +280,34 @@
           "check": "python True",
           "passed": true,
           "detail": "ok"
+        }
+      ]
+    },
+    {
+      "task_id": "propose_citation_tooltip_v2",
+      "type": "agent_creative",
+      "started_at": "2026-05-07T12:56:07.054781+00:00",
+      "finished_at": "2026-05-07T12:57:41.560223+00:00",
+      "status": "DONE_WITH_CONCERNS",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "wrote ralph_agent_propose_citation_tooltip_v2.md (review before use)",
+      "artefacts": [
+        "data\\ralph_agent_propose_citation_tooltip_v2.md"
+      ],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_exists data/ralph_agent_propose_citation_tooltip_v2.md",
+          "passed": true,
+          "detail": "C:\\Users\\alika\\Agent Teams\\quran-graph-standalone\\data\\ralph_agent_propose_citation_tooltip_v2.md"
+        },
+        {
+          "check": "file_min_bytes data/ralph_agent_propose_citation_tooltip_v2.md >= 700",
+          "passed": true,
+          "detail": "size=7971"
         }
       ]
     }
