@@ -129,16 +129,38 @@ def save_backlog(backlog: dict):
     )
 
 
+_LOG_HEADER = (
+    "# Ralph Loop — tick log\n\n"
+    "## Codebase Patterns\n"
+    "_Consolidated learnings from prior ticks. Append, don't replace.\n"
+    " A pattern goes here when it's general/reusable enough that future\n"
+    " ticks (and future humans) should know it. Keep entries terse._\n\n"
+    "<!-- PATTERNS:START -->\n"
+    "<!-- PATTERNS:END -->\n\n"
+    "## Tick history\n\n"
+    "| ts | task_id | type | status | metric Δ | notes |\n"
+    "|----|---------|------|--------|----------|-------|\n"
+)
+
+
+def _ensure_log():
+    """Make sure ralph_log.md exists with the canonical header."""
+    if not LOG_PATH.exists():
+        LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+        LOG_PATH.write_text(_LOG_HEADER, encoding="utf-8")
+    else:
+        # Be lenient if the file existed in v1 (pre-Codebase-Patterns) shape:
+        body = LOG_PATH.read_text(encoding="utf-8")
+        if "<!-- PATTERNS:START -->" not in body:
+            # migrate: keep the existing tick rows, prepend the new header
+            old_rows = body.split("|----|", 1)
+            after = ("|----|" + old_rows[1]) if len(old_rows) > 1 else ""
+            LOG_PATH.write_text(_LOG_HEADER + after, encoding="utf-8")
+
+
 def append_log(result: TickResult, task: dict):
     """Append a markdown row to ralph_log.md."""
-    LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
-    if not LOG_PATH.exists():
-        LOG_PATH.write_text(
-            "# Ralph Loop — tick log\n\n"
-            "| ts | task_id | type | status | metric Δ | notes |\n"
-            "|----|---------|------|--------|----------|-------|\n",
-            encoding="utf-8",
-        )
+    _ensure_log()
     delta_s = ""
     if result.delta is not None:
         delta_s = f"{result.delta:+.2f}"
@@ -146,6 +168,64 @@ def append_log(result: TickResult, task: dict):
     row = f"| {result.started_at[:16]} | {result.task_id} | {result.type} | {result.status} | {delta_s} | {notes} |\n"
     with LOG_PATH.open("a", encoding="utf-8") as f:
         f.write(row)
+
+
+def add_codebase_pattern(pattern: str, source_task: str | None = None):
+    """
+    Append a durable learning to the `<!-- PATTERNS:START --> ... :END -->`
+    block at the top of ralph_log.md. snarktank/ralph pattern: durable
+    knowledge separate from per-tick rows.
+    """
+    _ensure_log()
+    body = LOG_PATH.read_text(encoding="utf-8")
+    start_tag, end_tag = "<!-- PATTERNS:START -->", "<!-- PATTERNS:END -->"
+    i = body.find(start_tag)
+    j = body.find(end_tag)
+    if i < 0 or j < 0:
+        return False  # tags missing — refuse to mangle the file
+    line = f"- {pattern.strip()}"
+    if source_task:
+        line += f"  _(from `{source_task}`)_"
+    line += "\n"
+    inside = body[i + len(start_tag): j]
+    if line.strip() in inside:
+        return False  # already present
+    new_inside = (inside.rstrip() + "\n" + line) if inside.strip() else "\n" + line
+    new_body = body[:i + len(start_tag)] + new_inside + body[j:]
+    LOG_PATH.write_text(new_body, encoding="utf-8")
+    return True
+
+
+# ── repo-wide quality gate ──────────────────────────────────────────────────
+# Inspired by snarktank/ralph: "ALL commits must pass your project's quality
+# checks (typecheck, lint, test)." For our project this is a fast smoke
+# import — broken Python in any of the core modules and the live agent loop
+# breaks. Run before committing any task that mutates code.
+
+CORE_MODULES = [
+    "chat", "app_free", "reasoning_memory",
+    "retrieval_gate", "citation_verifier", "ref_resolver",
+    "ralph_loop",
+]
+
+
+def quality_gate() -> tuple[bool, str]:
+    """
+    Run the smoke-import gate. Returns (passed, message).
+    Fast — typically <2s. Catches broken-Python regressions immediately.
+    """
+    proc = subprocess.run(
+        [sys.executable, "-c",
+         "import " + ", ".join(CORE_MODULES) + "; print('ok')"],
+        cwd=str(ROOT),
+        capture_output=True,
+        text=True,
+        timeout=30,
+    )
+    if proc.returncode == 0 and "ok" in (proc.stdout or ""):
+        return True, "core modules import cleanly"
+    err = (proc.stderr or proc.stdout or "")[-400:]
+    return False, err
 
 
 # ── task picker ──────────────────────────────────────────────────────────────
@@ -156,24 +236,28 @@ def pick_next_task(backlog: dict, state: dict, allow_types: set[str] | None = No
       - is not already done
       - is not in_progress
       - has no unfinished blockers
-      - is in `allow_types` if specified (default: skip 'manual' and 'external_run')
       - has not been quarantined (≥ MAX_ATTEMPTS failed)
+      - if `allow_types` is given: type must be in that set
+      - if `allow_types` is None: skip 'manual' and 'external_run' (auto-mode default)
     """
-    skip_types = {"manual", "external_run"}
-    if allow_types is not None:
-        skip_types -= allow_types
     done = set(state.get("done_task_ids", []))
     skipped = set(state.get("skipped_task_ids", []))
     quarantined = set(state.get("quarantined_task_ids", []))
     in_prog = state.get("in_progress")
     attempts = state.get("attempts", {})  # task_id -> count
+    auto_skip_types = {"manual", "external_run"}
 
     candidates = []
     for t in backlog.get("tasks", []):
         if t["id"] in done or t["id"] in skipped or t["id"] in quarantined or t["id"] == in_prog:
             continue
-        if t.get("type") in skip_types:
-            continue
+        ttype = t.get("type")
+        if allow_types is not None:
+            if ttype not in allow_types:
+                continue
+        else:
+            if ttype in auto_skip_types:
+                continue
         if any(b not in done for b in (t.get("blockers") or [])):
             continue
         max_a = int((t.get("spec") or {}).get("max_attempts", MAX_ATTEMPTS_DEFAULT))
@@ -595,6 +679,28 @@ def tick(force_task_id: str | None = None,
                 result.status = DONE_WITH_CONCERNS
                 result.notes = (result.notes or "") + " (no acceptance criteria — soft pass)"
 
+    # ── Repo-wide quality gate (snarktank pattern) ──────────────────────
+    # Any task that says it modifies code must clear the smoke-import
+    # gate before being marked DONE. Prevents broken-Python regressions
+    # from compounding across iterations.
+    if (task.get("spec") or {}).get("commits_code") and result.status in {DONE, DONE_WITH_CONCERNS}:
+        gate_ok, gate_msg = quality_gate()
+        if not gate_ok:
+            result.status = FAILED
+            result.notes = (result.notes or "") + f" | QUALITY GATE FAILED: {gate_msg[:200]}"
+        else:
+            result.notes = (result.notes or "") + f" | quality gate ok"
+
+    # ── Pattern recording ────────────────────────────────────────────────
+    # If the executor populated result.notes with a "PATTERN:" prefix line,
+    # promote it to the Codebase Patterns block. snarktank/ralph: durable
+    # knowledge separate from per-tick rows.
+    if result.status in TERMINAL_OK and result.notes:
+        for line in (result.notes or "").splitlines():
+            if line.strip().startswith("PATTERN:"):
+                add_codebase_pattern(line.strip()[len("PATTERN:"):].strip(),
+                                     source_task=task["id"])
+
     result.finished_at = _now_iso()
 
     # Persist
@@ -639,6 +745,77 @@ def tick(force_task_id: str | None = None,
 
 # ── helpers exposed for ralph_tick.py CLI ───────────────────────────────────
 
+def is_project_complete(state: dict | None = None,
+                         backlog: dict | None = None) -> tuple[bool, list[dict]]:
+    """
+    Check whether the project's top-level completion criteria are all met.
+
+    snarktank/ralph signals "<promise>COMPLETE</promise>" when all stories
+    in prd.json have passes:true. We allow a richer set of criteria in
+    ralph_backlog.yaml's `project_completion:` block:
+
+      project_completion:
+        all_tasks_done: true                            # all backlog ids in done
+        ignore_quarantined: true                        # don't require quarantined
+        min_metric:
+          name: avg_unique_cites_per_q
+          eval: data/eval_v1_results.json
+          value: 50.0
+        require_files: [data/multihop_bench.jsonl]      # must exist
+    """
+    state = state if state is not None else load_state()
+    backlog = backlog if backlog is not None else load_backlog()
+    crit = (backlog.get("project_completion") or {})
+    if not crit:
+        return False, [{"check": "project_completion not declared", "passed": False,
+                        "detail": "edit ralph_backlog.yaml to add a project_completion: block"}]
+
+    out = []
+    all_ok = True
+
+    if crit.get("all_tasks_done"):
+        done = set(state.get("done_task_ids", []))
+        skipped = set(state.get("skipped_task_ids", []))
+        quarantined = set(state.get("quarantined_task_ids", []))
+        ignore_quar = bool(crit.get("ignore_quarantined", True))
+        ignore_skip = bool(crit.get("ignore_skipped", True))
+        outstanding = []
+        for t in backlog.get("tasks", []):
+            tid = t["id"]
+            if tid in done:
+                continue
+            if ignore_skip and tid in skipped:
+                continue
+            if ignore_quar and tid in quarantined:
+                continue
+            outstanding.append(tid)
+        ok = not outstanding
+        all_ok = all_ok and ok
+        out.append({"check": "all_tasks_done",
+                    "passed": ok,
+                    "detail": f"outstanding: {outstanding[:6]}" if outstanding else "all done"})
+
+    if "min_metric" in crit:
+        mc = crit["min_metric"]
+        eval_path = ROOT / mc.get("eval", "data/eval_v1_results.json")
+        v = _read_eval_metrics(eval_path, mc["name"])
+        ok = v is not None and v >= float(mc["value"])
+        all_ok = all_ok and ok
+        out.append({"check": f"min_metric {mc['name']} >= {mc['value']}",
+                    "passed": ok,
+                    "detail": f"actual={v}"})
+
+    for path in crit.get("require_files", []) or []:
+        p = ROOT / path
+        ok = p.exists()
+        all_ok = all_ok and ok
+        out.append({"check": f"require_file {path}",
+                    "passed": ok,
+                    "detail": str(p) if ok else "missing"})
+
+    return all_ok, out
+
+
 def status() -> dict:
     state = load_state()
     backlog = load_backlog()
@@ -648,6 +825,7 @@ def status() -> dict:
     quarantined = len(state.get("quarantined_task_ids", []))
     pending = backlog_size - done - skipped - quarantined
     attempts = state.get("attempts", {})
+    project_done, project_checks = is_project_complete(state, backlog)
     return {
         "tick_count": state.get("tick_count", 0),
         "last_tick": state.get("last_tick"),
@@ -659,4 +837,6 @@ def status() -> dict:
         "pending": pending,
         "next_pick": (pick_next_task(backlog, state) or {}).get("id"),
         "in_flight_attempts": {k: v for k, v in attempts.items() if v > 0},
+        "project_complete": project_done,
+        "project_checks": project_checks,
     }

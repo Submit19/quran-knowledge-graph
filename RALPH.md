@@ -133,6 +133,83 @@ type, status, metric Δ, notes`.
 - **No eligible task**: `tick()` returns None, exits cleanly. Edit the
   backlog or unblock something.
 
+## Patterns borrowed from snarktank/ralph (Geoffrey Huntley pattern)
+
+The "ralph wiggum" loop pattern, as implemented by Ryan Carson at
+[snarktank/ralph](https://github.com/snarktank/ralph). Key insight:
+**run a fresh agent in a loop, with persistent state in files (not
+context). Agent reads files, picks the next thing, does it, updates
+the files, exits. Wrapper detects "complete" signal and stops.**
+
+### 1. Codebase Patterns block in `ralph_log.md`
+> "If you discover a reusable pattern that future iterations should know, add it to the `## Codebase Patterns` section."
+
+`ralph_log.md` now has a fenced `<!-- PATTERNS:START -->...END -->`
+block at the top. Append durable, project-wide learnings here (separate
+from per-tick rows). API: `ralph_loop.add_codebase_pattern("...")`.
+
+Tasks can also set their `notes` to start with `PATTERN: ...` and the
+loop will auto-promote it to the patterns block on success.
+
+### 2. Repo-wide quality gate before commit
+> "ALL commits must pass your project's quality checks (typecheck, lint, test). Broken code compounds across iterations."
+
+Tasks that mutate code declare `commits_code: true` in their spec.
+After the executor declares DONE, the loop runs `quality_gate()` —
+a fast (~2s) smoke import of all core modules. Failure demotes
+the task to FAILED and keeps it in the queue for retry.
+
+### 3. Project-wide completion signal
+> Snarktank ralph emits `<promise>COMPLETE</promise>` when all stories pass.
+
+Our equivalent: `project_completion:` block at the top of
+`ralph_backlog.yaml`. Supports:
+```yaml
+project_completion:
+  all_tasks_done: true              # all non-skipped, non-quarantined done
+  ignore_quarantined: true
+  min_metric:
+    name: avg_unique_cites_per_q
+    eval: data/eval_v1_results.json
+    value: 50.0
+  require_files: [data/multihop_bench.jsonl]
+```
+
+`ralph_run.py` checks this before each tick and exits 0 when met.
+
+### 4. Loop wrapper (`ralph_run.py`)
+> The snarktank `ralph.sh` runs N iterations, exits on completion signal.
+
+Cross-platform Python equivalent. Calls `tick()` repeatedly until:
+- project completion criteria met (exit 0), or
+- queue exhausted (exit 0 if criteria still met, 1 otherwise), or
+- max iterations reached (exit 1).
+
+```bash
+python ralph_run.py                          # 10 iterations
+python ralph_run.py --max 20 --sleep 30
+python ralph_run.py --types eval,cypher_analysis,cleanup --git-commit
+python ralph_run.py --dry                    # preview each iteration
+```
+
+`--git-commit` adds + commits + pushes after every tick (snarktank
+style). Without it, you commit by hand or via your wake-up.
+
+### Why the snarktank shape works for us
+
+The original ralph loop is "feed the same prompt to a fresh Claude
+in a bash loop." We're not doing that — our executors are Python,
+not LLM calls. But the **persistence-via-files** discipline transfers
+directly:
+- `ralph_backlog.yaml` is our `prd.json`
+- `ralph_state.json + ralph_log.md` is our `progress.txt`
+- `data/ralph_*.md` artefacts are our `archive/`
+- `ralph_run.py` is our `ralph.sh`
+
+A future tick that's *re-entered from cold* (e.g. a wake-up that didn't
+inherit context) reads the backlog, the state, and the patterns block,
+then picks the right thing. That's the whole point.
+
 ## Patterns borrowed from obra/superpowers
 
 The loop integrates several patterns from

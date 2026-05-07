@@ -20,6 +20,18 @@ version: 1
 default_baseline_eval: data/eval_v1_results.json
 default_baseline_metric: avg_unique_cites_per_q   # currently 43.6 (v2 prompt)
 
+# snarktank/ralph signals <promise>COMPLETE</promise> when prd.json all-passes.
+# Our equivalent: ralph_run.py exits 0 when these criteria are met.
+project_completion:
+  all_tasks_done: true            # every non-skipped, non-quarantined task is done
+  ignore_quarantined: true        # quarantined tasks don't block completion
+  ignore_skipped: true            # manual / external_run skips don't block
+  min_metric:
+    name: avg_unique_cites_per_q
+    eval: data/eval_v1_results.json
+    value: 50.0                   # current is 43.6 (v2); 50 is the target
+  # require_files: []             # add files you want to exist for completion
+
 tasks:
   # ── Eval-driven (answer quality) ───────────────────────────────────────────
   - id: rerun_eval_against_current
