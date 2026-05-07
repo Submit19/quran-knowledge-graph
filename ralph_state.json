@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-07T13:02:33.797771+00:00",
-  "tick_count": 16,
+  "last_tick": "2026-05-07T13:02:52.352607+00:00",
+  "tick_count": 17,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -15,7 +15,8 @@
     "analyze_retrieved_edges_top_per_tool",
     "propose_session_memory_ux",
     "surface_underperforming_questions",
-    "propose_search_bar_autocomplete"
+    "propose_search_bar_autocomplete",
+    "surface_retrieval_noise"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -432,6 +433,37 @@
       "tokens_in": 389,
       "tokens_out": 1731,
       "api_calls": 1
+    },
+    {
+      "task_id": "surface_retrieval_noise",
+      "type": "cypher_analysis",
+      "started_at": "2026-05-07T13:02:40.139906+00:00",
+      "finished_at": "2026-05-07T13:02:52.352607+00:00",
+      "status": "DONE",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "wrote ralph_analysis_surface_retrieval_noise.md",
+      "artefacts": [
+        "data\\ralph_analysis_surface_retrieval_noise.md"
+      ],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_exists data/ralph_analysis_surface_retrieval_noise.md",
+          "passed": true,
+          "detail": "C:\\Users\\alika\\Agent Teams\\quran-graph-standalone\\data\\ralph_analysis_surface_retrieval_noise.md"
+        },
+        {
+          "check": "file_min_bytes data/ralph_analysis_surface_retrieval_noise.md >= 150",
+          "passed": true,
+          "detail": "size=2466"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
     }
   ],
   "quarantined_task_ids": [],

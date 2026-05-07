@@ -29,3 +29,4 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-07T12:57 | propose_session_memory_ux | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_propose_session_memory_ux.md (review before use) |
 | 2026-05-07T13:00 | surface_underperforming_questions | cypher_analysis | DONE |  | wrote ralph_analysis_surface_underperforming_questions.md |
 | 2026-05-07T13:00 | propose_search_bar_autocomplete | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_propose_search_bar_autocomplete.md (review before use) |
+| 2026-05-07T13:02 | surface_retrieval_noise | cypher_analysis | DONE |  | wrote ralph_analysis_surface_retrieval_noise.md |
