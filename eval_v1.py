@@ -128,8 +128,6 @@ def run_batch(questions, label):
                   f"{r['n_cites_unique']} unique cites · {r['answer_chars']}c")
             print(f"     tool calls: {r['tool_call_breakdown']}")
         results.append({"question": q, **r})
-        # incremental save
-        all_so_far = (results_general if label == "general" else []) + results if label == "surah" else results
     return results
 
 

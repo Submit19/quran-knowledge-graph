@@ -62,7 +62,9 @@ from build_graph import tokenize_and_lemmatize
 #   SEMANTIC_SEARCH_INDEX=verse_embedding_m3
 # (after running `python embed_verses_m3.py` to populate it)
 
-_SEMANTIC_INDEX = os.environ.get("SEMANTIC_SEARCH_INDEX", "verse_embedding").strip()
+# Default to the BGE-M3 index — 5× QRCD lift over legacy MiniLM (see EVAL_QRCD_REPORT.md).
+# Override with SEMANTIC_SEARCH_INDEX=verse_embedding to use the legacy 384-dim index.
+_SEMANTIC_INDEX = os.environ.get("SEMANTIC_SEARCH_INDEX", "verse_embedding_m3").strip()
 
 # Map: index name -> embedding model name
 _INDEX_TO_MODEL = {
@@ -1962,11 +1964,20 @@ _TOOL_CACHE_STATS = {"hits": 0, "misses": 0, "stores": 0, "evictions": 0,
                      "expired": 0, "skipped": 0}
 
 
+# Only these tools route through retrieval_gate.gate_tool_result, where the
+# returned ranking depends on the user_query. For all other tools the cypher
+# result is purely a function of the args, so user_query must NOT be part of
+# the cache key (it would defeat dedup across rephrasings).
+_GATED_TOOLS = {"search_keyword", "semantic_search", "traverse_topic"}
+
+
 def _tool_cache_key(tool_name: str, tool_input: dict, user_query: str | None) -> str:
-    """Stable key over (tool, args, user_query, active vector index)."""
+    """Stable key over (tool, args, active vector index, [user_query for gated only])."""
     args_json = json.dumps(tool_input or {}, sort_keys=True, ensure_ascii=False)
-    uq = (user_query or "")[:200]   # cap to avoid pathological keys
-    return f"{tool_name}|{_SEMANTIC_INDEX}|{args_json}|{uq}"
+    if tool_name in _GATED_TOOLS:
+        uq = (user_query or "")[:200]
+        return f"{tool_name}|{_SEMANTIC_INDEX}|{args_json}|{uq}"
+    return f"{tool_name}|{_SEMANTIC_INDEX}|{args_json}"
 
 
 def _tool_cache_get(key: str):

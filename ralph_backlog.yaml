@@ -505,6 +505,79 @@ tasks:
                 - file_exists: data/...
               # plus type-specific spec fields
 
+  # ── Refactors discovered in 2026-05-08 simplify pass ──────────────────────
+  # Each is too invasive to fold into a quick-win pass. Tracked here; pick
+  # up via ralph when time + appetite align. Source: 3-agent project review.
+  - id: share_minilm_across_modules
+    type: cleanup
+    priority: 50
+    description: "Share one all-MiniLM-L6-v2 instance across chat / reasoning_memory / answer_cache (currently 3 copies, ~960MB wasted RAM at startup)"
+    blockers: []
+    spec:
+      commits_code: true
+      acceptance:
+        - python: "True"   # placeholder; real check is the smoke import gate
+      notes: |
+        Promote chat._sem_models to a model_registry.py module exposing
+        get_minilm()/get_bge_m3()/get_reranker(). Then have
+        ReasoningMemory and answer_cache._get_model() import from there.
+        Smoke test: app_free.py boot RSS should drop ~600MB.
+
+  - id: extract_eval_common
+    type: cleanup
+    priority: 45
+    description: "Extract eval_qrcd_*.py shared helpers (expand_verse_range, hit_at_k, recall_at_k, fhr, load_qrcd_grouped) into eval_common.py"
+    blockers: []
+    spec:
+      commits_code: true
+      acceptance:
+        - python: "True"
+      notes: |
+        4-5 eval scripts each have copies of these helpers with subtle
+        drift (recall_at_k returning 0 vs 0.0, etc.). One canonical home.
+
+  - id: extract_verse_refs_central
+    type: cleanup
+    priority: 42
+    description: "Add ref_resolver.extract_verse_refs(text) -> set[str], replace 10+ inline regex copies"
+    blockers: []
+    spec:
+      commits_code: true
+      acceptance:
+        - python: "True"
+      notes: |
+        Different files use slightly different regexes (some require
+        word boundaries, some require brackets, some don't). Drift hazard.
+        ref_resolver already owns Quranic-citation parsing; add the thin
+        wrapper there.
+
+  - id: dedupe_retrieval_gate_branches
+    type: cleanup
+    priority: 40
+    description: "Extract retrieval_gate._gate_by_surah / _gate_flat_list — the search_keyword and semantic_search branches in gate_tool_result are byte-identical"
+    blockers: []
+    spec:
+      commits_code: true
+      acceptance:
+        - python: "True"
+      notes: |
+        Bonus: thread the original surah name through so the
+        'Surah 2 -> "Surah 2"' name-loss bug is fixed in the same patch.
+
+  - id: openrouter_client_consolidate
+    type: cleanup
+    priority: 38
+    description: "One openrouter_client.py used by app_free / citation_verifier / ralph_loop instead of three independent OpenRouter call sites"
+    blockers: []
+    spec:
+      commits_code: true
+      acceptance:
+        - python: "True"
+      notes: |
+        Each currently has its own timeout + header set. app_free has the
+        good 'OpenRouter -> local 14B fallback' pattern; the other two
+        don't. Converging gives consistent fallback behaviour.
+
   # ── Cleanup hygiene (always-low-priority background) ──────────────────────
   - id: append_ralph_status_to_AUTONOMOUS_RUN
     type: cleanup

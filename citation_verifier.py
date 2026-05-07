@@ -24,7 +24,9 @@ import json
 import os
 import re
 
-from sentence_transformers import CrossEncoder
+# CrossEncoder import deferred into _get_nli() — see retrieval_gate.py for the
+# same rationale (saves ~200MB torch when ENABLE_CITATION_VERIFY=0, which is
+# the default).
 
 # ── backend selection ────────────────────────────────────────────────────────
 # Read once at module load; can be overridden by CITATION_VERIFIER_MODEL env var
@@ -33,13 +35,14 @@ MINICHECK_MODEL_NAME = os.environ.get("MINICHECK_MODEL", "flan-t5-large").strip(
 MINICHECK_THRESHOLD  = float(os.environ.get("MINICHECK_THRESHOLD", "0.5"))
 
 
-# ── NLI model (loaded once) ──────────────────────────────────────────────────
+# ── NLI model (loaded once, lazily) ─────────────────────────────────────────
 
 _nli_model = None
 
 def _get_nli():
     global _nli_model
     if _nli_model is None:
+        from sentence_transformers import CrossEncoder
         _nli_model = CrossEncoder("cross-encoder/nli-deberta-v3-xsmall")
     return _nli_model
 

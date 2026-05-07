@@ -592,7 +592,7 @@ def _priming_graph_update(session, message: str) -> dict | None:
         seed_verses = session.run(
             """
             UNWIND $kws AS kw
-            MATCH (k:Keyword) WHERE toLower(k.name) CONTAINS kw
+            MATCH (k:Keyword) WHERE toLower(k.keyword) CONTAINS kw
             MATCH (k)<-[:MENTIONS]-(v:Verse)
             WITH v, count(DISTINCT k) AS matchCount
             ORDER BY matchCount DESC, v.reference

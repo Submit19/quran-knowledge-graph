@@ -19,11 +19,13 @@ is here for safety.
 """
 
 import os
-from sentence_transformers import CrossEncoder
 
 import config as cfg
 
-# ── cross-encoder reranker (loaded once) ─────────────────────────────────────
+# ── cross-encoder reranker (loaded once, lazily) ─────────────────────────────
+# CrossEncoder import is deferred into _get_reranker() so importing this
+# module doesn't drag ~200MB of torch+transformers into processes that
+# don't actually rerank (e.g. ralph_loop.quality_gate which only smoke-imports).
 
 _DEFAULT_RERANKER = "BAAI/bge-reranker-v2-m3"
 RERANKER_MODEL = os.environ.get("RERANKER_MODEL", _DEFAULT_RERANKER).strip()
@@ -37,6 +39,7 @@ def _get_reranker():
     if RERANK_DISABLED:
         return None
     if _reranker is None:
+        from sentence_transformers import CrossEncoder
         _reranker = CrossEncoder(RERANKER_MODEL)
     return _reranker
 
