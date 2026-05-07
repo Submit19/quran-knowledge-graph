@@ -1,15 +1,16 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-07T12:53:34.881881+00:00",
-  "tick_count": 10,
+  "last_tick": "2026-05-07T12:53:42.148558+00:00",
+  "tick_count": 11,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
     "measure_per_tool_latency",
     "measure_cache_hit_rate",
     "propose_speed_tunings",
-    "propose_streaming_progress_indicator"
+    "propose_streaming_progress_indicator",
+    "measure_reranker_speed_vs_quality"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -257,6 +258,27 @@
           "check": "file_min_bytes data/ralph_agent_propose_streaming_progress_indicator.md >= 800",
           "passed": true,
           "detail": "size=7633"
+        }
+      ]
+    },
+    {
+      "task_id": "measure_reranker_speed_vs_quality",
+      "type": "cleanup",
+      "started_at": "2026-05-07T12:53:42.148558+00:00",
+      "finished_at": "2026-05-07T12:53:42.148558+00:00",
+      "status": "DONE",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "Run eval twice — once with reranker on, once with RERANK_DISABLED=1 — compare ti",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "python True",
+          "passed": true,
+          "detail": "ok"
         }
       ]
     }
