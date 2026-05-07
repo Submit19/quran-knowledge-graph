@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-07T12:59:11.732641+00:00",
-  "tick_count": 14,
+  "last_tick": "2026-05-07T13:00:47.769363+00:00",
+  "tick_count": 15,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -13,7 +13,8 @@
     "measure_reranker_speed_vs_quality",
     "propose_citation_tooltip_v2",
     "analyze_retrieved_edges_top_per_tool",
-    "propose_session_memory_ux"
+    "propose_session_memory_ux",
+    "surface_underperforming_questions"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -368,8 +369,41 @@
           "detail": "size=5689"
         }
       ]
+    },
+    {
+      "task_id": "surface_underperforming_questions",
+      "type": "cypher_analysis",
+      "started_at": "2026-05-07T13:00:47.768363+00:00",
+      "finished_at": "2026-05-07T13:00:47.769363+00:00",
+      "status": "DONE",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "wrote ralph_analysis_surface_underperforming_questions.md",
+      "artefacts": [
+        "data\\ralph_analysis_surface_underperforming_questions.md"
+      ],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_exists data/ralph_analysis_surface_underperforming_questions.md",
+          "passed": true,
+          "detail": "C:\\Users\\alika\\Agent Teams\\quran-graph-standalone\\data\\ralph_analysis_surface_underperforming_questions.md"
+        },
+        {
+          "check": "file_min_bytes data/ralph_analysis_surface_underperforming_questions.md >= 200",
+          "passed": true,
+          "detail": "size=1480"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
     }
   ],
   "quarantined_task_ids": [],
-  "attempts": {}
+  "attempts": {
+    "propose_search_bar_autocomplete": 1
+  }
 }
