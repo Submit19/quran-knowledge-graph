@@ -87,6 +87,11 @@ class TickResult:
     artefacts: list[str] = field(default_factory=list)
     error: str | None = None
     acceptance_results: list[dict] = field(default_factory=list)
+    # OpenRouter / API usage — populated by executors that call paid/free APIs.
+    # 0 means "no API call was made" (e.g. cypher_analysis, cleanup).
+    tokens_in: int = 0
+    tokens_out: int = 0
+    api_calls: int = 0
 
 
 def load_state() -> dict:
@@ -567,7 +572,13 @@ def execute_agent_creative(task: dict, state: dict, result: TickResult) -> TickR
             timeout=int(spec.get("timeout_sec", 180)),
         )
         r.raise_for_status()
-        body = r.json()["choices"][0]["message"]["content"] or ""
+        payload = r.json()
+        body = payload["choices"][0]["message"]["content"] or ""
+        # Capture token usage so the loop can pace itself against rate limits.
+        usage = payload.get("usage") or {}
+        result.tokens_in = int(usage.get("prompt_tokens", 0) or 0)
+        result.tokens_out = int(usage.get("completion_tokens", 0) or 0)
+        result.api_calls = 1
     except Exception as e:
         result.status = FAILED
         result.error = f"OpenRouter call failed: {str(e)[:300]}"
@@ -717,6 +728,28 @@ def tick(force_task_id: str | None = None,
             result.notes = (result.notes or "") + f" | QUARANTINED after {attempt_n} attempts"
             print(f"[ralph] QUARANTINING {task['id']} (failed {attempt_n}× — superpowers 3-strikes rule)")
 
+    # ── token / API-call accounting ─────────────────────────────────────
+    # Roll cumulative + 24h-windowed usage so ralph_run.py can pace.
+    if result.api_calls or result.tokens_in or result.tokens_out:
+        usage_state = state.setdefault("api_usage", {
+            "calls_total": 0,
+            "tokens_in_total": 0,
+            "tokens_out_total": 0,
+            "window": [],   # list of (iso_ts, calls, tokens_in, tokens_out)
+        })
+        usage_state["calls_total"] = int(usage_state.get("calls_total", 0)) + result.api_calls
+        usage_state["tokens_in_total"] = int(usage_state.get("tokens_in_total", 0)) + result.tokens_in
+        usage_state["tokens_out_total"] = int(usage_state.get("tokens_out_total", 0)) + result.tokens_out
+        win = usage_state.setdefault("window", [])
+        win.append([result.finished_at, result.api_calls, result.tokens_in, result.tokens_out])
+        # Trim to last 24h
+        from datetime import datetime, timedelta, timezone
+        cutoff = datetime.now(timezone.utc) - timedelta(hours=24)
+        usage_state["window"] = [
+            row for row in win
+            if datetime.fromisoformat(row[0].replace("Z", "+00:00")) >= cutoff
+        ]
+
     save_state(state)
     append_log(result, task)
 
@@ -734,6 +767,9 @@ def tick(force_task_id: str | None = None,
         for c in result.acceptance_results:
             mark = "✓" if c["passed"] else "✗"
             print(f"        {mark} {c['check']}: {c['detail'][:80]}")
+    if result.api_calls:
+        print(f"        tokens: in={result.tokens_in} out={result.tokens_out} "
+              f"(cumulative calls={state.get('api_usage', {}).get('calls_total', 0)})")
     return result
 
 

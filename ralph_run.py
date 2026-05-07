@@ -76,6 +76,17 @@ def git_commit_push(tick_n: int):
     return False
 
 
+def _usage_window_24h(state: dict) -> dict:
+    """Sum the 24h rolling window of API usage from state."""
+    win = (state.get("api_usage") or {}).get("window") or []
+    return {
+        "calls": sum(int(r[1]) for r in win),
+        "tokens_in": sum(int(r[2]) for r in win),
+        "tokens_out": sum(int(r[3]) for r in win),
+        "n_window": len(win),
+    }
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--max", type=int, default=10,
@@ -87,6 +98,20 @@ def main():
                     help="Print what each iteration would do, don't execute")
     ap.add_argument("--git-commit", action="store_true",
                     help="Auto-commit and push after every tick")
+    # ── token / rate-limit pacing ────────────────────────────────────────
+    # OpenRouter free tier: 20 req/min, 50 req/day (no credits) or
+    # 1000 req/day with $10+ credits. Defaults below are conservative —
+    # set --max-calls-per-day 950 if you have credits, --max-calls-per-day 45
+    # if you don't. The pacer:
+    #   1. enforces a minimum gap between API-calling ticks (default 4s -> ≤15/min)
+    #   2. stops the loop early if the 24h call window crosses --max-calls-per-day
+    ap.add_argument("--max-calls-per-day", type=int, default=0,
+                    help="Stop loop when 24h API-call window hits this. 0=disabled.")
+    ap.add_argument("--max-tokens-per-day", type=int, default=0,
+                    help="Stop loop when 24h tokens (in+out) hit this. 0=disabled.")
+    ap.add_argument("--min-api-gap-sec", type=float, default=4.0,
+                    help="Minimum seconds between ticks that hit the API "
+                         "(rate-limit safety; default 4 -> ≤15 req/min).")
     args = ap.parse_args()
 
     allow_types = None
@@ -124,14 +149,48 @@ def main():
         if args.git_commit and not args.dry:
             git_commit_push(i)
 
+        # ── Pacing: enforce daily caps + minimum API gap ────────────────
+        # We pull state fresh because tick() just persisted it.
+        if not args.dry:
+            cur_state = ralph_loop.load_state()
+            usage_24h = _usage_window_24h(cur_state)
+            print(f"  [run] 24h usage: {usage_24h['calls']} calls · "
+                  f"{usage_24h['tokens_in']}+{usage_24h['tokens_out']} tokens "
+                  f"({usage_24h['n_window']} entries)")
+            if args.max_calls_per_day and usage_24h["calls"] >= args.max_calls_per_day:
+                print(f"[run] HALT — 24h call budget reached "
+                      f"({usage_24h['calls']} ≥ {args.max_calls_per_day}). "
+                      f"Loop will resume on next wake-up.")
+                sys.exit(0)
+            if args.max_tokens_per_day:
+                tot_tok = usage_24h["tokens_in"] + usage_24h["tokens_out"]
+                if tot_tok >= args.max_tokens_per_day:
+                    print(f"[run] HALT — 24h token budget reached "
+                          f"({tot_tok} ≥ {args.max_tokens_per_day}).")
+                    sys.exit(0)
+
         # Brief pause between ticks (avoids hammering OpenRouter / Neo4j).
-        # User can pass --sleep 0 to disable.
-        if i < args.max and args.sleep > 0:
-            time.sleep(args.sleep)
+        # If the tick made an API call, ensure we wait at least
+        # --min-api-gap-sec to stay under per-minute rate limits. Otherwise
+        # the regular --sleep applies.
+        if i < args.max:
+            base_sleep = args.sleep if args.sleep > 0 else 0
+            api_gap = args.min_api_gap_sec if (result and result.api_calls) else 0
+            wait = max(base_sleep, api_gap)
+            if wait > 0:
+                time.sleep(wait)
 
     # ── Post-loop reporting ─────────────────────────────────────────────
     print("\n" + "=" * 62)
     s = ralph_loop.status()
+    final_state = ralph_loop.load_state()
+    api = final_state.get("api_usage") or {}
+    if api:
+        u24 = _usage_window_24h(final_state)
+        print(f"[run] API usage — 24h: {u24['calls']} calls, "
+              f"{u24['tokens_in']}+{u24['tokens_out']} tokens · "
+              f"all-time: {api.get('calls_total', 0)} calls, "
+              f"{api.get('tokens_in_total', 0)}+{api.get('tokens_out_total', 0)} tokens")
     if completed_at:
         print(f"[run] PROJECT COMPLETE at iteration {completed_at}")
         sys.exit(0)
