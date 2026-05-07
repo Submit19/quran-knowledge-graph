@@ -133,12 +133,73 @@ type, status, metric Δ, notes`.
 - **No eligible task**: `tick()` returns None, exits cleanly. Edit the
   backlog or unblock something.
 
+## Patterns borrowed from obra/superpowers
+
+The loop integrates several patterns from
+[obra/superpowers](https://github.com/obra/superpowers):
+
+### 1. Gate function (verification before completion)
+> "NO COMPLETION CLAIMS WITHOUT FRESH VERIFICATION EVIDENCE."
+
+Every task can declare `acceptance` checks in its spec. After the
+executor runs, `verify_acceptance()` runs them. If any fail, the
+task is marked `FAILED` even if the executor said `DONE`.
+
+Supported acceptance check shapes:
+```yaml
+acceptance:
+  - file_exists: data/eval_v1_results.json
+  - file_min_bytes: {path: data/eval_v1_results.json, min: 50000}
+  - metric_above: {name: avg_unique_cites_per_q, value: 30}
+  - metric_at_least_baseline: avg_unique_cites_per_q   # within 5%
+  - python: "result.metric_after is not None and result.metric_after > 25"
+```
+
+### 2. Three-strikes rule (quarantine after N failed attempts)
+> "After three failed attempts, suggest an architectural problem rather than a simple bug."
+
+Each task tracks `attempts` per id. Default `MAX_ATTEMPTS = 3`
+(override in `spec.max_attempts`). Once exceeded, the task is moved
+to `quarantined_task_ids` and skipped by the picker until manually
+unblocked. Successful completion resets the counter.
+
+### 3. Implementer status taxonomy (richer than success/fail)
+> Four statuses: DONE, DONE_WITH_CONCERNS, NEEDS_CONTEXT, BLOCKED.
+
+The loop uses:
+- `DONE` — succeeded, acceptance criteria verified
+- `DONE_WITH_CONCERNS` — succeeded but soft-pass (no acceptance specified, or agent output that needs human review)
+- `NEEDS_CONTEXT` — couldn't run; missing inputs (e.g., API key)
+- `BLOCKED` — external blocker (Neo4j down, server crashed)
+- `REGRESSION` — ran cleanly but metric dropped below threshold
+- `FAILED` — ran with error
+- `QUARANTINED` — hit `MAX_ATTEMPTS`
+- `SKIPPED` — task type not auto-runnable
+
+### 4. Subagent-driven with constructed context
+> "By precisely crafting their instructions and context, you ensure they stay focused. They should never inherit your session's context or history."
+
+The `agent_creative` executor calls OpenRouter (`gpt-oss-120b:free` by
+default) with a fresh, narrow context: only the task's `description` +
+`spec`. The orchestrator's session history is NEVER passed. Output is
+written to `data/ralph_agent_<id>.md` and marked `DONE_WITH_CONCERNS`
+so a human reviews before downstream tasks consume it.
+
+### 5. Acceptance criteria explicit in plan (TDD shape)
+> "Run the command. Read the output. THEN claim the result."
+
+`acceptance` is the test you'd write before the implementation. For
+prompt-variant work this means: define the metric+threshold the
+variant must clear in the spec, then apply the variant, then run the
+eval. The gate function is the "test pass."
+
 ## Honest scope
 
 This is intentionally a small loop — not an autonomous agent. It
-runs deterministic Python tasks; creative work (prompt rewrites,
-question generation) is gated behind `agent_creative` and skipped
-unless wired to an LLM. Keeps the failure modes tiny.
+runs deterministic Python tasks; creative work calls a fresh OpenRouter
+subagent with constructed context (no session history); creative output
+defaults to `DONE_WITH_CONCERNS` so a human reviews before
+downstream use. Keeps the failure modes tiny.
 
 The value is in the *backlog* and *log*: a single place to record
 "things I want to try" and "things I tried + outcome." Everything

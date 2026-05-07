@@ -43,13 +43,42 @@ def _now_iso() -> str:
 
 # ── state I/O ────────────────────────────────────────────────────────────────
 
+# ── status taxonomy (from obra/superpowers implementer-status pattern) ──────
+#
+#   DONE                — succeeded, acceptance criteria verified
+#   DONE_WITH_CONCERNS  — succeeded but a sub-check warned (e.g. metric drifted)
+#   NEEDS_CONTEXT       — couldn't run; missing inputs/dependencies
+#   BLOCKED             — external blocker (Neo4j down, server crashed, model unreachable)
+#   REGRESSION          — ran cleanly but metric dropped below threshold; do NOT mark done
+#   FAILED              — ran with error
+#   QUARANTINED         — ≥ MAX_ATTEMPTS failures; remove from auto-pick
+#   SKIPPED             — task type not auto-runnable (manual / external_run)
+#   RUNNING             — internal; only set transiently
+
+DONE = "DONE"
+DONE_WITH_CONCERNS = "DONE_WITH_CONCERNS"
+NEEDS_CONTEXT = "NEEDS_CONTEXT"
+BLOCKED = "BLOCKED"
+REGRESSION = "REGRESSION"
+FAILED = "FAILED"
+QUARANTINED = "QUARANTINED"
+SKIPPED = "SKIPPED"
+RUNNING = "RUNNING"
+
+TERMINAL_OK = {DONE, DONE_WITH_CONCERNS, SKIPPED}
+TERMINAL_FAIL = {NEEDS_CONTEXT, BLOCKED, REGRESSION, FAILED}
+
+MAX_ATTEMPTS_DEFAULT = 3   # superpowers: "3 failed attempts → architectural problem"
+
+
 @dataclass
 class TickResult:
     task_id: str
     type: str
     started_at: str
     finished_at: str = ""
-    status: str = "running"          # running | success | regression | failed | skipped
+    status: str = RUNNING
+    attempt: int = 1
     metric_before: float | None = None
     metric_after: float | None = None
     delta: float | None = None
@@ -57,6 +86,7 @@ class TickResult:
     artefacts: list[str] = field(default_factory=list)   # filenames written
     new_tasks: list[str] = field(default_factory=list)   # task_ids appended to backlog
     error: str | None = None
+    acceptance_results: list[dict] = field(default_factory=list)  # per-check verification
 
 
 def load_state() -> dict:
@@ -127,26 +157,105 @@ def pick_next_task(backlog: dict, state: dict, allow_types: set[str] | None = No
       - is not in_progress
       - has no unfinished blockers
       - is in `allow_types` if specified (default: skip 'manual' and 'external_run')
+      - has not been quarantined (≥ MAX_ATTEMPTS failed)
     """
     skip_types = {"manual", "external_run"}
     if allow_types is not None:
         skip_types -= allow_types
     done = set(state.get("done_task_ids", []))
     skipped = set(state.get("skipped_task_ids", []))
+    quarantined = set(state.get("quarantined_task_ids", []))
     in_prog = state.get("in_progress")
+    attempts = state.get("attempts", {})  # task_id -> count
 
     candidates = []
     for t in backlog.get("tasks", []):
-        if t["id"] in done or t["id"] in skipped or t["id"] == in_prog:
+        if t["id"] in done or t["id"] in skipped or t["id"] in quarantined or t["id"] == in_prog:
             continue
         if t.get("type") in skip_types:
             continue
         if any(b not in done for b in (t.get("blockers") or [])):
             continue
+        max_a = int((t.get("spec") or {}).get("max_attempts", MAX_ATTEMPTS_DEFAULT))
+        if attempts.get(t["id"], 0) >= max_a:
+            continue
         candidates.append(t)
 
     candidates.sort(key=lambda t: -int(t.get("priority", 0)))
     return candidates[0] if candidates else None
+
+
+# ── verification ────────────────────────────────────────────────────────────
+# Superpowers "Gate Function": run the command, read the output, check exit
+# code, verify the output ACTUALLY confirms the claim — only THEN mark done.
+
+def verify_acceptance(task: dict, result: TickResult) -> tuple[bool, list[dict]]:
+    """
+    Run the task's acceptance checks (declared in spec.acceptance). Returns
+    (all_passed, [{check, passed, detail}]).
+
+    Supported checks:
+      - file_exists: <path>             (artefact was written)
+      - file_min_bytes: {path, min}     (artefact has content)
+      - metric_above: {name, value}     (metric beat threshold)
+      - metric_at_least_baseline: name  (metric did not regress)
+      - python: <expr>                  (eval'd in a sandbox; truthy = pass)
+    """
+    spec = task.get("spec") or {}
+    checks = spec.get("acceptance") or []
+    if not checks:
+        # No acceptance specified — superpowers would call this a soft pass.
+        # We accept it but flag as DONE_WITH_CONCERNS later.
+        return True, [{"check": "none specified", "passed": True,
+                       "detail": "soft pass (consider adding acceptance criteria)"}]
+
+    out = []
+    all_ok = True
+    for c in checks:
+        if "file_exists" in c:
+            p = ROOT / c["file_exists"]
+            ok = p.exists()
+            out.append({"check": f"file_exists {c['file_exists']}", "passed": ok,
+                        "detail": str(p) if ok else f"missing: {p}"})
+            all_ok = all_ok and ok
+        elif "file_min_bytes" in c:
+            cfg = c["file_min_bytes"]
+            p = ROOT / cfg["path"]
+            sz = p.stat().st_size if p.exists() else 0
+            ok = sz >= int(cfg["min"])
+            out.append({"check": f"file_min_bytes {cfg['path']} >= {cfg['min']}",
+                        "passed": ok, "detail": f"size={sz}"})
+            all_ok = all_ok and ok
+        elif "metric_above" in c:
+            cfg = c["metric_above"]
+            v = result.metric_after
+            ok = v is not None and v > float(cfg["value"])
+            out.append({"check": f"metric_above {cfg['name']} > {cfg['value']}",
+                        "passed": ok, "detail": f"actual={v}"})
+            all_ok = all_ok and ok
+        elif "metric_at_least_baseline" in c:
+            v = result.metric_after
+            b = result.metric_before
+            ok = (v is not None and b is not None and v >= b * 0.95)  # within 5%
+            out.append({"check": "metric_at_least_baseline",
+                        "passed": ok,
+                        "detail": f"before={b}, after={v}"})
+            all_ok = all_ok and ok
+        elif "python" in c:
+            try:
+                ok = bool(eval(c["python"], {"result": result, "task": task}))
+                out.append({"check": f"python {c['python'][:60]}", "passed": ok,
+                            "detail": "ok" if ok else "expression returned falsy"})
+                all_ok = all_ok and ok
+            except Exception as e:
+                out.append({"check": f"python {c['python'][:60]}",
+                            "passed": False, "detail": f"raised: {e}"})
+                all_ok = False
+        else:
+            out.append({"check": str(c), "passed": False,
+                        "detail": "unknown acceptance check shape"})
+            all_ok = False
+    return all_ok, out
 
 
 # ── task executors ──────────────────────────────────────────────────────────
@@ -197,7 +306,7 @@ def execute_eval(task: dict, state: dict, result: TickResult) -> TickResult:
         timeout=spec.get("timeout_sec", 3600),
     )
     if proc.returncode != 0:
-        result.status = "failed"
+        result.status = FAILED
         result.error = (proc.stderr or proc.stdout or "")[-800:]
         return result
 
@@ -211,18 +320,23 @@ def execute_eval(task: dict, state: dict, result: TickResult) -> TickResult:
         current = None
 
     result.metric_after = current
-    if current is not None and baseline is not None:
+    if current is None:
+        result.status = NEEDS_CONTEXT
+        result.notes = f"{metric}: could not compute (snapshot missing or empty)"
+        return result
+
+    if baseline is not None:
         result.delta = current - baseline
         regression_pct = float(spec.get("regression_pct", 5))
         if current < baseline * (1 - regression_pct / 100):
-            result.status = "regression"
+            result.status = REGRESSION
             result.notes = f"{metric}: {baseline:.2f} -> {current:.2f} (regression > {regression_pct}%)"
         else:
-            result.status = "success"
+            result.status = DONE
             result.notes = f"{metric}: {baseline:.2f} -> {current:.2f}"
     else:
-        result.status = "success" if current is not None else "failed"
-        result.notes = f"{metric}={current}"
+        result.status = DONE
+        result.notes = f"{metric}={current:.2f} (no baseline)"
     return result
 
 
@@ -242,42 +356,47 @@ def execute_cypher_analysis(task: dict, state: dict, result: TickResult) -> Tick
             text = buf.getvalue()
         except Exception as e:
             text = f"ERROR: {e}\n{traceback.format_exc()}"
-            result.status = "failed"
+            result.status = FAILED
             result.error = text[-400:]
         finally:
             sys.stdout = old
         out_md.write_text("# " + task["id"] + "\n\n```\n" + text + "\n```\n", encoding="utf-8")
     elif "query" in spec:
-        from dotenv import load_dotenv; load_dotenv()
-        from neo4j import GraphDatabase
-        d = GraphDatabase.driver(os.getenv("NEO4J_URI"),
-                                  auth=(os.getenv("NEO4J_USER"),
-                                        os.getenv("NEO4J_PASSWORD")))
         try:
+            from dotenv import load_dotenv; load_dotenv()
+            from neo4j import GraphDatabase
+            d = GraphDatabase.driver(os.getenv("NEO4J_URI"),
+                                      auth=(os.getenv("NEO4J_USER"),
+                                            os.getenv("NEO4J_PASSWORD")))
             with d.session(database=os.getenv("NEO4J_DATABASE", "quran")) as s:
                 rows = s.run(spec["query"]).data()
             text = json.dumps(rows, indent=2, ensure_ascii=False, default=str)
             out_md.write_text(f"# {task['id']}\n\n```json\n{text}\n```\n", encoding="utf-8")
-        except Exception as e:
-            result.status = "failed"
-            result.error = str(e)[-400:]
-        finally:
             d.close()
+        except Exception as e:
+            err = str(e)
+            if "ServiceUnavailable" in err or "Couldn't connect" in err:
+                result.status = BLOCKED
+                result.error = f"Neo4j unreachable: {err[:200]}"
+            else:
+                result.status = FAILED
+                result.error = err[-400:]
+            return result
     else:
-        result.status = "failed"
+        result.status = NEEDS_CONTEXT
         result.error = "spec missing 'query' or 'script'"
         return result
 
     result.artefacts.append(str(out_md.relative_to(ROOT)))
     if not result.error:
-        result.status = "success"
+        result.status = DONE
         result.notes = f"wrote {out_md.name}"
     return result
 
 
 def execute_cleanup(task: dict, state: dict, result: TickResult) -> TickResult:
-    """No-op success — placeholder for hygiene tasks. Add real logic per task."""
-    result.status = "success"
+    """No-op DONE — placeholder for hygiene tasks. Add real logic per task."""
+    result.status = DONE
     result.notes = task.get("description", "")[:80]
     return result
 
@@ -285,8 +404,112 @@ def execute_cleanup(task: dict, state: dict, result: TickResult) -> TickResult:
 def execute_skipped(task: dict, state: dict, result: TickResult) -> TickResult:
     """For task types we don't auto-execute (manual, external_run, agent_creative
     when no LLM key configured)."""
-    result.status = "skipped"
+    result.status = SKIPPED
     result.notes = f"type={task.get('type')} requires manual / agent involvement"
+    return result
+
+
+# ── agent_creative executor ─────────────────────────────────────────────────
+# Superpowers pattern: spawn a fresh subagent with constructed context;
+# the subagent NEVER inherits the orchestrator's session history. We use
+# OpenRouter (cheap free tier) with a focused system prompt + just the
+# task's spec as user-facing input.
+
+def execute_agent_creative(task: dict, state: dict, result: TickResult) -> TickResult:
+    """
+    For tasks that need creative LLM work (write a prompt variant, generate
+    eval questions, propose architecture changes). Calls OpenRouter with a
+    fresh, narrow context — the task description + spec only.
+
+    Output is written to data/ralph_agent_<id>.md and the result is marked
+    DONE_WITH_CONCERNS by default (these need human review before downstream
+    use).
+    """
+    spec = task.get("spec") or {}
+    # Load .env so OPENROUTER_API_KEY is available even if the loop is
+    # invoked outside an existing shell session.
+    try:
+        from dotenv import load_dotenv
+        load_dotenv()
+    except ImportError:
+        pass
+    api_key = os.getenv("OPENROUTER_API_KEY", "").strip()
+    if not api_key:
+        result.status = NEEDS_CONTEXT
+        result.error = "OPENROUTER_API_KEY not set"
+        return result
+
+    try:
+        import requests
+    except ImportError:
+        result.status = NEEDS_CONTEXT
+        result.error = "requests not available"
+        return result
+
+    model = spec.get("model", os.getenv("RALPH_AGENT_MODEL",
+                                          "openai/gpt-oss-120b:free"))
+
+    # Constructed context — INTENTIONALLY narrow. No session history.
+    system_prompt = (
+        "You are a focused engineering subagent for the Quran Knowledge Graph "
+        "project. You are spawned by the Ralph loop with one task. Do that "
+        "task crisply. Don't explore the codebase. Don't propose other tasks. "
+        "Output the exact deliverable described in the task spec — no preamble."
+    )
+    user_prompt = (
+        f"# Task: {task['id']}\n\n"
+        f"**Type**: {task['type']}\n"
+        f"**Description**: {task.get('description', '')}\n\n"
+        f"**Spec**:\n```yaml\n{json.dumps(spec, indent=2, ensure_ascii=False)}\n```\n\n"
+        "Produce the exact deliverable as described. No commentary."
+    )
+
+    try:
+        r = requests.post(
+            "https://openrouter.ai/api/v1/chat/completions",
+            json={
+                "model": model,
+                "messages": [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt},
+                ],
+                "temperature": float(spec.get("temperature", 0.4)),
+                "max_tokens": int(spec.get("max_tokens", 2000)),
+            },
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+                "HTTP-Referer": "http://localhost:8085",
+                "X-Title": "QKG Ralph loop",
+            },
+            timeout=int(spec.get("timeout_sec", 180)),
+        )
+        r.raise_for_status()
+        body = r.json()["choices"][0]["message"]["content"] or ""
+    except Exception as e:
+        result.status = FAILED
+        result.error = f"OpenRouter call failed: {str(e)[:300]}"
+        return result
+
+    if not body.strip():
+        result.status = FAILED
+        result.error = "agent returned empty response"
+        return result
+
+    out_path = DATA_DIR / f"ralph_agent_{task['id']}.md"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(
+        f"# {task['id']}\n\n"
+        f"_Generated by ralph_loop agent_creative executor (model: {model})._\n"
+        f"_Output requires human review before downstream use._\n\n"
+        f"---\n\n{body}\n",
+        encoding="utf-8",
+    )
+    result.artefacts.append(str(out_path.relative_to(ROOT)))
+    # Default: DONE_WITH_CONCERNS — agent output needs review before
+    # downstream tasks should rely on it.
+    result.status = DONE_WITH_CONCERNS
+    result.notes = f"wrote {out_path.name} (review before use)"
     return result
 
 
@@ -294,11 +517,11 @@ EXECUTORS: dict[str, Callable] = {
     "eval": execute_eval,
     "cypher_analysis": execute_cypher_analysis,
     "cleanup": execute_cleanup,
+    "agent_creative":  execute_agent_creative,
     # Stubs — will skip with a clear note until proper executors are added:
     "prompt_variant":  execute_skipped,
     "embed_op":        execute_skipped,
     "cache_op":        execute_skipped,
-    "agent_creative":  execute_skipped,
     "manual":          execute_skipped,
     "external_run":    execute_skipped,
 }
@@ -330,7 +553,13 @@ def tick(force_task_id: str | None = None,
         print(f"        desc: {task.get('description', '')}")
         return None
 
-    print(f"[ralph] picking {task['id']} (type={task['type']}, prio={task.get('priority')})")
+    # Track attempt count for this task
+    attempts = state.setdefault("attempts", {})
+    attempt_n = int(attempts.get(task["id"], 0)) + 1
+    attempts[task["id"]] = attempt_n
+    max_a = int((task.get("spec") or {}).get("max_attempts", MAX_ATTEMPTS_DEFAULT))
+
+    print(f"[ralph] picking {task['id']} (type={task['type']}, prio={task.get('priority')}, attempt={attempt_n}/{max_a})")
     state["in_progress"] = task["id"]
     save_state(state)
 
@@ -338,14 +567,33 @@ def tick(force_task_id: str | None = None,
         task_id=task["id"],
         type=task["type"],
         started_at=_now_iso(),
+        attempt=attempt_n,
     )
 
     executor = EXECUTORS.get(task["type"], execute_skipped)
     try:
         result = executor(task, state, result)
     except Exception as e:
-        result.status = "failed"
-        result.error = str(e)[:600]
+        result.status = FAILED
+        result.error = f"{type(e).__name__}: {str(e)[:400]}"
+
+    # ── Gate function: verify acceptance criteria after the executor ─────
+    # Superpowers principle: "NO COMPLETION CLAIMS WITHOUT FRESH VERIFICATION
+    # EVIDENCE." Even if the executor declared DONE, run the acceptance
+    # checks and demote to DONE_WITH_CONCERNS / FAILED if they don't pass.
+    if result.status in {DONE, DONE_WITH_CONCERNS}:
+        all_ok, checks = verify_acceptance(task, result)
+        result.acceptance_results = checks
+        if not all_ok:
+            # Executor said done; gate function disagrees.
+            result.status = FAILED
+            result.notes = (result.notes or "") + " | ACCEPTANCE FAILED: " + \
+                "; ".join(f"{c['check']}={'pass' if c['passed'] else 'FAIL'}" for c in checks)
+        elif any(c["check"] == "none specified" for c in checks):
+            # No acceptance specified — soft-pass with concerns.
+            if result.status == DONE:
+                result.status = DONE_WITH_CONCERNS
+                result.notes = (result.notes or "") + " (no acceptance criteria — soft pass)"
 
     result.finished_at = _now_iso()
 
@@ -354,18 +602,26 @@ def tick(force_task_id: str | None = None,
     state["last_tick"] = result.finished_at
     state["tick_count"] = int(state.get("tick_count", 0)) + 1
     state.setdefault("history", []).append(asdict(result))
-    if result.status == "success":
-        state.setdefault("done_task_ids", []).append(task["id"])
-    elif result.status == "skipped":
-        state.setdefault("skipped_task_ids", []).append(task["id"])
-    elif result.status in ("regression", "failed"):
-        # leave the task in the queue (not added to done) but record the attempt
-        pass
+
+    if result.status in TERMINAL_OK:
+        if result.status == SKIPPED:
+            state.setdefault("skipped_task_ids", []).append(task["id"])
+        else:
+            state.setdefault("done_task_ids", []).append(task["id"])
+            # Reset attempt count on success
+            attempts.pop(task["id"], None)
+    elif result.status in TERMINAL_FAIL:
+        # Three-strikes rule (superpowers: "3 failed attempts → architectural")
+        if attempt_n >= max_a:
+            state.setdefault("quarantined_task_ids", []).append(task["id"])
+            result.notes = (result.notes or "") + f" | QUARANTINED after {attempt_n} attempts"
+            print(f"[ralph] QUARANTINING {task['id']} (failed {attempt_n}× — superpowers 3-strikes rule)")
+
     save_state(state)
     append_log(result, task)
 
     # Console output
-    print(f"[ralph] {result.status:<10}  {task['id']}")
+    print(f"[ralph] {result.status:<20}  {task['id']}")
     if result.metric_before is not None and result.metric_after is not None:
         print(f"        {result.metric_before:.2f} -> {result.metric_after:.2f}  ({result.delta:+.2f})")
     if result.notes:
@@ -374,6 +630,10 @@ def tick(force_task_id: str | None = None,
         print(f"        error: {result.error[:200]}")
     if result.artefacts:
         print(f"        artefacts: {', '.join(result.artefacts)}")
+    if result.acceptance_results:
+        for c in result.acceptance_results:
+            mark = "✓" if c["passed"] else "✗"
+            print(f"        {mark} {c['check']}: {c['detail'][:80]}")
     return result
 
 
@@ -385,7 +645,9 @@ def status() -> dict:
     backlog_size = len(backlog.get("tasks", []))
     done = len(state.get("done_task_ids", []))
     skipped = len(state.get("skipped_task_ids", []))
-    pending = backlog_size - done - skipped
+    quarantined = len(state.get("quarantined_task_ids", []))
+    pending = backlog_size - done - skipped - quarantined
+    attempts = state.get("attempts", {})
     return {
         "tick_count": state.get("tick_count", 0),
         "last_tick": state.get("last_tick"),
@@ -393,6 +655,8 @@ def status() -> dict:
         "backlog_size": backlog_size,
         "done": done,
         "skipped": skipped,
+        "quarantined": quarantined,
         "pending": pending,
         "next_pick": (pick_next_task(backlog, state) or {}).get("id"),
+        "in_flight_attempts": {k: v for k, v in attempts.items() if v > 0},
     }

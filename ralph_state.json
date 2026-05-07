@@ -1,10 +1,11 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-07T11:49:20.676375+00:00",
-  "tick_count": 2,
+  "last_tick": "2026-05-07T12:07:28.734965+00:00",
+  "tick_count": 5,
   "done_task_ids": [
-    "rerun_eval_track_per_question_delta"
+    "rerun_eval_track_per_question_delta",
+    "add_5_targeted_eval_questions"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -40,6 +41,82 @@
       ],
       "new_tasks": [],
       "error": null
+    },
+    {
+      "task_id": "rerun_eval_track_per_question_delta",
+      "type": "cypher_analysis",
+      "started_at": "2026-05-07T12:06:56.875323+00:00",
+      "finished_at": "2026-05-07T12:06:56.878326+00:00",
+      "status": "DONE",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "wrote ralph_analysis_rerun_eval_track_per_question_delta.md",
+      "artefacts": [
+        "data\\ralph_analysis_rerun_eval_track_per_question_delta.md"
+      ],
+      "new_tasks": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_exists data/ralph_analysis_rerun_eval_track_per_question_delta.md",
+          "passed": true,
+          "detail": "C:\\Users\\alika\\Agent Teams\\quran-graph-standalone\\data\\ralph_analysis_rerun_eval_track_per_question_delta.md"
+        },
+        {
+          "check": "file_min_bytes data/ralph_analysis_rerun_eval_track_per_question_delta.md >= 200",
+          "passed": true,
+          "detail": "size=472"
+        }
+      ]
+    },
+    {
+      "task_id": "add_5_targeted_eval_questions",
+      "type": "agent_creative",
+      "started_at": "2026-05-07T12:07:05.735104+00:00",
+      "finished_at": "2026-05-07T12:07:05.735104+00:00",
+      "status": "NEEDS_CONTEXT",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "",
+      "artefacts": [],
+      "new_tasks": [],
+      "error": "OPENROUTER_API_KEY not set",
+      "acceptance_results": []
+    },
+    {
+      "task_id": "add_5_targeted_eval_questions",
+      "type": "agent_creative",
+      "started_at": "2026-05-07T12:07:22.676566+00:00",
+      "finished_at": "2026-05-07T12:07:28.734965+00:00",
+      "status": "DONE_WITH_CONCERNS",
+      "attempt": 2,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "wrote ralph_agent_add_5_targeted_eval_questions.md (review before use)",
+      "artefacts": [
+        "data\\ralph_agent_add_5_targeted_eval_questions.md"
+      ],
+      "new_tasks": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_exists data/ralph_agent_add_5_targeted_eval_questions.md",
+          "passed": true,
+          "detail": "C:\\Users\\alika\\Agent Teams\\quran-graph-standalone\\data\\ralph_agent_add_5_targeted_eval_questions.md"
+        },
+        {
+          "check": "file_min_bytes data/ralph_agent_add_5_targeted_eval_questions.md >= 400",
+          "passed": true,
+          "detail": "size=690"
+        }
+      ]
     }
-  ]
+  ],
+  "quarantined_task_ids": [],
+  "attempts": {}
 }

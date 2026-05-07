@@ -33,6 +33,11 @@ tasks:
       compare_to: data/eval_v1_results.json
       metric: avg_unique_cites_per_q
       regression_pct: 5  # if current is >5% worse than baseline, flag
+      max_attempts: 2
+      acceptance:
+        - file_exists: data/eval_v1_results.json
+        - file_min_bytes: {path: data/eval_v1_results.json, min: 50000}
+        - python: "result.metric_after is not None and result.metric_after > 25"
 
   - id: add_5_targeted_eval_questions
     type: agent_creative
@@ -40,14 +45,35 @@ tasks:
     description: "Add 5 questions to eval that exercise hybrid_search / run_cypher / get_code19_features / recall_similar_query"
     blockers: []
     spec:
+      max_attempts: 2
+      max_tokens: 1500
       target_file: eval_v1.py
       add_to_constant: QUESTIONS_TARGETED
+      acceptance:
+        - file_exists: data/ralph_agent_add_5_targeted_eval_questions.md
+        - file_min_bytes: {path: data/ralph_agent_add_5_targeted_eval_questions.md, min: 400}
       proposals:
         - "How many times does the letter Qaf appear in Surah Qaf? (forces get_code19_features)"
         - "How many verses mention Abraham across all surahs? (forces run_cypher aggregation)"
         - "Find verses containing the word 'kawthar'. (forces hybrid_search BM25 path)"
         - "What was the previous question about? (placeholder — requires conversational mode; skip if /chat is stateless)"
         - "Compare verses about the people of Lot in Surahs 7, 11, 26, and 27. (multi-surah cross-reference; tests traversal depth)"
+      deliverable: |
+        Output a Python list literal of 5 question strings, ready to paste into
+        the QUESTIONS_TARGETED constant in eval_v1.py. Use the proposals above as
+        a starting point but refine for clarity. Each question must clearly target
+        one of: get_code19_features, run_cypher, hybrid_search, concept_search,
+        or multi-hop traversal. Output exactly:
+
+        QUESTIONS_TARGETED = [
+            "...",
+            "...",
+            "...",
+            "...",
+            "...",
+        ]
+
+        Nothing else.
 
   - id: hand_grade_26_answers
     type: manual
@@ -63,6 +89,9 @@ tasks:
     blockers: []
     spec:
       query_kind: python_script
+      acceptance:
+        - file_exists: data/ralph_analysis_rerun_eval_track_per_question_delta.md
+        - file_min_bytes: {path: data/ralph_analysis_rerun_eval_track_per_question_delta.md, min: 200}
       script: |
         import json
         v1 = json.load(open('data/eval_v1_baseline.json', encoding='utf-8'))
@@ -138,6 +167,9 @@ tasks:
     description: "For each tool, what verses does it retrieve most? Surfaces tool-quality gradients"
     blockers: []
     spec:
+      acceptance:
+        - file_exists: data/ralph_analysis_analyze_retrieved_edges_top_per_tool.md
+        - file_min_bytes: {path: data/ralph_analysis_analyze_retrieved_edges_top_per_tool.md, min: 100}
       query: |
         MATCH ()-[r:RETRIEVED]->(v:Verse)
         WITH r.tool AS tool, v.verseId AS vid, count(*) AS n
