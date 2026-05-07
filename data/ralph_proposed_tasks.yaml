@@ -1,0 +1,151 @@
+# Proposed tasks — discover_new_followups deliverable.
+# Source evidence: data/ralph_analysis_*.md + data/eval_v1_results.json + data/ralph_agent_*.md
+# Author: Opus in-session (replaces failed openai/gpt-oss-120b:free output that was vague).
+# Generated: 2026-05-08
+#
+# Each task is concrete and actionable. To merge into ralph_backlog.yaml,
+# copy the entries below into the `tasks:` list. Priorities are based on
+# evidence weight (signal strength × actionability × expected gain).
+
+proposed_at: "2026-05-08T01:10:00Z"
+source_files:
+  - data/ralph_analysis_measure_per_tool_latency.md
+  - data/ralph_analysis_measure_cache_hit_rate.md
+  - data/ralph_analysis_surface_underperforming_questions.md
+  - data/ralph_analysis_surface_retrieval_noise.md
+  - data/ralph_analysis_rerun_eval_track_per_question_delta.md
+  - data/ralph_analysis_analyze_retrieved_edges_top_per_tool.md
+  - data/eval_v1_results.json
+
+tasks:
+  # ── HIGHEST IMPACT: latency outliers ──────────────────────────────────
+  - id: investigate_semantic_search_max_647s
+    type: cypher_analysis
+    priority: 90
+    description: >
+      measure_per_tool_latency shows semantic_search has max=647420ms (10.8 min!)
+      and traverse_topic max=54664ms. These tail outliers dominate user-perceived
+      latency. Find the specific Query/ToolCall pairs and identify the cause
+      (huge result set? Neo4j query plan? embedding model load?).
+    blockers: []
+    spec:
+      cypher: |
+        MATCH (q:Query)-[:TRIGGERED]->(t:ReasoningTrace)-[:HAS_STEP]->(tc:ToolCall)
+        WHERE tc.name IN ['semantic_search','traverse_topic'] AND tc.duration_ms > 30000
+        RETURN tc.name AS tool, tc.duration_ms AS ms, q.text AS query, tc.args AS args
+        ORDER BY ms DESC LIMIT 20
+      output: data/ralph_analysis_investigate_semantic_search_max_647s.md
+      acceptance:
+        - file_exists: data/ralph_analysis_investigate_semantic_search_max_647s.md
+        - file_min_bytes: { path: data/ralph_analysis_investigate_semantic_search_max_647s.md, value: 200 }
+
+  # ── HIGH SIGNAL: noise verses ────────────────────────────────────────
+  - id: prune_noise_verses_113_2_etc
+    type: cypher_analysis
+    priority: 80
+    description: >
+      surface_retrieval_noise found 8 verses (113:2, 34:37, 18:55, 29:40, 3:96,
+      18:100, 18:69, 22:73 etc.) retrieved 6-7 times across queries but cited 0
+      times. They're noise. Examine their MENTIONS edges, embeddings, and any
+      structural reason they're being picked up. Propose a fix (remove keyword,
+      adjust TF-IDF weights, blacklist).
+    blockers: []
+    spec:
+      cypher: |
+        UNWIND ['113:2','34:37','18:55','29:40','3:96','18:100'] AS vid
+        MATCH (v:Verse {verseId: vid})
+        OPTIONAL MATCH (v)-[m:MENTIONS]->(k:Keyword)
+        RETURN vid, v.text AS text,
+               collect(DISTINCT {kw: k.keyword, score: m.score})[..10] AS top_keywords,
+               size((v)-[:RELATED_TO]-()) AS related_count
+      output: data/ralph_analysis_prune_noise_verses_113_2_etc.md
+      acceptance:
+        - file_exists: data/ralph_analysis_prune_noise_verses_113_2_etc.md
+        - file_min_bytes: { path: data/ralph_analysis_prune_noise_verses_113_2_etc.md, value: 300 }
+
+  # ── HIGH IMPACT: implement existing proposals ─────────────────────────
+  - id: implement_citation_tooltip_v2
+    type: agent_creative
+    priority: 78
+    description: >
+      data/ralph_agent_propose_citation_tooltip_v2.md has a usable spec with
+      ASCII mock + HTML structure. Promote it to actual implementation:
+      patch index.html with the bilingual tooltip + Pin button + Explore-in-Graph
+      action. Keep the existing tooltip data-fetch flow.
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_implement_citation_tooltip_v2.md
+        - file_min_bytes: { path: data/ralph_agent_implement_citation_tooltip_v2.md, value: 800 }
+
+  - id: implement_search_bar_autocomplete
+    type: agent_creative
+    priority: 70
+    description: >
+      data/ralph_agent_propose_search_bar_autocomplete.md spec is implementable:
+      a debounced concept-search box that hits /api/concept_suggest and shows
+      a dropdown of top-k canonical concepts with verse counts. Wire in
+      index.html + add the FastAPI route.
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_implement_search_bar_autocomplete.md
+        - file_min_bytes: { path: data/ralph_agent_implement_search_bar_autocomplete.md, value: 800 }
+
+  # ── EVAL: regression investigation ────────────────────────────────────
+  - id: investigate_question_regressions
+    type: cypher_analysis
+    priority: 75
+    description: >
+      rerun_eval_track_per_question_delta showed 3 regressions: 'Tell me about Sin'
+      (-5 cites), Surah Ar-Rahman (-6), Surah Al-Ikhlas (-28). The Al-Ikhlas
+      regression is severe (-60% citation density). Pull the QueryRecorder
+      traces for these three questions before/after, identify which tool
+      sequence changed, and report the root cause.
+    blockers: []
+    spec:
+      cypher: |
+        MATCH (q:Query)-[:TRIGGERED]->(t:ReasoningTrace)
+        WHERE q.text CONTAINS 'Sin' OR q.text CONTAINS 'Ar-Rahman'
+           OR q.text CONTAINS 'Al-Ikhlas' OR q.text CONTAINS 'Ikhlas'
+        OPTIONAL MATCH (t)-[:HAS_STEP]->(tc:ToolCall)
+        RETURN q.text AS query, q.created_at AS ts,
+               collect(tc.name) AS tools, t.n_citations AS cites
+        ORDER BY ts DESC LIMIT 20
+      output: data/ralph_analysis_investigate_question_regressions.md
+      acceptance:
+        - file_exists: data/ralph_analysis_investigate_question_regressions.md
+        - file_min_bytes: { path: data/ralph_analysis_investigate_question_regressions.md, value: 250 }
+
+  # ── COVERAGE: weak abstract-concept questions ─────────────────────────
+  - id: improve_abstract_concept_coverage
+    type: agent_creative
+    priority: 68
+    description: >
+      surface_underperforming_questions: 'meditation' (13 cites), 'reverence'
+      (27), 'hypocrites' (19), Fatihah (26), Surah 55 (19). All abstract /
+      religious concepts where direct keyword search fails. Hypothesis:
+      concept_search isn't expanding wide enough. Propose 3 specific changes
+      to chat.tool_concept_search (e.g. expand via NORMALIZES_TO + RELATED_TO
+      one hop) AND draft a system_prompt addition that nudges the model
+      toward semantic_search + concept_search for these types of questions.
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_improve_abstract_concept_coverage.md
+        - file_min_bytes: { path: data/ralph_agent_improve_abstract_concept_coverage.md, value: 700 }
+
+  # ── DATA QUALITY: cache hit rate sanity check ────────────────────────
+  - id: validate_cache_hit_metric
+    type: cypher_analysis
+    priority: 50
+    description: >
+      measure_cache_hit_rate reports 53.3% but "cache_likely_hits" is
+      heuristic (under-30s response time). Replace with a real metric using
+      the answer_cache logs OR define it precisely. Without trustworthy
+      cache stats we can't tune TTL/dedupe thresholds.
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_analysis_validate_cache_hit_metric.md
+        - file_min_bytes: { path: data/ralph_analysis_validate_cache_hit_metric.md, value: 250 }

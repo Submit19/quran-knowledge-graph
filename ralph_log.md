@@ -31,3 +31,4 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-07T13:00 | propose_search_bar_autocomplete | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_propose_search_bar_autocomplete.md (review before use) |
 | 2026-05-07T13:02 | surface_retrieval_noise | cypher_analysis | DONE |  | wrote ralph_analysis_surface_retrieval_noise.md |
 | 2026-05-07T13:02 | discover_new_followups | agent_creative | FAILED |  | wrote ralph_agent_discover_new_followups.md (review before use) / ACCEPTANCE FAILED: file_exists data/ralph_proposed_tasks.yaml=FAIL; file_min_bytes data/ralph_ |
+| 2026-05-07T13:18 | discover_new_followups | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |

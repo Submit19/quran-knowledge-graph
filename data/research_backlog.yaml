@@ -1,0 +1,177 @@
+# Research backlog — feeds the parallel research loop.
+# Each entry is one research direction. The loop picks the highest-priority
+# open one each cycle, spawns a subagent to investigate, writes findings to
+# data/research_<id>.md, and (if the finding is actionable) appends a new
+# task to ralph_backlog.yaml tagged [from-research].
+#
+# Format:
+#   - id: short_snake_case
+#     priority: 0-100
+#     status: open | in_progress | done
+#     question: the actual research question
+#     deliverable: what the writeup should produce
+#     tags: [retrieval, arabic, neo4j, eval, ...]
+
+version: 1
+
+topics:
+  # ── Retrieval & embeddings ────────────────────────────────────────────
+  - id: bge_m3_dense_vs_colbert
+    priority: 80
+    status: open
+    question: BGE-M3 supports dense, sparse, and ColBERT (multi-vector) retrieval. Has anyone benchmarked its colbert mode on Quranic / classical-Arabic corpora? Is the latency worth it over our current dense-only setup?
+    deliverable: Pros/cons summary + recommendation (skip / try / try with caveats), 5-paper bibliography, sample code if applicable.
+    tags: [retrieval, embeddings]
+
+  - id: arabic_dense_retrievers_2025
+    priority: 78
+    status: open
+    question: What are the current best open Arabic-aware embedding models in 2025-2026 beyond BGE-M3? Look at AraBERT-v3, ArabicBERT, Marbert, Jina-embeddings-v3, multilingual-e5-large-instruct.
+    deliverable: Comparison table on classical-Arabic / religious text retrieval. Specific recommendation for our Hafs corpus.
+    tags: [retrieval, arabic, embeddings]
+
+  - id: hybrid_rrf_alternatives
+    priority: 70
+    status: open
+    question: Beyond reciprocal rank fusion (k=60), what's the state of art in hybrid BM25+dense fusion? Look at convex combination tuning, weighted RRF, learned fusion.
+    deliverable: Practical recipe we can swap into chat.tool_hybrid_search and a/b against current RRF.
+    tags: [retrieval, eval]
+
+  - id: rerank_dropin_2026
+    priority: 68
+    status: open
+    question: Beyond bge-reranker-v2-m3, what 2026-era cross-encoder rerankers handle Arabic well? Look at jina-reranker-v2, mxbai-rerank-large-v2, and any Arabic-specific.
+    deliverable: Latency vs accuracy table, plug-in compatible with our retrieval_gate.
+    tags: [retrieval, arabic]
+
+  - id: graphrag_state_of_art
+    priority: 75
+    status: open
+    question: What did Microsoft GraphRAG, LightRAG, HippoRAG-2, KAG, and other 2025-2026 graph-RAG papers conclude? We tested PPR negatively on QRCD — what other graph-traversal patterns have positive evidence?
+    deliverable: 1-page taxonomy + which patterns we haven't tried yet that have strong evidence in single-hop benchmarks.
+    tags: [retrieval, graph, neo4j]
+
+  # ── Arabic & Quranic NLP ──────────────────────────────────────────────
+  - id: camel_tools_morphology
+    priority: 72
+    status: open
+    question: CAMeL Tools morphological disambiguator vs Quranic Arabic Corpus pre-built morphology — accuracy on classical Arabic vs MSA. Our load_arabic / build_arabic_roots uses corpus.quran.com. Should we cross-validate with CAMeL?
+    deliverable: Spot-check on 50 random verses. If disagreement >5%, flag and propose remediation.
+    tags: [arabic, morphology]
+
+  - id: quran_morphology_v2
+    priority: 70
+    status: open
+    question: What's new since the original Dukes/QAC dataset? Arabic NLP papers 2024-2026 that release improved Quranic morphological annotations.
+    deliverable: List of new datasets with licenses; how we'd integrate.
+    tags: [arabic, morphology, data]
+
+  - id: arabic_root_clustering
+    priority: 60
+    status: open
+    question: Beyond raw root extraction, are there published embeddings for Arabic roots that capture semantic clusters (e.g., k-t-b near q-r-' for "writing/reading")?
+    deliverable: Specific embeddings to try; how to wire into compare_arabic_usage to surface unexpected connections.
+    tags: [arabic, embeddings, semantic]
+
+  - id: wujuh_polysemy_resources
+    priority: 58
+    status: open
+    question: Our build_wujuh.py uses a small handcrafted set. What CC-licensed wujuh / waqar resources exist in 2026 covering more roots?
+    deliverable: List of datasets, sample size each, licensing, integration sketch.
+    tags: [arabic, data, semantic]
+
+  - id: tafsir_corpora_open
+    priority: 55
+    status: open
+    question: Open / CC-licensed tafsir corpora (Ibn Kathir, Tabari, etc.) with structured metadata that could supplement our verse graph.
+    deliverable: Inventory + integration cost estimate. Would a Tafsir node type + EXPLAINS edges materially improve answer quality?
+    tags: [data, arabic]
+
+  # ── Citation grounding & faithfulness ─────────────────────────────────
+  - id: minicheck_2026_followups
+    priority: 65
+    status: open
+    question: Since MiniCheck (Tang et al. 2024), what newer faithfulness / citation-verification models have appeared? AlignScore-v2, FactScore-v2, etc.
+    deliverable: Drop-in candidates with same I/O as our citation_verifier; expected accuracy delta.
+    tags: [eval, citations]
+
+  - id: factscore_atomic_decomposition
+    priority: 60
+    status: open
+    question: FActScore-style atomic decomposition is sensitive to the prompt. What 2025-2026 work has improved on the original Min et al. method? Is there a self-consistency variant?
+    deliverable: Better decomposition prompt or technique; backportable to citation_verifier._decompose_sentence_atomic.
+    tags: [eval, citations]
+
+  - id: citation_metric_taxonomy
+    priority: 50
+    status: open
+    question: Beyond NLI entailment + MiniCheck, what citation-quality metrics are used in recent grounded-QA papers? Attribution to Identified Sources (AIS), citation overlap F1, etc.
+    deliverable: A small toolbox we could add to evaluate.py.
+    tags: [eval, citations]
+
+  # ── Knowledge graph & Neo4j ────────────────────────────────────────────
+  - id: neo4j_2025_features
+    priority: 60
+    status: open
+    question: Neo4j 5.x → 5.21+ added vector indexing improvements, hierarchical navigable small worlds, and new GDS algorithms. What's relevant to our setup?
+    deliverable: Specific features we should turn on; migration sketch.
+    tags: [neo4j, perf]
+
+  - id: graph_community_detection_for_qkg
+    priority: 55
+    status: open
+    question: Our analyze_graph_structure.py found 16 modularity communities. What community-detection algorithms beyond Louvain (Leiden, Infomap, Hipster-DB) might surface more interpretable clusters of verses?
+    deliverable: Practical recommendation; sample output on our graph.
+    tags: [graph, neo4j]
+
+  - id: aura_agent_design_patterns
+    priority: 50
+    status: open
+    question: Neo4j Aura Agent (Zach Blumenfeld talk) — what specific design patterns for agentic graph traversal would map well to our chat.py?
+    deliverable: 3-5 concrete patterns we could borrow + diff against what we already have.
+    tags: [neo4j, architecture]
+
+  # ── Eval methodology ──────────────────────────────────────────────────
+  - id: qa_benchmarks_for_classical_text
+    priority: 65
+    status: open
+    question: Beyond QRCD, what held-out evaluation sets exist for Quranic / classical-Arabic / religious-text QA? Are there multi-hop benchmarks?
+    deliverable: List of usable benchmarks. Plan to import 1-2 into our eval harness.
+    tags: [eval, data]
+
+  - id: ragas_for_quran
+    priority: 50
+    status: open
+    question: Ragas / DeepEval / promptfoo — what RAG eval frameworks could complement our hand-curated eval_v1.py?
+    deliverable: 1-page comparison; which (if any) to integrate.
+    tags: [eval]
+
+  # ── UX & frontend ─────────────────────────────────────────────────────
+  - id: 3d_force_graph_perf_tricks
+    priority: 45
+    status: open
+    question: Our index.html uses 3d-force-graph with 6234 nodes. What performance tricks have emerged for large-graph Three.js viz in 2025-2026?
+    deliverable: Specific patches to index.html with measured FPS impact estimates.
+    tags: [ux, perf, frontend]
+
+  - id: streaming_progress_ux_patterns
+    priority: 42
+    status: open
+    question: Best-practice 2025-2026 patterns for streaming agent progress in chat UIs (tool calls, intermediate verification). What does Perplexity / ChatGPT / Anthropic Console do?
+    deliverable: Concrete UI proposal we could ship in index.html.
+    tags: [ux, frontend]
+
+  # ── Misc ───────────────────────────────────────────────────────────────
+  - id: code19_literature_review
+    priority: 40
+    status: open
+    question: Academic literature on Khalifa Code-19. What's the current scholarly consensus and what falsifiable claims could we test programmatically?
+    deliverable: Brief lit review + 3-5 testable claims we could compute over our graph.
+    tags: [code19, religious-studies]
+
+  - id: sefaria_architecture_deep_dive
+    priority: 50
+    status: open
+    question: Sefaria.org has been a recurring inspiration. What specific architectural choices (sheets, talmud-style cross-references, source-text alignment) could we steal?
+    deliverable: Inventory of patterns + specific issues / commits we could reference.
+    tags: [architecture, ux]

@@ -511,8 +511,36 @@ def execute_agent_creative(task: dict, state: dict, result: TickResult) -> TickR
     Output is written to data/ralph_agent_<id>.md and the result is marked
     DONE_WITH_CONCERNS by default (these need human review before downstream
     use).
+
+    Backend selection (RALPH_AGENT_BACKEND env var):
+      - "openrouter"  (default) — call gpt-oss-120b:free as before
+      - "manual"      — skip API call entirely. Used when an interactive
+                        operator (e.g. Opus running in a Claude Code session)
+                        is producing the deliverables out-of-band. The
+                        executor returns DONE_WITH_CONCERNS and lets the
+                        gate function check whether acceptance files exist.
+                        If they do, the gate promotes to DONE; if not, it
+                        demotes to FAILED.
     """
     spec = task.get("spec") or {}
+
+    # ── manual mode: defer entirely to the gate function ────────────────
+    backend = os.getenv("RALPH_AGENT_BACKEND", "openrouter").strip().lower()
+    if backend == "manual":
+        result.status = DONE_WITH_CONCERNS
+        result.notes = "manual backend — deliverable produced out-of-band; gate will validate"
+        # Mark the agent .md file too so future ticks can see this task was
+        # handled. Don't overwrite if it exists.
+        marker = DATA_DIR / f"ralph_agent_{task['id']}.md"
+        if not marker.exists():
+            marker.parent.mkdir(parents=True, exist_ok=True)
+            marker.write_text(
+                f"# {task['id']}\n\n_Handled in manual mode by an in-session operator. "
+                f"See task acceptance files for the actual deliverable._\n",
+                encoding="utf-8",
+            )
+        return result
+
     # Load .env so OPENROUTER_API_KEY is available even if the loop is
     # invoked outside an existing shell session.
     try:
