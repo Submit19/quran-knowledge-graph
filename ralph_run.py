@@ -38,23 +38,37 @@ import ralph_loop
 
 
 def git_commit_push(tick_n: int):
-    """Commit any tick artefacts + state, push to origin."""
+    """Commit any tick artefacts + state, push to origin.
+
+    Note: subprocess does NOT shell-expand globs. We expand them here with
+    Path.glob so artefact files are actually staged (the previous version
+    was passing literal "data/ralph_analysis_*.md" to git add and silently
+    no-op'ing).
+    """
+    root = ralph_loop.ROOT
     try:
-        subprocess.run(
-            ["git", "add",
-             "ralph_state.json", "ralph_log.md", "ralph_backlog.yaml",
-             "data/eval_v1_results.json", "data/eval_v1_results.md",
-             "data/ralph_analysis_*.md", "data/ralph_agent_*.md",
-             "data/eval_*.json"],
-            cwd=str(ralph_loop.ROOT), capture_output=True,
-        )
-        # Empty commit is fine if nothing changed; we'll just suppress
+        explicit_paths = [
+            "ralph_state.json", "ralph_log.md", "ralph_backlog.yaml",
+            "data/eval_v1_results.json", "data/eval_v1_results.md",
+        ]
+        glob_patterns = [
+            "data/ralph_analysis_*.md",
+            "data/ralph_agent_*.md",
+            "data/eval_*.json",
+        ]
+        files_to_add = [p for p in explicit_paths if (root / p).exists()]
+        for pat in glob_patterns:
+            files_to_add.extend(str(p.relative_to(root)) for p in root.glob(pat))
+        if not files_to_add:
+            return False
+        subprocess.run(["git", "add", *files_to_add],
+                       cwd=str(root), capture_output=True)
         proc = subprocess.run(
             ["git", "commit", "-m", f"ralph tick {tick_n}", "--allow-empty"],
-            cwd=str(ralph_loop.ROOT), capture_output=True, text=True,
+            cwd=str(root), capture_output=True, text=True,
         )
         if proc.returncode == 0:
-            subprocess.run(["git", "push"], cwd=str(ralph_loop.ROOT),
+            subprocess.run(["git", "push"], cwd=str(root),
                            capture_output=True, timeout=60)
             return True
     except Exception as e:
@@ -110,9 +124,10 @@ def main():
         if args.git_commit and not args.dry:
             git_commit_push(i)
 
-        # Brief pause between ticks (avoids hammering OpenRouter / Neo4j)
-        if i < args.max:
-            time.sleep(max(1, args.sleep))
+        # Brief pause between ticks (avoids hammering OpenRouter / Neo4j).
+        # User can pass --sleep 0 to disable.
+        if i < args.max and args.sleep > 0:
+            time.sleep(args.sleep)
 
     # ── Post-loop reporting ─────────────────────────────────────────────
     print("\n" + "=" * 62)

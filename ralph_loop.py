@@ -26,9 +26,12 @@ import sys
 import time
 import traceback
 from dataclasses import dataclass, field, asdict
-from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any, Callable
+from typing import Callable
+
+# Reuse: reasoning_memory has the canonical ISO-8601 UTC formatter.
+# Importing it removes duplication across the repo (4 copies as of 2026-05).
+from reasoning_memory import _now_iso
 
 ROOT = Path(__file__).parent
 BACKLOG_PATH = ROOT / "ralph_backlog.yaml"
@@ -36,9 +39,7 @@ STATE_PATH = ROOT / "ralph_state.json"
 LOG_PATH = ROOT / "ralph_log.md"
 DATA_DIR = ROOT / "data"
 
-
-def _now_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
+HISTORY_CAP = 500   # cap state['history'] FIFO; older entries dropped at save_state
 
 
 # ── state I/O ────────────────────────────────────────────────────────────────
@@ -83,10 +84,9 @@ class TickResult:
     metric_after: float | None = None
     delta: float | None = None
     notes: str = ""
-    artefacts: list[str] = field(default_factory=list)   # filenames written
-    new_tasks: list[str] = field(default_factory=list)   # task_ids appended to backlog
+    artefacts: list[str] = field(default_factory=list)
     error: str | None = None
-    acceptance_results: list[dict] = field(default_factory=list)  # per-check verification
+    acceptance_results: list[dict] = field(default_factory=list)
 
 
 def load_state() -> dict:
@@ -105,6 +105,10 @@ def load_state() -> dict:
 
 
 def save_state(state: dict):
+    # FIFO-cap unbounded history so the file doesn't balloon over months
+    h = state.get("history") or []
+    if len(h) > HISTORY_CAP:
+        state["history"] = h[-HISTORY_CAP:]
     STATE_PATH.write_text(json.dumps(state, indent=2, ensure_ascii=False),
                           encoding="utf-8")
 
@@ -118,15 +122,6 @@ def load_backlog() -> dict:
     except ImportError:
         # Fallback — pyyaml is in our requirements but be defensive
         sys.exit("pyyaml not installed. pip install pyyaml")
-
-
-def save_backlog(backlog: dict):
-    """Persist backlog (used when adding discovered follow-up tasks)."""
-    import yaml
-    BACKLOG_PATH.write_text(
-        yaml.safe_dump(backlog, sort_keys=False, allow_unicode=True),
-        encoding="utf-8",
-    )
 
 
 _LOG_HEADER = (
@@ -305,7 +300,10 @@ def verify_acceptance(task: dict, result: TickResult) -> tuple[bool, list[dict]]
         elif "file_min_bytes" in c:
             cfg = c["file_min_bytes"]
             p = ROOT / cfg["path"]
-            sz = p.stat().st_size if p.exists() else 0
+            try:
+                sz = p.stat().st_size
+            except FileNotFoundError:
+                sz = 0
             ok = sz >= int(cfg["min"])
             out.append({"check": f"file_min_bytes {cfg['path']} >= {cfg['min']}",
                         "passed": ok, "detail": f"size={sz}"})
@@ -446,17 +444,17 @@ def execute_cypher_analysis(task: dict, state: dict, result: TickResult) -> Tick
             sys.stdout = old
         out_md.write_text("# " + task["id"] + "\n\n```\n" + text + "\n```\n", encoding="utf-8")
     elif "query" in spec:
+        from dotenv import load_dotenv; load_dotenv()
+        from neo4j import GraphDatabase
         try:
-            from dotenv import load_dotenv; load_dotenv()
-            from neo4j import GraphDatabase
-            d = GraphDatabase.driver(os.getenv("NEO4J_URI"),
-                                      auth=(os.getenv("NEO4J_USER"),
-                                            os.getenv("NEO4J_PASSWORD")))
-            with d.session(database=os.getenv("NEO4J_DATABASE", "quran")) as s:
-                rows = s.run(spec["query"]).data()
+            with GraphDatabase.driver(
+                    os.getenv("NEO4J_URI"),
+                    auth=(os.getenv("NEO4J_USER"),
+                          os.getenv("NEO4J_PASSWORD"))) as d:
+                with d.session(database=os.getenv("NEO4J_DATABASE", "quran")) as s:
+                    rows = s.run(spec["query"]).data()
             text = json.dumps(rows, indent=2, ensure_ascii=False, default=str)
             out_md.write_text(f"# {task['id']}\n\n```json\n{text}\n```\n", encoding="utf-8")
-            d.close()
         except Exception as e:
             err = str(e)
             if "ServiceUnavailable" in err or "Couldn't connect" in err:
@@ -597,17 +595,14 @@ def execute_agent_creative(task: dict, state: dict, result: TickResult) -> TickR
     return result
 
 
+# Only types with a real executor are listed here. Unlisted types
+# (prompt_variant, embed_op, cache_op, manual, external_run, etc.) fall
+# through to execute_skipped via EXECUTORS.get(type, execute_skipped) below.
 EXECUTORS: dict[str, Callable] = {
-    "eval": execute_eval,
+    "eval":            execute_eval,
     "cypher_analysis": execute_cypher_analysis,
-    "cleanup": execute_cleanup,
+    "cleanup":         execute_cleanup,
     "agent_creative":  execute_agent_creative,
-    # Stubs — will skip with a clear note until proper executors are added:
-    "prompt_variant":  execute_skipped,
-    "embed_op":        execute_skipped,
-    "cache_op":        execute_skipped,
-    "manual":          execute_skipped,
-    "external_run":    execute_skipped,
 }
 
 
@@ -623,8 +618,7 @@ def tick(force_task_id: str | None = None,
     if force_task_id:
         task = next((t for t in backlog.get("tasks", []) if t["id"] == force_task_id), None)
         if not task:
-            print(f"ERROR: task '{force_task_id}' not in backlog")
-            return None
+            raise SystemExit(f"ERROR: task '{force_task_id}' not in backlog")
     else:
         task = pick_next_task(backlog, state, allow_types=allow_types)
 

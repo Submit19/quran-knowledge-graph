@@ -51,7 +51,7 @@ def main():
     )
     if result is None:
         sys.exit(0)
-    if result.status in ("failed", "regression"):
+    if result.status in (ralph_loop.FAILED, ralph_loop.REGRESSION):
         sys.exit(2)
 
 
