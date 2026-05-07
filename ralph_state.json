@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "in_progress": null,
+  "last_tick": "2026-05-07T11:49:20.676375+00:00",
+  "tick_count": 2,
+  "done_task_ids": [
+    "rerun_eval_track_per_question_delta"
+  ],
+  "skipped_task_ids": [],
+  "baselines": {},
+  "history": [
+    {
+      "task_id": "rerun_eval_track_per_question_delta",
+      "type": "cypher_analysis",
+      "started_at": "2026-05-07T11:48:56.684806+00:00",
+      "finished_at": "2026-05-07T11:48:56.688807+00:00",
+      "status": "failed",
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "",
+      "artefacts": [
+        "data\\ralph_analysis_rerun_eval_track_per_question_delta.md"
+      ],
+      "new_tasks": [],
+      "error": "\", line 293, in load\n    return loads(fp.read(),\n                 ^^^^^^^^^\n  File \"C:\\Program Files\\Python312\\Lib\\encodings\\cp1252.py\", line 23, in decode\n    return codecs.charmap_decode(input,self.errors,decoding_table)[0]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nUnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 2219: character maps to <undefined>\n"
+    },
+    {
+      "task_id": "rerun_eval_track_per_question_delta",
+      "type": "cypher_analysis",
+      "started_at": "2026-05-07T11:49:20.673356+00:00",
+      "finished_at": "2026-05-07T11:49:20.676375+00:00",
+      "status": "success",
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "wrote ralph_analysis_rerun_eval_track_per_question_delta.md",
+      "artefacts": [
+        "data\\ralph_analysis_rerun_eval_track_per_question_delta.md"
+      ],
+      "new_tasks": [],
+      "error": null
+    }
+  ]
+}

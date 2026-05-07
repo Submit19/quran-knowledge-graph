@@ -1,0 +1,205 @@
+# Ralph Loop — Backlog
+#
+# A ranked queue of small, atomic tasks. Each tick picks the highest-priority
+# unblocked task, runs it, measures impact, commits if improved, logs what
+# was learned, and updates this file with discovered follow-ups.
+#
+# Edit by hand at any time. Format:
+#   id          — unique snake_case
+#   type        — eval | prompt_variant | cypher_analysis | cache_op
+#                  | embed_op | agent_creative | cleanup | manual | external_run
+#   priority    — 0..100, higher = run sooner
+#   description — one line, human-readable
+#   blockers    — list of other task ids this depends on (must be done first)
+#   spec        — task-type-specific config (varies)
+#   notes       — anything else
+#
+# Status: tasks land in ralph_state.json once executed (done | failed | skipped)
+
+version: 1
+default_baseline_eval: data/eval_v1_results.json
+default_baseline_metric: avg_unique_cites_per_q   # currently 43.6 (v2 prompt)
+
+tasks:
+  # ── Eval-driven (answer quality) ───────────────────────────────────────────
+  - id: rerun_eval_against_current
+    type: eval
+    priority: 95
+    description: "Run eval_v1.py vs current code+prompt, snapshot to data/eval_<ts>.json"
+    blockers: []
+    spec:
+      script: eval_v1.py
+      env: {SEMANTIC_SEARCH_INDEX: verse_embedding_m3, RERANKER_MODEL: BAAI/bge-reranker-v2-m3}
+      compare_to: data/eval_v1_results.json
+      metric: avg_unique_cites_per_q
+      regression_pct: 5  # if current is >5% worse than baseline, flag
+
+  - id: add_5_targeted_eval_questions
+    type: agent_creative
+    priority: 90
+    description: "Add 5 questions to eval that exercise hybrid_search / run_cypher / get_code19_features / recall_similar_query"
+    blockers: []
+    spec:
+      target_file: eval_v1.py
+      add_to_constant: QUESTIONS_TARGETED
+      proposals:
+        - "How many times does the letter Qaf appear in Surah Qaf? (forces get_code19_features)"
+        - "How many verses mention Abraham across all surahs? (forces run_cypher aggregation)"
+        - "Find verses containing the word 'kawthar'. (forces hybrid_search BM25 path)"
+        - "What was the previous question about? (placeholder — requires conversational mode; skip if /chat is stateless)"
+        - "Compare verses about the people of Lot in Surahs 7, 11, 26, and 27. (multi-surah cross-reference; tests traversal depth)"
+
+  - id: hand_grade_26_answers
+    type: manual
+    priority: 88
+    description: "User to grade v1 vs v2 answer pairs (5/5 fidelity), 26 answers, ~2hrs"
+    blockers: []
+    notes: "Skipped by automated ticker. User invokes manually. Output goes to data/eval_handgrade.json."
+
+  - id: rerun_eval_track_per_question_delta
+    type: cypher_analysis
+    priority: 70
+    description: "Compare v1 vs v2 per-question and identify the 3 that improved most + 3 that regressed (if any). Use to focus prompt-variant tasks."
+    blockers: []
+    spec:
+      query_kind: python_script
+      script: |
+        import json
+        v1 = json.load(open('data/eval_v1_baseline.json', encoding='utf-8'))
+        v2 = json.load(open('data/eval_v1_results.json', encoding='utf-8'))
+        rows = []
+        for batch in ('general', 'surah'):
+            for a, b in zip(v1.get(batch, []), v2.get(batch, [])):
+                if a.get('question') != b.get('question'): continue
+                rows.append({
+                    'question': a['question'],
+                    'cites_delta': b.get('n_cites_unique', 0) - a.get('n_cites_unique', 0),
+                    'time_delta': b.get('elapsed_sec', 0) - a.get('elapsed_sec', 0),
+                    'tool_delta': b.get('n_tool_calls', 0) - a.get('n_tool_calls', 0),
+                })
+        rows.sort(key=lambda r: -r['cites_delta'])
+        print('=== Top improvements ===')
+        for r in rows[:3]: print(f"  +{r['cites_delta']:>3} cites  +{r['time_delta']:>4.0f}s  '{r['question'][:60]}'")
+        print('\n=== Bottom (regressions) ===')
+        for r in rows[-3:]: print(f"  {r['cites_delta']:>+3} cites  {r['time_delta']:>+4.0f}s  '{r['question'][:60]}'")
+
+  # ── Architecture / cache hygiene ───────────────────────────────────────────
+  - id: refresh_query_embedding_to_bge_m3
+    type: embed_op
+    priority: 85
+    description: "Re-embed (:Query) nodes with BGE-M3 so HippoRAG past-query seeds aren't garbage on Arabic"
+    blockers: []
+    spec:
+      target: Query.textEmbedding
+      from_model: all-MiniLM-L6-v2
+      to_model: BAAI/bge-m3
+      new_index: query_embedding_m3
+      keep_legacy: true  # don't drop old index — keep both
+      script_to_write: backfill_query_embeddings_m3.py
+
+  - id: refresh_answer_cache_through_new_pipeline
+    type: cache_op
+    priority: 80
+    description: "Re-embed answer_cache.json keys with BGE-M3 so cache hits align with semantic_search index"
+    blockers: []
+    spec:
+      target: data/answer_cache.json (entry.embedding field)
+      from_model: all-MiniLM-L6-v2
+      to_model: BAAI/bge-m3
+      backup_first: data/answer_cache.pre-m3-rekey.bak.json
+      script_to_write: rekey_answer_cache_m3.py
+
+  - id: try_lower_max_tool_turns
+    type: prompt_variant
+    priority: 75
+    description: "Lower MAX_TOOL_TURNS from 8 to 5; rerun eval; commit if no regression"
+    blockers: [rerun_eval_against_current]
+    spec:
+      file: app_free.py
+      change: "MAX_TOOL_TURNS = 5"
+      restart_required: true
+      compare_to_baseline: true
+
+  - id: cypher_retry_metric
+    type: prompt_variant
+    priority: 60
+    description: "Surface tool retry count + first-error class as SSE metadata; logs per-response in eval"
+    blockers: []
+    spec:
+      file: chat.py
+      surface_via: SSE event 'tool' adds 'retries' field
+      eval_field: tool_retries
+      restart_required: true
+
+  # ── Data-layer / RETRIEVED-edge driven ─────────────────────────────────────
+  - id: analyze_retrieved_edges_top_per_tool
+    type: cypher_analysis
+    priority: 65
+    description: "For each tool, what verses does it retrieve most? Surfaces tool-quality gradients"
+    blockers: []
+    spec:
+      query: |
+        MATCH ()-[r:RETRIEVED]->(v:Verse)
+        WITH r.tool AS tool, v.verseId AS vid, count(*) AS n
+        ORDER BY tool, n DESC
+        RETURN tool, collect({vid: vid, n: n})[0..5] AS top5
+
+  - id: build_biased_search_tool
+    type: prompt_variant
+    priority: 55
+    description: "tool_biased_search uses RETRIEVED edge counts to boost frequently-good verses (Eifrem #4-B)"
+    blockers: [analyze_retrieved_edges_top_per_tool, refresh_query_embedding_to_bge_m3]
+    spec:
+      file: chat.py
+      tool_name: biased_search
+      logic: |
+        Hybrid_search top-K seeds, then re-rank by:
+          score' = alpha * cosine + beta * log(1 + retrieved_count_for_similar_past_queries)
+
+  # ── HippoRAG / multi-hop ───────────────────────────────────────────────────
+  - id: rerun_hipporag_after_query_reembed
+    type: eval
+    priority: 65
+    description: "After Query embeddings refreshed to BGE-M3, re-run hipporag QRCD eval. Original failed because past-query seed was MiniLM noise vs Arabic queries."
+    blockers: [refresh_query_embedding_to_bge_m3]
+    spec:
+      script: eval_qrcd_hipporag.py
+      compare_to: data/qrcd_hipporag_compare.json
+
+  - id: build_multihop_benchmark
+    type: agent_creative
+    priority: 50
+    description: "Hand-curate 30 multi-hop Quran questions; gold = required verse traversal path. Strategic — gates whether ANY graph method beats vector RAG."
+    blockers: []
+    spec:
+      target: data/multihop_bench.jsonl
+      example: |
+        {"question": "Find verses that share Arabic root with 14:24 but are about prophets",
+         "gold_path": ["root: ك ل م", "verses with that root", "filter: about prophets"]}
+
+  # ── UX / observability ─────────────────────────────────────────────────────
+  - id: surface_top_retrieved_verses_in_3d_viz
+    type: prompt_variant
+    priority: 45
+    description: "Mark hub-by-retrieval verses with a halo in index.html"
+    blockers: [analyze_retrieved_edges_top_per_tool]
+    spec:
+      file: index.html
+      data_source: data/graph_stats.json + RETRIEVED-counts query
+
+  - id: bootstrap_tools_py
+    type: agent_creative
+    priority: 35
+    description: "Schema-to-tool stub generator (Aura Agent inspiration). Useful when adding a new corpus (Hadith, Tafsir)."
+    blockers: []
+    spec:
+      output: bootstrap_tools.py
+      input: db.schema.visualization() + use-case prompt from pipeline_config.yaml
+
+  # ── Cleanup hygiene (always-low-priority background) ──────────────────────
+  - id: append_ralph_status_to_AUTONOMOUS_RUN
+    type: cleanup
+    priority: 10
+    description: "After each tick, append a one-line status to AUTONOMOUS_RUN_2026-04-28.md or a new RALPH_LOG.md"
+    blockers: []
+    spec: {}
