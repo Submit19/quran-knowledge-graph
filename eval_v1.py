@@ -47,6 +47,10 @@ QUESTIONS_SURAH = [
 ]
 
 
+EVAL_MODEL = os.environ.get("EVAL_MODEL", "openai/gpt-oss-120b:free")
+EVAL_LOCAL_ONLY = os.environ.get("EVAL_LOCAL_ONLY", "0") == "1"
+
+
 def ask(message, timeout=900):
     t0 = time.time()
     payload = {
@@ -54,7 +58,10 @@ def ask(message, timeout=900):
         "history": [],
         "deep_dive": False,
         "full_coverage": True,
+        "local_only": EVAL_LOCAL_ONLY,
     }
+    if not EVAL_LOCAL_ONLY:
+        payload["model_override"] = EVAL_MODEL
     try:
         r = requests.post(f"{BASE}/chat", json=payload, stream=True, timeout=timeout)
         r.raise_for_status()
