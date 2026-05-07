@@ -20,3 +20,4 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-07T12:07 | add_5_targeted_eval_questions | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_add_5_targeted_eval_questions.md (review before use) |
 | 2026-05-07T12:37 | rerun_eval_track_per_question_delta | cypher_analysis | DONE |  | wrote ralph_analysis_rerun_eval_track_per_question_delta.md |
 | 2026-05-07T12:50 | measure_per_tool_latency | cypher_analysis | DONE |  | wrote ralph_analysis_measure_per_tool_latency.md |
+| 2026-05-07T12:51 | measure_cache_hit_rate | cypher_analysis | DONE |  | wrote ralph_analysis_measure_cache_hit_rate.md |
