@@ -26,3 +26,4 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-07T12:53 | measure_reranker_speed_vs_quality | cleanup | DONE |  | Run eval twice — once with reranker on, once with RERANK_DISABLED=1 — compare ti |
 | 2026-05-07T12:56 | propose_citation_tooltip_v2 | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_propose_citation_tooltip_v2.md (review before use) |
 | 2026-05-07T12:57 | analyze_retrieved_edges_top_per_tool | cypher_analysis | DONE |  | wrote ralph_analysis_analyze_retrieved_edges_top_per_tool.md |
+| 2026-05-07T12:57 | propose_session_memory_ux | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_propose_session_memory_ux.md (review before use) |

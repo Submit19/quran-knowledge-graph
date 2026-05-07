@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-07T12:57:51.677654+00:00",
-  "tick_count": 13,
+  "last_tick": "2026-05-07T12:59:11.732641+00:00",
+  "tick_count": 14,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -12,7 +12,8 @@
     "propose_streaming_progress_indicator",
     "measure_reranker_speed_vs_quality",
     "propose_citation_tooltip_v2",
-    "analyze_retrieved_edges_top_per_tool"
+    "analyze_retrieved_edges_top_per_tool",
+    "propose_session_memory_ux"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -337,6 +338,34 @@
           "check": "file_min_bytes data/ralph_analysis_analyze_retrieved_edges_top_per_tool.md >= 100",
           "passed": true,
           "detail": "size=2223"
+        }
+      ]
+    },
+    {
+      "task_id": "propose_session_memory_ux",
+      "type": "agent_creative",
+      "started_at": "2026-05-07T12:57:58.921905+00:00",
+      "finished_at": "2026-05-07T12:59:11.732641+00:00",
+      "status": "DONE_WITH_CONCERNS",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "wrote ralph_agent_propose_session_memory_ux.md (review before use)",
+      "artefacts": [
+        "data\\ralph_agent_propose_session_memory_ux.md"
+      ],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_exists data/ralph_agent_propose_session_memory_ux.md",
+          "passed": true,
+          "detail": "C:\\Users\\alika\\Agent Teams\\quran-graph-standalone\\data\\ralph_agent_propose_session_memory_ux.md"
+        },
+        {
+          "check": "file_min_bytes data/ralph_agent_propose_session_memory_ux.md >= 700",
+          "passed": true,
+          "detail": "size=5689"
         }
       ]
     }
