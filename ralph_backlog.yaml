@@ -240,6 +240,271 @@ tasks:
       output: bootstrap_tools.py
       input: db.schema.visualization() + use-case prompt from pipeline_config.yaml
 
+  # ── Speed / latency focus ──────────────────────────────────────────────────
+  - id: measure_per_tool_latency
+    type: cypher_analysis
+    priority: 78
+    description: "Aggregate ToolCall.duration_ms per tool_name from reasoning_memory; surface the slow tools"
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_analysis_measure_per_tool_latency.md
+        - file_min_bytes: {path: data/ralph_analysis_measure_per_tool_latency.md, min: 200}
+      query: |
+        MATCH ()-[:HAS_STEP]->(tc:ToolCall)
+        WHERE tc.duration_ms IS NOT NULL AND tc.tool_name IS NOT NULL
+        WITH tc.tool_name AS tool, tc.duration_ms AS ms
+        RETURN tool,
+               count(*) AS n_calls,
+               round(avg(ms)) AS avg_ms,
+               round(percentileCont(ms, 0.5)) AS p50_ms,
+               round(percentileCont(ms, 0.95)) AS p95_ms,
+               round(max(ms)) AS max_ms,
+               sum(ms) AS total_ms
+        ORDER BY total_ms DESC
+
+  - id: measure_cache_hit_rate
+    type: cypher_analysis
+    priority: 76
+    description: "What % of past Queries hit the answer cache vs ran full agent loop?"
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_analysis_measure_cache_hit_rate.md
+        - file_min_bytes: {path: data/ralph_analysis_measure_cache_hit_rate.md, min: 100}
+      query: |
+        MATCH (q:Query)-[:TRIGGERED]->(t:ReasoningTrace)
+        OPTIONAL MATCH (t)-[:HAS_STEP]->(tc:ToolCall)
+        WITH t, count(tc) AS n_steps
+        RETURN
+          count(t) AS total_traces,
+          sum(CASE WHEN n_steps = 0 THEN 1 ELSE 0 END) AS cache_likely_hits,
+          sum(CASE WHEN n_steps > 0 THEN 1 ELSE 0 END) AS full_runs,
+          round(toFloat(sum(CASE WHEN n_steps = 0 THEN 1 ELSE 0 END)) /
+                count(t) * 100, 1) AS cache_hit_pct
+
+  - id: propose_speed_tunings
+    type: agent_creative
+    priority: 73
+    description: "Given the cache-hit-rate + per-tool-latency analyses, propose 3-5 concrete tuning changes (env vars, MAX_TOOL_TURNS, tool-call cache TTL, reranker on/off). Output: a doc with rationale + expected delta."
+    blockers: [measure_per_tool_latency, measure_cache_hit_rate]
+    spec:
+      max_attempts: 2
+      max_tokens: 1500
+      acceptance:
+        - file_exists: data/ralph_agent_propose_speed_tunings.md
+        - file_min_bytes: {path: data/ralph_agent_propose_speed_tunings.md, min: 600}
+      deliverable: |
+        Read the per-tool-latency analysis and the cache-hit-rate analysis
+        (both already produced as data/ralph_analysis_*.md by prior tasks).
+        Propose 3-5 concrete tuning changes that would reduce avg latency
+        per /chat without sacrificing answer quality. Each proposal must
+        include:
+          1. The change (env var, code line, config edit)
+          2. The mechanism (why it would speed things up)
+          3. The risk (what it could break)
+          4. The validation plan (which eval metric to watch)
+        Format as a numbered markdown list.
+
+  - id: measure_reranker_speed_vs_quality
+    type: cleanup
+    priority: 70
+    description: "Run eval twice — once with reranker on, once with RERANK_DISABLED=1 — compare time + cite-density"
+    blockers: []
+    notes: "Stub — needs a custom executor that runs the eval twice with different env. For now, picks SKIPPED unless promoted to a manual flow."
+    spec:
+      acceptance:
+        - python: "True"   # placeholder until proper executor lands
+
+  # ── UI/UX proposals (loop produces specs; human applies in foreground) ─────
+  - id: propose_streaming_progress_indicator
+    type: agent_creative
+    priority: 72
+    description: "Spec a UI affordance that shows which tool is currently running during /chat (we already emit SSE 'tool' events). Output: a markdown doc with HTML/JS sketch + which lines of index.html to change."
+    blockers: []
+    spec:
+      max_attempts: 2
+      max_tokens: 2000
+      acceptance:
+        - file_exists: data/ralph_agent_propose_streaming_progress_indicator.md
+        - file_min_bytes: {path: data/ralph_agent_propose_streaming_progress_indicator.md, min: 800}
+      context: |
+        The /chat endpoint streams SSE events. Event types we emit:
+          'tool'          -> {name, args, summary} — fired before each tool call
+          'text'          -> {d: <markdown delta>}
+          'graph_update'  -> {nodes, links}
+          'verification'  -> {citation_precision, total_claims, supported}
+          'done'          -> {verses}
+          'error'         -> {d}
+        Currently index.html shows nothing while the agent is running; the
+        user just sees a spinner. We want a tool-by-tool progress bar that
+        updates as 'tool' events arrive (e.g. "1/5 search_keyword 'patience'"
+        → "2/5 hybrid_search ...").
+      deliverable: |
+        Output a markdown spec with:
+          1. Visual mock (ASCII-art or HTML structure).
+          2. Specific HTML/CSS/JS additions to index.html.
+          3. State machine: how tool events update which DOM nodes.
+          4. Edge cases (cache hit = no tools fire, error mid-stream, ≥10 tools).
+          5. Estimated implementation effort in lines of code.
+
+  - id: propose_citation_tooltip_v2
+    type: agent_creative
+    priority: 68
+    description: "Spec an improved citation hover tooltip — show Arabic + English, cross-references, 'explore' button. Output: HTML/CSS sketch + diff against current index.html."
+    blockers: []
+    spec:
+      max_attempts: 2
+      max_tokens: 1800
+      acceptance:
+        - file_exists: data/ralph_agent_propose_citation_tooltip_v2.md
+        - file_min_bytes: {path: data/ralph_agent_propose_citation_tooltip_v2.md, min: 700}
+      context: |
+        Today: hovering [2:255] in a chat answer shows a small floating div
+        with the English text only. Wanted: bilingual (Arabic with proper RTL
+        + English), 1-line surah header, "explore in graph" deep link, click
+        to pin (avoid disappearing tooltip).
+      deliverable: |
+        Spec doc: visual mock + the tooltip HTML structure + how it pulls
+        Arabic text (we already have v.arabicText on Verse nodes; the /chat
+        'done' event includes verse texts). Note any backend changes needed.
+
+  - id: propose_session_memory_ux
+    type: agent_creative
+    priority: 64
+    description: "Today /chat is stateless — every message starts fresh. Spec a session-memory UX that lets the user say 'explain that further' or 'what about in Surah 2'."
+    blockers: []
+    spec:
+      max_attempts: 2
+      max_tokens: 1800
+      acceptance:
+        - file_exists: data/ralph_agent_propose_session_memory_ux.md
+        - file_min_bytes: {path: data/ralph_agent_propose_session_memory_ux.md, min: 700}
+      context: |
+        Backend: the /chat handler already accepts a `history` field but the
+        index.html only sends [] (empty). Frontend always passes empty. We
+        need: a "session" concept on the client (in-memory or localStorage),
+        the last N turns shipped on each /chat, and UI affordances to start
+        a new session vs continue.
+      deliverable: |
+        Spec: data model (what's stored per session), UI changes to
+        index.html (sidebar of past turns, "new conversation" button),
+        transport (request shape with history), eviction (when does old
+        history age out?), and how it interacts with the answer cache
+        (probably: skip cache when history > 0).
+
+  - id: propose_search_bar_autocomplete
+    type: agent_creative
+    priority: 62
+    description: "Spec a search bar that autocompletes via concept_search as the user types"
+    blockers: []
+    spec:
+      max_attempts: 2
+      max_tokens: 1500
+      acceptance:
+        - file_exists: data/ralph_agent_propose_search_bar_autocomplete.md
+        - file_min_bytes: {path: data/ralph_agent_propose_search_bar_autocomplete.md, min: 600}
+      context: |
+        We have concept_search returning canonical concepts + their surface
+        variants. Bind it to a search bar: type "forg" → suggest concept
+        "forgive (forgive/forgiver/forgiveness, 225 verses)". Click → load
+        verses for that concept.
+      deliverable: |
+        Spec: where the search bar sits in index.html, debounce timing,
+        endpoint to call (we may need a thin /api/concept_suggest), UX
+        for empty-state and no-results.
+
+  # ── Self-discovery (loop generates new backlog entries) ───────────────────
+  - id: surface_underperforming_questions
+    type: cypher_analysis
+    priority: 60
+    description: "Find questions in the eval where citation density is lowest — surface candidates for prompt tuning"
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_analysis_surface_underperforming_questions.md
+        - file_min_bytes: {path: data/ralph_analysis_surface_underperforming_questions.md, min: 200}
+      query_kind: python_script
+      script: |
+        import json
+        d = json.load(open('data/eval_v1_results.json', encoding='utf-8'))
+        rows = (d.get('general') or []) + (d.get('surah') or [])
+        rows.sort(key=lambda r: r.get('n_cites_unique', 0))
+        print('=== Bottom 5 by citation density ===')
+        for r in rows[:5]:
+            print(f"  {r.get('n_cites_unique', 0):>3} cites  {r.get('elapsed_sec', 0):>5.0f}s  '{r.get('question', '')[:65]}'")
+            tcb = r.get('tool_call_breakdown') or {}
+            print(f"    tools: {tcb}")
+        print('\n=== Top 5 by citation density ===')
+        for r in rows[-5:][::-1]:
+            print(f"  {r.get('n_cites_unique', 0):>3} cites  {r.get('elapsed_sec', 0):>5.0f}s  '{r.get('question', '')[:65]}'")
+
+  - id: surface_retrieval_noise
+    type: cypher_analysis
+    priority: 58
+    description: "Verses retrieved often by tools but rarely cited in final answers — these are retrieval noise candidates"
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_analysis_surface_retrieval_noise.md
+        - file_min_bytes: {path: data/ralph_analysis_surface_retrieval_noise.md, min: 150}
+      query: |
+        MATCH (t:ReasoningTrace)-[:RETRIEVED]->(v:Verse)
+        WITH v, count(DISTINCT t) AS n_retrieved
+        OPTIONAL MATCH (q:Query)-[:PRODUCED]->(a:Answer)
+        WHERE v.verseId IN coalesce(a.cited_verses, [])
+        WITH v.verseId AS vid, n_retrieved, count(DISTINCT a) AS n_cited
+        WHERE n_retrieved >= 3
+        WITH vid, n_retrieved, n_cited,
+             toFloat(n_cited) / n_retrieved AS cite_ratio
+        ORDER BY cite_ratio ASC, n_retrieved DESC
+        LIMIT 25
+        RETURN vid, n_retrieved, n_cited, round(cite_ratio, 3) AS cite_ratio
+
+  - id: discover_new_followups
+    type: agent_creative
+    priority: 55
+    description: "Read all data/ralph_analysis_*.md + data/eval_v1_results.json. Propose 3-7 NEW backlog tasks the loop should run. Output is a YAML fragment for review."
+    blockers: [surface_underperforming_questions, surface_retrieval_noise, measure_per_tool_latency, measure_cache_hit_rate]
+    spec:
+      max_attempts: 2
+      max_tokens: 2500
+      acceptance:
+        - file_exists: data/ralph_proposed_tasks.yaml
+        - file_min_bytes: {path: data/ralph_proposed_tasks.yaml, min: 400}
+      context: |
+        You are the loop's self-improvement subagent. Your job is to find
+        gaps the human would have missed. Look at:
+          - data/ralph_analysis_*.md (all analysis outputs so far)
+          - data/eval_v1_results.json (current answer-quality baseline)
+          - data/ralph_log.md (Codebase Patterns block + tick history)
+        Then propose 3-7 NEW backlog tasks targeting:
+          (a) the lowest-citation-density questions (specific prompt tweaks)
+          (b) tools with the highest p95 latency or 0-citation-yield rates
+          (c) retrieval-noise verses (high retrieved, low cited)
+          (d) UI/UX cracks the user has not yet flagged
+          (e) anything in the analyses that obviously deserves a follow-up
+      deliverable: |
+        Output a SINGLE YAML fragment (no preamble, no commentary) shaped
+        like the existing ralph_backlog.yaml task entries. Save it to
+        data/ralph_proposed_tasks.yaml. The human will review and merge
+        into the main backlog.
+
+        Format (strict — must parse as YAML):
+
+        proposed_at: "2026-05-08T..."
+        rationale: "One paragraph explaining what data you saw and what you concluded."
+        tasks:
+          - id: descriptive_snake_case
+            type: eval | cypher_analysis | agent_creative | cleanup
+            priority: 0..100
+            description: "one line"
+            blockers: []
+            spec:
+              acceptance:
+                - file_exists: data/...
+              # plus type-specific spec fields
+
   # ── Cleanup hygiene (always-low-priority background) ──────────────────────
   - id: append_ralph_status_to_AUTONOMOUS_RUN
     type: cleanup
