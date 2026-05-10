@@ -1,0 +1,3602 @@
+[
+  {
+    "id": "x9YCcVtnH1M",
+    "title": "NODES AI 2026 - Agentic GraphRAG: Autonomous Knowledge Graph Construction and Adaptive Retrieval",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=x9YCcVtnH1M"
+  },
+  {
+    "id": "rLdqQgcZM2Y",
+    "title": "NODES AI 2026 - Semiont: A Graph Based, AI Native Wiki and Annotator",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=rLdqQgcZM2Y"
+  },
+  {
+    "id": "qKj1XbzBlxU",
+    "title": "NODES AI 2026 - MemMachine: Agents That Learn, Memory That Lasts",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=qKj1XbzBlxU"
+  },
+  {
+    "id": "vvE6WpmOqfI",
+    "title": "NODES AI 2026 - Ghost-busting with Neo4j Graph Analytics in Snowflake",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=vvE6WpmOqfI"
+  },
+  {
+    "id": "voHdWZebH3Y",
+    "title": "NODES AI 2026 - The Searchable Grid: Building a GraphRAG-Powered Digital Twin for Real-Time Insights",
+    "duration_min": 31.0,
+    "url": "https://www.youtube.com/watch?v=voHdWZebH3Y"
+  },
+  {
+    "id": "sUysPxT9YCk",
+    "title": "NODES AI 2026 - EventKernel: Multi-Hop Reasoning and GraphRAG for AI-Powered Event Intelligence",
+    "duration_min": 26.0,
+    "url": "https://www.youtube.com/watch?v=sUysPxT9YCk"
+  },
+  {
+    "id": "rGrdYOORLc4",
+    "title": "NODES AI 2026 - Neurosymbolic Architecture in Production with Neo4j, GDS, Node2Vec & LLM Grounding",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=rGrdYOORLc4"
+  },
+  {
+    "id": "ou-mPTY-jW0",
+    "title": "NODES AI 2026 - How to Build the Next Wave of Graph-Based Agentic AI",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=ou-mPTY-jW0"
+  },
+  {
+    "id": "tnuDYP_olTY",
+    "title": "NODES AI 2026 - From AI Workflows to Graph-Native Reasoning: A Dify Plugin for Querying Neo4j",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=tnuDYP_olTY"
+  },
+  {
+    "id": "tP-mYMYQUzA",
+    "title": "NODES AI 2026 - Complex Querying of Cyber Knowledge Graph for Robust Cyber Defense",
+    "duration_min": 34.0,
+    "url": "https://www.youtube.com/watch?v=tP-mYMYQUzA"
+  },
+  {
+    "id": "jR6o6yZkkB8",
+    "title": "NODES AI 2026 - The Future of Enterprise AI Is Context Infrastructure, Not Better Models",
+    "duration_min": 20.0,
+    "url": "https://www.youtube.com/watch?v=jR6o6yZkkB8"
+  },
+  {
+    "id": "gNMY4yD0jr8",
+    "title": "NODES AI 2026 - Temporal Substrate Architecture: Building Persistent Identity for Autonomous Agents",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=gNMY4yD0jr8"
+  },
+  {
+    "id": "cbihpC0_TA4",
+    "title": "NODES AI 2026 - Agentic AI Governance: Data Foundations & Real-Time Policy Enforcement",
+    "duration_min": 32.0,
+    "url": "https://www.youtube.com/watch?v=cbihpC0_TA4"
+  },
+  {
+    "id": "P7jboLT0w2w",
+    "title": "NODES AI 2026 - Building Smarter Mobile Apps with On-device AI Agents & GraphRAG",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=P7jboLT0w2w"
+  },
+  {
+    "id": "P8MIvmCTTa4",
+    "title": "NODES AI 2026 - Beyond Recall: Creating Agentic Personas with Persistent, Evolving Memory",
+    "duration_min": 20.0,
+    "url": "https://www.youtube.com/watch?v=P8MIvmCTTa4"
+  },
+  {
+    "id": "hCtoQVO71zA",
+    "title": "NODES AI 2026 - Building a Customer-Intelligence Brain: How GraphRAG Turns Data into Decisions",
+    "duration_min": 31.0,
+    "url": "https://www.youtube.com/watch?v=hCtoQVO71zA"
+  },
+  {
+    "id": "XltrVD43pvY",
+    "title": "NODES AI 2026: Lakehouse + Graph: Delta Lake, Unity Catalog and Neo4j for Governed AI Pipelines",
+    "duration_min": 24.0,
+    "url": "https://www.youtube.com/watch?v=XltrVD43pvY"
+  },
+  {
+    "id": "ZEsYWBDSjF0",
+    "title": "NODES AI 2026 - Fusing NLP and Graph: Building a Conversational Agent for Enriched Financial Data",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=ZEsYWBDSjF0"
+  },
+  {
+    "id": "TXVYErhXsXk",
+    "title": "NODES AI 2026: Graph Theory and Games: A Case Study on New York Times Connections",
+    "duration_min": 24.0,
+    "url": "https://www.youtube.com/watch?v=TXVYErhXsXk"
+  },
+  {
+    "id": "S4i6-KZRup8",
+    "title": "NODES AI 2026 - Graph-Powered Storyworlds: Using Neo4j To Keep 1M+ Word LitRPG Epics Coherent w/ AI",
+    "duration_min": 26.0,
+    "url": "https://www.youtube.com/watch?v=S4i6-KZRup8"
+  },
+  {
+    "id": "MWwSHh453cA",
+    "title": "NODES AI 2026 - Infinigraph: Vector Data at Scale",
+    "duration_min": 23.0,
+    "url": "https://www.youtube.com/watch?v=MWwSHh453cA"
+  },
+  {
+    "id": "ACYShEv2aXk",
+    "title": "NODES AI 2026 - Agentic AI with Knowledge Graphs on the JVM: A Music Graph in Practice",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=ACYShEv2aXk"
+  },
+  {
+    "id": "MPKd9t_XXOQ",
+    "title": "NODES AI 2026 - Multi-Agent Shared Graph Memory: Building Collective Knowledge for Agents",
+    "duration_min": 20.0,
+    "url": "https://www.youtube.com/watch?v=MPKd9t_XXOQ"
+  },
+  {
+    "id": "F1Ihel8Dgqs",
+    "title": "NODES AI 2026 - The AI Agent Memory Landscape",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=F1Ihel8Dgqs"
+  },
+  {
+    "id": "66f2ZhRopK8",
+    "title": "NODES AI 2026 - Building a Cross-Border KG: AI Powered Entity Resolution & Risk Detection",
+    "duration_min": 26.0,
+    "url": "https://www.youtube.com/watch?v=66f2ZhRopK8"
+  },
+  {
+    "id": "BBi2_33vorE",
+    "title": "NODES AI 2026 - Graph-Powered Compliance: Building Intelligent Regulatory Mapping with AI and Neo4j",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=BBi2_33vorE"
+  },
+  {
+    "id": "4P2xXR-coVE",
+    "title": "NODES AI 2026 - Building Secure Services with AI Agents: Patterns From Real-World Engineering",
+    "duration_min": 21.0,
+    "url": "https://www.youtube.com/watch?v=4P2xXR-coVE"
+  },
+  {
+    "id": "3wwFWG03kfk",
+    "title": "NODES AI 2026 - Smarter MCP Servers: Using a Graph to Solve the Context Window Problem",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=3wwFWG03kfk"
+  },
+  {
+    "id": "3E4LisC9-GA",
+    "title": "NODES AI 2026 - The GraphRAG System That Asks Back: Intelligent Probing with Contextual Answers",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=3E4LisC9-GA"
+  },
+  {
+    "id": "1VF2tkuXLHY",
+    "title": "NODES AI 2026 - Aura Agents in Action",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=1VF2tkuXLHY"
+  },
+  {
+    "id": "04rgeqrIJxM",
+    "title": "NODES AI 2026 - Build Intelligent AI Agents With Context Engineering",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=04rgeqrIJxM"
+  },
+  {
+    "id": "DwFD_ffS21E",
+    "title": "NODES AI 2026 - Agent Reasoning with Graph World Models",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=DwFD_ffS21E"
+  },
+  {
+    "id": "ffE12F1mQeE",
+    "title": "NODES AI 2026 - Adaptive GraphRAG: A Framework for Knowledge Graph Quality, Consistency, Evolution",
+    "duration_min": 25.0,
+    "url": "https://www.youtube.com/watch?v=ffE12F1mQeE"
+  },
+  {
+    "id": "udxugwXGcPo",
+    "title": "Emil Eifrem at HumanX 2026",
+    "duration_min": 17.0,
+    "url": "https://www.youtube.com/watch?v=udxugwXGcPo"
+  },
+  {
+    "id": "loPes9ifWpg",
+    "title": "NODES AI Opening Keynote: Exploring Context Graphs: From Data to Decisions - Extended Version",
+    "duration_min": 47.0,
+    "url": "https://www.youtube.com/watch?v=loPes9ifWpg"
+  },
+  {
+    "id": "VPj7u2Uk7yc",
+    "title": "How Knowledge Graphs Help You Build a More Resilient Supply Chain",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=VPj7u2Uk7yc"
+  },
+  {
+    "id": "L_Cl5aKe9po",
+    "title": "Knowledge Layer for Agentic Systems",
+    "duration_min": 6.0,
+    "url": "https://www.youtube.com/watch?v=L_Cl5aKe9po"
+  },
+  {
+    "id": "Cpza5MpF3Hk",
+    "title": "Neo4j & Graph-Powered AI",
+    "duration_min": 8.0,
+    "url": "https://www.youtube.com/watch?v=Cpza5MpF3Hk"
+  },
+  {
+    "id": "vLOqEH83hII",
+    "title": "Context Graphs - meetup and demo",
+    "duration_min": 8.0,
+    "url": "https://www.youtube.com/watch?v=vLOqEH83hII"
+  },
+  {
+    "id": "qMV64p-4Deo",
+    "title": "Building Context Graphs for AI Agents, Will Lyon, Neo4j",
+    "duration_min": 20.0,
+    "url": "https://www.youtube.com/watch?v=qMV64p-4Deo"
+  },
+  {
+    "id": "FeKXIMY0w9I",
+    "title": "Context Graph and Process Knowledge, Jessica Talisman, Contextually LLC",
+    "duration_min": 20.0,
+    "url": "https://www.youtube.com/watch?v=FeKXIMY0w9I"
+  },
+  {
+    "id": "NociX-24NFQ",
+    "title": "The Context Graph Panel with Will Lyon, Jessica Talisman, Dave Bennett, Yann Bilien and Emil Eifrem",
+    "duration_min": 57.0,
+    "url": "https://www.youtube.com/watch?v=NociX-24NFQ"
+  },
+  {
+    "id": "J19x26eE4rI",
+    "title": "Neo4j  Workshop: Crea una aplicación basada en Grafos desde cero (ESPAÑOL)",
+    "duration_min": 88.0,
+    "url": "https://www.youtube.com/watch?v=J19x26eE4rI"
+  },
+  {
+    "id": "GiOWEN4E7Mo",
+    "title": "​Context graphs as the control plane for the agentic enterprise, Dave Bennett, Indykite",
+    "duration_min": 23.0,
+    "url": "https://www.youtube.com/watch?v=GiOWEN4E7Mo"
+  },
+  {
+    "id": "aeElj_hyXn0",
+    "title": "Neo4j Workshop Virtuale: Crea un'App Basata su Grafi da Zero",
+    "duration_min": 118.0,
+    "url": "https://www.youtube.com/watch?v=aeElj_hyXn0"
+  },
+  {
+    "id": "_xX01obwgmI",
+    "title": "​Automatic Ontologies: Build the Context Graph for Trustworthy AI Agents, Yann Bilien, Rippletide",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=_xX01obwgmI"
+  },
+  {
+    "id": "TKxeGmk9398",
+    "title": "Build Real-Time Customer 360 Applications with Neo4j Knowledge Graphs",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=TKxeGmk9398"
+  },
+  {
+    "id": "gZEe-4cyA9c",
+    "title": "What Is a Graph Database?",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=gZEe-4cyA9c"
+  },
+  {
+    "id": "MGiMZVgP09o",
+    "title": "AI Memory and Founders Night Berlin",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=MGiMZVgP09o"
+  },
+  {
+    "id": "sxr8Hmh26QM",
+    "title": "AI Show & Tell Berlin 2025 – AI Agents, Startups & Developers",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=sxr8Hmh26QM"
+  },
+  {
+    "id": "VvvZ6irfedI",
+    "title": "Find Connected Insights with Graph Intelligence for Microsoft Fabric",
+    "duration_min": 3.0,
+    "url": "https://www.youtube.com/watch?v=VvvZ6irfedI"
+  },
+  {
+    "id": "o8kDasTZtcs",
+    "title": "Create an AI Powered Graph Model with Graph Intelligence for Microsoft Fabric",
+    "duration_min": 3.0,
+    "url": "https://www.youtube.com/watch?v=o8kDasTZtcs"
+  },
+  {
+    "id": "Uur3sU4UDnE",
+    "title": "Create an Instance with Graph Intelligence for Microsoft Fabric",
+    "duration_min": 2.0,
+    "url": "https://www.youtube.com/watch?v=Uur3sU4UDnE"
+  },
+  {
+    "id": "BzysxkjR_pM",
+    "title": "Neo4j: Introduction to Graph Data Science - EMEA",
+    "duration_min": 240.0,
+    "url": "https://www.youtube.com/watch?v=BzysxkjR_pM"
+  },
+  {
+    "id": "d4oCFMypJy8",
+    "title": "NEW Neo4j Aura Agent: Production Ready, Ontology-Driven AI Agents",
+    "duration_min": 35.0,
+    "url": "https://www.youtube.com/watch?v=d4oCFMypJy8"
+  },
+  {
+    "id": "4SM2za00KGU",
+    "title": "Fika Interview with Vincent Mayers and Lutske De Leeuw",
+    "duration_min": 6.0,
+    "url": "https://www.youtube.com/watch?v=4SM2za00KGU"
+  },
+  {
+    "id": "r3IxrdqPt1o",
+    "title": "Fika Interview with Jennifer Reif and Mattias Karlsson",
+    "duration_min": 5.0,
+    "url": "https://www.youtube.com/watch?v=r3IxrdqPt1o"
+  },
+  {
+    "id": "JzotS2UAQDc",
+    "title": "Fika Interview with Jennifer Reif and Arun Gupta",
+    "duration_min": 9.0,
+    "url": "https://www.youtube.com/watch?v=JzotS2UAQDc"
+  },
+  {
+    "id": "C6PT5cf4-yE",
+    "title": "Fika Interview with Andreas Kollegger and Lize Raes",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=C6PT5cf4-yE"
+  },
+  {
+    "id": "PNmgTDSbRy4",
+    "title": "Fika Interview with Andreas Kollegger and Johannes Bechberger",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=PNmgTDSbRy4"
+  },
+  {
+    "id": "-glsnLX1uJc",
+    "title": "Fika Interview with Andreas Kollegger and Ivar Grimstad",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=-glsnLX1uJc"
+  },
+  {
+    "id": "D4wDflKESlk",
+    "title": "Building Better Recommendations with Graph Analytics in Snowflake",
+    "duration_min": 34.0,
+    "url": "https://www.youtube.com/watch?v=D4wDflKESlk"
+  },
+  {
+    "id": "4opp98P15MY",
+    "title": "Neo4j DEMO Improving Customer Experience using Graphs",
+    "duration_min": 7.0,
+    "url": "https://www.youtube.com/watch?v=4opp98P15MY"
+  },
+  {
+    "id": "ifwrjhNm668",
+    "title": "Semiont: an Annotated Semantic Layer",
+    "duration_min": 44.0,
+    "url": "https://www.youtube.com/watch?v=ifwrjhNm668"
+  },
+  {
+    "id": "MMN3L6Qm548",
+    "title": "Context Graphs: The Missing Layer in the AI Stack",
+    "duration_min": 19.0,
+    "url": "https://www.youtube.com/watch?v=MMN3L6Qm548"
+  },
+  {
+    "id": "rdtP73IT6tc",
+    "title": "Build Knowledge Graph Agents in Minutes with Neo4j Aura Agent",
+    "duration_min": 5.0,
+    "url": "https://www.youtube.com/watch?v=rdtP73IT6tc"
+  },
+  {
+    "id": "IVXMCHUV8V8",
+    "title": "Hands On With Context Graphs And Neo4j",
+    "duration_min": 3.0,
+    "url": "https://www.youtube.com/watch?v=IVXMCHUV8V8"
+  },
+  {
+    "id": "GL7tDF5glxE",
+    "title": "Infinigraph x Neo4j",
+    "duration_min": 3.0,
+    "url": "https://www.youtube.com/watch?v=GL7tDF5glxE"
+  },
+  {
+    "id": "Sj8ighU5fXg",
+    "title": "Why Neo4j",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=Sj8ighU5fXg"
+  },
+  {
+    "id": "7i7xT1hO91w",
+    "title": "Rethinking Line of Business Applications: Graphs & Cypher as an Alternative to RDBMS & SQL",
+    "duration_min": 38.0,
+    "url": "https://www.youtube.com/watch?v=7i7xT1hO91w"
+  },
+  {
+    "id": "l54jWKWNmag",
+    "title": "Using Neo4j to Trace Supply Chain Dependencies",
+    "duration_min": 2.0,
+    "url": "https://www.youtube.com/watch?v=l54jWKWNmag"
+  },
+  {
+    "id": "wo5Wkvc-28o",
+    "title": "GDS Agent for Graph Algorithmic Reasoning",
+    "duration_min": 24.0,
+    "url": "https://www.youtube.com/watch?v=wo5Wkvc-28o"
+  },
+  {
+    "id": "NQG4s8l5Pag",
+    "title": "Graph Analytics in Snowflake: Beyond Traditional SQL with Neo4j",
+    "duration_min": 26.0,
+    "url": "https://www.youtube.com/watch?v=NQG4s8l5Pag"
+  },
+  {
+    "id": "kXJHkfDOKCs",
+    "title": "Mapping the Invisible  Graph Powered Archaeology with Neo4j, LiDAR, and LLMs",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=kXJHkfDOKCs"
+  },
+  {
+    "id": "bxXb8oT5E-k",
+    "title": "Agentic GraphRAG: Multi-Agent Knowledge Graph",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=bxXb8oT5E-k"
+  },
+  {
+    "id": "ty5H7zYafxE",
+    "title": "Improving Text2Cypher: Lessons from Schema Filtering and Hard Example Selection",
+    "duration_min": 23.0,
+    "url": "https://www.youtube.com/watch?v=ty5H7zYafxE"
+  },
+  {
+    "id": "o9-xTc_uHQ0",
+    "title": "Beyond Vibe Coding: AI Agents for Technical Debt Detection with Neo4j",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=o9-xTc_uHQ0"
+  },
+  {
+    "id": "m50Gxeb4jgU",
+    "title": "Live Q&A with ABK and Michael Hunger",
+    "duration_min": 31.0,
+    "url": "https://www.youtube.com/watch?v=m50Gxeb4jgU"
+  },
+  {
+    "id": "gJRDUemGEho",
+    "title": "Beyond Retrieval: Adding a Reasoning Layer to RAG with Neo4j",
+    "duration_min": 19.0,
+    "url": "https://www.youtube.com/watch?v=gJRDUemGEho"
+  },
+  {
+    "id": "cNSC_rCl9nU",
+    "title": "Agentic Approach to Using Neo4j Knowledge Graphs in Salesforce",
+    "duration_min": 12.0,
+    "url": "https://www.youtube.com/watch?v=cNSC_rCl9nU"
+  },
+  {
+    "id": "YqX2vKC8uxY",
+    "title": "Unlocking Real-Time News Recommendations: The Power of Graph Relationships in Neo4j",
+    "duration_min": 21.0,
+    "url": "https://www.youtube.com/watch?v=YqX2vKC8uxY"
+  },
+  {
+    "id": "fS4YrXYF4-w",
+    "title": "Integrating Neo4j with Google Gemini: Architectural Patterns for AI Agents",
+    "duration_min": 31.0,
+    "url": "https://www.youtube.com/watch?v=fS4YrXYF4-w"
+  },
+  {
+    "id": "KNus7UQDNUM",
+    "title": "Traversing from Zero to Production with Graphs",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=KNus7UQDNUM"
+  },
+  {
+    "id": "O3uH0HX1FuE",
+    "title": "Stay or Go? Predicting Customer Churn through Graph Relationships",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=O3uH0HX1FuE"
+  },
+  {
+    "id": "ybT6c_KQi_Y",
+    "title": "Knowledge Combined Common Data Model: A Graph-Based Integration of Reactome and OMOP CDM",
+    "duration_min": 26.0,
+    "url": "https://www.youtube.com/watch?v=ybT6c_KQi_Y"
+  },
+  {
+    "id": "SJEnb5cadyo",
+    "title": "GraphRAG for Law: Building Legal Reasoning Agents with Neo4j and LLMs",
+    "duration_min": 36.0,
+    "url": "https://www.youtube.com/watch?v=SJEnb5cadyo"
+  },
+  {
+    "id": "HW5ytyiB8Ew",
+    "title": "From Documents to Dynamic Graphs: Ontology-Driven Clinical Graph Construction with Neo4j and UMLS",
+    "duration_min": 34.0,
+    "url": "https://www.youtube.com/watch?v=HW5ytyiB8Ew"
+  },
+  {
+    "id": "fiFERKjcAXs",
+    "title": "Agentic RAG Meets Neo4j: Multi-Hop Reasoning Over Scientific Knowledge Graphs",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=fiFERKjcAXs"
+  },
+  {
+    "id": "q-nWRTh-evY",
+    "title": "Rendering Graphs Your Way: The Case for Going Custom",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=q-nWRTh-evY"
+  },
+  {
+    "id": "sIr90lGq41g",
+    "title": "Connecting Java Applications over HTTP to Query API",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=sIr90lGq41g"
+  },
+  {
+    "id": "ZsR_BbBsA6I",
+    "title": "From Unstructured to Connected: Building Knowledge Graphs for GenAI with neo4j-graphrag",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=ZsR_BbBsA6I"
+  },
+  {
+    "id": "Ad4FQuzd3vM",
+    "title": "Agentic AI for Enterprise Knowledge Graph Management",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=Ad4FQuzd3vM"
+  },
+  {
+    "id": "8iBJbvWALd4",
+    "title": "From Spaghetti to Structure: Decoding Complex Codebases with Graphs and GenAI",
+    "duration_min": 20.0,
+    "url": "https://www.youtube.com/watch?v=8iBJbvWALd4"
+  },
+  {
+    "id": "oGQZt1zR1d4",
+    "title": "Making Your Knowledge Graph LLM-Ready: Quality Assessment and Design Strategies for GraphRAG",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=oGQZt1zR1d4"
+  },
+  {
+    "id": "2Rc1HHTzQjs",
+    "title": "Live Q&A with Emil Eifrém and Andreas Kollegger",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=2Rc1HHTzQjs"
+  },
+  {
+    "id": "ChNgj71MQEA",
+    "title": "Multiagent GenAI-Powered Oncology Research with GraphMedAI and Neo4j",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=ChNgj71MQEA"
+  },
+  {
+    "id": "0_icpH7Ur98",
+    "title": "Turning Raw Data into Life-Saving Decisions Using Neo4j and n8n",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=0_icpH7Ur98"
+  },
+  {
+    "id": "ltRf4m8H9VQ",
+    "title": "Structuring the Video Internet:  How Vpin Uses Neo4j to Turn Watching into Learning",
+    "duration_min": 31.0,
+    "url": "https://www.youtube.com/watch?v=ltRf4m8H9VQ"
+  },
+  {
+    "id": "TpyrtbvQBLQ",
+    "title": "Graphs on the High Seas: UI/UX Considerations for Great Geospatial Graph Visualization",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=TpyrtbvQBLQ"
+  },
+  {
+    "id": "KJSHagHkX8I",
+    "title": "Agentic GraphRAG: Multi-Agent Knowledge Graph Construction for Research Teams",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=KJSHagHkX8I"
+  },
+  {
+    "id": "BKQeogKKH2k",
+    "title": "GraphQL Data APIs in Aura",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=BKQeogKKH2k"
+  },
+  {
+    "id": "LyzchJrqIJQ",
+    "title": "Revolutionizing Platform Engineering with AI Agents and GraphRAG",
+    "duration_min": 12.0,
+    "url": "https://www.youtube.com/watch?v=LyzchJrqIJQ"
+  },
+  {
+    "id": "KurDt6-lmSU",
+    "title": "Easy Jupyter Notebook Graph Visualization in 10 minutes",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=KurDt6-lmSU"
+  },
+  {
+    "id": "gzz-fHpI1Ak",
+    "title": "Conquering Neo4j Errors: GQLSTATUS Codes to the Rescue",
+    "duration_min": 25.0,
+    "url": "https://www.youtube.com/watch?v=gzz-fHpI1Ak"
+  },
+  {
+    "id": "lO7Ns6D_5_Y",
+    "title": "Live Q&A with Emil Eifrém and Andreas Kollegger",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=lO7Ns6D_5_Y"
+  },
+  {
+    "id": "T_Jguu_T0e4",
+    "title": "Crafting a Neo4j Knowledge Graph Semantic Reasoner for LPG-Based Ontologies with Python and CDC",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=T_Jguu_T0e4"
+  },
+  {
+    "id": "7VGHpf_G42U",
+    "title": "RushDB in Action: Building AI-Native Apps with Self-Aware Graphs",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=7VGHpf_G42U"
+  },
+  {
+    "id": "5PSYeDvgByk",
+    "title": "From Sushi to Semantics: A GraphRAG-Powered Japanese Food Explorer with Neo4j and MCP",
+    "duration_min": 19.0,
+    "url": "https://www.youtube.com/watch?v=5PSYeDvgByk"
+  },
+  {
+    "id": "tPOG1r03qRU",
+    "title": "A Sommelier's Guide to Recommendation Algorithms: Classical and Graph-Based Recommender Systems",
+    "duration_min": 32.0,
+    "url": "https://www.youtube.com/watch?v=tPOG1r03qRU"
+  },
+  {
+    "id": "BtcC1wAq0no",
+    "title": "The GraphRAG System That Asks Back: Intelligent Probing with Better Contextual Answers",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=BtcC1wAq0no"
+  },
+  {
+    "id": "SYU5Bn7B98A",
+    "title": "GraphReader Agentic RAG: Rethinking Long-Context Retrieval Systems",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=SYU5Bn7B98A"
+  },
+  {
+    "id": "rMXz_Upv1Dw",
+    "title": "Building Modular AI Agents with LangGraph, MCP, and Neo4j",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=rMXz_Upv1Dw"
+  },
+  {
+    "id": "qUF-MDnHgiw",
+    "title": "Agentic Memory",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=qUF-MDnHgiw"
+  },
+  {
+    "id": "rkvU7kPLV6Y",
+    "title": "Using Microsoft Fabric Workload for AuraDB to Make Product Recommendations from OneLake Data",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=rkvU7kPLV6Y"
+  },
+  {
+    "id": "eB5wZJlpcDo",
+    "title": "Anonymization in the LLM Era: No Room for Compromise",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=eB5wZJlpcDo"
+  },
+  {
+    "id": "0KFyts307tQ",
+    "title": "Taming the Evolution of Cypher: What Cypher Versions Mean for You",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=0KFyts307tQ"
+  },
+  {
+    "id": "9YDbyYuXuo0",
+    "title": "A Data Management Layer for Neo4j",
+    "duration_min": 16.0,
+    "url": "https://www.youtube.com/watch?v=9YDbyYuXuo0"
+  },
+  {
+    "id": "6zCoDOM9Mhw",
+    "title": "GraphRAG-Powered AI Agents: Transforming Corporate Metadata into Intelligent Knowledge",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=6zCoDOM9Mhw"
+  },
+  {
+    "id": "FiTFH0waJlQ",
+    "title": "From Warehouse to Wisdom: Activating Business Data with Neo4j",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=FiTFH0waJlQ"
+  },
+  {
+    "id": "huFXG6LWjH4",
+    "title": "Talk to Your Graph: A Practical Guide to Building a Dual-LLM Q&A System for a Fashion Graph",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=huFXG6LWjH4"
+  },
+  {
+    "id": "P81o1sAg05o",
+    "title": "Reconstructing the Past with Knowledge Graphs: Empowering Historians through Neo4j and GenAI",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=P81o1sAg05o"
+  },
+  {
+    "id": "HMSaiZS2iAM",
+    "title": "Spring in Autumn with Neo4j",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=HMSaiZS2iAM"
+  },
+  {
+    "id": "Zn3gt4mVxbE",
+    "title": "Chagu: Graph-Powered LLM Shielding and Anomaly Detection for Secure AI Pipelines",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=Zn3gt4mVxbE"
+  },
+  {
+    "id": "SBrkBzgOj04",
+    "title": "Smarter Industrial Fault Diagnosis with Knowledge Graphs and Large Language Models",
+    "duration_min": 33.0,
+    "url": "https://www.youtube.com/watch?v=SBrkBzgOj04"
+  },
+  {
+    "id": "nc1cAtnjvcQ",
+    "title": "Introducing the Open Source Semantic Graph Editor of Deutsche Bahn",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=nc1cAtnjvcQ"
+  },
+  {
+    "id": "XSd2VPFwYmM",
+    "title": "Transparent Multi-Agent AI with Neo4j",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=XSd2VPFwYmM"
+  },
+  {
+    "id": "UFRSkfT2myY",
+    "title": "CyRAG: Retrieval Augmented Generation for Robust Cyber Defense",
+    "duration_min": 26.0,
+    "url": "https://www.youtube.com/watch?v=UFRSkfT2myY"
+  },
+  {
+    "id": "gFQuo7AmrC8",
+    "title": "FHIR in the W.H.O.L.E.: Graphing Clinical Data for Smarter AI Systems",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=gFQuo7AmrC8"
+  },
+  {
+    "id": "JqyF8Vvvr3Y",
+    "title": "How to Find a Killer Using Graphs: What Sherlock Holmes Was Really Doing with That Red String",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=JqyF8Vvvr3Y"
+  },
+  {
+    "id": "gaLQJO4NwyA",
+    "title": "GraphRag in Action: Revolutionizing Fraud Detection Techniques",
+    "duration_min": 34.0,
+    "url": "https://www.youtube.com/watch?v=gaLQJO4NwyA"
+  },
+  {
+    "id": "QRr6V4MfoEU",
+    "title": "Structr 6.0 – AI-enabled Low-Code Based on Neo4j",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=QRr6V4MfoEU"
+  },
+  {
+    "id": "oE0HCIjAbLE",
+    "title": "Automating Disaster Recovery with Aura API",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=oE0HCIjAbLE"
+  },
+  {
+    "id": "RihYVR077-c",
+    "title": "KG Construction Using LLMs",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=RihYVR077-c"
+  },
+  {
+    "id": "wYTddJtZqX8",
+    "title": "Turning Reviews into Real Insights: Emotion-Aware Sentiment Analysis with GraphRAG and Neo4j",
+    "duration_min": 12.0,
+    "url": "https://www.youtube.com/watch?v=wYTddJtZqX8"
+  },
+  {
+    "id": "AuJ55sw6G2Q",
+    "title": "Labor Market Landscape Modeling with Knowledge Graphs",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=AuJ55sw6G2Q"
+  },
+  {
+    "id": "aJY7Sm5vtko",
+    "title": "Live-Coding Graph-Native Agents: Neo4j AuraDB + Microsoft Agent Framework in Action",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=aJY7Sm5vtko"
+  },
+  {
+    "id": "1HMid9YgCdc",
+    "title": "Knowledge Graphs for Locations in the Humanitarian and Development Sector",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=1HMid9YgCdc"
+  },
+  {
+    "id": "2_ffxNsSZ_g",
+    "title": "One Configuration, Many Imports",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=2_ffxNsSZ_g"
+  },
+  {
+    "id": "sBf8TJgqdwY",
+    "title": "The Fastest Path To Building An Agent For Your Knowledge Graph Is By Using MCP",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=sBf8TJgqdwY"
+  },
+  {
+    "id": "j9ZsOp-YMqY",
+    "title": "From Unstructured Docs to Graph Intelligence: A Framework for Building Graph+Embedding Pipelines",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=j9ZsOp-YMqY"
+  },
+  {
+    "id": "dT_HLpGCFvI",
+    "title": "Batch Data to Graphs: Integrating Neo4j and Flink via JDBC",
+    "duration_min": 12.0,
+    "url": "https://www.youtube.com/watch?v=dT_HLpGCFvI"
+  },
+  {
+    "id": "8RclFRSW7Dw",
+    "title": "Graph-Powered Job Matcher: From SQL Tables to Neo4j RAG in Production",
+    "duration_min": 24.0,
+    "url": "https://www.youtube.com/watch?v=8RclFRSW7Dw"
+  },
+  {
+    "id": "TZYv5rEoHmQ",
+    "title": "Empowering Voice AI Agents with Real-Time Knowledge from Neo4j",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=TZYv5rEoHmQ"
+  },
+  {
+    "id": "SHA-b2N9Kro",
+    "title": "Building Evolving AI Agents Via Dynamic Memory Representations Using Temporal Knowledge Graphs",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=SHA-b2N9Kro"
+  },
+  {
+    "id": "DlJGgZ67uV8",
+    "title": "How Lettria Unlocked 20% Accuracy Gains with Qdrant and Neo4j",
+    "duration_min": 16.0,
+    "url": "https://www.youtube.com/watch?v=DlJGgZ67uV8"
+  },
+  {
+    "id": "BeolXgPg8cQ",
+    "title": "Combine GDS and Agentic AI  for Automatic Report Generation",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=BeolXgPg8cQ"
+  },
+  {
+    "id": "EsnYc0gf5ek",
+    "title": "Beyond Tags: Content Discovery with Tripadvisor's Hybrid Graph Search",
+    "duration_min": 24.0,
+    "url": "https://www.youtube.com/watch?v=EsnYc0gf5ek"
+  },
+  {
+    "id": "WbjpSEsJBiw",
+    "title": "Tracing the LLM Behaviour: Debugging and Evolving Agent Workflows with Neo4j",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=WbjpSEsJBiw"
+  },
+  {
+    "id": "AnzFpxLnxaI",
+    "title": "Introducing Fleet Manager",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=AnzFpxLnxaI"
+  },
+  {
+    "id": "rVsiZ8UXULg",
+    "title": "Ontology Creation with the Neo4j Data Modeling MCP Server",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=rVsiZ8UXULg"
+  },
+  {
+    "id": "bU45GTIEhk4",
+    "title": "Early Path Traversal Pruning",
+    "duration_min": 7.0,
+    "url": "https://www.youtube.com/watch?v=bU45GTIEhk4"
+  },
+  {
+    "id": "Kg16tfDq82k",
+    "title": "Narrative Extraction with GenAI: Human-centric Knowledge Graph Creation from Text",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=Kg16tfDq82k"
+  },
+  {
+    "id": "GC8DLugdkvk",
+    "title": "Knowledge Graph of Drugs Data for Swiss Healthcare System",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=GC8DLugdkvk"
+  },
+  {
+    "id": "AaI-Hm0fNSI",
+    "title": "Aura Import: Anywhere, Anytime",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=AaI-Hm0fNSI"
+  },
+  {
+    "id": "BjiEFyT-RtQ",
+    "title": "Text2Cypher Beyond English: Initial Evaluation with Foundational LLMs",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=BjiEFyT-RtQ"
+  },
+  {
+    "id": "4GDTdxeIlTc",
+    "title": "Enhancing Retrieval-Augmented Generation with GraphRAG Patterns in Neo4j",
+    "duration_min": 16.0,
+    "url": "https://www.youtube.com/watch?v=4GDTdxeIlTc"
+  },
+  {
+    "id": "m5yxCzEDrO4",
+    "title": "See What the Graph Sees: Demystifying PageRank Through Visual Storytelling",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=m5yxCzEDrO4"
+  },
+  {
+    "id": "D41NkhViqlc",
+    "title": "Powering Legal Research with Knowledge Graphs and Large Language Models",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=D41NkhViqlc"
+  },
+  {
+    "id": "px81O734uSc",
+    "title": "Property Sharding: I Want to Shard My Database, Now What?",
+    "duration_min": 22.0,
+    "url": "https://www.youtube.com/watch?v=px81O734uSc"
+  },
+  {
+    "id": "Qg02dDbfUU4",
+    "title": "Leveraging Knowledge Graph and Imaging to Predict Gene–Disease Links in Cardiovascular Diseases",
+    "duration_min": 16.0,
+    "url": "https://www.youtube.com/watch?v=Qg02dDbfUU4"
+  },
+  {
+    "id": "_cXKMefdM1g",
+    "title": "GraphRAG for Supply Chain Resilience: Building an AI Supplier Discovery Engine",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=_cXKMefdM1g"
+  },
+  {
+    "id": "EQbY6d2hl5Y",
+    "title": "Building GenAI Apps with the LangChain Neo4j Package",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=EQbY6d2hl5Y"
+  },
+  {
+    "id": "RQAq_TpRUqQ",
+    "title": "All Aboard: Reasoning with LLMs and Neo4j via MCP",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=RQAq_TpRUqQ"
+  },
+  {
+    "id": "63gQsRi5iXk",
+    "title": "The Green Potential of Knowledge Graphs",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=63gQsRi5iXk"
+  },
+  {
+    "id": "Aaxeq1J25F8",
+    "title": "Location Insights for Your Graphs with Neo4j, PostGIS, and Brickgraph",
+    "duration_min": 23.0,
+    "url": "https://www.youtube.com/watch?v=Aaxeq1J25F8"
+  },
+  {
+    "id": "sraDfsUMOo0",
+    "title": "Adaptive Knowledge Graphs for Dynamic RAG Systems",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=sraDfsUMOo0"
+  },
+  {
+    "id": "GuxhdpKR0s0",
+    "title": "Enhancing Benefit Adjudication Through Graph Node Embedding, Clustering, and Outlier Detection",
+    "duration_min": 16.0,
+    "url": "https://www.youtube.com/watch?v=GuxhdpKR0s0"
+  },
+  {
+    "id": "KXfXROjmnoQ",
+    "title": "MedQGraph: TMKGs for AI-Driven Healthcare Insights",
+    "duration_min": 16.0,
+    "url": "https://www.youtube.com/watch?v=KXfXROjmnoQ"
+  },
+  {
+    "id": "ZvgN1fE7dDE",
+    "title": "From Aviation Data to AI Copilot: Building a Conversational Graph for Flight Intelligence",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=ZvgN1fE7dDE"
+  },
+  {
+    "id": "t59fjqu2A8s",
+    "title": "The Personal Knowledge Vault: Art Collection Use Case",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=t59fjqu2A8s"
+  },
+  {
+    "id": "9X2h_7HxeG0",
+    "title": "Breaking Silos: Using Neo4j to Unify Tax and Finance Data",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=9X2h_7HxeG0"
+  },
+  {
+    "id": "BGwiI7CFAEM",
+    "title": "G-forces Meet Graphs: Analyzing 50+ Years of Formula 1 Sponsorship Using GDS",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=BGwiI7CFAEM"
+  },
+  {
+    "id": "lTgZs6GXR-Y",
+    "title": "Airport Layouts as Graphs: How I Built a Real-World Accurate, AI Air Traffic Control Agent",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=lTgZs6GXR-Y"
+  },
+  {
+    "id": "nwRN25_PWAM",
+    "title": "From Side Project to Startup: Graph Lessons From the Cartography Journey",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=nwRN25_PWAM"
+  },
+  {
+    "id": "WnPM9WryIGg",
+    "title": "Is My Brain a Knowledge Graph? A Human Take on Connecting the Dots",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=WnPM9WryIGg"
+  },
+  {
+    "id": "qcPa-oMWAQo",
+    "title": "Supply Chain Risk Predictions with Neo4j Graph Data Technology",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=qcPa-oMWAQo"
+  },
+  {
+    "id": "hQiT-5LDPPs",
+    "title": "Beyond RAG: Building the AI Corporate Brain with Knowledge Graphs and Virtue Ethics",
+    "duration_min": 19.0,
+    "url": "https://www.youtube.com/watch?v=hQiT-5LDPPs"
+  },
+  {
+    "id": "GMBQoOUzmLc",
+    "title": "The Company You Keep: Mapping Scientific Collaboration with Graphs",
+    "duration_min": 12.0,
+    "url": "https://www.youtube.com/watch?v=GMBQoOUzmLc"
+  },
+  {
+    "id": "x0I1Uo8qiaI",
+    "title": "Knowledge Graph–Driven Feedback Loops to Optimize TikTok Shop Video Marketing",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=x0I1Uo8qiaI"
+  },
+  {
+    "id": "-B0L0sWR_eg",
+    "title": "Building an Entire Graph Application with Nodestream",
+    "duration_min": 25.0,
+    "url": "https://www.youtube.com/watch?v=-B0L0sWR_eg"
+  },
+  {
+    "id": "VkXcFLPxmng",
+    "title": "Mapping Argentina’s Scientific Ecosystem: Building Collaboration Networks with Neo4j",
+    "duration_min": 16.0,
+    "url": "https://www.youtube.com/watch?v=VkXcFLPxmng"
+  },
+  {
+    "id": "pE7CweEJd2w",
+    "title": "Connecting the Dots:  The Path from Document Database to Graph Database",
+    "duration_min": 12.0,
+    "url": "https://www.youtube.com/watch?v=pE7CweEJd2w"
+  },
+  {
+    "id": "cC4ZiCKkLbQ",
+    "title": "Topology Over Predictions: Using Graph Context to Drive Real-Time Lending Decisions",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=cC4ZiCKkLbQ"
+  },
+  {
+    "id": "GgnBglg_8yw",
+    "title": "Immerse Yourself in Your Data With VR Visualization of Neo4j Graphs",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=GgnBglg_8yw"
+  },
+  {
+    "id": "NX0Du5CIN9s",
+    "title": "RAG and Voice Agent Applications",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=NX0Du5CIN9s"
+  },
+  {
+    "id": "iXBgltF1ihg",
+    "title": "From Air Quality to Aircraft and Automobiles, Data Is Everywhere",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=iXBgltF1ihg"
+  },
+  {
+    "id": "UKYEv6mPyoQ",
+    "title": "Leveraging Knowledge Graphs and LLMs to Document Large Scale Codebases",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=UKYEv6mPyoQ"
+  },
+  {
+    "id": "ZwV3WRyZX3Y",
+    "title": "Real-Time Data Transformation for Knowledge Graph with LLMs",
+    "duration_min": 12.0,
+    "url": "https://www.youtube.com/watch?v=ZwV3WRyZX3Y"
+  },
+  {
+    "id": "Q1MLF7Usiog",
+    "title": "EEG Topologies with Neo4j: Interpolation-Driven Graph Learning for Chronic Pain Detection",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=Q1MLF7Usiog"
+  },
+  {
+    "id": "6IA0TT8VyEc",
+    "title": "Using the GDS Steiner Algorithm for Disney's 4 Park Challenge",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=6IA0TT8VyEc"
+  },
+  {
+    "id": "H1CQMGG8YP4",
+    "title": "Neo4j Meets FinOps & GreenOps: Real-Time Graphs for Cloud Cost Intelligence",
+    "duration_min": 9.0,
+    "url": "https://www.youtube.com/watch?v=H1CQMGG8YP4"
+  },
+  {
+    "id": "PMKhC2tICyQ",
+    "title": "KNODE: A Knowledge Graph Approach to Risk-Driven Compliance and UBO Discovery",
+    "duration_min": 48.0,
+    "url": "https://www.youtube.com/watch?v=PMKhC2tICyQ"
+  },
+  {
+    "id": "X95sz_s1PCQ",
+    "title": "Context and Correlation in Observability Through Graph-Powered Insights",
+    "duration_min": 20.0,
+    "url": "https://www.youtube.com/watch?v=X95sz_s1PCQ"
+  },
+  {
+    "id": "GCqSygGJB7k",
+    "title": "Disrupting Customer Data Platforms: Neo4j vs. the Status Quo",
+    "duration_min": 23.0,
+    "url": "https://www.youtube.com/watch?v=GCqSygGJB7k"
+  },
+  {
+    "id": "s2-0tsBiqrA",
+    "title": "Interconnected Capital: Visualizing WAM, PE, RE, and HF Data with Neo4j",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=s2-0tsBiqrA"
+  },
+  {
+    "id": "eb5u1zPC2EI",
+    "title": "From Journeys to Systems: Rethinking Customer Experience with Knowledge Graphs",
+    "duration_min": 16.0,
+    "url": "https://www.youtube.com/watch?v=eb5u1zPC2EI"
+  },
+  {
+    "id": "DdfNRX8RqdQ",
+    "title": "Rethinking Data: A Data Scientist’s First Dive into GQLs",
+    "duration_min": 17.0,
+    "url": "https://www.youtube.com/watch?v=DdfNRX8RqdQ"
+  },
+  {
+    "id": "t0pUz2ZBsSE",
+    "title": "Multiple Knowledge Graphs for Sophisticated RAG",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=t0pUz2ZBsSE"
+  },
+  {
+    "id": "MscNNGcVKd4",
+    "title": "Find the Fraud: Assessing Tax Non-Compliance in the IRS",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=MscNNGcVKd4"
+  },
+  {
+    "id": "6ifh4CRkPq8",
+    "title": "Syntes AI Digital Twin Agentic Platform with Graph Data Model",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=6ifh4CRkPq8"
+  },
+  {
+    "id": "Yci6YomLgFY",
+    "title": "Fika Interview with Guido van Rossum",
+    "duration_min": 36.0,
+    "url": "https://www.youtube.com/watch?v=Yci6YomLgFY"
+  },
+  {
+    "id": "cHQ5Xbrcrp8",
+    "title": "#NODES2025 countdown",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=cHQ5Xbrcrp8"
+  },
+  {
+    "id": "sZRA4j3d0c8",
+    "title": "Build Reliable AI Faster With Aura Agent & Our New MCP Server",
+    "duration_min": 32.0,
+    "url": "https://www.youtube.com/watch?v=sZRA4j3d0c8"
+  },
+  {
+    "id": "BnRUdlk8_4E",
+    "title": "Introducing Graph Intelligence for Microsoft Fabric",
+    "duration_min": 7.0,
+    "url": "https://www.youtube.com/watch?v=BnRUdlk8_4E"
+  },
+  {
+    "id": "bNkmhwtNJMk",
+    "title": "AuraDB by Neo4j: Flexible, Secure, Connected Data Management",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=bNkmhwtNJMk"
+  },
+  {
+    "id": "VIA9knjZ4Xc",
+    "title": "Unprecedented Scalability With Infinigraph",
+    "duration_min": 31.0,
+    "url": "https://www.youtube.com/watch?v=VIA9knjZ4Xc"
+  },
+  {
+    "id": "7YiTvGiSpE0",
+    "title": "7 Graphs To Model Your Data Like Your Business",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=7YiTvGiSpE0"
+  },
+  {
+    "id": "j8kVSD27FTE",
+    "title": "Detect Insurance Fraud with Neo4j Graph Analytics for  Snowflake  & FastRP Embeddings",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=j8kVSD27FTE"
+  },
+  {
+    "id": "c_E-BZ84N3w",
+    "title": "Why Graph Technology Is the Missing Link in GenAI",
+    "duration_min": 19.0,
+    "url": "https://www.youtube.com/watch?v=c_E-BZ84N3w"
+  },
+  {
+    "id": "aKGNfXw12yk",
+    "title": "How Neo4j Graph Analytics for Snowflake Helps Developers Model Real-World Patient Data",
+    "duration_min": 9.0,
+    "url": "https://www.youtube.com/watch?v=aKGNfXw12yk"
+  },
+  {
+    "id": "SYLraQvyY7I",
+    "title": "Build a Pathfinding Engine in Snowflake with Neo4j Graph Analytics",
+    "duration_min": 7.0,
+    "url": "https://www.youtube.com/watch?v=SYLraQvyY7I"
+  },
+  {
+    "id": "EkKSCuTHrLk",
+    "title": "Episode 4: Use Neo4j in Your App (Python, GraphQL & More)",
+    "duration_min": 3.0,
+    "url": "https://www.youtube.com/watch?v=EkKSCuTHrLk"
+  },
+  {
+    "id": "RT4W1hzSq9k",
+    "title": "Episode 3: Import Data into Neo4j (No Code Needed!)",
+    "duration_min": 3.0,
+    "url": "https://www.youtube.com/watch?v=RT4W1hzSq9k"
+  },
+  {
+    "id": "TfojDtTfzcc",
+    "title": "Episode 2: Neo4j Cypher Basics: Reading & Writing Data",
+    "duration_min": 4.0,
+    "url": "https://www.youtube.com/watch?v=TfojDtTfzcc"
+  },
+  {
+    "id": "F-bwn8p3Pes",
+    "title": "Episode 1: How Neo4j Changes The Way You Think About Data",
+    "duration_min": 2.0,
+    "url": "https://www.youtube.com/watch?v=F-bwn8p3Pes"
+  },
+  {
+    "id": "Ff5o0FU0MrQ",
+    "title": "How Neo4j Aura Graph Analytics Helps Developers Model Real-World Patient Data",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=Ff5o0FU0MrQ"
+  },
+  {
+    "id": "nI1LlsYdIGY",
+    "title": "Neo4j Aura Graph Analytics Demo: Fraud Detection in P2P Networks",
+    "duration_min": 3.0,
+    "url": "https://www.youtube.com/watch?v=nI1LlsYdIGY"
+  },
+  {
+    "id": "2rksmcCe_tY",
+    "title": "Predictive Maintenance for Factory Uptime with Neo4j Graph Analytics for Snowflake",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=2rksmcCe_tY"
+  },
+  {
+    "id": "SDC-M831PcY",
+    "title": "FikaAI Interview with Vasilije Markovic",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=SDC-M831PcY"
+  },
+  {
+    "id": "MAdgczTYWIw",
+    "title": "FikaAI Interview with Jacob Lee",
+    "duration_min": 5.0,
+    "url": "https://www.youtube.com/watch?v=MAdgczTYWIw"
+  },
+  {
+    "id": "uCOtd9fFYAs",
+    "title": "FikaAI Interview with Arun Joseph",
+    "duration_min": 19.0,
+    "url": "https://www.youtube.com/watch?v=uCOtd9fFYAs"
+  },
+  {
+    "id": "elg1InS79GI",
+    "title": "FikaAI Interview with Artem Trofimov",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=elg1InS79GI"
+  },
+  {
+    "id": "eriWIKFeZsY",
+    "title": "Visualizing Connected Data with Dashboards",
+    "duration_min": 2.0,
+    "url": "https://www.youtube.com/watch?v=eriWIKFeZsY"
+  },
+  {
+    "id": "7b2ZM7IE36I",
+    "title": "Introducing Neo4j Desktop v2.0",
+    "duration_min": 2.0,
+    "url": "https://www.youtube.com/watch?v=7b2ZM7IE36I"
+  },
+  {
+    "id": "Z1-qTE2Iji4",
+    "title": "Neo4j Transaction Graph Demo: How to Uncover Fraud",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=Z1-qTE2Iji4"
+  },
+  {
+    "id": "ZYAtiF-u72Y",
+    "title": "Neo4j Graph Analytics for Snowflake",
+    "duration_min": 3.0,
+    "url": "https://www.youtube.com/watch?v=ZYAtiF-u72Y"
+  },
+  {
+    "id": "uxRXiZ1gtw4",
+    "title": "Predictive Maintenance with Neo4j Aura Graph Analytics for Factory Uptime",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=uxRXiZ1gtw4"
+  },
+  {
+    "id": "11lF_H121x8",
+    "title": "Uncover Hidden Patterns with Neo4j Graph Analytics for Snowflake",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=11lF_H121x8"
+  },
+  {
+    "id": "Bd3E4Q_TdF8",
+    "title": "Finding Hidden Fraud Networks: Native Graph Analytics in Snowflake with Neo4j",
+    "duration_min": 7.0,
+    "url": "https://www.youtube.com/watch?v=Bd3E4Q_TdF8"
+  },
+  {
+    "id": "nnnfKMk3hiM",
+    "title": "Smarter GenAI with Neo4j AuraDB and Google Cloud",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=nnnfKMk3hiM"
+  },
+  {
+    "id": "1qJkTqbpf5k",
+    "title": "Using Aura Graph Analytics to Model NYC Subway Disruptions",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=1qJkTqbpf5k"
+  },
+  {
+    "id": "RCNM-LLVMCM",
+    "title": "FikaAI Interview with A N M Bazlur Rahman",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=RCNM-LLVMCM"
+  },
+  {
+    "id": "e9od8ihGiE8",
+    "title": "FikaAI Interview with Abel Fresnillo",
+    "duration_min": 4.0,
+    "url": "https://www.youtube.com/watch?v=e9od8ihGiE8"
+  },
+  {
+    "id": "8BEPBY6Oz4Q",
+    "title": "FikaAI Interview with Ammar Yusuf",
+    "duration_min": 12.0,
+    "url": "https://www.youtube.com/watch?v=8BEPBY6Oz4Q"
+  },
+  {
+    "id": "GCCRI3MJi_A",
+    "title": "How to Detect Fraud in Peer-to-Peer Networks Using Aura Graph Analytics",
+    "duration_min": 9.0,
+    "url": "https://www.youtube.com/watch?v=GCCRI3MJi_A"
+  },
+  {
+    "id": "cvO6X-jBDYY",
+    "title": "FikaAI Interview with Barry Burd and Richard Fichtner",
+    "duration_min": 12.0,
+    "url": "https://www.youtube.com/watch?v=cvO6X-jBDYY"
+  },
+  {
+    "id": "FR7S41QPgvw",
+    "title": "Web Summit Rio 2025 - Lies, damn lies, and AIs",
+    "duration_min": 18.0,
+    "url": "https://www.youtube.com/watch?v=FR7S41QPgvw"
+  },
+  {
+    "id": "6YX2xQC7FOk",
+    "title": "FikaAI Interview with Brian Fox",
+    "duration_min": 7.0,
+    "url": "https://www.youtube.com/watch?v=6YX2xQC7FOk"
+  },
+  {
+    "id": "x3QDIR4b8HM",
+    "title": "FikaAI Interview with David Parry",
+    "duration_min": 8.0,
+    "url": "https://www.youtube.com/watch?v=x3QDIR4b8HM"
+  },
+  {
+    "id": "zfnEuA0qpHk",
+    "title": "FikaAI Interview with Erin Schnabel",
+    "duration_min": 23.0,
+    "url": "https://www.youtube.com/watch?v=zfnEuA0qpHk"
+  },
+  {
+    "id": "GUhBEFH-Ftg",
+    "title": "FikaAI Interview with Eyal Wirsansky",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=GUhBEFH-Ftg"
+  },
+  {
+    "id": "Ti6BQtvlD08",
+    "title": "FikaAI Interview with François Martin",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=Ti6BQtvlD08"
+  },
+  {
+    "id": "ZQVh7l9RXVc",
+    "title": "Uncover Deeper Insights with Aura Graph Analytics",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=ZQVh7l9RXVc"
+  },
+  {
+    "id": "7BXqVh0QQ-4",
+    "title": "FikaAI Interview with Frank Greco",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=7BXqVh0QQ-4"
+  },
+  {
+    "id": "eS7F8k6kW2c",
+    "title": "FikaAI Interview with Gabriela de Queiroz",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=eS7F8k6kW2c"
+  },
+  {
+    "id": "51jdwU1XRXY",
+    "title": "FikaAI Interview with Ivar Grimstad",
+    "duration_min": 7.0,
+    "url": "https://www.youtube.com/watch?v=51jdwU1XRXY"
+  },
+  {
+    "id": "w0_jJ9JAe5U",
+    "title": "FikaAI Interview with Jeanne Boyarsky",
+    "duration_min": 12.0,
+    "url": "https://www.youtube.com/watch?v=w0_jJ9JAe5U"
+  },
+  {
+    "id": "JIn6QQeT7sE",
+    "title": "FikaAI Interview with Kito Mann",
+    "duration_min": 7.0,
+    "url": "https://www.youtube.com/watch?v=JIn6QQeT7sE"
+  },
+  {
+    "id": "bikCiSZ43rU",
+    "title": "Future-Proof Your GenAI with Neo4j and AWS: Boost Accuracy & Explainability",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=bikCiSZ43rU"
+  },
+  {
+    "id": "vcU9XGaBUqA",
+    "title": "FikaAI Interview with Mattias Karlsson",
+    "duration_min": 8.0,
+    "url": "https://www.youtube.com/watch?v=vcU9XGaBUqA"
+  },
+  {
+    "id": "vqAdzVUjVaM",
+    "title": "FikaAI Interview with Michael Redlich",
+    "duration_min": 8.0,
+    "url": "https://www.youtube.com/watch?v=vqAdzVUjVaM"
+  },
+  {
+    "id": "cuTx5u-uAbk",
+    "title": "FikaAI Interview with Michele Catasta",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=cuTx5u-uAbk"
+  },
+  {
+    "id": "iJQDkYSNQac",
+    "title": "FikaAI Interview with Orlando Valdez",
+    "duration_min": 9.0,
+    "url": "https://www.youtube.com/watch?v=iJQDkYSNQac"
+  },
+  {
+    "id": "PG378pZf42c",
+    "title": "FikaAI Interview with Thierry Damiba",
+    "duration_min": 4.0,
+    "url": "https://www.youtube.com/watch?v=PG378pZf42c"
+  },
+  {
+    "id": "fP8lp9trs_Q",
+    "title": "FikaAI Interview with Adam Miller",
+    "duration_min": 23.0,
+    "url": "https://www.youtube.com/watch?v=fP8lp9trs_Q"
+  },
+  {
+    "id": "o5dZxVaZJ58",
+    "title": "FikaAI Interview with Erik Kaunismaki",
+    "duration_min": 12.0,
+    "url": "https://www.youtube.com/watch?v=o5dZxVaZJ58"
+  },
+  {
+    "id": "zQQ4puDYY1g",
+    "title": "FikaAI Interview with Ben Hindman",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=zQQ4puDYY1g"
+  },
+  {
+    "id": "cYYWMpsZfzY",
+    "title": "FikaAI Interview with Eze Lanza",
+    "duration_min": 19.0,
+    "url": "https://www.youtube.com/watch?v=cYYWMpsZfzY"
+  },
+  {
+    "id": "Yc1ur4KF6W4",
+    "title": "FikaAI Interview with Richard Sikang Bian",
+    "duration_min": 19.0,
+    "url": "https://www.youtube.com/watch?v=Yc1ur4KF6W4"
+  },
+  {
+    "id": "0LJuGTsgTgw",
+    "title": "Explore No-Code GraphRAG Agents in 10 Minutes on Your Own Data",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=0LJuGTsgTgw"
+  },
+  {
+    "id": "P2bV0OhSsdU",
+    "title": "Emil Eifrem at HumanX",
+    "duration_min": 23.0,
+    "url": "https://www.youtube.com/watch?v=P2bV0OhSsdU"
+  },
+  {
+    "id": "r5ghMhQOFh0",
+    "title": "Neo4j for Fraud Detection",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=r5ghMhQOFh0"
+  },
+  {
+    "id": "TXmP8oxt5y8",
+    "title": "Fika Interview with Lisa Cao",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=TXmP8oxt5y8"
+  },
+  {
+    "id": "Dbeca20Vf60",
+    "title": "Fika Interview with Vaibhav Gupta",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=Dbeca20Vf60"
+  },
+  {
+    "id": "XboyJozHNWU",
+    "title": "Fika Interview with Clair Sullivan",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=XboyJozHNWU"
+  },
+  {
+    "id": "qLArwoXZbUc",
+    "title": "Fika Interview with Andrew Nguyen",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=qLArwoXZbUc"
+  },
+  {
+    "id": "7orRd6bXoZ4",
+    "title": "Fika Interview with Amy Hodler and Weidong Yang",
+    "duration_min": 18.0,
+    "url": "https://www.youtube.com/watch?v=7orRd6bXoZ4"
+  },
+  {
+    "id": "YVLwu3jE09c",
+    "title": "What is a Knowledge Graph?",
+    "duration_min": 2.0,
+    "url": "https://www.youtube.com/watch?v=YVLwu3jE09c"
+  },
+  {
+    "id": "98ud5dcnokI",
+    "title": "Neo4j Industry Use Cases - Synthetic Identity Fraud",
+    "duration_min": 12.0,
+    "url": "https://www.youtube.com/watch?v=98ud5dcnokI"
+  },
+  {
+    "id": "xwu6XPY-3sI",
+    "title": "2024 Recap: Favorite highlights!",
+    "duration_min": 49.0,
+    "url": "https://www.youtube.com/watch?v=xwu6XPY-3sI"
+  },
+  {
+    "id": "OswKKXNyUvY",
+    "title": "Is your Data Ready for GenAI?",
+    "duration_min": 21.0,
+    "url": "https://www.youtube.com/watch?v=OswKKXNyUvY"
+  },
+  {
+    "id": "MRQ4CM-GbwE",
+    "title": "Fika Interview with Shikhar Kwatra",
+    "duration_min": 7.0,
+    "url": "https://www.youtube.com/watch?v=MRQ4CM-GbwE"
+  },
+  {
+    "id": "qn-623TnNfo",
+    "title": "Build Your Next GenAI with Your Data",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=qn-623TnNfo"
+  },
+  {
+    "id": "U7vU_RPRyvM",
+    "title": "Fika Interview with Shir Chorev",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=U7vU_RPRyvM"
+  },
+  {
+    "id": "1VwFjzFjUHE",
+    "title": "Fika Interview with Chia Hwu",
+    "duration_min": 7.0,
+    "url": "https://www.youtube.com/watch?v=1VwFjzFjUHE"
+  },
+  {
+    "id": "azYcWRIwvJ4",
+    "title": "Fika Interview with Charles Frye",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=azYcWRIwvJ4"
+  },
+  {
+    "id": "9lDykzzmhS4",
+    "title": "Fika Interview with Ben Pearson",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=9lDykzzmhS4"
+  },
+  {
+    "id": "pBSVpyfbhIU",
+    "title": "Fika Interview with CK Lam",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=pBSVpyfbhIU"
+  },
+  {
+    "id": "xGf26gIAK_E",
+    "title": "Fika Interview with Carl Moberg",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=xGf26gIAK_E"
+  },
+  {
+    "id": "-_3EYrGBtu8",
+    "title": "Fika Interview with Sam Julien",
+    "duration_min": 6.0,
+    "url": "https://www.youtube.com/watch?v=-_3EYrGBtu8"
+  },
+  {
+    "id": "SC9U73KXGwg",
+    "title": "NODES 2024 Recap",
+    "duration_min": 40.0,
+    "url": "https://www.youtube.com/watch?v=SC9U73KXGwg"
+  },
+  {
+    "id": "IXzkcAsg-1Q",
+    "title": "Fika Interview with Rusty Cumpston",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=IXzkcAsg-1Q"
+  },
+  {
+    "id": "UsPwbIrlzsI",
+    "title": "Fika Interview with Philip Kiely",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=UsPwbIrlzsI"
+  },
+  {
+    "id": "ZoqtIG0Hk5Y",
+    "title": "Fika Interview with Cedric Clyburn",
+    "duration_min": 16.0,
+    "url": "https://www.youtube.com/watch?v=ZoqtIG0Hk5Y"
+  },
+  {
+    "id": "uNTnXXtkTNs",
+    "title": "Fika Interview with Ofer Mendelevitch",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=uNTnXXtkTNs"
+  },
+  {
+    "id": "ukhJiInl-aQ",
+    "title": "Fika Interview with Kyle Corbitt",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=ukhJiInl-aQ"
+  },
+  {
+    "id": "Lqwc4Q-MLiU",
+    "title": "Fika Interview with Ed Marquez",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=Lqwc4Q-MLiU"
+  },
+  {
+    "id": "qOeV-pkUnFo",
+    "title": "Fika Interview with David Hood",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=qOeV-pkUnFo"
+  },
+  {
+    "id": "Bg9EwkLoMrE",
+    "title": "Fika Interview with Damien Murphy",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=Bg9EwkLoMrE"
+  },
+  {
+    "id": "wazPiRNiVEo",
+    "title": "Fika Interview with Scott Stephenson",
+    "duration_min": 19.0,
+    "url": "https://www.youtube.com/watch?v=wazPiRNiVEo"
+  },
+  {
+    "id": "GFDftFjz7Bo",
+    "title": "Fika Interview with Sachin Naik",
+    "duration_min": 12.0,
+    "url": "https://www.youtube.com/watch?v=GFDftFjz7Bo"
+  },
+  {
+    "id": "jmRHSfgLw4E",
+    "title": "Neo4j on Google Cloud",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=jmRHSfgLw4E"
+  },
+  {
+    "id": "edgEH0RQ3ME",
+    "title": "Why Neo4j and GraphRAG for GenAI",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=edgEH0RQ3ME"
+  },
+  {
+    "id": "utpguI1b_Wo",
+    "title": "NODES 2024 - Panel Discussion: Trends in Generative AI",
+    "duration_min": 32.0,
+    "url": "https://www.youtube.com/watch?v=utpguI1b_Wo"
+  },
+  {
+    "id": "JqptXy9nwzg",
+    "title": "NODES 2024 - Why You Need a Knowledge Graph And How to Build It",
+    "duration_min": 23.0,
+    "url": "https://www.youtube.com/watch?v=JqptXy9nwzg"
+  },
+  {
+    "id": "3Raqfxyy_Ok",
+    "title": "NODES 2024 - Why Data Modeling Matters and Why It's Important to You",
+    "duration_min": 16.0,
+    "url": "https://www.youtube.com/watch?v=3Raqfxyy_Ok"
+  },
+  {
+    "id": "xEUNNbbxuGI",
+    "title": "NODES 2024 - What Is the Most Important Part of Your Graph? Understanding Centrality and GDS",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=xEUNNbbxuGI"
+  },
+  {
+    "id": "MjoHzRqhal0",
+    "title": "NODES 2024 - Using Graphs to Fine-Tune Agents",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=MjoHzRqhal0"
+  },
+  {
+    "id": "XAH93bPf7tA",
+    "title": "NODES 2024 - Using Dynatrace and Kibana to Identify Bad Queries and Optimise Them",
+    "duration_min": 12.0,
+    "url": "https://www.youtube.com/watch?v=XAH93bPf7tA"
+  },
+  {
+    "id": "lw1FQ0cFf9U",
+    "title": "NODES 2024 - Using a Graph Database Tree and Data Analytics to Model an Ancient River System",
+    "duration_min": 31.0,
+    "url": "https://www.youtube.com/watch?v=lw1FQ0cFf9U"
+  },
+  {
+    "id": "98JGKSL5g0I",
+    "title": "NODES 2024 - Use Nodestream to Build and Progressively Evolve Your Database",
+    "duration_min": 25.0,
+    "url": "https://www.youtube.com/watch?v=98JGKSL5g0I"
+  },
+  {
+    "id": "XzNI8406-Mo",
+    "title": "NODES 2024 - Update on Genetic Graph Using Massively Extended Neo4j",
+    "duration_min": 26.0,
+    "url": "https://www.youtube.com/watch?v=XzNI8406-Mo"
+  },
+  {
+    "id": "7e4WnZrRECQ",
+    "title": "NODES 2024 - The Present and Future of AI-Enabled Knowledge Graph Generation",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=7e4WnZrRECQ"
+  },
+  {
+    "id": "hBI-mKD17EE",
+    "title": "NODES 2024 - The Personal Knowledge Vault",
+    "duration_min": 23.0,
+    "url": "https://www.youtube.com/watch?v=hBI-mKD17EE"
+  },
+  {
+    "id": "NqvTdaMWAC8",
+    "title": "NODES 2024 - The Missing Puzzle Piece in Agentic Financial Analysis: Self-Learning Knowledge Graphs",
+    "duration_min": 16.0,
+    "url": "https://www.youtube.com/watch?v=NqvTdaMWAC8"
+  },
+  {
+    "id": "xFtwCuRj-Wg",
+    "title": "NODES 2024 - The GitHub Graph: Open-Source Collaboration Patterns and Neo4j",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=xFtwCuRj-Wg"
+  },
+  {
+    "id": "SmRRyxBQWsw",
+    "title": "NODES 2024 - Talk With Your Documents Via Docs2KG",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=SmRRyxBQWsw"
+  },
+  {
+    "id": "ja6bKlkihI4",
+    "title": "NODES 2024 - Supercharge Your Performance With the New VSCode Plugin for Neo4j",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=ja6bKlkihI4"
+  },
+  {
+    "id": "koG0xQvnI0Y",
+    "title": "NODES 2024 - Streamlining Legislative Compliance with Neo4j",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=koG0xQvnI0Y"
+  },
+  {
+    "id": "uiFEyW5IKCE",
+    "title": "NODES 2024 - Speed and Precision: Mastering Graph Traversal With Quantified Path Patterns",
+    "duration_min": 26.0,
+    "url": "https://www.youtube.com/watch?v=uiFEyW5IKCE"
+  },
+  {
+    "id": "_Vvxl1vZgPg",
+    "title": "NODES 2024 - Making Virtuous Cycles: Lessons From the Frontier of LLM-Knowledge Graph Interaction",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=_Vvxl1vZgPg"
+  },
+  {
+    "id": "FisiD2AyIQQ",
+    "title": "NODES 2024 - LLM-Assisted Data Exploration With the Neo4j Runway Python Library",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=FisiD2AyIQQ"
+  },
+  {
+    "id": "yPja0ZICY3Q",
+    "title": "NODES 2024 - Connecting Users Via Knowledge Graph",
+    "duration_min": 7.0,
+    "url": "https://www.youtube.com/watch?v=yPja0ZICY3Q"
+  },
+  {
+    "id": "A8dUwhf16jY",
+    "title": "NODES 2024 - Beyond Vectors: Evolving GenAI through Transformative Tools and Methods",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=A8dUwhf16jY"
+  },
+  {
+    "id": "v8U9bheQorg",
+    "title": "NODES 2024 - Using Dbpedia and Wikidata Knowledge Graphs With Neo4j",
+    "duration_min": 26.0,
+    "url": "https://www.youtube.com/watch?v=v8U9bheQorg"
+  },
+  {
+    "id": "8a0WWODTth0",
+    "title": "NODES 2024 - The ResearchOps Toolbox + Graph: Discovery for UX Research and Design Teams",
+    "duration_min": 32.0,
+    "url": "https://www.youtube.com/watch?v=8a0WWODTth0"
+  },
+  {
+    "id": "_GqFFtAAp90",
+    "title": "NODES 2024 - Spatial Graph Visualisation and Storytelling with Grapho XR",
+    "duration_min": 12.0,
+    "url": "https://www.youtube.com/watch?v=_GqFFtAAp90"
+  },
+  {
+    "id": "4O__8W5CQpg",
+    "title": "NODES 2024 - Rust Extension for the Python Driver",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=4O__8W5CQpg"
+  },
+  {
+    "id": "PIaMaD9M4Zw",
+    "title": "NODES 2024 - Revolutionizing RAG for Financial Data With Knowledge Graphs",
+    "duration_min": 21.0,
+    "url": "https://www.youtube.com/watch?v=PIaMaD9M4Zw"
+  },
+  {
+    "id": "ZPC5mipgCzI",
+    "title": "NODES 2024 - Query API: A Tale Of Types and HTTP",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=ZPC5mipgCzI"
+  },
+  {
+    "id": "Rix9Rw7Ly0g",
+    "title": "NODES 2024 - Project Strawberry: GDS On Demand Compute",
+    "duration_min": 23.0,
+    "url": "https://www.youtube.com/watch?v=Rix9Rw7Ly0g"
+  },
+  {
+    "id": "0loHKIy2w3c",
+    "title": "NODES 2024 - Optimizing Real-Time Job Matching: Integrating Neo4j With RAG",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=0loHKIy2w3c"
+  },
+  {
+    "id": "Jik4adnNkc4",
+    "title": "NODES 2024 - Ontology-Backed GraphRAG: Injecting Biomedical Logic in LLMs for Drug Discovery",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=Jik4adnNkc4"
+  },
+  {
+    "id": "2OhuJHcBT88",
+    "title": "NODES 2024 - One Import Tool to Rule them All",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=2OhuJHcBT88"
+  },
+  {
+    "id": "cIWPBCauTtk",
+    "title": "NODES 2024 - New Approach of Artificial Intelligence for Fertility Treatment",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=cIWPBCauTtk"
+  },
+  {
+    "id": "4_Kv72dJckE",
+    "title": "NODES 2024 - Neo4j's Risk Register: Maximise Your Data Insights",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=4_Kv72dJckE"
+  },
+  {
+    "id": "yB07WUkJWhQ",
+    "title": "NODES 2024 - Neo4j, GraphQL, Vector Indexes, and GenAI: Exploring New Possibilities",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=yB07WUkJWhQ"
+  },
+  {
+    "id": "ovDIYUrbBus",
+    "title": "NODES 2024 - Neo4j in the Cloud With NoCode Imports",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=ovDIYUrbBus"
+  },
+  {
+    "id": "BiTA9OXHM44",
+    "title": "NODES 2024 - Neo4j GDS for Snowflake",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=BiTA9OXHM44"
+  },
+  {
+    "id": "mbZKSCaF0Xg",
+    "title": "NODES 2024 - Neo4j for Java Developers",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=mbZKSCaF0Xg"
+  },
+  {
+    "id": "G9PUAd_roTk",
+    "title": "NODES 2024 - Neo4j and Next.js: A Full-Stack Relationship",
+    "duration_min": 39.0,
+    "url": "https://www.youtube.com/watch?v=G9PUAd_roTk"
+  },
+  {
+    "id": "9_WA9rE6izk",
+    "title": "NODES 2024 - Navigating Corporate Language: Developing a Graph-Based Glossary",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=9_WA9rE6izk"
+  },
+  {
+    "id": "xEzHz14Pr08",
+    "title": "NODES 2024 - My Cypher Query Takes Too Long. What Can I Do ?",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=xEzHz14Pr08"
+  },
+  {
+    "id": "brqjIFsjKPQ",
+    "title": "NODES 2024 - Modeling Enterprise Application Transformation in Neo4j",
+    "duration_min": 22.0,
+    "url": "https://www.youtube.com/watch?v=brqjIFsjKPQ"
+  },
+  {
+    "id": "mkk2uRMahWI",
+    "title": "NODES 2024 - Medical Copilot and Product Lifecycle Copilot Powered by Hopsworks & Neo4j",
+    "duration_min": 23.0,
+    "url": "https://www.youtube.com/watch?v=mkk2uRMahWI"
+  },
+  {
+    "id": "ma8KXJRLhyg",
+    "title": "NODES 2024 - Measuring the Performance of VectorRAG vs GraphRAG",
+    "duration_min": 23.0,
+    "url": "https://www.youtube.com/watch?v=ma8KXJRLhyg"
+  },
+  {
+    "id": "hpQq8jZoUZc",
+    "title": "NODES 2024 - Making Virtuous Cycles: Lessons From the Frontier of LLM-Knowledge Graph Interaction",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=hpQq8jZoUZc"
+  },
+  {
+    "id": "YbJVq8ZOsaM",
+    "title": "NODES 2024 - LLM Query Benchmarks: Cypher vs SQL",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=YbJVq8ZOsaM"
+  },
+  {
+    "id": "eDqj5Tx9lzo",
+    "title": "NODES 2024 - Leveraging Semantic Networks for Data Integration at Deutsche Bahn",
+    "duration_min": 22.0,
+    "url": "https://www.youtube.com/watch?v=eDqj5Tx9lzo"
+  },
+  {
+    "id": "NhTsqTi_8xI",
+    "title": "NODES 2024 - Leveraging Neo4j Graph Data and AI Across the App Development and Deployment Lifecycle",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=NhTsqTi_8xI"
+  },
+  {
+    "id": "rXr9sIsWUr8",
+    "title": "Knowledge Graphs in Action: Identifying Sanctions Circumvention in a Complex Global Landscape",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=rXr9sIsWUr8"
+  },
+  {
+    "id": "Xa5Io_my9X4",
+    "title": "NODES 2024 - Knowledge Graph of Your IT Landscape: Code Is Graph Data",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=Xa5Io_my9X4"
+  },
+  {
+    "id": "SpvtBd1j3Ic",
+    "title": "NODES 2024 - Knowledge Graph For Digital Twin",
+    "duration_min": 26.0,
+    "url": "https://www.youtube.com/watch?v=SpvtBd1j3Ic"
+  },
+  {
+    "id": "8sx5lna2arQ",
+    "title": "NODES 2024 - Just Add an LLM: Creating a New Food Recommendation Engine From an Old Cypher Based One",
+    "duration_min": 22.0,
+    "url": "https://www.youtube.com/watch?v=8sx5lna2arQ"
+  },
+  {
+    "id": "MGCx1YO-Cxg",
+    "title": "NODES 2024 - Java’s GenAI Era: Getting Spring AI and Neo4j Applications to Production",
+    "duration_min": 26.0,
+    "url": "https://www.youtube.com/watch?v=MGCx1YO-Cxg"
+  },
+  {
+    "id": "SEMs1KsvdIM",
+    "title": "NODES 2024 - Introducing Astrolabe: Open-Source Cloud Infrastructure Mapping",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=SEMs1KsvdIM"
+  },
+  {
+    "id": "CLQwuyzYQyo",
+    "title": "NODES 2024 - How to Navigate the Complicated World of Modern Industrial Establishments",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=CLQwuyzYQyo"
+  },
+  {
+    "id": "2coMJVQZwZs",
+    "title": "NODES 2024 - Harness Graph Power With Agentic AI: An Insights Discovery Use Case",
+    "duration_min": 8.0,
+    "url": "https://www.youtube.com/watch?v=2coMJVQZwZs"
+  },
+  {
+    "id": "tH2n6BweQU4",
+    "title": "NODES 2024 - GraphRAG: Using LLMs to Build and Interrogate a Regulatory Knowledge Graph",
+    "duration_min": 24.0,
+    "url": "https://www.youtube.com/watch?v=tH2n6BweQU4"
+  },
+  {
+    "id": "ddElS0G8vg0",
+    "title": "NODES 2024 - GraphRAG for Increased Trust and Confidence in GenAI for Manufacturing Processes",
+    "duration_min": 23.0,
+    "url": "https://www.youtube.com/watch?v=ddElS0G8vg0"
+  },
+  {
+    "id": "ebxxK3QWVz8",
+    "title": "NODES 2024 - Graph-Driven Knowledge Retrieval: Neo4j for Healthcare Building Codes",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=ebxxK3QWVz8"
+  },
+  {
+    "id": "fHPB_VsezhI",
+    "title": "NODES 2024 - Graph-Based Authorization: How to Secure Your API With Your Own Graph",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=fHPB_VsezhI"
+  },
+  {
+    "id": "5irtFbvBtKA",
+    "title": "NODES 2024 - Graph-Based Approach for Advanced Analysis of Building Design models",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=5irtFbvBtKA"
+  },
+  {
+    "id": "jP1sUOZxTeU",
+    "title": "NODES 2024 - Graph Traversal Agent for Code Debugging",
+    "duration_min": 16.0,
+    "url": "https://www.youtube.com/watch?v=jP1sUOZxTeU"
+  },
+  {
+    "id": "N2Ou_90UNbk",
+    "title": "NODES 2024 - GNN-RAG: Bridging Graph Reasoning and Language Understanding for Knowledge Retrieval",
+    "duration_min": 22.0,
+    "url": "https://www.youtube.com/watch?v=N2Ou_90UNbk"
+  },
+  {
+    "id": "ykr01T9hNCc",
+    "title": "NODES 2024 - Generating Faculty Specific Course Materials With Neo4j and Claude",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=ykr01T9hNCc"
+  },
+  {
+    "id": "eNv7lUoUEjU",
+    "title": "NODES 2024 - Mastering Knowledge Graph Transformations Without Compromising Meaning",
+    "duration_min": 20.0,
+    "url": "https://www.youtube.com/watch?v=eNv7lUoUEjU"
+  },
+  {
+    "id": "SrHn-073R8w",
+    "title": "NODES 2024 - From Lost to Local in the Heart of Calgary: Mastering the Plus 15 Maze",
+    "duration_min": 9.0,
+    "url": "https://www.youtube.com/watch?v=SrHn-073R8w"
+  },
+  {
+    "id": "ER1dNDcJiXg",
+    "title": "NODES 2024 - From Image to Graph: Leveraging Tesseract OCR Engine for Document Chunking and GraphRAG",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=ER1dNDcJiXg"
+  },
+  {
+    "id": "wGAtkfGLiLY",
+    "title": "NODES 2024 - From Ancient Epic to Modern Marvel: Demystifying the Mahabharata Chatbot with GraphRAG",
+    "duration_min": 17.0,
+    "url": "https://www.youtube.com/watch?v=wGAtkfGLiLY"
+  },
+  {
+    "id": "JPR_aAo0OaI",
+    "title": "NODES 2024 - Faster Data Imports With Concurrent Transactional Subqueries",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=JPR_aAo0OaI"
+  },
+  {
+    "id": "Ini2nTIix_Q",
+    "title": "NODES 2024 - Exploration of Your MEAN Stack With mongo2neo4j and SemSpect",
+    "duration_min": 18.0,
+    "url": "https://www.youtube.com/watch?v=Ini2nTIix_Q"
+  },
+  {
+    "id": "jDxUcHR9zR0",
+    "title": "NODES 2024 - Multi-Agent Query Generation w/ LLMs on Complex Knowledge Graphs",
+    "duration_min": 31.0,
+    "url": "https://www.youtube.com/watch?v=jDxUcHR9zR0"
+  },
+  {
+    "id": "jwJM4Rs_8Kw",
+    "title": "NODES 2024 - Entity Resolved Knowledge Graphs",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=jwJM4Rs_8Kw"
+  },
+  {
+    "id": "qwQdydupb4c",
+    "title": "NODES 2024 - Enhancing Retrieval-Augmented Generation With GRIX",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=qwQdydupb4c"
+  },
+  {
+    "id": "6JMMip1FTxY",
+    "title": "NODES 2024 - Enhancing Medical Data Processing With Neo4j",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=6JMMip1FTxY"
+  },
+  {
+    "id": "fiSMCWt30FM",
+    "title": "NODES 2024 - Enhancing Knowledge Graphs with LLMs: Keyword Extraction and Synonym Merging",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=fiSMCWt30FM"
+  },
+  {
+    "id": "bE-C037Pn60",
+    "title": "NODES 2024 - Enhancing Job Matching With Knowledge Graphs and RAG",
+    "duration_min": 24.0,
+    "url": "https://www.youtube.com/watch?v=bE-C037Pn60"
+  },
+  {
+    "id": "h_Czx56BVR4",
+    "title": "NODES 2024 - Enhancing Financial Analytics With Event-Driven Architectures and Graph Neural Networks",
+    "duration_min": 26.0,
+    "url": "https://www.youtube.com/watch?v=h_Czx56BVR4"
+  },
+  {
+    "id": "KfN4edE1YTM",
+    "title": "NODES 2024 - Enhancing Chat-Based Customer Recommendations With GraphRAG and Hybrid Search",
+    "duration_min": 17.0,
+    "url": "https://www.youtube.com/watch?v=KfN4edE1YTM"
+  },
+  {
+    "id": "qFDTF_mSnMY",
+    "title": "NODES 2024 - Enhancing Business Process Anomaly Detection With Neo4j and Graph Neural Networks",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=qFDTF_mSnMY"
+  },
+  {
+    "id": "NGz95oecWf4",
+    "title": "NODES 2024 - Enhance LLM Applications' Trustworthiness and Explainability",
+    "duration_min": 24.0,
+    "url": "https://www.youtube.com/watch?v=NGz95oecWf4"
+  },
+  {
+    "id": "zCxry5ptn44",
+    "title": "NODES 2024 - Empowering Lifelong Learning: Transforming Data into Insights With GraphRAG",
+    "duration_min": 24.0,
+    "url": "https://www.youtube.com/watch?v=zCxry5ptn44"
+  },
+  {
+    "id": "Juxb-VISQkk",
+    "title": "NODES 2024 - Easy Metadata Management (Git for Data) Using Neo4j",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=Juxb-VISQkk"
+  },
+  {
+    "id": "u9EJRh_CVgo",
+    "title": "NODES 2024 - Earthquake Knowledge Graph in Japan",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=u9EJRh_CVgo"
+  },
+  {
+    "id": "Qdr3juTNwkg",
+    "title": "NODES 2024 - Detecting and Mapping Code Defects Introduced by Generative AI Using CodeLogic & Neo4j",
+    "duration_min": 26.0,
+    "url": "https://www.youtube.com/watch?v=Qdr3juTNwkg"
+  },
+  {
+    "id": "653ecLaDhA4",
+    "title": "NODES 2024 - Demystifying Neo4j With APOC and Java",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=653ecLaDhA4"
+  },
+  {
+    "id": "zmRx6LigGg4",
+    "title": "NODES 2024 - Deciphering P&IDs: A Neo4j Approach to Design Automation",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=zmRx6LigGg4"
+  },
+  {
+    "id": "Ix1XwMCNWZA",
+    "title": "NODES 2024 - Datashare + Neo4j: Unstructured Docs to Knowledge Graphs for Investigative Journalism",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=Ix1XwMCNWZA"
+  },
+  {
+    "id": "0YlP2-0oSyQ",
+    "title": "NODES 2024 - CypherGUI: User-Friendly Administration for Neo4j",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=0YlP2-0oSyQ"
+  },
+  {
+    "id": "n8WleeBBJKU",
+    "title": "NODES 2024 - Cypher Dynamism: A Step Towards Simpler and More Secure Queries",
+    "duration_min": 9.0,
+    "url": "https://www.youtube.com/watch?v=n8WleeBBJKU"
+  },
+  {
+    "id": "buXyenH97VA",
+    "title": "NODES 2024 - Cybersecurity Risk Assessment Using LLM Agents and Graph Data Science",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=buXyenH97VA"
+  },
+  {
+    "id": "HU1DuSOjGSM",
+    "title": "NODES 2024 - Creating Awesome Graph Visualization With the Neo4j Visualization Library NVL",
+    "duration_min": 31.0,
+    "url": "https://www.youtube.com/watch?v=HU1DuSOjGSM"
+  },
+  {
+    "id": "9F4DNzoJxKE",
+    "title": "NODES 2024 - Constructing Knowledge Graphs from Sharepoint Site",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=9F4DNzoJxKE"
+  },
+  {
+    "id": "LKp_LnHYxgw",
+    "title": "NODES 2024 - Configuring Kafka Connector to Process Typed Data and Handle Errors",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=LKp_LnHYxgw"
+  },
+  {
+    "id": "Z7aJyO71V70",
+    "title": "NODES 2024 - Concurrent Writes and Locking in Neo4j",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=Z7aJyO71V70"
+  },
+  {
+    "id": "MfPyfOZ2wQM",
+    "title": "NODES 2024 - Computing Midcurve of a Thin Polygon for Mechanical Engineering",
+    "duration_min": 24.0,
+    "url": "https://www.youtube.com/watch?v=MfPyfOZ2wQM"
+  },
+  {
+    "id": "R8U-j3b3dD4",
+    "title": "NODES 2024 - Composable RAG Pipelines With OPEA Highlighting GraphRAG",
+    "duration_min": 24.0,
+    "url": "https://www.youtube.com/watch?v=R8U-j3b3dD4"
+  },
+  {
+    "id": "bSPPqclMAe8",
+    "title": "NODES 2024 - Compliance Map: Connecting Regulations and Frameworks for Smart Audits",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=bSPPqclMAe8"
+  },
+  {
+    "id": "Pmx2Tx0Q7DI",
+    "title": "NODES 2024 - Combining Third-Party Data, Entity Resolution, and Graph Analytics for ESG Risk Mgmt",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=Pmx2Tx0Q7DI"
+  },
+  {
+    "id": "uIsk0MRVl98",
+    "title": "NODES 2024 - Combating Gun Trafficking and Gun Violence With Graph Analytics and Visualization",
+    "duration_min": 12.0,
+    "url": "https://www.youtube.com/watch?v=uIsk0MRVl98"
+  },
+  {
+    "id": "JvyiZCB4eHA",
+    "title": "NODES 2024 - Climate and Compliance: The NGFS Climate Scenarios",
+    "duration_min": 26.0,
+    "url": "https://www.youtube.com/watch?v=JvyiZCB4eHA"
+  },
+  {
+    "id": "tHvC4ZC7Z_k",
+    "title": "NODES 2024 - CDC Analytics With Graph Stream Zoomer",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=tHvC4ZC7Z_k"
+  },
+  {
+    "id": "VinYU8wd_Dc",
+    "title": "NODES 2024 - Capital Project Risk Management With Neo4j",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=VinYU8wd_Dc"
+  },
+  {
+    "id": "ksbfgGYQy5M",
+    "title": "NODES 2024 - Building the Perfect Supply Chain Chatbot",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=ksbfgGYQy5M"
+  },
+  {
+    "id": "Px1q37clDKE",
+    "title": "NODES 2024 - Building Knowledge Graphs with LLMs from USPTO Patent Data",
+    "duration_min": 18.0,
+    "url": "https://www.youtube.com/watch?v=Px1q37clDKE"
+  },
+  {
+    "id": "kqDxXH4l4YU",
+    "title": "NODES 2024 - Building Knowledge Base for Real Estate Using Gemma and Neo4j",
+    "duration_min": 26.0,
+    "url": "https://www.youtube.com/watch?v=kqDxXH4l4YU"
+  },
+  {
+    "id": "qJlKqLlSxM4",
+    "title": "NODES 2024 - Building Cypher Queries With Open-Source LLMs",
+    "duration_min": 21.0,
+    "url": "https://www.youtube.com/watch?v=qJlKqLlSxM4"
+  },
+  {
+    "id": "aYMZ0HhMGsc",
+    "title": "NODES 2024 - Building an Entity-Resolved Knowledge Graph: Why and How",
+    "duration_min": 25.0,
+    "url": "https://www.youtube.com/watch?v=aYMZ0HhMGsc"
+  },
+  {
+    "id": "7sK0W1p1hzs",
+    "title": "NODES 2024 - Building a Text2cypher Model",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=7sK0W1p1hzs"
+  },
+  {
+    "id": "KLhRJEe50V4",
+    "title": "NODES 2024 - Block Format: The Next Generation Graph-Native Storage Engine",
+    "duration_min": 22.0,
+    "url": "https://www.youtube.com/watch?v=KLhRJEe50V4"
+  },
+  {
+    "id": "NtfeEhpvcuk",
+    "title": "NODES 2024 - Beyond the Silos  Achieving Data Harmony With Graph Based ER",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=NtfeEhpvcuk"
+  },
+  {
+    "id": "w0sx4ia2K_M",
+    "title": "NODES 2024 - Applying Neo4j to Multilevel Marketing Companies",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=w0sx4ia2K_M"
+  },
+  {
+    "id": "pIXFd58uZhQ",
+    "title": "NODES 2024 - Advanced Graph Visualizations in Jupyter Notebooks",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=pIXFd58uZhQ"
+  },
+  {
+    "id": "WyzAJLCSq6M",
+    "title": "NODES 2024 - Accelerate Go to Market: Leveraging Neo4j, Kubernetes, and Helm for App Engineers",
+    "duration_min": 22.0,
+    "url": "https://www.youtube.com/watch?v=WyzAJLCSq6M"
+  },
+  {
+    "id": "mOIhfeJSzS4",
+    "title": "NODES 2024 - Abstraction for Human Understanding",
+    "duration_min": 26.0,
+    "url": "https://www.youtube.com/watch?v=mOIhfeJSzS4"
+  },
+  {
+    "id": "dvK6WgNy5BM",
+    "title": "NODES 2024 - A New Era for Graph Queries: ISO/IEC 39075 GQL",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=dvK6WgNy5BM"
+  },
+  {
+    "id": "MfZR_ZrLSDw",
+    "title": "NODES 2024 - A Graph Entity Resolution Playbook",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=MfZR_ZrLSDw"
+  },
+  {
+    "id": "ZMXIuYaFvCY",
+    "title": "NODES 2024 - Faster Analytical Queries with the Cypher Parallel Runtime",
+    "duration_min": 23.0,
+    "url": "https://www.youtube.com/watch?v=ZMXIuYaFvCY"
+  },
+  {
+    "id": "0VrzZTE5EUE",
+    "title": "NODES 2024 - Enhancing Supply Chain Resilience and Transparency Through Spatial Knowledge Graphs",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=0VrzZTE5EUE"
+  },
+  {
+    "id": "wFXLxDr0E6g",
+    "title": "NODES 2024 - Emil Eifrém and Andreas Kollegger Fireside Q&A (APAC)",
+    "duration_min": 32.0,
+    "url": "https://www.youtube.com/watch?v=wFXLxDr0E6g"
+  },
+  {
+    "id": "IaGfOhZX4-k",
+    "title": "Catching Bad Guys using Graph Entity Resolution with Paco Nathan",
+    "duration_min": 46.0,
+    "url": "https://www.youtube.com/watch?v=IaGfOhZX4-k"
+  },
+  {
+    "id": "ZzAHw6gigSc",
+    "title": "Fika Interview with Ben Lorica!",
+    "duration_min": 8.0,
+    "url": "https://www.youtube.com/watch?v=ZzAHw6gigSc"
+  },
+  {
+    "id": "rIPWHRvTa8M",
+    "title": "La norme GQL (10 Min)",
+    "duration_min": 18.0,
+    "url": "https://www.youtube.com/watch?v=rIPWHRvTa8M"
+  },
+  {
+    "id": "PpAAGRSI6PE",
+    "title": "POLE démo (10 Min)",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=PpAAGRSI6PE"
+  },
+  {
+    "id": "3EGtSqY9t0E",
+    "title": "Le Manifeste GraphRAG (10 Min)",
+    "duration_min": 16.0,
+    "url": "https://www.youtube.com/watch?v=3EGtSqY9t0E"
+  },
+  {
+    "id": "Yr5fTTjm1os",
+    "title": "Graph Visualization and Storytelling with Michela Ledwidge",
+    "duration_min": 50.0,
+    "url": "https://www.youtube.com/watch?v=Yr5fTTjm1os"
+  },
+  {
+    "id": "TQOldbBacMU",
+    "title": "Making Invisible Connections Visible with Tim Eastridge",
+    "duration_min": 38.0,
+    "url": "https://www.youtube.com/watch?v=TQOldbBacMU"
+  },
+  {
+    "id": "z3XW2fqv-_8",
+    "title": "Uncover Hidden Patterns with Neo4j AuraDB: Engineered for Connected Data",
+    "duration_min": 4.0,
+    "url": "https://www.youtube.com/watch?v=z3XW2fqv-_8"
+  },
+  {
+    "id": "NJ-IAzbAVqA",
+    "title": "Build Critical Applications on AuraDB, Fully Managed Graph Database",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=NJ-IAzbAVqA"
+  },
+  {
+    "id": "d5w6URZeVAY",
+    "title": "Knowledge Graphs and Neo4j",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=d5w6URZeVAY"
+  },
+  {
+    "id": "_PatbjQ6wgA",
+    "title": "GraphSummit World Tour Highlights | Graphs + AI: Transform Your Data Into Knowledge",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=_PatbjQ6wgA"
+  },
+  {
+    "id": "IpZHRTujWvc",
+    "title": "Pragmatic Knowledge Graphs with Ashleigh Faith",
+    "duration_min": 52.0,
+    "url": "https://www.youtube.com/watch?v=IpZHRTujWvc"
+  },
+  {
+    "id": "HCjmHPoJZN0",
+    "title": "Docker, AI, and More: Catch a Glimpse of the Java Ecosystem with Oleg Šelajev (July 2024)",
+    "duration_min": 45.0,
+    "url": "https://www.youtube.com/watch?v=HCjmHPoJZN0"
+  },
+  {
+    "id": "LlNy5VmV290",
+    "title": "Neo4j's LLM Knowledge Graph Builder - DEMO",
+    "duration_min": 4.0,
+    "url": "https://www.youtube.com/watch?v=LlNy5VmV290"
+  },
+  {
+    "id": "k8fI73r9Oug",
+    "title": "GraphAcademy - Importing Data Fundamentals - Course Introduction",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=k8fI73r9Oug"
+  },
+  {
+    "id": "1wQAoNBCi6c",
+    "title": "Getting the Word out on Knowledge Graphs with Leann Chen (June 2024)",
+    "duration_min": 49.0,
+    "url": "https://www.youtube.com/watch?v=1wQAoNBCi6c"
+  },
+  {
+    "id": "Z42VVH9qngo",
+    "title": "Knowledge Graph Builder App",
+    "duration_min": 3.0,
+    "url": "https://www.youtube.com/watch?v=Z42VVH9qngo"
+  },
+  {
+    "id": "AJvtdmmR3os",
+    "title": "2023 Finale: LLMs and Knowledge Graphs throughout the year - Season 2, Episode #11 (December 2023)",
+    "duration_min": 59.0,
+    "url": "https://www.youtube.com/watch?v=AJvtdmmR3os"
+  },
+  {
+    "id": "vr-PY27Kk5w",
+    "title": "Net Zero Decarbonization with Henry Bruce and Mike Napper from ExpectAI (May 2024)",
+    "duration_min": 67.0,
+    "url": "https://www.youtube.com/watch?v=vr-PY27Kk5w"
+  },
+  {
+    "id": "SaqJ526-0SA",
+    "title": "Loading Data from BigQuery into Neo4j with Dataflow",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=SaqJ526-0SA"
+  },
+  {
+    "id": "Mx5hqOpbBhU",
+    "title": "Neo4j and Microsoft Fabric Interop Demo",
+    "duration_min": 6.0,
+    "url": "https://www.youtube.com/watch?v=Mx5hqOpbBhU"
+  },
+  {
+    "id": "PqIc-6oA2Oo",
+    "title": "Providing Better Business Intelligence with Vish Puttagunta (April 2024)",
+    "duration_min": 49.0,
+    "url": "https://www.youtube.com/watch?v=PqIc-6oA2Oo"
+  },
+  {
+    "id": "8ro6EtLQI4c",
+    "title": "Preview: Microsoft Fabric Neo4j Graph Analytics Workload Demo with Visualization and Algorithms",
+    "duration_min": 2.0,
+    "url": "https://www.youtube.com/watch?v=8ro6EtLQI4c"
+  },
+  {
+    "id": "O9Qpz6dI9zg",
+    "title": "NODES 2023 - Entity Resolution and Deduping: Best Practices From Neo4j's Field Team",
+    "duration_min": 40.0,
+    "url": "https://www.youtube.com/watch?v=O9Qpz6dI9zg"
+  },
+  {
+    "id": "p2JUOUIzxmU",
+    "title": "NODES 2023 - Fighting FinCrime Efficiently With Entity Resolution & Graph Technology",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=p2JUOUIzxmU"
+  },
+  {
+    "id": "aVzsrGGk4K0",
+    "title": "NODES 2023 - New Caledonia Open Data as a Whole Big Graph",
+    "duration_min": 26.0,
+    "url": "https://www.youtube.com/watch?v=aVzsrGGk4K0"
+  },
+  {
+    "id": "HC9dPDnRDL0",
+    "title": "NODES 2023 - OpenScreening: A Neo4j Powered Free Compliance Investigation Tool",
+    "duration_min": 24.0,
+    "url": "https://www.youtube.com/watch?v=HC9dPDnRDL0"
+  },
+  {
+    "id": "hqt8ODznPVw",
+    "title": "NODES 2023 - Preventing Payment Fraud in Realtime With Unsupervised Machine Learning",
+    "duration_min": 33.0,
+    "url": "https://www.youtube.com/watch?v=hqt8ODznPVw"
+  },
+  {
+    "id": "orkWLQ4iALQ",
+    "title": "NODES 2023 - RDFLib + Neo4j  Revolutionizing RDF Data Loading Into Aura",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=orkWLQ4iALQ"
+  },
+  {
+    "id": "EACc3VPXOyg",
+    "title": "NODES 2023 - Re-Inventing Cypher Editing: Neo4j Meets Language Servers",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=EACc3VPXOyg"
+  },
+  {
+    "id": "wJw_GOS4iGw",
+    "title": "NODES 2023 - Relation Extraction: Dependency Graphs vs. Large Language Models",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=wJw_GOS4iGw"
+  },
+  {
+    "id": "cXaPxkJn9ac",
+    "title": "NODES 2023 - Rethinking Your Data Modal for Improved Performance",
+    "duration_min": 31.0,
+    "url": "https://www.youtube.com/watch?v=cXaPxkJn9ac"
+  },
+  {
+    "id": "vy-amNUPTjc",
+    "title": "NODES 2023 - Smart Network Data Repository With Neo4j Knowledge Graph",
+    "duration_min": 16.0,
+    "url": "https://www.youtube.com/watch?v=vy-amNUPTjc"
+  },
+  {
+    "id": "MRYGHdjJFgM",
+    "title": "NODES 2023 - Solving (Historical) Research Issues With NeoDash",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=MRYGHdjJFgM"
+  },
+  {
+    "id": "g_4K9p0hHSM",
+    "title": "NODES 2023 - Streamline Your Development With GitHub Actions: Build, Test, and Deploy Custom Code",
+    "duration_min": 24.0,
+    "url": "https://www.youtube.com/watch?v=g_4K9p0hHSM"
+  },
+  {
+    "id": "BqCRxXITj24",
+    "title": "NODES 2023 - Streamline Your Web Apps’ Tech Stack With Neo4j",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=BqCRxXITj24"
+  },
+  {
+    "id": "eFRx-0ErX-g",
+    "title": "NODES 2023 - The New Cypher Projection in Neo4j Graph Data Science",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=eFRx-0ErX-g"
+  },
+  {
+    "id": "_SD3W1RV1QI",
+    "title": "NODES 2023 - Tracing Clues: Become a Knowledge Graph Detective for Wildlife Welfare",
+    "duration_min": 24.0,
+    "url": "https://www.youtube.com/watch?v=_SD3W1RV1QI"
+  },
+  {
+    "id": "aDM4DDH2K74",
+    "title": "NODES 2023 - Using Graphs and Graph Data Science to Unlock the Customer Journey",
+    "duration_min": 26.0,
+    "url": "https://www.youtube.com/watch?v=aDM4DDH2K74"
+  },
+  {
+    "id": "7kbHw7dniUc",
+    "title": "Build Your Next GenAI Breakthrough with Neo4j",
+    "duration_min": 7.0,
+    "url": "https://www.youtube.com/watch?v=7kbHw7dniUc"
+  },
+  {
+    "id": "GgOT2_cm7ZY",
+    "title": "GenAI Accuracy, Transparency, and Explainability",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=GgOT2_cm7ZY"
+  },
+  {
+    "id": "7rNGtIOBXm8",
+    "title": "NODES 2023 - Regulation Can Be Fun! Insightful Knowledge Graphs Using Domain Specific Languages",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=7rNGtIOBXm8"
+  },
+  {
+    "id": "yEU-kNUh2v4",
+    "title": "NODES 2023 - Improving Water Distribution Efficiency With Graph Database and AI",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=yEU-kNUh2v4"
+  },
+  {
+    "id": "x2IULzCP9TU",
+    "title": "NODES 2023 - Integrate $YOUR Big Data System With Graph Data Science and Apache Arrow",
+    "duration_min": 32.0,
+    "url": "https://www.youtube.com/watch?v=x2IULzCP9TU"
+  },
+  {
+    "id": "tNGqhXw3gJw",
+    "title": "NODES 2023 - Hacking the Dark Web With Neo4j: There Is No Spoon, Only Nodes",
+    "duration_min": 34.0,
+    "url": "https://www.youtube.com/watch?v=tNGqhXw3gJw"
+  },
+  {
+    "id": "t3dId0nRUMc",
+    "title": "NODES 2023 - KG Driven Smart Clinical Cohort Selection System for Clinical Oncology Research",
+    "duration_min": 35.0,
+    "url": "https://www.youtube.com/watch?v=t3dId0nRUMc"
+  },
+  {
+    "id": "sNoMgglxLEQ",
+    "title": "NODES 2023 - How to Use Graphs for Real-Time Authorization Decisions",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=sNoMgglxLEQ"
+  },
+  {
+    "id": "mfP_xDxMnm0",
+    "title": "NODES 2023 - Graph-based Entity Resolution for Intelligence Analysis",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=mfP_xDxMnm0"
+  },
+  {
+    "id": "l5TJXscWIkQ",
+    "title": "NODES 2023 - Identity Resolution for Airline Data",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=l5TJXscWIkQ"
+  },
+  {
+    "id": "gE4w2agbcF4",
+    "title": "NODES 2023 - Graph Algorithms for Privacy and Fairness in the Healthcare Industry",
+    "duration_min": 31.0,
+    "url": "https://www.youtube.com/watch?v=gE4w2agbcF4"
+  },
+  {
+    "id": "bQf59Fi1-d8",
+    "title": "NODES 2023 - Neo4j as an Application Database: Pros vs. Cons & Tips and Tricks",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=bQf59Fi1-d8"
+  },
+  {
+    "id": "a8lVdxUJ2FA",
+    "title": "NODES 2023 - Graph-Based Literature Review Tool",
+    "duration_min": 17.0,
+    "url": "https://www.youtube.com/watch?v=a8lVdxUJ2FA"
+  },
+  {
+    "id": "_XMdnqsj7rc",
+    "title": "NODES 2023 - Ingesting Graph Data With Nodestream",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=_XMdnqsj7rc"
+  },
+  {
+    "id": "YwttkZn7oio",
+    "title": "NODES 2023 - How Intuit's Security Team Uses Neo4j to Drive Down MTTR and MTTD",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=YwttkZn7oio"
+  },
+  {
+    "id": "MnNLslrg7q8",
+    "title": "NODES 2023 - Neo4j for Public Procurement Analysis  Unveiling Provider Government Relationships",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=MnNLslrg7q8"
+  },
+  {
+    "id": "L7WiFcp1S-0",
+    "title": "NODES 2023 - Identify Unknown Risk in Your Systems With Centrality Algorithms",
+    "duration_min": 31.0,
+    "url": "https://www.youtube.com/watch?v=L7WiFcp1S-0"
+  },
+  {
+    "id": "JWAPG_ORGXM",
+    "title": "NODES 2023 - Lobbygraph: Delving Into the Graph of Germany's New Lobby Register",
+    "duration_min": 19.0,
+    "url": "https://www.youtube.com/watch?v=JWAPG_ORGXM"
+  },
+  {
+    "id": "HWfV9v_OM7M",
+    "title": "NODES 2023 - neoDAVE: Graph Based Dependencies and Vulnerability Management",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=HWfV9v_OM7M"
+  },
+  {
+    "id": "8vhxb25MYp0",
+    "title": "NODES 2023 - Knowledge Graph Visualization Interface for Digital Humanities Data With Cytoscape.js",
+    "duration_min": 25.0,
+    "url": "https://www.youtube.com/watch?v=8vhxb25MYp0"
+  },
+  {
+    "id": "8ZmOzmQ_xq8",
+    "title": "NODES 2023 - Improving Rapid Public Transit Utilization With Neo4j and Machine Learning",
+    "duration_min": 16.0,
+    "url": "https://www.youtube.com/watch?v=8ZmOzmQ_xq8"
+  },
+  {
+    "id": "6wh07wgvCPI",
+    "title": "NODES 2023 - Knowledge Graphs for the Circular Economy",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=6wh07wgvCPI"
+  },
+  {
+    "id": "6ZJzGuFp8Q8",
+    "title": "NODES 2023 - Instant Synthetic Graph Data",
+    "duration_min": 21.0,
+    "url": "https://www.youtube.com/watch?v=6ZJzGuFp8Q8"
+  },
+  {
+    "id": "2jrEW2DJ9qA",
+    "title": "NODES 2023 - Let Your Second Brain Become a Graph",
+    "duration_min": 16.0,
+    "url": "https://www.youtube.com/watch?v=2jrEW2DJ9qA"
+  },
+  {
+    "id": "-4fusnK1Rjc",
+    "title": "NODES 2023 - GraphLabel: A Tool for Graph Data Labeling and Contextualization in LLM Search",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=-4fusnK1Rjc"
+  },
+  {
+    "id": "xdQslmb2VAc",
+    "title": "NODES 2023 - Flexibility and Consistency in Graph Visualization",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=xdQslmb2VAc"
+  },
+  {
+    "id": "v4CgjiVist4",
+    "title": "NODES 2023 - Building Your Python API on Top of Neo4j with neomodel",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=v4CgjiVist4"
+  },
+  {
+    "id": "rqIG7Xj2vUI",
+    "title": "NODES 2023 - Finding Performance Issues With Neo4j Ops Manager",
+    "duration_min": 12.0,
+    "url": "https://www.youtube.com/watch?v=rqIG7Xj2vUI"
+  },
+  {
+    "id": "jrAYrl4Ncas",
+    "title": "NODES 2023 - Discovering the Emergence of New Occupations With OpenAI and Neo4j",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=jrAYrl4Ncas"
+  },
+  {
+    "id": "jIVPND8A164",
+    "title": "NODES 2023 - Bootiful Java GraphQL Application With Neo4j",
+    "duration_min": 32.0,
+    "url": "https://www.youtube.com/watch?v=jIVPND8A164"
+  },
+  {
+    "id": "h_faBoScHds",
+    "title": "01: Driver Installation",
+    "duration_min": 5.0,
+    "url": "https://www.youtube.com/watch?v=h_faBoScHds"
+  },
+  {
+    "id": "dmvpzqcQy9U",
+    "title": "Preview: Microsoft Fabric Neo4j Graph Analytics Workload Demo with Visualization and Algorithms",
+    "duration_min": 4.0,
+    "url": "https://www.youtube.com/watch?v=dmvpzqcQy9U"
+  },
+  {
+    "id": "M8UHxyYoAxw",
+    "title": "NODES 2023 - Digital Identity Risk Assessment With Neo4j",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=M8UHxyYoAxw"
+  },
+  {
+    "id": "KIIl9611mbM",
+    "title": "NODES 2023 - Fast Low-Code Application Development With Structr",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=KIIl9611mbM"
+  },
+  {
+    "id": "BUSTa6hclY4",
+    "title": "NODES 2023 - Data Population, Analysis, and Visualization Over the SustainGraph",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=BUSTa6hclY4"
+  },
+  {
+    "id": "YObPTyJDENg",
+    "title": "NODES 2023 - Bringing Graph Database to High School Classroom: Book Recommendations",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=YObPTyJDENg"
+  },
+  {
+    "id": "53oAuFpxxX0",
+    "title": "NODES 2023 - Creating a Scalable Mentorship Program With Graph",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=53oAuFpxxX0"
+  },
+  {
+    "id": "1Iuuvk6yJME",
+    "title": "RAG Databases with Johannes Jolkkonen: When to Choose a Graph Database vs Alternatives",
+    "duration_min": 51.0,
+    "url": "https://www.youtube.com/watch?v=1Iuuvk6yJME"
+  },
+  {
+    "id": "CykkC80L_ck",
+    "title": "NODES 2023 - BioCypher/BioChatter: An Ecosystem for Connecting Knowledge Graphs and LLMs",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=CykkC80L_ck"
+  },
+  {
+    "id": "nuBsC5raubQ",
+    "title": "NODES 2023 - Exploring Neo4j Workspace: Streamlined Access To Essential Graph Tools",
+    "duration_min": 22.0,
+    "url": "https://www.youtube.com/watch?v=nuBsC5raubQ"
+  },
+  {
+    "id": "6oOrXhuUHTg",
+    "title": "NODES 2023 - Explainable AI in Healthcare: Pathway to Achieve the 5 Zeros Goal",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=6oOrXhuUHTg"
+  },
+  {
+    "id": "BkJrdvPeC2o",
+    "title": "NODES 2023 - Graphs Enabling Glycoscience",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=BkJrdvPeC2o"
+  },
+  {
+    "id": "qLdkRReMPvM",
+    "title": "NODES 2023 - Using LLMs to Convert Unstructured Data to Knowledge Graphs",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=qLdkRReMPvM"
+  },
+  {
+    "id": "izLprnUE4zE",
+    "title": "NODES 2023 - Graph Machine Learning for 2024",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=izLprnUE4zE"
+  },
+  {
+    "id": "J4Ra74eXJ-0",
+    "title": "GenAI solutions with Langchain: Lance Martin on LLMs, agents, evals, and more!",
+    "duration_min": 52.0,
+    "url": "https://www.youtube.com/watch?v=J4Ra74eXJ-0"
+  },
+  {
+    "id": "MZMAuXZrysw",
+    "title": "Graphes Neo4j de Machines à États (10 Min)",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=MZMAuXZrysw"
+  },
+  {
+    "id": "kSAh4H4YDX8",
+    "title": "LlamaIndex and More: Building LLM Tech with Jerry Liu - Season 3, Episode #1 (January 2024)",
+    "duration_min": 43.0,
+    "url": "https://www.youtube.com/watch?v=kSAh4H4YDX8"
+  },
+  {
+    "id": "OaMA0NiN2lU",
+    "title": "NODES 2023 - Follow the Money: A Graph Ontology for Anti-Corruption Investigations",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=OaMA0NiN2lU"
+  },
+  {
+    "id": "ftlZ0oeXYRE",
+    "title": "RAG with a Neo4j Knowledge Graph: How it Works and How to Set It Up",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=ftlZ0oeXYRE"
+  },
+  {
+    "id": "TB6URe5f3MA",
+    "title": "NODES 2023 - Fine-Tuning an Open-Source LLM for Text-to-Cypher Translation",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=TB6URe5f3MA"
+  },
+  {
+    "id": "ysBwXTR8390",
+    "title": "Humanitarian AI and Neo4j Q&A Session: Graphing IATI Aid Activity Data for LLM Powered Chatbots",
+    "duration_min": 65.0,
+    "url": "https://www.youtube.com/watch?v=ysBwXTR8390"
+  },
+  {
+    "id": "_zlO2T4lffo",
+    "title": "2023 Web Summit - Emil Eifrem Solving GenAI's Hallucination Problem",
+    "duration_min": 23.0,
+    "url": "https://www.youtube.com/watch?v=_zlO2T4lffo"
+  },
+  {
+    "id": "xxOoGT1OWpI",
+    "title": "Web Summit 2023 - What it takes to be a technical leader",
+    "duration_min": 18.0,
+    "url": "https://www.youtube.com/watch?v=xxOoGT1OWpI"
+  },
+  {
+    "id": "Mr8NmQ3PGWk",
+    "title": "NODES 2023: Behind the Scenes, Highlights, and More! - Season 2, Episode #10 (November 2023)",
+    "duration_min": 50.0,
+    "url": "https://www.youtube.com/watch?v=Mr8NmQ3PGWk"
+  },
+  {
+    "id": "JHfRntKDtac",
+    "title": "NODES 2023 Preview with Melly Beechwood - Season 2, Episode #9 (October 2023)",
+    "duration_min": 38.0,
+    "url": "https://www.youtube.com/watch?v=JHfRntKDtac"
+  },
+  {
+    "id": "idioWOME774",
+    "title": "The Perfect Graph for the Perfect Problem",
+    "duration_min": 93.0,
+    "url": "https://www.youtube.com/watch?v=idioWOME774"
+  },
+  {
+    "id": "tPQS37nzKL8",
+    "title": "NODES 2023 - Create Awesome Graph Visualizations From Your Data",
+    "duration_min": 32.0,
+    "url": "https://www.youtube.com/watch?v=tPQS37nzKL8"
+  },
+  {
+    "id": "56yqbAMf-FI",
+    "title": "NODES 2023 - Using Graph Theory to Model a Production Line and Predict Delivery Dates",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=56yqbAMf-FI"
+  },
+  {
+    "id": "7h4bKNq29-g",
+    "title": "IA générative et Neo4j : APOC & LLM (10 min)",
+    "duration_min": 20.0,
+    "url": "https://www.youtube.com/watch?v=7h4bKNq29-g"
+  },
+  {
+    "id": "lQ9bAStHycM",
+    "title": "NODES 2023 - NeoGenAI: Ontology Guided Loading of Business Data in Graph Database",
+    "duration_min": 18.0,
+    "url": "https://www.youtube.com/watch?v=lQ9bAStHycM"
+  },
+  {
+    "id": "nwiuTykLaVM",
+    "title": "NODES 2023 - Type-Safe Graphs With Neo4j & Prisma: A Library to Use Them Together",
+    "duration_min": 12.0,
+    "url": "https://www.youtube.com/watch?v=nwiuTykLaVM"
+  },
+  {
+    "id": "HmdfgTZXwLk",
+    "title": "NODES 2023 - Uncovering Insights to Improve Website Performance: Examples From Real Projects",
+    "duration_min": 14.0,
+    "url": "https://www.youtube.com/watch?v=HmdfgTZXwLk"
+  },
+  {
+    "id": "-1vHmb4Ur5E",
+    "title": "NODES 2023 - Unleash the Magic of User-Defined Procedures",
+    "duration_min": 17.0,
+    "url": "https://www.youtube.com/watch?v=-1vHmb4Ur5E"
+  },
+  {
+    "id": "Vl3jOoW119s",
+    "title": "NODES 2023 - Unleashing Safety Insights  Harnessing Near Misses Through Knowledge Graphs",
+    "duration_min": 16.0,
+    "url": "https://www.youtube.com/watch?v=Vl3jOoW119s"
+  },
+  {
+    "id": "fUSM29zN99Y",
+    "title": "NODES 2023 - Unraveling Korean Dramas With Graph Analytics",
+    "duration_min": 5.0,
+    "url": "https://www.youtube.com/watch?v=fUSM29zN99Y"
+  },
+  {
+    "id": "UEohMMxzkFk",
+    "title": "NODES 2023 - Unveiling Innovation Pathways  End to End Graph Analytics for Emerging Tech",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=UEohMMxzkFk"
+  },
+  {
+    "id": "M1zQXfKIiJ4",
+    "title": "NODES 2023 - Visibility Graph: Analyzing Timeseries as Graphs",
+    "duration_min": 24.0,
+    "url": "https://www.youtube.com/watch?v=M1zQXfKIiJ4"
+  },
+  {
+    "id": "OKyYUth8fr0",
+    "title": "NODES 2023 - Better Integration Tests for Neo4j Applications With Testcontainers",
+    "duration_min": 31.0,
+    "url": "https://www.youtube.com/watch?v=OKyYUth8fr0"
+  },
+  {
+    "id": "9S5xCt8hvgQ",
+    "title": "NODES 2023 - Neo4j Change Data Capture   Building event driven applications with Aura and Neo4j",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=9S5xCt8hvgQ"
+  },
+  {
+    "id": "-qCivXSe6I0",
+    "title": "NODES 2023 - UX Considerations Around Scientist Driven Graph Construction for Biopharma R&D",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=-qCivXSe6I0"
+  },
+  {
+    "id": "teYhf27u2DE",
+    "title": "NODES 2023 - Visualizing Emerging Patterns in Big Data for Proactive Threat Response",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=teYhf27u2DE"
+  },
+  {
+    "id": "pDNIM1HLuc8",
+    "title": "NODES 2023 - Visualizing Infrastructure Data With Neo4j and CloudQuery",
+    "duration_min": 22.0,
+    "url": "https://www.youtube.com/watch?v=pDNIM1HLuc8"
+  },
+  {
+    "id": "vjSn-Ly1WJc",
+    "title": "NODES 2023 - Whodunit  Getting Answers from the HK Legal Information Institute Text",
+    "duration_min": 17.0,
+    "url": "https://www.youtube.com/watch?v=vjSn-Ly1WJc"
+  },
+  {
+    "id": "WQQfJzPs2-8",
+    "title": "NODES 2023 - Write Cypher Queries Programmatically With Cypher Builder",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=WQQfJzPs2-8"
+  },
+  {
+    "id": "eZEsbS8ClfM",
+    "title": "NODES 2023 - Emil & Andreas Fireside Q&A (Asia Pacific)",
+    "duration_min": 19.0,
+    "url": "https://www.youtube.com/watch?v=eZEsbS8ClfM"
+  },
+  {
+    "id": "fzKK-1xM7g0",
+    "title": "NODES 2023 - Emil & Andreas Fireside Q&A (Europe, Middle East & Africa)",
+    "duration_min": 17.0,
+    "url": "https://www.youtube.com/watch?v=fzKK-1xM7g0"
+  },
+  {
+    "id": "8Fzt5SOlisk",
+    "title": "NODES 2023 - Faceted Navigation in Neo4j",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=8Fzt5SOlisk"
+  },
+  {
+    "id": "ynTpg5n2PSU",
+    "title": "NODES 2023 - Emil & Andreas Fireside Q&A The Americas",
+    "duration_min": 17.0,
+    "url": "https://www.youtube.com/watch?v=ynTpg5n2PSU"
+  },
+  {
+    "id": "HETmEcIx82k",
+    "title": "NODES 2023 - Cyberattack Countermeasures Generation With LLMs & Knowledge Graphs",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=HETmEcIx82k"
+  },
+  {
+    "id": "XObtoB_g_CA",
+    "title": "NODES 2023 - Knowledge Graph Based Chatbot",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=XObtoB_g_CA"
+  },
+  {
+    "id": "BP9nATW3y_M",
+    "title": "NODES 2023 - Fluffy and Fido on the Go: Applying Graph Data and AI to Hack Pet Travel",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=BP9nATW3y_M"
+  },
+  {
+    "id": "MQTVDGOiWBY",
+    "title": "NODES 2023 - Graphs vs. Tables: Compare the Reality of Data Around You",
+    "duration_min": 20.0,
+    "url": "https://www.youtube.com/watch?v=MQTVDGOiWBY"
+  },
+  {
+    "id": "vvn1WUgqxqM",
+    "title": "NODES 2023 - Query Logs as a Graph",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=vvn1WUgqxqM"
+  },
+  {
+    "id": "70V9TIYvqrw",
+    "title": "NODES 2023 - Create Graph Dashboards With LLM Powered Natural Language Queries",
+    "duration_min": 28.0,
+    "url": "https://www.youtube.com/watch?v=70V9TIYvqrw"
+  },
+  {
+    "id": "pQWEgpNwY2w",
+    "title": "NODES 2023 - Jump Starting Graph Analytics With GDS Python Client Data Loading",
+    "duration_min": 15.0,
+    "url": "https://www.youtube.com/watch?v=pQWEgpNwY2w"
+  },
+  {
+    "id": "DQ-SShCGVzs",
+    "title": "NODES 2023 - Improving Data Quality With Cypher Types",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=DQ-SShCGVzs"
+  },
+  {
+    "id": "Znd4k64JRFc",
+    "title": "NODES 2023 - Advanced Pathfinding, Simple Queries, and Efficient Execution – Pick Three",
+    "duration_min": 29.0,
+    "url": "https://www.youtube.com/watch?v=Znd4k64JRFc"
+  },
+  {
+    "id": "m51Dtppb2h0",
+    "title": "NODES 2023 - Build Apps with the New GenAI Stack from Docker, LangChain, Ollama, and Neo4j",
+    "duration_min": 30.0,
+    "url": "https://www.youtube.com/watch?v=m51Dtppb2h0"
+  },
+  {
+    "id": "_cC2PoOJHQc",
+    "title": "NODES 2023 - Brief Introduction to The New Parallel Runtime in Neo4j",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=_cC2PoOJHQc"
+  },
+  {
+    "id": "UGt3u0htTmk",
+    "title": "NODES 2023 - Driving Cancer Data Interoperability: Python, Liquibase, and Neo4j in Action at the MDB",
+    "duration_min": 13.0,
+    "url": "https://www.youtube.com/watch?v=UGt3u0htTmk"
+  },
+  {
+    "id": "sqnm014vB1Q",
+    "title": "Nodes 2023 - Neo4j's Product Vision and Roadmap - Sudhir Hasbe, CPO Neo4j",
+    "duration_min": 27.0,
+    "url": "https://www.youtube.com/watch?v=sqnm014vB1Q"
+  },
+  {
+    "id": "nV3-KKEZnD4",
+    "title": "Neo4j with Amazon Bedrock.",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=nV3-KKEZnD4"
+  },
+  {
+    "id": "CcsYtVhOEgE",
+    "title": "Basecamp Research: Getting Started with Graph Data Science",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=CcsYtVhOEgE"
+  },
+  {
+    "id": "I97ujqDlhks",
+    "title": "Basecamp Research: Feature Engineering with Graph Data Science",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=I97ujqDlhks"
+  },
+  {
+    "id": "CoLBwUnB6e0",
+    "title": "Basecamp Research: Accelerating Treatment of Genetic Diseases Using Similarity Algorithms",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=CoLBwUnB6e0"
+  },
+  {
+    "id": "GqsMHBnk5Po",
+    "title": "Basecamp Research: Deep Learning with Graph Algorithms & Embeddings",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=GqsMHBnk5Po"
+  },
+  {
+    "id": "TSKgf5g8pXc",
+    "title": "Basecamp Research: Embracing Graph Models over Traditional Data Science",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=TSKgf5g8pXc"
+  },
+  {
+    "id": "-PoY7D4qY4k",
+    "title": "Basecamp Research: Capturing the Natural World in a Knowledge Graph",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=-PoY7D4qY4k"
+  },
+  {
+    "id": "7KYSvl82V5o",
+    "title": "Basecamp Research: Representing the Complexity of Nature in Data and Analytics",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=7KYSvl82V5o"
+  },
+  {
+    "id": "Hg4ahTQlBm0",
+    "title": "Knowledge Graph Construction Demo from raw text using an LLM",
+    "duration_min": 6.0,
+    "url": "https://www.youtube.com/watch?v=Hg4ahTQlBm0"
+  },
+  {
+    "id": "ZExin7j8ysE",
+    "title": "Neo4j Live: Metadata Management of NoSQL Data Sources using Neo4j",
+    "duration_min": 71.0,
+    "url": "https://www.youtube.com/watch?v=ZExin7j8ysE"
+  },
+  {
+    "id": "3PO-erAP6R4",
+    "title": "Azure OpenAI Neo4j Demo",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=3PO-erAP6R4"
+  },
+  {
+    "id": "k1IJ5m4KCYA",
+    "title": "Neo4j through Azure Marketplace",
+    "duration_min": 6.0,
+    "url": "https://www.youtube.com/watch?v=k1IJ5m4KCYA"
+  },
+  {
+    "id": "QjYyp0FdxAU",
+    "title": "Custom Caption Controls available in Neo4j Bloom",
+    "duration_min": 3.0,
+    "url": "https://www.youtube.com/watch?v=QjYyp0FdxAU"
+  },
+  {
+    "id": "n45nX-ht3LM",
+    "title": "NODES 2023",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=n45nX-ht3LM"
+  },
+  {
+    "id": "1CqZo7nP8yQ",
+    "title": "Nodes 2023 Trailer",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=1CqZo7nP8yQ"
+  },
+  {
+    "id": "mMkXnmueasA",
+    "title": "Neo4j and Generative AI",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=mMkXnmueasA"
+  },
+  {
+    "id": "qUXoWxDy5LI",
+    "title": "Tip#1 Submit a Talk for NODES 2023",
+    "duration_min": 3.0,
+    "url": "https://www.youtube.com/watch?v=qUXoWxDy5LI"
+  },
+  {
+    "id": "nBrI1QQx9IA",
+    "title": "Ask a Data Scientist: What Is Graph Supervised Machine Learning?",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=nBrI1QQx9IA"
+  },
+  {
+    "id": "NUuI9NkOfZo",
+    "title": "Neo4j Workspace — New Updates for Import and Query",
+    "duration_min": 7.0,
+    "url": "https://www.youtube.com/watch?v=NUuI9NkOfZo"
+  },
+  {
+    "id": "xK7K-4Te8Bs",
+    "title": "ChatGPT Generated Star Wars Data — Let's Explore With Neo4j",
+    "duration_min": 9.0,
+    "url": "https://www.youtube.com/watch?v=xK7K-4Te8Bs"
+  },
+  {
+    "id": "aHxBMUq511c",
+    "title": "Búsqueda de ruta con Graph Data Science - 10 min",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=aHxBMUq511c"
+  },
+  {
+    "id": "v-JdvAfRWtQ",
+    "title": "Importar datos con Neo4j Data Importer (10 Min)",
+    "duration_min": 9.0,
+    "url": "https://www.youtube.com/watch?v=v-JdvAfRWtQ"
+  },
+  {
+    "id": "UaMTkqBl7ws",
+    "title": "Recherche de chemin avec Graph Data Science (Path Finding) - 10 min",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=UaMTkqBl7ws"
+  },
+  {
+    "id": "TU3xpczmHI0",
+    "title": "What makes graph data science a good technique for unsupervised dimensionality reduction?",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=TU3xpczmHI0"
+  },
+  {
+    "id": "ghOGAgth4sI",
+    "title": "What makes graph data science good for unsupervised or semi-supervised clustering and association?",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=ghOGAgth4sI"
+  },
+  {
+    "id": "2X4ZZGjOtXo",
+    "title": "Why is Graph data science a good technique for influence and importance measures?",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=2X4ZZGjOtXo"
+  },
+  {
+    "id": "KbMHtm3y6PI",
+    "title": "Ask a Data Scientist: What Are the Best Places to Use Graph Data Science?",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=KbMHtm3y6PI"
+  },
+  {
+    "id": "9zk5hcHV3-I",
+    "title": "As a Data Scientist: What Is Your Favorite Problem You've Ever Solved With Graph Data Science?",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=9zk5hcHV3-I"
+  },
+  {
+    "id": "5O7wEUrBSLY",
+    "title": "Ask a Data Scientist: What Is Graph Supervised Machine Learning?",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=5O7wEUrBSLY"
+  },
+  {
+    "id": "tQCjf5a7G6E",
+    "title": "Ask a Data Scientist: Why Is Graph Data Science a Good Technique for Pathfinding?",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=tQCjf5a7G6E"
+  },
+  {
+    "id": "ZR0-fkyMaiw",
+    "title": "Ask a Data Scientist: What Makes a Good Graph Problem?",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=ZR0-fkyMaiw"
+  },
+  {
+    "id": "CKMBh3m3UVY",
+    "title": "Ask a Data Scientist: What Makes Graph Data Science Different From Traditional Data Science?",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=CKMBh3m3UVY"
+  },
+  {
+    "id": "uZszZA5Yjag",
+    "title": "Exploración de datos con Bloom - Parte 2 - 10 Min",
+    "duration_min": 10.0,
+    "url": "https://www.youtube.com/watch?v=uZszZA5Yjag"
+  },
+  {
+    "id": "UWNLY-iPd-0",
+    "title": "Exploración de datos con Bloom - Parte 1 - 10 Min",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=UWNLY-iPd-0"
+  },
+  {
+    "id": "j7lmT6VySXQ",
+    "title": "Neo4j + Process Tempo presents Reduce API Security Risk by Leveraging Graph Analytics",
+    "duration_min": 54.0,
+    "url": "https://www.youtube.com/watch?v=j7lmT6VySXQ"
+  },
+  {
+    "id": "9CEpvcCBuvc",
+    "title": "Slice and Dice your Data with Neo4j Bloom",
+    "duration_min": 4.0,
+    "url": "https://www.youtube.com/watch?v=9CEpvcCBuvc"
+  },
+  {
+    "id": "ZYIasTOhLtI",
+    "title": "Coordinate layouts — Neo4j Bloom",
+    "duration_min": 2.0,
+    "url": "https://www.youtube.com/watch?v=ZYIasTOhLtI"
+  },
+  {
+    "id": "Vabbf-Mn9q0",
+    "title": "Ask a Data Scientist: What Is Your Favorite Problem You've Ever Solved With Graph Data Science?",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=Vabbf-Mn9q0"
+  },
+  {
+    "id": "ri7V-RWj2AU",
+    "title": "Ask a Data Scientist: What Are Graph Embeddings and Why Are They Important?",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=ri7V-RWj2AU"
+  },
+  {
+    "id": "-DNmqP69ZTs",
+    "title": "Ask a Data Scientist: Why Is Graph Data Technique for Influence & Importance Measures?",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=-DNmqP69ZTs"
+  },
+  {
+    "id": "8mwfT-q7Tho",
+    "title": "Ask a Data Scientist: Why Is Graph Data Science a Good Technique for Pathfinding?",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=8mwfT-q7Tho"
+  },
+  {
+    "id": "jJbMW5SMNGI",
+    "title": "Ask a Data Scientist: What Makes a Good Graph Problem?",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=jJbMW5SMNGI"
+  },
+  {
+    "id": "CvMhjFh71dY",
+    "title": "Ask a Data Scientist: What Makes Graph Data Science Different From Traditional Data Science?",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=CvMhjFh71dY"
+  },
+  {
+    "id": "JXU7TxC_ExI",
+    "title": "What's New in Neo4j Data Importer",
+    "duration_min": 11.0,
+    "url": "https://www.youtube.com/watch?v=JXU7TxC_ExI"
+  },
+  {
+    "id": "7sPfkgjJhWg",
+    "title": "Uncovering the Power of Relationships: A Neo4j Series",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=7sPfkgjJhWg"
+  },
+  {
+    "id": "Z3mhidWSOBA",
+    "title": "Graph Data Science Workshops  Getting started with Neo4j",
+    "duration_min": 17.0,
+    "url": "https://www.youtube.com/watch?v=Z3mhidWSOBA"
+  },
+  {
+    "id": "QGHOdI9p0l0",
+    "title": "Ask a Data Scientist: What Are the Best Places to Use Graph Data Science?",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=QGHOdI9p0l0"
+  },
+  {
+    "id": "iUwgYn-J_E0",
+    "title": "Ask a Data Scientist: What's the Difference Between Graph Analytics and Graph Data Science?",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=iUwgYn-J_E0"
+  },
+  {
+    "id": "WkBvW9lWYK8",
+    "title": "Ask a Data Scientist: What Is Your Favorite Problem You've Ever Solved With Graph Data Science?",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=WkBvW9lWYK8"
+  },
+  {
+    "id": "0nLjUgd7SWA",
+    "title": "Ask a Data Scientist: What Are Graph Embeddings and Why Are They Important?",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=0nLjUgd7SWA"
+  },
+  {
+    "id": "7x9WMLrFhtc",
+    "title": "Industry Use Case: Improving Public Safety in Energy and Mining",
+    "duration_min": 2.0,
+    "url": "https://www.youtube.com/watch?v=7x9WMLrFhtc"
+  },
+  {
+    "id": "6bpRBNR0TzA",
+    "title": "What Can You Do With Graph Data Science?",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=6bpRBNR0TzA"
+  },
+  {
+    "id": "1Kt9LsrBDys",
+    "title": "Building a \"Knowledge Asset\" Using Neo4j Graph Data Science",
+    "duration_min": 3.0,
+    "url": "https://www.youtube.com/watch?v=1Kt9LsrBDys"
+  },
+  {
+    "id": "Fak787Cr9QE",
+    "title": "Why Arcurve Uses Neo4j Graph Data Science",
+    "duration_min": 1.0,
+    "url": "https://www.youtube.com/watch?v=Fak787Cr9QE"
+  },
+  {
+    "id": "n2Bc9MSLsUs",
+    "title": "Release Highlights: Neo4j Graph Data Science 2.3",
+    "duration_min": 25.0,
+    "url": "https://www.youtube.com/watch?v=n2Bc9MSLsUs"
+  },
+  {
+    "id": "z1DFg74z3WI",
+    "title": "Algoritmo del mese - PageRank (10 Min)",
+    "duration_min": 9.0,
+    "url": "https://www.youtube.com/watch?v=z1DFg74z3WI"
+  },
+  {
+    "id": "Eg2m0hHGu7M",
+    "title": "Ask a Data Scientist: How Does Graph Data Science Work for Unsupervised Dimensionality Reduction?",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=Eg2m0hHGu7M"
+  },
+  {
+    "id": "AYAinr0KJGw",
+    "title": "Ask a Data Scientist: What Is Graph Supervised Machine Learning?",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=AYAinr0KJGw"
+  },
+  {
+    "id": "dNiR_sBdaBM",
+    "title": "Ask a Data Scientist: Why Is Graph Data Science a Good Technique for Influence & Importing Measures?",
+    "duration_min": 0.0,
+    "url": "https://www.youtube.com/watch?v=dNiR_sBdaBM"
+  }
+]

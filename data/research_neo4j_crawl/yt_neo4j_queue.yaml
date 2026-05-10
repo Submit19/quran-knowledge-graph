@@ -1,0 +1,454 @@
+description: Neo4j YouTube channel videos queued for the loop research ticks. Each
+  tick should fetch one transcript via yt-transcript-skill and extract QKG-relevant
+  findings.
+source: https://www.youtube.com/@neo4j/videos
+fetched_at: '2026-05-10'
+top12_already_processing:
+- x9YCcVtnH1M
+- fiFERKjcAXs
+- sUysPxT9YCk
+- SYU5Bn7B98A
+- F1Ihel8Dgqs
+- SHA-b2N9Kro
+- P8MIvmCTTa4
+- qUF-MDnHgiw
+- sBf8TJgqdwY
+- sZRA4j3d0c8
+- 3wwFWG03kfk
+- ma8KXJRLhyg
+queue:
+- id: bxXb8oT5E-k
+  url: https://www.youtube.com/watch?v=bxXb8oT5E-k
+  title: 'Agentic GraphRAG: Multi-Agent Knowledge Graph'
+  duration_min: 27.0
+  score: 15
+- id: KJSHagHkX8I
+  url: https://www.youtube.com/watch?v=KJSHagHkX8I
+  title: 'Agentic GraphRAG: Multi-Agent Knowledge Graph Construction for Research
+    Teams'
+  duration_min: 28.0
+  score: 15
+- id: SJEnb5cadyo
+  url: https://www.youtube.com/watch?v=SJEnb5cadyo
+  title: 'GraphRAG for Law: Building Legal Reasoning Agents with Neo4j and LLMs'
+  duration_min: 36.0
+  score: 12
+- id: P7jboLT0w2w
+  url: https://www.youtube.com/watch?v=P7jboLT0w2w
+  title: NODES AI 2026 - Building Smarter Mobile Apps with On-device AI Agents & GraphRAG
+  duration_min: 30.0
+  score: 9
+- id: ACYShEv2aXk
+  url: https://www.youtube.com/watch?v=ACYShEv2aXk
+  title: 'NODES AI 2026 - Agentic AI with Knowledge Graphs on the JVM: A Music Graph
+    in Practice'
+  duration_min: 29.0
+  score: 9
+- id: ffE12F1mQeE
+  url: https://www.youtube.com/watch?v=ffE12F1mQeE
+  title: 'NODES AI 2026 - Adaptive GraphRAG: A Framework for Knowledge Graph Quality,
+    Consistency, Evolution'
+  duration_min: 25.0
+  score: 9
+- id: rdtP73IT6tc
+  url: https://www.youtube.com/watch?v=rdtP73IT6tc
+  title: Build Knowledge Graph Agents in Minutes with Neo4j Aura Agent
+  duration_min: 5.0
+  score: 9
+- id: gJRDUemGEho
+  url: https://www.youtube.com/watch?v=gJRDUemGEho
+  title: 'Beyond Retrieval: Adding a Reasoning Layer to RAG with Neo4j'
+  duration_min: 19.0
+  score: 9
+- id: cNSC_rCl9nU
+  url: https://www.youtube.com/watch?v=cNSC_rCl9nU
+  title: Agentic Approach to Using Neo4j Knowledge Graphs in Salesforce
+  duration_min: 12.0
+  score: 9
+- id: ZsR_BbBsA6I
+  url: https://www.youtube.com/watch?v=ZsR_BbBsA6I
+  title: 'From Unstructured to Connected: Building Knowledge Graphs for GenAI with
+    neo4j-graphrag'
+  duration_min: 28.0
+  score: 9
+- id: Ad4FQuzd3vM
+  url: https://www.youtube.com/watch?v=Ad4FQuzd3vM
+  title: Agentic AI for Enterprise Knowledge Graph Management
+  duration_min: 30.0
+  score: 9
+- id: oGQZt1zR1d4
+  url: https://www.youtube.com/watch?v=oGQZt1zR1d4
+  title: 'Making Your Knowledge Graph LLM-Ready: Quality Assessment and Design Strategies
+    for GraphRAG'
+  duration_min: 29.0
+  score: 9
+- id: LyzchJrqIJQ
+  url: https://www.youtube.com/watch?v=LyzchJrqIJQ
+  title: Revolutionizing Platform Engineering with AI Agents and GraphRAG
+  duration_min: 12.0
+  score: 9
+- id: 5PSYeDvgByk
+  url: https://www.youtube.com/watch?v=5PSYeDvgByk
+  title: 'From Sushi to Semantics: A GraphRAG-Powered Japanese Food Explorer with
+    Neo4j and MCP'
+  duration_min: 19.0
+  score: 9
+- id: 6zCoDOM9Mhw
+  url: https://www.youtube.com/watch?v=6zCoDOM9Mhw
+  title: 'GraphRAG-Powered AI Agents: Transforming Corporate Metadata into Intelligent
+    Knowledge'
+  duration_min: 15.0
+  score: 9
+- id: 4GDTdxeIlTc
+  url: https://www.youtube.com/watch?v=4GDTdxeIlTc
+  title: Enhancing Retrieval-Augmented Generation with GraphRAG Patterns in Neo4j
+  duration_min: 16.0
+  score: 9
+- id: 0LJuGTsgTgw
+  url: https://www.youtube.com/watch?v=0LJuGTsgTgw
+  title: Explore No-Code GraphRAG Agents in 10 Minutes on Your Own Data
+  duration_min: 10.0
+  score: 9
+- id: NqvTdaMWAC8
+  url: https://www.youtube.com/watch?v=NqvTdaMWAC8
+  title: 'NODES 2024 - The Missing Puzzle Piece in Agentic Financial Analysis: Self-Learning
+    Knowledge Graphs'
+  duration_min: 16.0
+  score: 9
+- id: tH2n6BweQU4
+  url: https://www.youtube.com/watch?v=tH2n6BweQU4
+  title: 'NODES 2024 - GraphRAG: Using LLMs to Build and Interrogate a Regulatory
+    Knowledge Graph'
+  duration_min: 24.0
+  score: 9
+- id: N2Ou_90UNbk
+  url: https://www.youtube.com/watch?v=N2Ou_90UNbk
+  title: 'NODES 2024 - GNN-RAG: Bridging Graph Reasoning and Language Understanding
+    for Knowledge Retrieval'
+  duration_min: 22.0
+  score: 9
+- id: qKj1XbzBlxU
+  url: https://www.youtube.com/watch?v=qKj1XbzBlxU
+  title: 'NODES AI 2026 - MemMachine: Agents That Learn, Memory That Lasts'
+  duration_min: 30.0
+  score: 6
+- id: voHdWZebH3Y
+  url: https://www.youtube.com/watch?v=voHdWZebH3Y
+  title: 'NODES AI 2026 - The Searchable Grid: Building a GraphRAG-Powered Digital
+    Twin for Real-Time Insights'
+  duration_min: 31.0
+  score: 6
+- id: ou-mPTY-jW0
+  url: https://www.youtube.com/watch?v=ou-mPTY-jW0
+  title: NODES AI 2026 - How to Build the Next Wave of Graph-Based Agentic AI
+  duration_min: 30.0
+  score: 6
+- id: gNMY4yD0jr8
+  url: https://www.youtube.com/watch?v=gNMY4yD0jr8
+  title: 'NODES AI 2026 - Temporal Substrate Architecture: Building Persistent Identity
+    for Autonomous Agents'
+  duration_min: 30.0
+  score: 6
+- id: cbihpC0_TA4
+  url: https://www.youtube.com/watch?v=cbihpC0_TA4
+  title: 'NODES AI 2026 - Agentic AI Governance: Data Foundations & Real-Time Policy
+    Enforcement'
+  duration_min: 32.0
+  score: 6
+- id: hCtoQVO71zA
+  url: https://www.youtube.com/watch?v=hCtoQVO71zA
+  title: 'NODES AI 2026 - Building a Customer-Intelligence Brain: How GraphRAG Turns
+    Data into Decisions'
+  duration_min: 31.0
+  score: 6
+- id: MPKd9t_XXOQ
+  url: https://www.youtube.com/watch?v=MPKd9t_XXOQ
+  title: 'NODES AI 2026 - Multi-Agent Shared Graph Memory: Building Collective Knowledge
+    for Agents'
+  duration_min: 20.0
+  score: 6
+- id: 3E4LisC9-GA
+  url: https://www.youtube.com/watch?v=3E4LisC9-GA
+  title: 'NODES AI 2026 - The GraphRAG System That Asks Back: Intelligent Probing
+    with Contextual Answers'
+  duration_min: 29.0
+  score: 6
+- id: 1VF2tkuXLHY
+  url: https://www.youtube.com/watch?v=1VF2tkuXLHY
+  title: NODES AI 2026 - Aura Agents in Action
+  duration_min: 30.0
+  score: 6
+- id: DwFD_ffS21E
+  url: https://www.youtube.com/watch?v=DwFD_ffS21E
+  title: NODES AI 2026 - Agent Reasoning with Graph World Models
+  duration_min: 30.0
+  score: 6
+- id: L_Cl5aKe9po
+  url: https://www.youtube.com/watch?v=L_Cl5aKe9po
+  title: Knowledge Layer for Agentic Systems
+  duration_min: 6.0
+  score: 6
+- id: GiOWEN4E7Mo
+  url: https://www.youtube.com/watch?v=GiOWEN4E7Mo
+  title: â€‹Context graphs as the control plane for the agentic enterprise, Dave Bennett,
+    Indykite
+  duration_min: 23.0
+  score: 6
+- id: d4oCFMypJy8
+  url: https://www.youtube.com/watch?v=d4oCFMypJy8
+  title: 'NEW Neo4j Aura Agent: Production Ready, Ontology-Driven AI Agents'
+  duration_min: 35.0
+  score: 6
+- id: wo5Wkvc-28o
+  url: https://www.youtube.com/watch?v=wo5Wkvc-28o
+  title: GDS Agent for Graph Algorithmic Reasoning
+  duration_min: 24.0
+  score: 6
+- id: BtcC1wAq0no
+  url: https://www.youtube.com/watch?v=BtcC1wAq0no
+  title: 'The GraphRAG System That Asks Back: Intelligent Probing with Better Contextual
+    Answers'
+  duration_min: 29.0
+  score: 6
+- id: rMXz_Upv1Dw
+  url: https://www.youtube.com/watch?v=rMXz_Upv1Dw
+  title: Building Modular AI Agents with LangGraph, MCP, and Neo4j
+  duration_min: 28.0
+  score: 6
+- id: UFRSkfT2myY
+  url: https://www.youtube.com/watch?v=UFRSkfT2myY
+  title: 'CyRAG: Retrieval Augmented Generation for Robust Cyber Defense'
+  duration_min: 26.0
+  score: 6
+- id: gaLQJO4NwyA
+  url: https://www.youtube.com/watch?v=gaLQJO4NwyA
+  title: 'GraphRag in Action: Revolutionizing Fraud Detection Techniques'
+  duration_min: 34.0
+  score: 6
+- id: wYTddJtZqX8
+  url: https://www.youtube.com/watch?v=wYTddJtZqX8
+  title: 'Turning Reviews into Real Insights: Emotion-Aware Sentiment Analysis with
+    GraphRAG and Neo4j'
+  duration_min: 12.0
+  score: 6
+- id: BeolXgPg8cQ
+  url: https://www.youtube.com/watch?v=BeolXgPg8cQ
+  title: Combine GDS and Agentic AI  for Automatic Report Generation
+  duration_min: 28.0
+  score: 6
+- id: Qg02dDbfUU4
+  url: https://www.youtube.com/watch?v=Qg02dDbfUU4
+  title: Leveraging Knowledge Graph and Imaging to Predict Geneâ€“Disease Links in
+    Cardiovascular Diseases
+  duration_min: 16.0
+  score: 6
+- id: _cXKMefdM1g
+  url: https://www.youtube.com/watch?v=_cXKMefdM1g
+  title: 'GraphRAG for Supply Chain Resilience: Building an AI Supplier Discovery
+    Engine'
+  duration_min: 15.0
+  score: 6
+- id: RQAq_TpRUqQ
+  url: https://www.youtube.com/watch?v=RQAq_TpRUqQ
+  title: 'All Aboard: Reasoning with LLMs and Neo4j via MCP'
+  duration_min: 15.0
+  score: 6
+- id: sraDfsUMOo0
+  url: https://www.youtube.com/watch?v=sraDfsUMOo0
+  title: Adaptive Knowledge Graphs for Dynamic RAG Systems
+  duration_min: 27.0
+  score: 6
+- id: hQiT-5LDPPs
+  url: https://www.youtube.com/watch?v=hQiT-5LDPPs
+  title: 'Beyond RAG: Building the AI Corporate Brain with Knowledge Graphs and Virtue
+    Ethics'
+  duration_min: 19.0
+  score: 6
+- id: NX0Du5CIN9s
+  url: https://www.youtube.com/watch?v=NX0Du5CIN9s
+  title: RAG and Voice Agent Applications
+  duration_min: 15.0
+  score: 6
+- id: UKYEv6mPyoQ
+  url: https://www.youtube.com/watch?v=UKYEv6mPyoQ
+  title: Leveraging Knowledge Graphs and LLMs to Document Large Scale Codebases
+  duration_min: 15.0
+  score: 6
+- id: t0pUz2ZBsSE
+  url: https://www.youtube.com/watch?v=t0pUz2ZBsSE
+  title: Multiple Knowledge Graphs for Sophisticated RAG
+  duration_min: 14.0
+  score: 6
+- id: 6ifh4CRkPq8
+  url: https://www.youtube.com/watch?v=6ifh4CRkPq8
+  title: Syntes AI Digital Twin Agentic Platform with Graph Data Model
+  duration_min: 15.0
+  score: 6
+- id: edgEH0RQ3ME
+  url: https://www.youtube.com/watch?v=edgEH0RQ3ME
+  title: Why Neo4j and GraphRAG for GenAI
+  duration_min: 1.0
+  score: 6
+- id: PIaMaD9M4Zw
+  url: https://www.youtube.com/watch?v=PIaMaD9M4Zw
+  title: NODES 2024 - Revolutionizing RAG for Financial Data With Knowledge Graphs
+  duration_min: 21.0
+  score: 6
+- id: Jik4adnNkc4
+  url: https://www.youtube.com/watch?v=Jik4adnNkc4
+  title: 'NODES 2024 - Ontology-Backed GraphRAG: Injecting Biomedical Logic in LLMs
+    for Drug Discovery'
+  duration_min: 13.0
+  score: 6
+- id: 2coMJVQZwZs
+  url: https://www.youtube.com/watch?v=2coMJVQZwZs
+  title: 'NODES 2024 - Harness Graph Power With Agentic AI: An Insights Discovery
+    Use Case'
+  duration_min: 8.0
+  score: 6
+- id: ddElS0G8vg0
+  url: https://www.youtube.com/watch?v=ddElS0G8vg0
+  title: NODES 2024 - GraphRAG for Increased Trust and Confidence in GenAI for Manufacturing
+    Processes
+  duration_min: 23.0
+  score: 6
+- id: ER1dNDcJiXg
+  url: https://www.youtube.com/watch?v=ER1dNDcJiXg
+  title: 'NODES 2024 - From Image to Graph: Leveraging Tesseract OCR Engine for Document
+    Chunking and GraphRAG'
+  duration_min: 14.0
+  score: 6
+- id: wGAtkfGLiLY
+  url: https://www.youtube.com/watch?v=wGAtkfGLiLY
+  title: 'NODES 2024 - From Ancient Epic to Modern Marvel: Demystifying the Mahabharata
+    Chatbot with GraphRAG'
+  duration_min: 17.0
+  score: 6
+- id: jDxUcHR9zR0
+  url: https://www.youtube.com/watch?v=jDxUcHR9zR0
+  title: NODES 2024 - Multi-Agent Query Generation w/ LLMs on Complex Knowledge Graphs
+  duration_min: 31.0
+  score: 6
+- id: bE-C037Pn60
+  url: https://www.youtube.com/watch?v=bE-C037Pn60
+  title: NODES 2024 - Enhancing Job Matching With Knowledge Graphs and RAG
+  duration_min: 24.0
+  score: 6
+- id: KfN4edE1YTM
+  url: https://www.youtube.com/watch?v=KfN4edE1YTM
+  title: NODES 2024 - Enhancing Chat-Based Customer Recommendations With GraphRAG
+    and Hybrid Search
+  duration_min: 17.0
+  score: 6
+- id: zCxry5ptn44
+  url: https://www.youtube.com/watch?v=zCxry5ptn44
+  title: 'NODES 2024 - Empowering Lifelong Learning: Transforming Data into Insights
+    With GraphRAG'
+  duration_min: 24.0
+  score: 6
+- id: R8U-j3b3dD4
+  url: https://www.youtube.com/watch?v=R8U-j3b3dD4
+  title: NODES 2024 - Composable RAG Pipelines With OPEA Highlighting GraphRAG
+  duration_min: 24.0
+  score: 6
+- id: 3EGtSqY9t0E
+  url: https://www.youtube.com/watch?v=3EGtSqY9t0E
+  title: Le Manifeste GraphRAG (10 Min)
+  duration_min: 16.0
+  score: 6
+- id: IpZHRTujWvc
+  url: https://www.youtube.com/watch?v=IpZHRTujWvc
+  title: Pragmatic Knowledge Graphs with Ashleigh Faith
+  duration_min: 52.0
+  score: 6
+- id: ftlZ0oeXYRE
+  url: https://www.youtube.com/watch?v=ftlZ0oeXYRE
+  title: 'RAG with a Neo4j Knowledge Graph: How it Works and How to Set It Up'
+  duration_min: 15.0
+  score: 6
+- id: tnuDYP_olTY
+  url: https://www.youtube.com/watch?v=tnuDYP_olTY
+  title: 'NODES AI 2026 - From AI Workflows to Graph-Native Reasoning: A Dify Plugin
+    for Querying Neo4j'
+  duration_min: 30.0
+  score: 3
+- id: tP-mYMYQUzA
+  url: https://www.youtube.com/watch?v=tP-mYMYQUzA
+  title: NODES AI 2026 - Complex Querying of Cyber Knowledge Graph for Robust Cyber
+    Defense
+  duration_min: 34.0
+  score: 3
+- id: ZEsYWBDSjF0
+  url: https://www.youtube.com/watch?v=ZEsYWBDSjF0
+  title: 'NODES AI 2026 - Fusing NLP and Graph: Building a Conversational Agent for
+    Enriched Financial Data'
+  duration_min: 29.0
+  score: 3
+- id: MWwSHh453cA
+  url: https://www.youtube.com/watch?v=MWwSHh453cA
+  title: 'NODES AI 2026 - Infinigraph: Vector Data at Scale'
+  duration_min: 23.0
+  score: 3
+- id: 4P2xXR-coVE
+  url: https://www.youtube.com/watch?v=4P2xXR-coVE
+  title: 'NODES AI 2026 - Building Secure Services with AI Agents: Patterns From Real-World
+    Engineering'
+  duration_min: 21.0
+  score: 3
+- id: 04rgeqrIJxM
+  url: https://www.youtube.com/watch?v=04rgeqrIJxM
+  title: NODES AI 2026 - Build Intelligent AI Agents With Context Engineering
+  duration_min: 30.0
+  score: 3
+- id: VPj7u2Uk7yc
+  url: https://www.youtube.com/watch?v=VPj7u2Uk7yc
+  title: How Knowledge Graphs Help You Build a More Resilient Supply Chain
+  duration_min: 1.0
+  score: 3
+- id: qMV64p-4Deo
+  url: https://www.youtube.com/watch?v=qMV64p-4Deo
+  title: Building Context Graphs for AI Agents, Will Lyon, Neo4j
+  duration_min: 20.0
+  score: 3
+- id: _xX01obwgmI
+  url: https://www.youtube.com/watch?v=_xX01obwgmI
+  title: 'â€‹Automatic Ontologies: Build the Context Graph for Trustworthy AI Agents,
+    Yann Bilien, Rippletide'
+  duration_min: 15.0
+  score: 3
+- id: TKxeGmk9398
+  url: https://www.youtube.com/watch?v=TKxeGmk9398
+  title: Build Real-Time Customer 360 Applications with Neo4j Knowledge Graphs
+  duration_min: 1.0
+  score: 3
+- id: MGiMZVgP09o
+  url: https://www.youtube.com/watch?v=MGiMZVgP09o
+  title: AI Memory and Founders Night Berlin
+  duration_min: 1.0
+  score: 3
+- id: sxr8Hmh26QM
+  url: https://www.youtube.com/watch?v=sxr8Hmh26QM
+  title: AI Show & Tell Berlin 2025 â€“ AI Agents, Startups & Developers
+  duration_min: 1.0
+  score: 3
+- id: o9-xTc_uHQ0
+  url: https://www.youtube.com/watch?v=o9-xTc_uHQ0
+  title: 'Beyond Vibe Coding: AI Agents for Technical Debt Detection with Neo4j'
+  duration_min: 27.0
+  score: 3
+- id: fS4YrXYF4-w
+  url: https://www.youtube.com/watch?v=fS4YrXYF4-w
+  title: 'Integrating Neo4j with Google Gemini: Architectural Patterns for AI Agents'
+  duration_min: 31.0
+  score: 3
+- id: ChNgj71MQEA
+  url: https://www.youtube.com/watch?v=ChNgj71MQEA
+  title: Multiagent GenAI-Powered Oncology Research with GraphMedAI and Neo4j
+  duration_min: 15.0
+  score: 3
+- id: T_Jguu_T0e4
+  url: https://www.youtube.com/watch?v=T_Jguu_T0e4
+  title: Crafting a Neo4j Knowledge Graph Semantic Reasoner for LPG-Based Ontologies
+    with Python and CDC
+  duration_min: 30.0
+  score: 3

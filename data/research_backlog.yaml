@@ -384,3 +384,20 @@ topics:
     question: Mixture-of-Agents (Wang/Together AI 2024) layered architecture — each agent layer takes prior agents' outputs as input. For high-stakes QKG queries (low first-pass recall, e.g. abstract-concept questions), route through 2-3 parallel agents and synthesize. Expensive but high-quality. Is the cost-quality trade worth it for the bottom decile of our eval?
     deliverable: Cost analysis + small experiment on 5 weakest eval questions.
     tags: [agentic, architecture, cost]
+
+  # ── Coordinator: Neo4j YouTube channel deep crawl 2026-05-10 ──────────────
+  # Each research tick that picks this topic should: pop the next entry from
+  # data/research_neo4j_crawl/yt_neo4j_queue.yaml, fetch its transcript via
+  # yt-transcript-skill, extract QKG-relevant findings, append to
+  # data/research_neo4j_crawl/yt_findings.md, and update the queue file.
+  # When the queue is empty, mark this topic status: done.
+  - id: neo4j_yt_channel_iterator
+    priority: 70
+    status: open
+    question: Iterate through data/research_neo4j_crawl/yt_neo4j_queue.yaml (80 NODES + GraphRAG videos). For each tick, pop the next video, fetch the transcript via the yt-transcript-skill, extract QKG-relevant findings (architecture patterns, GraphRAG techniques, agent memory ideas, MCP designs, retrieval benchmarks). Append findings to data/research_neo4j_crawl/yt_findings.md keyed by video ID. If a finding is actionable, propose a from_neo4j_yt_<short> task in ralph_backlog.yaml.
+    deliverable: yt_findings.md grows by one section per tick; queue.yaml shrinks; new ralph tasks proposed when actionable. Topic stays status open until queue is empty.
+    tags: [neo4j-yt, iterator, recurring]
+    iterator_state:
+      queue_file: data/research_neo4j_crawl/yt_neo4j_queue.yaml
+      findings_file: data/research_neo4j_crawl/yt_findings.md
+      pop_one_per_tick: true
