@@ -18,10 +18,12 @@ topics:
   # ── Retrieval & embeddings ────────────────────────────────────────────
   - id: bge_m3_dense_vs_colbert
     priority: 80
-    status: open
+    status: done
     question: BGE-M3 supports dense, sparse, and ColBERT (multi-vector) retrieval. Has anyone benchmarked its colbert mode on Quranic / classical-Arabic corpora? Is the latency worth it over our current dense-only setup?
     deliverable: Pros/cons summary + recommendation (skip / try / try with caveats), 5-paper bibliography, sample code if applicable.
     tags: [retrieval, embeddings]
+    decision: SKIP — see data/research_bge_m3_dense_vs_colbert.md. Only +1.2 nDCG@10 lift expected; cross-encoder rerank already provides late-interaction-like quality. Domain adaptation (fine-tune dense) is the higher-leverage move.
+    promoted_task: from_research_finetune_bge_m3_qrcd
 
   - id: arabic_dense_retrievers_2025
     priority: 78

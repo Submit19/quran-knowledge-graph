@@ -668,3 +668,14 @@ tasks:
       acceptance:
         - file_exists: data/ralph_agent_from_neo4j_crawl_pagination_cursors.md
         - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_pagination_cursors.md, value: 600 }
+
+  # ── [from-research] Promoted from research tick 2026-05-10 ────────────────
+  - id: from_research_finetune_bge_m3_qrcd
+    type: agent_creative
+    priority: 78
+    description: "[from-research][answer-quality][opus] Fine-tune BGE-M3 dense on QRCD passage-question pairs (and optionally Tafsir Q&A). Target: lift QRCD MAP@10 from 0.139 toward the 0.36 literature ceiling (AraBERT fine-tuned). Use FlagEmbedding's training pipeline; produce a domain-adapted checkpoint, eval against the held-out QRCD test split, decide whether to swap our current bge-m3 baseline. Source: data/research_bge_m3_dense_vs_colbert.md."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_research_finetune_bge_m3_qrcd.md
+        - file_min_bytes: { path: data/ralph_agent_from_research_finetune_bge_m3_qrcd.md, value: 800 }
