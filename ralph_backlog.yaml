@@ -857,3 +857,25 @@ tasks:
       acceptance:
         - file_exists: data/ralph_agent_from_research_finetune_bge_m3_qrcd.md
         - file_min_bytes: { path: data/ralph_agent_from_research_finetune_bge_m3_qrcd.md, min: 800 }
+
+  # ── [from-blog] Approved from proposed_tasks.yaml 2026-05-11 ────────────────
+  - id: from_blog_extend_reasoning_memory_confidence
+    type: agent_creative
+    priority: 62
+    description: "[from-research] Extend reasoning_memory.py to store `thought` and `confidence` properties on TraceStep/ToolCall nodes, aligned with Neo4j Context Graph decision-trace pattern. Makes reasoning traces auditable and replayable."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_blog_extend_reasoning_memory_confidence.md
+        - file_min_bytes: { path: data/ralph_agent_from_blog_extend_reasoning_memory_confidence.md, min: 600 }
+
+  - id: from_blog_stateful_ai_memory_path_convention
+    type: cleanup
+    priority: 58
+    description: "[from-research] Add structured `memory_path` property (e.g. sessions/<id>/traces/<ts>) to ReasoningTrace nodes in reasoning_memory.py. Enables session-scoped retrieval and future MCP memory-tool exposure."
+    blockers: []
+    spec:
+      commits_code: true
+      acceptance:
+        - file_exists: data/ralph_agent_from_blog_stateful_ai_memory_path_convention.md
+        - file_min_bytes: { path: data/ralph_agent_from_blog_stateful_ai_memory_path_convention.md, min: 500 }
