@@ -11,7 +11,18 @@ version: 1
 fetched_at: 2026-05-10
 description: Multi-source Neo4j research queue feeding QKG's research loop.
 
-# ── Source 1: Neo4j YouTube channel (highest priority) ───────────────────
+# ── Source 0: Priority retries (rate-limited or failed earlier) ──────────
+yt_priority:
+  description: YouTube videos to retry (rate-limited or queued ad-hoc by user)
+  handler: yt-transcript-skill
+  source_priority: 95
+  findings_file: data/research_neo4j_crawl/yt_priority_findings.md
+  queue:
+    - url: https://www.youtube.com/watch?v=kQu5pWKS8GA
+      title: "The 7 Levels of Claude Code & RAG (Chase AI, 46min)"
+      relevance: HIGH — covers Claude Code memory tiers + agentic graph RAG progression. User specifically requested. Hit YT 429 rate limit during initial fetch; retry on next loop tick.
+
+# ── Source 1: Neo4j YouTube channel (high priority) ──────────────────────
 # Already populated separately at yt_neo4j_queue.yaml — 80 videos pre-ranked.
 # This entry just points to it.
 yt_neo4j:
