@@ -340,3 +340,47 @@ topics:
     question: Does installing neo4j-contrib/neo4j-skills via npx skills add ... overlap or conflict with our existing claude-api skill? 30-min spike.
     deliverable: Install test + skill activation matrix.
     tags: [tooling, skills]
+
+  # ── Threads from sibling AI knowledge graph extract 2026-05-10 ────────────
+  # ── Source: data/research_neo4j_crawl/04_ai_graph_extract.md ──────────────
+  - id: agent_memory_benchmarks_for_qkg
+    priority: 75
+    status: open
+    question: How does our reasoning_memory.py compare to mem0 (52K stars, 49% LongMemEval), Zep/Graphiti (63.8% LongMemEval, temporal KG), and MemPalace (96.6% LongMemEval, MIT, Apr 2026)? Run a LongMemEval-equivalent on QKG's 2,662 traces and benchmark each system on the same data.
+    deliverable: Benchmark report + recommendation (keep ours / adopt one / hybrid).
+    tags: [agent-memory, eval]
+
+  - id: hub_and_spoke_topology_for_qkg
+    priority: 68
+    status: open
+    question: Hub-and-spoke multi-agent topology (Layer 4 of AI graph) reports 40-60% cost reduction in production by routing tool work through cheaper worker models (e.g. Haiku) and reserving Opus for synthesis. Could we route etymology/search_keyword/get_verse to Haiku and only escalate to Opus for the final synthesis step? Estimate cost + quality trade-off.
+    deliverable: Cost model + small POC + go/no-go.
+    tags: [agentic, cost, architecture]
+
+  - id: langfuse_vs_reasoning_memory
+    priority: 60
+    status: open
+    question: Langfuse (free 50K units, $29/mo Core, MIT self-host, ClickHouse-acquired Jan 2026) is OpenTelemetry-based agentic observability. Our reasoning_memory.py does ~30% of what Langfuse does. Should we replace, complement, or stay independent? Specifically benchmark instrumentation overhead and feature delta.
+    deliverable: Decision doc + integration sketch if "complement" wins.
+    tags: [observability, agent-memory]
+
+  - id: agent_as_a_judge_for_qkg_eval
+    priority: 65
+    status: open
+    question: Agent-as-a-Judge (Arxiv 2410.10934, 2024) uses a full agent (not a single LLM call) to evaluate another agent's work — evaluates the entire action chain. Implement a small Agent-as-a-Judge harness for our 13-question eval that scores tool sequence quality, not just citation count.
+    deliverable: Working harness + delta vs current eval.
+    tags: [eval, agentic]
+
+  - id: mcp_apps_for_qkg_3d_graph
+    priority: 55
+    status: open
+    question: MCP Apps (Jan 2026) let tools return rich HTML interfaces in sandboxed iframes within the chat. Could our 3D verse graph + bilingual tooltips be served as MCP Apps from a QKG MCP server, usable from Claude Desktop / Cursor (not just our app_free.py web UI)?
+    deliverable: Feasibility doc + UI mock.
+    tags: [mcp, frontend, ux]
+
+  - id: moa_for_high_stakes_queries
+    priority: 50
+    status: open
+    question: Mixture-of-Agents (Wang/Together AI 2024) layered architecture — each agent layer takes prior agents' outputs as input. For high-stakes QKG queries (low first-pass recall, e.g. abstract-concept questions), route through 2-3 parallel agents and synthesize. Expensive but high-quality. Is the cost-quality trade worth it for the bottom decile of our eval?
+    deliverable: Cost analysis + small experiment on 5 weakest eval questions.
+    tags: [agentic, architecture, cost]

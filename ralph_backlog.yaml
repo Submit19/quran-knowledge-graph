@@ -669,6 +669,58 @@ tasks:
         - file_exists: data/ralph_agent_from_neo4j_crawl_pagination_cursors.md
         - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_pagination_cursors.md, value: 600 }
 
+  # ── [from-ai-graph] Promoted from sibling AI knowledge graph extract ──────
+  # ── Source: data/research_neo4j_crawl/04_ai_graph_extract.md ──────────────
+  - id: from_ai_graph_zeroentropy_cohere_reranker_ab
+    type: cypher_analysis
+    priority: 84
+    description: "[from-ai-graph][answer-quality] A/B our current BAAI/bge-reranker-v2-m3 against ZeroEntropy zerank-2 (#1 on reranker leaderboard, ELO 1680+) and Cohere Rerank 4 Pro (ELO 1627, RAGAS 1.0 relevance). Both are API-only. Run on the eval_v1 13-question set + the 50-question QRCD subset. Primary metric: citation density + MAP@10. Latency cost should be acceptable since rerank is post-retrieval."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab.md
+        - file_min_bytes: { path: data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab.md, value: 500 }
+
+  - id: from_ai_graph_rag_triad_eval_metrics
+    type: agent_creative
+    priority: 80
+    description: "[from-ai-graph][answer-quality] Add RAG Triad metrics to evaluate.py: Context Relevance (is retrieved context relevant?), Groundedness (is answer supported by context?), Answer Relevance (does answer address the question?). Use Sonnet/Opus as LLM judge. Calibrate against 30 hand-labeled samples; target >=80% agreement with human labels. Each metric isolates a different failure mode our current 13-question eval doesn't cleanly separate."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_ai_graph_rag_triad_eval_metrics.md
+        - file_min_bytes: { path: data/ralph_agent_from_ai_graph_rag_triad_eval_metrics.md, value: 700 }
+
+  - id: from_ai_graph_reflexion_pattern
+    type: agent_creative
+    priority: 76
+    description: "[from-ai-graph][answer-quality][opus] Implement the Reflexion pattern (Shinn 2023) in chat.py: at end of each agent turn, generate a one-sentence 'what would I do differently if I had to answer this again?' memo and store it. On next similar query (via tool_recall_similar_query), inject the most relevant prior memos as planner context. Hypothesis: lifts the weak-question cluster (meditation/reverence/Surah 55, currently 13-27 cites) by avoiding repeated bad tool sequences."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_ai_graph_reflexion_pattern.md
+        - file_min_bytes: { path: data/ralph_agent_from_ai_graph_reflexion_pattern.md, value: 800 }
+
+  - id: from_ai_graph_lightrag_neo4j_spike
+    type: cypher_analysis
+    priority: 72
+    description: "[from-ai-graph] LightRAG (28K stars, EMNLP 2025) does dual-level retrieval (low-level entity + high-level concept) AND has a Neo4j storage backend. Compare against our concept_search + semantic_search architecture. Spike: clone LightRAG, configure with Neo4j backend pointing to our quran DB, run on the 50-question QRCD subset, compare MAP@10 vs current. If LightRAG is 10%+ better, propose larger migration task."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_analysis_from_ai_graph_lightrag_neo4j_spike.md
+        - file_min_bytes: { path: data/ralph_analysis_from_ai_graph_lightrag_neo4j_spike.md, value: 600 }
+
+  - id: from_ai_graph_tool_error_audit
+    type: cleanup
+    priority: 60
+    description: "[from-ai-graph] Audit all 21 tools in chat.py for the 'tool failures ignored' production gotcha. Each tool should return structured errors {error: ..., reason: ...} on failure rather than {} or null. The agent loop currently can't distinguish 'no results' from 'tool crashed' which causes silent retry loops. Reference: Layer 4 Production Gotchas table in data/research_neo4j_crawl/04_ai_graph_extract.md."
+    blockers: []
+    spec:
+      commits_code: true
+      acceptance:
+        - python: "True"
+
   # ── [from-research] Promoted from research tick 2026-05-10 ────────────────
   - id: from_research_finetune_bge_m3_qrcd
     type: agent_creative
