@@ -53,6 +53,20 @@ and the most recent note in `QKG Obsidian/sessions/`.
 ### Tip for next session
 **Read `STATE_SNAPSHOT.md` and the top entry in `QKG Obsidian/sessions/` first.** The cron is running; if you don't, you may duplicate work the loop has already done. Use `git log --since="1 week ago" --oneline` for quick context.
 
+### Hand-off addendum (end of 2026-05-10 session — user going to bed)
+
+- **Cron `6bdfbad0`** (replaces `d21fe275`) running every hour at :07 with the **review-governance flow**:
+  - Researcher writes proposed tasks to `data/proposed_tasks.yaml` (NOT directly to `ralph_backlog.yaml`)
+  - Every IMPL tick begins with a quick proposal review: APPROVE / REJECT / DEFER
+  - Every 12th tick is a MAINTENANCE pass (dedupe, retire obsolete, re-rank, run proposal review)
+- **Router_agent shipped** (`from_neo4j_yt_router_agent`, p85, manual Opus tick) — biggest answer-quality bet on the table. Not yet eval-verified; recommend re-running `eval_v1.py` when next at the keyboard.
+- **20 typo bug fix** (`value:` → `min:` in file_min_bytes specs) shipped same commit (`9accc3b`).
+- **Obsidian plugins confirmed installed:** Dataview, Templater, Excalidraw. MOC.md Dataview queries will render.
+
+**If the cron stalls overnight:** the cron is session-only — when this Claude Code session closes, it dies. Recover with: open a new Claude Code session at the repo root, type `/loop 1h <orchestrator brief>` (the brief lives in this commit's cron history; recoverable via this SESSION_LOG entry + `CLAUDE_INDEX.md`).
+
+**Tomorrow's first action:** open `STATE_SNAPSHOT.md`. Read overnight tick rows. If 5+ ticks landed cleanly the new governance flow is working; if proposed_tasks.yaml has accepted entries, those will already be in ralph_backlog.
+
 ---
 
 <!-- Older session entries below this line -->

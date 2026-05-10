@@ -1,0 +1,39 @@
+# Pending task proposals — researcher writes here, orchestrator reviews.
+#
+# Researcher (research-tick subagent) appends new proposals to `pending` when
+# a research finding is actionable. These tasks DO NOT go straight into
+# ralph_backlog.yaml — they wait here for orchestrator review.
+#
+# Orchestrator (IMPL-tick subagent) reviews this file at the START of each
+# IMPL tick before picking task work. For each pending entry:
+#   - APPROVE  → move to ralph_backlog.yaml `tasks:` list, remove from here.
+#   - REJECT   → move to `rejected:` block here with a one-line reason.
+#   - DEFER    → leave in pending; bump `seen_count` so we know how many
+#                review cycles it survived.
+#
+# Every 6th IMPL tick (i.e. roughly every 12h at hourly cadence) the
+# orchestrator does a fuller maintenance pass: dedupes overlapping tasks
+# in ralph_backlog.yaml, retires obsoleted ones (with rationale), rebalances
+# priorities based on what's been done.
+#
+# Schema:
+#   pending:
+#     - proposed_at: <ISO timestamp>
+#       proposed_by: <research_topic_id or research tick reference>
+#       seen_count: 0
+#       task:
+#         id: from_research_<short>
+#         type: cleanup | agent_creative | cypher_analysis
+#         priority: 40-70   (gets re-ranked by orchestrator)
+#         description: "[from-research] ..."
+#         spec: { ... }
+#
+#   rejected:
+#     - rejected_at: <ISO timestamp>
+#       reason: <one line>
+#       task_id: <id>
+#       proposed_by: <source>
+
+version: 1
+pending: []
+rejected: []
