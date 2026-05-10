@@ -35,32 +35,7 @@
 #       proposed_by: <source>
 
 version: 1
-pending:
-  - proposed_at: "2026-05-11T01:00:00+00:00"
-    proposed_by: "research:blog_neo4j:connected-context-and-persistent-memory-neo4j-providers-for-the-microsoft-agent-framework"
-    seen_count: 0
-    task:
-      id: from_blog_same_as_dedup_concepts
-      type: cypher_analysis
-      priority: 62
-      description: "[from-research] Add SAME_AS deduplication relationships to Concept and ArabicRoot nodes using embedding similarity + fuzzy string matching. Migration script: for each Concept/ArabicRoot pair within cosine distance < 0.12, merge with SAME_AS edge if fuzzy score >= 0.85. Audit how many transliteration variants (al-Rahman/ar-Rahman, Yusuf/Joseph etc.) exist, write findings to data/ralph_analysis_same_as_dedup_audit.md."
-      spec:
-        acceptance:
-          - file_exists: data/ralph_analysis_same_as_dedup_audit.md
-          - file_min_bytes: {path: data/ralph_analysis_same_as_dedup_audit.md, min: 400}
-
-  - proposed_at: "2026-05-11T01:00:00+00:00"
-    proposed_by: "research:blog_neo4j:connected-context-and-persistent-memory-neo4j-providers-for-the-microsoft-agent-framework"
-    seen_count: 0
-    task:
-      id: from_blog_reasoning_memory_session_layer
-      type: agent_creative
-      priority: 55
-      description: "[from-research] Extend reasoning_memory.py to add a session message layer: (:UserSession)-[:HAS_QUERY]->(:Query)-[:NEXT_QUERY]->(:Query) with embedding on each Query node (reuse BGE-M3). Add before/after hooks that (a) inject top-3 semantically similar past queries as system context, (b) persist new Query node asynchronously post-response. Deliverable: design doc + diff sketch in data/ralph_agent_reasoning_memory_session_layer.md."
-      spec:
-        acceptance:
-          - file_exists: data/ralph_agent_reasoning_memory_session_layer.md
-          - file_min_bytes: {path: data/ralph_agent_reasoning_memory_session_layer.md, min: 600}
+pending: []
 
 rejected:
   - rejected_at: "2026-05-11T00:00:00+00:00"

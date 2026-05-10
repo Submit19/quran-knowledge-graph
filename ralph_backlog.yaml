@@ -881,3 +881,24 @@ tasks:
       acceptance:
         - file_exists: data/ralph_agent_from_blog_stateful_ai_memory_path_convention.md
         - file_min_bytes: { path: data/ralph_agent_from_blog_stateful_ai_memory_path_convention.md, min: 500 }
+
+  # ── [from-blog] Approved from proposed_tasks.yaml 2026-05-11 (tick 32) ──────
+  - id: from_blog_same_as_dedup_concepts
+    type: cypher_analysis
+    priority: 62
+    description: "[from-research] Add SAME_AS deduplication relationships to Concept and ArabicRoot nodes using embedding similarity + fuzzy string matching. Audit transliteration variants (al-Rahman/ar-Rahman, Yusuf/Joseph etc.), write findings to data/ralph_analysis_same_as_dedup_audit.md."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_analysis_same_as_dedup_audit.md
+        - file_min_bytes: { path: data/ralph_analysis_same_as_dedup_audit.md, min: 400 }
+
+  - id: from_blog_reasoning_memory_session_layer
+    type: agent_creative
+    priority: 55
+    description: "[from-research] Extend reasoning_memory.py to add a session message layer: (:UserSession)-[:HAS_QUERY]->(:Query)-[:NEXT_QUERY]->(:Query) with BGE-M3 embedding on Query. Hooks inject top-3 similar past queries as system context and persist new Query node async. Deliverable: design doc + diff sketch."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_reasoning_memory_session_layer.md
+        - file_min_bytes: { path: data/ralph_agent_reasoning_memory_session_layer.md, min: 600 }
