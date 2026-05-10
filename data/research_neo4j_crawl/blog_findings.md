@@ -64,3 +64,30 @@ Full walkthrough of a two-database architecture where one Neo4j instance holds d
 ### Proposed Tasks
 - Add structured path convention (`session/<id>.md`-style) to ReasoningTrace nodes in reasoning_memory.py — low effort, high discoverability payoff.
 - Spike: expose QKG reasoning_memory as MCP server tools (read/search backlinks at minimum) for agent introspection.
+
+---
+
+## https://neo4j.com/blog/developer/introducing-neo4j-agent-skills/
+**Fetched:** 2026-05-11
+**Title:** Introducing Neo4j Agent Skills
+
+### TL;DR
+Neo4j Labs released a community-driven skill framework: structured folders with a lightweight `SKILL.md` at the root (always loaded) plus deeper reference files that load on demand. Designed so AI agents (Claude Code, Cursor, etc.) get current Cypher patterns and API knowledge without model retraining. Uses progressive disclosure to encode opinionated guidance without burning context.
+
+### Key Takeaways
+
+1. **Progressive Disclosure is the Core Pattern** — a short always-loaded descriptor references deeper spec files conditionally. This is precisely what `CLAUDE_INDEX.md` already does for QKG. The Neo4j team validates our CLAUDE_INDEX → deep-file architecture is correct. The existing `from_ralph_yt_01_tokenize_claudemd` task (p82) aligns directly: convert CLAUDE.md into a SKILL.md-style lean index + reference files.
+
+2. **Skill folder organization by concern** — categories: Cypher, drivers, data import, AI/search, frameworks. QKG could mirror: `skills/core-graph-queries.md`, `skills/vector-retrieval.md`, `skills/arabic-morphology.md`. Useful when context windows expand or we add more agents with specialized roles.
+
+3. **Language Currency Problem** — models fail with recent API syntax because they can't know what they don't know. For QKG: our Cypher 25 `SEARCH` syntax migration task (`docs_neo4j_deep` queue item) is partly motivated by this — agents generating Cypher could use stale syntax. Keep `skills/cypher-patterns.md` with live examples.
+
+4. **Infrastructure-agnostic CLI install** (`npx skills add ...`) — not relevant to our hand-rolled stack, but the idea of importable skills as project artifacts (checked into git, CI-testable) is worth adopting for the QKG loop's context files.
+
+5. **No direct code changes needed** — this is a packaging/documentation pattern, not a library to adopt. Value is conceptual validation + the tokenize_claudemd task rationale.
+
+### Verdict
+**Conceptually actionable, low code cost.** Primarily validates the existing `from_ralph_yt_01_tokenize_claudemd` task (tokenize/slim CLAUDE.md into lean index + per-topic skill files). No new engineering needed. Proposed task: bump priority of `from_ralph_yt_01_tokenize_claudemd` and expand its spec to include `skills/` sub-files.
+
+### Proposed Tasks
+- Bump priority of `from_ralph_yt_01_tokenize_claudemd` (currently p82) — Neo4j's own approach validates this architecture.

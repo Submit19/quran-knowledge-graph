@@ -80,4 +80,27 @@ pending:
           - file_exists: data/ralph_agent_from_blog_stateful_ai_memory_path_convention.md
           - file_min_bytes: {path: data/ralph_agent_from_blog_stateful_ai_memory_path_convention.md, min: 500}
 
+  - proposed_at: "2026-05-11T01:00:00+00:00"
+    proposed_by: "research:blog_neo4j:introducing-neo4j-agent-skills"
+    seen_count: 0
+    task:
+      id: from_blog_agent_skills_bump_tokenize_claudemd
+      type: cleanup
+      priority: 68
+      description: "[from-research] Bump priority of from_ralph_yt_01_tokenize_claudemd to p88 and expand its spec to produce skills/ sub-files per concern (cypher-patterns, vector-retrieval, arabic-morphology). Neo4j's own skill framework validates the progressive-disclosure architecture we're already doing with CLAUDE_INDEX.md."
+      spec:
+        details: |
+          Neo4j Agent Skills blog post confirms our CLAUDE_INDEX.md -> deep-file
+          approach is correct. The tokenize_claudemd task (p82) should:
+            1. Slim CLAUDE.md into a ~60-line CLAUDE_INDEX.md (already partially done)
+            2. Create skills/ folder with per-topic files:
+               skills/cypher-patterns.md  — live Cypher examples (Cypher 25 SEARCH syntax)
+               skills/vector-retrieval.md — BGE-M3 index names, query patterns
+               skills/arabic-morphology.md — ArabicRoot, Lemma, MorphPattern patterns
+            3. CLAUDE_INDEX.md references skills/ files; loop agents load only what they need
+          This is a re-spec + priority bump of an existing task, not new engineering.
+        acceptance:
+          - file_exists: data/ralph_agent_from_blog_agent_skills_bump_tokenize_claudemd.md
+          - file_min_bytes: {path: data/ralph_agent_from_blog_agent_skills_bump_tokenize_claudemd.md, min: 200}
+
 rejected: []
