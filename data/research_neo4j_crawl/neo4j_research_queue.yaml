@@ -44,9 +44,7 @@ blog_neo4j:
   queue:
     # Highest priority — direct hits on our agentic stack
     # [FETCHED 2026-05-11] context-engineering-tools — findings in blog_findings.md
-    - url: https://neo4j.com/blog/agentic-ai/agent-tools/
-      title: Agent tools — what they are, how AI agents use them
-      relevance: HIGH — tool design principles
+    # [FETCHED 2026-05-11] agent-tools — findings in blog_findings.md
     - url: https://neo4j.com/blog/agentic-ai/agentic-architecture/
       title: What Is Agentic AI Architecture? Common Patterns
       relevance: HIGH — architecture patterns

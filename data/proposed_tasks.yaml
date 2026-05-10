@@ -35,7 +35,19 @@
 #       proposed_by: <source>
 
 version: 1
-pending: []
+pending:
+  - proposed_at: "2026-05-11T00:00:00+00:00"
+    proposed_by: "research:blog_neo4j:agent-tools"
+    seen_count: 0
+    task:
+      id: from_blog_tool_input_validation
+      type: cleanup
+      priority: 45
+      description: "[from-research] Add input validation to chat.py tool schemas: enforce Surah number in [1–114], ayah range checks, and language code allowlists. Return structured {error, reason} on invalid args (pre-execution guard). Synergistic with from_ai_graph_tool_error_audit (p55) which covers post-execution errors. Reference: Neo4j blog/agentic-ai/agent-tools — 'Loose schemas are a common cause of hallucinated or malformed inputs.'"
+      spec:
+        acceptance:
+          - file_exists: data/ralph_analysis_from_blog_tool_input_validation.md
+          - file_min_bytes: {path: data/ralph_analysis_from_blog_tool_input_validation.md, min: 400}
 
 rejected:
   - rejected_at: "2026-05-11T00:00:00+00:00"

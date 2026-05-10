@@ -157,3 +157,34 @@ Survey of agentic AI tools from Neo4j's perspective. Validates QKG's hybrid retr
 
 ### Proposed Tasks
 - Add context-relevance evaluation dimension to eval harness: per-query measure of whether retrieved verses actually address the question (LLM-as-judge). Estimated: 1 new eval metric in `eval_v1.py`.
+
+---
+
+## https://neo4j.com/blog/agentic-ai/agent-tools/
+**Fetched:** 2026-05-11
+**Title:** Agent Tools — What They Are, How AI Agents Use Them
+
+### TL;DR
+Neo4j overview of tool design for agentic systems. Core message: tool precision drives reliability. Fewer tools with tight descriptions beat many tools with loose schemas. MCP standardization decouples tool definitions from agent frameworks. Graph traversal outperforms vector similarity for relational knowledge. All directly applicable to QKG's 21-tool system.
+
+### Key Takeaways
+
+1. **Tool proliferation creates selection ambiguity** — "Every additional tool adds selection ambiguity for the model." Keeping QKG's 21 tools coherent requires semantic clustering rather than flat registration. Already addressed by `from_neo4j_yt_mcp_balanced_tool_grouping` (p78) and `from_neo4j_yt_mcp_tool_description_audit` tasks.
+
+2. **Description quality is the primary routing signal** — "Vague names, thin descriptions, overlapping descriptions all push the model toward the wrong call." Each tool needs explicit scope: when to use it, what it returns, what it is *not* for. Directly validated by `from_neo4j_yt_mcp_tool_description_audit` (p75) — existing task covers this.
+
+3. **Graph traversal > similarity for relational domains** — For Quranic knowledge (ayah→root→semantic field→related ayah), traversal outperforms embedding lookup. QKG's `traverse_topic`, `find_path`, `explore_root_family` already implement this. Article validates existing architecture.
+
+4. **Strict input validation prevents hallucinated calls** — "Loose schemas are a common cause of hallucinated or malformed inputs." Enforcing Surah range 1–114, ayah range validation, and language code constraints in tool schemas reduces bad calls before Neo4j execution. **Not yet implemented in QKG.** chat.py tools accept loose types currently.
+
+5. **MCP as the interoperability target** — Build once, every MCP-aware agent calls identically. Aligns with existing `from_neo4j_yt_mcp_balanced_tool_grouping` task. No new action.
+
+6. **Log every tool invocation** — for transparency and routing refinement. QKG's `reasoning_memory.py` already writes ToolCall nodes per invocation. Article validates this existing design.
+
+7. **Tools vs. Skills distinction** — Tools are discrete callables; skills shape multi-step reasoning patterns. For QKG: "multi-hop interpretation" (traverse root → semantic field → related verses) is a skill, not a single tool call. Relevant to router_agent task (`from_neo4j_yt_router_agent`, already DONE).
+
+### Verdict
+**Low incremental value** — most actionable points are already covered by existing backlog tasks (`from_neo4j_yt_mcp_tool_description_audit`, `from_neo4j_yt_mcp_balanced_tool_grouping`). The one genuinely new item is **strict parameter validation** in chat.py tool schemas (Surah/Ayah range enforcement, language code constraints). Priority is low given the system is working correctly; worth a small cleanup task.
+
+### Proposed Tasks
+- Add input validation to chat.py tools: enforce Surah number in [1–114], ayah range checks, language code allowlist. Return structured `{error: ..., reason: ...}` on invalid args (synergistic with `from_ai_graph_tool_error_structure` task already in backlog).
