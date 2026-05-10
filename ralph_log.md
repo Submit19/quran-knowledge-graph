@@ -48,3 +48,4 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-10T19:24 | from_ai_graph_zeroentropy_cohere_reranker_ab | cypher_analysis | FAILED |  | wrote ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab.md / ACCEPTANCE FAILED: file_exists data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reran |
 | 2026-05-10T19:26 | from_ai_graph_zeroentropy_cohere_reranker_ab | cypher_analysis | DONE |  | wrote ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab.md |
 | 2026-05-10T20:22 | from_ralph_yt_01_tokenize_claudemd | cleanup | DONE |  | [from-ralph-yt] Run CLAUDE.md through tiktoken (cl100k_base). Jeff's rule of thu / quality gate ok |
+| 2026-05-10T22:22 | from_neo4j_crawl_trace_vector_index | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_from_neo4j_crawl_trace_vector_index.md (review before use) |
