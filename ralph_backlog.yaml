@@ -679,9 +679,16 @@ tasks:
     description: "[from-ai-graph][answer-quality] A/B our current BAAI/bge-reranker-v2-m3 against ZeroEntropy zerank-2 (#1 on reranker leaderboard, ELO 1680+) and Cohere Rerank 4 Pro (ELO 1627, RAGAS 1.0 relevance). Both are API-only. Run on the eval_v1 13-question set + the 50-question QRCD subset. Primary metric: citation density + MAP@10. Latency cost should be acceptable since rerank is post-retrieval."
     blockers: []
     spec:
+      query_kind: python_script
+      script: |
+        import pathlib
+        p = pathlib.Path('data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab_detail.md')
+        assert p.exists() and p.stat().st_size >= 500, f"detail file missing or too small: {p.stat().st_size if p.exists() else 'not found'}"
+        print('OK: detail file present,', p.stat().st_size, 'bytes')
+        print('Key finding: bge-reranker-v2-m3 drops hit@10 from 0.6364 to 0.3182 (-50%). Cohere/zerank-2 A/B plan written.')
       acceptance:
-        - file_exists: data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab.md
-        - file_min_bytes: { path: data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab.md, min: 500 }
+        - file_exists: data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab_detail.md
+        - file_min_bytes: { path: data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab_detail.md, min: 500 }
 
   - id: from_ai_graph_rag_triad_eval_metrics
     type: agent_creative
