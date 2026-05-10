@@ -385,19 +385,20 @@ topics:
     deliverable: Cost analysis + small experiment on 5 weakest eval questions.
     tags: [agentic, architecture, cost]
 
-  # ── Coordinator: Neo4j YouTube channel deep crawl 2026-05-10 ──────────────
-  # Each research tick that picks this topic should: pop the next entry from
-  # data/research_neo4j_crawl/yt_neo4j_queue.yaml, fetch its transcript via
-  # yt-transcript-skill, extract QKG-relevant findings, append to
-  # data/research_neo4j_crawl/yt_findings.md, and update the queue file.
-  # When the queue is empty, mark this topic status: done.
-  - id: neo4j_yt_channel_iterator
+  # ── Coordinator: Multi-source Neo4j research crawl 2026-05-10 ─────────────
+  # Iterates through data/research_neo4j_crawl/neo4j_research_queue.yaml,
+  # which has 5 sources (yt_neo4j 80 items, blog_neo4j 18 items,
+  # graphacademy 3 items, docs_neo4j_deep 10 items, community_neo4j manual).
+  # Each tick: pop next from highest-priority non-empty source, process,
+  # append findings, update the queue file, propose new ralph task if actionable.
+  - id: neo4j_research_multisource_iterator
     priority: 70
     status: open
-    question: Iterate through data/research_neo4j_crawl/yt_neo4j_queue.yaml (80 NODES + GraphRAG videos). For each tick, pop the next video, fetch the transcript via the yt-transcript-skill, extract QKG-relevant findings (architecture patterns, GraphRAG techniques, agent memory ideas, MCP designs, retrieval benchmarks). Append findings to data/research_neo4j_crawl/yt_findings.md keyed by video ID. If a finding is actionable, propose a from_neo4j_yt_<short> task in ralph_backlog.yaml.
-    deliverable: yt_findings.md grows by one section per tick; queue.yaml shrinks; new ralph tasks proposed when actionable. Topic stays status open until queue is empty.
-    tags: [neo4j-yt, iterator, recurring]
+    question: Iterate through data/research_neo4j_crawl/neo4j_research_queue.yaml. Pop one item per tick from the highest-priority non-empty source. Handler depends on source type — yt-transcript-skill for yt_neo4j, WebFetch for everything else. Extract QKG-relevant findings into the source's findings_file. If actionable, propose a from_<source>_<short> task in ralph_backlog.yaml. Save the queue YAML back with the popped item removed.
+    deliverable: Per-tick output is one new findings section + optionally one new ralph task. Topic stays open until all source queues (except community_neo4j which is manual) are empty.
+    tags: [neo4j-multisource, iterator, recurring]
     iterator_state:
-      queue_file: data/research_neo4j_crawl/yt_neo4j_queue.yaml
-      findings_file: data/research_neo4j_crawl/yt_findings.md
+      queue_file: data/research_neo4j_crawl/neo4j_research_queue.yaml
+      pop_strategy: highest_priority_nonempty_source
       pop_one_per_tick: true
+      total_items: ~111 (80 yt + 18 blog + 3 academy + 10 docs)

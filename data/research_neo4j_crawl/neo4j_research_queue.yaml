@@ -1,0 +1,175 @@
+# Unified Neo4j research queue — all sources the loop should chew through.
+#
+# Format: each source has its own queue. The cron's research-tick procedure
+# pops from the highest-priority non-empty queue, processes one item, and
+# updates the queue file in-place.
+#
+# When all queues are empty, the iterator topic in research_backlog.yaml
+# can be marked status: done.
+
+version: 1
+fetched_at: 2026-05-10
+description: Multi-source Neo4j research queue feeding QKG's research loop.
+
+# ── Source 1: Neo4j YouTube channel (highest priority) ───────────────────
+# Already populated separately at yt_neo4j_queue.yaml — 80 videos pre-ranked.
+# This entry just points to it.
+yt_neo4j:
+  description: Neo4j YouTube channel (NODES + tutorials + GraphRAG content)
+  queue_file: data/research_neo4j_crawl/yt_neo4j_queue.yaml
+  handler: yt-transcript-skill
+  source_priority: 80
+  estimated_remaining: 80
+
+# ── Source 2: Neo4j Developer Blog (~18 high-relevance posts) ─────────────
+# Posts surfaced from 3 category pages: /blog/developer/, /blog/genai/, /blog/agentic-ai/, /blog/knowledge-graph/
+# Each tick should WebFetch the URL, extract QKG-relevant patterns, append
+# findings to data/research_neo4j_crawl/blog_findings.md keyed by URL slug.
+blog_neo4j:
+  description: Neo4j developer blog posts (filtered to QKG-relevant)
+  handler: WebFetch
+  source_priority: 70
+  findings_file: data/research_neo4j_crawl/blog_findings.md
+  queue:
+    # Highest priority — direct hits on our agentic stack
+    - url: https://neo4j.com/blog/genai/introducing-create-context-graph/
+      title: Introducing Create Context Graph
+      relevance: HIGH — directly relevant to our reasoning_memory pattern; likely formalizes what we built
+    - url: https://neo4j.com/blog/genai/building-stateful-ai-integrating-aura-agent-lifecycle-with-mcp-and-persistent-memory/
+      title: Building Stateful AI — Aura Agent + MCP + Persistent Memory
+      relevance: HIGH — full agent memory + MCP integration walkthrough
+    - url: https://neo4j.com/blog/developer/introducing-neo4j-agent-skills/
+      title: Introducing Neo4j Agent Skills
+      relevance: HIGH — official agent skill framework
+    - url: https://neo4j.com/blog/agentic-ai/connected-context-and-persistent-memory-neo4j-providers-for-the-microsoft-agent-framework/
+      title: Connected Context and Persistent Memory — MS Agent Framework providers
+      relevance: HIGH — specific providers we could borrow patterns from
+    - url: https://neo4j.com/blog/agentic-ai/context-engineering-tools/
+      title: Best Tools for Context Engineering in Agentic AI
+      relevance: HIGH — survey of MCP + GraphRAG tools
+    - url: https://neo4j.com/blog/agentic-ai/agent-tools/
+      title: Agent tools — what they are, how AI agents use them
+      relevance: HIGH — tool design principles
+    - url: https://neo4j.com/blog/agentic-ai/agentic-architecture/
+      title: What Is Agentic AI Architecture? Common Patterns
+      relevance: HIGH — architecture patterns
+    - url: https://neo4j.com/blog/agentic-ai/what-is-agentic-rag/
+      title: Agentic RAG — what it is, when to use it
+      relevance: HIGH — fundamentals
+    - url: https://neo4j.com/blog/genai/what-is-graphrag/
+      title: What Is GraphRAG?
+      relevance: HIGH — fundamentals
+    - url: https://neo4j.com/blog/agentic-ai/context-gap-ai-reasoning/
+      title: The context gap — why smart AI struggles to reason
+      relevance: MEDIUM — likely positioning, but useful framing
+    - url: https://neo4j.com/blog/graph-database/introducing-asynchronous-i-o-in-neo4j-using-io_uring/
+      title: Asynchronous I/O via io_uring in Neo4j
+      relevance: HIGH — directly relevant to our 647s outlier (turned out to be Python-side, but io_uring affects DB-side latency)
+    - url: https://neo4j.com/blog/genai/integrating-neo4j-with-google-genkit-a-practical-guide/
+      title: Integrating Neo4j with Google Genkit
+      relevance: MEDIUM — agent framework integration patterns
+    - url: https://neo4j.com/blog/agentic-ai/can-i-use-aura-agents-to-create-an-mcp-enabled-teacher-2/
+      title: Aura Agents to create an MCP enabled Teacher
+      relevance: MEDIUM — Aura+MCP example
+    - url: https://neo4j.com/blog/agentic-ai/neo4j-launches-aura-agent/
+      title: Neo4j Aura Agent General Availability
+      relevance: MEDIUM — Aura GA announcement
+    - url: https://neo4j.com/blog/knowledge-graph/turning-servicenow-data-into-connected-enterprise-intelligence/
+      title: Turning ServiceNow Data into Connected Enterprise Intelligence
+      relevance: MEDIUM — KG construction patterns from unstructured data
+    - url: https://neo4j.com/blog/news/knowledge-layer-agentic-systems-google-cloud/
+      title: A knowledge layer for your agentic systems on GCP
+      relevance: MEDIUM — knowledge layer architecture
+    - url: https://neo4j.com/blog/agentic-ai/knowledge-layer/
+      title: Why every enterprise needs an AI knowledge layer
+      relevance: LOW — strategy/positioning
+    - url: https://neo4j.com/blog/genai/from-identity-vacuum-to-identity-driven-access-control-securing-llm-agents-in-the-enterprise/
+      title: Identity-driven access control for LLM agents
+      relevance: LOW — enterprise security; not relevant to QKG single-user
+
+# ── Source 3: GraphAcademy uncovered courses ─────────────────────────────
+# We covered ~10 GenAI courses in the initial crawl. These remain.
+graphacademy:
+  description: GraphAcademy courses we haven't deep-crawled
+  handler: WebFetch
+  source_priority: 60
+  findings_file: data/research_neo4j_crawl/graphacademy_findings.md
+  queue:
+    - url: https://graphacademy.neo4j.com/courses/workshop-genai/
+      title: Neo4j and Generative AI Workshop (3hrs — full workshop format)
+      relevance: HIGH — likely consolidates several earlier courses with hands-on labs
+    - url: https://graphacademy.neo4j.com/courses/genai-integration-langchain/
+      title: Using Neo4j with LangChain
+      relevance: MEDIUM — we don't use LangChain but patterns may transfer
+    - url: https://graphacademy.neo4j.com/courses/llm-chatbot-python/
+      title: Build a Neo4j-backed Chatbot using Python
+      relevance: MEDIUM — implementation patterns
+
+# ── Source 4: Deep docs subsections we haven't crawled ────────────────────
+# Specific Neo4j docs pages flagged during the initial crawl as worth deeper dives.
+docs_neo4j_deep:
+  description: Specific Neo4j docs subsections to deep-crawl
+  handler: WebFetch
+  source_priority: 50
+  findings_file: data/research_neo4j_crawl/docs_deep_findings.md
+  queue:
+    - url: https://neo4j.com/docs/cypher-manual/current/queries/concepts/#search-clause
+      title: Cypher 25 SEARCH syntax (replaces db.index.vector.queryNodes)
+      relevance: HIGH — migration target; docs link surfaced in initial crawl
+    - url: https://neo4j.com/docs/graph-data-science/current/algorithms/leiden/
+      title: GDS Leiden algorithm
+      relevance: HIGH — drop-in for Louvain (proposed task already exists)
+    - url: https://neo4j.com/docs/graph-data-science/current/algorithms/fastrp/
+      title: GDS FastRP node embeddings
+      relevance: HIGH — proposed second retrieval channel (task in backlog)
+    - url: https://neo4j.com/docs/graph-data-science/current/algorithms/knn/
+      title: GDS K-Nearest Neighbors
+      relevance: HIGH — pairs with FastRP for KNN-based retrieval
+    - url: https://neo4j.com/docs/graph-data-science/current/algorithms/similarity/
+      title: GDS Similarity catalog (Jaccard, Overlap, Cosine)
+      relevance: MEDIUM — alternatives for RELATED_TO edge construction
+    - url: https://neo4j.com/docs/cypher-manual/current/planning-and-tuning/query-tuning/
+      title: Cypher query tuning guide
+      relevance: HIGH — directly applicable to our latency outliers
+    - url: https://neo4j.com/docs/cypher-manual/current/indexes/search-performance-indexes/index-hints/
+      title: Cypher index hints
+      relevance: MEDIUM — manual override when planner picks suboptimal index
+    - url: https://neo4j.com/docs/operations-manual/current/monitoring/logging/
+      title: Operations manual — logging
+      relevance: MEDIUM — slow query log + metrics
+    - url: https://neo4j.com/docs/apoc/current/overview/
+      title: APOC procedures overview
+      relevance: MEDIUM — many useful text/batch utilities
+    - url: https://neo4j.com/docs/python-manual/current/concurrent-transactions/
+      title: Python driver concurrent transactions
+      relevance: LOW-MEDIUM — useful for batch writes in reasoning_memory
+
+# ── Source 5: Community forum (manual surfacing only) ─────────────────────
+# Neo4j Discourse forum. Unbounded scrape would be wasteful. Recommendation:
+# loop adds high-quality threads here ad-hoc when they surface from other research.
+community_neo4j:
+  description: Neo4j Discourse forum (community.neo4j.com)
+  handler: WebFetch
+  source_priority: 30
+  findings_file: data/research_neo4j_crawl/community_findings.md
+  note: |
+    Discourse forum has thousands of threads. Systematic scrape is wasteful.
+    Approach: as a research tick discovers a question that might have a
+    community answer, search community.neo4j.com (via WebSearch with
+    site:community.neo4j.com) and append the most relevant 1-3 threads here
+    for follow-up. The loop should NOT eagerly enumerate this source.
+  queue: []
+
+# ── Notes for the loop ────────────────────────────────────────────────────
+# When a research tick fires:
+# 1. Read this file. Find the highest-priority source with a non-empty queue.
+# 2. Pop the first item from that source's queue.
+# 3. Process it (fetch transcript / WebFetch / etc.).
+# 4. Extract QKG-relevant findings into the source's findings_file.
+# 5. If actionable: propose a from_<source>_<short> task in ralph_backlog.yaml.
+# 6. Save the queue YAML back (with the popped item removed).
+# 7. Commit and push.
+#
+# When all source queues are empty: mark `neo4j_yt_channel_iterator` topic
+# in research_backlog.yaml as status: done, and the loop will move on to
+# other open research topics.

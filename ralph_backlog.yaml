@@ -765,6 +765,88 @@ tasks:
         - file_exists: data/ralph_agent_from_ralph_yt_04_parallel_worktree_spike.md
         - file_min_bytes: { path: data/ralph_agent_from_ralph_yt_04_parallel_worktree_spike.md, value: 600 }
 
+  # ── [from-neo4j-yt] 12-video batch extract 2026-05-10 ────────────────────
+  # ── Source: data/research_neo4j_crawl/06{a,b,c}_*.md ──────────────────────
+  - id: from_neo4j_yt_router_agent
+    type: agent_creative
+    priority: 85
+    description: "[from-neo4j-yt][answer-quality][opus] Add a complexity-router that classifies abstract vs structured queries and dispatches to concept_search FIRST for abstract concepts (meditation/reverence/Surah 55 cluster currently scoring 13-27 cites). Two videos (EventKernel + Agentic GraphRAG) independently identify this as the fix for our exact failure mode. Implementation sketch in chat.py system prompt: routing heuristic for queries lacking verse refs/roots → concept_search → traverse_topic. Direct answer-quality lift expected."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_neo4j_yt_router_agent.md
+        - file_min_bytes: { path: data/ralph_agent_from_neo4j_yt_router_agent.md, value: 800 }
+
+  - id: from_neo4j_yt_mcp_balanced_tool_grouping
+    type: agent_creative
+    priority: 78
+    description: "[from-neo4j-yt][answer-quality] Smarter MCP Servers (NODES 2026) shows 62% token-overhead reduction via 8-tool startup set + 3 discoverable categories. Our 21 tools currently cost ~4,200 tokens before first message. Implement graph-backed startup set using RETRIEVED edge counts from reasoning_memory.py (existing data — no new infra). Hot 8: search_keyword, semantic_search, get_verse, concept_search, traverse_topic, hybrid_search, recall_similar_query, run_cypher. Discoverable: etymology, surah-level, code19. Saves ~2,600 tokens per turn × every chat = compounding."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_neo4j_yt_mcp_balanced_tool_grouping.md
+        - file_min_bytes: { path: data/ralph_agent_from_neo4j_yt_mcp_balanced_tool_grouping.md, value: 700 }
+
+  - id: from_neo4j_yt_memory_05_reasoning_step
+    type: cleanup
+    priority: 78
+    description: "[from-neo4j-yt] Insert (:ReasoningStep {turn_number, rationale}) between ReasoningTrace and ToolCall. Carries free-text rationale (the quintuple description). Schema additive — existing traces unaffected. Triple-confirmed across 3 research streams (Neo4j docs crawl + agent-memory video batch + AI graph extract). Closes the missing-step gap."
+    blockers: []
+    spec:
+      commits_code: true
+      acceptance:
+        - python: "True"
+
+  - id: from_neo4j_yt_memory_01_bitemporal_retrieved
+    type: cleanup
+    priority: 75
+    description: "[from-neo4j-yt] Add valid_from (ISO timestamp) and model_version string properties to RETRIEVED edges. Backfill existing 32K edges with model_version='pre-bge-m3' sentinel. Enables: 'which verses ranked highly under MiniLM but not BGE-M3?' — directly useful for the embedding migration story. Schema additive. From the agent-memory video batch (bitemporal model is industry standard 2026)."
+    blockers: []
+    spec:
+      commits_code: true
+      acceptance:
+        - python: "True"
+
+  - id: from_neo4j_yt_mcp_tool_description_audit
+    type: cleanup
+    priority: 70
+    description: "[from-neo4j-yt] Audit and rewrite all 21 chat.py tool descriptions for LLM routing clarity. Three NODES videos independently confirm description quality is the primary tool-selection signal. Our descriptions were written as Python docstrings, not natural-language tool routing prompts. Required before any MCP wrapping. Per-tool: clear when-to-use, when-NOT-to-use, expected output shape."
+    blockers: []
+    spec:
+      commits_code: true
+      acceptance:
+        - python: "True"
+
+  - id: from_neo4j_yt_memory_03_consolidation_job
+    type: cypher_analysis
+    priority: 70
+    description: "[from-neo4j-yt] Write consolidate_traces.py: nightly batch job that (a) finds Query node clusters with cosine > 0.96 on query_embedding, (b) creates (:QueryCluster) merging retrieval stats, (c) links members via [:MEMBER_OF]. The 'sleep step' pattern from the agent-memory video batch — every speaker independently named a nightly consolidation as the missing piece. We currently accumulate traces unbounded."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: consolidate_traces.py
+        - file_min_bytes: { path: consolidate_traces.py, value: 400 }
+
+  - id: from_neo4j_yt_mcp_graph_backed_registry
+    type: agent_creative
+    priority: 65
+    description: "[from-neo4j-yt] Implement graph-backed tool registry using existing RETRIEVED edge counts as the usage signal. Video 3 (Smarter MCP Servers): rank tools in startup list by historical usage_count from reasoning_memory.py. Zero new infra needed — we already have the data. Pairs with the balanced-tool-grouping task above."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_neo4j_yt_mcp_graph_backed_registry.md
+        - file_min_bytes: { path: data/ralph_agent_from_neo4j_yt_mcp_graph_backed_registry.md, value: 600 }
+
+  - id: from_neo4j_yt_sufficiency_gate
+    type: agent_creative
+    priority: 62
+    description: "[from-neo4j-yt][answer-quality] Replace blunt 15-turn cap with three-way in-loop evaluator: 'sufficient / hop_more / replan'. GraphReader + EventKernel both use this pattern. After each tool-call batch, inject short evaluator prompt; replan path triggers concept_search restart. Cap replan retries at 2. Expected to reduce wasted turns on hard abstract queries."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_neo4j_yt_sufficiency_gate.md
+        - file_min_bytes: { path: data/ralph_agent_from_neo4j_yt_sufficiency_gate.md, value: 700 }
+
   # ── [from-research] Promoted from research tick 2026-05-10 ────────────────
   - id: from_research_finetune_bge_m3_qrcd
     type: agent_creative
