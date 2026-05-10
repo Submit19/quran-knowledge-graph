@@ -67,6 +67,43 @@ Full walkthrough of a two-database architecture where one Neo4j instance holds d
 
 ---
 
+## https://neo4j.com/blog/agentic-ai/connected-context-and-persistent-memory-neo4j-providers-for-the-microsoft-agent-framework/
+**Fetched:** 2026-05-11
+**Title:** Connected Context and Persistent Memory — Neo4j Providers for the Microsoft Agent Framework
+
+### TL;DR
+Production-grade architectural patterns for multi-session persistent memory in agentic systems. Three-layer memory (short-term session messages + long-term deduplicated entity graph + reasoning traces), deduplication via SAME_AS relationships using embedding + fuzzy matching, and before/after provider hooks that inject prior context and persist new entities asynchronously. All patterns are framework-agnostic and directly applicable to QKG.
+
+### Key Takeaways
+
+1. **Three-layer memory structure** — short-term (session messages with embeddings), long-term (deduplicated entity nodes), reasoning traces (task execution patterns stored for reuse). QKG's `reasoning_memory.py` only covers the reasoning-trace layer today; the session message + entity graph layers are missing.
+
+2. **Provider dual-hook pattern** — `before_run()` injects relevant memories; `after_run()` persists messages + extracts entities asynchronously. The `async` persistence is critical: entity extraction doesn't block response. QKG should adopt this pattern to avoid latency in the agentic loop.
+
+3. **SAME_AS deduplication** — entities are merged using exact match + fuzzy string + embedding similarity with a confidence threshold. For QKG this is essential: handles transliteration variants (al-Rahman/ar-Rahman), character aliases (Yusuf/Joseph), and different verse numbering systems.
+
+4. **Graph schema for memory:**
+   ```
+   (:Conversation)-[:HAS_MESSAGE]->(:Message)-[:NEXT_MESSAGE]->(:Message)
+   (:Message)-[:MENTIONS]->(:Entity)
+   (:Entity)-[:RELATED_TO]->(:Entity)
+   (:Entity)-[:SAME_AS]->(:Entity)   // deduplication
+   ```
+   QKG adaptation: `(:UserSession)-[:HAS_QUERY]->(:Query)`, `(:Query)-[:REFERENCES]->(:Verse|:Concept)`, SAME_AS on Concept/ArabicRoot nodes for transliteration.
+
+5. **OPTIONAL MATCH with collect limits** — Cypher pattern `collect(DISTINCT risk.name)[0..5]` surfaces contextual relationships per node without blowing up result cardinality. Already usable in our `run_cypher` escape-hatch and custom tools.
+
+6. **User preference accumulation** — by session 10 the entity graph holds interest nodes (topics, surahs) extracted from prior conversations. Enables surfacing relevant verses from past sessions without re-querying.
+
+### Verdict
+**Highly actionable.** The SAME_AS deduplication on Concept/ArabicRoot nodes is a concrete, bounded improvement we can implement. The session message layer + async entity extraction are medium-effort but high user-value additions to reasoning_memory.py.
+
+### Proposed Tasks
+- Add SAME_AS deduplication relationships to Concept and ArabicRoot nodes using embedding + fuzzy matching (bounded migration script).
+- Extend reasoning_memory.py to persist session-level Query chains with before/after hooks and async entity extraction.
+
+---
+
 ## https://neo4j.com/blog/developer/introducing-neo4j-agent-skills/
 **Fetched:** 2026-05-11
 **Title:** Introducing Neo4j Agent Skills

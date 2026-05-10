@@ -43,9 +43,6 @@ blog_neo4j:
   findings_file: data/research_neo4j_crawl/blog_findings.md
   queue:
     # Highest priority — direct hits on our agentic stack
-    - url: https://neo4j.com/blog/agentic-ai/connected-context-and-persistent-memory-neo4j-providers-for-the-microsoft-agent-framework/
-      title: Connected Context and Persistent Memory — MS Agent Framework providers
-      relevance: HIGH — specific providers we could borrow patterns from
     - url: https://neo4j.com/blog/agentic-ai/context-engineering-tools/
       title: Best Tools for Context Engineering in Agentic AI
       relevance: HIGH — survey of MCP + GraphRAG tools
