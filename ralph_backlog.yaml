@@ -597,7 +597,7 @@ tasks:
     spec:
       acceptance:
         - file_exists: data/ralph_analysis_from_neo4j_crawl_enable_slow_query_log.md
-        - file_min_bytes: { path: data/ralph_analysis_from_neo4j_crawl_enable_slow_query_log.md, value: 250 }
+        - file_min_bytes: { path: data/ralph_analysis_from_neo4j_crawl_enable_slow_query_log.md, min: 250 }
 
   - id: from_neo4j_crawl_audit_indexes
     type: cypher_analysis
@@ -607,7 +607,7 @@ tasks:
     spec:
       acceptance:
         - file_exists: data/ralph_analysis_from_neo4j_crawl_audit_indexes.md
-        - file_min_bytes: { path: data/ralph_analysis_from_neo4j_crawl_audit_indexes.md, value: 400 }
+        - file_min_bytes: { path: data/ralph_analysis_from_neo4j_crawl_audit_indexes.md, min: 400 }
 
   - id: from_neo4j_crawl_check_neo4j_version
     type: cypher_analysis
@@ -617,7 +617,7 @@ tasks:
     spec:
       acceptance:
         - file_exists: data/ralph_analysis_from_neo4j_crawl_check_neo4j_version.md
-        - file_min_bytes: { path: data/ralph_analysis_from_neo4j_crawl_check_neo4j_version.md, value: 200 }
+        - file_min_bytes: { path: data/ralph_analysis_from_neo4j_crawl_check_neo4j_version.md, min: 200 }
 
   - id: from_neo4j_crawl_trace_vector_index
     type: agent_creative
@@ -627,7 +627,7 @@ tasks:
     spec:
       acceptance:
         - file_exists: data/ralph_agent_from_neo4j_crawl_trace_vector_index.md
-        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_trace_vector_index.md, value: 600 }
+        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_trace_vector_index.md, min: 600 }
 
   - id: from_neo4j_crawl_adopt_graphrag_retrievers
     type: agent_creative
@@ -637,7 +637,7 @@ tasks:
     spec:
       acceptance:
         - file_exists: data/ralph_agent_from_neo4j_crawl_adopt_graphrag_retrievers.md
-        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_adopt_graphrag_retrievers.md, value: 700 }
+        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_adopt_graphrag_retrievers.md, min: 700 }
 
   - id: from_neo4j_crawl_single_shot_vector_traversal
     type: agent_creative
@@ -647,7 +647,7 @@ tasks:
     spec:
       acceptance:
         - file_exists: data/ralph_agent_from_neo4j_crawl_single_shot_vector_traversal.md
-        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_single_shot_vector_traversal.md, value: 700 }
+        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_single_shot_vector_traversal.md, min: 700 }
 
   - id: from_neo4j_crawl_arabic_fulltext_index
     type: agent_creative
@@ -657,7 +657,7 @@ tasks:
     spec:
       acceptance:
         - file_exists: data/ralph_agent_from_neo4j_crawl_arabic_fulltext_index.md
-        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_arabic_fulltext_index.md, value: 500 }
+        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_arabic_fulltext_index.md, min: 500 }
 
   - id: from_neo4j_crawl_pagination_cursors
     type: agent_creative
@@ -667,7 +667,7 @@ tasks:
     spec:
       acceptance:
         - file_exists: data/ralph_agent_from_neo4j_crawl_pagination_cursors.md
-        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_pagination_cursors.md, value: 600 }
+        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_pagination_cursors.md, min: 600 }
 
   # ── [from-ai-graph] Promoted from sibling AI knowledge graph extract ──────
   # ── Source: data/research_neo4j_crawl/04_ai_graph_extract.md ──────────────
@@ -679,7 +679,7 @@ tasks:
     spec:
       acceptance:
         - file_exists: data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab.md
-        - file_min_bytes: { path: data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab.md, value: 500 }
+        - file_min_bytes: { path: data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab.md, min: 500 }
 
   - id: from_ai_graph_rag_triad_eval_metrics
     type: agent_creative
@@ -689,7 +689,7 @@ tasks:
     spec:
       acceptance:
         - file_exists: data/ralph_agent_from_ai_graph_rag_triad_eval_metrics.md
-        - file_min_bytes: { path: data/ralph_agent_from_ai_graph_rag_triad_eval_metrics.md, value: 700 }
+        - file_min_bytes: { path: data/ralph_agent_from_ai_graph_rag_triad_eval_metrics.md, min: 700 }
 
   - id: from_ai_graph_reflexion_pattern
     type: agent_creative
@@ -699,7 +699,7 @@ tasks:
     spec:
       acceptance:
         - file_exists: data/ralph_agent_from_ai_graph_reflexion_pattern.md
-        - file_min_bytes: { path: data/ralph_agent_from_ai_graph_reflexion_pattern.md, value: 800 }
+        - file_min_bytes: { path: data/ralph_agent_from_ai_graph_reflexion_pattern.md, min: 800 }
 
   - id: from_ai_graph_lightrag_neo4j_spike
     type: cypher_analysis
@@ -709,7 +709,7 @@ tasks:
     spec:
       acceptance:
         - file_exists: data/ralph_analysis_from_ai_graph_lightrag_neo4j_spike.md
-        - file_min_bytes: { path: data/ralph_analysis_from_ai_graph_lightrag_neo4j_spike.md, value: 600 }
+        - file_min_bytes: { path: data/ralph_analysis_from_ai_graph_lightrag_neo4j_spike.md, min: 600 }
 
   - id: from_ai_graph_tool_error_audit
     type: cleanup
@@ -732,7 +732,7 @@ tasks:
       commits_code: true
       acceptance:
         - file_exists: data/ralph_analysis_from_ralph_yt_01_tokenize_claudemd.md
-        - file_min_bytes: { path: data/ralph_analysis_from_ralph_yt_01_tokenize_claudemd.md, value: 300 }
+        - file_min_bytes: { path: data/ralph_analysis_from_ralph_yt_01_tokenize_claudemd.md, min: 300 }
 
   - id: from_ralph_yt_02_filter_test_output
     type: cleanup
@@ -743,7 +743,7 @@ tasks:
       commits_code: true
       acceptance:
         - file_exists: run_tests_filtered.py
-        - file_min_bytes: { path: run_tests_filtered.py, value: 500 }
+        - file_min_bytes: { path: run_tests_filtered.py, min: 500 }
 
   - id: from_ralph_yt_03_audit_negative_prompts
     type: cleanup
@@ -763,7 +763,7 @@ tasks:
     spec:
       acceptance:
         - file_exists: data/ralph_agent_from_ralph_yt_04_parallel_worktree_spike.md
-        - file_min_bytes: { path: data/ralph_agent_from_ralph_yt_04_parallel_worktree_spike.md, value: 600 }
+        - file_min_bytes: { path: data/ralph_agent_from_ralph_yt_04_parallel_worktree_spike.md, min: 600 }
 
   # ── [from-neo4j-yt] 12-video batch extract 2026-05-10 ────────────────────
   # ── Source: data/research_neo4j_crawl/06{a,b,c}_*.md ──────────────────────
@@ -775,7 +775,7 @@ tasks:
     spec:
       acceptance:
         - file_exists: data/ralph_agent_from_neo4j_yt_router_agent.md
-        - file_min_bytes: { path: data/ralph_agent_from_neo4j_yt_router_agent.md, value: 800 }
+        - file_min_bytes: { path: data/ralph_agent_from_neo4j_yt_router_agent.md, min: 800 }
 
   - id: from_neo4j_yt_mcp_balanced_tool_grouping
     type: agent_creative
@@ -785,7 +785,7 @@ tasks:
     spec:
       acceptance:
         - file_exists: data/ralph_agent_from_neo4j_yt_mcp_balanced_tool_grouping.md
-        - file_min_bytes: { path: data/ralph_agent_from_neo4j_yt_mcp_balanced_tool_grouping.md, value: 700 }
+        - file_min_bytes: { path: data/ralph_agent_from_neo4j_yt_mcp_balanced_tool_grouping.md, min: 700 }
 
   - id: from_neo4j_yt_memory_05_reasoning_step
     type: cleanup
@@ -825,7 +825,7 @@ tasks:
     spec:
       acceptance:
         - file_exists: consolidate_traces.py
-        - file_min_bytes: { path: consolidate_traces.py, value: 400 }
+        - file_min_bytes: { path: consolidate_traces.py, min: 400 }
 
   - id: from_neo4j_yt_mcp_graph_backed_registry
     type: agent_creative
@@ -835,7 +835,7 @@ tasks:
     spec:
       acceptance:
         - file_exists: data/ralph_agent_from_neo4j_yt_mcp_graph_backed_registry.md
-        - file_min_bytes: { path: data/ralph_agent_from_neo4j_yt_mcp_graph_backed_registry.md, value: 600 }
+        - file_min_bytes: { path: data/ralph_agent_from_neo4j_yt_mcp_graph_backed_registry.md, min: 600 }
 
   - id: from_neo4j_yt_sufficiency_gate
     type: agent_creative
@@ -845,7 +845,7 @@ tasks:
     spec:
       acceptance:
         - file_exists: data/ralph_agent_from_neo4j_yt_sufficiency_gate.md
-        - file_min_bytes: { path: data/ralph_agent_from_neo4j_yt_sufficiency_gate.md, value: 700 }
+        - file_min_bytes: { path: data/ralph_agent_from_neo4j_yt_sufficiency_gate.md, min: 700 }
 
   # ── [from-research] Promoted from research tick 2026-05-10 ────────────────
   - id: from_research_finetune_bge_m3_qrcd
@@ -856,4 +856,4 @@ tasks:
     spec:
       acceptance:
         - file_exists: data/ralph_agent_from_research_finetune_bge_m3_qrcd.md
-        - file_min_bytes: { path: data/ralph_agent_from_research_finetune_bge_m3_qrcd.md, value: 800 }
+        - file_min_bytes: { path: data/ralph_agent_from_research_finetune_bge_m3_qrcd.md, min: 800 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-10T23:23:04+00:00",
-  "tick_count": 22,
+  "last_tick": "2026-05-10T12:18:52.056543+00:00",
+  "tick_count": 23,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -18,7 +18,8 @@
     "propose_search_bar_autocomplete",
     "surface_retrieval_noise",
     "discover_new_followups",
-    "from_neo4j_crawl_enable_slow_query_log"
+    "from_neo4j_crawl_enable_slow_query_log",
+    "from_neo4j_yt_router_agent"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -584,6 +585,35 @@
           "check": "file_min_bytes data/ralph_analysis_from_neo4j_crawl_enable_slow_query_log.md >= 250",
           "passed": true,
           "detail": "size=6043"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "from_neo4j_yt_router_agent",
+      "type": "agent_creative",
+      "started_at": "2026-05-10T12:18:52.056543+00:00",
+      "finished_at": "2026-05-10T12:18:52.056543+00:00",
+      "status": "DONE_WITH_CONCERNS",
+      "attempt": 2,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "manual backend — deliverable produced out-of-band; gate will validate",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_exists data/ralph_agent_from_neo4j_yt_router_agent.md",
+          "passed": true,
+          "detail": "C:\\Users\\alika\\Agent Teams\\quran-graph-standalone\\data\\ralph_agent_from_neo4j_yt_router_agent.md"
+        },
+        {
+          "check": "file_min_bytes data/ralph_agent_from_neo4j_yt_router_agent.md >= 800",
+          "passed": true,
+          "detail": "size=8606"
         }
       ],
       "tokens_in": 0,

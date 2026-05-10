@@ -1020,6 +1020,133 @@ def tool_search_morphological_pattern(session, pattern: str = None,
     }
 
 
+# ── Query routing classifier ──────────────────────────────────────────────────
+# Implements the "complexity router" from NODES AI 2026 (EventKernel +
+# Agentic GraphRAG). Buckets a query as 'structured' / 'abstract' / 'concrete'
+# so the planner — guided by the QUERY ROUTING RUBRIC in the system prompt —
+# dispatches abstract concept queries (meditation, reverence, hypocrites)
+# through concept_search FIRST instead of semantic_search. See
+# data/ralph_agent_from_neo4j_yt_router_agent.md.
+#
+# Pure helper. Not auto-wired into the agent loop — exposed for callers and
+# tests, and available for future hint-injection. Safe to call in isolation.
+
+# Concrete entities the QKG often gets asked about. Names, events, places.
+_CONCRETE_TOKENS = {
+    "moses", "musa", "pharaoh", "firaun", "mary", "maryam", "jesus", "isa",
+    "abraham", "ibrahim", "joseph", "yusuf", "solomon", "sulaiman", "noah",
+    "nuh", "lot", "lut", "jonah", "yunus", "david", "dawud", "adam", "eve",
+    "satan", "iblis", "gabriel", "jibril", "muhammad", "ahmad",
+    "the cave", "the trumpet", "the ant", "the spider", "the bee",
+    "hell", "paradise", "heaven", "garden", "hellfire",
+    "ark", "babylon", "egypt", "mecca", "medina", "kaaba",
+    "bani israel", "children of israel", "children of adam",
+}
+
+# Abstract single-word concept queries that currently land in the 13-27 cite
+# cluster when routed through dense retrieval first.
+_ABSTRACT_TOKENS = {
+    "faith", "belief", "trust",
+    "meditation", "remembrance", "reflection",
+    "reverence", "awe", "fear", "piety", "humility",
+    "hypocrisy", "hypocrites", "hypocrite",
+    "charity", "alms", "zakat",
+    "prayer", "salat", "supplication",
+    "patience", "perseverance",
+    "gratitude", "thanksgiving",
+    "repentance", "redemption",
+    "mercy", "compassion",
+    "justice", "fairness",
+    "sincerity", "sincere",
+    "deeds", "works",
+    "salvation", "deliverance",
+    "guidance", "doubt", "hope",
+    "love", "forgiveness", "oppression", "accountability",
+    "wisdom", "knowledge", "ignorance",
+    "soul", "heart", "spirit",
+}
+
+# Surahs that are short and theme-dense — their idiomatic vocabulary makes
+# semantic_search misfire; route summaries through concept_search +
+# explore_surah instead.
+_THEME_DENSE_SURAHS = {1, 36, 55, 112, 113, 114}
+
+
+def classify_query(query: str) -> str:
+    """
+    Classify a user query into one of three routing buckets:
+      'structured' — has verse refs, Arabic roots, or Code-19 language.
+      'abstract'   — abstract single-word concept (meditation, reverence, ...).
+      'concrete'   — proper nouns, narratives, named events.
+
+    Returns 'abstract' as the default safe bucket when nothing else triggers,
+    matching the failure mode the router was designed to fix.
+    """
+    if not query or not isinstance(query, str):
+        return "abstract"
+
+    q = query.lower().strip()
+
+    # 1. STRUCTURED — verse refs, roots, Code-19.
+    # Cheap regex first (fast path), then fall back to ref_resolver for
+    # spelled-out forms ("Surah Al-Baqarah verse 255", "Ayat al-Kursi").
+    import re as _re
+    if _re.search(r"\[\s*\d{1,3}\s*:\s*\d{1,3}", q):
+        return "structured"
+    if _re.search(r"\bsurah\s+\d{1,3}\s+(verse|ayah|ayat)\s+\d", q):
+        return "structured"
+    if _re.search(r"\bquran\s+\d{1,3}\s*:\s*\d", q):
+        return "structured"
+    # Arabic root mention: explicit "root k-t-b" or three-letter Arabic root.
+    if _re.search(r"\broot\s+[a-z]\s*[-–]\s*[a-z]\s*[-–]\s*[a-z]\b", q):
+        return "structured"
+    if _re.search(r"[؀-ۿ]\s*[-–]\s*[؀-ۿ]\s*[-–]\s*[؀-ۿ]", query):
+        return "structured"
+    # Code-19 / mathematical-miracle / mysterious-letters / letter-count.
+    if any(t in q for t in ("code 19", "code-19", "code19", "miracle of 19",
+                              "mysterious letter", "letter count",
+                              "count of q in", "count of n in",
+                              "mathematical miracle")):
+        return "structured"
+    # ref_resolver fallback for spelled-out forms.
+    try:
+        from ref_resolver import resolve_refs
+        if resolve_refs(query):
+            return "structured"
+    except Exception:
+        pass
+
+    # Surah summary on a short theme-dense surah -> abstract bucket
+    # (concept_search + explore_surah).
+    msurah = _re.search(r"surah\s+(?:[a-z\-']+\s+)?\(?(\d{1,3})\)?", q)
+    if msurah and ("summarize" in q or "summary" in q or "main insights" in q or
+                   "tell me about surah" in q):
+        try:
+            n = int(msurah.group(1))
+            if n in _THEME_DENSE_SURAHS:
+                return "abstract"
+        except ValueError:
+            pass
+
+    # 2. CONCRETE — proper nouns / named entities.
+    # Multi-word phrases first, then single tokens.
+    for phrase in _CONCRETE_TOKENS:
+        if " " in phrase and phrase in q:
+            return "concrete"
+    tokens = set(_re.findall(r"[a-z']+", q))
+    if tokens & {t for t in _CONCRETE_TOKENS if " " not in t}:
+        return "concrete"
+
+    # 3. ABSTRACT — single-token abstract concept queries.
+    if tokens & _ABSTRACT_TOKENS:
+        return "abstract"
+
+    # Default: short "tell me about X" with no concrete hit -> abstract.
+    # Long multi-concept questions ("common themes", "compare X and Y") also
+    # land here; concept_search + traverse_topic are the right first calls.
+    return "abstract"
+
+
 def tool_concept_search(session, concept: str, top_k: int = 30) -> dict:
     """
     Search by canonical concept — automatically expands to all surface
