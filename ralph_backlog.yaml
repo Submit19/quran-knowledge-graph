@@ -605,9 +605,10 @@ tasks:
     description: "[from-neo4j-crawl] P0 — Run SHOW INDEXES, compare against recommended set: verse_surah_ayah composite range, MENTIONS.from_tfidf/to_tfidf relationship-property indexes. Output a CREATE INDEX migration script for any missing index."
     blockers: []
     spec:
+      query: "SHOW INDEXES YIELD name, type, labelsOrTypes, properties, state ORDER BY name RETURN name, type, labelsOrTypes, properties, state"
       acceptance:
-        - file_exists: data/ralph_analysis_from_neo4j_crawl_audit_indexes.md
-        - file_min_bytes: { path: data/ralph_analysis_from_neo4j_crawl_audit_indexes.md, min: 400 }
+        - file_exists: data/ralph_analysis_from_neo4j_crawl_audit_indexes_detail.md
+        - file_min_bytes: { path: data/ralph_analysis_from_neo4j_crawl_audit_indexes_detail.md, min: 400 }
 
   - id: from_neo4j_crawl_check_neo4j_version
     type: cypher_analysis

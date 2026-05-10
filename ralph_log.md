@@ -34,3 +34,6 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-07T13:18 | discover_new_followups | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |
 | 2026-05-10T11:22 | from_neo4j_crawl_enable_slow_query_log | cypher_analysis | NEEDS_CONTEXT |  | spec missing 'query' or 'script' |
 | 2026-05-10T12:18 | from_neo4j_yt_router_agent | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |
+| 2026-05-10T16:23 | from_neo4j_crawl_audit_indexes | cypher_analysis | NEEDS_CONTEXT |  | spec missing 'query' or 'script' |
+| 2026-05-10T16:23 | from_neo4j_crawl_audit_indexes | cypher_analysis | FAILED |  | wrote ralph_analysis_from_neo4j_crawl_audit_indexes.md / ACCEPTANCE FAILED: file_exists data/ralph_analysis_from_neo4j_crawl_audit_indexes.md=pass; file_min_byt |
+| 2026-05-10T16:24 | from_neo4j_crawl_audit_indexes | cypher_analysis | DONE |  | wrote ralph_analysis_from_neo4j_crawl_audit_indexes.md |
