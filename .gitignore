@@ -51,3 +51,19 @@ pipeline_config_backup.yaml
 eval_baseline.json
 eval_phase1_2_4.json
 eval_all_phases.json
+
+# Per-machine state for the vault auto-update script
+.vault_update_state.json
+
+# Obsidian per-user state (workspace layout, hot-reload caches)
+QKG Obsidian/.obsidian/workspace.json
+QKG Obsidian/.obsidian/workspace-mobile.json
+QKG Obsidian/.trash/
+QKG Obsidian/.obsidian/cache/
+
+# Obsidian community plugin code — large + machine-specific.
+# Recommended plugins are listed in QKG Obsidian/MOC.md; install via Settings.
+QKG Obsidian/.obsidian/plugins/*/main.js
+QKG Obsidian/.obsidian/plugins/*/styles.css
+QKG Obsidian/.obsidian/plugins/*/data.json
+# Keep manifest.json and community-plugins.json so fresh clones know which plugins to install.

@@ -22,10 +22,77 @@ Tag convention: `#research/<area>` — e.g. `#research/retrieval`, `#research/ag
 
 ## Top-level entry points
 
+- [[Operator Quickstart]] — sit-down ritual, 2 minutes, then you're oriented
 - [[CURRENT STATE]] — auto-generated state snapshot (overwritten by `scripts/state_snapshot.py`). Read this first when picking up context.
-- [[Decisions Index]] — ranked decision log
-- [[Research Index]] — all research notes by tag
-- [[Open Questions]] — known unknowns + speculation
+- [[MORNING REPORT]] — refreshed every 12 ticks (created by `scripts/tick_finalize.py`)
+
+## Backfilled content (2026-05-10)
+
+### Decisions (12 ADRs)
+- [[decisions/0001-use-khalifa-translation]]
+- [[decisions/0002-bge-m3-over-minilm]] · [[decisions/0003-multilingual-reranker]]
+- [[decisions/0004-skip-colbert]] · [[decisions/0005-skip-aura-agent]]
+- [[decisions/0006-local-neo4j]] · [[decisions/0007-orchestrator-fresh-subagent]]
+- [[decisions/0008-no-ralph-plugin]] · [[decisions/0009-hand-rolled-retrievers]]
+- [[decisions/0010-hipporag-ppr-negative]] · [[decisions/0011-minicheck-nli-citation-verification]]
+- [[decisions/0012-5-tier-memory-stack]]
+
+### Architecture (9 subsystem notes)
+- [[architecture/overview]] — start here
+- [[architecture/graph-schema]] · [[architecture/data-pipeline]]
+- [[architecture/agent-loop]] · [[architecture/retrieval-pipeline]]
+- [[architecture/reasoning-memory]] · [[architecture/citation-verification]]
+- [[architecture/ralph-loop]] · [[architecture/memory-stack]]
+
+### Research (13 distilled findings)
+- [[research/vector-graphrag-neo4j-docs]] · [[research/agentic-patterns-neo4j]] · [[research/cypher-perf-gds]]
+- [[research/ai-graph-ecosystem-extracts]] · [[research/ralph-loop-best-practices]]
+- [[research/agentic-graphrag-yt-patterns]] · [[research/agent-memory-yt-extracts]] · [[research/mcp-tool-registry-patterns]]
+- [[research/bge-m3-dense-vs-colbert]] · [[research/eval-qrcd-report]] · [[research/hipporag-negative-result]]
+- [[research/neo4j-crawl-all-proposals]] (the held-back proposals from the deep crawl)
+
+### Sessions (8 milestones, oldest → newest)
+- [[sessions/session-2026-04-22-overnight-report]]
+- [[sessions/session-2026-04-24-overnight-report-2]]
+- [[sessions/session-2026-04-26-weekend-report]]
+- [[sessions/session-2026-04-27-research-stack-alternatives]]
+- [[sessions/session-2026-04-28-research-deep-dive]]
+- [[sessions/session-2026-04-28-autonomous-run]]
+- [[sessions/session-2026-05-07-eval-v1-v2]]
+- [[sessions/session-2026-05-10]] — most recent
+
+## Dataview queries (require the Dataview plugin)
+
+If you've installed the Dataview plugin, these will auto-populate. Without it they show as code blocks (harmless).
+
+````markdown
+## Open research with priority ≥ 70
+
+```dataview
+TABLE priority, status, file.link
+FROM "research"
+WHERE status = "open" AND priority >= 70
+SORT priority DESC
+```
+
+## Recent ADRs
+
+```dataview
+TABLE status, date, file.link
+FROM "decisions"
+SORT adr DESC
+LIMIT 5
+```
+
+## Last 7 daily notes
+
+```dataview
+TABLE file.link
+FROM "daily"
+SORT file.name DESC
+LIMIT 7
+```
+````
 
 ## Source documents (in the QKG repo, not in this vault)
 
