@@ -35,5 +35,25 @@
 #       proposed_by: <source>
 
 version: 1
-pending: []
+pending:
+  - proposed_at: "2026-05-11T00:00:00+00:00"
+    proposed_by: "research:blog_neo4j:introducing-create-context-graph"
+    seen_count: 0
+    task:
+      id: from_blog_extend_reasoning_memory_confidence
+      type: agent_creative
+      priority: 62
+      description: "[from-research] Extend reasoning_memory.py to store `thought` and `confidence` properties on TraceStep/ToolCall nodes, aligned with Neo4j Context Graph decision-trace pattern. This makes reasoning traces auditable and replayable."
+      spec:
+        details: |
+          Neo4j Labs' Create Context Graph paper shows thought→action→observation chains with
+          confidence scores (0.0–1.0) on each step. Our reasoning_memory.py already writes
+          :ReasoningTrace → :ToolCall subgraphs but lacks:
+            1. A `thought` string property (the model's rationale before the tool call)
+            2. A `confidence` float (estimated reliability of this step)
+          Changes: update reasoning_memory.py write_tool_call() to accept and store these
+          optional fields; update chat.py to pass them where available from tool-use response.
+        acceptance:
+          - file_exists: data/ralph_agent_from_blog_extend_reasoning_memory_confidence.md
+          - file_min_bytes: {path: data/ralph_agent_from_blog_extend_reasoning_memory_confidence.md, min: 600}
 rejected: []

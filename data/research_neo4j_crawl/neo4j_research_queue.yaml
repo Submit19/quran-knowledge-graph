@@ -43,9 +43,6 @@ blog_neo4j:
   findings_file: data/research_neo4j_crawl/blog_findings.md
   queue:
     # Highest priority — direct hits on our agentic stack
-    - url: https://neo4j.com/blog/genai/introducing-create-context-graph/
-      title: Introducing Create Context Graph
-      relevance: HIGH — directly relevant to our reasoning_memory pattern; likely formalizes what we built
     - url: https://neo4j.com/blog/genai/building-stateful-ai-integrating-aura-agent-lifecycle-with-mcp-and-persistent-memory/
       title: Building Stateful AI — Aura Agent + MCP + Persistent Memory
       relevance: HIGH — full agent memory + MCP integration walkthrough
