@@ -32,3 +32,4 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-07T13:02 | surface_retrieval_noise | cypher_analysis | DONE |  | wrote ralph_analysis_surface_retrieval_noise.md |
 | 2026-05-07T13:02 | discover_new_followups | agent_creative | FAILED |  | wrote ralph_agent_discover_new_followups.md (review before use) / ACCEPTANCE FAILED: file_exists data/ralph_proposed_tasks.yaml=FAIL; file_min_bytes data/ralph_ |
 | 2026-05-07T13:18 | discover_new_followups | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |
+| 2026-05-10T11:22 | from_neo4j_crawl_enable_slow_query_log | cypher_analysis | NEEDS_CONTEXT |  | spec missing 'query' or 'script' |

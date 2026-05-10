@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-10T10:56:59.494993+00:00",
-  "tick_count": 20,
+  "last_tick": "2026-05-10T23:23:04+00:00",
+  "tick_count": 22,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -17,7 +17,8 @@
     "surface_underperforming_questions",
     "propose_search_bar_autocomplete",
     "surface_retrieval_noise",
-    "discover_new_followups"
+    "discover_new_followups",
+    "from_neo4j_crawl_enable_slow_query_log"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -539,10 +540,61 @@
       "tokens_in": 0,
       "tokens_out": 0,
       "api_calls": 0
+    },
+    {
+      "task_id": "from_neo4j_crawl_enable_slow_query_log",
+      "type": "cypher_analysis",
+      "started_at": "2026-05-10T11:22:14.924133+00:00",
+      "finished_at": "2026-05-10T11:22:14.924528+00:00",
+      "status": "NEEDS_CONTEXT",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "",
+      "artefacts": [],
+      "error": "spec missing 'query' or 'script'",
+      "acceptance_results": [],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "from_neo4j_crawl_enable_slow_query_log",
+      "type": "cypher_analysis",
+      "started_at": "2026-05-10T23:23:04+00:00",
+      "finished_at": "2026-05-10T23:23:04+00:00",
+      "status": "DONE",
+      "attempt": 2,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "wrote ralph_analysis_from_neo4j_crawl_enable_slow_query_log.md (analysis + config audit via direct Neo4j query)",
+      "artefacts": [
+        "data/ralph_analysis_from_neo4j_crawl_enable_slow_query_log.md"
+      ],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_exists data/ralph_analysis_from_neo4j_crawl_enable_slow_query_log.md",
+          "passed": true,
+          "detail": "C:\\Users\\alika\\Agent Teams\\quran-graph-standalone\\data\\ralph_analysis_from_neo4j_crawl_enable_slow_query_log.md"
+        },
+        {
+          "check": "file_min_bytes data/ralph_analysis_from_neo4j_crawl_enable_slow_query_log.md >= 250",
+          "passed": true,
+          "detail": "size=6043"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
     }
   ],
   "quarantined_task_ids": [],
-  "attempts": {},
+  "attempts": {
+    "from_neo4j_crawl_enable_slow_query_log": 2
+  },
   "api_usage": {
     "calls_total": 2,
     "tokens_in_total": 1038,
