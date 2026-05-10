@@ -721,6 +721,50 @@ tasks:
       acceptance:
         - python: "True"
 
+  # ── [from-ralph-yt] Jeff Huntley + Dex YouTube conversation 2026-05-10 ────
+  # ── Source: data/research_neo4j_crawl/05_ralph_yt_extract.md ──────────────
+  - id: from_ralph_yt_01_tokenize_claudemd
+    type: cleanup
+    priority: 82
+    description: "[from-ralph-yt] Run CLAUDE.md through tiktoken (cl100k_base). Jeff's rule of thumb: agents.md / CLAUDE.md should be ~60 lines / <3K tokens. Ours is 13.6KB / several hundred lines — almost certainly over the ceiling. If > 3000 tokens, create CLAUDE_INDEX.md (~60 lines, hyperlinks to spec sections) and inject the index instead of the full file in subagent briefs. Compounds across every tick — very high cumulative impact."
+    blockers: []
+    spec:
+      commits_code: true
+      acceptance:
+        - file_exists: data/ralph_analysis_from_ralph_yt_01_tokenize_claudemd.md
+        - file_min_bytes: { path: data/ralph_analysis_from_ralph_yt_01_tokenize_claudemd.md, value: 300 }
+
+  - id: from_ralph_yt_02_filter_test_output
+    type: cleanup
+    priority: 65
+    description: "[from-ralph-yt] Wrap eval_v1.py and Cypher smoke-test scripts with an output filter: suppress PASS lines, emit only FAIL lines + summary count. Jeff: 'Most test runners are trash. They output too many tokens.' Expose as run_tests_filtered.py. Quality gate in ralph_tick.py should call the wrapper so green-run output is <=5 lines."
+    blockers: []
+    spec:
+      commits_code: true
+      acceptance:
+        - file_exists: run_tests_filtered.py
+        - file_min_bytes: { path: run_tests_filtered.py, value: 500 }
+
+  - id: from_ralph_yt_03_audit_negative_prompts
+    type: cleanup
+    priority: 70
+    description: "[from-ralph-yt] Audit ralph_tick.py system prompt, CLAUDE.md, ralph_backlog.yaml descriptions, AND the cron orchestrator brief for negative-form instructions ('do not', 'never', 'avoid'). Jeff: negative phrasing puts the noun in context and the model often acts on the noun, forgetting the negation. Rewrite as positive actions. Our cron brief has multiple 'do NOT do any work yourself' lines — high-leverage rewrite."
+    blockers: []
+    spec:
+      commits_code: true
+      acceptance:
+        - python: "True"
+
+  - id: from_ralph_yt_04_parallel_worktree_spike
+    type: agent_creative
+    priority: 45
+    description: "[from-ralph-yt] Spike: can we run two concurrent ralph ticks in separate git worktrees without conflict? Create proof-of-concept ralph_parallel.py: (a) creates two worktrees from main, (b) assigns one cache-seeding task + one graph-enrichment task, (c) runs both as subprocesses, (d) merges back to main, (e) resolves conflicts. Document patterns/gotchas."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_ralph_yt_04_parallel_worktree_spike.md
+        - file_min_bytes: { path: data/ralph_agent_from_ralph_yt_04_parallel_worktree_spike.md, value: 600 }
+
   # ── [from-research] Promoted from research tick 2026-05-10 ────────────────
   - id: from_research_finetune_bge_m3_qrcd
     type: agent_creative
