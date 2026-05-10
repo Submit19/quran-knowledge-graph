@@ -175,3 +175,166 @@ topics:
     question: Sefaria.org has been a recurring inspiration. What specific architectural choices (sheets, talmud-style cross-references, source-text alignment) could we steal?
     deliverable: Inventory of patterns + specific issues / commits we could reference.
     tags: [architecture, ux]
+
+  # ── Threads surfaced by 2026-05-10 Neo4j ecosystem deep crawl ─────────────
+  # ── Source: data/research_neo4j_crawl/{01,02,03}_*.md ─────────────────────
+  - id: neo4j_2026_04_search_syntax_migration
+    priority: 70
+    status: open
+    question: Neo4j 2026.04+ deprecates db.index.vector.queryNodes in favor of new MATCH ... SEARCH ... IN ( VECTOR INDEX ... ) syntax. Plan version-upgrade timing + Cypher migration for all 21 tools that touch vector indexes.
+    deliverable: Migration script, tool-by-tool diff, version-gate strategy.
+    tags: [neo4j, migration, retrieval]
+
+  - id: page_cache_sizing_for_647s_outlier
+    priority: 78
+    status: open
+    question: The 647s semantic_search outlier strongly suggests cold-cache disk reads dominate. What is server.memory.pagecache.size on the local Neo4j Desktop instance vs actual store + index size? Rule of thumb is page cache >= store + indexes.
+    deliverable: Computed numbers + concrete neo4j.conf change recommendation.
+    tags: [neo4j, perf]
+
+  - id: agent_memory_library_adoption_test
+    priority: 75
+    status: open
+    question: Run client.schema.adopt_existing_graph from neo4j-labs/agent-memory against our 2,662 existing reasoning traces. How much migration is automatic vs manual? Is replacing reasoning_memory.py wholesale viable?
+    deliverable: Migration spike report. If adoption is clean, propose replacement task in ralph_backlog.
+    tags: [neo4j, agent-memory]
+
+  - id: hybridcypher_retriever_one_shot_latency
+    priority: 70
+    status: open
+    question: Latency / throughput delta of (vector -> fetch verse -> 2nd Cypher for tokens) vs single HybridCypherRetriever.retrieval_query round trip. Hypothesis is 30-50% latency reduction on cold cache.
+    deliverable: Benchmark on our 50-question eval set; decision on whether to migrate.
+    tags: [neo4j, perf, retrieval]
+
+  - id: text2cypher_quality_on_qkg_schema
+    priority: 68
+    status: open
+    question: How often does an LLM hand a correct Cypher query for our schema? Build a 30-question test set including morphology + root queries. Benchmark accuracy across Anthropic/OpenAI/free models.
+    deliverable: Test set + accuracy table + fallback policy recommendation.
+    tags: [eval, cypher, agent]
+
+  - id: vector_recall_at_k_vs_brute_force
+    priority: 65
+    status: open
+    question: We LIMIT 5/10/20 from db.index.vector.queryNodes. HNSW recall isn't 100%. Measure recall@K vs brute-force cosine on a sample of 200 queries.
+    deliverable: Recall@K curve; recommendation on whether to bump default LIMIT or switch to brute-force for small queries.
+    tags: [retrieval, eval]
+
+  - id: fastrp_kn_n_as_second_retrieval_channel
+    priority: 65
+    status: open
+    question: Compute 128-d FastRP embeddings on a Verse-Concept-Lemma-Root projection. Add as second vector index. A/B test hybrid retrieval (BGE + FastRP) vs BGE-only on QRCD.
+    deliverable: QRCD numbers for (a) BGE only, (b) BGE + FastRP linear combo with grid-searched weight. Decision recorded.
+    tags: [neo4j, gds, retrieval, embeddings]
+
+  - id: leiden_vs_louvain_qkg
+    priority: 60
+    status: open
+    question: Run Leiden on the same projection used for current Louvain. Compare modularity, community count, qualitative coherence vs current 16-cluster, 0.5324-modularity Louvain.
+    deliverable: Side-by-side report on 100 sample verses; ship/revert recommendation.
+    tags: [neo4j, gds, community]
+
+  - id: gds_in_memory_graph_lifecycle
+    priority: 58
+    status: open
+    question: gds.graph.project graphs live in JVM heap. Need a policy for when to keep / refresh / drop. Recommend nightly materialization + gds.fastRP.write to persistent properties; algos run against materialized embeddings, not live projection.
+    deliverable: Operational doc + sample script.
+    tags: [neo4j, gds, ops]
+
+  - id: query_plan_stability_regression_harness
+    priority: 55
+    status: open
+    question: When we add the recommended indexes, do existing tool plans regress (planner picks new index suboptimally)? Build a regression harness capturing EXPLAIN output for each tool's canonical query and diffs across deploys.
+    deliverable: Harness script + initial baseline JSON.
+    tags: [neo4j, perf, eval]
+
+  - id: query_plan_cache_hit_rate_metric
+    priority: 50
+    status: open
+    question: Neo4j exposes plan-cache metrics (neo4j.cypher.planning.misses, .hits). Track post-parameterization audit to verify Q4 worked.
+    deliverable: Metric collection + baseline measurement.
+    tags: [neo4j, perf, observability]
+
+  - id: composite_relationship_property_index
+    priority: 48
+    status: open
+    question: Our MENTIONS edges have both from_tfidf and to_tfidf. A composite relationship-property index would help queries that filter on both. Verify Neo4j supports composite REL indexes (range type).
+    deliverable: Test schema + benchmark vs single-property index.
+    tags: [neo4j, indexing]
+
+  - id: apoc_levenshtein_vs_lucene_fuzzy
+    priority: 45
+    status: open
+    question: For fuzzy keyword match, is apoc.text.levenshteinSimilarity faster than full-text index Lucene fuzzy query? Benchmark on our 2,636 keyword set.
+    deliverable: ms/op comparison + recommendation.
+    tags: [neo4j, perf, fuzzy]
+
+  - id: hipporag_postmortem_v2
+    priority: 65
+    status: open
+    question: Re-run HippoRAG PPR with narrowed projection (Verse + Concept + Lemma only), tf-idf weighted edges, lower damping (0.5), query-relevance-weighted source nodes. Document A/B vs vanilla on QRCD. If still negative, publish definitive negative-result note and remove the code.
+    deliverable: Comparative QRCD numbers + decision.
+    tags: [neo4j, gds, retrieval, hipporag]
+
+  - id: node_similarity_for_related_to
+    priority: 50
+    status: open
+    question: Replace or augment 51K cosine-derived RELATED_TO edges with gds.nodeSimilarity (Jaccard on shared Concepts). Measure cross-surah ratio + qualitative relevance vs current.
+    deliverable: Comparison report; keep cosine / swap to Jaccard / union.
+    tags: [neo4j, gds, related]
+
+  - id: multi_label_vector_index
+    priority: 45
+    status: open
+    question: Could a single vector index FOR (n:Verse|Token|Lemma) replace per-label retrieval in cross-grain searches (e.g., "find passages whose tokens or lemmas semantically match X")?
+    deliverable: Schema test + retrieval quality A/B.
+    tags: [neo4j, vector, schema]
+
+  - id: cypher_25_hamming_binary_signature
+    priority: 40
+    status: open
+    question: Cypher 25 supports vector_distance(..., 'HAMMING'). At what dataset size does a 256-bit binary signature index outperform our cosine index for prefilter? Currently no value at 50K vectors; worth a one-shot synthetic test on 5M random vectors.
+    deliverable: Synthetic benchmark + decision.
+    tags: [neo4j, vector]
+
+  - id: openai_genai_vector_encode_in_cypher
+    priority: 38
+    status: open
+    question: Measure whether having an in-Cypher embedder (genai.vector.encode) is worth the cost of maintaining a 5th index for chatbot use cases where Python preprocessing is unavailable.
+    deliverable: Cost/benefit analysis; specific use cases enumerated.
+    tags: [neo4j, embeddings]
+
+  - id: jvm_simd_flag_impact
+    priority: 38
+    status: open
+    question: Measure verse-search latency with and without --add-modules=jdk.incubator.vector on our actual hardware.
+    deliverable: ms/op A/B + recommendation.
+    tags: [neo4j, perf, jvm]
+
+  - id: gliner_glirel_quran_pilot
+    priority: 50
+    status: open
+    question: Run GLiNER + GLiREL 50-surah pilot to estimate POLE+O entity coverage and dedup quality on Quran translations before any schema change.
+    deliverable: Coverage report + recommendation on whether to swap our hand-rolled extractors.
+    tags: [arabic, ner, llm, kg-construction]
+
+  - id: page_as_memory_pattern
+    priority: 45
+    status: open
+    question: Page-as-memory pattern from the Neo4j Stateful AI blog. Should QKG store learned knowledge (e.g., "Surah 9 has unusual basmala absence") as (:Page {path, content}) — agent's growing playbook?
+    deliverable: Pattern inventory + 3 sample knowledge entries we'd seed.
+    tags: [agent-memory, learning]
+
+  - id: aura_agent_cost_model
+    priority: 40
+    status: open
+    question: External Aura Agent call price × ~3 calls/chat × expected QPS — does Text2Cypher fallback pay for itself at our usage levels?
+    deliverable: Cost model spreadsheet + go/no-go.
+    tags: [neo4j, aura, cost]
+
+  - id: neo4j_skills_install_test
+    priority: 35
+    status: open
+    question: Does installing neo4j-contrib/neo4j-skills via npx skills add ... overlap or conflict with our existing claude-api skill? 30-min spike.
+    deliverable: Install test + skill activation matrix.
+    tags: [tooling, skills]

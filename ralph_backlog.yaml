@@ -585,3 +585,86 @@ tasks:
     description: "After each tick, append a one-line status to AUTONOMOUS_RUN_2026-04-28.md or a new RALPH_LOG.md"
     blockers: []
     spec: {}
+
+  # ── [from-neo4j-crawl] Top 8 actionable tasks from the 2026-05-10 ─────────
+  # ── deep crawl of neo4j.com/docs, GraphAcademy, neo4j.com/resources ───────
+  # ── Source: data/research_neo4j_crawl/{01,02,03}_*.md ─────────────────────
+  - id: from_neo4j_crawl_enable_slow_query_log
+    type: cypher_analysis
+    priority: 90
+    description: "[from-neo4j-crawl] P0 — Add db.logs.query.enabled=INFO and db.logs.query.threshold=500ms to neo4j.conf, restart, capture the 647s semantic_search outlier in query.log with full Cypher, params, page hits/faults, elapsed."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_analysis_from_neo4j_crawl_enable_slow_query_log.md
+        - file_min_bytes: { path: data/ralph_analysis_from_neo4j_crawl_enable_slow_query_log.md, value: 250 }
+
+  - id: from_neo4j_crawl_audit_indexes
+    type: cypher_analysis
+    priority: 88
+    description: "[from-neo4j-crawl] P0 — Run SHOW INDEXES, compare against recommended set: verse_surah_ayah composite range, MENTIONS.from_tfidf/to_tfidf relationship-property indexes. Output a CREATE INDEX migration script for any missing index."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_analysis_from_neo4j_crawl_audit_indexes.md
+        - file_min_bytes: { path: data/ralph_analysis_from_neo4j_crawl_audit_indexes.md, value: 400 }
+
+  - id: from_neo4j_crawl_check_neo4j_version
+    type: cypher_analysis
+    priority: 85
+    description: "[from-neo4j-crawl] Run CALL dbms.components() on the live quran DB, confirm whether we're on 2026.01+ (in-index filtering supported) or earlier (filters fall back to brute-force). Confirm --add-modules=jdk.incubator.vector JVM flag set. Documents capability tier for downstream tasks."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_analysis_from_neo4j_crawl_check_neo4j_version.md
+        - file_min_bytes: { path: data/ralph_analysis_from_neo4j_crawl_check_neo4j_version.md, value: 200 }
+
+  - id: from_neo4j_crawl_trace_vector_index
+    type: agent_creative
+    priority: 82
+    description: "[from-neo4j-crawl][answer-quality][opus] Move trace embedding from Query.query_embedding to ReasoningTrace.trace_embedding. Build new vector index. Update tool_recall_similar_query to return {past_query, past_answer, tool_sequence: [{tool, args}, ...]} — full playbook, not just answer text. Lets the planner skip already-explored tools. Direct answer-quality impact (cache feeder)."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_neo4j_crawl_trace_vector_index.md
+        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_trace_vector_index.md, value: 600 }
+
+  - id: from_neo4j_crawl_adopt_graphrag_retrievers
+    type: agent_creative
+    priority: 80
+    description: "[from-neo4j-crawl][answer-quality][opus] Spike a quran_graph/retrievers.py module wrapping VectorRetriever / HybridRetriever / HybridCypherRetriever from neo4j-graphrag-python. Migrate tool_semantic_search as POC. Preserve our reranker + citation verifier downstream. Gives us filters DSL ($in/$or/$gte) and effective_search_ratio overfetch we don't have."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_neo4j_crawl_adopt_graphrag_retrievers.md
+        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_adopt_graphrag_retrievers.md, value: 700 }
+
+  - id: from_neo4j_crawl_single_shot_vector_traversal
+    type: agent_creative
+    priority: 78
+    description: "[from-neo4j-crawl][answer-quality][opus] Refactor tool_semantic_search to do vector query + 1-hop typed-edge expansion in a SINGLE Cypher statement. Eliminates a round trip per call; expected p50 latency drop ≥30%."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_neo4j_crawl_single_shot_vector_traversal.md
+        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_single_shot_vector_traversal.md, value: 700 }
+
+  - id: from_neo4j_crawl_arabic_fulltext_index
+    type: agent_creative
+    priority: 75
+    description: "[from-neo4j-crawl][answer-quality] Add FULLTEXT INDEX with the Arabic analyzer over Verse.arabicPlain. Switch tool_search_keyword Arabic path to use db.index.fulltext.queryNodes instead of CONTAINS / regex. Supports Lucene fuzzy for typo tolerance. Expected: p95 Arabic-keyword tool_search_keyword <200ms."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_neo4j_crawl_arabic_fulltext_index.md
+        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_arabic_fulltext_index.md, value: 500 }
+
+  - id: from_neo4j_crawl_pagination_cursors
+    type: agent_creative
+    priority: 72
+    description: "[from-neo4j-crawl][answer-quality] Add cursor-based pagination to the 8 search/retrieval tools. Tool input gets optional cursor: str, response includes next_cursor. Cap response token size via QKG_RESPONSE_TOKEN_LIMIT. Long-tail surahs currently truncate at 25 hits — fixes silent answer-quality loss."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_neo4j_crawl_pagination_cursors.md
+        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_pagination_cursors.md, value: 600 }
