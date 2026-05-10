@@ -43,9 +43,7 @@ blog_neo4j:
   findings_file: data/research_neo4j_crawl/blog_findings.md
   queue:
     # Highest priority — direct hits on our agentic stack
-    - url: https://neo4j.com/blog/agentic-ai/context-engineering-tools/
-      title: Best Tools for Context Engineering in Agentic AI
-      relevance: HIGH — survey of MCP + GraphRAG tools
+    # [FETCHED 2026-05-11] context-engineering-tools — findings in blog_findings.md
     - url: https://neo4j.com/blog/agentic-ai/agent-tools/
       title: Agent tools — what they are, how AI agents use them
       relevance: HIGH — tool design principles

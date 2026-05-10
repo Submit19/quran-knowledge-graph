@@ -128,3 +128,32 @@ Neo4j Labs released a community-driven skill framework: structured folders with 
 
 ### Proposed Tasks
 - Bump priority of `from_ralph_yt_01_tokenize_claudemd` (currently p82) — Neo4j's own approach validates this architecture.
+
+---
+
+## https://neo4j.com/blog/agentic-ai/context-engineering-tools/
+**Fetched:** 2026-05-11
+**Title:** Best Tools for Context Engineering in Agentic AI
+
+### TL;DR
+Survey of agentic AI tools from Neo4j's perspective. Validates QKG's hybrid retrieval + tool-driven design. Adds strategic framing around memory layering (short-term/long-term/reasoning), MCP standardization, and evaluation-as-production-requirement. No novel code patterns — mostly architectural guidance.
+
+### Key Takeaways
+
+1. **Tool contract clarity** — tools with explicit input/output schemas reduce hallucination. QKG's 21 tools are correct but could benefit from stricter JSON schema enforcement per-tool (reduce ambiguous LLM interpretation).
+
+2. **Memory layering validated** — short-term (session), long-term (entity graph), reasoning (decision traces). QKG only has the reasoning-trace layer (`reasoning_memory.py`). Short-term session memory (`/chat history` field exists but is always sent as `[]`) is the highest-priority gap.
+
+3. **GraphRAG hop pattern** — explicitly endorsed: "traverse graph to pull richer connected facts." QKG's `traverse_topic` + `find_path` already implement this. The article doesn't add anything novel over our existing implementation.
+
+4. **MCP as standardization target** — Neo4j recommends MCP as the interop layer for tool exposure. Our hand-rolled dispatch is functionally equivalent but non-standard. MCP migration would improve multi-backend portability (noted as future, not urgent).
+
+5. **LLM-as-judge evaluation** — context relevance + groundedness + answer relevance as three axes. Our existing NLI/MiniCheck covers groundedness; context relevance (is the retrieved verse actually useful?) and answer relevance are missing evaluation dimensions.
+
+6. **Semantic chunking by boundary** — for Quranic text, ayah-boundary chunking is already our unit (each Verse node IS one ayah). Article validates this; no change needed.
+
+### Verdict
+**Low incremental value** — this post is more validating than novel for QKG. The only new actionable angle is the evaluation gap: context relevance scoring (is the retrieved verse relevant to the query?) is not currently measured.
+
+### Proposed Tasks
+- Add context-relevance evaluation dimension to eval harness: per-query measure of whether retrieved verses actually address the question (LLM-as-judge). Estimated: 1 new eval metric in `eval_v1.py`.
