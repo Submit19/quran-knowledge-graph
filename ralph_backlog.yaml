@@ -616,6 +616,7 @@ tasks:
     description: "[from-neo4j-crawl] Run CALL dbms.components() on the live quran DB, confirm whether we're on 2026.01+ (in-index filtering supported) or earlier (filters fall back to brute-force). Confirm --add-modules=jdk.incubator.vector JVM flag set. Documents capability tier for downstream tasks."
     blockers: []
     spec:
+      query: "CALL dbms.components() YIELD name, versions, edition RETURN name, versions, edition"
       acceptance:
         - file_exists: data/ralph_analysis_from_neo4j_crawl_check_neo4j_version.md
         - file_min_bytes: { path: data/ralph_analysis_from_neo4j_crawl_check_neo4j_version.md, min: 200 }

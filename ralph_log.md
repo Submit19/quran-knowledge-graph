@@ -37,3 +37,7 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-10T16:23 | from_neo4j_crawl_audit_indexes | cypher_analysis | NEEDS_CONTEXT |  | spec missing 'query' or 'script' |
 | 2026-05-10T16:23 | from_neo4j_crawl_audit_indexes | cypher_analysis | FAILED |  | wrote ralph_analysis_from_neo4j_crawl_audit_indexes.md / ACCEPTANCE FAILED: file_exists data/ralph_analysis_from_neo4j_crawl_audit_indexes.md=pass; file_min_byt |
 | 2026-05-10T16:24 | from_neo4j_crawl_audit_indexes | cypher_analysis | DONE |  | wrote ralph_analysis_from_neo4j_crawl_audit_indexes.md |
+| 2026-05-10T17:23 | from_neo4j_crawl_check_neo4j_version | cypher_analysis | NEEDS_CONTEXT |  | spec missing 'query' or 'script' |
+| 2026-05-10T17:23 | from_neo4j_crawl_check_neo4j_version | cypher_analysis | NEEDS_CONTEXT |  | spec missing 'query' or 'script' |
+| 2026-05-10T17:23 | from_neo4j_crawl_check_neo4j_version | cypher_analysis | NEEDS_CONTEXT |  |  / QUARANTINED after 3 attempts |
+| 2026-05-11T00:00 | from_neo4j_crawl_check_neo4j_version | cypher_analysis | DONE |  | Neo4j 2026.02.2 Enterprise; no in-index pre-filter (3-arg proc only); SIMD via Lucene; quant=True all indexes |

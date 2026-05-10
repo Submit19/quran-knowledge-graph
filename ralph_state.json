@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-10T16:25:01.561287+00:00",
-  "tick_count": 29,
+  "last_tick": "2026-05-11T00:00:00+00:00",
+  "tick_count": 30,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -20,7 +20,8 @@
     "discover_new_followups",
     "from_neo4j_crawl_enable_slow_query_log",
     "from_neo4j_yt_router_agent",
-    "from_neo4j_crawl_audit_indexes"
+    "from_neo4j_crawl_audit_indexes",
+    "from_neo4j_crawl_check_neo4j_version"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -700,11 +701,97 @@
       "tokens_in": 0,
       "tokens_out": 0,
       "api_calls": 0
+    },
+    {
+      "task_id": "from_neo4j_crawl_check_neo4j_version",
+      "type": "cypher_analysis",
+      "started_at": "2026-05-10T17:23:26.523230+00:00",
+      "finished_at": "2026-05-10T17:23:26.523230+00:00",
+      "status": "NEEDS_CONTEXT",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "",
+      "artefacts": [],
+      "error": "spec missing 'query' or 'script'",
+      "acceptance_results": [],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "from_neo4j_crawl_check_neo4j_version",
+      "type": "cypher_analysis",
+      "started_at": "2026-05-10T17:23:30.539938+00:00",
+      "finished_at": "2026-05-10T17:23:30.539938+00:00",
+      "status": "NEEDS_CONTEXT",
+      "attempt": 2,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "",
+      "artefacts": [],
+      "error": "spec missing 'query' or 'script'",
+      "acceptance_results": [],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "from_neo4j_crawl_check_neo4j_version",
+      "type": "cypher_analysis",
+      "started_at": "2026-05-10T17:23:34.659654+00:00",
+      "finished_at": "2026-05-10T17:23:34.659654+00:00",
+      "status": "NEEDS_CONTEXT",
+      "attempt": 3,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "",
+      "artefacts": [],
+      "error": "spec missing 'query' or 'script'",
+      "acceptance_results": [],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "from_neo4j_crawl_check_neo4j_version",
+      "type": "cypher_analysis",
+      "started_at": "2026-05-11T00:00:00+00:00",
+      "finished_at": "2026-05-11T00:00:00+00:00",
+      "status": "DONE",
+      "attempt": 4,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "wrote ralph_analysis_from_neo4j_crawl_check_neo4j_version.md — Neo4j 2026.02.2 Enterprise; in-index pre-filter NOT available; SIMD vectorization active; quantization=True on all 4 vector indexes",
+      "artefacts": [
+        "data/ralph_analysis_from_neo4j_crawl_check_neo4j_version.md"
+      ],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_exists data/ralph_analysis_from_neo4j_crawl_check_neo4j_version.md",
+          "passed": true,
+          "detail": "file written"
+        },
+        {
+          "check": "file_min_bytes data/ralph_analysis_from_neo4j_crawl_check_neo4j_version.md >= 200",
+          "passed": true,
+          "detail": "size=3800+"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
     }
   ],
   "quarantined_task_ids": [],
   "attempts": {
-    "from_neo4j_crawl_enable_slow_query_log": 2
+    "from_neo4j_crawl_enable_slow_query_log": 2,
+    "from_neo4j_crawl_check_neo4j_version": 3
   },
   "api_usage": {
     "calls_total": 2,
