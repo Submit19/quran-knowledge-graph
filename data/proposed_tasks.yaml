@@ -56,4 +56,28 @@ pending:
         acceptance:
           - file_exists: data/ralph_agent_from_blog_extend_reasoning_memory_confidence.md
           - file_min_bytes: {path: data/ralph_agent_from_blog_extend_reasoning_memory_confidence.md, min: 600}
+  - proposed_at: "2026-05-11T00:40:00+00:00"
+    proposed_by: "research:blog_neo4j:building-stateful-ai-integrating-aura-agent-lifecycle-with-mcp-and-persistent-memory"
+    seen_count: 0
+    task:
+      id: from_blog_stateful_ai_memory_path_convention
+      type: cleanup
+      priority: 58
+      description: "[from-research] Add structured path convention to ReasoningTrace nodes in reasoning_memory.py — store session/<id> style path property so traces are topically discoverable, aligned with Neo4j stateful-AI wiki memory pattern."
+      spec:
+        details: |
+          Neo4j's stateful-AI blog post (tomasonjo) shows agent memory organised as
+          filesystem-style wiki pages: databases/<dbid>.md, agents/<id>.md, learnings/<topic>.md.
+          QKG's reasoning_memory.py writes flat :ReasoningTrace nodes with no path-style
+          property. Adding a `memory_path` property (e.g. "sessions/<session_id>/traces/<ts>")
+          would enable:
+            - Retrieval by session without full scan
+            - "What did we learn about topic X" queries via prefix match
+            - Future MCP memory-tool exposure (read_memory, search_memory)
+          Change scope: reasoning_memory.py write_trace() — add optional `memory_path` kwarg
+          and SET it on the :ReasoningTrace node. Update STATE_SNAPSHOT to count traces by path prefix.
+        acceptance:
+          - file_exists: data/ralph_agent_from_blog_stateful_ai_memory_path_convention.md
+          - file_min_bytes: {path: data/ralph_agent_from_blog_stateful_ai_memory_path_convention.md, min: 500}
+
 rejected: []

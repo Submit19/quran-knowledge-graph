@@ -43,9 +43,6 @@ blog_neo4j:
   findings_file: data/research_neo4j_crawl/blog_findings.md
   queue:
     # Highest priority — direct hits on our agentic stack
-    - url: https://neo4j.com/blog/genai/building-stateful-ai-integrating-aura-agent-lifecycle-with-mcp-and-persistent-memory/
-      title: Building Stateful AI — Aura Agent + MCP + Persistent Memory
-      relevance: HIGH — full agent memory + MCP integration walkthrough
     - url: https://neo4j.com/blog/developer/introducing-neo4j-agent-skills/
       title: Introducing Neo4j Agent Skills
       relevance: HIGH — official agent skill framework

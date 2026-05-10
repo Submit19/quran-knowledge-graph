@@ -30,3 +30,37 @@ Neo4j Labs scaffolding CLI (`uvx create-context-graph`) that generates full-stac
 ### Proposed Tasks
 - Extend `reasoning_memory.py` to add `thought` and `confidence` properties to `:TraceStep` / `:ToolCall` nodes (medium effort, high audit value).
 - Document POLE+O entity taxonomy mapping for QKG domain (Verse, Surah, ArabicRoot, Concept, etc.) as an ADR in QKG Obsidian.
+
+---
+
+## https://neo4j.com/blog/genai/building-stateful-ai-integrating-aura-agent-lifecycle-with-mcp-and-persistent-memory/
+**Fetched:** 2026-05-11
+**Title:** Building Stateful AI — Aura Agent Lifecycle + MCP + Persistent Memory
+
+### TL;DR
+Full walkthrough of a two-database architecture where one Neo4j instance holds domain data and a second (local) instance holds agent memory as a wiki-style graph. Seven memory tools (write/read/append/rename/delete/list/search + backlinks) are exposed via MCP. Agents accumulate "distilled lessons" across sessions, modelled as `:Page -[:LINKS_TO]-> :Page` nodes with filesystem-style paths. Closed-loop self-improvement: sub-agent executes → evaluates → writes lessons → next iteration reads them.
+
+### Key Takeaways
+
+1. **Two-database separation** — primary domain DB + dedicated memory DB. Clean isolation: agents can't pollute production data with reasoning artefacts. QKG relevance: we currently write reasoning traces INTO the quran DB; a dedicated memory DB would let us wipe/rollback traces without touching verse data.
+
+2. **Filesystem-style memory paths** — `databases/<dbid>.md`, `agents/<agent_id>.md`, `learnings/<topic>.md`, `log.md`. Organising by topic (not conversation) enables retrieval independent of session. QKG's reasoning_memory.py could adopt a structured path convention on ReasoningTrace nodes.
+
+3. **Eight memory tools as MCP** — write, read, append, rename, delete, list, search, find_backlinks. The backlinks tool enables "what else references this memory?" traversal — powerful for cross-cutting lessons. QKG doesn't expose memory tools via MCP yet; this is the pattern to follow.
+
+4. **Schema probe via temporary agent** — spin up an agent with APOC `apoc.meta.schema()` + `SHOW INDEXES` tools, query, destroy. Useful pattern for schema introspection without direct Cypher write access.
+
+5. **Soft-delete flag** — `deleted: bool` on Page nodes instead of hard deletion. Preserves audit trail. QKG's existing nodes don't have soft-delete; worth adding to ReasoningTrace if we want rollback.
+
+6. **Namespace via `wiki` field** — Page nodes carry a `wiki` string grouping memories into logical spaces. Could map to QKG's `session_id` or `loop_run_id` for trace isolation.
+
+7. **Token cost warning** — self-learning loop "uses significant LLM tokens." Explicitly documented as a trade-off. Relevant to QKG's 24h call budget in ralph_run.py — memory writes shouldn't be in the hot path.
+
+8. **Reference impl**: `github.com/tomasonjo/aura-agents-management-mcp` — full MCP server with Aura API client + graph memory CRUD + search.
+
+### Verdict
+**Highly actionable.** The two-database architecture and structured path convention are both concrete improvements to QKG's current reasoning_memory approach. The MCP exposure of memory tools is a natural next step once the ralph loop is stable. The backlinks tool pattern is novel relative to what we have.
+
+### Proposed Tasks
+- Add structured path convention (`session/<id>.md`-style) to ReasoningTrace nodes in reasoning_memory.py — low effort, high discoverability payoff.
+- Spike: expose QKG reasoning_memory as MCP server tools (read/search backlinks at minimum) for agent introspection.
