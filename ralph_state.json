@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-07T13:18:52.173194+00:00",
-  "tick_count": 19,
+  "last_tick": "2026-05-10T10:56:59.494993+00:00",
+  "tick_count": 20,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -521,6 +521,20 @@
           "passed": true,
           "detail": "size=7723"
         }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "research:bge_m3_dense_vs_colbert",
+      "type": "research",
+      "started_at": "2026-05-10T10:56:59.494993+00:00",
+      "finished_at": "2026-05-10T10:56:59.494993+00:00",
+      "status": "DONE",
+      "notes": "Skip ColBERT, fine-tune dense instead; promoted from_research_finetune_bge_m3_qrcd",
+      "artefacts": [
+        "data/research_bge_m3_dense_vs_colbert.md"
       ],
       "tokens_in": 0,
       "tokens_out": 0,
