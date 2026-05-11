@@ -46,6 +46,13 @@ QUESTIONS_SURAH = [
     "Summarize Surah Al-Ikhlas (112) and its main insights.",
 ]
 
+QUESTIONS_TARGETED = [
+    "How many times does the letter Qaf appear in Surah Qaf (50)?",
+    "How many distinct verses mention Abraham (Ibrahim) across all surahs? Give the count.",
+    "Find verses that contain the word 'kawthar' and explain its meaning.",
+    "Compare the descriptions of the people of Lot across Surahs 7, 11, 26, and 27.",
+    "Which verses use the concept of 'tawakkul' (trust in God) and what do they teach about it?",
+]
 
 EVAL_MODEL = os.environ.get("EVAL_MODEL", "openai/gpt-oss-120b:free")
 EVAL_LOCAL_ONLY = os.environ.get("EVAL_LOCAL_ONLY", "0") == "1"
