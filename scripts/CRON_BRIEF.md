@@ -19,8 +19,8 @@ If `CLAUDE_INDEX.md` doesn't exist, fall back to `CLAUDE.md`.
 
 ## Tool-use guidance
 
-- Soft target: ≤30 tool calls per tick. Past 30, ask yourself "am I making real progress or spiraling on a fix-retry loop?" Spec-format failures (`NEEDS_CONTEXT` → `FAILED` → manual recovery) are the classic anti-pattern; if you see one, fix the spec ONCE and move on rather than retrying the same broken pattern.
-- Hard cap: 40 tool calls. If you legitimately need more, your scope is too big — split the task in a proposal.
+- Soft target: ≤35 tool calls per tick. Past 35, ask yourself "am I making real progress or spiraling on a fix-retry loop?" Spec-format failures (`NEEDS_CONTEXT` → `FAILED` → manual recovery) are the classic anti-pattern; if you see one, fix the spec ONCE and move on rather than retrying the same broken pattern.
+- Hard cap: 50 tool calls. If you legitimately need more, your scope is too big — split the task in a proposal.
 
 ## Procedure
 
@@ -29,7 +29,7 @@ If `CLAUDE_INDEX.md` doesn't exist, fall back to `CLAUDE.md`.
 2. **Pull latest:** `git pull --rebase`.
 
 3. **Decide cycle from `ralph_state.json` `tick_count`:**
-   - tick_count % 12 == 0 → MAINTENANCE tick
+   - tick_count % 6 == 0 → MAINTENANCE tick (every 6 fires; was 12 — Max 20x can absorb more frequent hygiene)
    - else if tick_count % 2 == 0 → IMPL tick (proposal-review at start)
    - else → RESEARCH tick
 
@@ -47,17 +47,22 @@ If `CLAUDE_INDEX.md` doesn't exist, fall back to `CLAUDE.md`.
 
    **4b. IMPL work.** Pick highest-priority pending task in {agent_creative, cypher_analysis, cleanup} from `ralph_backlog.yaml` that's not done/quarantined.
    - cypher_analysis or cleanup: do the work directly. Local Neo4j: NEO4J_URI=neo4j://127.0.0.1:7687, user=neo4j, password=Bismillah19, database=quran. Then `python ralph_tick.py --task <id>`.
-   - agent_creative: if description contains `[opus]`, spawn a NESTED general-purpose subagent with `model="opus"` for the deliverable. Else handle inline. Then `RALPH_AGENT_BACKEND=manual python ralph_tick.py --task <id>`.
+   - agent_creative: if description contains `[opus]`, spawn a NESTED general-purpose subagent with `model="opus"` for the deliverable.
+     - **Check for a pre-warmed plan at `data/sonnet_drafts/<task_id>.md`** before spawning Opus. If present, INCLUDE its full text in the Opus subagent's prompt as "Pre-warmed implementation plan (use as starting point, verify before executing)". This saves Opus tokens by skipping cold discovery.
+     - Else handle inline. Then `RALPH_AGENT_BACKEND=manual python ralph_tick.py --task <id>`.
    - **Spec format gotcha:** `cypher_analysis` tasks need either `query` or `script` field in their spec, plus `query_kind: python_script` if using a script. If a task fails twice with NEEDS_CONTEXT due to spec format, FIX THE SPEC in `ralph_backlog.yaml` and re-run — don't retry the broken spec.
 
 5. **RESEARCH tick procedure:**
-   a. Read `data/research_neo4j_crawl/neo4j_research_queue.yaml`. Pop ONE item from highest-priority non-empty source.
-   b. If handler == "yt-transcript-skill": `python "C:\Users\alika\.claude\skills\yt-transcript-skill\scripts\fetch_transcript.py" <url> --output "data/research_neo4j_crawl/yt_<videoid>.md" --timestamps`. If 429/IPBlocked: re-add to queue and PICK A DIFFERENT SOURCE.
-   c. Else (WebFetch): **Check `data/research_cache/` first** — Haiku may have pre-fetched this URL. Each cached page has a slug = md5(url)[:12] with `<slug>.html` + `<slug>.meta.json`. If a cache hit exists, read the HTML locally (faster + avoids 429s); otherwise WebFetch the URL with a focused QKG-relevance prompt.
-   d. Extract findings into the source's `findings_file` keyed by URL/ID. TL;DR + key takeaways + verdict.
-   e. **If actionable: append to `data/proposed_tasks.yaml` under `pending:` (NOT directly to ralph_backlog.yaml).**
-   f. Save the queue YAML back (popped item removed).
-   g. Bump `ralph_state.json` tick_count by 1.
+   a. Read `data/research_neo4j_crawl/neo4j_research_queue.yaml`. Pop **up to 3 items** from the highest-priority non-empty source, BUT ONLY if all 3 are from the same source AND the handler is WebFetch (NOT yt-transcript-skill — those cap at 1 due to rate limits).
+      - If only 1 item exists in the top source, pop 1. If 2-3, pop 2-3. Default to 2 if uncertain.
+      - Single-item processing is fine — don't over-batch if the items are heterogeneous or low quality.
+   b. For each popped item:
+      - If handler == "yt-transcript-skill": `python "C:\Users\alika\.claude\skills\yt-transcript-skill\scripts\fetch_transcript.py" <url> --output "data/research_neo4j_crawl/yt_<videoid>.md" --timestamps`. If 429/IPBlocked: re-add to queue and STOP popping more items this tick.
+      - Else (WebFetch): **Check `data/research_cache/` first** — Haiku may have pre-fetched. Slug = md5(url)[:12], paths `<slug>.html` + `<slug>.meta.json`. If cache hit, read the HTML locally; otherwise WebFetch.
+   c. Extract findings into the source's `findings_file` keyed by URL/ID (one section per item). TL;DR + key takeaways + verdict.
+   d. **For each actionable finding: append to `data/proposed_tasks.yaml` under `pending:` (NOT directly to ralph_backlog.yaml).**
+   e. Save the queue YAML back with all popped items removed.
+   f. Bump `ralph_state.json` tick_count by 1 (single bump, regardless of items processed).
 
 6. **MAINTENANCE tick (every 12th):** Dedupe / retire / re-rank across all backlogs. Run proposal review first. Commit "ralph maintenance: tick <N>".
 

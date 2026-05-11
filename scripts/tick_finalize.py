@@ -109,6 +109,11 @@ def main():
     # Set HAIKU_PREP_DISABLED=1 to skip (e.g. for offline runs).
     if os.environ.get("HAIKU_PREP_DISABLED") != "1":
         run("haiku_prep.py")
+    # Sonnet pre-warming for [opus] backlog tasks. No-op if no opus task is
+    # next-up. Net-positive: Sonnet draft (~$0.10) saves Opus tokens (~$0.50).
+    # Set SONNET_PREP_DISABLED=1 to skip.
+    if os.environ.get("SONNET_PREP_DISABLED") != "1":
+        run("sonnet_prep.py")
     maybe_morning_report()
     print(f"[tick_finalize] done")
 
