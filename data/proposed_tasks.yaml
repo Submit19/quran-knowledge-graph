@@ -1,21 +1,10 @@
 version: 1
-pending:
-- task_id: from_blog_betweenness_centrality_rerank
-  proposed_by: research:blog_neo4j:turning-servicenow-data-into-connected-enterprise-intelligence
-  proposed_at: '2026-05-12T00:00:00+00:00'
-  seen_count: 0
-  description: >
-    Compute betweenness centrality for all Verse nodes using GDS (or NetworkX from
-    existing graph_stats.json data), store as Verse.betweenness property in Neo4j,
-    and incorporate as an optional re-ranking signal in retrieval_gate.py alongside
-    cross-encoder scores. Hypothesis: conceptually central verses (high betweenness)
-    are more likely to be relevant to broad/thematic queries.
-    Acceptance: data/ralph_agent_from_blog_betweenness_centrality_rerank.md >= 600 bytes
-    (design doc + implementation plan + eval protocol).
-  priority: 40
-  type: agent_creative
-  haiku_notes: null
+pending: []
 approved:
+- approved_at: '2026-05-12T04:00:00+00:00'
+  reason: actionable — no duplicate in backlog; betweenness centrality as optional reranking signal is novel and low-risk. Added at p40.
+  task_id: from_blog_betweenness_centrality_rerank
+  proposed_by: research:blog_neo4j:turning-servicenow-data-into-connected-enterprise-intelligence
 - approved_at: '2026-05-12T00:00:00+00:00'
   reason: actionable (Haiku confirmed, no duplicate in backlog) — HyDE is a novel pattern; synergistic with from_neo4j_crawl_single_shot_vector_traversal. Added at p55.
   task_id: from_blog_hyde_semantic_search_spike

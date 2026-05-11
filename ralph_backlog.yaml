@@ -1003,6 +1003,17 @@ tasks:
         - file_exists: data/ralph_agent_from_blog_hyde_semantic_search_spike.md
         - file_min_bytes: { path: data/ralph_agent_from_blog_hyde_semantic_search_spike.md, min: 800 }
 
+  # ── [from-blog] Approved from proposed_tasks.yaml tick 59 ──────────────────
+  - id: from_blog_betweenness_centrality_rerank
+    type: agent_creative
+    priority: 40
+    description: "[from-blog][answer-quality] Compute betweenness centrality for all Verse nodes using GDS (or NetworkX from existing graph_stats.json data), store as Verse.betweenness property in Neo4j, and incorporate as an optional re-ranking signal in retrieval_gate.py alongside cross-encoder scores. Hypothesis: conceptually central verses (high betweenness) are more likely to be relevant to broad/thematic queries."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_blog_betweenness_centrality_rerank.md
+        - file_min_bytes: { path: data/ralph_agent_from_blog_betweenness_centrality_rerank.md, min: 600 }
+
 # ── Retired tasks ─────────────────────────────────────────────────────────────
 # Tasks moved here when they are obsolete (superseded, subsumed, or no longer applicable).
 # Kept for audit trail — do NOT re-activate. Done tasks stay in tasks: list above and
