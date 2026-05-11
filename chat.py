@@ -1625,16 +1625,22 @@ TOOLS = [
     {
         "name": "search_keyword",
         "description": (
-            "Search for all Quran verses that mention a specific keyword. "
-            "Results are grouped by surah and ranked by relevance (TF-IDF score). "
-            "Use this to find where a concept appears across the Quran."
+            "Find Quran verses that contain a specific stemmed keyword (TF-IDF graph match). "
+            "Results grouped by surah, ranked by TF-IDF relevance score. "
+            "USE WHEN: you need verses where a specific English word appears (e.g. 'covenant', "
+            "'witness', 'orphan'). Best as a precision tool when you already have the right word. "
+            "DO NOT USE WHEN: the query is an abstract concept — use concept_search instead "
+            "(it auto-expands 'forgiveness' to 'forgive/forgiver/forgiveness'). "
+            "DO NOT USE WHEN: the meaning matters more than the exact word — use semantic_search. "
+            "Returns: {keyword, total_verses, by_surah: {surah_name: [{verse_id, score, text, arabic_text}]}}. "
+            "On failure: suggests similar keywords via prefix match."
         ),
         "input_schema": {
             "type": "object",
             "properties": {
                 "keyword": {
                     "type": "string",
-                    "description": "A single word to search for (e.g. 'covenant', 'prayer', 'abraham')"
+                    "description": "A single English word to search for (e.g. 'covenant', 'prayer', 'abraham'). Will be stemmed automatically."
                 }
             },
             "required": ["keyword"]
@@ -1643,9 +1649,15 @@ TOOLS = [
     {
         "name": "get_verse",
         "description": (
-            "Get a specific verse by its ID, along with its keywords and all directly "
-            "connected verses in the knowledge graph. Shows what the verse is thematically "
-            "linked to and which keywords they share. Use this to deeply explore a single verse."
+            "Retrieve a specific verse by ID: full English + Arabic text, its TF-IDF keywords, "
+            "all thematically connected verses (RELATED_TO edges), Arabic roots present, "
+            "and typed semantic edges (SUPPORTS/ELABORATES/QUALIFIES/CONTRASTS/REPEATS). "
+            "USE WHEN: a specific verse ID is known (from user question or prior tool result) "
+            "and you need its full context, connections, or to confirm its exact text. "
+            "DO NOT USE WHEN: you're exploring a topic — use concept_search or semantic_search first. "
+            "Returns: {verse_id, surah, surah_name, text, arabic_text, arabic_roots, "
+            "keywords, connected_verses: [{verse_id, surah_name, text, shared_keywords, score}], "
+            "typed_edges: {SUPPORTS|ELABORATES|...: [{verse_id, score}]}}."
         ),
         "input_schema": {
             "type": "object",
@@ -1661,10 +1673,15 @@ TOOLS = [
     {
         "name": "traverse_topic",
         "description": (
-            "Explore a topic using multiple keywords + graph traversal. "
-            "Finds direct keyword matches first, then expands outward through "
-            "thematic connections (1-2 hops) to find related verses that wouldn't "
-            "show up in a keyword search. Best for broad topic exploration."
+            "Multi-keyword graph traversal: finds direct keyword matches then expands 1-2 hops "
+            "through RELATED_TO edges to surface thematically connected verses that wouldn't "
+            "appear in a single keyword search. "
+            "USE WHEN: exploring a multi-faceted topic with several related terms "
+            "(e.g. ['covenant', 'promise', 'oath'] together). Best for broad thematic sweeps "
+            "when you want the graph's structural connections, not just co-occurrence. "
+            "DO NOT USE WHEN: the query is a single concept — use concept_search or semantic_search. "
+            "DO NOT USE WHEN: you have specific verse IDs — use get_verse or query_typed_edges. "
+            "Returns: {keywords_used, direct_matches, hop_1_connections, hop_2_connections, total_verses_found}."
         ),
         "input_schema": {
             "type": "object",
@@ -1672,11 +1689,11 @@ TOOLS = [
                 "keywords": {
                     "type": "array",
                     "items": {"type": "string"},
-                    "description": "List of keywords describing the topic (e.g. ['covenant', 'abraham', 'prophet'])"
+                    "description": "List of 2-5 keywords describing the topic (e.g. ['covenant', 'abraham', 'prophet'])"
                 },
                 "hops": {
                     "type": "integer",
-                    "description": "How many graph hops to traverse: 1 (faster, tighter focus) or 2 (broader, more connections). Default: 1",
+                    "description": "Graph hops to traverse: 1 (tighter, faster) or 2 (broader, more results). Default: 1",
                     "default": 1
                 }
             },
@@ -1686,9 +1703,14 @@ TOOLS = [
     {
         "name": "find_path",
         "description": (
-            "Find the shortest thematic path between two verses through the knowledge graph. "
-            "Shows the chain of connected verses and the keywords that bridge each step. "
-            "Useful for discovering unexpected connections between concepts."
+            "Find the shortest thematic path between two specific verses through the RELATED_TO "
+            "graph. Shows each intermediate verse and the bridge keywords linking consecutive steps. "
+            "USE WHEN: the user asks how two specific verses connect, or you want to demonstrate "
+            "an unexpected cross-surah thematic chain between two known verse IDs. "
+            "DO NOT USE WHEN: you don't already have both verse IDs — retrieve them first. "
+            "DO NOT USE WHEN: exploring a topic broadly — use traverse_topic or concept_search. "
+            "Returns: {from, to, hops, path: [{step, verse_id, surah_name, text, bridge_keywords}]}. "
+            "Returns error if no path within configured max depth."
         ),
         "input_schema": {
             "type": "object",
@@ -1708,9 +1730,15 @@ TOOLS = [
     {
         "name": "explore_surah",
         "description": (
-            "Get all verses in a specific surah (chapter) and a map of its strongest "
-            "thematic connections to other surahs. Use this to understand a surah's "
-            "content and how it relates to the rest of the Quran."
+            "Get all verses in a specific surah plus a ranked map of its cross-surah thematic "
+            "connections (which other surahs share the most RELATED_TO edges with it). "
+            "USE WHEN: the user asks to summarize or explore a whole surah, or wants to know "
+            "how a surah relates to the rest of the Quran. "
+            "USE THIS alongside concept_search for short theme-dense surahs (1, 36, 55, 112-114) "
+            "where dense retrieval alone underperforms. "
+            "DO NOT USE WHEN: the user asks about a specific verse — use get_verse. "
+            "Returns: {surah, surah_name, verse_count, verses: [{verse_id, text}], "
+            "top_cross_surah_connections: [{surah, surah_name, connections}]}."
         ),
         "input_schema": {
             "type": "object",
@@ -1726,19 +1754,25 @@ TOOLS = [
     {
         "name": "semantic_search",
         "description": (
-            "Find verses that are CONCEPTUALLY similar to a query using vector embeddings. "
-            "Unlike search_keyword which requires exact word matches, this finds verses that "
-            "express the same idea even with completely different vocabulary. "
-            "Use this to catch verses about redemption, divine mercy, being freed from sin, "
-            "etc. when searching for 'forgiveness' — or any concept where the idea matters "
-            "more than the exact words. Always use this alongside keyword search for full coverage."
+            "Find verses conceptually similar to a query using BGE-M3 dense vector embeddings "
+            "(1024-dim). Each result is enriched with related verses, Arabic roots, and typed "
+            "edges in a single pass (VectorCypherRetriever pattern). "
+            "USE WHEN: the user's meaning matters more than exact words — e.g. 'God's compassion' "
+            "finds verses about divine mercy even if they don't use that exact phrase. "
+            "USE WHEN: concept_search found nothing or the concept is too abstract for the keyword graph. "
+            "DO NOT USE WHEN: the query contains specific Arabic terms or proper names — "
+            "use hybrid_search instead (BM25 catches exact lexical hits that embeddings may miss). "
+            "DO NOT USE WHEN: the query is a single canonical concept like 'forgiveness' — "
+            "use concept_search first (it's cheaper and more precise for keyword-level concepts). "
+            "Returns: {query, total_verses, by_surah: {surah_name: [{verse_id, similarity, text, "
+            "related_verses?, arabic_roots?, typed_edges?}]}}."
         ),
         "input_schema": {
             "type": "object",
             "properties": {
                 "query": {
                     "type": "string",
-                    "description": "A phrase or sentence describing the concept to search for, e.g. 'God forgiving and accepting repentance' or 'patience in hardship'"
+                    "description": "A phrase or sentence describing the concept, e.g. 'God forgiving and accepting repentance' or 'patience during hardship'"
                 },
                 "top_k": {
                     "type": "integer",
@@ -1752,11 +1786,19 @@ TOOLS = [
     {
         "name": "query_typed_edges",
         "description": (
-            "Find verses connected to a given verse by a specific relationship type: "
-            "SUPPORTS (independent evidence), ELABORATES (expands with detail), "
-            "QUALIFIES (adds condition/exception), CONTRASTS (complementary perspective), "
-            "REPEATS (near-verbatim across surahs). Use this after get_verse to understand "
-            "HOW verses relate, not just THAT they relate."
+            "Find verses connected to a given verse by typed semantic relationships: "
+            "SUPPORTS (independent evidence for the same claim), "
+            "ELABORATES (expands the verse with additional detail), "
+            "QUALIFIES (adds a condition, exception, or nuance), "
+            "CONTRASTS (complementary or opposing perspective), "
+            "REPEATS (near-verbatim repetition across surahs — mutashabihat). "
+            "USE WHEN: you already have a specific verse ID and need to understand HOW it "
+            "relates to other verses, not just THAT it relates. Also use to find parallel "
+            "verses (REPEATS) or supporting evidence (SUPPORTS) for a known verse. "
+            "USE AFTER get_verse when its typed_edges field shows relevant types. "
+            "DO NOT USE WHEN: you're finding verses on a topic — use concept_search first. "
+            "Returns: {verse_id, edge_type_filter, total_results, "
+            "by_type: {SUPPORTS|ELABORATES|...: [{verse_id, surah_name, text, score}]}}."
         ),
         "input_schema": {
             "type": "object",
@@ -1768,7 +1810,7 @@ TOOLS = [
                 "edge_type": {
                     "type": "string",
                     "enum": ["SUPPORTS", "ELABORATES", "QUALIFIES", "CONTRASTS", "REPEATS"],
-                    "description": "Optional: filter to one relationship type. Omit to get all typed edges."
+                    "description": "Optional: filter to one relationship type. Omit to get all typed edges for this verse."
                 }
             },
             "required": ["verse_id"]
@@ -1777,11 +1819,16 @@ TOOLS = [
     {
         "name": "search_arabic_root",
         "description": (
-            "Find all Quran verses containing a specific Arabic tri-literal root. "
-            "Arabic roots connect words that share a common origin — e.g. root k-t-b "
-            "(ك ت ب) yields kitab/book, kataba/wrote, maktub/written. Use this to trace "
-            "how an Arabic concept appears across the entire Quran with all its derived forms. "
-            "Accepts Arabic script (e.g. 'رحم') or Buckwalter transliteration (e.g. 'rHm')."
+            "Find all Quran verses containing a specific Arabic trilateral root and all its "
+            "derived word forms. Arabic roots underlie families of words — root k-t-b (ك ت ب) "
+            "yields kitab (book), kataba (wrote), maktub (written). Results grouped by surah. "
+            "USE WHEN: the user asks about an Arabic root, or wants every verse where a root "
+            "concept appears (regardless of derived form). Start here for Arabic linguistic queries. "
+            "DO NOT USE WHEN: you need a breakdown of forms — use compare_arabic_usage instead. "
+            "DO NOT USE WHEN: you only know an English concept — use concept_search or semantic_search. "
+            "Accepts Arabic script (e.g. 'رحم') or Buckwalter transliteration (e.g. 'rHm'). "
+            "Returns: {root, gloss, total_verses, by_surah: {surah: [{verse_id, text, arabic_text, "
+            "root_count, forms_used}]}}."
         ),
         "input_schema": {
             "type": "object",
@@ -1797,11 +1844,16 @@ TOOLS = [
     {
         "name": "compare_arabic_usage",
         "description": (
-            "Compare how different forms of an Arabic root are used across the Quran. "
-            "Shows each derived word form and the verses where it appears, revealing how "
-            "the same root carries different meanings in different contexts. For example, "
-            "root r-H-m (رحم) yields raHman (most gracious), raHim (merciful), raHmah (mercy) — "
-            "each used in different theological contexts. Use this for linguistic analysis."
+            "Break down how each derived FORM of an Arabic root is used across the Quran. "
+            "Groups verses by surface word (e.g. raHman / raHim / raHmah for root rHm), "
+            "showing how the same root carries different shades of meaning in different forms. "
+            "USE WHEN: the user asks how a root's derived words differ, or wants to compare "
+            "theological usage of related forms (e.g. 'what is the difference between raHman "
+            "and raHim?'). Best for linguistic / theological analysis. "
+            "DO NOT USE WHEN: you just need all verses for a root — use search_arabic_root. "
+            "DO NOT USE WHEN: you need a full derivative tree — use explore_root_family. "
+            "Returns: {root, gloss, total_verses, total_forms, forms: [{form, total_occurrences, "
+            "sample_verses: [{verse_id, surah_name, text}]}]}."
         ),
         "input_schema": {
             "type": "object",
@@ -1817,10 +1869,15 @@ TOOLS = [
     {
         "name": "lookup_word",
         "description": (
-            "Look up any Arabic word in the Quran. Returns the word's trilateral root, "
-            "lemma, morphological pattern (wazn), part of speech, grammatical features, "
-            "and all verse occurrences. Accepts Arabic script or Buckwalter transliteration. "
-            "Use this when a user asks about a specific Arabic word."
+            "Look up a specific Arabic word: returns its trilateral root, lemma, morphological "
+            "pattern (wazn), part of speech, full grammatical features (person/gender/number/case), "
+            "and all verses where it occurs. "
+            "USE WHEN: the user provides or asks about a specific Arabic word form (e.g. 'رحيم', "
+            "'الله', or Buckwalter 'rHym'). Best entry point for word-level Arabic queries. "
+            "DO NOT USE WHEN: you have a root, not a word — use search_arabic_root. "
+            "DO NOT USE WHEN: you want a grammar breakdown of a full verse — use get_verse_words. "
+            "Returns: {word, found, total_occurrences, lemmas: [{lemma, root, rootGloss, pattern, "
+            "patternLabel, meaningTendency, pos, occurrences: [{verse_id, token_id, arabic, morphology}]}]}."
         ),
         "input_schema": {
             "type": "object",
@@ -1836,10 +1893,16 @@ TOOLS = [
     {
         "name": "explore_root_family",
         "description": (
-            "Show the full derivative tree of an Arabic root — all lemmas derived from it, "
-            "grouped by morphological pattern, with semantic domain membership and sample verses. "
-            "Reveals how a single root generates a family of related words. "
-            "Use this to explore the semantic architecture of a root."
+            "Show the full derivative tree of an Arabic root: all lemmas derived from it, "
+            "grouped by morphological pattern (wazn), with semantic domain membership and "
+            "sample verse occurrences. Reveals the generative architecture of a root. "
+            "USE WHEN: the user asks about the family of words from a root, or wants to "
+            "understand how one root spawns nouns, verbs, adjectives, and participles. "
+            "USE WHEN: you need semantic domain membership (al-Isfahani classification). "
+            "DO NOT USE WHEN: you just need verse occurrences — use search_arabic_root. "
+            "DO NOT USE WHEN: you want form-level usage comparison — use compare_arabic_usage. "
+            "Returns: {root: {root, gloss, verse_count}, found, semantic_domains, total_lemmas, "
+            "lemmas: [{lemma, gloss, pos, verse_count, pattern, pattern_label, sample_verses}]}."
         ),
         "input_schema": {
             "type": "object",
@@ -1855,10 +1918,15 @@ TOOLS = [
     {
         "name": "get_verse_words",
         "description": (
-            "Get a complete word-by-word grammatical breakdown of a Quranic verse. "
-            "Returns each word with its Arabic text, root, lemma, morphological pattern, "
-            "English gloss, part of speech, and grammatical features (person, gender, number, case). "
-            "Use this when a user wants to understand the grammar or etymology of a specific verse."
+            "Get a complete word-by-word grammatical breakdown of a specific Quranic verse. "
+            "Each word: Arabic text, trilateral root, lemma, morphological pattern, English gloss, "
+            "part of speech, and grammatical features (person, gender, number, case, state). "
+            "USE WHEN: the user asks to parse, translate word-by-word, or explain the grammar "
+            "of a specific verse. Required for verse-level grammatical analysis. "
+            "DO NOT USE WHEN: you don't have a specific verse ID yet — retrieve it first. "
+            "DO NOT USE WHEN: you want root-level analysis across the Quran — use search_arabic_root. "
+            "Returns: {verse_id, found, surah_name, translation, word_count, "
+            "words: [{position, arabic, root, root_gloss, lemma, pos, pattern, pattern_label, morphology}]}."
         ),
         "input_schema": {
             "type": "object",
@@ -1874,17 +1942,23 @@ TOOLS = [
     {
         "name": "search_semantic_field",
         "description": (
-            "Find all Arabic roots and words that belong to a semantic domain (e.g. 'mercy', "
-            "'knowledge', 'creation'). Returns the domain's roots with their derived lemmas "
-            "and verse counts. Based on al-Isfahani's classical categorization. "
-            "Use this to explore how the Quran expresses a concept through multiple roots."
+            "Find all Arabic roots and their derived lemmas that belong to a named semantic domain "
+            "based on al-Isfahani's classical categorisation (e.g. 'mercy', 'knowledge', 'creation'). "
+            "Returns roots ranked by verse count with their derived lemmas and verse tallies. "
+            "USE WHEN: the user asks how the Quran expresses a concept across multiple Arabic roots "
+            "(e.g. 'all roots related to mercy' vs just the rHm root). "
+            "USE WHEN: you want a domain overview before drilling into specific roots. "
+            "DO NOT USE WHEN: you have a specific root — use search_arabic_root or explore_root_family. "
+            "DO NOT USE WHEN: the user asks in English about concept-level results — use concept_search. "
+            "Returns: {domain: {domainId, nameEn, nameAr, description}, found, total_roots, "
+            "roots: [{root, gloss, verse_count, lemmas: [{lemma, gloss, verse_count}]}]}."
         ),
         "input_schema": {
             "type": "object",
             "properties": {
                 "domain": {
                     "type": "string",
-                    "description": "Semantic domain name or Arabic name (e.g. 'mercy', 'رحمة', 'knowledge')"
+                    "description": "Semantic domain name in English or Arabic (e.g. 'mercy', 'رحمة', 'knowledge')"
                 }
             },
             "required": ["domain"]
@@ -1893,10 +1967,16 @@ TOOLS = [
     {
         "name": "lookup_wujuh",
         "description": (
-            "Show all distinct meanings (wujuh) of a polysemous root across the Quran. "
-            "Based on the classical Islamic discipline of al-wujuh wa al-naza'ir. "
-            "Returns each sense with its meaning and sample verses. "
-            "Use this when exploring how the same word carries different meanings in different contexts."
+            "Show all distinct meanings (wujuh) a polysemous root carries across the Quran, "
+            "based on the classical Islamic discipline of al-wujuh wa al-naza'ir. Each sense "
+            "includes its meaning description and sample verses where that sense applies. "
+            "USE WHEN: the user asks 'how many meanings does this word have?' or wants to "
+            "understand contextual meaning variation — e.g. root h-d-y (هدي) means 'guidance', "
+            "'gift', 'sacrifice animal' in different contexts. "
+            "DO NOT USE WHEN: you want all verses for a root — use search_arabic_root. "
+            "DO NOT USE WHEN: wujuh data is absent (the tool will say so and fall back to root verses). "
+            "Returns: {root, lemma, found, total_senses, senses: [{sense_id, meaning_en, meaning_ar, "
+            "sample_verses: [{verse_id, text}]}]}."
         ),
         "input_schema": {
             "type": "object",
@@ -1912,25 +1992,30 @@ TOOLS = [
     {
         "name": "search_morphological_pattern",
         "description": (
-            "Find Quranic words by morphological pattern (wazn), part of speech, or verbal form. "
-            "For example, find all words on the فَعِيل pattern (intensive adjectives like رحيم, عليم), "
-            "or all Form IV verbs (أَفْعَلَ — causative). Results grouped by root. "
-            "Use this to study how morphological patterns shape meaning."
+            "Find Quranic words by morphological pattern (wazn), part of speech, or Arabic verbal form. "
+            "Examples: all words on pattern فَعِيل (intensive adjectives like رحيم/عليم); all Form IV "
+            "verbs (أَفْعَلَ — causative). Results grouped by root with occurrence counts. "
+            "USE WHEN: the user asks a morphology question: 'what Form IV verbs appear in the Quran?' "
+            "or 'find all فَعِيل intensive adjectives'. Provide at least one of: pattern, pos, verb_form. "
+            "DO NOT USE WHEN: you have a specific root — use search_arabic_root. "
+            "DO NOT USE WHEN: the user asks about a specific word form — use lookup_word. "
+            "Returns: {found, pattern, pos, verb_form, total_distinct_words, "
+            "by_root: [{root, gloss, words: [{arabic, lemma, pos, pattern, occurrences}]}]}."
         ),
         "input_schema": {
             "type": "object",
             "properties": {
                 "pattern": {
                     "type": "string",
-                    "description": "Morphological pattern in Arabic (e.g. 'فَعِيل', 'فَعُول') or Buckwalter"
+                    "description": "Morphological pattern in Arabic (e.g. 'فَعِيل', 'فَعُول') or Buckwalter. Optional if pos or verb_form provided."
                 },
                 "pos": {
                     "type": "string",
-                    "description": "Part of speech filter (e.g. 'V.PERF', 'N', 'ADJ', 'ACT_PCPL')"
+                    "description": "Part of speech filter (e.g. 'V.PERF', 'N', 'ADJ', 'ACT_PCPL'). Optional."
                 },
                 "verb_form": {
                     "type": "string",
-                    "description": "Verbal form number or Roman numeral (e.g. '4', 'IV', 'X')"
+                    "description": "Verbal form number or Roman numeral (e.g. '4', 'IV', 'X'). Optional."
                 }
             }
         }
@@ -1938,18 +2023,26 @@ TOOLS = [
     {
         "name": "concept_search",
         "description": (
-            "Search by canonical CONCEPT (auto-expands across surface "
-            "variants). Beats search_keyword when the user asks about "
-            "'forgiveness' but the verses use 'forgive', 'forgiver', "
-            "'forgiveness' — concept_search finds them all in one call. "
-            "Use this as the default for thematic English keywords."
+            "Search by canonical English concept, auto-expanding across all surface keyword variants "
+            "via Porter-stem entity resolution. 'forgiveness' finds verses containing forgive, "
+            "forgiver, forgiveness, forgiving — all in one call. "
+            "USE THIS as the DEFAULT first tool for thematic English keyword queries "
+            "(faith, patience, mercy, prayer, charity, guidance, etc.). "
+            "USE WHEN: search_keyword returned too few results because only one surface form was matched. "
+            "DO NOT USE WHEN: the concept is not present in the keyword graph — fall back to semantic_search. "
+            "DO NOT USE WHEN: the query is a sentence or abstract phrase — use semantic_search instead. "
+            "Returns: {found, concept, stem, surface_forms, n_keyword_variants, total_hits, "
+            "by_surah: {surah_name: [{verse_id, text, matched_keyword, score}]}, note}."
         ),
         "input_schema": {
             "type": "object",
             "properties": {
-                "concept": {"type": "string",
-                            "description": "Concept name or any surface variant"},
-                "top_k": {"type": "integer", "default": 30}
+                "concept": {
+                    "type": "string",
+                    "description": "English concept name or any surface variant (e.g. 'forgiveness', 'patient', 'mercy')"
+                },
+                "top_k": {"type": "integer", "default": 30,
+                          "description": "Max verses to return (default 30)"}
             },
             "required": ["concept"]
         }
@@ -1957,22 +2050,33 @@ TOOLS = [
     {
         "name": "hybrid_search",
         "description": (
-            "Hybrid retrieval: BM25 (lexical) + BGE-M3 (dense vector), fused "
-            "via reciprocal rank fusion, then enriched with graph context "
-            "(related verses, Arabic roots, typed edges). Better than "
-            "semantic_search for queries with rare/specific words like "
-            "proper names, Arabic terms, or specific phrasings — BM25 catches "
-            "exact lexical hits that pure embedding similarity may miss. "
-            "Set lang='ar' for Arabic queries."
+            "Hybrid BM25 (lexical) + BGE-M3 (dense vector) retrieval fused via Reciprocal Rank "
+            "Fusion, then enriched with graph context (related verses, Arabic roots, typed edges). "
+            "Combines the precision of BM25 exact-match with the recall of dense vectors. "
+            "USE WHEN: the query contains specific proper names, rare phrases, or Arabic terms "
+            "where BM25 catches exact hits that embeddings might miss (e.g. 'Ayat al-Kursi', "
+            "'al-Fatiha', 'Bismillah', specific Arabic phrases). "
+            "USE WHEN: semantic_search gives poor results for a named-entity query. "
+            "Set lang='ar' for queries in Arabic script — switches to Arabic fulltext index. "
+            "DO NOT USE WHEN: the query is a single canonical concept — use concept_search (cheaper). "
+            "DO NOT USE WHEN: the query is purely abstract — semantic_search is sufficient. "
+            "Returns: {query, lang, total_verses, fusion, indexes_used, "
+            "by_surah: {surah_name: [{verse_id, rrf_score, bm25_rank, dense_rank, text, "
+            "related_verses?, arabic_roots?, typed_edges?}]}}."
         ),
         "input_schema": {
             "type": "object",
             "properties": {
-                "query": {"type": "string"},
-                "top_k": {"type": "integer", "default": 20},
-                "lang": {"type": "string", "enum": ["en", "ar"], "default": "en"},
+                "query": {
+                    "type": "string",
+                    "description": "Natural-language question or phrase (English or Arabic)"
+                },
+                "top_k": {"type": "integer", "default": 20,
+                          "description": "Final top-K verses after fusion (default 20)"},
+                "lang": {"type": "string", "enum": ["en", "ar"], "default": "en",
+                         "description": "'en' for English fulltext + BGE-M3-EN; 'ar' for Arabic fulltext + BGE-M3-AR"},
                 "k_rrf": {"type": "integer", "default": 60,
-                          "description": "RRF constant; default 60"}
+                          "description": "RRF constant (default 60, higher = flatter fusion)"}
             },
             "required": ["query"]
         }
@@ -1980,22 +2084,28 @@ TOOLS = [
     {
         "name": "recall_similar_query",
         "description": (
-            "Surface past similar queries this agent has answered, with the "
-            "tools they used and the answers they produced. Use when the "
-            "current question feels familiar / repetitive — the past run is "
-            "a playbook, not a final answer. Past tool sequences are hints "
-            "for which retrieval paths worked. Don't use as the only "
-            "retrieval method; verify answer_excerpt with direct tools."
+            "Retrieve the closest past queries this agent has answered, with the tool sequences "
+            "used and the answers produced. Provides a retrieval 'playbook' for familiar questions. "
+            "USE WHEN: the current question resembles something the agent has answered before — "
+            "the past tool sequence is a shortcut that avoids cold re-discovery. "
+            "USE AT THE START of a turn when the question feels familiar or repetitive. "
+            "DO NOT USE as the sole retrieval method — always verify the past answer_excerpt "
+            "with direct tools before citing it. Past answers may be outdated. "
+            "DO NOT USE for clearly novel, domain-specific, or technical questions. "
+            "Returns: {ok, query, n_similar, similar_queries: [{past_question, similarity, "
+            "status, n_citations, cited_verses, answer_excerpt, tool_sequence: [{tool, args, ok}]}]}."
         ),
         "input_schema": {
             "type": "object",
             "properties": {
-                "query": {"type": "string",
-                          "description": "The current question text"},
+                "query": {
+                    "type": "string",
+                    "description": "The current question text to match against past queries"
+                },
                 "top_k": {"type": "integer", "default": 3,
-                          "description": "How many past matches to return"},
+                          "description": "How many past matches to return (default 3)"},
                 "min_sim": {"type": "number", "default": 0.65,
-                            "description": "Minimum cosine similarity (MiniLM)"}
+                            "description": "Minimum cosine similarity threshold (MiniLM, 0-1). Default 0.65."}
             },
             "required": ["query"]
         }
@@ -2003,28 +2113,29 @@ TOOLS = [
     {
         "name": "run_cypher",
         "description": (
-            "Execute a READ-ONLY Cypher query against the Quran graph. "
-            "Use this for the long-tail of questions the specialised tools "
-            "don't cover: aggregations, custom multi-hop traversals, schema "
-            "introspection, percentile queries, etc. "
-            "Schema reminder — Verse(verseId, surah, verseNum, text, arabicText, "
-            "arabicPlain, surahName, embedding_m3 (1024d BGE-M3)), "
-            "Sura(number, name), Keyword(keyword), ArabicRoot(root), Lemma(lemma), "
-            "MorphPattern(pattern), SemanticDomain(name). "
-            "Edges: MENTIONS{score, from_tfidf, to_tfidf}, RELATED_TO{score}, "
-            "MENTIONS_ROOT, SIMILAR_PHRASE, NEXT_VERSE, CONTAINS, "
-            "and typed: SUPPORTS, ELABORATES, QUALIFIES, CONTRASTS, REPEATS. "
-            "FORBIDDEN: CREATE/MERGE/DELETE/SET/REMOVE/DETACH/LOAD CSV. Always "
-            "include a LIMIT — one will be appended if missing."
+            "Execute a READ-ONLY Cypher query against the Quran graph for long-tail questions "
+            "the specialised tools don't cover: aggregations, custom multi-hop traversals, "
+            "schema introspection, percentile queries, counting across node types, etc. "
+            "USE WHEN: no other tool can answer the question — e.g. 'how many verses mention "
+            "both Moses and Pharaoh?', 'what is the average verse count per surah?'. "
+            "USE WHEN: the user explicitly asks for a custom graph query. "
+            "DO NOT USE WHEN: a specialised tool covers the use case — prefer concept_search, "
+            "semantic_search, search_arabic_root, etc. over raw Cypher for standard lookups. "
+            "Schema: Verse(verseId, surah, verseNum, text, arabicText, arabicPlain, surahName, "
+            "embedding_m3[1024d]); Sura(number, name); Keyword(keyword); ArabicRoot(root); "
+            "Lemma(lemma); MorphPattern(pattern); SemanticDomain(name). "
+            "Edges: MENTIONS{score,from_tfidf,to_tfidf}, RELATED_TO{score}, MENTIONS_ROOT, "
+            "SIMILAR_PHRASE, NEXT_VERSE, CONTAINS, SUPPORTS, ELABORATES, QUALIFIES, CONTRASTS, REPEATS. "
+            "FORBIDDEN: CREATE/MERGE/DELETE/SET/REMOVE/DETACH/LOAD CSV. "
+            "A LIMIT clause is auto-appended if missing. "
+            "Returns: {ok, query_executed, n_rows, columns, rows}."
         ),
         "input_schema": {
             "type": "object",
             "properties": {
                 "query": {
                     "type": "string",
-                    "description": "Cypher query (read-only). Example: "
-                                   "'MATCH (v:Verse)-[:MENTIONS]->(k:Keyword {keyword: \"patience\"}) "
-                                   "RETURN v.verseId, v.text ORDER BY v.surah LIMIT 20'"
+                    "description": "Read-only Cypher query. E.g.: 'MATCH (v:Verse)-[:MENTIONS]->(k:Keyword {keyword: \"patience\"}) RETURN v.verseId, v.text ORDER BY v.surah LIMIT 20'"
                 },
                 "row_limit": {
                     "type": "integer",
@@ -2038,14 +2149,18 @@ TOOLS = [
     {
         "name": "get_code19_features",
         "description": (
-            "Retrieve Khalifa-style Code-19 mathematical features (verse counts, "
-            "mysterious-letter frequencies, divisibility-by-19 indicators). These "
-            "are arithmetic over the immutable Arabic text and CANNOT be hallucinated — "
-            "use this when discussing the mathematical miracle of 19, the count of "
-            "Q in Surahs 50/42, the count of N in Surah 68, or any claim that "
-            "Khalifa makes about verse-arithmetic. "
-            "scope='global' returns project-wide totals; scope='sura' takes a sura "
-            "number; scope='verse' takes a verseId like '2:255'."
+            "Retrieve Khalifa-style Code-19 mathematical features: verse counts, mysterious-letter "
+            "frequencies, and divisibility-by-19 indicators. These figures are precomputed "
+            "arithmetic over the immutable Arabic text and CANNOT be hallucinated. "
+            "USE WHEN: the user asks about the mathematical miracle of 19, letter counts "
+            "(Q in Surah 50, N in Surah 68, etc.), Khalifa's verse arithmetic, or whether "
+            "a count is divisible by 19. Always use this rather than estimating. "
+            "DO NOT USE for general theological questions — use concept_search or semantic_search. "
+            "scope='global' returns Quran-wide totals. "
+            "scope='sura' requires target=sura_number (e.g. '50') — returns letter counts + div-19. "
+            "scope='verse' requires target=verseId (e.g. '2:255') — returns per-letter counts. "
+            "Returns: {found, scope, khalifa_total_verses?, khalifa_total_div_19?, "
+            "letter_counts?, per_letter_div_19?, verses_count_mod_19?}."
         ),
         "input_schema": {
             "type": "object",
@@ -2053,11 +2168,11 @@ TOOLS = [
                 "scope": {
                     "type": "string",
                     "enum": ["global", "sura", "verse"],
-                    "description": "What level to query"
+                    "description": "Query level: 'global' for Quran-wide totals, 'sura' for one surah, 'verse' for one verse"
                 },
                 "target": {
                     "type": "string",
-                    "description": "For scope='sura': sura number (e.g. '50'). For scope='verse': verseId (e.g. '2:255'). Omit for scope='global'."
+                    "description": "For scope='sura': sura number string (e.g. '50'). For scope='verse': verseId (e.g. '2:255'). Omit for scope='global'."
                 }
             },
             "required": ["scope"]
