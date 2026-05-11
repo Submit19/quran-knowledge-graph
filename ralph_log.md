@@ -70,3 +70,4 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-11T20:15 | from_neo4j_yt_memory_01_bitemporal_retrieved | cleanup | FAILED |  | [from-neo4j-yt] Add valid_from (ISO timestamp) and model_version string properti / QUALITY GATE FAILED:  |
 | 2026-05-11T20:16 | from_neo4j_yt_memory_01_bitemporal_retrieved | cleanup | DONE |  | [from-neo4j-yt] Add valid_from (ISO timestamp) and model_version string properti |
 | 2026-05-11T20:45 | from_neo4j_crawl_pagination_cursors | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_from_neo4j_crawl_pagination_cursors.md (review before use) |
+| 2026-05-11T21:16 | from_ai_graph_lightrag_neo4j_spike | cypher_analysis | DONE_WITH_CONCERNS |  | manual mode — deliverable produced out-of-band; gate will validate |
