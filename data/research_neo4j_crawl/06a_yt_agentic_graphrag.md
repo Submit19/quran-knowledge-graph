@@ -135,3 +135,23 @@
     fallback events to reasoning_memory for analysis.
   files: [chat.py]
 ```
+
+---
+
+### Agentic GraphRAG: Multi-Agent Knowledge Graph Construction
+**URL:** https://www.youtube.com/watch?v=bxXb8oT5E-k
+**Speaker / context:** Internal research team (unnamed), ~27-min NODES community talk. Use-case: multi-researcher team building a shared KG from uploaded PDFs / Excel / JSON, queried via Neo4j MCP server + OpenAI ChatKit.
+
+**TL;DR:** 4-agent KG *construction* pipeline (Analyze → Extract → Merge → QC). Not a retrieval improvement, but validates QKG's existing Concept ER layer and highlights two patterns worth reviewing.
+
+**Most relevant QKG ideas:**
+
+- **LLM semantic deduplication (Agent 3)** `[16:01–17:20]`: after parallel chunk extraction produces 84 raw entities, Agent 3 groups by type and does LLM-based semantic reasoning ("are these two entities the same real-world thing?") to produce 32 canonical entities. Outputs include a canonical name + merge rationale. This is exactly what QKG's `NORMALIZES_TO` edges do (Porter-stem ER over Keywords). Their finding: string matching alone fails for multi-word / paraphrased entities; semantic dedup is required. **QKG already does this** via `build_concepts.py`. Validating.
+
+- **Graph QC agent (Agent 4)** `[19:00–21:00]`: semantic auditor samples parts of the final graph, asks the LLM to flag vague/inconsistent/reversed relationships against the original schema, and removes only low-confidence ones. Removed 3 relationships in the demo run. QKG has typed edges (SUPPORTS, ELABORATES, QUALIFIES, CONTRASTS, REPEATS) with `classify_edges.py`, but no post-hoc QC pass. A periodic graph quality audit (`cypher_analysis` task) could surface poorly-typed or reversed edges. Low priority for now — QKG's typed edge count is small (7K).
+
+- **Batch UNWIND+MERGE write pattern** `[22:50–23:30]`: group all nodes and relationships by type, write each type in its own Cypher query. ~10× faster than row-by-row inserts; 57 nodes + 179 relationships in 2s. QKG's `build_graph.py` and `import_neo4j.py` already use UNWIND. Confirmed best practice.
+
+- **LangSmith / eval-first culture** `[10:35–18:30]`: every agent step is wrapped with a traceable function; full LLM input/output + reasoning captured for prompt iteration. Mirrors QKG's `reasoning_memory.py` approach. They found eval was the "bedrock" before trusting the pipeline at scale.
+
+**Action verdict:** no new tasks. Validates QKG's existing Concept ER (NORMALIZES_TO), UNWIND+MERGE writes, and reasoning_memory tracing. Periodic graph QC edge audit noted as future low-priority `cleanup` task if typed edge count grows significantly.

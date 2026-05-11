@@ -16,12 +16,9 @@ top12_already_processing:
 - sZRA4j3d0c8
 - 3wwFWG03kfk
 - ma8KXJRLhyg
+- bxXb8oT5E-k
+# [FETCHED 2026-05-12] bxXb8oT5E-k — findings in 06a_yt_agentic_graphrag.md (validating; KG construction pipeline; no new tasks; confirms Concept ER + UNWIND+MERGE patterns)
 queue:
-- id: bxXb8oT5E-k
-  url: https://www.youtube.com/watch?v=bxXb8oT5E-k
-  title: 'Agentic GraphRAG: Multi-Agent Knowledge Graph'
-  duration_min: 27.0
-  score: 15
 - id: KJSHagHkX8I
   url: https://www.youtube.com/watch?v=KJSHagHkX8I
   title: 'Agentic GraphRAG: Multi-Agent Knowledge Graph Construction for Research
