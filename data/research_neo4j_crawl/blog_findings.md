@@ -186,6 +186,34 @@ High-level Neo4j overview of agentic architecture patterns: Router, Sequential, 
 
 ---
 
+## https://neo4j.com/blog/agentic-ai/what-is-agentic-rag/
+**Fetched:** 2026-05-11
+**Title:** Agentic RAG — What It Is, When to Use It
+
+### TL;DR
+Introduces Agentic RAG as multi-step retrieval loops with planning, tool selection, and validation. Core patterns: ReAct loop, Router (direct queries to right retrieval method), Corrective RAG (fallback when primary fails), and iterative refinement. Evaluation framework: context precision/recall, faithfulness, answer relevance, loop depth. Implementation sequence: baseline first, then layer agentic patterns only where a named failure exists.
+
+### Key Takeaways
+
+1. **ReAct Loop is validated QKG architecture** — "Thought → Action (retrieval) → Observation" aligns exactly with QKG's multi-turn tool-use loop (up to 15 turns). No change needed to existing loop design.
+
+2. **Router pattern** — classify query intent then dispatch to the appropriate retrieval method (semantic similarity vs. graph traversal vs. entity lookup). `from_neo4j_yt_router_agent` (DONE) already covers this. No new task.
+
+3. **Corrective RAG / fallback** — when primary retrieval fails (e.g., no verse matches a keyword), fall back to semantic search, then graph traversal. QKG's `hybrid_search` already implements BM25→vector fallback. The broader multi-fallback pattern is captured in the router task.
+
+4. **Evaluation framework** — Ragas-based: Context Precision (fraction of retrieved verses relevant), Context Recall (fraction of needed evidence found), Faithfulness (response doesn't contradict source), Answer Relevance. Of these, only Faithfulness (via NLI/MiniCheck) is currently measured. Context Precision and Recall are the gaps. **Already covered by `from_ai_graph_rag_triad_eval_metrics` (p80) in backlog.**
+
+5. **Loop depth cap is essential** — "more iterations don't always improve accuracy and quickly inflate cost." QKG hard-caps at 15 turns; article confirms this is correct. No change.
+
+6. **Evaluation tooling mentioned** — Ragas, LangSmith, TruLens. `from_ai_graph_rag_triad_eval_metrics` already addresses Ragas integration. No new task.
+
+7. **Implementation sequence** — standard RAG baseline → identify specific failures → layer agentic patterns → cap loop → optimize context. QKG has completed steps 1–2; steps 3–4 are active. Validates current roadmap.
+
+### Verdict
+**Validating, not novel.** All actionable items are already covered by existing backlog tasks (`from_ai_graph_rag_triad_eval_metrics` p80 covers eval gaps; `from_neo4j_yt_router_agent` DONE covers routing; hybrid_search covers fallback). No new tasks proposed.
+
+---
+
 ## https://neo4j.com/blog/agentic-ai/agent-tools/
 **Fetched:** 2026-05-11
 **Title:** Agent Tools — What They Are, How AI Agents Use Them
