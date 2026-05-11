@@ -424,3 +424,69 @@ Architectural pattern for integrating ServiceNow operational data into Neo4j via
 
 ### Proposed Tasks
 - Betweenness centrality as retrieval re-ranking signal: compute betweenness for all Verse nodes using GDS (or NetworkX — graph_stats.json shows we have community structure already), store as `Verse.betweenness` property, add as a re-ranking factor in `retrieval_gate.py` alongside cross-encoder scores. Low-priority (p40) given uncertain QA impact — needs eval to validate.
+
+---
+
+## https://neo4j.com/blog/news/knowledge-layer-agentic-systems-google-cloud/
+**Fetched:** 2026-05-12 (cache hit b5151ebaff79 + live WebFetch)
+**Title:** A Knowledge Layer for Your Agentic Systems on Google Cloud
+
+### TL;DR
+Neo4j announces native integration with Google Cloud (Vertex AI ADK + Gemini Enterprise) via MCP. Three-tier persistent memory model (short-term session, structured long-term entity graph, reasoning traces) stored in Neo4j and queryable by agents. Architecture: MCP registers Neo4j as a tool provider in ADK workflows; A2A protocol bridges multi-agent systems.
+
+### Key Takeaways
+
+1. **Three-tier memory model** — short-term (conversation context), structured long-term (decision traces persisted as graph nodes), reasoning memory (task execution patterns stored for reuse). QKG's `reasoning_memory.py` covers the reasoning-trace layer; the session + long-term entity layers are missing — already flagged in prior `blog_findings.md` entries (building-stateful-ai, connected-context-persistent-memory).
+
+2. **MCP as agent-tool interface** — Neo4j MCP server registers domain-specific tools in Vertex AI ADK. For QKG: a future migration of `chat.py` tool dispatch to MCP would enable multi-backend portability. Already a known future direction; no new task.
+
+3. **Aura on GCP** — fully managed; eliminates infrastructure overhead but requires Google/Gemini embedding lock-in. ADR 0009 (skip Aura migration) stands. Not actionable for QKG.
+
+4. **"Agents learn from prior reasoning"** — persistent decision traces enable agents to avoid redundant work across sessions. QKG's ralph loop already does this via `ralph_log.md` PATTERN blocks and `recall_similar_query` tool. Architecture is validated.
+
+5. **Graph traversal over vector similarity** — explicitly endorsed: "traversing real relationships" vs. "finding a document fragment." QKG's hybrid retrieval (BM25 + BGE-M3 + graph traversal) already implements this.
+
+### Verdict
+**Validating, not actionable.** GCP/Aura lock-in makes direct adoption a non-starter (ADR 0009). All conceptual patterns (3-tier memory, MCP, persistent traces) are already covered by prior findings + existing or approved backlog tasks. No new tasks proposed.
+
+---
+
+## https://neo4j.com/blog/agentic-ai/knowledge-layer/
+**Fetched:** 2026-05-12 (cache hit 56005e7b025f + live WebFetch)
+**Title:** Why Every Enterprise Needs an AI Knowledge Layer
+
+### TL;DR
+Strategic positioning piece: knowledge layers (semantic graph overlays) enable AI to reason over structured relationships rather than raw data, yielding 3x Q&A accuracy improvement (Cornell arXiv) and explainable decision traces. Framework-agnostic; patterns apply regardless of underlying storage.
+
+### Key Takeaways
+
+1. **3x Q&A accuracy via graph-grounded retrieval** — cited Cornell arXiv study. QKG's hybrid retrieval already validates this direction; specific study reference worth noting for benchmarking rationale.
+
+2. **Decision trace as first-class pattern** — knowledge layer captures full reasoning chain: prior context → applied rules → recommendation → justification. QKG's `reasoning_memory.py` + `:ReasoningTrace → :ToolCall → :RETRIEVED` already models this.
+
+3. **Verse-to-context mapping** — the article's "entity → semantic theme → business rule → recommendation" chain maps exactly to QKG's "Verse → Concept → SemanticDomain → scholarly inference" traversal path.
+
+4. **No vector-graph hybrid patterns mentioned** — article is graph-centric only; no retrieval architecture specifics. Not useful for QKG's retrieval engineering.
+
+### Verdict
+**Low incremental value — validating, not novel.** All patterns are already implemented or covered by prior findings. The Cornell arXiv accuracy citation is useful context for the QKG benchmark rationale document if one is written. No new tasks proposed.
+
+---
+
+## https://neo4j.com/blog/genai/from-identity-vacuum-to-identity-driven-access-control-securing-llm-agents-in-the-enterprise/
+**Fetched:** 2026-05-12 (live WebFetch)
+**Title:** From Identity Vacuum to Identity-Driven Access Control: Securing LLM Agents in the Enterprise
+
+### TL;DR
+Demonstrates OIDC/JWT identity propagation through MCP to Neo4j, enabling fine-grained role-based access control (label + property level) per user. Eliminates "identity vacuum" where agents use static service accounts. Production pattern with Keycloak + Neo4j Enterprise RBAC.
+
+### Key Takeaways
+
+1. **Identity propagation via MCP** — passes per-request JWT from client through MCP server to Neo4j, which validates via JWKS. Same Cypher query returns different subgraphs per user role. Clever pattern but requires Neo4j Enterprise RBAC + Keycloak.
+
+2. **Label-based + property-level visibility** — `:Confidential` nodes invisible to external roles; internal_notes property redacted. For QKG scholarly commentary tiers this could be relevant (public vs. scholar tafsir).
+
+3. **Audit trail** — Neo4j Visualization Library surfaces which nodes informed each LLM response.
+
+### Verdict
+**Not actionable for QKG (current scope).** QKG is a single-user application with no multi-tenant access control requirements. The identity propagation pattern requires Neo4j Enterprise RBAC + OIDC provider (Keycloak) — significant infrastructure overhead for a solo dev project. The scholarly commentary tier use-case (public vs. restricted tafsir) could theoretically justify this in a future multi-user deployment, but that's a product-level decision not a near-term engineering task. No new tasks proposed.

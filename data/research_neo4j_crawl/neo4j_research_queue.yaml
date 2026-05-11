@@ -52,15 +52,9 @@ blog_neo4j:
     # [FETCHED 2026-05-12] can-i-use-aura-agents-to-create-an-mcp-enabled-teacher-2 — findings in blog_findings.md (validating; chunk-avg score noted; no new tasks)
     # [FETCHED 2026-05-12] neo4j-launches-aura-agent — findings in blog_findings.md (validating; confirms QKG architecture; no new tasks)
     # [FETCHED 2026-05-12] turning-servicenow-data-into-connected-enterprise-intelligence — findings in blog_findings.md (betweenness centrality rerank proposed p40)
-    - url: https://neo4j.com/blog/news/knowledge-layer-agentic-systems-google-cloud/
-      title: A knowledge layer for your agentic systems on GCP
-      relevance: MEDIUM — knowledge layer architecture
-    - url: https://neo4j.com/blog/agentic-ai/knowledge-layer/
-      title: Why every enterprise needs an AI knowledge layer
-      relevance: LOW — strategy/positioning
-    - url: https://neo4j.com/blog/genai/from-identity-vacuum-to-identity-driven-access-control-securing-llm-agents-in-the-enterprise/
-      title: Identity-driven access control for LLM agents
-      relevance: LOW — enterprise security; not relevant to QKG single-user
+    # [FETCHED 2026-05-12] knowledge-layer-agentic-systems-google-cloud — findings in blog_findings.md (validating; GCP/Aura lock-in; ADR 0009 stands; no new tasks)
+    # [FETCHED 2026-05-12] knowledge-layer — findings in blog_findings.md (validating; positioning piece; no new tasks)
+    # [FETCHED 2026-05-12] identity-vacuum-to-identity-driven-access-control — findings in blog_findings.md (not actionable; single-user QKG, no multi-tenant RBAC needed)
 
 # ── Source 3: GraphAcademy uncovered courses ─────────────────────────────
 # We covered ~10 GenAI courses in the initial crawl. These remain.
