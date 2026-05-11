@@ -2,7 +2,7 @@
   "version": 1,
   "in_progress": null,
   "last_tick": "2026-05-11T21:16:19.052383+00:00",
-  "tick_count": 72,
+  "tick_count": 73,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -303,7 +303,7 @@
       "metric_before": null,
       "metric_after": null,
       "delta": null,
-      "notes": "Run eval twice — once with reranker on, once with RERANK_DISABLED=1 — compare ti",
+      "notes": "Run eval twice \u00e2\u20ac\u201d once with reranker on, once with RERANK_DISABLED=1 \u00e2\u20ac\u201d compare ti",
       "artefacts": [],
       "error": null,
       "acceptance_results": [
@@ -532,7 +532,7 @@
       "metric_before": null,
       "metric_after": null,
       "delta": null,
-      "notes": "manual backend — deliverable produced out-of-band; gate will validate",
+      "notes": "manual backend \u00e2\u20ac\u201d deliverable produced out-of-band; gate will validate",
       "artefacts": [],
       "error": null,
       "acceptance_results": [
@@ -624,7 +624,7 @@
       "metric_before": null,
       "metric_after": null,
       "delta": null,
-      "notes": "manual backend — deliverable produced out-of-band; gate will validate",
+      "notes": "manual backend \u00e2\u20ac\u201d deliverable produced out-of-band; gate will validate",
       "artefacts": [],
       "error": null,
       "acceptance_results": [
@@ -787,7 +787,7 @@
       "metric_before": null,
       "metric_after": null,
       "delta": null,
-      "notes": "wrote ralph_analysis_from_neo4j_crawl_check_neo4j_version.md — Neo4j 2026.02.2 Enterprise; in-index pre-filter NOT available; SIMD vectorization active; quantization=True on all 4 vector indexes",
+      "notes": "wrote ralph_analysis_from_neo4j_crawl_check_neo4j_version.md \u00e2\u20ac\u201d Neo4j 2026.02.2 Enterprise; in-index pre-filter NOT available; SIMD vectorization active; quantization=True on all 4 vector indexes",
       "artefacts": [
         "data/ralph_analysis_from_neo4j_crawl_check_neo4j_version.md"
       ],
@@ -1012,7 +1012,7 @@
       "metric_before": null,
       "metric_after": null,
       "delta": null,
-      "notes": "manual backend — deliverable produced out-of-band; gate will validate",
+      "notes": "manual backend \u00e2\u20ac\u201d deliverable produced out-of-band; gate will validate",
       "artefacts": [],
       "error": null,
       "acceptance_results": [
@@ -1108,7 +1108,7 @@
       "metric_before": null,
       "metric_after": null,
       "delta": null,
-      "notes": "wrote ralph_analysis_from_ai_graph_disable_reranker_baseline.md — evidence-based analysis; RERANK_DISABLED=1 predicted to recover hit@10 from 0.3182->0.6364 (+100%); predicted eval_v1 avg cites 43.6->48-54",
+      "notes": "wrote ralph_analysis_from_ai_graph_disable_reranker_baseline.md \u00e2\u20ac\u201d evidence-based analysis; RERANK_DISABLED=1 predicted to recover hit@10 from 0.3182->0.6364 (+100%); predicted eval_v1 avg cites 43.6->48-54",
       "artefacts": [
         "data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md"
       ],
@@ -1191,7 +1191,7 @@
       "metric_before": null,
       "metric_after": null,
       "delta": null,
-      "notes": "manual backend — deliverable produced out-of-band; gate will validate",
+      "notes": "manual backend \u00e2\u20ac\u201d deliverable produced out-of-band; gate will validate",
       "artefacts": [],
       "error": null,
       "acceptance_results": [
@@ -1220,7 +1220,7 @@
       "metric_before": null,
       "metric_after": null,
       "delta": null,
-      "notes": "manual backend — deliverable produced out-of-band; gate will validate",
+      "notes": "manual backend \u00e2\u20ac\u201d deliverable produced out-of-band; gate will validate",
       "artefacts": [],
       "error": null,
       "acceptance_results": [
@@ -1354,7 +1354,7 @@
       "metric_before": null,
       "metric_after": null,
       "delta": null,
-      "notes": "manual backend — deliverable produced out-of-band; gate will validate",
+      "notes": "manual backend \u00e2\u20ac\u201d deliverable produced out-of-band; gate will validate",
       "artefacts": [],
       "error": null,
       "acceptance_results": [
@@ -1383,7 +1383,7 @@
       "metric_before": null,
       "metric_after": null,
       "delta": null,
-      "notes": "manual backend — deliverable produced out-of-band; gate will validate",
+      "notes": "manual backend \u00e2\u20ac\u201d deliverable produced out-of-band; gate will validate",
       "artefacts": [],
       "error": null,
       "acceptance_results": [
@@ -1412,7 +1412,7 @@
       "metric_before": null,
       "metric_after": null,
       "delta": null,
-      "notes": "manual backend — deliverable produced out-of-band; gate will validate",
+      "notes": "manual backend \u00e2\u20ac\u201d deliverable produced out-of-band; gate will validate",
       "artefacts": [],
       "error": null,
       "acceptance_results": [
@@ -1441,7 +1441,7 @@
       "metric_before": null,
       "metric_after": null,
       "delta": null,
-      "notes": "manual backend — deliverable produced out-of-band; gate will validate",
+      "notes": "manual backend \u00e2\u20ac\u201d deliverable produced out-of-band; gate will validate",
       "artefacts": [],
       "error": null,
       "acceptance_results": [
@@ -1532,7 +1532,7 @@
       "metric_before": null,
       "metric_after": null,
       "delta": null,
-      "notes": "manual mode — deliverable produced out-of-band; gate will validate",
+      "notes": "manual mode \u00e2\u20ac\u201d deliverable produced out-of-band; gate will validate",
       "artefacts": [
         "data\\ralph_analysis_from_ai_graph_arabic_reranker_research.md"
       ],
@@ -1642,7 +1642,7 @@
       "metric_before": null,
       "metric_after": null,
       "delta": null,
-      "notes": "manual mode — deliverable produced out-of-band; gate will validate",
+      "notes": "manual mode \u00e2\u20ac\u201d deliverable produced out-of-band; gate will validate",
       "artefacts": [
         "data\\ralph_analysis_from_ai_graph_lightrag_neo4j_spike.md"
       ],
@@ -1712,5 +1712,6 @@
         1379
       ]
     ]
-  }
+  },
+  "last_tick_time": "2026-05-11T21:44:55.791758+00:00"
 }
