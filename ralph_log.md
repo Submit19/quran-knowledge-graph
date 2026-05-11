@@ -74,3 +74,5 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-11T22:17 | from_adaptive_routing_2profile_spike | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_from_adaptive_routing_2profile_spike.md (review before use) |
 | 2026-05-11T22:18 | from_adaptive_routing_2profile_spike | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_from_adaptive_routing_2profile_spike.md (review before use) |
 | 2026-05-11T22:19 | from_adaptive_routing_2profile_spike | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_from_adaptive_routing_2profile_spike.md (review before use) |
+| 2026-05-11T23:15 | add_5_targeted_eval_questions | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |
+| 2026-05-11T23:44 | add_5_targeted_eval_questions | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_add_5_targeted_eval_questions.md (review before use) |
