@@ -1,31 +1,10 @@
 version: 1
-pending:
-- task_id: from_blog_hyde_semantic_search_spike
-  proposed_by: research:blog_neo4j:integrating-neo4j-with-google-genkit
-  proposed_at: '2026-05-12T00:00:00+00:00'
-  seen_count: 0
-  description: 'Spike: implement HyDE (Hypothetical Document Embeddings) in chat.py as an optional pre-processing step for
-    semantic_search. Generate a short hypothetical answer via claude-haiku-4-5, embed it with BGE-M3, use as the query vector
-    instead of the raw query text. Gate on env var HYDE_ENABLED=1. Measure QRCD MAP@10 delta.
-
-    '
-  type: agent_creative
-  priority: 55
-  acceptance:
-    file_min_bytes:
-      path: data/ralph_agent_from_blog_hyde_semantic_search_spike.md
-      min: 800
-  haiku_notes:
-    classification: actionable
-    duplicate_of: null
-    relates_to: [from_neo4j_crawl_single_shot_vector_traversal]
-    note: >
-      Haiku false-flagged as empty (YAML multiline parsing issue). Description IS present.
-      HyDE is a novel pattern not in backlog. Synergistic with vector traversal tasks.
-      Override: actionable at p55. [corrected by research tick orchestrator]
-    annotated_at: '2026-05-11T13:15:04.865574+00:00'
-    model: claude-haiku-4-5
+pending: []
 approved:
+- approved_at: '2026-05-12T00:00:00+00:00'
+  reason: actionable (Haiku confirmed, no duplicate in backlog) — HyDE is a novel pattern; synergistic with from_neo4j_crawl_single_shot_vector_traversal. Added at p55.
+  task_id: from_blog_hyde_semantic_search_spike
+  proposed_by: research:blog_neo4j:integrating-neo4j-with-google-genkit
 - approved_at: '2026-05-12T00:00:00+00:00'
   reason: actionable (Haiku confirmed) — no duplicate in backlog; adds 3-layer adaptive routing design to backlog at p80.
   task_id: from_adaptive_routing_design

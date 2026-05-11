@@ -992,6 +992,17 @@ tasks:
         - file_exists: data/ralph_agent_from_adaptive_routing_2profile_spike.md
         - file_min_bytes: { path: data/ralph_agent_from_adaptive_routing_2profile_spike.md, min: 1000 }
 
+  # ── [from-blog] Approved from proposed_tasks.yaml tick 53 ──────────────────
+  - id: from_blog_hyde_semantic_search_spike
+    type: agent_creative
+    priority: 55
+    description: "[from-blog][answer-quality] Spike HyDE (Hypothetical Document Embeddings) in chat.py as an optional pre-processing step for semantic_search. Generate a short hypothetical answer via claude-haiku-4-5, embed it with BGE-M3, use as the query vector instead of the raw query text. Gate on env var HYDE_ENABLED=1. Measure QRCD MAP@10 delta. Synergistic with from_neo4j_crawl_single_shot_vector_traversal."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_blog_hyde_semantic_search_spike.md
+        - file_min_bytes: { path: data/ralph_agent_from_blog_hyde_semantic_search_spike.md, min: 800 }
+
 # ── Retired tasks ─────────────────────────────────────────────────────────────
 # Tasks moved here when they are obsolete (superseded, subsumed, or no longer applicable).
 # Kept for audit trail — do NOT re-activate. Done tasks stay in tasks: list above and
