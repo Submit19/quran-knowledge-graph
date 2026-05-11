@@ -160,6 +160,32 @@ Survey of agentic AI tools from Neo4j's perspective. Validates QKG's hybrid retr
 
 ---
 
+## https://neo4j.com/blog/agentic-ai/agentic-architecture/
+**Fetched:** 2026-05-11
+**Title:** What Is Agentic AI Architecture? Common Patterns
+
+### TL;DR
+High-level Neo4j overview of agentic architecture patterns: Router, Sequential, Parallel, Network, and Hierarchical. Core message: start with a single-agent router; add structure only where you have a clear failure mode. Heavy emphasis on GraphRAG as the knowledge backbone for multi-hop relational reasoning.
+
+### Key Takeaways
+
+1. **Router → Sequential → Network progression** — Neo4j recommends starting with a single-agent router (classify intent → delegate to tool), then layering sequential pipelines for multi-step research, and only adopting a full network/hierarchical architecture if explicit agent specialization is needed. QKG already has the router agent (`from_neo4j_yt_router_agent`, DONE); the existing architecture is validated.
+
+2. **GraphRAG over flat vector search** — The article emphasizes that "agents follow connections to find related entities" as the fundamental advantage of knowledge graphs over flat vector retrieval. QKG's existing traversal tools (`traverse_topic`, `find_path`, `explore_root_family`) implement this. No change needed.
+
+3. **Tool constraints = production safety** — "Most production incidents come from tool misuse, unclear contracts, or overly broad permissions." Aligns with `from_blog_tool_input_validation` (just approved, p45) and `from_neo4j_yt_mcp_tool_description_audit` (in backlog). No new task.
+
+4. **Shared memory in multi-agent** — agents coordinate through "shared logical view of connected facts and current state." QKG's Neo4j graph naturally serves this role if/when we go multi-agent. Already addressed by `reasoning_memory_session_layer` (approved).
+
+5. **"Constrain tools before you scale agents"** — validate at schema level before adding agents. Supports `from_blog_tool_input_validation` direction.
+
+6. **Observability is non-negotiable** — make orchestration traceable; intermediate results logged. QKG's `reasoning_memory.py` writes `:ToolCall` nodes per invocation — architecture is already correct.
+
+### Verdict
+**Low incremental value — validating, not novel.** All actionable items from this article are already covered by existing backlog tasks (`from_neo4j_yt_router_agent` DONE, `from_blog_tool_input_validation` approved, `reasoning_memory_session_layer` approved, `from_neo4j_yt_mcp_tool_description_audit` pending). No new tasks proposed.
+
+---
+
 ## https://neo4j.com/blog/agentic-ai/agent-tools/
 **Fetched:** 2026-05-11
 **Title:** Agent Tools — What They Are, How AI Agents Use Them

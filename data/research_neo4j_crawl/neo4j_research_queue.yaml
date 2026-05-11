@@ -45,9 +45,7 @@ blog_neo4j:
     # Highest priority — direct hits on our agentic stack
     # [FETCHED 2026-05-11] context-engineering-tools — findings in blog_findings.md
     # [FETCHED 2026-05-11] agent-tools — findings in blog_findings.md
-    - url: https://neo4j.com/blog/agentic-ai/agentic-architecture/
-      title: What Is Agentic AI Architecture? Common Patterns
-      relevance: HIGH — architecture patterns
+    # [FETCHED 2026-05-11] agentic-architecture — findings in blog_findings.md (validating, no new tasks)
     - url: https://neo4j.com/blog/agentic-ai/what-is-agentic-rag/
       title: Agentic RAG — what it is, when to use it
       relevance: HIGH — fundamentals
