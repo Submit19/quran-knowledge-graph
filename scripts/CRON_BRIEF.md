@@ -29,9 +29,11 @@ If `CLAUDE_INDEX.md` doesn't exist, fall back to `CLAUDE.md`.
 2. **Sync with GitHub:** `git pull --rebase && git push`. The push is a safety net — if the prior tick committed locally but failed to push (transient network/auth), this flushes it. Idempotent when in sync (no-op).
 
 3. **Decide cycle from `ralph_state.json` `tick_count`:**
-   - tick_count % 6 == 0 → MAINTENANCE tick (every 6 fires; was 12 — Max 20x can absorb more frequent hygiene)
-   - else if tick_count % 2 == 0 → IMPL tick (proposal-review at start)
-   - else → RESEARCH tick
+   - tick_count % 6 == 0 → MAINTENANCE tick (every 6 fires)
+   - else if tick_count % 3 == 0 → RESEARCH tick (1 in 3 — was 1 in 2; foundational research is done, biasing toward IMPL throughput)
+   - else → IMPL tick (proposal-review at start)
+
+   Resulting ratio across 12 ticks: 2 MAINT + 2 RESEARCH + 8 IMPL = **4:1 IMPL:RESEARCH**. Re-tune if research backlog grows past 40 items (drop to % 2) or empties below 5 (raise to % 4).
 
 4. **IMPL tick procedure:**
 
@@ -46,6 +48,7 @@ If `CLAUDE_INDEX.md` doesn't exist, fall back to `CLAUDE.md`.
    - If `pending: []` (empty), skip this step entirely — don't burn tokens on a no-op read.
 
    **4b. IMPL work.** Pick highest-priority pending task in {agent_creative, cypher_analysis, cleanup} from `ralph_backlog.yaml` that's not done/quarantined.
+   - **Honor `blocked_on_research:` fields.** If a candidate task has a `blocked_on_research: [<topic_id>, ...]` field, check each listed topic. If ANY topic is still status: open in `data/research_backlog.yaml` OR present in any source queue of `data/research_neo4j_crawl/neo4j_research_queue.yaml`, **skip the task** and pick the next-highest unblocked one. Log the skip in your reply summary so the operator knows.
    - cypher_analysis or cleanup: do the work directly. Local Neo4j: NEO4J_URI=neo4j://127.0.0.1:7687, user=neo4j, password=Bismillah19, database=quran. Then `python ralph_tick.py --task <id>`.
    - agent_creative: if description contains `[opus]`, spawn a NESTED general-purpose subagent with `model="opus"` for the deliverable.
      - **Check for a pre-warmed plan at `data/sonnet_drafts/<task_id>.md`** before spawning Opus. If present, INCLUDE its full text in the Opus subagent's prompt as "Pre-warmed implementation plan (use as starting point, verify before executing)". This saves Opus tokens by skipping cold discovery.
@@ -64,7 +67,8 @@ If `CLAUDE_INDEX.md` doesn't exist, fall back to `CLAUDE.md`.
    e. Save the queue YAML back with all popped items removed.
    f. Bump `ralph_state.json` tick_count by 1 (single bump, regardless of items processed).
 
-6. **MAINTENANCE tick (every 12th):** Dedupe / retire / re-rank across all backlogs. Run proposal review first. Commit "ralph maintenance: tick <N>".
+6. **MAINTENANCE tick (every 6th):** Dedupe / retire / re-rank across all backlogs. Run proposal review first. Commit "ralph maintenance: tick <N>".
+   - **Every 4th MAINT tick (= every 24th tick overall, ~12h)** also do a **SYNTHESIS** sub-step: read all `data/research_neo4j_crawl/*.md` files modified since the last synthesis + the new entries in `data/proposed_tasks.yaml` + recent `data/ralph_analysis_*.md`. Produce a cross-cutting insights doc at `data/research_synthesis_<date>.md`. If insights suggest re-prioritizing pending tasks, apply the changes (with one-line reason in the commit message). Goal: catch the "this research changes the design of multiple tasks" cases periodically.
 
 7. **End-of-tick housekeeping:** `python scripts/tick_finalize.py` (runs state_snapshot.py + vault_update.py + MORNING_REPORT.md every 12 ticks).
 
