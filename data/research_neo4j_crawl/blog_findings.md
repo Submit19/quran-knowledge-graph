@@ -347,3 +347,80 @@ Comprehensive TypeScript/Node.js guide to the `genkitx-neo4j` plugin. Documents 
 
 ### Proposed Tasks
 - Spike: implement HyDE (Hypothetical Document Embeddings) in `chat.py` as an optional pre-processing step for `semantic_search`. Generate a hypothetical answer via a fast model (Haiku), embed it, use as the query vector. Measure impact on QRCD MAP@10. Estimated: medium effort, uncertain payoff — add to backlog at p55.
+
+---
+
+## https://neo4j.com/blog/agentic-ai/can-i-use-aura-agents-to-create-an-mcp-enabled-teacher-2/
+**Fetched:** 2026-05-12 (from cache)
+**Title:** Can I use Aura Agents to create an MCP enabled Teacher?
+
+### TL;DR
+Martin O'Hanlon (Neo4j) builds an Aura-backed MCP server that gives VS Code/Cursor/Claude coding agents access to GraphAcademy lesson content. Architecture: Neo4j Aura (lesson chunks + embeddings) + Aura Agent (3 tools: semantic search, get lesson, get next lesson) + MCP endpoint. Key insight: "smallest number of tools results in better outcomes and tool use." The chunk-averaging score prevents single high-scoring chunks from dominating results.
+
+### Key Takeaways
+
+1. **Minimal tool surface = better routing** — the teacher agent needs only 3 tools (search chunk, get full lesson, get next lesson) and achieves reliable behavior. QKG currently has 21 tools. The article empirically validates the `from_neo4j_yt_mcp_balanced_tool_grouping` task (p78) — reducing functional surface by grouping or tiering tools. Already in backlog, no new task.
+
+2. **Chunk-averaging score trick** — when a verse/lesson is split into chunks, return the *average* similarity score across matching chunks rather than the max. This prevents a single high-scoring chunk from elevating a poorly-matched document. QKG's current hybrid_search and semantic_search return per-chunk scores and deduplicate by verse; the averaging approach could improve ranking quality for surahs that repeat similar phrases. **Potentially actionable** for reranking logic in `retrieval_gate.py`.
+
+3. **`SEARCH c IN (VECTOR INDEX chunkText FOR userEmbedding LIMIT $k) SCORE AS score` syntax** — this is the Cypher 25 SEARCH clause syntax. Article confirms it works with Aura (current Neo4j). Pairs with the docs queue item for `cypher-manual/current/queries/concepts/#search-clause`. QKG should migrate from `db.index.vector.queryNodes` to `SEARCH` clause — cleaner and reportedly faster.
+
+4. **Teaching vs. solving** — the article's distinction is contextually interesting for QKG: a QKG user asking "what does the Quran say about X?" may want either (a) a direct answer with citations, or (b) a guided exploration of how the Quran develops the topic. The current QKG always gives direct answers. A "guided exploration" mode (structured progressive disclosure) is a UX direction worth noting.
+
+5. **Aura Agents + MCP = competitor pattern, not a migration target** — Aura Agent locks to Gemini Flash + Google embeddings (incompatible with BGE-M3). Previously decided against. This article doesn't change the decision; confirms Aura Agent is a rapid-prototyping tool for new projects, not a migration path.
+
+### Verdict
+**Low-medium incremental value.** Chunk-averaging score and SEARCH clause migration are the two actionable patterns. Both are already indirectly covered (retrieval_gate reranking improvement = part of adaptive routing spike; SEARCH clause = docs_deep_findings queue item). No new tasks — note chunk-averaging as a follow-on for the adaptive routing spike.
+
+---
+
+## https://neo4j.com/blog/agentic-ai/neo4j-launches-aura-agent/
+**Fetched:** 2026-05-12 (from cache)
+**Title:** Graph-Driven AI for All: Neo4j Aura Agent Enters General Availability
+
+### TL;DR
+Neo4j Aura Agent GA announcement (Feb 2026). Auto-generates draft agents from graph schema + use-case prompt (ontology-driven construction). Three retrieval tool types: Similarity Search, Parameterized Query Templates, Text-to-Query generation. Single-click MCP + REST deployment. Runtime: Google Gemini Flash 2.5 + fine-tuned Gemini for text-to-query + Google/Azure embeddings only. Not a migration target for QKG (embedding lock-in).
+
+### Key Takeaways
+
+1. **Three-tier retrieval toolset = validation of QKG's existing architecture** — Aura Agent's "Similarity Search + Parameterized Queries + Text-to-Cypher fallback" maps directly to QKG's "semantic_search + dedicated traversal tools + run_cypher (read-only escape hatch)." QKG's hand-rolled architecture is functionally equivalent. No change needed.
+
+2. **Ontology-driven agent construction** — Aura Agent auto-generates tool descriptions from the graph schema. QKG's tools are hand-written, which provides higher quality but requires manual maintenance. As our schema evolves, we should keep tool descriptions in sync — already addressed by `from_neo4j_yt_mcp_tool_description_audit` (DONE).
+
+3. **Text-to-Cypher as fallback** — Aura Agent uses a fine-tuned Gemini model for dynamic Cypher generation when parameterized templates don't cover the query. QKG's `run_cypher` (read-only, denylist-guarded) serves this role. The Aura approach (fine-tuned model) is more accurate than ad-hoc generation but requires training data. The `from_research_finetune_bge_m3_qrcd` task is the closest analogy (fine-tuning for embeddings, not Cypher). A fine-tuned text-to-Cypher model for QKG is a future direction (not urgent).
+
+4. **MCP deployment = distribution pattern** — Aura Agent's single-click MCP server enables QKG-like agents in any MCP-aware tool. For QKG to achieve this, the existing hand-rolled dispatch in `chat.py` could be wrapped as an MCP server. Already flagged in `from_neo4j_yt_mcp_balanced_tool_grouping` (p78) as a future step. Not urgent.
+
+5. **Embedding lock-in confirmed** — Aura Agent locks to Google/Azure embeddings. This is the ADR decision already recorded (SKIP Aura Agent migration, ADR 0009). No new information.
+
+6. **Enterprise use cases** — QIAGEN (drug discovery), Daimler Truck. Both validate knowledge graph + agentic retrieval for high-accuracy, non-negotiable domains. Directly analogous to Quran scholarly use cases where precision matters.
+
+### Verdict
+**Validating, not actionable.** Confirms QKG's architecture is on the right track. Embedding lock-in and Aura Agent migration decision are unchanged. No new tasks.
+
+---
+
+## https://neo4j.com/blog/knowledge-graph/turning-servicenow-data-into-connected-enterprise-intelligence/
+**Fetched:** 2026-05-12 (live WebFetch)
+**Title:** Turning ServiceNow Data into Connected Enterprise Intelligence
+
+### TL;DR
+Architectural pattern for integrating ServiceNow operational data into Neo4j via Kafka CDC, then applying Graph Data Science + multi-agent retrieval for IT operations intelligence. The core thesis: "without connected enterprise context, LLM responses may be incomplete, shallow, or difficult to trust." Uses community detection, centrality, and blast-radius analysis for prioritization.
+
+### Key Takeaways
+
+1. **Multi-agent role decomposition** — proposes 5 specialized agents + a synthesis Commander Agent: Triage, Topology, Change Risk, Security, Runbook. The Commander integrates their outputs. QKG's current single-agent agentic loop already handles multi-hop retrieval, but the explicit "Commander Agent" synthesis pattern is relevant to the `from_adaptive_routing_design` task (p80, DONE) — the adaptive routing design already accounts for multi-tool coordination.
+
+2. **Graph Data Science for prioritization** — uses betweenness centrality, community detection, and path analysis to identify high-impact entities before retrieval. QKG has `graph_stats.json` with community structure (16 communities, 0.5324 modularity). Betweenness centrality is NOT currently used in retrieval ranking. **Potentially actionable**: weight verse retrieval results by betweenness centrality score as a "conceptual importance" signal.
+
+3. **Kafka CDC for event streaming** — not applicable (QKG is a static corpus; no streaming writes needed).
+
+4. **Contextual enrichment layers** (structural → relational → historical) — maps exactly to QKG's existing data model (Verse nodes → RELATED_TO/MENTIONS edges → ReasoningTrace history). Validates existing architecture.
+
+5. **"Context before generation"** — the article's conclusion: retrieval quality drives answer quality more than prompt engineering. Consistent with QKG's synthesis findings and the bias toward retrieval improvement tasks in the backlog.
+
+### Verdict
+**Low-medium incremental value.** The multi-agent Commander pattern is already addressed in the adaptive routing design. The betweenness centrality retrieval signal is the one genuinely novel idea. No urgent new tasks — note as a potential future enhancement.
+
+### Proposed Tasks
+- Betweenness centrality as retrieval re-ranking signal: compute betweenness for all Verse nodes using GDS (or NetworkX — graph_stats.json shows we have community structure already), store as `Verse.betweenness` property, add as a re-ranking factor in `retrieval_gate.py` alongside cross-encoder scores. Low-priority (p40) given uncertain QA impact — needs eval to validate.

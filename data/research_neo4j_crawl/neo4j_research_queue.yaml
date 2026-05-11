@@ -49,15 +49,9 @@ blog_neo4j:
     # [FETCHED 2026-05-11] context-gap-ai-reasoning — findings in blog_findings.md (validating, positioning piece; no new tasks)
     # [FETCHED 2026-05-12] introducing-asynchronous-i-o-in-neo4j-using-io_uring — findings in blog_findings.md (not actionable; Windows/Desktop constraint, Linux-only feature)
     # [FETCHED 2026-05-12] integrating-neo4j-with-google-genkit — findings in blog_findings.md (HyDE spike proposed p55; MatchSearchClauseStrategy confirms in-index filter work)
-    - url: https://neo4j.com/blog/agentic-ai/can-i-use-aura-agents-to-create-an-mcp-enabled-teacher-2/
-      title: Aura Agents to create an MCP enabled Teacher
-      relevance: MEDIUM — Aura+MCP example
-    - url: https://neo4j.com/blog/agentic-ai/neo4j-launches-aura-agent/
-      title: Neo4j Aura Agent General Availability
-      relevance: MEDIUM — Aura GA announcement
-    - url: https://neo4j.com/blog/knowledge-graph/turning-servicenow-data-into-connected-enterprise-intelligence/
-      title: Turning ServiceNow Data into Connected Enterprise Intelligence
-      relevance: MEDIUM — KG construction patterns from unstructured data
+    # [FETCHED 2026-05-12] can-i-use-aura-agents-to-create-an-mcp-enabled-teacher-2 — findings in blog_findings.md (validating; chunk-avg score noted; no new tasks)
+    # [FETCHED 2026-05-12] neo4j-launches-aura-agent — findings in blog_findings.md (validating; confirms QKG architecture; no new tasks)
+    # [FETCHED 2026-05-12] turning-servicenow-data-into-connected-enterprise-intelligence — findings in blog_findings.md (betweenness centrality rerank proposed p40)
     - url: https://neo4j.com/blog/news/knowledge-layer-agentic-systems-google-cloud/
       title: A knowledge layer for your agentic systems on GCP
       relevance: MEDIUM — knowledge layer architecture
