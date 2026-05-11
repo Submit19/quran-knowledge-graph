@@ -724,6 +724,21 @@ async def _agent_stream(message: str, history: list,
 
             msgs.append({"role": "user", "content": message})
 
+            # ── 2-profile adaptive routing: classify query before tool loop ──
+            # broad -> reranker ON; all other profiles -> reranker OFF.
+            # Evidence: QRCD ablation — bge-reranker-v2-m3 drops hit@10 50% on
+            # CONCRETE/ARABIC; only beneficial on BROAD multi-concept synthesis.
+            try:
+                from chat import classify_query
+                _query_profile = classify_query(message)
+                print(f"  [routing] classify_query -> profile={_query_profile!r}")
+                q.put({"t": "tool", "name": "Query profile",
+                       "args": message[:60],
+                       "summary": f"profile={_query_profile}"})
+            except Exception as _qpe:
+                _query_profile = None
+                print(f"  [routing] classify_query failed: {_qpe}")
+
             full_text = ""
             turn = 0
 
@@ -880,7 +895,9 @@ async def _agent_stream(message: str, history: list,
                         # Execute the tool — also time it for reasoning memory
                         import time as _t
                         _t0 = _t.time()
-                        result_str = dispatch_tool(session, tool_name, tool_args, user_query=message)
+                        result_str = dispatch_tool(session, tool_name, tool_args,
+                                                   user_query=message,
+                                                   query_profile=_query_profile)
                         tool_duration_ms = int((_t.time() - _t0) * 1000)
 
                         # Summary for UI

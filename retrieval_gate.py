@@ -44,17 +44,33 @@ def _get_reranker():
     return _reranker
 
 
-def rerank_verses(query: str, verses: list[dict], top_k: int = 20) -> list[dict]:
+def rerank_verses(query: str, verses: list[dict], top_k: int = 20,
+                   profile: str | None = None) -> list[dict]:
     """
     Rerank a list of verse dicts by cross-encoder relevance to the query.
     Each verse dict must have a "text" key.
     Returns the top_k verses sorted by relevance, with relevance_score added.
+
+    2-profile adaptive routing: reranking is applied ONLY when profile == 'broad'
+    (or when profile is None and RERANK_DISABLED is not set — backward-compatible
+    default for callers that haven't been updated yet).
+
+    Evidence: QRCD ablation shows bge-reranker-v2-m3 drops hit@10 from 0.6364 to
+    0.3182 on CONCRETE/ARABIC queries; it is only beneficial on BROAD multi-concept
+    synthesis queries.
     """
     if not verses or not query:
         return verses
 
+    # 2-profile gate: skip reranking for non-broad profiles.
+    # None means caller has not specified a profile — fall through to global flag
+    # for backward compatibility (no behavioural change for existing callers).
+    _RERANK_PROFILES = {"broad"}
+    if profile is not None and profile not in _RERANK_PROFILES:
+        return verses[:top_k]
+
     model = _get_reranker()
-    if model is None:   # rerank explicitly disabled
+    if model is None:   # rerank explicitly disabled via env
         return verses[:top_k]
 
     pairs = [(query, v.get("text", "")) for v in verses]
@@ -105,13 +121,18 @@ def lost_in_middle_reorder(verses: list[dict]) -> list[dict]:
     return front + back
 
 
-def gate_tool_result(query: str, tool_name: str, result: dict) -> dict:
+def gate_tool_result(query: str, tool_name: str, result: dict,
+                      profile: str | None = None) -> dict:
     """
     Post-process a tool result: rerank verses, assess quality, reorder.
     Returns the modified result dict with reranked verses and quality metadata.
 
     Only applies to tools that return verse lists (search_keyword, semantic_search,
     traverse_topic).
+
+    profile: routing bucket from classify_query() — passed to rerank_verses() so
+    the cross-encoder is only applied for profile == 'broad'.  None uses the
+    backward-compatible default (global RERANK_DISABLED flag only).
     """
     if not query:
         return result
@@ -122,13 +143,13 @@ def gate_tool_result(query: str, tool_name: str, result: dict) -> dict:
     reranked = False
 
     if tool_name == "search_keyword" and "by_surah" in result:
-        # Flatten all verses, rerank, then re-group
+        # Flatten all verses, rerank (profile-gated), then re-group
         all_verses = []
         for surah_verses in result["by_surah"].values():
             all_verses.extend(surah_verses)
 
         if all_verses:
-            all_verses = rerank_verses(query, all_verses, top_k=30)
+            all_verses = rerank_verses(query, all_verses, top_k=30, profile=profile)
             quality = assess_quality(all_verses)
             all_verses = lost_in_middle_reorder(all_verses)
 
@@ -147,6 +168,7 @@ def gate_tool_result(query: str, tool_name: str, result: dict) -> dict:
             result["by_surah"] = by_surah
             result["total_verses"] = len(all_verses)
             result["retrieval_quality"] = quality
+            result["query_profile"] = profile or "unset"
             reranked = True
 
     elif tool_name == "semantic_search" and "by_surah" in result:
@@ -155,7 +177,7 @@ def gate_tool_result(query: str, tool_name: str, result: dict) -> dict:
             all_verses.extend(surah_verses)
 
         if all_verses:
-            all_verses = rerank_verses(query, all_verses, top_k=30)
+            all_verses = rerank_verses(query, all_verses, top_k=30, profile=profile)
             quality = assess_quality(all_verses)
             all_verses = lost_in_middle_reorder(all_verses)
 
@@ -172,15 +194,17 @@ def gate_tool_result(query: str, tool_name: str, result: dict) -> dict:
             result["by_surah"] = by_surah
             result["total_verses"] = len(all_verses)
             result["retrieval_quality"] = quality
+            result["query_profile"] = profile or "unset"
             reranked = True
 
     elif tool_name == "traverse_topic" and "direct_matches" in result:
         directs = result["direct_matches"]
         if directs:
-            directs = rerank_verses(query, directs, top_k=30)
+            directs = rerank_verses(query, directs, top_k=30, profile=profile)
             quality = assess_quality(directs)
             result["direct_matches"] = lost_in_middle_reorder(directs)
             result["retrieval_quality"] = quality
+            result["query_profile"] = profile or "unset"
             reranked = True
 
     if not reranked:

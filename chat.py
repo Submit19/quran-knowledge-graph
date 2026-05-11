@@ -1074,23 +1074,50 @@ _THEME_DENSE_SURAHS = {1, 36, 55, 112, 113, 114}
 
 def classify_query(query: str) -> str:
     """
-    Classify a user query into one of three routing buckets:
+    Classify a user query into one of five routing buckets (2-profile spike):
+      'broad'      — multi-concept synthesis, compare/overview, themes.
+      'arabic'     — contains Arabic Unicode script.
       'structured' — has verse refs, Arabic roots, or Code-19 language.
       'abstract'   — abstract single-word concept (meditation, reverence, ...).
       'concrete'   — proper nouns, narratives, named events.
 
-    Returns 'abstract' as the default safe bucket when nothing else triggers,
-    matching the failure mode the router was designed to fix.
+    For the 2-profile reranker spike: only 'broad' gets the cross-encoder
+    reranker.  All other profiles skip reranking (raw BGE-M3 order).
+
+    Returns 'abstract' as the default safe bucket when nothing else triggers.
     """
     if not query or not isinstance(query, str):
         return "abstract"
 
     q = query.lower().strip()
+    import re as _re
+
+    # 0a. ARABIC — any Arabic Unicode script in the original query.
+    if _re.search(r'[؀-ۿ]', query):
+        return "arabic"
+
+    # 0b. BROAD — multi-concept synthesis, comparison, overview queries.
+    _BROAD_SIGNALS = [
+        r'\bcommon themes?\b',
+        r'\bwhat does the quran (say|teach)\b',
+        r'\bcompare\b.+\band\b',
+        r'\boverview\b',
+        r'\ball (?:the )?(?:mentions?|verses?) of\b',
+        r'\bsummarize (?:the )?(?:quran|entire|all)\b',
+        r'\bthemes? (?:in|of|across)\b',
+        r'\beverywhere.*(?:mentioned|appears?)\b',
+    ]
+    if any(_re.search(pat, q) for pat in _BROAD_SIGNALS):
+        return "broad"
+    # Multi-word heuristic: 5+ content words with no concrete token match.
+    _content_words = [t for t in _re.findall(r'[a-z]+', q) if len(t) > 3]
+    _concrete_single = {t for t in _CONCRETE_TOKENS if " " not in t}
+    if len(_content_words) >= 5 and not (set(_re.findall(r'[a-z]+', q)) & _concrete_single):
+        return "broad"
 
     # 1. STRUCTURED — verse refs, roots, Code-19.
     # Cheap regex first (fast path), then fall back to ref_resolver for
     # spelled-out forms ("Surah Al-Baqarah verse 255", "Ayat al-Kursi").
-    import re as _re
     if _re.search(r"\[\s*\d{1,3}\s*:\s*\d{1,3}", q):
         return "structured"
     if _re.search(r"\bsurah\s+\d{1,3}\s+(verse|ayah|ayat)\s+\d", q):
@@ -2286,8 +2313,14 @@ def clear_tool_cache():
             _TOOL_CACHE_STATS[k] = 0
 
 
-def dispatch_tool(session, tool_name: str, tool_input: dict, user_query: str = None) -> str:
-    """Call the appropriate graph function, apply retrieval gating, return JSON."""
+def dispatch_tool(session, tool_name: str, tool_input: dict, user_query: str = None,
+                   query_profile: str = None) -> str:
+    """Call the appropriate graph function, apply retrieval gating, return JSON.
+
+    query_profile: routing bucket from classify_query() — passed to gate_tool_result
+    so the reranker is only applied when profile == 'broad'.  None means use the
+    gate's own default (rerank if not globally disabled).
+    """
     cache_key = _tool_cache_key(tool_name, tool_input, user_query)
     cached = _tool_cache_get(cache_key)
     if cached is not None:
@@ -2341,7 +2374,8 @@ def dispatch_tool(session, tool_name: str, tool_input: dict, user_query: str = N
         if user_query and tool_name in ("search_keyword", "semantic_search", "traverse_topic"):
             try:
                 from retrieval_gate import gate_tool_result
-                result = gate_tool_result(user_query, tool_name, result)
+                result = gate_tool_result(user_query, tool_name, result,
+                                          profile=query_profile)
             except Exception as e:
                 result["gate_error"] = str(e)
 
