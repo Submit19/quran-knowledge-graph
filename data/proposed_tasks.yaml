@@ -1,126 +1,114 @@
-# Pending task proposals — researcher writes here, orchestrator reviews.
-#
-# Researcher (research-tick subagent) appends new proposals to `pending` when
-# a research finding is actionable. These tasks DO NOT go straight into
-# ralph_backlog.yaml — they wait here for orchestrator review.
-#
-# Orchestrator (IMPL-tick subagent) reviews this file at the START of each
-# IMPL tick before picking task work. For each pending entry:
-#   - APPROVE  → move to ralph_backlog.yaml `tasks:` list, remove from here.
-#   - REJECT   → move to `rejected:` block here with a one-line reason.
-#   - DEFER    → leave in pending; bump `seen_count` so we know how many
-#                review cycles it survived.
-#
-# Every 6th IMPL tick (i.e. roughly every 12h at hourly cadence) the
-# orchestrator does a fuller maintenance pass: dedupes overlapping tasks
-# in ralph_backlog.yaml, retires obsoleted ones (with rationale), rebalances
-# priorities based on what's been done.
-#
-# Schema:
-#   pending:
-#     - proposed_at: <ISO timestamp>
-#       proposed_by: <research_topic_id or research tick reference>
-#       seen_count: 0
-#       task:
-#         id: from_research_<short>
-#         type: cleanup | agent_creative | cypher_analysis
-#         priority: 40-70   (gets re-ranked by orchestrator)
-#         description: "[from-research] ..."
-#         spec: { ... }
-#
-#   rejected:
-#     - rejected_at: <ISO timestamp>
-#       reason: <one line>
-#       task_id: <id>
-#       proposed_by: <source>
-
 version: 1
 pending:
-  - proposed_at: "2026-05-11T11:15:00+00:00"
-    proposed_by: "operator:adaptive-routing-discussion"
-    seen_count: 0
-    task:
-      id: from_adaptive_routing_50q_bucketed_eval
-      type: agent_creative
-      priority: 78
-      description: >
-        [from-operator] Build a 50-question evaluation set with explicit
-        query-class bucket labels (~10 questions per bucket: STRUCTURED,
-        ABSTRACT, CONCRETE, BROAD, ARABIC). Pre-commit labels so we can
-        detect per-profile lift in adaptive-routing experiments. Eval_v1's
-        13 questions are too noisy to see per-profile effects (saw +96 and
-        -84 in one run). Source: eval-v1 question bank + new abstract /
-        broad / arabic questions designed to expose each profile's failure
-        mode. Each question gets a `bucket:` field in the YAML/JSON. New
-        eval script reads the bucket and emits per-bucket avg_cites in
-        addition to overall.
-      spec:
-        acceptance:
-          - file_exists: data/ralph_agent_from_adaptive_routing_50q_bucketed_eval.md
-          - file_min_bytes: {path: data/ralph_agent_from_adaptive_routing_50q_bucketed_eval.md, min: 800}
+- proposed_at: '2026-05-11T11:15:00+00:00'
+  proposed_by: operator:adaptive-routing-discussion
+  seen_count: 0
+  task:
+    id: from_adaptive_routing_50q_bucketed_eval
+    type: agent_creative
+    priority: 78
+    description: '[from-operator] Build a 50-question evaluation set with explicit query-class bucket labels (~10 questions
+      per bucket: STRUCTURED, ABSTRACT, CONCRETE, BROAD, ARABIC). Pre-commit labels so we can detect per-profile lift in adaptive-routing
+      experiments. Eval_v1''s 13 questions are too noisy to see per-profile effects (saw +96 and -84 in one run). Source:
+      eval-v1 question bank + new abstract / broad / arabic questions designed to expose each profile''s failure mode. Each
+      question gets a `bucket:` field in the YAML/JSON. New eval script reads the bucket and emits per-bucket avg_cites in
+      addition to overall.
 
-  - proposed_at: "2026-05-11T11:15:00+00:00"
-    proposed_by: "operator:adaptive-routing-discussion"
-    seen_count: 0
-    task:
-      id: from_adaptive_routing_design
-      type: agent_creative
-      priority: 80
-      description: >
-        [from-operator][opus] Design adaptive query-conditional retrieval
-        architecture. Layer 1 = per-bucket retrieval CONFIG (rerank on/off,
-        RRF k, embedding index, max_turns, citation verifier strength).
-        Layer 2 = per-bucket AGENT shape (linear ReAct vs Reflexion vs MoA
-        sub-agent decomp). Layer 3 = per-bucket MODEL routing (Haiku for
-        simple, Opus for synthesis). Output design doc with: (a) the 5
-        profile definitions with concrete params + evidence basis, (b)
-        classifier extension plan (current classify_query() output expanded
-        to BROAD class), (c) misclassification cost analysis, (d) risk
-        register, (e) sequencing — ship 2-profile spike first then expand.
-        Evidence basis lives in data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md
-        and data/eval_v1_baseline_rerank_on.json. BLOCKED on
-        from_adaptive_routing_50q_bucketed_eval for empirical validation
-        but design can proceed in parallel.
-      spec:
-        acceptance:
-          - file_exists: data/ralph_agent_from_adaptive_routing_design.md
-          - file_min_bytes: {path: data/ralph_agent_from_adaptive_routing_design.md, min: 1500}
+      '
+    spec:
+      acceptance:
+      - file_exists: data/ralph_agent_from_adaptive_routing_50q_bucketed_eval.md
+      - file_min_bytes:
+          path: data/ralph_agent_from_adaptive_routing_50q_bucketed_eval.md
+          min: 800
+  haiku_notes:
+    classification: actionable
+    duplicate_of: null
+    relates_to:
+    - hand_grade_26_answers
+    - rerun_eval_against_current
+    - build_multihop_benchmark
+    note: New 50q eval set with bucket labels. Unblocks adaptive-routing experiments. Complements existing 13q eval_v1.
+    annotated_at: '2026-05-11T12:12:32.273611+00:00'
+    model: claude-haiku-4-5
+- proposed_at: '2026-05-11T11:15:00+00:00'
+  proposed_by: operator:adaptive-routing-discussion
+  seen_count: 0
+  task:
+    id: from_adaptive_routing_design
+    type: agent_creative
+    priority: 80
+    description: '[from-operator][opus] Design adaptive query-conditional retrieval architecture. Layer 1 = per-bucket retrieval
+      CONFIG (rerank on/off, RRF k, embedding index, max_turns, citation verifier strength). Layer 2 = per-bucket AGENT shape
+      (linear ReAct vs Reflexion vs MoA sub-agent decomp). Layer 3 = per-bucket MODEL routing (Haiku for simple, Opus for
+      synthesis). Output design doc with: (a) the 5 profile definitions with concrete params + evidence basis, (b) classifier
+      extension plan (current classify_query() output expanded to BROAD class), (c) misclassification cost analysis, (d) risk
+      register, (e) sequencing — ship 2-profile spike first then expand. Evidence basis lives in data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md
+      and data/eval_v1_baseline_rerank_on.json. BLOCKED on from_adaptive_routing_50q_bucketed_eval for empirical validation
+      but design can proceed in parallel.
 
-  - proposed_at: "2026-05-11T11:15:00+00:00"
-    proposed_by: "operator:adaptive-routing-discussion"
-    seen_count: 0
-    task:
-      id: from_adaptive_routing_2profile_spike
-      type: agent_creative
-      priority: 72
-      description: >
-        [from-operator] Ship minimum-viable 2-profile spike: classify each
-        incoming /chat query as BROAD or NOT-BROAD (single axis). BROAD =
-        keeps reranker ON; NOT-BROAD = reranker OFF. Single env knob,
-        contains risk. Wire via retrieval_gate.py reading a per-request
-        profile from chat.py. Eval on the 50-question bucketed set
-        (blocked on from_adaptive_routing_50q_bucketed_eval). Decision
-        gate before expanding to 5 profiles. Expected lift: +5-10 cites
-        on concrete queries (paradise/Sin/charity cluster from the
-        rerank-off experiment) without regression on BROAD (themes).
-      spec:
-        acceptance:
-          - file_exists: data/ralph_agent_from_adaptive_routing_2profile_spike.md
-          - file_min_bytes: {path: data/ralph_agent_from_adaptive_routing_2profile_spike.md, min: 1000}
+      '
+    spec:
+      acceptance:
+      - file_exists: data/ralph_agent_from_adaptive_routing_design.md
+      - file_min_bytes:
+          path: data/ralph_agent_from_adaptive_routing_design.md
+          min: 1500
+  haiku_notes:
+    classification: actionable
+    duplicate_of: null
+    relates_to:
+    - from_ai_graph_reflexion_pattern
+    - from_ai_graph_cohere_rerank_ab_impl
+    - from_neo4j_yt_sufficiency_gate
+    note: Design task for 3-layer adaptive routing (retrieval config, agent shape, tool strategy). Strategic; unblocks Proposal
+      2.
+    annotated_at: '2026-05-11T12:12:32.273611+00:00'
+    model: claude-haiku-4-5
+- proposed_at: '2026-05-11T11:15:00+00:00'
+  proposed_by: operator:adaptive-routing-discussion
+  seen_count: 0
+  task:
+    id: from_adaptive_routing_2profile_spike
+    type: agent_creative
+    priority: 72
+    description: '[from-operator] Ship minimum-viable 2-profile spike: classify each incoming /chat query as BROAD or NOT-BROAD
+      (single axis). BROAD = keeps reranker ON; NOT-BROAD = reranker OFF. Single env knob, contains risk. Wire via retrieval_gate.py
+      reading a per-request profile from chat.py. Eval on the 50-question bucketed set (blocked on from_adaptive_routing_50q_bucketed_eval).
+      Decision gate before expanding to 5 profiles. Expected lift: +5-10 cites on concrete queries (paradise/Sin/charity cluster
+      from the rerank-off experiment) without regression on BROAD (themes).
 
-
+      '
+    spec:
+      acceptance:
+      - file_exists: data/ralph_agent_from_adaptive_routing_2profile_spike.md
+      - file_min_bytes:
+          path: data/ralph_agent_from_adaptive_routing_2profile_spike.md
+          min: 1000
+  haiku_notes:
+    classification: actionable
+    duplicate_of: null
+    relates_to:
+    - from_adaptive_routing_design
+    - from_adaptive_routing_50q_bucketed_eval
+    - try_lower_max_tool_turns
+    note: Concrete 2-profile spike (BROAD/NOT-BROAD). Minimal risk, high signal. Eval on 50q set from Proposal 0.
+    annotated_at: '2026-05-11T12:12:32.273611+00:00'
+    model: claude-haiku-4-5
 approved:
-  - approved_at: "2026-05-11T00:07:00+00:00"
-    reason: "Pre-execution input guard is complementary to from_ai_graph_tool_error_audit (post-exec); synergistic, not duplicate. Added to ralph_backlog.yaml at p45."
-    task_id: from_blog_tool_input_validation
-    proposed_by: "research:blog_neo4j:agent-tools"
-
+- approved_at: '2026-05-11T00:07:00+00:00'
+  reason: Pre-execution input guard is complementary to from_ai_graph_tool_error_audit (post-exec); synergistic, not duplicate.
+    Added to ralph_backlog.yaml at p45.
+  task_id: from_blog_tool_input_validation
+  proposed_by: research:blog_neo4j:agent-tools
 rejected:
-  - rejected_at: "2026-05-11T00:00:00+00:00"
-    reason: "Duplicate of existing from_ralph_yt_01_tokenize_claudemd (p82) — same deliverable, re-spec is a backlog edit not a new task."
-    task_id: from_blog_agent_skills_bump_tokenize_claudemd
-    proposed_by: "research:blog_neo4j:introducing-neo4j-agent-skills"
-  - rejected_at: "2026-05-11T01:00:00+00:00"
-    reason: "Subsumed by from_ai_graph_rag_triad_eval_metrics (p80) which covers Context Relevance plus Groundedness + Answer Relevance — strictly a superset."
-    task_id: from_blog_context_relevance_eval
-    proposed_by: "research:blog_neo4j:context-engineering-tools"
+- rejected_at: '2026-05-11T00:00:00+00:00'
+  reason: Duplicate of existing from_ralph_yt_01_tokenize_claudemd (p82) — same deliverable, re-spec is a backlog edit not
+    a new task.
+  task_id: from_blog_agent_skills_bump_tokenize_claudemd
+  proposed_by: research:blog_neo4j:introducing-neo4j-agent-skills
+- rejected_at: '2026-05-11T01:00:00+00:00'
+  reason: Subsumed by from_ai_graph_rag_triad_eval_metrics (p80) which covers Context Relevance plus Groundedness + Answer
+    Relevance — strictly a superset.
+  task_id: from_blog_context_relevance_eval
+  proposed_by: research:blog_neo4j:context-engineering-tools

@@ -8,7 +8,8 @@ Small Python utilities the Ralph cron loop and human operators run to keep state
 |--------|--------------|-------------|
 | `state_snapshot.py` | Overwrites `STATE_SNAPSHOT.md` (and mirrors to `QKG Obsidian/CURRENT STATE.md`). Loop status, backlog health, top pending, recent ticks, recent commits, working tree. | yes |
 | `vault_update.py` | Append today's commits to the vault's daily note (`QKG Obsidian/daily/YYYY-MM-DD.md`); create stub research notes for any `data/research_*.md` that doesn't yet have a vault entry (source-aware — skips if a richer note already references the source). | yes |
-| `tick_finalize.py` | Single end-of-tick entry point. Calls `state_snapshot.py` + `vault_update.py`; refreshes `MORNING_REPORT.md` every 12 ticks (and mirrors to vault). | yes |
+| `haiku_prep.py` | End-of-tick prep work via Haiku (Anthropic API). Three jobs: (1) `validate_specs` — auto-fix `value:`→`min:`, warn on cypher_analysis tasks missing query/script; (2) `precache_research` — pre-fetch next 2 WebFetch-handler URLs to `data/research_cache/<slug>.html`; (3) `preclassify_proposals` — Haiku annotates each pending entry in `data/proposed_tasks.yaml` with `haiku_notes: {classification, duplicate_of, relates_to, note}`. Each job is failure-safe. Disable with `HAIKU_PREP_DISABLED=1`. Override model with `HAIKU_PREP_MODEL=<id>`. | yes |
+| `tick_finalize.py` | Single end-of-tick entry point. Calls `state_snapshot.py` + `vault_update.py` + `haiku_prep.py`; refreshes `MORNING_REPORT.md` every 12 ticks (and mirrors to vault). | yes |
 
 ## Usage
 

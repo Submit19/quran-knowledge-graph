@@ -67,3 +67,4 @@ QKG Obsidian/.obsidian/plugins/*/main.js
 QKG Obsidian/.obsidian/plugins/*/styles.css
 QKG Obsidian/.obsidian/plugins/*/data.json
 # Keep manifest.json and community-plugins.json so fresh clones know which plugins to install.
+data/research_cache/

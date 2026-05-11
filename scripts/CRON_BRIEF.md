@@ -36,7 +36,12 @@ If `CLAUDE_INDEX.md` doesn't exist, fall back to `CLAUDE.md`.
 4. **IMPL tick procedure:**
 
    **4a. Quick proposal review.** Read `data/proposed_tasks.yaml`. For each entry under `pending:`:
-   - Decide APPROVE / REJECT / DEFER. APPROVE: append to `ralph_backlog.yaml` under `tasks:` (use `acceptance: file_min_bytes: { path, min }` — NEVER `value:`). Remove from pending. REJECT: move to `rejected:` with one-line `reason:`. DEFER: bump `seen_count`; auto-reject after 3 cycles.
+   - **Use `haiku_notes` if present.** Each pending entry should have a `haiku_notes` block written by `scripts/haiku_prep.py` at the previous tick's end: `{classification, duplicate_of, relates_to, note}`. Haiku's classification is a hint — confirm with your own check (don't trust blindly), but it shortcuts the discovery step.
+     - `classification: actionable` → likely APPROVE (still verify priority/spec format).
+     - `classification: duplicate` with `duplicate_of: <id>` → likely REJECT with that reason.
+     - `classification: maybe_subsumed` → check `relates_to`; if subsumed, REJECT; if synergistic, APPROVE.
+     - `classification: obvious_reject` → REJECT with the `note` as the reason.
+   - APPROVE: append to `ralph_backlog.yaml` under `tasks:` (use `acceptance: file_min_bytes: { path, min }` — NEVER `value:`). Remove from pending. REJECT: move to `rejected:` with one-line `reason:`. DEFER: bump `seen_count`; auto-reject after 3 cycles.
    - Save `data/proposed_tasks.yaml` back. If anything changed: commit "review: proposals" first.
    - If `pending: []` (empty), skip this step entirely — don't burn tokens on a no-op read.
 
@@ -48,7 +53,7 @@ If `CLAUDE_INDEX.md` doesn't exist, fall back to `CLAUDE.md`.
 5. **RESEARCH tick procedure:**
    a. Read `data/research_neo4j_crawl/neo4j_research_queue.yaml`. Pop ONE item from highest-priority non-empty source.
    b. If handler == "yt-transcript-skill": `python "C:\Users\alika\.claude\skills\yt-transcript-skill\scripts\fetch_transcript.py" <url> --output "data/research_neo4j_crawl/yt_<videoid>.md" --timestamps`. If 429/IPBlocked: re-add to queue and PICK A DIFFERENT SOURCE.
-   c. Else (WebFetch): WebFetch the URL with a focused QKG-relevance prompt.
+   c. Else (WebFetch): **Check `data/research_cache/` first** — Haiku may have pre-fetched this URL. Each cached page has a slug = md5(url)[:12] with `<slug>.html` + `<slug>.meta.json`. If a cache hit exists, read the HTML locally (faster + avoids 429s); otherwise WebFetch the URL with a focused QKG-relevance prompt.
    d. Extract findings into the source's `findings_file` keyed by URL/ID. TL;DR + key takeaways + verdict.
    e. **If actionable: append to `data/proposed_tasks.yaml` under `pending:` (NOT directly to ralph_backlog.yaml).**
    f. Save the queue YAML back (popped item removed).

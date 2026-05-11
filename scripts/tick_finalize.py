@@ -12,6 +12,7 @@ Idempotent. Safe to re-run.
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -104,6 +105,10 @@ def main():
     print(f"[tick_finalize] starting at {NOW}")
     run("state_snapshot.py")
     run("vault_update.py")
+    # Haiku-driven prep work — failure-safe, output rides in same tick commit.
+    # Set HAIKU_PREP_DISABLED=1 to skip (e.g. for offline runs).
+    if os.environ.get("HAIKU_PREP_DISABLED") != "1":
+        run("haiku_prep.py")
     maybe_morning_report()
     print(f"[tick_finalize] done")
 
