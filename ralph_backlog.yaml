@@ -868,8 +868,8 @@ tasks:
 
   - id: from_neo4j_yt_mcp_tool_description_audit
     type: cleanup
-    priority: 70
-    description: "[from-neo4j-yt] Audit and rewrite all 21 chat.py tool descriptions for LLM routing clarity. Three NODES videos independently confirm description quality is the primary tool-selection signal. Our descriptions were written as Python docstrings, not natural-language tool routing prompts. Required before any MCP wrapping. Per-tool: clear when-to-use, when-NOT-to-use, expected output shape."
+    priority: 80
+    description: "[from-neo4j-yt][synthesis-promoted 2026-05-12] Audit and rewrite all 21 chat.py tool descriptions for LLM routing clarity. FOUR independent sources (3 NODES videos + 1 blog post) confirm description quality is the primary tool-selection signal — synthesis pass bumped this from 70→80 (was systematically undervalued). Our descriptions were written as Python docstrings, not natural-language routing prompts. Required before any MCP wrapping. Per-tool: clear when-to-use, when-NOT-to-use, expected output shape."
     blockers: []
     spec:
       commits_code: true
@@ -909,8 +909,8 @@ tasks:
   # ── [from-research] Promoted from research tick 2026-05-10 ────────────────
   - id: from_research_finetune_bge_m3_qrcd
     type: agent_creative
-    priority: 78
-    description: "[from-research][answer-quality][opus] Fine-tune BGE-M3 dense on QRCD passage-question pairs (and optionally Tafsir Q&A). Target: lift QRCD MAP@10 from 0.139 toward the 0.36 literature ceiling (AraBERT fine-tuned). Use FlagEmbedding's training pipeline; produce a domain-adapted checkpoint, eval against the held-out QRCD test split, decide whether to swap our current bge-m3 baseline. Source: data/research_bge_m3_dense_vs_colbert.md."
+    priority: 88
+    description: "[from-research][answer-quality][opus][synthesis-promoted 2026-05-12] Fine-tune BGE-M3 dense on QRCD passage-question pairs (and optionally Tafsir Q&A). Target: lift QRCD MAP@10 from 0.139 toward the 0.36 literature ceiling (AraBERT fine-tuned). Synthesis pass identified this as THE direct path to closing the literature gap — bumped 78→88. Domain-adaptation, not architecture, is the gap (ColBERT only adds 1-2 nDCG points, ruled out). Use FlagEmbedding's training pipeline; produce a domain-adapted checkpoint, eval against held-out QRCD test split, decide whether to swap baseline. Source: data/research_bge_m3_dense_vs_colbert.md + data/research_synthesis_2026-05-12.md."
     blockers: []
     spec:
       acceptance:
