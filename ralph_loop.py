@@ -106,7 +106,7 @@ def load_state() -> dict:
             "baselines": {},  # metric_name -> value
             "history": [],    # list of TickResult dicts
         }
-    return json.loads(STATE_PATH.read_text(encoding="utf-8"))
+    return json.loads(STATE_PATH.read_text(encoding="utf-8-sig"))
 
 
 def save_state(state: dict):

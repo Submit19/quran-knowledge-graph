@@ -62,3 +62,5 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-11T14:44 | add_5_targeted_eval_questions | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_add_5_targeted_eval_questions.md (review before use) |
 | 2026-05-11T15:45 | from_neo4j_crawl_single_shot_vector_traversal | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |
 | 2026-05-11T16:14 | from_neo4j_yt_mcp_balanced_tool_grouping | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |
+| 2026-05-11T17:20 | from_adaptive_routing_50q_bucketed_eval | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |
+| 2026-05-11T17:20 | from_adaptive_routing_50q_bucketed_eval | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |
