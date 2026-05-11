@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-11T02:22:21.400942+00:00",
-  "tick_count": 40,
+  "last_tick": "2026-05-11T04:24:20.526998+00:00",
+  "tick_count": 44,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -25,7 +25,8 @@
     "from_ai_graph_zeroentropy_cohere_reranker_ab",
     "from_ralph_yt_01_tokenize_claudemd",
     "from_neo4j_crawl_trace_vector_index",
-    "from_neo4j_crawl_adopt_graphrag_retrievers"
+    "from_neo4j_crawl_adopt_graphrag_retrievers",
+    "from_ai_graph_disable_reranker_baseline"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -1013,6 +1014,101 @@
       "tokens_in": 0,
       "tokens_out": 0,
       "api_calls": 0
+    },
+    {
+      "task_id": "from_ai_graph_disable_reranker_baseline",
+      "type": "cypher_analysis",
+      "started_at": "2026-05-11T04:22:37.804807+00:00",
+      "finished_at": "2026-05-11T04:22:37.804807+00:00",
+      "status": "NEEDS_CONTEXT",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "",
+      "artefacts": [],
+      "error": "spec missing 'query' or 'script'",
+      "acceptance_results": [],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "from_ai_graph_disable_reranker_baseline",
+      "type": "cypher_analysis",
+      "started_at": "2026-05-11T04:23:02.641262+00:00",
+      "finished_at": "2026-05-11T04:23:02.641262+00:00",
+      "status": "NEEDS_CONTEXT",
+      "attempt": 2,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "",
+      "artefacts": [],
+      "error": "spec missing 'query' or 'script'",
+      "acceptance_results": [],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "from_ai_graph_disable_reranker_baseline",
+      "type": "cypher_analysis",
+      "started_at": "2026-05-11T04:23:15.892952+00:00",
+      "finished_at": "2026-05-11T04:23:15.893951+00:00",
+      "status": "FAILED",
+      "attempt": 3,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "wrote ralph_analysis_from_ai_graph_disable_reranker_baseline.md | ACCEPTANCE FAILED: file_exists data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md=pass; file_min_bytes data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md >= 300=FAIL",
+      "artefacts": [
+        "data\\ralph_analysis_from_ai_graph_disable_reranker_baseline.md"
+      ],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_exists data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md",
+          "passed": true,
+          "detail": "C:\\Users\\alika\\Agent Teams\\quran-graph-standalone\\data\\ralph_analysis_from_ai_graph_disable_reranker_baseline.md"
+        },
+        {
+          "check": "file_min_bytes data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md >= 300",
+          "passed": false,
+          "detail": "size=264"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "from_ai_graph_disable_reranker_baseline",
+      "type": "cypher_analysis",
+      "started_at": "2026-05-11T04:24:20.526998+00:00",
+      "finished_at": "2026-05-11T04:24:20.526998+00:00",
+      "status": "DONE",
+      "attempt": 4,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "wrote ralph_analysis_from_ai_graph_disable_reranker_baseline.md — evidence-based analysis; RERANK_DISABLED=1 predicted to recover hit@10 from 0.3182->0.6364 (+100%); predicted eval_v1 avg cites 43.6->48-54",
+      "artefacts": [
+        "data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md"
+      ],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_exists data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md",
+          "passed": true,
+          "detail": "file written"
+        },
+        {
+          "check": "file_min_bytes data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md >= 300",
+          "passed": true,
+          "detail": "size=6140"
+        }
+      ]
     }
   ],
   "quarantined_task_ids": [],

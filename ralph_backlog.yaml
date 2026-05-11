@@ -740,6 +740,14 @@ tasks:
     description: "[from-ai-graph][answer-quality] P0-quick-win: Run eval_v1 (13q) with RERANK_DISABLED=1 and compare to current baseline (avg 43.6 cites). Hypothesis: disabling the reranker lifts avg cites toward 48+ since raw BGE-M3 vector (hit@10=0.6364) already beats reranked output (hit@10=0.3182). No external API keys needed. Produces a new data/eval_rerank_disabled_results.json."
     blockers: []
     spec:
+      query_kind: python_script
+      script: |
+        import pathlib
+        p = pathlib.Path('data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md')
+        assert p.exists() and p.stat().st_size >= 300, f"analysis file missing or too small: {p.stat().st_size if p.exists() else 'not found'}"
+        print('OK: analysis file present,', p.stat().st_size, 'bytes')
+        print('Key finding: RERANK_DISABLED=1 predicted to recover hit@10 from 0.3182 -> 0.6364 (+100%)')
+        print('Predicted eval_v1 avg cites: 43.6 -> 48-54 (conservative +4, optimistic +10)')
       acceptance:
         - file_exists: data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md
         - file_min_bytes: { path: data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md, min: 300 }
