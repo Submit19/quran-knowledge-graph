@@ -196,13 +196,115 @@ def render() -> str:
     return "\n".join(out)
 
 
+def render_status_mobile() -> str:
+    """Phone-friendly top-of-repo status. Short. Links use GitHub-compatible
+    relative paths so taps from the GitHub mobile app / Dispatch jump to the
+    right file."""
+    state = load_state()
+    backlog = load_yaml(ROOT / "ralph_backlog.yaml")
+    research = load_yaml(ROOT / "data" / "research_backlog.yaml")
+    queue = load_yaml(ROOT / "data" / "research_neo4j_crawl" / "neo4j_research_queue.yaml")
+
+    done = set(state.get("done_task_ids", []))
+    quar = set(state.get("quarantined_task_ids", []))
+    tasks = backlog.get("tasks", []) or []
+    pending = [t for t in tasks if t["id"] not in done and t["id"] not in quar]
+    pending.sort(key=lambda t: -int(t.get("priority", 0)))
+
+    open_topics = sum(
+        1 for t in (research.get("topics", []) or []) if t.get("status") == "open"
+    )
+
+    queue_total = 0
+    for src in (queue or {}).values():
+        if isinstance(src, dict) and "queue" in src:
+            queue_total += len(src.get("queue") or [])
+
+    api = state.get("api_usage", {}) or {}
+    win = api.get("window") or []
+    calls_24h = sum(int(r[1]) for r in win)
+
+    history = state.get("history") or []
+    recent = history[-5:][::-1]
+
+    out = []
+    out.append("# QKG — Status")
+    out.append("")
+    out.append(f"_Updated {NOW} — auto by `scripts/state_snapshot.py`_")
+    out.append("")
+    out.append("## Loop")
+    out.append(f"- Tick **{state.get('tick_count', 0)}** | last `{state.get('last_tick','(none)')[:16]}`")
+    out.append(f"- In progress: **{state.get('in_progress') or '_idle_'}**")
+    out.append(f"- 24h API calls: {calls_24h}")
+    out.append("")
+
+    out.append("## Last 5 ticks")
+    out.append("")
+    for h in recent:
+        ts = (h.get("finished_at") or h.get("started_at") or "")[:16]
+        st = h.get("status", "")
+        emoji = {"DONE": "✓", "DONE_WITH_CONCERNS": "⚠", "FAILED": "✗",
+                 "QUARANTINED": "🚫", "SKIPPED": "·", "BLOCKED": "⛔",
+                 "REGRESSION": "↓", "NEEDS_CONTEXT": "?"}.get(st, "•")
+        out.append(f"- {emoji} `{h.get('task_id', '')}` ({st}, {ts})")
+    out.append("")
+
+    out.append("## Recent commits")
+    out.append("")
+    out.append("```")
+    out.append(git_log(8))
+    out.append("```")
+    out.append("")
+
+    out.append("## Top 5 pending tasks")
+    out.append("")
+    for t in pending[:5]:
+        flag = ""
+        d = (t.get("description") or "").lower()
+        if "[opus]" in d:
+            flag = " 🧠"
+        if "[answer-quality]" in d:
+            flag += " ⭐"
+        out.append(
+            f"- **{t.get('priority', 0)}** `{t['id']}` ({t.get('type', '')}){flag}"
+        )
+    out.append("")
+
+    out.append("## Backlog health")
+    out.append("")
+    out.append(
+        f"- **{len(pending)}** pending • **{len(done)}** done • **{len(quar)}** quarantined"
+    )
+    out.append(f"- Research queue: **{queue_total}** items across {len([s for s in (queue or {}).values() if isinstance(s, dict)])} sources")
+    out.append(f"- Open research topics: **{open_topics}**")
+    out.append("")
+
+    out.append("## Files worth opening")
+    out.append("")
+    out.append("- [📊 MORNING_REPORT.md](MORNING_REPORT.md) — refreshed every 6 ticks")
+    out.append("- [📋 STATE_SNAPSHOT.md](STATE_SNAPSHOT.md) — full detail view")
+    out.append("- [📝 SESSION_LOG.md](SESSION_LOG.md) — operator hand-offs between sessions")
+    out.append("- [📚 ralph_backlog.yaml](ralph_backlog.yaml) — task queue")
+    out.append("- [📥 data/proposed_tasks.yaml](data/proposed_tasks.yaml) — pending review (Haiku pre-annotated)")
+    out.append("- [🧠 data/sonnet_drafts/](data/sonnet_drafts/) — Opus pre-warmed plans")
+    out.append("- [🗒️ QKG Obsidian/](QKG%20Obsidian/) — knowledge vault (MOC.md entry)")
+    out.append("")
+    out.append(f"_Tap any link to open in GitHub. Use the file watcher on your phone for live updates._")
+    out.append("")
+    return "\n".join(out)
+
+
 def main():
-    OUT.write_text(render(), encoding="utf-8")
-    # Also mirror into the Obsidian vault as CURRENT STATE.md (one less hop for vault users)
+    snapshot_text = render()
+    OUT.write_text(snapshot_text, encoding="utf-8")
+    # Mirror full snapshot into the vault as CURRENT STATE.md
     vault = ROOT / "QKG Obsidian" / "CURRENT STATE.md"
     if vault.parent.exists():
-        vault.write_text(render(), encoding="utf-8")
-    print(f"wrote {OUT.relative_to(ROOT)}")
+        vault.write_text(snapshot_text, encoding="utf-8")
+    # Also write a phone-friendly STATUS.md at repo root for GitHub-mobile / Dispatch
+    status_text = render_status_mobile()
+    (ROOT / "STATUS.md").write_text(status_text, encoding="utf-8")
+    print(f"wrote {OUT.relative_to(ROOT)} and STATUS.md")
 
 
 if __name__ == "__main__":

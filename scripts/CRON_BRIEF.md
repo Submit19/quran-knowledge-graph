@@ -26,7 +26,7 @@ If `CLAUDE_INDEX.md` doesn't exist, fall back to `CLAUDE.md`.
 
 1. **Halt check.** If `data/RALPH_STOP` exists, exit silently with "halted by RALPH_STOP".
 
-2. **Pull latest:** `git pull --rebase`.
+2. **Sync with GitHub:** `git pull --rebase && git push`. The push is a safety net — if the prior tick committed locally but failed to push (transient network/auth), this flushes it. Idempotent when in sync (no-op).
 
 3. **Decide cycle from `ralph_state.json` `tick_count`:**
    - tick_count % 6 == 0 → MAINTENANCE tick (every 6 fires; was 12 — Max 20x can absorb more frequent hygiene)
