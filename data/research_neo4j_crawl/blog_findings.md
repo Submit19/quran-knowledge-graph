@@ -294,3 +294,56 @@ Neo4j overview of tool design for agentic systems. Core message: tool precision 
 
 ### Proposed Tasks
 - Add input validation to chat.py tools: enforce Surah number in [1–114], ayah range checks, language code allowlist. Return structured `{error: ..., reason: ...}` on invalid args (synergistic with `from_ai_graph_tool_error_structure` task already in backlog).
+
+---
+
+## https://neo4j.com/blog/graph-database/introducing-asynchronous-i-o-in-neo4j-using-io_uring/
+**Fetched:** 2026-05-12 (from cache)
+**Title:** Introducing Asynchronous I/O in Neo4j using io_uring
+
+### TL;DR
+Neo4j 2026.04 introduces opt-in async I/O via Linux `io_uring` for the background page evictor and checkpointer. Enabled with `server.memory.pagecache.async=true`. Requires Enterprise Edition, Linux, `liburing`, and JDK 25+. Not applicable to QKG's current Windows/local Desktop setup but documented for reference.
+
+### Key Takeaways
+
+1. **io_uring is Linux-only** — requires liburing + JDK 25; QKG runs on Windows with Neo4j Desktop. Not applicable today. If ever migrating to a Linux VPS, this is a free throughput win for the checkpointer.
+
+2. **Async I/O enabled component-by-component** — only page evictor + checkpointer in this release; more components planned. Means gradual DB-side latency improvements in future Neo4j versions.
+
+3. **Direct I/O synergy** — the article suggests pairing async I/O with `server.memory.pagecache.directio=true` when the page cache covers the entire DB store. QKG's quran DB is small enough (~hundreds of MB) that the page cache likely already covers it. Worth benchmarking if/when on Linux.
+
+4. **Existing metrics preserved** — all existing Neo4j metrics work unchanged; new async-specific metrics are added. No instrumentation changes needed on our side.
+
+5. **Version check** — this feature ships in 2026.04 release. QKG is on 2026.02.2 Enterprise (per `from_neo4j_crawl_check_neo4j_version`). An upgrade would be needed to use this.
+
+### Verdict
+**Not actionable for QKG today.** Windows + Desktop constraint makes io_uring inaccessible. Note for future Linux migration. No new tasks proposed.
+
+---
+
+## https://neo4j.com/blog/genai/integrating-neo4j-with-google-genkit-a-practical-guide/
+**Fetched:** 2026-05-12 (from cache)
+**Title:** Integrating Neo4j with Google Genkit: A Practical Guide
+
+### TL;DR
+Comprehensive TypeScript/Node.js guide to the `genkitx-neo4j` plugin. Documents native in-index pre-filtering via `MatchSearchClauseStrategy` (Neo4j 2026.01+), hybrid vector+fulltext search in a single retriever, HyDE (Hypothetical Document Embeddings) for query expansion, and custom `retrievalQuery` Cypher extensions. The framework is Node.js/TypeScript — not directly adoptable by QKG's Python stack — but several patterns are valuable to port.
+
+### Key Takeaways
+
+1. **MatchSearchClauseStrategy = native in-index pre-filter** — Neo4j 2026.01+ supports filtering directly inside the vector index scan (SEARCH ... WHERE syntax), avoiding post-retrieval filtering that inflates candidate count. Our `from_neo4j_crawl_single_shot_vector_traversal` task is the implementation vehicle. This article confirms the feature is production-ready and has a concrete API.
+
+2. **HyDE strategy** — Hypothetical Document Embeddings: generate a hypothetical perfect answer via LLM, embed it, use that embedding for vector retrieval instead of the raw query. Improves recall for abstract/theological questions where the query surface form doesn't match verse vocabulary. **Not yet in QKG.** Potentially high-value for "what does the Quran say about justice?" type queries where the query is short and abstract.
+
+3. **Hybrid search via `searchType: 'hybrid'`** — vector + fulltext (BM25) combined via RRF in a single retriever call, with a separate fulltext index name. QKG's `hybrid_search` already does this. Validates our existing approach; Genkit plugin doesn't add anything we don't have.
+
+4. **Custom `retrievalQuery` Cypher clause** — post-retrieval Cypher that enriches each retrieved node (e.g., MATCH related neighbors, compute path length). This is the TypeScript equivalent of our custom tool queries. Pattern: override just the RETURN clause with arbitrary Cypher. Worth documenting as a pattern for future `run_cypher` improvements.
+
+5. **GraphRAG topologies via `customGraphRagConfigs`** — define multi-hop traversal patterns (parent-child, sibling, community) as named config objects. QKG does this via dedicated tools (`traverse_topic`, `find_path`). Validates our tool-per-topology pattern over a generic config approach.
+
+6. **`filterMetadata` for fast pre-filtering** — declare which metadata fields should be used for fast in-index filtering. For QKG: filtering by `surah` number or `is_initial_verse` could be pre-indexed for speed. Complements the `MatchSearchClauseStrategy` item above.
+
+### Verdict
+**Partially actionable.** The HyDE strategy is the one genuinely novel pattern QKG doesn't have. The `MatchSearchClauseStrategy` / in-index pre-filter confirms what we already know from the docs queue item. No new task for HyDE is urgent — it's medium-effort and the eval payoff is unclear without measurement.
+
+### Proposed Tasks
+- Spike: implement HyDE (Hypothetical Document Embeddings) in `chat.py` as an optional pre-processing step for `semantic_search`. Generate a hypothetical answer via a fast model (Haiku), embed it, use as the query vector. Measure impact on QRCD MAP@10. Estimated: medium effort, uncertain payoff — add to backlog at p55.
