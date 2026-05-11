@@ -428,10 +428,37 @@ def execute_eval(task: dict, state: dict, result: TickResult) -> TickResult:
 
 
 def execute_cypher_analysis(task: dict, state: dict, result: TickResult) -> TickResult:
-    """Run a read-only Cypher query or python script and dump output to a file."""
+    """Run a read-only Cypher query or python script and dump output to a file.
+
+    Three modes:
+      - query_kind: python_script + script — exec inline, capture stdout
+      - query field present — run as Cypher against Neo4j
+      - query_kind: manual (or no query/script + acceptance gate) — defer
+        deliverable production to an out-of-band operator (the cron's
+        subagent does the work and writes the deliverable file). Acceptance
+        gate validates. This matches agent_creative's manual backend.
+    """
     spec = task.get("spec") or {}
     out_md = DATA_DIR / f"ralph_analysis_{task['id']}.md"
     out_md.parent.mkdir(parents=True, exist_ok=True)
+
+    # Manual mode: operator produced deliverable out-of-band; gate validates.
+    has_query = "query" in spec
+    has_script = spec.get("query_kind") == "python_script" and "script" in spec
+    manual_mode = spec.get("query_kind") == "manual" or (not has_query and not has_script)
+    if manual_mode:
+        result.status = DONE_WITH_CONCERNS
+        result.notes = "manual mode — deliverable produced out-of-band; gate will validate"
+        # Stub the conventional output path so downstream readers find something
+        if not out_md.exists():
+            out_md.write_text(
+                f"# {task['id']}\n\n_Handled in manual mode. See acceptance "
+                f"file(s) for the actual deliverable._\n",
+                encoding="utf-8",
+            )
+        result.artefacts.append(str(out_md.relative_to(ROOT)))
+        return result
+
     if spec.get("query_kind") == "python_script" and "script" in spec:
         # exec inline
         from io import StringIO
