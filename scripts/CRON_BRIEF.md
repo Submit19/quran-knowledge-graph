@@ -69,6 +69,7 @@ If `CLAUDE_INDEX.md` doesn't exist, fall back to `CLAUDE.md`.
 
 6. **MAINTENANCE tick (every 6th):** Dedupe / retire / re-rank across all backlogs. Run proposal review first. Commit "ralph maintenance: tick <N>".
    - **Every 4th MAINT tick (= every 24th tick overall, ~12h)** also do a **SYNTHESIS** sub-step: read all `data/research_neo4j_crawl/*.md` files modified since the last synthesis + the new entries in `data/proposed_tasks.yaml` + recent `data/ralph_analysis_*.md`. Produce a cross-cutting insights doc at `data/research_synthesis_<date>.md`. If insights suggest re-prioritizing pending tasks, apply the changes (with one-line reason in the commit message). Goal: catch the "this research changes the design of multiple tasks" cases periodically.
+   - **ADR-drift detection (every MAINT tick).** Run `git log --since="3 days ago" --oneline` and scan for "decision-class" commits (loop/architecture/agentic/eval changes with strategic implications — not pure bugfixes or research ticks). For each such commit, check whether a corresponding ADR exists in `QKG Obsidian/decisions/`. If not, spawn a quick Haiku subagent (`model="haiku"`, scope: single ADR) to write one using the existing 0001-0012 Nygard template. Commit ADRs alongside the maintenance commit. Goal: keep the vault's decision log current as a memory-recovery surface after compaction.
 
 7. **End-of-tick housekeeping:** `python scripts/tick_finalize.py` (runs state_snapshot.py + vault_update.py + MORNING_REPORT.md every 12 ticks).
 

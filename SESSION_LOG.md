@@ -17,6 +17,43 @@ and the most recent note in `QKG Obsidian/sessions/`.
 
 ---
 
+## 2026-05-12 · Opus 4.7 · "Max 20x optimization + adaptive routing + synthesis"
+
+### Shipped this session
+- **Migrated to Max 20x plan optimizations.** Cron `60b2abb6` now fires every 30 min at `:07`/`:37` (was hourly). MAINTENANCE every 6 ticks (was 12). **4:1 IMPL:RESEARCH ratio** (was 1:1) — foundational research is done, biasing toward implementation throughput. Soft cap 35 / hard cap 50 tool calls per tick (was 30/40).
+- **End-of-tick prep pipeline.** `scripts/tick_finalize.py` orchestrates: state_snapshot.py → vault_update.py → haiku_prep.py → sonnet_prep.py → morning_report. Haiku does mechanical prep (validate specs, precache research URLs, classify pending proposals). Sonnet pre-warms `[opus]`-tagged tasks by drafting an implementation plan to `data/sonnet_drafts/<task_id>.md` (Opus inherits it, saves tokens net).
+- **Cron brief moved to `scripts/CRON_BRIEF.md`** — cron prompt is now a 5-line stub pointing at the file. Easier to edit + saves orchestrator inflation per fire.
+- **Manual mode for cypher_analysis tasks** (`query_kind: manual`). Fixes the failure-retry spiral that was burning 10-15K tokens per affected task.
+- **`blocked_on_research:` field added** — tasks can declare research dependencies, loop skips them until research is done.
+- **One-shot cross-research synthesis run.** Background subagent (a8c7bcdf4844f5bf2) read all 6 deep-crawl docs + recent analyses, produced `data/research_synthesis_2026-05-12.md` (6 cross-cutting insights). Two priorities bumped automatically: `from_research_finetune_bge_m3_qrcd` 78→88 (insight: domain adaptation is the QRCD gap, not architecture), `from_neo4j_yt_mcp_tool_description_audit` 70→80 (insight: 4-source confirmation tool descriptions are primary routing signal).
+- **All 3 adaptive-routing tasks approved** into ralph_backlog by the IMPL tick at 12:07 — design (p80), 50q_bucketed_eval (p78), 2profile_spike (p72). The router-agent IMPL ran the design task on tick 51 (commit `5ca301a`).
+- **Reverted:** model-default change attempt (returned to Ollama default), STATUS.md phone-friendly file (operator uses Claude app on phone, not GitHub mobile).
+
+### Queued for next session / loop
+- ADR backfill in progress (Haiku subagent a5922f2e0e3a7996f writing decisions/0013-0025) — should land within ~5 min of this entry
+- Reranker eval re-run NEVER COMPLETED (started in this session, died at 8/13 questions). Highest-confidence zero-cost win per synthesis but un-measured. Worth re-running when convenient.
+- Next [opus] task: `from_neo4j_crawl_single_shot_vector_traversal` (p78), pre-warmed plan ready
+- Operator-only blockers: rerun_eval_against_current (p95), hand_grade_26_answers (p88), refresh_query_embedding_to_bge_m3 (p85)
+
+### Open questions / decisions made
+- **DECIDED:** stay on local Neo4j Desktop (no Aura migration — embedding lock-in)
+- **DECIDED:** skip ColBERT mode for BGE-M3 (~1.2 nDCG@10 lift only)
+- **DECIDED:** keep reranker on, fix per-bucket via adaptive routing (rerank A/B showed bge-reranker hurts CONCRETE +helps BROAD — wholesale disable is wrong)
+- **DECIDED:** orchestrator-with-subagent over Anthropic Ralph plugin (auto-compaction is "the devil" per Jeff Huntley)
+- **OPEN:** when to actually run the full QRCD fine-tune (needs GPU time)
+- **OPEN:** should we ship the 2-profile adaptive routing spike before or after the 50q_bucketed_eval lands
+
+### Tip for next session
+**After compact, recover via the 5-tier memory stack:**
+1. Read `STATE_SNAPSHOT.md` — current state in <1KB
+2. Read this entry (top of `SESSION_LOG.md`) — what shipped
+3. Skim `QKG Obsidian/decisions/0013-0025-*.md` — recent decisions (backfilled by Haiku in this session)
+4. Read `CLAUDE_INDEX.md` — lean project map
+5. If you need deep context on anything, the relevant `QKG Obsidian/{research,architecture,sessions}/` notes have it
+6. Cron is alive at `60b2abb6` (every 30 min at :07/:37); just handle incoming fires by spawning a sonnet subagent with the brief at `scripts/CRON_BRIEF.md`
+
+---
+
 ## 2026-05-10 · Opus 4.7 (1M ctx) · "Memory infrastructure + Neo4j ecosystem deep crawl"
 
 ### Shipped this session
