@@ -1,12 +1,37 @@
 version: 1
-pending: []
+pending:
+- id: qwen3_reranker_ab_qrcd
+  proposed_at: '2026-05-12T00:00:00+00:00'
+  proposed_by: ralph:from_ai_graph_arabic_reranker_research
+  type: eval
+  priority: 78
+  description: '[from-arabic-reranker-research] A/B Qwen3-Reranker-0.6B vs RERANK_DISABLED=1 vs current bge-reranker-v2-m3
+    on QRCD 22-q. Primary metric: hit@10. Change RERANKER_MODEL=Qwen/Qwen3-Reranker-0.6B in .env, run eval_qrcd_ablation.py,
+    commit results. Context: see data/ralph_analysis_arabic_reranker_options.md.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_analysis_qwen3_reranker_ab_qrcd.md
+    - file_min_bytes:
+        path: data/ralph_analysis_qwen3_reranker_ab_qrcd.md
+        min: 400
+  seen_count: 0
+  haiku_notes:
+    classification: actionable
+    duplicate_of: null
+    relates_to: [from_ai_graph_arabic_reranker_research, from_ai_graph_disable_reranker_baseline]
+    note: "Haiku misclassified (empty-parse error); override: proposal is well-formed, no duplicate in backlog, direct follow-on to Arabic reranker research."
+    annotated_at: '2026-05-11T19:46:09.458270+00:00'
+    model: claude-haiku-4-5
 approved:
 - approved_at: '2026-05-12T04:00:00+00:00'
-  reason: actionable — no duplicate in backlog; betweenness centrality as optional reranking signal is novel and low-risk. Added at p40.
+  reason: actionable — no duplicate in backlog; betweenness centrality as optional reranking signal is novel and low-risk.
+    Added at p40.
   task_id: from_blog_betweenness_centrality_rerank
   proposed_by: research:blog_neo4j:turning-servicenow-data-into-connected-enterprise-intelligence
 - approved_at: '2026-05-12T00:00:00+00:00'
-  reason: actionable (Haiku confirmed, no duplicate in backlog) — HyDE is a novel pattern; synergistic with from_neo4j_crawl_single_shot_vector_traversal. Added at p55.
+  reason: actionable (Haiku confirmed, no duplicate in backlog) — HyDE is a novel pattern; synergistic with from_neo4j_crawl_single_shot_vector_traversal.
+    Added at p55.
   task_id: from_blog_hyde_semantic_search_spike
   proposed_by: research:blog_neo4j:integrating-neo4j-with-google-genkit
 - approved_at: '2026-05-12T00:00:00+00:00'
