@@ -47,12 +47,7 @@ blog_neo4j:
     # [FETCHED 2026-05-11] agent-tools — findings in blog_findings.md
     # [FETCHED 2026-05-11] agentic-architecture — findings in blog_findings.md (validating, no new tasks)
     # [FETCHED 2026-05-11] what-is-agentic-rag — findings in blog_findings.md (validating, no new tasks; all gaps covered by existing backlog)
-    - url: https://neo4j.com/blog/genai/what-is-graphrag/
-      title: What Is GraphRAG?
-      relevance: HIGH — fundamentals
-    - url: https://neo4j.com/blog/genai/what-is-graphrag/
-      title: What Is GraphRAG?
-      relevance: HIGH — fundamentals
+    # [FETCHED 2026-05-11] what-is-graphrag — findings in blog_findings.md (validating, confirms hybrid retrieval + agentic tools architecture; no new tasks)
     - url: https://neo4j.com/blog/agentic-ai/context-gap-ai-reasoning/
       title: The context gap — why smart AI struggles to reason
       relevance: MEDIUM — likely positioning, but useful framing

@@ -3,6 +3,36 @@
 
 ---
 
+## https://neo4j.com/blog/genai/what-is-graphrag/
+**Fetched:** 2026-05-11
+**Title:** What Is GraphRAG?
+
+### TL;DR
+GraphRAG enhances retrieval by navigating knowledge graph relationships rather than relying solely on vector search, enabling multi-hop question answering and explainable results. The architecture combines hybrid retrieval strategies (vector, fulltext, path traversal) with LLM-driven query generation and agentic tool selection. QKG's existing hand-rolled approach closely mirrors the described best practices.
+
+### Key Takeaways
+
+1. **Hybrid Retrieval Foundation** — GraphRAG retrieval finds starting points via vector/fulltext search then follows relevant relationships. Directly confirms our BM25+BGE-M3 initialization + graph traversal stack.
+
+2. **Multi-Hop Context Recovery** — Vector-only RAG fails to capture connecting context; graph traversal (1-3 hops) retrieves neighbors missed by chunked embeddings. QKG's `traverse_topic` tool already does this.
+
+3. **Agentic Tool Patterns** — LLM selects and executes retrievers in a planned sequence with iterative parameter passing. Validates QKG's 21-tool agentic loop design.
+
+4. **Retriever Taxonomy** — 7 retriever categories: vector, fulltext, graph traversal, Text2Cypher, query templates, hybrid, agentic. QKG covers 6/7 (missing Text2Cypher, which we consciously avoided via `run_cypher` denylist guard).
+
+5. **Explainability via Graph Paths** — graph provenance tracking is a key differentiator over black-box vectors. Relevant for QKG's citation verification pipeline.
+
+6. **Ranking Post-Retrieval** — retrieved nodes ranked/filtered before final context assembly, not pre-filtered. Aligns with our cross-encoder reranking placement after retrieval.
+
+7. **VectorCypherRetriever pattern** — one-shot vector + Cypher traversal in a single retriever call. We already do this via `hybrid_search`; the naming and pattern are validated.
+
+8. **No new QKG gaps found** — article confirms existing architecture; all patterns already present in backlog or implemented.
+
+### Verdict
+**Validating** — confirms existing QKG architecture (hybrid retrieval, agentic tools, cross-encoder reranking, graph traversal) is aligned with Neo4j's own documented best practices. No new tasks needed; existing backlog covers all identified improvement areas.
+
+---
+
 ## https://neo4j.com/blog/genai/introducing-create-context-graph/
 **Fetched:** 2026-05-11
 **Title:** Introducing Create Context Graph
