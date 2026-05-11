@@ -26,40 +26,73 @@ Tag convention: `#research/<area>` — e.g. `#research/retrieval`, `#research/ag
 - [[CURRENT STATE]] — auto-generated state snapshot (overwritten by `scripts/state_snapshot.py`). Read this first when picking up context.
 - [[MORNING REPORT]] — refreshed every 12 ticks (created by `scripts/tick_finalize.py`)
 
-## Backfilled content (2026-05-10)
+## Backfilled content (auto-refreshed by memory_hygiene.py)
 
-### Decisions (12 ADRs)
+### Decisions (ADRs) (25)
 - [[decisions/0001-use-khalifa-translation]]
-- [[decisions/0002-bge-m3-over-minilm]] · [[decisions/0003-multilingual-reranker]]
-- [[decisions/0004-skip-colbert]] · [[decisions/0005-skip-aura-agent]]
-- [[decisions/0006-local-neo4j]] · [[decisions/0007-orchestrator-fresh-subagent]]
-- [[decisions/0008-no-ralph-plugin]] · [[decisions/0009-hand-rolled-retrievers]]
-- [[decisions/0010-hipporag-ppr-negative]] · [[decisions/0011-minicheck-nli-citation-verification]]
+- [[decisions/0002-bge-m3-over-minilm]]
+- [[decisions/0003-multilingual-reranker]]
+- [[decisions/0004-skip-colbert]]
+- [[decisions/0005-skip-aura-agent]]
+- [[decisions/0006-local-neo4j]]
+- [[decisions/0007-orchestrator-fresh-subagent]]
+- [[decisions/0008-no-ralph-plugin]]
+- [[decisions/0009-hand-rolled-retrievers]]
+- [[decisions/0010-hipporag-ppr-negative]]
+- [[decisions/0011-minicheck-nli-citation-verification]]
 - [[decisions/0012-5-tier-memory-stack]]
+- [[decisions/0013-cron-fresh-subagent-pattern]]
+- [[decisions/0014-ralph-agent-backend-manual-mode]]
+- [[decisions/0015-manual-cypher-analysis-task-mode]]
+- [[decisions/0016-cron-prompt-file-based-brief]]
+- [[decisions/0017-tool-use-soft-hard-caps]]
+- [[decisions/0018-haiku-end-of-tick-prep]]
+- [[decisions/0019-sonnet-pre-warming-for-opus-tasks]]
+- [[decisions/0020-30min-cadence-max-20x-plan]]
+- [[decisions/0021-4to1-impl-research-ratio]]
+- [[decisions/0022-blocked-on-research-field]]
+- [[decisions/0023-synthesis-sub-step-every-4th-maint]]
+- [[decisions/0024-keep-reranker-adaptive-routing-not-global-disable]]
+- [[decisions/0025-skip-phone-friendly-status-md]]
 
-### Architecture (9 subsystem notes)
-- [[architecture/overview]] — start here
-- [[architecture/graph-schema]] · [[architecture/data-pipeline]]
-- [[architecture/agent-loop]] · [[architecture/retrieval-pipeline]]
-- [[architecture/reasoning-memory]] · [[architecture/citation-verification]]
-- [[architecture/ralph-loop]] · [[architecture/memory-stack]]
+### Architecture (9)
+- [[architecture/agent-loop]]
+- [[architecture/citation-verification]]
+- [[architecture/data-pipeline]]
+- [[architecture/graph-schema]]
+- [[architecture/memory-stack]]
+- [[architecture/overview]]
+- [[architecture/ralph-loop]]
+- [[architecture/reasoning-memory]]
+- [[architecture/retrieval-pipeline]]
 
-### Research (13 distilled findings)
-- [[research/vector-graphrag-neo4j-docs]] · [[research/agentic-patterns-neo4j]] · [[research/cypher-perf-gds]]
-- [[research/ai-graph-ecosystem-extracts]] · [[research/ralph-loop-best-practices]]
-- [[research/agentic-graphrag-yt-patterns]] · [[research/agent-memory-yt-extracts]] · [[research/mcp-tool-registry-patterns]]
-- [[research/bge-m3-dense-vs-colbert]] · [[research/eval-qrcd-report]] · [[research/hipporag-negative-result]]
-- [[research/neo4j-crawl-all-proposals]] (the held-back proposals from the deep crawl)
+### Research (16)
+- [[research/agent-memory-yt-extracts]]
+- [[research/agentic-graphrag-yt-patterns]]
+- [[research/agentic-patterns-neo4j]]
+- [[research/ai-graph-ecosystem-extracts]]
+- [[research/bge-m3-dense-vs-colbert]]
+- [[research/cypher-perf-gds]]
+- [[research/eval-qrcd-report]]
+- [[research/hipporag-negative-result]]
+- [[research/log]]
+- [[research/mcp-tool-registry-patterns]]
+- [[research/neo4j-crawl-all-proposals]]
+- [[research/ralph-loop-best-practices]]
+- [[research/research-2026-04-27-stack-alternatives]]
+- [[research/research-2026-04-28-deep-dive]]
+- [[research/synthesis-226-05-12]]
+- [[research/vector-graphrag-neo4j-docs]]
 
-### Sessions (8 milestones, oldest → newest)
+### Sessions / milestones (8)
 - [[sessions/session-2026-04-22-overnight-report]]
 - [[sessions/session-2026-04-24-overnight-report-2]]
 - [[sessions/session-2026-04-26-weekend-report]]
 - [[sessions/session-2026-04-27-research-stack-alternatives]]
-- [[sessions/session-2026-04-28-research-deep-dive]]
 - [[sessions/session-2026-04-28-autonomous-run]]
+- [[sessions/session-2026-04-28-research-deep-dive]]
 - [[sessions/session-2026-05-07-eval-v1-v2]]
-- [[sessions/session-2026-05-10]] — most recent
+- [[sessions/session-2026-05-10]]
 
 ## Dataview queries (require the Dataview plugin)
 
