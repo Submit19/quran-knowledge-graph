@@ -960,6 +960,38 @@ tasks:
         - file_exists: data/ralph_agent_reasoning_memory_session_layer.md
         - file_min_bytes: { path: data/ralph_agent_reasoning_memory_session_layer.md, min: 600 }
 
+  # ── [from-operator] Approved from proposed_tasks.yaml 2026-05-12 (tick 50) ──
+  - id: from_adaptive_routing_design
+    type: agent_creative
+    priority: 80
+    description: "[from-operator][opus] Design adaptive query-conditional retrieval architecture. Layer 1 = per-bucket retrieval CONFIG (rerank on/off, RRF k, embedding index, max_turns, citation verifier strength). Layer 2 = per-bucket AGENT shape (linear ReAct vs Reflexion vs MoA sub-agent decomp). Layer 3 = per-bucket MODEL routing (Haiku for simple, Opus for synthesis). Output design doc with: (a) the 5 profile definitions with concrete params + evidence basis, (b) classifier extension plan (current classify_query() output expanded to BROAD class), (c) misclassification cost analysis, (d) risk register, (e) sequencing — ship 2-profile spike first then expand. Evidence basis lives in data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md and data/eval_v1_baseline_rerank_on.json. BLOCKED on from_adaptive_routing_50q_bucketed_eval for empirical validation but design can proceed in parallel."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_adaptive_routing_design.md
+        - file_min_bytes: { path: data/ralph_agent_from_adaptive_routing_design.md, min: 1500 }
+
+  - id: from_adaptive_routing_50q_bucketed_eval
+    type: agent_creative
+    priority: 78
+    description: "[from-operator] Build a 50-question evaluation set with explicit query-class bucket labels (~10 questions per bucket: STRUCTURED, ABSTRACT, CONCRETE, BROAD, ARABIC). Pre-commit labels so we can detect per-profile lift in adaptive-routing experiments. Eval_v1's 13 questions are too noisy to see per-profile effects (saw +96 and -84 in one run). Source: eval-v1 question bank + new abstract / broad / arabic questions designed to expose each profile's failure mode. Each question gets a `bucket:` field in the YAML/JSON. New eval script reads the bucket and emits per-bucket avg_cites in addition to overall."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_adaptive_routing_50q_bucketed_eval.md
+        - file_min_bytes: { path: data/ralph_agent_from_adaptive_routing_50q_bucketed_eval.md, min: 800 }
+
+  - id: from_adaptive_routing_2profile_spike
+    type: agent_creative
+    priority: 72
+    description: "[from-operator] Ship minimum-viable 2-profile spike: classify each incoming /chat query as BROAD or NOT-BROAD (single axis). BROAD = keeps reranker ON; NOT-BROAD = reranker OFF. Single env knob, contains risk. Wire via retrieval_gate.py reading a per-request profile from chat.py. Eval on the 50-question bucketed set (blocked on from_adaptive_routing_50q_bucketed_eval). Decision gate before expanding to 5 profiles. Expected lift: +5-10 cites on concrete queries (paradise/Sin/charity cluster from the rerank-off experiment) without regression on BROAD (themes)."
+    blocked_on: [from_adaptive_routing_50q_bucketed_eval]
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_adaptive_routing_2profile_spike.md
+        - file_min_bytes: { path: data/ralph_agent_from_adaptive_routing_2profile_spike.md, min: 1000 }
+
 # ── Retired tasks ─────────────────────────────────────────────────────────────
 # Tasks moved here when they are obsolete (superseded, subsumed, or no longer applicable).
 # Kept for audit trail — do NOT re-activate. Done tasks stay in tasks: list above and
