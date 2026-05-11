@@ -158,10 +158,22 @@ _args, _ = _parser.parse_known_args()
 OLLAMA_MODEL = _args.model
 OLLAMA_PORT = _args.port
 
-# OpenRouter for deep-dive / cache seeding (larger free models)
+# OpenRouter for primary inference. Defaults to a strong free model.
+# Override via env: OPENROUTER_MODEL=<model-id>
+# Strong free options (verified 2026-05):
+#   openai/gpt-oss-120b:free         — 120B, OpenAI-trained, good tool use (DEFAULT)
+#   deepseek/deepseek-r1:free        — reasoning-tuned, slower
+#   qwen/qwen3-235b-a22b:free        — large MoE, multilingual (good Arabic)
+#   meta-llama/llama-4-maverick:free — MoE
+#   qwen/qwen3-coder:free            — code-tuned (less ideal for QKG)
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "").strip()
-OPENROUTER_MODEL   = os.getenv("OPENROUTER_MODEL", "qwen/qwen3-coder:free").strip()
+OPENROUTER_MODEL   = os.getenv("OPENROUTER_MODEL", "openai/gpt-oss-120b:free").strip()
 OPENROUTER_URL     = "https://openrouter.ai/api/v1/chat/completions"
+
+# Routing: when OpenRouter is available, prefer it over local Ollama by default.
+# Set LOCAL_FIRST=1 to invert and keep Ollama as primary (saves API credits
+# / works offline / faster for short replies).
+LOCAL_FIRST = os.getenv("LOCAL_FIRST", "0") == "1"
 
 # ── clients ────────────────────────────────────────────────────────────────────
 
@@ -630,16 +642,33 @@ async def _agent_stream(message: str, history: list,
     q: tqueue.SimpleQueue = tqueue.SimpleQueue()
 
     # Routing decision:
-    # - local_only → skip OpenRouter entirely (use when quota hit or offline)
-    # - model_override + key → use that OpenRouter model for this request
-    # - deep_dive + key → default OpenRouter model
-    # - deep_dive no key → local 14B
-    # - otherwise → local 8B
-    use_openrouter = not local_only and bool(OPENROUTER_API_KEY) and (deep_dive or model_override)
-    if use_openrouter:
+    # - local_only flag (per-request)  → force Ollama (offline / quota hit)
+    # - LOCAL_FIRST=1 env (project-wide) → prefer Ollama unless deep_dive/override
+    # - otherwise, OpenRouter is primary when OPENROUTER_API_KEY is set
+    # - falls back to Ollama on OpenRouter API errors (see retry block below)
+    has_or_key = bool(OPENROUTER_API_KEY)
+    if local_only:
+        # Honor explicit local-only request
+        active_model = DEEP_DIVE_MODEL if deep_dive else OLLAMA_MODEL
+        active_backend = "ollama"
+    elif LOCAL_FIRST:
+        # Project-wide Ollama-default mode (legacy behaviour)
+        use_openrouter = has_or_key and (deep_dive or model_override)
+        if use_openrouter:
+            active_model = model_override or OPENROUTER_MODEL
+            active_backend = "openrouter"
+        elif deep_dive:
+            active_model = DEEP_DIVE_MODEL
+            active_backend = "ollama"
+        else:
+            active_model = OLLAMA_MODEL
+            active_backend = "ollama"
+    elif has_or_key:
+        # NEW DEFAULT: OpenRouter primary
         active_model = model_override or OPENROUTER_MODEL
         active_backend = "openrouter"
-    elif deep_dive or local_only:
+    elif deep_dive:
+        # No API key but deep_dive requested → use bigger local model
         active_model = DEEP_DIVE_MODEL
         active_backend = "ollama"
     else:
@@ -1119,8 +1148,20 @@ def _preload_model():
 if __name__ == "__main__":
     _model_status["model"] = OLLAMA_MODEL
 
-    print(f"\n[FREE] Model: {OLLAMA_MODEL}")
-    print(f"[FREE] Cost: $0.00 (local)")
+    # Routing banner — show which backend will serve the next /chat request by default
+    if OPENROUTER_API_KEY and not LOCAL_FIRST:
+        _primary_label = f"openrouter :: {OPENROUTER_MODEL}"
+        _fallback_label = f"ollama :: {OLLAMA_MODEL} (on API error)"
+    elif OPENROUTER_API_KEY and LOCAL_FIRST:
+        _primary_label = f"ollama :: {OLLAMA_MODEL} (LOCAL_FIRST=1)"
+        _fallback_label = f"openrouter :: {OPENROUTER_MODEL} (deep_dive only)"
+    else:
+        _primary_label = f"ollama :: {OLLAMA_MODEL}"
+        _fallback_label = "no OPENROUTER_API_KEY set"
+
+    print(f"\n[FREE] Primary  : {_primary_label}")
+    print(f"[FREE] Fallback : {_fallback_label}")
+    print(f"[FREE] Cost     : $0.00 (free tier)")
     print(f"[FREE] Quran Graph: http://localhost:{OLLAMA_PORT}\n")
 
     # Start model pre-load in background so the UI is available immediately
