@@ -48,9 +48,7 @@ blog_neo4j:
     # [FETCHED 2026-05-11] agentic-architecture — findings in blog_findings.md (validating, no new tasks)
     # [FETCHED 2026-05-11] what-is-agentic-rag — findings in blog_findings.md (validating, no new tasks; all gaps covered by existing backlog)
     # [FETCHED 2026-05-11] what-is-graphrag — findings in blog_findings.md (validating, confirms hybrid retrieval + agentic tools architecture; no new tasks)
-    - url: https://neo4j.com/blog/agentic-ai/context-gap-ai-reasoning/
-      title: The context gap — why smart AI struggles to reason
-      relevance: MEDIUM — likely positioning, but useful framing
+    # [FETCHED 2026-05-11] context-gap-ai-reasoning — findings in blog_findings.md (validating, positioning piece; no new tasks)
     - url: https://neo4j.com/blog/graph-database/introducing-asynchronous-i-o-in-neo4j-using-io_uring/
       title: Asynchronous I/O via io_uring in Neo4j
       relevance: HIGH — directly relevant to our 647s outlier (turned out to be Python-side, but io_uring affects DB-side latency)

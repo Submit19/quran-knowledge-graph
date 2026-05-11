@@ -3,6 +3,28 @@
 
 ---
 
+## https://neo4j.com/blog/agentic-ai/context-gap-ai-reasoning/
+**Fetched:** 2026-05-11
+**Title:** The Context Gap — Why Smart AI Struggles to Reason
+
+### TL;DR
+Enterprise AI fails due to lacking structured relational context, not model capability. Graph-based knowledge layers enable AI reasoning by explicitly modeling business relationships as first-class architecture. Largely a positioning/strategy piece for Neo4j's graph product.
+
+### Key Takeaways
+
+1. **Context Gap Problem** — "Capability without context doesn't produce better answers. It produces more confident-sounding wrong ones." Ungrounded AI generates plausible-but-inaccurate responses without relationship understanding. Validates QKG's grounded-in-graph design.
+
+2. **Knowledge Layer Architecture** — shift from data retrieval to relationship modeling; treat connections as essential architecture, not metadata. QKG already implements this (RELATED_TO, MENTIONS, MENTIONS_ROOT, SIMILAR_PHRASE edge types).
+
+3. **Graph-Shaped Business Logic** — real-world problems involve interconnected entities; graph provides navigable context maps so agents can "land reliably." Maps to QKG's multi-hop traversal tools.
+
+4. **No novel implementation patterns** — article is strategic positioning. All concrete patterns are already implemented or covered by existing backlog tasks.
+
+### Verdict
+**Validating, not novel.** Confirms QKG's graph-first, grounded retrieval architecture is aligned with Neo4j's own positioning. No new tasks needed; existing backlog covers all identified improvement areas.
+
+---
+
 ## https://neo4j.com/blog/genai/what-is-graphrag/
 **Fetched:** 2026-05-11
 **Title:** What Is GraphRAG?
