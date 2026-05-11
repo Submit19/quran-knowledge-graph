@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-11T12:50:05.320143+00:00",
-  "tick_count": 52,
+  "last_tick": "2026-05-11T13:45:29.747741+00:00",
+  "tick_count": 53,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -29,7 +29,8 @@
     "from_ai_graph_disable_reranker_baseline",
     "from_ai_graph_rag_triad_eval_metrics",
     "from_neo4j_yt_memory_05_reasoning_step",
-    "from_adaptive_routing_design"
+    "from_adaptive_routing_design",
+    "from_research_finetune_bge_m3_qrcd"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -1191,6 +1192,35 @@
           "check": "file_min_bytes data/ralph_agent_from_adaptive_routing_design.md >= 1500",
           "passed": true,
           "detail": "size=13309"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "from_research_finetune_bge_m3_qrcd",
+      "type": "agent_creative",
+      "started_at": "2026-05-11T13:45:29.747741+00:00",
+      "finished_at": "2026-05-11T13:45:29.747741+00:00",
+      "status": "DONE_WITH_CONCERNS",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "manual backend — deliverable produced out-of-band; gate will validate",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_exists data/ralph_agent_from_research_finetune_bge_m3_qrcd.md",
+          "passed": true,
+          "detail": "C:\\Users\\alika\\Agent Teams\\quran-graph-standalone\\data\\ralph_agent_from_research_finetune_bge_m3_qrcd.md"
+        },
+        {
+          "check": "file_min_bytes data/ralph_agent_from_research_finetune_bge_m3_qrcd.md >= 800",
+          "passed": true,
+          "detail": "size=7109"
         }
       ],
       "tokens_in": 0,

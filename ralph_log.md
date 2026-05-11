@@ -56,3 +56,4 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-11T05:21 | from_ai_graph_rag_triad_eval_metrics | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_from_ai_graph_rag_triad_eval_metrics.md (review before use) |
 | 2026-05-11T07:22 | from_neo4j_yt_memory_05_reasoning_step | cleanup | DONE |  | [from-neo4j-yt] Insert (:ReasoningStep {turn_number, rationale}) between Reasoni / quality gate ok |
 | 2026-05-11T12:50 | from_adaptive_routing_design | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |
+| 2026-05-11T13:45 | from_research_finetune_bge_m3_qrcd | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |
