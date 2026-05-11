@@ -633,8 +633,9 @@ tasks:
 
   - id: from_neo4j_crawl_adopt_graphrag_retrievers
     type: agent_creative
-    priority: 80
+    priority: 85
     description: "[from-neo4j-crawl][answer-quality][opus] Spike a quran_graph/retrievers.py module wrapping VectorRetriever / HybridRetriever / HybridCypherRetriever from neo4j-graphrag-python. Migrate tool_semantic_search as POC. Preserve our reranker + citation verifier downstream. Gives us filters DSL ($in/$or/$gte) and effective_search_ratio overfetch we don't have."
+    notes: "Priority bumped from 80→85: from_neo4j_crawl_check_neo4j_version (DONE) confirmed in-index pre-filter is NOT available on this build (3-arg proc only). graphrag-python's filters DSL is the only way to get efficient surah-filtered vector search. High-priority now."
     blockers: []
     spec:
       acceptance:
@@ -730,6 +731,52 @@ tasks:
       acceptance:
         - python: "True"
 
+  # ── [from-ai-graph reranker A/B follow-ups] Promoted from detail file ────────
+  # ── Source: data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab_detail.md
+  # ── Critical: current bge-reranker-v2-m3 drops hit@10 by 50% on QRCD Arabic queries.
+  - id: from_ai_graph_disable_reranker_baseline
+    type: cypher_analysis
+    priority: 83
+    description: "[from-ai-graph][answer-quality] P0-quick-win: Run eval_v1 (13q) with RERANK_DISABLED=1 and compare to current baseline (avg 43.6 cites). Hypothesis: disabling the reranker lifts avg cites toward 48+ since raw BGE-M3 vector (hit@10=0.6364) already beats reranked output (hit@10=0.3182). No external API keys needed. Produces a new data/eval_rerank_disabled_results.json."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md
+        - file_min_bytes: { path: data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md, min: 300 }
+
+  - id: from_ai_graph_cohere_rerank_ab_impl
+    type: agent_creative
+    priority: 82
+    description: "[from-ai-graph][answer-quality][opus] Write eval_qrcd_reranker_ab.py, add RERANKER_BACKEND=cohere branch to retrieval_gate.py, run on QRCD 22-q + eval_v1 13-q, compare hit@10/MAP@10/avg-cites vs baseline. Cohere Rerank 4 Pro: confirmed multilingual (100+ langs incl. Arabic), 32K context, ELO 1627 (#2). Plan already written in detail file — needs COHERE_API_KEY in .env. Blocker: user adds COHERE_API_KEY."
+    blockers: []
+    notes: "Blocked until COHERE_API_KEY is set. The A/B script skeleton is in the detail file (data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab_detail.md). Skip and pick from_ai_graph_disable_reranker_baseline first."
+    spec:
+      acceptance:
+        - file_exists: data/ralph_agent_from_ai_graph_cohere_rerank_ab_impl.md
+        - file_min_bytes: { path: data/ralph_agent_from_ai_graph_cohere_rerank_ab_impl.md, min: 600 }
+
+  - id: from_ai_graph_arabic_reranker_research
+    type: cypher_analysis
+    priority: 55
+    description: "[from-ai-graph] Research Arabic-specific reranking options if Cohere/zerank-2 A/B fails. Candidates: CAMeL-BERT, AraBART fine-tuned for reranking, JAIS-based reranker. Survey HuggingFace for Arabic-Quran-domain rerankers. Write data/ralph_analysis_arabic_reranker_options.md."
+    blockers: []
+    spec:
+      acceptance:
+        - file_exists: data/ralph_analysis_arabic_reranker_options.md
+        - file_min_bytes: { path: data/ralph_analysis_arabic_reranker_options.md, min: 400 }
+
+  # ── [from-blog] Approved from proposed_tasks.yaml maintenance tick 36 ────────
+  - id: from_blog_tool_input_validation
+    type: cleanup
+    priority: 45
+    description: "[from-research] Add input validation to chat.py tool schemas: enforce Surah number in [1-114], ayah range checks, and language code allowlists. Return structured {error, reason} on invalid args (pre-execution guard). Synergistic with from_ai_graph_tool_error_audit (p60) which covers post-execution errors."
+    blockers: []
+    spec:
+      commits_code: true
+      acceptance:
+        - file_exists: data/ralph_analysis_from_blog_tool_input_validation.md
+        - file_min_bytes: { path: data/ralph_analysis_from_blog_tool_input_validation.md, min: 400 }
+
   # ── [from-ralph-yt] Jeff Huntley + Dex YouTube conversation 2026-05-10 ────
   # ── Source: data/research_neo4j_crawl/05_ralph_yt_extract.md ──────────────
   - id: from_ralph_yt_01_tokenize_claudemd
@@ -791,6 +838,7 @@ tasks:
     priority: 78
     description: "[from-neo4j-yt][answer-quality] Smarter MCP Servers (NODES 2026) shows 62% token-overhead reduction via 8-tool startup set + 3 discoverable categories. Our 21 tools currently cost ~4,200 tokens before first message. Implement graph-backed startup set using RETRIEVED edge counts from reasoning_memory.py (existing data — no new infra). Hot 8: search_keyword, semantic_search, get_verse, concept_search, traverse_topic, hybrid_search, recall_similar_query, run_cypher. Discoverable: etymology, surah-level, code19. Saves ~2,600 tokens per turn × every chat = compounding."
     blockers: []
+    notes: "Pairs with from_neo4j_yt_mcp_graph_backed_registry (p65) — registry provides the RETRIEVED-edge-count data needed to rank the startup set. Run grouping after or alongside registry."
     spec:
       acceptance:
         - file_exists: data/ralph_agent_from_neo4j_yt_mcp_balanced_tool_grouping.md
@@ -839,7 +887,7 @@ tasks:
   - id: from_neo4j_yt_mcp_graph_backed_registry
     type: agent_creative
     priority: 65
-    description: "[from-neo4j-yt] Implement graph-backed tool registry using existing RETRIEVED edge counts as the usage signal. Video 3 (Smarter MCP Servers): rank tools in startup list by historical usage_count from reasoning_memory.py. Zero new infra needed — we already have the data. Pairs with the balanced-tool-grouping task above."
+    description: "[from-neo4j-yt] Implement graph-backed tool registry using existing RETRIEVED edge counts as the usage signal. Video 3 (Smarter MCP Servers): rank tools in startup list by historical usage_count from reasoning_memory.py. Zero new infra needed — we already have the data. Pairs with from_neo4j_yt_mcp_balanced_tool_grouping (p78) — this task provides the data; grouping uses it."
     blockers: []
     spec:
       acceptance:
@@ -909,3 +957,13 @@ tasks:
       acceptance:
         - file_exists: data/ralph_agent_reasoning_memory_session_layer.md
         - file_min_bytes: { path: data/ralph_agent_reasoning_memory_session_layer.md, min: 600 }
+
+# ── Retired tasks ─────────────────────────────────────────────────────────────
+# Tasks moved here when they are obsolete (superseded, subsumed, or no longer applicable).
+# Kept for audit trail — do NOT re-activate. Done tasks stay in tasks: list above and
+# are tracked via ralph_state.json done_task_ids.
+
+retired:
+  - id: append_ralph_status_to_AUTONOMOUS_RUN
+    retired_at: "2026-05-11T01:07:00+00:00"
+    reason: "Superseded by SESSION_LOG.md + STATE_SNAPSHOT.md (auto-generated) + MORNING_REPORT.md (every 12 ticks). Appending status to a static legacy report file is now redundant and conflicts with the structured state architecture."
