@@ -373,6 +373,7 @@ tasks:
     type: agent_creative
     priority: 64
     description: "Today /chat is stateless — every message starts fresh. Spec a session-memory UX that lets the user say 'explain that further' or 'what about in Surah 2'."
+    notes: "Pairs with from_blog_reasoning_memory_session_layer (p55) — this is the frontend spec, that task is the backend implementation. Run this first to define the shape, then implement backend."
     blockers: []
     spec:
       max_attempts: 2
@@ -578,14 +579,6 @@ tasks:
         good 'OpenRouter -> local 14B fallback' pattern; the other two
         don't. Converging gives consistent fallback behaviour.
 
-  # ── Cleanup hygiene (always-low-priority background) ──────────────────────
-  - id: append_ralph_status_to_AUTONOMOUS_RUN
-    type: cleanup
-    priority: 10
-    description: "After each tick, append a one-line status to AUTONOMOUS_RUN_2026-04-28.md or a new RALPH_LOG.md"
-    blockers: []
-    spec: {}
-
   # ── [from-neo4j-crawl] Top 8 actionable tasks from the 2026-05-10 ─────────
   # ── deep crawl of neo4j.com/docs, GraphAcademy, neo4j.com/resources ───────
   # ── Source: data/research_neo4j_crawl/{01,02,03}_*.md ─────────────────────
@@ -754,10 +747,10 @@ tasks:
 
   - id: from_ai_graph_cohere_rerank_ab_impl
     type: agent_creative
-    priority: 82
+    priority: 50
     description: "[from-ai-graph][answer-quality][opus] Write eval_qrcd_reranker_ab.py, add RERANKER_BACKEND=cohere branch to retrieval_gate.py, run on QRCD 22-q + eval_v1 13-q, compare hit@10/MAP@10/avg-cites vs baseline. Cohere Rerank 4 Pro: confirmed multilingual (100+ langs incl. Arabic), 32K context, ELO 1627 (#2). Plan already written in detail file — needs COHERE_API_KEY in .env. Blocker: user adds COHERE_API_KEY."
     blockers: []
-    notes: "Blocked until COHERE_API_KEY is set. The A/B script skeleton is in the detail file (data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab_detail.md). Skip and pick from_ai_graph_disable_reranker_baseline first."
+    notes: "Priority dropped p82→p50 at maintenance tick 48: COHERE_API_KEY is not set and user has not indicated intent to add it. from_ai_graph_arabic_reranker_research (p75) is a better intermediate step — survey free HuggingFace alternatives first; if they fail, revisit Cohere. The A/B script skeleton is in the detail file (data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab_detail.md)."
     spec:
       acceptance:
         - file_exists: data/ralph_agent_from_ai_graph_cohere_rerank_ab_impl.md
@@ -765,8 +758,9 @@ tasks:
 
   - id: from_ai_graph_arabic_reranker_research
     type: cypher_analysis
-    priority: 55
-    description: "[from-ai-graph] Research Arabic-specific reranking options if Cohere/zerank-2 A/B fails. Candidates: CAMeL-BERT, AraBART fine-tuned for reranking, JAIS-based reranker. Survey HuggingFace for Arabic-Quran-domain rerankers. Write data/ralph_analysis_arabic_reranker_options.md."
+    priority: 75
+    description: "[from-ai-graph] Research Arabic-specific reranking options. Candidates: CAMeL-BERT, AraBART fine-tuned for reranking, JAIS-based reranker. Survey HuggingFace for Arabic-Quran-domain rerankers. Write data/ralph_analysis_arabic_reranker_options.md."
+    notes: "Priority bumped p55→p75 at maintenance tick 48: bge-reranker-v2-m3 confirmed to drop hit@10 50% on Arabic queries (from_ai_graph_disable_reranker_baseline DONE). Finding an Arabic-safe replacement is now P1. Don't wait for Cohere A/B failure — research in parallel."
     blockers: []
     spec:
       acceptance:
