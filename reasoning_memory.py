@@ -245,6 +245,14 @@ class QueryRecorder:
           - rank          : 1-based position in the order verses appeared in the result
           - turn          : agent turn number
           - call_id       : link back to the ToolCall node
+          - valid_from    : ISO 8601 timestamp when the edge was created (bitemporal)
+          - model_version : active SEMANTIC_SEARCH_INDEX alias at write time
+                           ("minilm-l6-v2" | "bge-m3-en" | "bge-m3-ar")
+                           Enables queries like "which verses ranked highly under
+                           MiniLM but not BGE-M3?".
+
+        Existing 32K+ RETRIEVED edges written before this change have
+        model_version='pre-bge-m3' sentinel (set by backfill_retrieved_model_version.py).
 
         These edges create a learnable signal: which verses does this corpus's
         agentic loop keep retrieving, for what kinds of queries, via which tools?
@@ -316,6 +324,16 @@ class QueryRecorder:
 
             # Write the RETRIEVED edges in one batch (only if we found refs)
             if verse_refs:
+                import os as _os
+                # model_version: reflect active embedding index so we can compare
+                # "which verses ranked highly under MiniLM but not BGE-M3?" later.
+                _sem_idx = _os.environ.get("SEMANTIC_SEARCH_INDEX", "verse_embedding")
+                _model_version_map = {
+                    "verse_embedding": "minilm-l6-v2",
+                    "verse_embedding_m3": "bge-m3-en",
+                    "verse_embedding_m3_ar": "bge-m3-ar",
+                }
+                _mv = _model_version_map.get(_sem_idx, _sem_idx)
                 rows = [{"ref": ref, "rank": i}
                         for i, ref in enumerate(verse_refs, 1)]
                 s.run("""
@@ -325,9 +343,12 @@ class QueryRecorder:
                     MERGE (t)-[r:RETRIEVED {tool: $tool, call_id: $cid}]->(v)
                     SET r.rank = row.rank,
                         r.turn = $turn,
-                        r.ts = datetime()
+                        r.ts = datetime(),
+                        r.valid_from = $valid_from,
+                        r.model_version = $model_version
                 """, tid=self.trace_id, tool=tool_name, cid=call_id,
-                     turn=turn, rows=rows)
+                     turn=turn, rows=rows,
+                     valid_from=ts, model_version=_mv)
 
     def finish(self, answer_text: str, citation_count: int, status: str = "completed"):
         total_ms = int((time.time() - self.start_time) * 1000)

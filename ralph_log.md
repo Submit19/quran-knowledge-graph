@@ -67,3 +67,5 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-11T18:17 | from_ai_graph_reflexion_pattern | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_from_ai_graph_reflexion_pattern.md (review before use) |
 | 2026-05-11T18:45 | from_neo4j_crawl_arabic_fulltext_index | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_from_neo4j_crawl_arabic_fulltext_index.md (review before use) |
 | 2026-05-11T19:46 | from_ai_graph_arabic_reranker_research | cypher_analysis | DONE_WITH_CONCERNS |  | manual mode — deliverable produced out-of-band; gate will validate |
+| 2026-05-11T20:15 | from_neo4j_yt_memory_01_bitemporal_retrieved | cleanup | FAILED |  | [from-neo4j-yt] Add valid_from (ISO timestamp) and model_version string properti / QUALITY GATE FAILED:  |
+| 2026-05-11T20:16 | from_neo4j_yt_memory_01_bitemporal_retrieved | cleanup | DONE |  | [from-neo4j-yt] Add valid_from (ISO timestamp) and model_version string properti |

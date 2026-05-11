@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-11T19:46:04.314695+00:00",
-  "tick_count": 68,
+  "last_tick": "2026-05-11T20:16:43.408433+00:00",
+  "tick_count": 70,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -39,7 +39,8 @@
     "from_adaptive_routing_50q_bucketed_eval",
     "from_ai_graph_reflexion_pattern",
     "from_neo4j_crawl_arabic_fulltext_index",
-    "from_ai_graph_arabic_reranker_research"
+    "from_ai_graph_arabic_reranker_research",
+    "from_neo4j_yt_memory_01_bitemporal_retrieved"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -1544,6 +1545,54 @@
           "check": "file_min_bytes data/ralph_analysis_arabic_reranker_options.md >= 400",
           "passed": true,
           "detail": "size=8084"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "from_neo4j_yt_memory_01_bitemporal_retrieved",
+      "type": "cleanup",
+      "started_at": "2026-05-11T20:15:28.126233+00:00",
+      "finished_at": "2026-05-11T20:15:34.807186+00:00",
+      "status": "FAILED",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "[from-neo4j-yt] Add valid_from (ISO timestamp) and model_version string properti | QUALITY GATE FAILED: ",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "python True",
+          "passed": true,
+          "detail": "ok"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "from_neo4j_yt_memory_01_bitemporal_retrieved",
+      "type": "cleanup",
+      "started_at": "2026-05-11T20:16:43.408433+00:00",
+      "finished_at": "2026-05-11T20:16:43.408433+00:00",
+      "status": "DONE",
+      "attempt": 2,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "[from-neo4j-yt] Add valid_from (ISO timestamp) and model_version string properti",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "python True",
+          "passed": true,
+          "detail": "ok"
         }
       ],
       "tokens_in": 0,
