@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-11T05:22:59.974645+00:00",
-  "tick_count": 46,
+  "last_tick": "2026-05-11T07:22:56.805438+00:00",
+  "tick_count": 47,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -27,7 +27,8 @@
     "from_neo4j_crawl_trace_vector_index",
     "from_neo4j_crawl_adopt_graphrag_retrievers",
     "from_ai_graph_disable_reranker_baseline",
-    "from_ai_graph_rag_triad_eval_metrics"
+    "from_ai_graph_rag_triad_eval_metrics",
+    "from_neo4j_yt_memory_05_reasoning_step"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -1141,6 +1142,30 @@
       "tokens_in": 346,
       "tokens_out": 1513,
       "api_calls": 1
+    },
+    {
+      "task_id": "from_neo4j_yt_memory_05_reasoning_step",
+      "type": "cleanup",
+      "started_at": "2026-05-11T07:22:51.565525+00:00",
+      "finished_at": "2026-05-11T07:22:56.805438+00:00",
+      "status": "DONE",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "[from-neo4j-yt] Insert (:ReasoningStep {turn_number, rationale}) between Reasoni | quality gate ok",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "python True",
+          "passed": true,
+          "detail": "ok"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
     }
   ],
   "quarantined_task_ids": [],

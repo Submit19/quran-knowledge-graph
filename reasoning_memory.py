@@ -24,6 +24,13 @@ Schema:
      status,              // "completed" | "retry_used" | "failed"
    })
 
+  (:ReasoningStep {
+     stepId,              // UUID
+     turn_number,         // agent turn this step belongs to (1, 2, 3...)
+     rationale,           // free-text: why this tool was chosen (quintuple rationale)
+     ts,                  // ISO 8601 timestamp
+   })
+
   (:ToolCall {
      callId,              // UUID
      turn,                // 1, 2, 3...
@@ -47,13 +54,23 @@ Schema:
 Relationships:
 
   (:Query)-[:TRIGGERED]->(:ReasoningTrace)
-  (:ReasoningTrace)-[:HAS_STEP {order}]->(:ToolCall)
+  (:ReasoningTrace)-[:HAS_STEP {order}]->(:ToolCall)           // legacy — always written
+  (:ReasoningTrace)-[:HAS_REASONING_STEP {order}]->(:ReasoningStep)  // new — written when rationale provided
+  (:ReasoningStep)-[:EXECUTED_TOOL]->(:ToolCall)               // new — links step to its tool call
   (:Query)-[:PRODUCED]->(:Answer)
+
+Notes on additive design:
+  - HAS_STEP edges are always written (backward compatibility for existing consumers).
+  - ReasoningStep nodes are only written when `log_tool_call(rationale=...)` is supplied.
+    Existing callers that don't pass rationale are unaffected.
+  - Existing 32K+ RETRIEVED edges and reasoning memory queries continue to work unchanged.
 
 Indexes:
 
   CREATE INDEX query_id IF NOT EXISTS FOR (q:Query) ON (q.queryId);
   CREATE INDEX trace_id IF NOT EXISTS FOR (t:ReasoningTrace) ON (t.traceId);
+  CREATE INDEX reasoning_step_id IF NOT EXISTS FOR (rs:ReasoningStep) ON (rs.stepId);
+  CREATE INDEX reasoning_step_turn IF NOT EXISTS FOR (rs:ReasoningStep) ON (rs.turn_number);
   CREATE VECTOR INDEX query_embedding IF NOT EXISTS
     FOR (q:Query) ON (q.textEmbedding)
     OPTIONS {indexConfig: {`vector.dimensions`: 384, `vector.similarity_function`: 'cosine'}};
@@ -106,6 +123,9 @@ class ReasoningMemory:
             s.run("CREATE INDEX trace_id IF NOT EXISTS FOR (t:ReasoningTrace) ON (t.traceId)")
             s.run("CREATE INDEX toolcall_id IF NOT EXISTS FOR (tc:ToolCall) ON (tc.callId)")
             s.run("CREATE INDEX toolcall_name IF NOT EXISTS FOR (tc:ToolCall) ON (tc.tool_name)")
+            # ReasoningStep indexes (new in 2026-05-11 — schema-additive)
+            s.run("CREATE INDEX reasoning_step_id IF NOT EXISTS FOR (rs:ReasoningStep) ON (rs.stepId)")
+            s.run("CREATE INDEX reasoning_step_turn IF NOT EXISTS FOR (rs:ReasoningStep) ON (rs.turn_number)")
             # Indexes on the new (:ReasoningTrace)-[:RETRIEVED]->(:Verse) layer
             # so we can quickly aggregate "what tool returned this verse most"
             s.run("CREATE INDEX retrieved_tool IF NOT EXISTS FOR ()-[r:RETRIEVED]->() ON (r.tool)")
@@ -148,7 +168,13 @@ class ReasoningMemory:
         return QueryRecorder(self, query_id, trace_id, start_time=time.time())
 
     def find_similar_queries(self, text: str, top_k: int = 3, min_sim: float = 0.7):
-        """Return past queries similar to `text`, ordered by similarity desc."""
+        """Return past queries similar to `text`, ordered by similarity desc.
+
+        Each returned row includes `tool_steps` (from ToolCall nodes via legacy
+        HAS_STEP edges) and `reasoning_steps` (from ReasoningStep nodes via
+        HAS_REASONING_STEP edges, when available).  Callers that only used
+        tool_steps before are unaffected — the new field is additive.
+        """
         vec = self._embed(text)
         with self.driver.session(database=self.db) as s:
             rows = s.run("""
@@ -166,12 +192,20 @@ class ReasoningMemory:
                          summary: tc.summary,
                          ok: tc.ok
                      }) AS steps
+                OPTIONAL MATCH (t)-[hrs:HAS_REASONING_STEP]->(rs:ReasoningStep)
+                WITH node, score, t, a, steps,
+                     collect({
+                         order: hrs.order,
+                         turn_number: rs.turn_number,
+                         rationale: rs.rationale
+                     }) AS reasSteps
                 RETURN node.queryId AS queryId, node.text AS text,
                        node.timestamp AS timestamp,
                        score, t.citation_count AS citation_count,
                        t.status AS status, t.turn_count AS turns,
                        a.text AS answer,
-                       [s IN steps WHERE s.tool_name IS NOT NULL] AS tool_steps
+                       [s IN steps WHERE s.tool_name IS NOT NULL] AS tool_steps,
+                       [s IN reasSteps WHERE s.rationale IS NOT NULL] AS reasoning_steps
                 ORDER BY score DESC
             """, vec=vec, k=top_k, min_sim=min_sim).data()
         return rows
@@ -191,11 +225,22 @@ class QueryRecorder:
     def log_tool_call(self, turn: int, order: int, tool_name: str, args: dict,
                        summary: str, ok: bool, duration_ms: int,
                        result_citation_count: int = 0,
-                       result_payload: str | dict | None = None):
+                       result_payload: str | dict | None = None,
+                       rationale: str | None = None):
         """
-        Log a tool call. If `result_payload` is provided, also extract any
-        verse references from it and write (:ReasoningTrace)-[:RETRIEVED]->(:Verse)
-        edges with provenance. Each edge carries:
+        Log a tool call.
+
+        If `rationale` is provided, a (:ReasoningStep {turn_number, rationale}) node
+        is created and linked via:
+          (ReasoningTrace)-[:HAS_REASONING_STEP {order}]->(ReasoningStep)
+          (ReasoningStep)-[:EXECUTED_TOOL]->(ToolCall)
+        This is schema-additive — existing (ReasoningTrace)-[:HAS_STEP]->(ToolCall)
+        edges are always written regardless of rationale, so existing query paths
+        are unaffected.
+
+        If `result_payload` is provided, verse references are extracted and
+        (:ReasoningTrace)-[:RETRIEVED]->(:Verse) edges are written with provenance.
+        Each RETRIEVED edge carries:
           - tool          : name of the tool that returned the verse
           - rank          : 1-based position in the order verses appeared in the result
           - turn          : agent turn number
@@ -233,7 +278,11 @@ class QueryRecorder:
             except Exception:
                 verse_refs = []
 
+        step_id = str(uuid.uuid4()) if rationale else None
+        ts = _now_iso()
+
         with self.memory.driver.session(database=self.memory.db) as s:
+            # Always write the ToolCall + legacy HAS_STEP edge (backward compat)
             s.run("""
                 MATCH (t:ReasoningTrace {traceId: $tid})
                 CREATE (tc:ToolCall {
@@ -247,6 +296,23 @@ class QueryRecorder:
                  name=tool_name, args=args_json, sum=summary[:300], ok=ok,
                  dur=duration_ms, cites=result_citation_count,
                  step_order=step_order)
+
+            # Optionally write the ReasoningStep node (schema-additive, 2026-05-11)
+            if rationale and step_id:
+                s.run("""
+                    MATCH (t:ReasoningTrace {traceId: $tid})
+                    MATCH (tc:ToolCall {callId: $cid})
+                    CREATE (rs:ReasoningStep {
+                        stepId: $sid,
+                        turn_number: $turn,
+                        rationale: $rationale,
+                        ts: datetime($ts)
+                    })
+                    CREATE (t)-[:HAS_REASONING_STEP {order: $step_order}]->(rs)
+                    CREATE (rs)-[:EXECUTED_TOOL]->(tc)
+                """, tid=self.trace_id, cid=call_id, sid=step_id,
+                     turn=turn, rationale=rationale[:500],
+                     ts=ts, step_order=step_order)
 
             # Write the RETRIEVED edges in one batch (only if we found refs)
             if verse_refs:
