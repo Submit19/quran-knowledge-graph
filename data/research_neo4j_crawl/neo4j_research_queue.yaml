@@ -18,9 +18,7 @@ yt_priority:
   source_priority: 95
   findings_file: data/research_neo4j_crawl/yt_priority_findings.md
   queue:
-    - url: https://www.youtube.com/watch?v=kQu5pWKS8GA
-      title: "The 7 Levels of Claude Code & RAG (Chase AI, 46min)"
-      relevance: HIGH — covers Claude Code memory tiers + agentic graph RAG progression. User specifically requested. Hit YT 429 rate limit during initial fetch; retry on next loop tick.
+    # [FETCHED 2026-05-12] kQu5pWKS8GA — findings in yt_priority_findings.md (validating; QKG already at Level 6-7; no new tasks)
 
 # ── Source 1: Neo4j YouTube channel (high priority) ──────────────────────
 # Already populated separately at yt_neo4j_queue.yaml — 80 videos pre-ranked.
