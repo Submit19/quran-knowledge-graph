@@ -137,7 +137,7 @@ tasks:
     compare_to_baseline: true
 - id: cypher_retry_metric
   type: prompt_variant
-  priority: 60
+  priority: 65
   description: Surface tool retry count + first-error class as SSE metadata; logs
     per-response in eval
   blockers: []
@@ -1360,6 +1360,20 @@ tasks:
     - file_min_bytes:
         path: embed_concepts.py
         min: 1000
+- id: fix_memory_hygiene_codec
+  type: cleanup
+  priority: 40
+  description: 'Fix arch_drift_spotcheck in scripts/memory_hygiene.py: open output
+    file with encoding=utf-8 to prevent charmap codec error on Windows when writing
+    Unicode arrows (→)'
+  blockers: []
+  spec:
+    file: scripts/memory_hygiene.py
+    change: add encoding=utf-8 to open() call in arch_drift_spotcheck()
+    acceptance:
+    - file_min_bytes:
+        path: scripts/memory_hygiene.py
+        min: 100
 retired:
 - id: append_ralph_status_to_AUTONOMOUS_RUN
   retired_at: '2026-05-11T01:07:00+00:00'
