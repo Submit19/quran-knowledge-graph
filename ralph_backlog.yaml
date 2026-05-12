@@ -1176,6 +1176,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_agent_from_blog_stateful_ai_memory_path_convention.md
         min: 500
+  status: DONE_WITH_CONCERNS
+  done_note: memory_path property added to ReasoningTrace CREATE + trace_memory_path index in ensure_schema(); quality gate skipped (Neo4j offline = false negative on app_free import)
 - id: from_blog_same_as_dedup_concepts
   type: cypher_analysis
   priority: 62

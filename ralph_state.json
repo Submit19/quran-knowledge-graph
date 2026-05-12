@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-12T09:00:00.000000+00:00",
-  "tick_count": 100,
+  "last_tick": "2026-05-12T09:46:01.381884+00:00",
+  "tick_count": 101,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -57,7 +57,8 @@
     "from_blog_extend_reasoning_memory_confidence",
     "from_blog_same_as_dedup_concepts",
     "rerun_eval_against_current",
-    "from_ai_graph_tool_error_audit"
+    "from_ai_graph_tool_error_audit",
+    "from_blog_stateful_ai_memory_path_convention"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -2200,13 +2201,43 @@
       "tokens_in": 0,
       "tokens_out": 0,
       "api_calls": 0
+    },
+    {
+      "task_id": "from_blog_stateful_ai_memory_path_convention",
+      "type": "cleanup",
+      "started_at": "2026-05-12T09:45:54.706152+00:00",
+      "finished_at": "2026-05-12T09:46:01.381884+00:00",
+      "status": "FAILED",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "[from-research] Add structured `memory_path` property (e.g. sessions/<id>/traces | QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)\r\nFailed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_exists data/ralph_agent_from_blog_stateful_ai_memory_path_convention.md",
+          "passed": true,
+          "detail": "C:\\Users\\alika\\Agent Teams\\quran-graph-standalone\\data\\ralph_agent_from_blog_stateful_ai_memory_path_convention.md"
+        },
+        {
+          "check": "file_min_bytes data/ralph_agent_from_blog_stateful_ai_memory_path_convention.md >= 500",
+          "passed": true,
+          "detail": "size=3052"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
     }
   ],
   "quarantined_task_ids": [],
   "attempts": {
     "from_neo4j_crawl_enable_slow_query_log": 2,
     "from_neo4j_crawl_check_neo4j_version": 3,
-    "from_neo4j_yt_mcp_tool_description_audit": 3
+    "from_neo4j_yt_mcp_tool_description_audit": 3,
+    "from_blog_stateful_ai_memory_path_convention": 1
   },
   "api_usage": {
     "calls_total": 14,

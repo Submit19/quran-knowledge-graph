@@ -22,6 +22,9 @@ Schema:
      tool_call_count,
      citation_count,      // unique [X:Y] citations in final answer
      status,              // "completed" | "retry_used" | "failed"
+     memory_path,         // "sessions/<query_id>/traces/<trace_id>"
+                          //   — structured path for session-scoped retrieval
+                          //   and future MCP memory-tool exposure
    })
 
   (:ReasoningStep {
@@ -121,6 +124,7 @@ class ReasoningMemory:
             s.run("CREATE INDEX query_id IF NOT EXISTS FOR (q:Query) ON (q.queryId)")
             s.run("CREATE INDEX query_ts IF NOT EXISTS FOR (q:Query) ON (q.timestamp)")
             s.run("CREATE INDEX trace_id IF NOT EXISTS FOR (t:ReasoningTrace) ON (t.traceId)")
+            s.run("CREATE INDEX trace_memory_path IF NOT EXISTS FOR (t:ReasoningTrace) ON (t.memory_path)")
             s.run("CREATE INDEX toolcall_id IF NOT EXISTS FOR (tc:ToolCall) ON (tc.callId)")
             s.run("CREATE INDEX toolcall_name IF NOT EXISTS FOR (tc:ToolCall) ON (tc.tool_name)")
             # ReasoningStep indexes (new in 2026-05-11 — schema-additive)
@@ -152,6 +156,7 @@ class ReasoningMemory:
         trace_id = str(uuid.uuid4())
         embedding = self._embed(text)
         ts = _now_iso()
+        memory_path = f"sessions/{query_id}/traces/{trace_id}"
         with self.driver.session(database=self.db) as s:
             s.run("""
                 CREATE (q:Query {
@@ -160,11 +165,13 @@ class ReasoningMemory:
                 })
                 CREATE (t:ReasoningTrace {
                     traceId: $tid, total_duration_ms: 0, turn_count: 0,
-                    tool_call_count: 0, citation_count: 0, status: 'in_progress'
+                    tool_call_count: 0, citation_count: 0, status: 'in_progress',
+                    memory_path: $memory_path
                 })
                 CREATE (q)-[:TRIGGERED]->(t)
             """, qid=query_id, text=text, emb=embedding, ts=ts,
-                 backend=backend, deep=deep_dive, tid=trace_id)
+                 backend=backend, deep=deep_dive, tid=trace_id,
+                 memory_path=memory_path)
         return QueryRecorder(self, query_id, trace_id, start_time=time.time())
 
     def find_similar_queries(self, text: str, top_k: int = 3, min_sim: float = 0.7):
