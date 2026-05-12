@@ -90,3 +90,4 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-12T08:46 | from_ai_graph_tool_error_audit | cleanup | FAILED |  | [from-ai-graph] Audit all 21 tools in chat.py for the 'tool failures ignored' pr / QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No |
 | 2026-05-12T08:47 | from_ai_graph_tool_error_audit | cleanup | FAILED |  | [from-ai-graph] Audit all 21 tools in chat.py for the 'tool failures ignored' pr / QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No |
 | 2026-05-12T09:45 | from_blog_stateful_ai_memory_path_convention | cleanup | FAILED |  | [from-research] Add structured `memory_path` property (e.g. sessions/<id>/traces / QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No |
+| 2026-05-12T10:14 | from_neo4j_yt_memory_01_bitemporal_retrieved | cleanup | DONE |  | [from-neo4j-yt] Add valid_from (ISO timestamp) and model_version string properti |

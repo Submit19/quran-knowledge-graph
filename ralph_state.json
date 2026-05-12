@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-12T09:46:01.381884+00:00",
-  "tick_count": 101,
+  "last_tick": "2026-05-12T10:14:16.887226+00:00",
+  "tick_count": 102,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -58,7 +58,8 @@
     "from_blog_same_as_dedup_concepts",
     "rerun_eval_against_current",
     "from_ai_graph_tool_error_audit",
-    "from_blog_stateful_ai_memory_path_convention"
+    "from_blog_stateful_ai_memory_path_convention",
+    "from_neo4j_yt_memory_01_bitemporal_retrieved"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -2225,6 +2226,30 @@
           "check": "file_min_bytes data/ralph_agent_from_blog_stateful_ai_memory_path_convention.md >= 500",
           "passed": true,
           "detail": "size=3052"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "from_neo4j_yt_memory_01_bitemporal_retrieved",
+      "type": "cleanup",
+      "started_at": "2026-05-12T10:14:16.887226+00:00",
+      "finished_at": "2026-05-12T10:14:16.887226+00:00",
+      "status": "DONE",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "[from-neo4j-yt] Add valid_from (ISO timestamp) and model_version string properti",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "python True",
+          "passed": true,
+          "detail": "ok"
         }
       ],
       "tokens_in": 0,
