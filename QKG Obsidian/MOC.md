@@ -28,7 +28,7 @@ Tag convention: `#research/<area>` — e.g. `#research/retrieval`, `#research/ag
 
 ## Backfilled content (auto-refreshed by memory_hygiene.py)
 
-### Decisions (ADRs) (29)
+### Decisions (ADRs) (31)
 - [[decisions/0001-use-khalifa-translation]]
 - [[decisions/0002-bge-m3-over-minilm]]
 - [[decisions/0003-multilingual-reranker]]
@@ -58,6 +58,8 @@ Tag convention: `#research/<area>` — e.g. `#research/retrieval`, `#research/ag
 - [[decisions/0027-8-tool-startup-set-3-discoverable-bundles]]
 - [[decisions/0028-arabic-fulltext-routing-bm25-path]]
 - [[decisions/0029-reflexion-pattern-for-weak-query-cluster]]
+- [[decisions/0030-qwen3-reranker-0.6b-as-next-reranker-candidate]]
+- [[decisions/0031-skip-lightrag-spike]]
 
 ### Architecture (9)
 - [[architecture/agent-loop]]
