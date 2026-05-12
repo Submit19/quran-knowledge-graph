@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-12T17:17:46.347983+00:00",
-  "tick_count": 119,
+  "last_tick": "2026-05-12T17:44:25.800667+00:00",
+  "tick_count": 120,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -69,7 +69,8 @@
     "from_ai_graph_cohere_rerank_ab_impl",
     "from_ralph_yt_04_parallel_worktree_spike",
     "extract_eval_common",
-    "from_blog_tool_input_validation"
+    "from_blog_tool_input_validation",
+    "from_neo4j_yt_memory_01_bitemporal_retrieved"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -2608,6 +2609,30 @@
           "check": "file_min_bytes data/ralph_analysis_from_blog_tool_input_validation.md >= 400",
           "passed": true,
           "detail": "size=3247"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "from_neo4j_yt_memory_01_bitemporal_retrieved",
+      "type": "cleanup",
+      "started_at": "2026-05-12T17:44:25.800667+00:00",
+      "finished_at": "2026-05-12T17:44:25.800667+00:00",
+      "status": "DONE",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "[from-neo4j-yt] Add valid_from (ISO timestamp) and model_version string properti",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "python True",
+          "passed": true,
+          "detail": "ok"
         }
       ],
       "tokens_in": 0,

@@ -105,3 +105,4 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-12T16:47 | extract_eval_common | cleanup | FAILED |  | Extract eval_qrcd_*.py shared helpers (expand_verse_range, hit_at_k, recall_at_k / QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No |
 | 2026-05-12T16:48 | extract_eval_common | cleanup | DONE |  | Extract eval_qrcd_*.py shared helpers (expand_verse_range, hit_at_k, recall_at_k |
 | 2026-05-12T17:17 | from_blog_tool_input_validation | cleanup | FAILED |  | [from-research] Add input validation to chat.py tool schemas: enforce Surah numb / QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No |
+| 2026-05-12T17:44 | from_neo4j_yt_memory_01_bitemporal_retrieved | cleanup | DONE |  | [from-neo4j-yt] Add valid_from (ISO timestamp) and model_version string properti |
