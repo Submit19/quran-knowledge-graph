@@ -64,15 +64,9 @@ graphacademy:
   source_priority: 60
   findings_file: data/research_neo4j_crawl/graphacademy_findings.md
   queue:
-    - url: https://graphacademy.neo4j.com/courses/workshop-genai/
-      title: Neo4j and Generative AI Workshop (3hrs — full workshop format)
-      relevance: HIGH — likely consolidates several earlier courses with hands-on labs
-    - url: https://graphacademy.neo4j.com/courses/genai-integration-langchain/
-      title: Using Neo4j with LangChain
-      relevance: MEDIUM — we don't use LangChain but patterns may transfer
-    - url: https://graphacademy.neo4j.com/courses/llm-chatbot-python/
-      title: Build a Neo4j-backed Chatbot using Python
-      relevance: MEDIUM — implementation patterns
+    # [FETCHED 2026-05-12] workshop-genai — findings in graphacademy_findings.md (validating; QKG more advanced; no new tasks)
+    # [FETCHED 2026-05-12] genai-integration-langchain — findings in graphacademy_findings.md (validating; few-shot Cypher noted, no new task)
+    # [FETCHED 2026-05-12] llm-chatbot-python — findings in graphacademy_findings.md (proposed from_graphacademy_cypher_fewshots p45)
 
 # ── Source 4: Deep docs subsections we haven't crawled ────────────────────
 # Specific Neo4j docs pages flagged during the initial crawl as worth deeper dives.
