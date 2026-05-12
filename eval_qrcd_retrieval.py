@@ -21,11 +21,9 @@ Metrics:
 Run: python eval_qrcd_retrieval.py
 """
 
-import json
 import os
 import sys
 import time
-from collections import defaultdict
 from pathlib import Path
 
 try:
@@ -36,6 +34,11 @@ except Exception:
 from dotenv import load_dotenv
 from neo4j import GraphDatabase
 
+from eval_common import (
+    expand_verse_range, load_qrcd_grouped,
+    hit_at_k, recall_at_k, first_hit_rank, average_precision_at_k,
+)
+
 load_dotenv()
 
 URI      = os.getenv("NEO4J_URI",      "bolt://localhost:7687")
@@ -43,47 +46,8 @@ USER     = os.getenv("NEO4J_USER",     "neo4j")
 PASSWORD = os.getenv("NEO4J_PASSWORD", "")
 DB       = os.getenv("NEO4J_DATABASE", "quran")
 
-QRCD_PATH = Path(__file__).parent / "data" / "qrcd_test.jsonl"
 
-
-def expand_verse_range(surah, vrange) -> set[str]:
-    out = set()
-    for chunk in str(vrange).split(","):
-        chunk = chunk.strip()
-        if "-" in chunk:
-            a, b = chunk.split("-", 1)
-            try:
-                for v in range(int(a), int(b) + 1):
-                    out.add(f"{surah}:{v}")
-            except ValueError:
-                pass
-        else:
-            try:
-                int(chunk)
-                out.add(f"{surah}:{chunk}")
-            except ValueError:
-                pass
-    return out
-
-
-def load_qrcd_grouped() -> list[dict]:
-    """Group QRCD items by question; gold = union of all passages per question."""
-    items = [json.loads(l) for l in QRCD_PATH.read_text(encoding="utf-8").splitlines() if l.strip()]
-    by_q = defaultdict(lambda: {"gold": set(), "n_passages": 0})
-    for it in items:
-        gold = expand_verse_range(it["surah"], it["verses"])
-        by_q[it["question"]]["gold"] |= gold
-        by_q[it["question"]]["n_passages"] += 1
-    grouped = [
-        {"question": q, "gold": sorted(d["gold"]),
-         "n_gold_verses": len(d["gold"]), "n_passages": d["n_passages"]}
-        for q, d in by_q.items()
-    ]
-    grouped.sort(key=lambda x: -x["n_gold_verses"])
-    return grouped
-
-
-def retrieve_verses(driver, vec: list, index_name: str, top_k: int = 100) -> list[tuple[str, float]]:
+def retrieve_verses(driver, vec: list, index_name: str, top_k: int = 100) -> list:
     """Run vector search and return [(verseId, score), ...]"""
     with driver.session(database=DB) as s:
         rows = s.run("""
@@ -94,33 +58,6 @@ def retrieve_verses(driver, vec: list, index_name: str, top_k: int = 100) -> lis
             ORDER BY score DESC
         """, idx=index_name, k=top_k, vec=vec).data()
     return [(r["id"], r["score"]) for r in rows]
-
-
-def hit_at_k(retrieved_ids, gold, k):
-    return any(r in gold for r in retrieved_ids[:k])
-
-def recall_at_k(retrieved_ids, gold, k):
-    if not gold:
-        return 0.0
-    return sum(1 for r in retrieved_ids[:k] if r in gold) / len(gold)
-
-def first_hit_rank(retrieved_ids, gold):
-    for i, r in enumerate(retrieved_ids, 1):
-        if r in gold:
-            return i
-    return None
-
-def average_precision_at_k(retrieved_ids, gold, k):
-    """AP@k = sum(precision@i * relevant(i)) / min(|gold|, k)"""
-    if not gold:
-        return 0.0
-    correct = 0
-    sum_p = 0.0
-    for i, r in enumerate(retrieved_ids[:k], 1):
-        if r in gold:
-            correct += 1
-            sum_p += correct / i
-    return sum_p / min(len(gold), k)
 
 
 def main():

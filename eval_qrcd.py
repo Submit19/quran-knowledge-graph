@@ -44,6 +44,8 @@ except Exception:
 
 import requests
 
+from eval_common import hit_at_k, recall_at_k, first_hit_rank
+
 # Lazy import datasets only if not using a cached local copy
 LOCAL_QRCD = Path(__file__).parent / "data" / "qrcd_test.jsonl"
 
@@ -128,22 +130,6 @@ def ask_agent(base_url: str, question: str, timeout: int = 600) -> dict:
                     "elapsed": time.time() - t0}
     return {"ok": True, "answer": full, "tool_calls": tool_calls,
             "elapsed": round(time.time() - t0, 1)}
-
-
-def hit_at_k(cites: list[str], gold: set[str], k: int) -> bool:
-    return any(c in gold for c in cites[:k])
-
-def recall_at_k(cites: list[str], gold: set[str], k: int) -> float:
-    if not gold:
-        return 0.0
-    hit = sum(1 for c in cites[:k] if c in gold)
-    return hit / len(gold)
-
-def first_hit_rank(cites: list[str], gold: set[str]) -> int | None:
-    for i, c in enumerate(cites, 1):
-        if c in gold:
-            return i
-    return None
 
 
 def main():

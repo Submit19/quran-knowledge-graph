@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-13T16:13:00.000000+00:00",
-  "tick_count": 115,
+  "last_tick": "2026-05-12T16:48:24.224194+00:00",
+  "tick_count": 118,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -67,7 +67,8 @@
     "build_multihop_benchmark",
     "from_graphacademy_cypher_fewshots",
     "from_ai_graph_cohere_rerank_ab_impl",
-    "from_ralph_yt_04_parallel_worktree_spike"
+    "from_ralph_yt_04_parallel_worktree_spike",
+    "extract_eval_common"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -2505,6 +2506,78 @@
           "check": "file_min_bytes data/ralph_agent_from_ralph_yt_04_parallel_worktree_spike.md >= 600",
           "passed": true,
           "detail": "size=9014"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "extract_eval_common",
+      "type": "cleanup",
+      "started_at": "2026-05-12T16:47:15.960868+00:00",
+      "finished_at": "2026-05-12T16:47:22.725577+00:00",
+      "status": "FAILED",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "Extract eval_qrcd_*.py shared helpers (expand_verse_range, hit_at_k, recall_at_k | QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)\r\nFailed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "python True",
+          "passed": true,
+          "detail": "ok"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "extract_eval_common",
+      "type": "cleanup",
+      "started_at": "2026-05-12T16:47:32.273040+00:00",
+      "finished_at": "2026-05-12T16:47:38.846724+00:00",
+      "status": "FAILED",
+      "attempt": 2,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "Extract eval_qrcd_*.py shared helpers (expand_verse_range, hit_at_k, recall_at_k | QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)\r\nFailed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "python True",
+          "passed": true,
+          "detail": "ok"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "extract_eval_common",
+      "type": "cleanup",
+      "started_at": "2026-05-12T16:48:24.224194+00:00",
+      "finished_at": "2026-05-12T16:48:24.224194+00:00",
+      "status": "DONE",
+      "attempt": 3,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "Extract eval_qrcd_*.py shared helpers (expand_verse_range, hit_at_k, recall_at_k",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_min_bytes eval_common.py >= 400",
+          "passed": true,
+          "detail": "size=4455"
         }
       ],
       "tokens_in": 0,

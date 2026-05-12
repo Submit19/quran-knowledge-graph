@@ -12,7 +12,6 @@ import itertools
 import json
 import os
 import sys
-from collections import defaultdict
 from pathlib import Path
 
 try:
@@ -23,52 +22,22 @@ except Exception:
 from dotenv import load_dotenv
 from neo4j import GraphDatabase
 
+from eval_common import (
+    load_qrcd_grouped,
+    hit_at_k, recall_at_k, first_hit_rank,
+)
+
 load_dotenv()
 URI = os.getenv("NEO4J_URI"); USER = os.getenv("NEO4J_USER")
 PASSWORD = os.getenv("NEO4J_PASSWORD"); DB = os.getenv("NEO4J_DATABASE", "quran")
 
 os.environ.setdefault("SEMANTIC_SEARCH_INDEX", "verse_embedding_m3")
 
-QRCD = Path("data/qrcd_test.jsonl")
-
-
-def expand(surah, vrange):
-    out = set()
-    for chunk in str(vrange).split(","):
-        chunk = chunk.strip()
-        if "-" in chunk:
-            a, b = chunk.split("-", 1)
-            try:
-                for v in range(int(a), int(b) + 1):
-                    out.add(f"{surah}:{v}")
-            except ValueError:
-                pass
-        else:
-            try:
-                int(chunk); out.add(f"{surah}:{chunk}")
-            except ValueError:
-                pass
-    return out
-
-def hit_at_k(ids, gold, k):
-    return any(r in gold for r in ids[:k])
-
-def recall_at_k(ids, gold, k):
-    return sum(1 for r in ids[:k] if r in gold) / len(gold) if gold else 0
-
-def first_hit_rank(ids, gold):
-    for i, r in enumerate(ids, 1):
-        if r in gold:
-            return i
-    return None
-
 
 def load_questions():
-    items = [json.loads(l) for l in QRCD.read_text(encoding="utf-8").splitlines() if l.strip()]
-    by_q = defaultdict(set)
-    for it in items:
-        by_q[it["question"]] |= expand(it["surah"], it["verses"])
-    return [{"question": q, "gold": g} for q, g in by_q.items()]
+    """Load QRCD questions with gold as a set (flat format for sweep)."""
+    grouped = load_qrcd_grouped()
+    return [{"question": q["question"], "gold": set(q["gold"])} for q in grouped]
 
 
 def main():

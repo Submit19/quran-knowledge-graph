@@ -20,7 +20,6 @@ Run: python eval_ablation_retrieval.py
 import json
 import os
 import sys
-from collections import defaultdict
 from pathlib import Path
 
 try:
@@ -31,44 +30,30 @@ except Exception:
 from dotenv import load_dotenv
 from neo4j import GraphDatabase
 
+from eval_common import (
+    load_qrcd_grouped,
+    hit_at_k, recall_at_k, first_hit_rank,
+)
+
+# Short aliases used throughout this file
+hit = hit_at_k
+recall = recall_at_k
+fhr = first_hit_rank
+
 load_dotenv()
 URI = os.getenv("NEO4J_URI"); USER = os.getenv("NEO4J_USER")
 PASSWORD = os.getenv("NEO4J_PASSWORD"); DB = os.getenv("NEO4J_DATABASE", "quran")
 
 os.environ.setdefault("SEMANTIC_SEARCH_INDEX", "verse_embedding_m3")
 
-QRCD = Path("data/qrcd_test.jsonl")
 TOP_K_INITIAL = 30   # how many to pull from vector index before re-ranking
 TOP_K_FINAL = 20     # how many we score against gold
 
 
-def expand(s, vr):
-    out = set()
-    for c in str(vr).split(","):
-        c = c.strip()
-        if "-" in c:
-            a, b = c.split("-", 1)
-            try: out.update(f"{s}:{v}" for v in range(int(a), int(b)+1))
-            except: pass
-        else:
-            try: int(c); out.add(f"{s}:{c}")
-            except: pass
-    return out
-
-
 def load_questions():
-    items = [json.loads(l) for l in QRCD.read_text(encoding="utf-8").splitlines() if l.strip()]
-    by_q = defaultdict(set)
-    for it in items:
-        by_q[it["question"]] |= expand(it["surah"], it["verses"])
-    return [{"question": q, "gold": g} for q, g in by_q.items()]
-
-
-def hit(ids, gold, k): return any(r in gold for r in ids[:k])
-def recall(ids, gold, k): return sum(1 for r in ids[:k] if r in gold) / len(gold) if gold else 0
-def fhr(ids, gold):
-    for i, r in enumerate(ids, 1):
-        if r in gold: return i
+    """Load QRCD questions with gold as a set (flat format for ablation)."""
+    grouped = load_qrcd_grouped()
+    return [{"question": q["question"], "gold": set(q["gold"])} for q in grouped]
 
 
 def main():

@@ -540,9 +540,10 @@ tasks:
     recall_at_k, fhr, load_qrcd_grouped) into eval_common.py
   blockers: []
   spec:
-    commits_code: true
     acceptance:
-    - python: 'True'
+    - file_min_bytes:
+        path: eval_common.py
+        min: 400
     notes: '4-5 eval scripts each have copies of these helpers with subtle
 
       drift (recall_at_k returning 0 vs 0.0, etc.). One canonical home.
