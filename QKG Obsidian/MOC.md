@@ -28,7 +28,7 @@ Tag convention: `#research/<area>` — e.g. `#research/retrieval`, `#research/ag
 
 ## Backfilled content (auto-refreshed by memory_hygiene.py)
 
-### Decisions (ADRs) (36)
+### Decisions (ADRs) (37)
 - [[decisions/0001-use-khalifa-translation]]
 - [[decisions/0002-bge-m3-over-minilm]]
 - [[decisions/0003-multilingual-reranker]]
@@ -65,6 +65,7 @@ Tag convention: `#research/<area>` — e.g. `#research/retrieval`, `#research/ag
 - [[decisions/0034-positive-framing-for-loop-instructions]]
 - [[decisions/0035-graph-backed-tool-registry]]
 - [[decisions/0036-3-way-sufficiency-gate]]
+- [[decisions/0037-reasoning-memory-thought-confidence-schema]]
 
 ### Architecture (9)
 - [[architecture/agent-loop]]
@@ -77,7 +78,7 @@ Tag convention: `#research/<area>` — e.g. `#research/retrieval`, `#research/ag
 - [[architecture/reasoning-memory]]
 - [[architecture/retrieval-pipeline]]
 
-### Research (16)
+### Research (17)
 - [[research/agent-memory-yt-extracts]]
 - [[research/agentic-graphrag-yt-patterns]]
 - [[research/agentic-patterns-neo4j]]
@@ -93,6 +94,7 @@ Tag convention: `#research/<area>` — e.g. `#research/retrieval`, `#research/ag
 - [[research/research-2026-04-27-stack-alternatives]]
 - [[research/research-2026-04-28-deep-dive]]
 - [[research/synthesis-226-05-12]]
+- [[research/synthesis-226-05-12b]]
 - [[research/vector-graphrag-neo4j-docs]]
 
 ### Sessions / milestones (8)
