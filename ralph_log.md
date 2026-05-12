@@ -82,3 +82,4 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-12T02:45 | from_neo4j_yt_memory_03_consolidation_job | cypher_analysis | DONE_WITH_CONCERNS |  | manual mode — deliverable produced out-of-band; gate will validate |
 | 2026-05-12T03:45 | from_ralph_yt_02_filter_test_output | cleanup | FAILED |  | [from-ralph-yt] Wrap eval_v1.py and Cypher smoke-test scripts with an output fil / QUALITY GATE FAILED:  |
 | 2026-05-12T03:46 | from_ralph_yt_02_filter_test_output | cleanup | FAILED |  | [from-ralph-yt] Wrap eval_v1.py and Cypher smoke-test scripts with an output fil / QUALITY GATE FAILED:  |
+| 2026-05-12T04:15 | from_neo4j_yt_mcp_graph_backed_registry | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_from_neo4j_yt_mcp_graph_backed_registry.md (review before use) |

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-12T03:46:10.442461+00:00",
-  "tick_count": 88,
+  "last_tick": "2026-05-12T04:16:38.409876+00:00",
+  "tick_count": 89,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -51,7 +51,8 @@
     "add_5_targeted_eval_questions",
     "from_ralph_yt_03_audit_negative_prompts",
     "from_neo4j_yt_memory_03_consolidation_job",
-    "from_ralph_yt_02_filter_test_output"
+    "from_ralph_yt_02_filter_test_output",
+    "from_neo4j_yt_mcp_graph_backed_registry"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -2000,6 +2001,37 @@
       "api_calls": 0,
       "tokens_in": 0,
       "tokens_out": 0
+    },
+    {
+      "task_id": "from_neo4j_yt_mcp_graph_backed_registry",
+      "type": "agent_creative",
+      "started_at": "2026-05-12T04:15:54.426926+00:00",
+      "finished_at": "2026-05-12T04:16:38.409876+00:00",
+      "status": "DONE_WITH_CONCERNS",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "wrote ralph_agent_from_neo4j_yt_mcp_graph_backed_registry.md (review before use)",
+      "artefacts": [
+        "data\\ralph_agent_from_neo4j_yt_mcp_graph_backed_registry.md"
+      ],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_exists data/ralph_agent_from_neo4j_yt_mcp_graph_backed_registry.md",
+          "passed": true,
+          "detail": "C:\\Users\\alika\\Agent Teams\\quran-graph-standalone\\data\\ralph_agent_from_neo4j_yt_mcp_graph_backed_registry.md"
+        },
+        {
+          "check": "file_min_bytes data/ralph_agent_from_neo4j_yt_mcp_graph_backed_registry.md >= 600",
+          "passed": true,
+          "detail": "size=5560"
+        }
+      ],
+      "tokens_in": 359,
+      "tokens_out": 1303,
+      "api_calls": 1
     }
   ],
   "quarantined_task_ids": [],
@@ -2009,9 +2041,9 @@
     "from_neo4j_yt_mcp_tool_description_audit": 2
   },
   "api_usage": {
-    "calls_total": 12,
-    "tokens_in_total": 5228,
-    "tokens_out_total": 14115,
+    "calls_total": 13,
+    "tokens_in_total": 5587,
+    "tokens_out_total": 15418,
     "window": [
       [
         "2026-05-11T05:22:59.974645+00:00",
@@ -2066,6 +2098,12 @@
         1,
         568,
         146
+      ],
+      [
+        "2026-05-12T04:16:38.409876+00:00",
+        1,
+        359,
+        1303
       ]
     ]
   },
