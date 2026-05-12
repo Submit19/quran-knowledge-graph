@@ -571,8 +571,11 @@ def tool_semantic_search(session, query: str, top_k: int = 40) -> dict:
     calls on every hit.
     """
     # Pick model + index dynamically (env-driven so we can A/B test BGE-M3)
-    model = _get_sem_model_for(_SEMANTIC_INDEX)
-    vec = model.encode([query], normalize_embeddings=True, convert_to_numpy=True)[0].tolist()
+    try:
+        model = _get_sem_model_for(_SEMANTIC_INDEX)
+        vec = model.encode([query], normalize_embeddings=True, convert_to_numpy=True)[0].tolist()
+    except Exception as e:
+        return {"error": f"Embedding failed: {e}", "query": query, "total_verses": 0}
 
     cypher = """
         CALL db.index.vector.queryNodes($index, $k, $vec)
@@ -593,7 +596,12 @@ def tool_semantic_search(session, query: str, top_k: int = 40) -> dict:
                node.surah AS surah, node.text AS text, score,
                related_verses, arabic_roots, typed_edges
     """
-    results = session.run(cypher, index=_SEMANTIC_INDEX, k=top_k, vec=vec).data()
+    try:
+        results = session.run(cypher, index=_SEMANTIC_INDEX, k=top_k, vec=vec).data()
+    except Exception as e:
+        return {"error": f"Vector index query failed: {e}",
+                "hint": f"Ensure index '{_SEMANTIC_INDEX}' exists (run embed_verses_m3.py)",
+                "query": query, "total_verses": 0}
 
     by_surah = {}
     for r in results:
@@ -646,7 +654,8 @@ def tool_lookup_word(session, word: str) -> dict:
     """, word=word).data()
 
     if not results:
-        return {"word": word, "found": False, "message": "Word not found in the Quran"}
+        return {"error": f"Word '{word}' not found in the Quran",
+                "word": word, "found": False}
 
     # Group by lemma
     by_lemma = {}
@@ -698,7 +707,8 @@ def tool_explore_root_family(session, root: str) -> dict:
     """, root=root).data()
 
     if not results:
-        return {"root": root, "found": False, "message": "Root not found"}
+        return {"error": f"Root '{root}' not found in the graph",
+                "root": root, "found": False}
 
     root_info = {
         "root": results[0]['root'],
@@ -763,7 +773,8 @@ def tool_get_verse_words(session, verse_id: str) -> dict:
     """, vid=verse_id).data()
 
     if not results:
-        return {"verse_id": verse_id, "found": False, "message": "Verse not found or no word tokens"}
+        return {"error": f"Verse '{verse_id}' not found or has no word tokens",
+                "verse_id": verse_id, "found": False}
 
     # Also get the verse text
     verse = session.run("""
@@ -819,6 +830,7 @@ def tool_search_semantic_field(session, domain: str) -> dict:
             RETURN d.domainId AS id, d.nameEn AS name, d.nameAr AS nameAr
         """).data()
         return {
+            "error": f"Semantic domain '{domain}' not found",
             "domain": domain,
             "found": False,
             "available_domains": [{"id": d['id'], "name": d['name'], "nameAr": d['nameAr']} for d in all_domains],
@@ -869,48 +881,62 @@ def tool_lookup_wujuh(session, root: str) -> dict:
     wujuh_csv = Path(__file__).parent / "data" / "wujuh_entries.csv"
 
     if not wujuh_csv.exists():
-        return {"root": root, "found": False, "message": "Wujuh data not loaded"}
+        return {"error": "Wujuh data not loaded — run import_etymology.py",
+                "root": root, "found": False}
 
     # Search for matching root
     matches = []
-    with open(wujuh_csv, encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            if row['root'] == root or root in row.get('lemma', ''):
-                matches.append(row)
+    try:
+        with open(wujuh_csv, encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                if row['root'] == root or root in row.get('lemma', ''):
+                    matches.append(row)
+    except Exception as e:
+        return {"error": f"Failed to read wujuh CSV: {e}", "root": root, "found": False}
 
     if not matches:
         # Try to find verses with this root to provide context even without wujuh data
-        verse_data = session.run("""
-            MATCH (r:ArabicRoot)
-            WHERE r.root = $root OR r.rootBW = $root
-            OPTIONAL MATCH (v:Verse)-[:MENTIONS_ROOT]->(r)
-            RETURN r.root AS root, r.gloss AS gloss,
-                   v.verseId AS verseId, v.text AS text
-            ORDER BY v.verseId LIMIT 10
-        """, root=root).data()
+        try:
+            verse_data = session.run("""
+                MATCH (r:ArabicRoot)
+                WHERE r.root = $root OR r.rootBW = $root
+                OPTIONAL MATCH (v:Verse)-[:MENTIONS_ROOT]->(r)
+                RETURN r.root AS root, r.gloss AS gloss,
+                       v.verseId AS verseId, v.text AS text
+                ORDER BY v.verseId LIMIT 10
+            """, root=root).data()
+        except Exception as e:
+            return {"error": f"Graph query failed: {e}", "root": root, "found": False}
 
         if verse_data:
             return {
+                "error": f"No wujuh (polysemy) data for root '{root}' — use search_arabic_root for verse coverage",
                 "root": root,
                 "found": False,
-                "message": f"No wujuh (polysemy) data for this root yet. Root '{verse_data[0]['root']}' ({verse_data[0]['gloss']}) appears in {len(verse_data)} sample verses.",
+                "hint": f"Root '{verse_data[0]['root']}' ({verse_data[0]['gloss']}) appears in {len(verse_data)} sample verses",
                 "sample_verses": [{"verse_id": v['verseId'], "text": v['text']} for v in verse_data if v['verseId']],
             }
-        return {"root": root, "found": False, "message": "Root not found"}
+        return {"error": f"Root '{root}' not found in graph or wujuh data", "root": root, "found": False}
 
     senses = []
     for m in matches:
-        sample_verses = json.loads(m.get('sampleVerses', '[]'))
+        try:
+            sample_verses = json.loads(m.get('sampleVerses', '[]'))
+        except (ValueError, TypeError):
+            sample_verses = []
         # Fetch verse texts for each sample
         verse_texts = {}
         if sample_verses:
-            vt_results = session.run("""
-                UNWIND $vids AS vid
-                MATCH (v:Verse {verseId: vid})
-                RETURN v.verseId AS verseId, v.text AS text
-            """, vids=sample_verses[:5]).data()
-            verse_texts = {v['verseId']: v['text'] for v in vt_results}
+            try:
+                vt_results = session.run("""
+                    UNWIND $vids AS vid
+                    MATCH (v:Verse {verseId: vid})
+                    RETURN v.verseId AS verseId, v.text AS text
+                """, vids=sample_verses[:5]).data()
+                verse_texts = {v['verseId']: v['text'] for v in vt_results}
+            except Exception:
+                verse_texts = {}
 
         senses.append({
             "sense_id": m['senseId'],
@@ -1270,27 +1296,40 @@ def tool_hybrid_search(session, query: str, top_k: int = 20,
         vec_index = "verse_embedding_m3"
 
     # Embed once
-    model = _get_sem_model_for(vec_index)
-    vec = model.encode([query], normalize_embeddings=True,
-                       convert_to_numpy=True)[0].tolist()
+    try:
+        model = _get_sem_model_for(vec_index)
+        vec = model.encode([query], normalize_embeddings=True,
+                           convert_to_numpy=True)[0].tolist()
+    except Exception as e:
+        return {"error": f"Embedding failed: {e}", "query": query, "lang": lang, "total_verses": 0}
 
     # Pull both rankings: take top-100 from each
     cand_n = max(top_k * 5, 50)
 
-    bm25 = session.run(f"""
-        CALL db.index.fulltext.queryNodes($idx, $q) YIELD node, score
-        WHERE node.verseId IS NOT NULL
-        RETURN node.verseId AS id, score
-        ORDER BY score DESC LIMIT $n
-    """, idx=ft_index, q=query, n=cand_n).data()
+    try:
+        bm25 = session.run(f"""
+            CALL db.index.fulltext.queryNodes($idx, $q) YIELD node, score
+            WHERE node.verseId IS NOT NULL
+            RETURN node.verseId AS id, score
+            ORDER BY score DESC LIMIT $n
+        """, idx=ft_index, q=query, n=cand_n).data()
+    except Exception as e:
+        return {"error": f"BM25 index query failed: {e}",
+                "hint": f"Ensure fulltext index '{ft_index}' exists (run build_fulltext_index.py)",
+                "query": query, "lang": lang, "total_verses": 0}
 
-    dense = session.run(f"""
-        CALL db.index.vector.queryNodes($idx, $n, $vec)
-        YIELD node, score
-        WHERE node.verseId IS NOT NULL
-        RETURN node.verseId AS id, score
-        ORDER BY score DESC
-    """, idx=vec_index, n=cand_n, vec=vec).data()
+    try:
+        dense = session.run(f"""
+            CALL db.index.vector.queryNodes($idx, $n, $vec)
+            YIELD node, score
+            WHERE node.verseId IS NOT NULL
+            RETURN node.verseId AS id, score
+            ORDER BY score DESC
+        """, idx=vec_index, n=cand_n, vec=vec).data()
+    except Exception as e:
+        return {"error": f"Dense vector index query failed: {e}",
+                "hint": f"Ensure vector index '{vec_index}' exists",
+                "query": query, "lang": lang, "total_verses": 0}
 
     # Reciprocal rank fusion
     rrf: dict[str, float] = {}
@@ -1306,28 +1345,33 @@ def tool_hybrid_search(session, query: str, top_k: int = 20,
         rrf[vid] = rrf.get(vid, 0.0) + 1.0 / (k_rrf + i)
 
     if not rrf:
-        return {"query": query, "lang": lang, "total_verses": 0, "by_surah": {}}
+        return {"error": "No results from either BM25 or dense index — check indexes are populated",
+                "query": query, "lang": lang, "total_verses": 0, "by_surah": {}}
 
     fused = sorted(rrf.items(), key=lambda x: -x[1])[:top_k]
     top_ids = [vid for vid, _ in fused]
 
     # Enrich with graph context (same pattern as tool_semantic_search)
-    enriched = session.run("""
-        UNWIND $ids AS vid
-        MATCH (node:Verse {verseId: vid})
-        OPTIONAL MATCH (node)-[:RELATED_TO]-(related:Verse)
-        WITH node, vid, collect(DISTINCT related.reference)[0..5] AS related_verses
-        OPTIONAL MATCH (node)-[:MENTIONS_ROOT]->(root:ArabicRoot)
-        WITH node, vid, related_verses,
-             collect(DISTINCT root.root)[0..5] AS arabic_roots
-        OPTIONAL MATCH (node)-[typed:SUPPORTS|ELABORATES|QUALIFIES|CONTRASTS|REPEATS]-(te:Verse)
-        WITH node, vid, related_verses, arabic_roots,
-             [x IN collect(DISTINCT {type: type(typed), target: te.reference})
-              WHERE x.type IS NOT NULL AND x.target IS NOT NULL][0..5] AS typed_edges
-        RETURN node.verseId AS verseId, node.surahName AS surahName,
-               node.surah AS surah, node.text AS text,
-               related_verses, arabic_roots, typed_edges
-    """, ids=top_ids).data()
+    try:
+        enriched = session.run("""
+            UNWIND $ids AS vid
+            MATCH (node:Verse {verseId: vid})
+            OPTIONAL MATCH (node)-[:RELATED_TO]-(related:Verse)
+            WITH node, vid, collect(DISTINCT related.reference)[0..5] AS related_verses
+            OPTIONAL MATCH (node)-[:MENTIONS_ROOT]->(root:ArabicRoot)
+            WITH node, vid, related_verses,
+                 collect(DISTINCT root.root)[0..5] AS arabic_roots
+            OPTIONAL MATCH (node)-[typed:SUPPORTS|ELABORATES|QUALIFIES|CONTRASTS|REPEATS]-(te:Verse)
+            WITH node, vid, related_verses, arabic_roots,
+                 [x IN collect(DISTINCT {type: type(typed), target: te.reference})
+                  WHERE x.type IS NOT NULL AND x.target IS NOT NULL][0..5] AS typed_edges
+            RETURN node.verseId AS verseId, node.surahName AS surahName,
+                   node.surah AS surah, node.text AS text,
+                   related_verses, arabic_roots, typed_edges
+        """, ids=top_ids).data()
+    except Exception as e:
+        return {"error": f"Graph enrichment query failed: {e}",
+                "query": query, "lang": lang, "total_verses": len(top_ids)}
     by_id = {r["verseId"]: r for r in enriched}
 
     by_surah: dict[str, list] = {}

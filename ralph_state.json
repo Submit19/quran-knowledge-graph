@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-12T08:15:37.987748+00:00",
-  "tick_count": 97,
+  "last_tick": "2026-05-12T08:47:37.134011+00:00",
+  "tick_count": 99,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -56,7 +56,8 @@
     "from_neo4j_yt_sufficiency_gate",
     "from_blog_extend_reasoning_memory_confidence",
     "from_blog_same_as_dedup_concepts",
-    "rerun_eval_against_current"
+    "rerun_eval_against_current",
+    "from_ai_graph_tool_error_audit"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -2139,6 +2140,54 @@
       "metric_after": null,
       "delta": null,
       "notes": "[from-neo4j-yt][synthesis-promoted 2026-05-12] Audit and rewrite all 21 chat.py  | QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)\r\nFailed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "python True",
+          "passed": true,
+          "detail": "ok"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "from_ai_graph_tool_error_audit",
+      "type": "cleanup",
+      "started_at": "2026-05-12T08:46:38.725744+00:00",
+      "finished_at": "2026-05-12T08:46:45.462859+00:00",
+      "status": "FAILED",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "[from-ai-graph] Audit all 21 tools in chat.py for the 'tool failures ignored' pr | QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)\r\nFailed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "python True",
+          "passed": true,
+          "detail": "ok"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "from_ai_graph_tool_error_audit",
+      "type": "cleanup",
+      "started_at": "2026-05-12T08:47:30.581666+00:00",
+      "finished_at": "2026-05-12T08:47:37.134011+00:00",
+      "status": "FAILED",
+      "attempt": 2,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "[from-ai-graph] Audit all 21 tools in chat.py for the 'tool failures ignored' pr | QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)\r\nFailed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7",
       "artefacts": [],
       "error": null,
       "acceptance_results": [

@@ -832,6 +832,7 @@ tasks:
     commits_code: true
     acceptance:
     - python: 'True'
+  status: DONE_WITH_CONCERNS
 - id: from_ai_graph_disable_reranker_baseline
   type: cypher_analysis
   priority: 83

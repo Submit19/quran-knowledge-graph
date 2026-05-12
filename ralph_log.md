@@ -87,3 +87,5 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-12T05:45 | from_blog_extend_reasoning_memory_confidence | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |
 | 2026-05-12T06:17 | from_blog_same_as_dedup_concepts | cypher_analysis | DONE_WITH_CONCERNS |  | manual mode — deliverable produced out-of-band; gate will validate |
 | 2026-05-12T07:16 | from_neo4j_yt_mcp_tool_description_audit | cleanup | FAILED |  | [from-neo4j-yt][synthesis-promoted 2026-05-12] Audit and rewrite all 21 chat.py  / QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No |
+| 2026-05-12T08:46 | from_ai_graph_tool_error_audit | cleanup | FAILED |  | [from-ai-graph] Audit all 21 tools in chat.py for the 'tool failures ignored' pr / QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No |
+| 2026-05-12T08:47 | from_ai_graph_tool_error_audit | cleanup | FAILED |  | [from-ai-graph] Audit all 21 tools in chat.py for the 'tool failures ignored' pr / QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No |
