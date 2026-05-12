@@ -28,7 +28,7 @@ Tag convention: `#research/<area>` — e.g. `#research/retrieval`, `#research/ag
 
 ## Backfilled content (auto-refreshed by memory_hygiene.py)
 
-### Decisions (ADRs) (37)
+### Decisions (ADRs) (39)
 - [[decisions/0001-use-khalifa-translation]]
 - [[decisions/0002-bge-m3-over-minilm]]
 - [[decisions/0003-multilingual-reranker]]
@@ -66,6 +66,8 @@ Tag convention: `#research/<area>` — e.g. `#research/retrieval`, `#research/ag
 - [[decisions/0035-graph-backed-tool-registry]]
 - [[decisions/0036-3-way-sufficiency-gate]]
 - [[decisions/0037-reasoning-memory-thought-confidence-schema]]
+- [[decisions/0038-structured-tool-error-returns]]
+- [[decisions/0039-memory-path-on-reasoning-trace]]
 
 ### Architecture (9)
 - [[architecture/agent-loop]]
