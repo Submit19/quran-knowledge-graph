@@ -108,14 +108,12 @@ class ReasoningMemory:
     def __init__(self, driver, db: str = "quran"):
         self.driver = driver
         self.db = db
-        self._embed_model = None
 
     def _embed(self, text: str):
-        if self._embed_model is None:
-            # Reuse the same model we use elsewhere
-            from sentence_transformers import SentenceTransformer
-            self._embed_model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
-        vec = self._embed_model.encode([text], normalize_embeddings=True, convert_to_numpy=True)[0]
+        """Embed text using the shared all-MiniLM-L6-v2 instance from model_registry."""
+        from model_registry import get_minilm
+        model = get_minilm()
+        vec = model.encode([text], normalize_embeddings=True, convert_to_numpy=True)[0]
         return vec.tolist()
 
     def ensure_schema(self):

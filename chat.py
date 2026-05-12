@@ -73,14 +73,31 @@ _INDEX_TO_MODEL = {
     "verse_embedding_m3_ar": "BAAI/bge-m3",      # Arabic BGE-M3 — same model, different index
 }
 
-_sem_models = {}     # name -> SentenceTransformer
+_sem_models = {}     # name -> SentenceTransformer (kept for back-compat; registry is source of truth)
 
 def _get_sem_model_for(index_name: str = None):
-    """Return the right SentenceTransformer for the active vector index."""
+    """Return the right SentenceTransformer for the active vector index.
+
+    Delegates to model_registry for the two canonical models (MiniLM, BGE-M3)
+    so that answer_cache.py and reasoning_memory.py share the same objects.
+    Falls back to loading directly for non-standard model names.
+    """
     idx = index_name or _SEMANTIC_INDEX
     name = _INDEX_TO_MODEL.get(idx)
     if name is None:
         name = cfg.embedding_model()
+    # Use shared registry instances for the two canonical models
+    if name == "BAAI/bge-m3":
+        from model_registry import get_bge_m3
+        model = get_bge_m3()
+        _sem_models[name] = model   # keep dict in sync for any direct readers
+        return model
+    if name in ("all-MiniLM-L6-v2", "sentence-transformers/all-MiniLM-L6-v2"):
+        from model_registry import get_minilm
+        model = get_minilm()
+        _sem_models[name] = model
+        return model
+    # Generic path for other models (e.g. during A/B experiments)
     if name not in _sem_models:
         from sentence_transformers import SentenceTransformer
         _sem_models[name] = SentenceTransformer(name)
@@ -1436,13 +1453,11 @@ def tool_recall_similar_query(session, query: str, top_k: int = 3,
     if not query or not isinstance(query, str):
         return {"ok": False, "error": "query must be a non-empty string"}
 
-    # Embed the input query with the MiniLM model that wrote the index
+    # Embed the input query with the shared MiniLM model (via model_registry)
     try:
-        from sentence_transformers import SentenceTransformer
-        m = _sem_models.get("all-MiniLM-L6-v2")
-        if m is None:
-            m = SentenceTransformer("all-MiniLM-L6-v2")
-            _sem_models["all-MiniLM-L6-v2"] = m
+        from model_registry import get_minilm
+        m = get_minilm()
+        _sem_models["all-MiniLM-L6-v2"] = m   # keep dict in sync
         vec = m.encode(query, normalize_embeddings=True).tolist()
     except Exception as e:
         return {"ok": False, "error": f"embed failed: {e}"}

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-12T11:48:08.790687+00:00",
-  "tick_count": 106,
+  "last_tick": "2026-05-12T12:17:03.888083+00:00",
+  "tick_count": 107,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -62,7 +62,8 @@
     "from_neo4j_yt_memory_01_bitemporal_retrieved",
     "from_blog_reasoning_memory_session_layer",
     "from_blog_hyde_semantic_search_spike",
-    "from_blog_hyde_semantic_search_spike"
+    "from_blog_hyde_semantic_search_spike",
+    "share_minilm_across_modules"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -2349,6 +2350,30 @@
       "tokens_in": 0,
       "tokens_out": 0,
       "api_calls": 0
+    },
+    {
+      "task_id": "share_minilm_across_modules",
+      "type": "cleanup",
+      "started_at": "2026-05-12T12:16:26.500380+00:00",
+      "finished_at": "2026-05-12T12:16:33.160431+00:00",
+      "status": "FAILED",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "Share one all-MiniLM-L6-v2 instance across chat / reasoning_memory / answer_cach | QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)\r\nFailed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "python True",
+          "passed": true,
+          "detail": "ok"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
     }
   ],
   "quarantined_task_ids": [],
@@ -2356,7 +2381,8 @@
     "from_neo4j_crawl_enable_slow_query_log": 2,
     "from_neo4j_crawl_check_neo4j_version": 3,
     "from_neo4j_yt_mcp_tool_description_audit": 3,
-    "from_blog_stateful_ai_memory_path_convention": 1
+    "from_blog_stateful_ai_memory_path_convention": 1,
+    "share_minilm_across_modules": 2
   },
   "api_usage": {
     "calls_total": 16,
@@ -2438,5 +2464,6 @@
     ]
   },
   "last_tick_time": "2026-05-11T21:44:55.791758+00:00",
-  "last_task_id": "from_neo4j_yt_mcp_tool_description_audit"
+  "last_task_id": "share_minilm_across_modules",
+  "last_task_status": "DONE_WITH_CONCERNS"
 }

@@ -21,16 +21,12 @@ import numpy as np
 CACHE_DIR = Path(__file__).parent / "data"
 CACHE_FILE = CACHE_DIR / "answer_cache.json"
 
-# ── embedding model (lazy singleton) ──────────────────────────────────────────
-
-_model = None
+# ── embedding model (lazy singleton via shared registry) ─────────────────────
 
 def _get_model():
-    global _model
-    if _model is None:
-        from sentence_transformers import SentenceTransformer
-        _model = SentenceTransformer("all-MiniLM-L6-v2")
-    return _model
+    """Return the shared all-MiniLM-L6-v2 instance from model_registry."""
+    from model_registry import get_minilm
+    return get_minilm()
 
 
 # ── cache I/O ─────────────────────────────────────────────────────────────────
