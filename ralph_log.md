@@ -78,3 +78,4 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-11T23:44 | add_5_targeted_eval_questions | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_add_5_targeted_eval_questions.md (review before use) |
 | 2026-05-12T00:44 | add_5_targeted_eval_questions | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_add_5_targeted_eval_questions.md (review before use) |
 | 2026-05-12T01:13 | add_5_targeted_eval_questions | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |
+| 2026-05-12T02:17 | from_ralph_yt_03_audit_negative_prompts | cleanup | FAILED |  | [from-ralph-yt] Audit ralph_tick.py system prompt, CLAUDE.md, ralph_backlog.yaml / QUALITY GATE FAILED:  |

@@ -548,7 +548,7 @@ tasks:
         - python: "True"
       notes: |
         Different files use slightly different regexes (some require
-        word boundaries, some require brackets, some don't). Drift hazard.
+        word boundaries, some require brackets, others omit them). Drift hazard.
         ref_resolver already owns Quranic-citation parsing; add the thin
         wrapper there.
 
@@ -577,7 +577,7 @@ tasks:
       notes: |
         Each currently has its own timeout + header set. app_free has the
         good 'OpenRouter -> local 14B fallback' pattern; the other two
-        don't. Converging gives consistent fallback behaviour.
+        lack it. Converging gives consistent fallback behaviour.
 
   # ── [from-neo4j-crawl] Top 8 actionable tasks from the 2026-05-10 ─────────
   # ── deep crawl of neo4j.com/docs, GraphAcademy, neo4j.com/resources ───────
@@ -627,7 +627,7 @@ tasks:
   - id: from_neo4j_crawl_adopt_graphrag_retrievers
     type: agent_creative
     priority: 85
-    description: "[from-neo4j-crawl][answer-quality][opus] Spike a quran_graph/retrievers.py module wrapping VectorRetriever / HybridRetriever / HybridCypherRetriever from neo4j-graphrag-python. Migrate tool_semantic_search as POC. Preserve our reranker + citation verifier downstream. Gives us filters DSL ($in/$or/$gte) and effective_search_ratio overfetch we don't have."
+    description: "[from-neo4j-crawl][answer-quality][opus] Spike a quran_graph/retrievers.py module wrapping VectorRetriever / HybridRetriever / HybridCypherRetriever from neo4j-graphrag-python. Migrate tool_semantic_search as POC. Preserve our reranker + citation verifier downstream. Gains us the filters DSL ($in/$or/$gte) and effective_search_ratio overfetch currently missing."
     notes: "Priority bumped from 80→85: from_neo4j_crawl_check_neo4j_version (DONE) confirmed in-index pre-filter is NOT available on this build (3-arg proc only). graphrag-python's filters DSL is the only way to get efficient surah-filtered vector search. High-priority now."
     blockers: []
     spec:
@@ -760,7 +760,7 @@ tasks:
     type: cypher_analysis
     priority: 75
     description: "[from-ai-graph] Research Arabic-specific reranking options. Candidates: CAMeL-BERT, AraBART fine-tuned for reranking, JAIS-based reranker. Survey HuggingFace for Arabic-Quran-domain rerankers. Write data/ralph_analysis_arabic_reranker_options.md."
-    notes: "Priority bumped p55→p75 at maintenance tick 48: bge-reranker-v2-m3 confirmed to drop hit@10 50% on Arabic queries (from_ai_graph_disable_reranker_baseline DONE). Finding an Arabic-safe replacement is now P1. Don't wait for Cohere A/B failure — research in parallel."
+    notes: "Priority bumped p55→p75 at maintenance tick 48: bge-reranker-v2-m3 confirmed to drop hit@10 50% on Arabic queries (from_ai_graph_disable_reranker_baseline DONE). Finding an Arabic-safe replacement is now P1. Research Arabic reranker options in parallel while Cohere A/B runs."
     blockers: []
     spec:
       acceptance:

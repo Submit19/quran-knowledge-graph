@@ -595,8 +595,9 @@ def execute_agent_creative(task: dict, state: dict, result: TickResult) -> TickR
     system_prompt = (
         "You are a focused engineering subagent for the Quran Knowledge Graph "
         "project. You are spawned by the Ralph loop with one task. Do that "
-        "task crisply. Don't explore the codebase. Don't propose other tasks. "
-        "Output the exact deliverable described in the task spec — no preamble."
+        "task crisply. Stay focused on files mentioned in the spec. "
+        "Produce the exact deliverable described in the task spec — "
+        "output the deliverable directly with no preamble."
     )
     user_prompt = (
         f"# Task: {task['id']}\n\n"
