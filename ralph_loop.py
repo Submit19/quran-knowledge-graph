@@ -219,12 +219,13 @@ def quality_gate() -> tuple[bool, str]:
          "import " + ", ".join(CORE_MODULES) + "; print('ok')"],
         cwd=str(ROOT),
         capture_output=True,
-        text=True,
         timeout=30,
     )
-    if proc.returncode == 0 and "ok" in (proc.stdout or ""):
+    stdout = (proc.stdout or b"").decode("utf-8", errors="replace")
+    stderr = (proc.stderr or b"").decode("utf-8", errors="replace")
+    if proc.returncode == 0 and "ok" in stdout:
         return True, "core modules import cleanly"
-    err = (proc.stderr or proc.stdout or "")[-400:]
+    err = (stderr or stdout)[-400:]
     return False, err
 
 

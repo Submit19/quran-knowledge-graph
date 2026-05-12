@@ -80,3 +80,5 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-12T01:13 | add_5_targeted_eval_questions | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |
 | 2026-05-12T02:17 | from_ralph_yt_03_audit_negative_prompts | cleanup | FAILED |  | [from-ralph-yt] Audit ralph_tick.py system prompt, CLAUDE.md, ralph_backlog.yaml / QUALITY GATE FAILED:  |
 | 2026-05-12T02:45 | from_neo4j_yt_memory_03_consolidation_job | cypher_analysis | DONE_WITH_CONCERNS |  | manual mode — deliverable produced out-of-band; gate will validate |
+| 2026-05-12T03:45 | from_ralph_yt_02_filter_test_output | cleanup | FAILED |  | [from-ralph-yt] Wrap eval_v1.py and Cypher smoke-test scripts with an output fil / QUALITY GATE FAILED:  |
+| 2026-05-12T03:46 | from_ralph_yt_02_filter_test_output | cleanup | FAILED |  | [from-ralph-yt] Wrap eval_v1.py and Cypher smoke-test scripts with an output fil / QUALITY GATE FAILED:  |
