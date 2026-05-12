@@ -19,12 +19,8 @@ top12_already_processing:
 - bxXb8oT5E-k
 # [FETCHED 2026-05-12] bxXb8oT5E-k — findings in 06a_yt_agentic_graphrag.md (validating; KG construction pipeline; no new tasks; confirms Concept ER + UNWIND+MERGE patterns)
 # [FETCHED 2026-05-12] KJSHagHkX8I — findings in 06a_yt_agentic_graphrag.md (validating; 4-agent KG construction by Akil Ham; same patterns as bxXb8oT5E-k; no new tasks; GDS analytics roadmap confirms existing backlog)
+# [FETCHED 2026-05-12] SJEnb5cadyo — findings in 06a_yt_agentic_graphrag.md (validating; GraphRAG for law; functional role classification noted; proposed from_law_yt_concept_node_embeddings p45)
 queue:
-- id: SJEnb5cadyo
-  url: https://www.youtube.com/watch?v=SJEnb5cadyo
-  title: 'GraphRAG for Law: Building Legal Reasoning Agents with Neo4j and LLMs'
-  duration_min: 36.0
-  score: 12
 - id: P7jboLT0w2w
   url: https://www.youtube.com/watch?v=P7jboLT0w2w
   title: NODES AI 2026 - Building Smarter Mobile Apps with On-device AI Agents & GraphRAG

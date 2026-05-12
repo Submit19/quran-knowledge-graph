@@ -179,3 +179,47 @@
 - **LangSmith / eval-first** `[10:35–18:30]`: same pattern as `bxXb8oT5E-k`. Validating.
 
 **Action verdict:** no new tasks. All actionable signals (semantic dedup, typed edge QC, UNWIND+MERGE, GDS analytics) are already represented in the backlog. Validating tick.
+
+---
+
+### GraphRAG for Law: Building Legal Reasoning Agents with Neo4j and LLMs
+**URL:** https://www.youtube.com/watch?v=SJEnb5cadyo
+**Speaker / context:** Alexander Kasov (20 years practicing lawyer + 10 years legal-tech), ~36-min NODES AI 2026 talk. Domain: legislation + case law corpus (EU/local law) with FRBR + Akoma Ntoso ontologies.
+
+**TL;DR:** Pre-built graph over a structured legal corpus using domain ontologies (FRBR work/expression model, Akoma Ntoso XML standard). Three retrieval layers: direct Cypher, classification layer (concepts/topics/functional roles), vector search — used independently or combined. Largely validating for QKG; one pattern (functional role classification) is partially novel.
+
+**Most relevant QKG ideas:**
+
+- **Functional role / classification layer** `[16:22–23:02]`: every paragraph gets an LLM-assigned `functional_role` (enabling clause, definition clause, ruling rationale, etc.) + `concept` (delegated legislation) + `topic` (family law) stored as properties/edge on the node, with their own embeddings. This allows Cypher filters like `WHERE n.functional_role = 'definition'` before vector search — avoids wasting semantic budget on irrelevant paragraphs. QKG analogy: `:Verse` nodes could carry an LLM-assigned `verse_type` property (commandment, narrative, dua, cosmological, eschatological, etc.) enabling pre-filter retrieval. Partially exists via `:SemanticDomain` edges but not as a per-verse categorical property used in hybrid_search WHERE clauses.
+
+- **Pre-built vs. on-the-fly hybrid bridge** `[06:32–08:30]`: speaker argues the best architecture is a fixed pre-built corpus (our Quran + graph) plus an on-the-fly user-document ingestion layer mapped to the same ontology. For QKG this maps to: fixed Quran KG + optional user-uploaded tafsir/commentary documents that are extracted and connected to existing Verse/Concept nodes. Not a current priority but confirms the architecture direction.
+
+- **Graph traversal to expand reference neighborhoods** `[24:22–25:11]`: when a judge cites another statute, the system follows the reference edge to include that statute's text in context — because the initial semantic candidate alone is incomplete. QKG already does this via `traverse_topic` and `RELATED_TO`/`SIMILAR_PHRASE` traversal. Validates the pattern.
+
+- **Missing information detection** `[26:01–26:45]`: the graph structure lets the system infer what information the user did NOT provide (e.g. case details that would narrow the legal search). Analogous to QKG detecting underspecified queries ("tell me about prayer" = missing specificity — which aspect?). Not directly actionable but interesting framing.
+
+**Concrete patterns / code:**
+- Three retrieval paths used independently or combined: (1) direct Cypher by ID/reference, (2) classification-layer lookup (concept/topic/role nodes with their own embeddings), (3) standard vector search. QKG already has 2 and 3; path 1 is the `get_verse` tool.
+- Classification layer nodes have their OWN embeddings, enabling semantic search over metadata labels rather than raw text. QKG's `:Concept` nodes do not currently have embeddings — they rely on keyword string match through `NORMALIZES_TO`.
+
+**Action verdict:** one potential task — add embeddings to `:Concept` nodes to enable semantic search over concept labels (e.g. "mercy" → finds concepts labeled "compassion", "forgiveness", "leniency"). Low-medium priority. Also flags `verse_type` classification property as a future pre-filter enhancement. Neither is immediately blocking; proposing `from_law_yt_concept_node_embeddings` at priority 45.
+
+**Proposed task:**
+```yaml
+- id: from_law_yt_concept_node_embeddings
+  title: "Embed :Concept nodes to enable semantic concept-label search"
+  priority: 45
+  type: agent_creative
+  rationale: >
+    Legal KG video showed classification-layer nodes (concept/topic/role) with
+    their own embeddings enabling semantic search over labels, not just raw text.
+    QKG's :Concept nodes have no embeddings — concept_search uses string
+    NORMALIZES_TO edges (Porter-stem match). Adding BGE-M3 embeddings to ~2388
+    :Concept nodes would let semantic_search find conceptually related concepts
+    (e.g. "mercy" → compassion, forgiveness, leniency) before graph traversal,
+    reducing abstract-concept cold-start misses.
+  acceptance:
+    file_min_bytes:
+      path: embed_concepts.py
+      min: 1000
+```

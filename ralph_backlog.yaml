@@ -1329,6 +1329,23 @@ tasks:
     - file_min_bytes:
         path: data/ralph_analysis_qwen3_reranker_ab_qrcd.md
         min: 400
+- id: from_law_yt_concept_node_embeddings
+  type: agent_creative
+  priority: 45
+  description: '[from-yt-yt][retrieval] Embed :Concept nodes (~2388) with BGE-M3
+    to enable semantic concept-label search. Current concept_search relies on Porter-stem
+    NORMALIZES_TO string matching only. Adding embeddings to :Concept nodes would
+    let the system find conceptually related concepts (e.g. "mercy" → compassion,
+    forgiveness, leniency) before graph traversal, reducing abstract-concept cold-start
+    misses. Sourced from GraphRAG for Law NODES AI 2026 talk (classification-layer
+    nodes with own embeddings). Deliverable: embed_concepts.py script that writes
+    BGE-M3 embeddings to :Concept nodes and creates a concept_embedding vector index.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_min_bytes:
+        path: embed_concepts.py
+        min: 1000
 retired:
 - id: append_ralph_status_to_AUTONOMOUS_RUN
   retired_at: '2026-05-11T01:07:00+00:00'
