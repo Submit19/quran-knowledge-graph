@@ -155,3 +155,27 @@
 - **LangSmith / eval-first culture** `[10:35–18:30]`: every agent step is wrapped with a traceable function; full LLM input/output + reasoning captured for prompt iteration. Mirrors QKG's `reasoning_memory.py` approach. They found eval was the "bedrock" before trusting the pipeline at scale.
 
 **Action verdict:** no new tasks. Validates QKG's existing Concept ER (NORMALIZES_TO), UNWIND+MERGE writes, and reasoning_memory tracing. Periodic graph QC edge audit noted as future low-priority `cleanup` task if typed edge count grows significantly.
+
+---
+
+### Agentic GraphRAG: Multi-Agent Knowledge Graph Construction for Research Teams
+**URL:** https://www.youtube.com/watch?v=KJSHagHkX8I
+**Speaker / context:** Akil Ham, ~28-min NODES AI 2026 talk. Use-case: internal research team with fragmented cloud/personal-folder storage; goal is a shared KG ingestion tool queried via Neo4j MCP + OpenAI ChatKit (GPT-5, Next.js frontend, LangSmith tracing).
+
+**TL;DR:** Highly similar architecture to `bxXb8oT5E-k` (4-agent Analyze→Extract→Merge→QC pipeline). Independently arrives at the same patterns. Mainly validating for QKG; one new detail on GDS future roadmap.
+
+**Most relevant QKG ideas:**
+
+- **LLM semantic dedup again** `[16:00–17:15]`: extracted 84 entities across 5 chunks → merged to 32 via LLM reasoning on descriptions (not string matching). Confirms QKG's `build_concepts.py` / `NORMALIZES_TO` approach is on-track.
+
+- **Graph QC auditor (Agent 4)** `[19:00–21:40]`: removes only low-confidence/reversed relationships — in the demo, 3 out of 179 relationships flagged as semantically mismatched or reversed. Confirms the value of QKG's typed edge classification (`classify_edges.py`), but also signals that a post-hoc audit scan is worth adding eventually.
+
+- **Batch UNWIND+MERGE** `[22:50–23:50]`: speaker independently reports ~10× write speedup and 2-second insert for 57 nodes + 179 relationships. Matches QKG's existing pattern.
+
+- **GDS future roadmap** `[26:43–27:03]`: speaker explicitly lists PageRank, community detection, link prediction, and similarity as next steps for graph analytics. Aligns with the existing `graphrag_state_of_art` and `from_blog_betweenness_centrality_rerank` tasks already in the backlog.
+
+- **Multimodal extraction** `[27:06–27:19]`: images + video ingestion planned. Not relevant to QKG's fixed Quran corpus.
+
+- **LangSmith / eval-first** `[10:35–18:30]`: same pattern as `bxXb8oT5E-k`. Validating.
+
+**Action verdict:** no new tasks. All actionable signals (semantic dedup, typed edge QC, UNWIND+MERGE, GDS analytics) are already represented in the backlog. Validating tick.
