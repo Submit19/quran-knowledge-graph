@@ -96,3 +96,4 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-12T11:47 | from_blog_hyde_semantic_search_spike | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_from_blog_hyde_semantic_search_spike.md (review before use) |
 | 2026-05-12T11:48 | from_blog_hyde_semantic_search_spike | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |
 | 2026-05-12T12:16 | share_minilm_across_modules | cleanup | FAILED |  | Share one all-MiniLM-L6-v2 instance across chat / reasoning_memory / answer_cach / QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No |
+| 2026-05-12T12:46 | build_multihop_benchmark | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_build_multihop_benchmark.md (review before use) |
