@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-12T12:47:55.001583+00:00",
-  "tick_count": 109,
+  "last_tick": "2026-05-12T13:45:00.222037+00:00",
+  "tick_count": 110,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -64,7 +64,8 @@
     "from_blog_hyde_semantic_search_spike",
     "from_blog_hyde_semantic_search_spike",
     "share_minilm_across_modules",
-    "build_multihop_benchmark"
+    "build_multihop_benchmark",
+    "from_graphacademy_cypher_fewshots"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -2401,6 +2402,30 @@
       "tokens_in": 273,
       "tokens_out": 1610,
       "api_calls": 1
+    },
+    {
+      "task_id": "from_graphacademy_cypher_fewshots",
+      "type": "cleanup",
+      "started_at": "2026-05-12T13:45:00.222037+00:00",
+      "finished_at": "2026-05-12T13:45:00.222037+00:00",
+      "status": "DONE",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "Add 5-8 QKG-specific few-shot Cypher examples to the run_cypher tool description",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_min_bytes chat.py >= 1",
+          "passed": true,
+          "detail": "size=116657"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
     }
   ],
   "quarantined_task_ids": [],
