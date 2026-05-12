@@ -50,7 +50,7 @@ HISTORY_CAP = 500   # cap state['history'] FIFO; older entries dropped at save_s
 #   DONE_WITH_CONCERNS  — succeeded but a sub-check warned (e.g. metric drifted)
 #   NEEDS_CONTEXT       — couldn't run; missing inputs/dependencies
 #   BLOCKED             — external blocker (Neo4j down, server crashed, model unreachable)
-#   REGRESSION          — ran cleanly but metric dropped below threshold; do NOT mark done
+#   REGRESSION          — ran cleanly but metric dropped below threshold; keep status as REGRESSION pending investigation
 #   FAILED              — ran with error
 #   QUARANTINED         — ≥ MAX_ATTEMPTS failures; remove from auto-pick
 #   SKIPPED             — task type not auto-runnable (manual / external_run)
@@ -132,7 +132,7 @@ def load_backlog() -> dict:
 _LOG_HEADER = (
     "# Ralph Loop — tick log\n\n"
     "## Codebase Patterns\n"
-    "_Consolidated learnings from prior ticks. Append, don't replace.\n"
+    "_Consolidated learnings from prior ticks. Always append; preserve existing entries.\n"
     " A pattern goes here when it's general/reusable enough that future\n"
     " ticks (and future humans) should know it. Keep entries terse._\n\n"
     "<!-- PATTERNS:START -->\n"
@@ -558,7 +558,7 @@ def execute_agent_creative(task: dict, state: dict, result: TickResult) -> TickR
         result.status = DONE_WITH_CONCERNS
         result.notes = "manual backend — deliverable produced out-of-band; gate will validate"
         # Mark the agent .md file too so future ticks can see this task was
-        # handled. Don't overwrite if it exists.
+        # handled. Write only when the marker is absent (preserve existing).
         marker = DATA_DIR / f"ralph_agent_{task['id']}.md"
         if not marker.exists():
             marker.parent.mkdir(parents=True, exist_ok=True)
@@ -598,14 +598,14 @@ def execute_agent_creative(task: dict, state: dict, result: TickResult) -> TickR
         "project. You are spawned by the Ralph loop with one task. Do that "
         "task crisply. Stay focused on files mentioned in the spec. "
         "Produce the exact deliverable described in the task spec — "
-        "output the deliverable directly with no preamble."
+        "output the deliverable directly, starting with the content."
     )
     user_prompt = (
         f"# Task: {task['id']}\n\n"
         f"**Type**: {task['type']}\n"
         f"**Description**: {task.get('description', '')}\n\n"
         f"**Spec**:\n```yaml\n{json.dumps(spec, indent=2, ensure_ascii=False)}\n```\n\n"
-        "Produce the exact deliverable as described. No commentary."
+        "Produce the exact deliverable as described. Lead with the content."
     )
 
     try:

@@ -971,6 +971,10 @@ tasks:
     commits_code: true
     acceptance:
     - python: 'True'
+  status: DONE_WITH_CONCERNS
+  done_note: 'acceptance criteria passed (python: True); quality gate skipped (Neo4j
+    offline = false negative); rewrote negative-form instructions in scripts/CRON_BRIEF.md
+    + ralph_loop.py'
 - id: from_ralph_yt_04_parallel_worktree_spike
   type: agent_creative
   priority: 45
@@ -1177,7 +1181,9 @@ tasks:
         path: data/ralph_agent_from_blog_stateful_ai_memory_path_convention.md
         min: 500
   status: DONE_WITH_CONCERNS
-  done_note: memory_path property added to ReasoningTrace CREATE + trace_memory_path index in ensure_schema(); quality gate skipped (Neo4j offline = false negative on app_free import)
+  done_note: memory_path property added to ReasoningTrace CREATE + trace_memory_path
+    index in ensure_schema(); quality gate skipped (Neo4j offline = false negative
+    on app_free import)
 - id: from_blog_same_as_dedup_concepts
   type: cypher_analysis
   priority: 62
@@ -1334,8 +1340,8 @@ tasks:
 - id: from_law_yt_concept_node_embeddings
   type: agent_creative
   priority: 45
-  description: '[from-yt-yt][retrieval] Embed :Concept nodes (~2388) with BGE-M3
-    to enable semantic concept-label search. Current concept_search relies on Porter-stem
+  description: '[from-yt-yt][retrieval] Embed :Concept nodes (~2388) with BGE-M3 to
+    enable semantic concept-label search. Current concept_search relies on Porter-stem
     NORMALIZES_TO string matching only. Adding embeddings to :Concept nodes would
     let the system find conceptually related concepts (e.g. "mercy" → compassion,
     forgiveness, leniency) before graph traversal, reducing abstract-concept cold-start
@@ -1354,3 +1360,5 @@ retired:
   reason: Superseded by SESSION_LOG.md + STATE_SNAPSHOT.md (auto-generated) + MORNING_REPORT.md
     (every 12 ticks). Appending status to a static legacy report file is now redundant
     and conflicts with the structured state architecture.
+done_task_ids:
+- from_ralph_yt_03_audit_negative_prompts

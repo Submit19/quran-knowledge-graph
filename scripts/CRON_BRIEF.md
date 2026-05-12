@@ -15,7 +15,7 @@ Repo: https://github.com/Submit19/quran-knowledge-graph
 2. `STATE_SNAPSHOT.md` — current state
 3. `SESSION_LOG.md` top entry — last operator hand-off
 
-If `CLAUDE_INDEX.md` doesn't exist, fall back to `CLAUDE.md`.
+Prefer `CLAUDE_INDEX.md`; if absent, read `CLAUDE.md` instead.
 
 ## Tool-use guidance
 
@@ -43,27 +43,27 @@ If `CLAUDE_INDEX.md` doesn't exist, fall back to `CLAUDE.md`.
      - `classification: duplicate` with `duplicate_of: <id>` → likely REJECT with that reason.
      - `classification: maybe_subsumed` → check `relates_to`; if subsumed, REJECT; if synergistic, APPROVE.
      - `classification: obvious_reject` → REJECT with the `note` as the reason.
-   - APPROVE: append to `ralph_backlog.yaml` under `tasks:` (use `acceptance: file_min_bytes: { path, min }` — always use `file_min_bytes`, never `value:`). Remove from pending. REJECT: move to `rejected:` with one-line `reason:`. DEFER: bump `seen_count`; auto-reject after 3 cycles.
+   - APPROVE: append to `ralph_backlog.yaml` under `tasks:` (use `acceptance: file_min_bytes: { path, min }` — always use `file_min_bytes`, always use `file_min_bytes` over `value:`). Remove from pending. REJECT: move to `rejected:` with one-line `reason:`. DEFER: bump `seen_count`; auto-reject after 3 cycles.
    - Save `data/proposed_tasks.yaml` back. If anything changed: commit "review: proposals" first.
-   - If `pending: []` (empty), skip this step entirely to conserve tokens.
+   - When `pending: []` (empty), proceed directly to step 4b to conserve tokens.
 
-   **4b. IMPL work.** Pick highest-priority pending task in {agent_creative, cypher_analysis, cleanup} from `ralph_backlog.yaml` that's not done/quarantined.
-   - **Honor `blocked_on_research:` fields.** If a candidate task has a `blocked_on_research: [<topic_id>, ...]` field, check each listed topic. If ANY topic is still status: open in `data/research_backlog.yaml` OR present in any source queue of `data/research_neo4j_crawl/neo4j_research_queue.yaml`, **skip the task** and pick the next-highest unblocked one. Log the skip in your reply summary so the operator knows.
+   **4b. IMPL work.** Pick highest-priority pending task in {agent_creative, cypher_analysis, cleanup} from `ralph_backlog.yaml` with status outside {done, quarantined}.
+   - **Honor `blocked_on_research:` fields.** If a candidate task has a `blocked_on_research: [<topic_id>, ...]` field, check each listed topic. If ANY topic is still status: open in `data/research_backlog.yaml` OR present in any source queue of `data/research_neo4j_crawl/neo4j_research_queue.yaml`, **defer the task** and select the next-highest unblocked one. Log the deferral in your reply summary so the operator knows.
    - cypher_analysis or cleanup: do the work directly. Local Neo4j: NEO4J_URI=neo4j://127.0.0.1:7687, user=neo4j, password=Bismillah19, database=quran. Then `python ralph_tick.py --task <id>`.
    - agent_creative: if description contains `[opus]`, spawn a NESTED general-purpose subagent with `model="opus"` for the deliverable.
      - **Check for a pre-warmed plan at `data/sonnet_drafts/<task_id>.md`** before spawning Opus. If present, INCLUDE its full text in the Opus subagent's prompt as "Pre-warmed implementation plan (use as starting point, verify before executing)". This saves Opus tokens by skipping cold discovery.
      - Else handle inline. Then `RALPH_AGENT_BACKEND=manual python ralph_tick.py --task <id>`.
-   - **Spec format gotcha:** `cypher_analysis` tasks need either `query` or `script` field in their spec, plus `query_kind: python_script` if using a script. If a task fails twice with NEEDS_CONTEXT due to spec format, FIX THE SPEC in `ralph_backlog.yaml` once and then re-run — retrying an unchanged broken spec wastes tokens without progress.
+   - **Spec format gotcha:** `cypher_analysis` tasks need either `query` or `script` field in their spec, plus `query_kind: python_script` if using a script. If a task fails twice with NEEDS_CONTEXT due to spec format, FIX THE SPEC in `ralph_backlog.yaml` once and then re-run — each retry requires a spec change to make progress.
 
 5. **RESEARCH tick procedure:**
-   a. Read `data/research_neo4j_crawl/neo4j_research_queue.yaml`. Pop **up to 3 items** from the highest-priority non-empty source, BUT ONLY if all 3 are from the same source AND the handler is WebFetch (NOT yt-transcript-skill — those cap at 1 due to rate limits).
+   a. Read `data/research_neo4j_crawl/neo4j_research_queue.yaml`. Pop **up to 3 items** from the highest-priority non-empty source, provided all items come from the same source AND the handler is WebFetch (yt-transcript-skill handler: cap at 1 item due to rate limits).
       - If only 1 item exists in the top source, pop 1. If 2-3, pop 2-3. Default to 2 if uncertain.
       - Single-item processing is fine — batch items only when they are homogeneous and high-quality.
    b. For each popped item:
-      - If handler == "yt-transcript-skill": `python "C:\Users\alika\.claude\skills\yt-transcript-skill\scripts\fetch_transcript.py" <url> --output "data/research_neo4j_crawl/yt_<videoid>.md" --timestamps`. If 429/IPBlocked: re-add to queue and STOP popping more items this tick.
+      - If handler == "yt-transcript-skill": `python "C:\Users\alika\.claude\skills\yt-transcript-skill\scripts\fetch_transcript.py" <url> --output "data/research_neo4j_crawl/yt_<videoid>.md" --timestamps`. If 429/IPBlocked: re-add to queue and end popping for this tick.
       - Else (WebFetch): **Check `data/research_cache/` first** — Haiku may have pre-fetched. Slug = md5(url)[:12], paths `<slug>.html` + `<slug>.meta.json`. If cache hit, read the HTML locally; otherwise WebFetch.
    c. Extract findings into the source's `findings_file` keyed by URL/ID (one section per item). TL;DR + key takeaways + verdict.
-   d. **For each actionable finding: append to `data/proposed_tasks.yaml` under `pending:` (NOT directly to ralph_backlog.yaml).**
+   d. **For each actionable finding: append to `data/proposed_tasks.yaml` under `pending:` (the gate in `data/proposed_tasks.yaml` is the mandatory staging step before any entry reaches `ralph_backlog.yaml`).**
    e. Save the queue YAML back with all popped items removed.
    f. Bump `ralph_state.json` tick_count by 1 (single bump, regardless of items processed).
 
@@ -86,7 +86,7 @@ If `CLAUDE_INDEX.md` doesn't exist, fall back to `CLAUDE.md`.
 - All queues empty in permitted filters
 
 ## If you hit a session/rate cap
-Abandon gracefully — no partial commit.
+Exit cleanly — commit only after a complete, coherent unit of work lands.
 
 ## Final reply format
 ```
