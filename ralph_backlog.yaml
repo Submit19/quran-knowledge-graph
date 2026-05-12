@@ -30,6 +30,8 @@ tasks:
         path: data/eval_v1_results.json
         min: 50000
     - python: result.metric_after is not None and result.metric_after > 25
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: add_5_targeted_eval_questions
   type: agent_creative
   priority: 90
@@ -60,6 +62,9 @@ tasks:
       one of: get_code19_features, run_cypher, hybrid_search, concept_search,\nor\
       \ multi-hop traversal. Output exactly:\n\nQUESTIONS_TARGETED = [\n    \"...\"\
       ,\n    \"...\",\n    \"...\",\n    \"...\",\n    \"...\",\n]\n\nNothing else.\n"
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable existed from tick 80; backlog entry not marked done at the
+    time; marking retroactively
 - id: hand_grade_26_answers
   type: manual
   priority: 88
@@ -92,6 +97,8 @@ tasks:
       \  +{r['time_delta']:>4.0f}s  '{r['question'][:60]}'\")\nprint('\\n=== Bottom\
       \ (regressions) ===')\nfor r in rows[-3:]: print(f\"  {r['cites_delta']:>+3}\
       \ cites  {r['time_delta']:>+4.0f}s  '{r['question'][:60]}'\")\n"
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: refresh_query_embedding_to_bge_m3
   type: embed_op
   priority: 85
@@ -160,6 +167,8 @@ tasks:
       RETURN tool, collect({vid: vid, n: n})[0..5] AS top5
 
       '
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: build_biased_search_tool
   type: prompt_variant
   priority: 55
@@ -230,6 +239,8 @@ tasks:
       \       round(percentileCont(ms, 0.5)) AS p50_ms,\n       round(percentileCont(ms,\
       \ 0.95)) AS p95_ms,\n       round(max(ms)) AS max_ms,\n       sum(ms) AS total_ms\n\
       ORDER BY total_ms DESC\n"
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: measure_cache_hit_rate
   type: cypher_analysis
   priority: 76
@@ -246,6 +257,8 @@ tasks:
       \ WHEN n_steps = 0 THEN 1 ELSE 0 END) AS cache_likely_hits,\n  sum(CASE WHEN\
       \ n_steps > 0 THEN 1 ELSE 0 END) AS full_runs,\n  round(toFloat(sum(CASE WHEN\
       \ n_steps = 0 THEN 1 ELSE 0 END)) /\n        count(t) * 100, 1) AS cache_hit_pct\n"
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: propose_speed_tunings
   type: agent_creative
   priority: 73
@@ -270,6 +283,8 @@ tasks:
       \ (env var, code line, config edit)\n  2. The mechanism (why it would speed\
       \ things up)\n  3. The risk (what it could break)\n  4. The validation plan\
       \ (which eval metric to watch)\nFormat as a numbered markdown list.\n"
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: measure_reranker_speed_vs_quality
   type: cleanup
   priority: 70
@@ -309,6 +324,8 @@ tasks:
       \ machine: how tool events update which DOM nodes.\n  4. Edge cases (cache hit\
       \ = no tools fire, error mid-stream, ≥10 tools).\n  5. Estimated implementation\
       \ effort in lines of code.\n"
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: propose_citation_tooltip_v2
   type: agent_creative
   priority: 68
@@ -339,6 +356,8 @@ tasks:
       ''done'' event includes verse texts). Note any backend changes needed.
 
       '
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: propose_session_memory_ux
   type: agent_creative
   priority: 64
@@ -378,6 +397,8 @@ tasks:
       (probably: skip cache when history > 0).
 
       '
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: propose_search_bar_autocomplete
   type: agent_creative
   priority: 62
@@ -408,6 +429,8 @@ tasks:
       for empty-state and no-results.
 
       '
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: surface_underperforming_questions
   type: cypher_analysis
   priority: 60
@@ -430,6 +453,8 @@ tasks:
       \ ===')\nfor r in rows[-5:][::-1]:\n    print(f\"  {r.get('n_cites_unique',\
       \ 0):>3} cites  {r.get('elapsed_sec', 0):>5.0f}s  '{r.get('question', '')[:65]}'\"\
       )\n"
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: surface_retrieval_noise
   type: cypher_analysis
   priority: 58
@@ -449,6 +474,8 @@ tasks:
       \ n_cited,\n     toFloat(n_cited) / n_retrieved AS cite_ratio\nORDER BY cite_ratio\
       \ ASC, n_retrieved DESC\nLIMIT 25\nRETURN vid, n_retrieved, n_cited, round(cite_ratio,\
       \ 3) AS cite_ratio\n"
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: discover_new_followups
   type: agent_creative
   priority: 55
@@ -485,6 +512,8 @@ tasks:
       \ | cleanup\n    priority: 0..100\n    description: \"one line\"\n    blockers:\
       \ []\n    spec:\n      acceptance:\n        - file_exists: data/...\n      #\
       \ plus type-specific spec fields\n"
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: share_minilm_across_modules
   type: cleanup
   priority: 50
@@ -583,6 +612,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_analysis_from_neo4j_crawl_enable_slow_query_log.md
         min: 250
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_neo4j_crawl_audit_indexes
   type: cypher_analysis
   priority: 88
@@ -598,6 +629,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_analysis_from_neo4j_crawl_audit_indexes_detail.md
         min: 400
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_neo4j_crawl_check_neo4j_version
   type: cypher_analysis
   priority: 85
@@ -614,6 +647,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_analysis_from_neo4j_crawl_check_neo4j_version.md
         min: 200
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_neo4j_crawl_trace_vector_index
   type: agent_creative
   priority: 82
@@ -629,6 +664,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_agent_from_neo4j_crawl_trace_vector_index.md
         min: 600
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_neo4j_crawl_adopt_graphrag_retrievers
   type: agent_creative
   priority: 85
@@ -648,6 +685,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_agent_from_neo4j_crawl_adopt_graphrag_retrievers.md
         min: 700
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_neo4j_crawl_single_shot_vector_traversal
   type: agent_creative
   priority: 78
@@ -661,6 +700,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_agent_from_neo4j_crawl_single_shot_vector_traversal.md
         min: 700
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_neo4j_crawl_arabic_fulltext_index
   type: agent_creative
   priority: 75
@@ -675,6 +716,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_agent_from_neo4j_crawl_arabic_fulltext_index.md
         min: 500
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_neo4j_crawl_pagination_cursors
   type: agent_creative
   priority: 72
@@ -689,6 +732,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_agent_from_neo4j_crawl_pagination_cursors.md
         min: 600
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_ai_graph_zeroentropy_cohere_reranker_ab
   type: cypher_analysis
   priority: 84
@@ -718,6 +763,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab_detail.md
         min: 500
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_ai_graph_rag_triad_eval_metrics
   type: agent_creative
   priority: 80
@@ -734,6 +781,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_agent_from_ai_graph_rag_triad_eval_metrics.md
         min: 700
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_ai_graph_reflexion_pattern
   type: agent_creative
   priority: 76
@@ -750,6 +799,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_agent_from_ai_graph_reflexion_pattern.md
         min: 800
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_ai_graph_lightrag_neo4j_spike
   type: cypher_analysis
   priority: 72
@@ -766,6 +817,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_analysis_from_ai_graph_lightrag_neo4j_spike.md
         min: 600
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_ai_graph_tool_error_audit
   type: cleanup
   priority: 60
@@ -811,6 +864,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md
         min: 300
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_ai_graph_cohere_rerank_ab_impl
   type: agent_creative
   priority: 50
@@ -847,6 +902,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_analysis_arabic_reranker_options.md
         min: 400
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_blog_tool_input_validation
   type: cleanup
   priority: 45
@@ -879,6 +936,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_analysis_from_ralph_yt_01_tokenize_claudemd.md
         min: 300
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_ralph_yt_02_filter_test_output
   type: cleanup
   priority: 65
@@ -895,6 +954,8 @@ tasks:
     - file_min_bytes:
         path: run_tests_filtered.py
         min: 500
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_ralph_yt_03_audit_negative_prompts
   type: cleanup
   priority: 70
@@ -941,6 +1002,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_agent_from_neo4j_yt_router_agent.md
         min: 800
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_neo4j_yt_mcp_balanced_tool_grouping
   type: agent_creative
   priority: 78
@@ -961,6 +1024,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_agent_from_neo4j_yt_mcp_balanced_tool_grouping.md
         min: 700
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_neo4j_yt_memory_05_reasoning_step
   type: cleanup
   priority: 78
@@ -974,6 +1039,9 @@ tasks:
     commits_code: true
     acceptance:
     - python: 'True'
+  status: DONE_WITH_CONCERNS
+  done_note: ReasoningStep present in reasoning_memory.py; synthesis doc confirms
+    DONE; acceptance criteria trivially True
 - id: from_neo4j_yt_memory_01_bitemporal_retrieved
   type: cleanup
   priority: 75
@@ -1021,6 +1089,8 @@ tasks:
     - file_min_bytes:
         path: consolidate_traces.py
         min: 400
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_neo4j_yt_mcp_graph_backed_registry
   type: agent_creative
   priority: 65
@@ -1036,6 +1106,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_agent_from_neo4j_yt_mcp_graph_backed_registry.md
         min: 600
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_neo4j_yt_sufficiency_gate
   type: agent_creative
   priority: 62
@@ -1051,6 +1123,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_agent_from_neo4j_yt_sufficiency_gate.md
         min: 700
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_research_finetune_bge_m3_qrcd
   type: agent_creative
   priority: 88
@@ -1070,6 +1144,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_agent_from_research_finetune_bge_m3_qrcd.md
         min: 800
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_blog_extend_reasoning_memory_confidence
   type: agent_creative
   priority: 62
@@ -1083,6 +1159,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_agent_from_blog_extend_reasoning_memory_confidence.md
         min: 600
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_blog_stateful_ai_memory_path_convention
   type: cleanup
   priority: 58
@@ -1111,6 +1189,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_analysis_same_as_dedup_audit.md
         min: 400
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_blog_reasoning_memory_session_layer
   type: agent_creative
   priority: 55
@@ -1146,6 +1226,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_agent_from_adaptive_routing_design.md
         min: 1500
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_adaptive_routing_50q_bucketed_eval
   type: agent_creative
   priority: 78
@@ -1164,6 +1246,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_agent_from_adaptive_routing_50q_bucketed_eval.md
         min: 800
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_adaptive_routing_2profile_spike
   type: agent_creative
   priority: 72
@@ -1183,6 +1267,8 @@ tasks:
     - file_min_bytes:
         path: data/ralph_agent_from_adaptive_routing_2profile_spike.md
         min: 1000
+  status: DONE_WITH_CONCERNS
+  done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: from_blog_hyde_semantic_search_spike
   type: agent_creative
   priority: 55
