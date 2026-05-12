@@ -85,3 +85,4 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-12T04:15 | from_neo4j_yt_mcp_graph_backed_registry | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_from_neo4j_yt_mcp_graph_backed_registry.md (review before use) |
 | 2026-05-12T04:45 | from_neo4j_yt_sufficiency_gate | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_from_neo4j_yt_sufficiency_gate.md (review before use) |
 | 2026-05-12T05:45 | from_blog_extend_reasoning_memory_confidence | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |
+| 2026-05-12T06:17 | from_blog_same_as_dedup_concepts | cypher_analysis | DONE_WITH_CONCERNS |  | manual mode — deliverable produced out-of-band; gate will validate |
