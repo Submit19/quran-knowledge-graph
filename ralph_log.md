@@ -93,3 +93,5 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-12T10:14 | from_neo4j_yt_memory_01_bitemporal_retrieved | cleanup | DONE |  | [from-neo4j-yt] Add valid_from (ISO timestamp) and model_version string properti |
 | 2026-05-12T11:15 | from_blog_reasoning_memory_session_layer | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_from_blog_reasoning_memory_session_layer.md (review before use) |
 | 2026-05-12T11:17 | from_blog_reasoning_memory_session_layer | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_from_blog_reasoning_memory_session_layer.md (review before use) |
+| 2026-05-12T11:47 | from_blog_hyde_semantic_search_spike | agent_creative | DONE_WITH_CONCERNS |  | wrote ralph_agent_from_blog_hyde_semantic_search_spike.md (review before use) |
+| 2026-05-12T11:48 | from_blog_hyde_semantic_search_spike | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-12T11:19:34.135193+00:00",
-  "tick_count": 104,
+  "last_tick": "2026-05-12T11:48:08.790687+00:00",
+  "tick_count": 106,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -60,7 +60,9 @@
     "from_ai_graph_tool_error_audit",
     "from_blog_stateful_ai_memory_path_convention",
     "from_neo4j_yt_memory_01_bitemporal_retrieved",
-    "from_blog_reasoning_memory_session_layer"
+    "from_blog_reasoning_memory_session_layer",
+    "from_blog_hyde_semantic_search_spike",
+    "from_blog_hyde_semantic_search_spike"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -2287,6 +2289,66 @@
       "tokens_in": 314,
       "tokens_out": 2539,
       "api_calls": 1
+    },
+    {
+      "task_id": "from_blog_hyde_semantic_search_spike",
+      "type": "agent_creative",
+      "started_at": "2026-05-12T11:47:01.461231+00:00",
+      "finished_at": "2026-05-12T11:48:08.071251+00:00",
+      "status": "DONE_WITH_CONCERNS",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "wrote ralph_agent_from_blog_hyde_semantic_search_spike.md (review before use)",
+      "artefacts": [
+        "data\\ralph_agent_from_blog_hyde_semantic_search_spike.md"
+      ],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_exists data/ralph_agent_from_blog_hyde_semantic_search_spike.md",
+          "passed": true,
+          "detail": "C:\\Users\\alika\\Agent Teams\\quran-graph-standalone\\data\\ralph_agent_from_blog_hyde_semantic_search_spike.md"
+        },
+        {
+          "check": "file_min_bytes data/ralph_agent_from_blog_hyde_semantic_search_spike.md >= 800",
+          "passed": true,
+          "detail": "size=6992"
+        }
+      ],
+      "tokens_in": 360,
+      "tokens_out": 1831,
+      "api_calls": 1
+    },
+    {
+      "task_id": "from_blog_hyde_semantic_search_spike",
+      "type": "agent_creative",
+      "started_at": "2026-05-12T11:48:08.790687+00:00",
+      "finished_at": "2026-05-12T11:48:08.790687+00:00",
+      "status": "DONE_WITH_CONCERNS",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "manual backend — deliverable produced out-of-band; gate will validate",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_exists data/ralph_agent_from_blog_hyde_semantic_search_spike.md",
+          "passed": true,
+          "detail": "C:\\Users\\alika\\Agent Teams\\quran-graph-standalone\\data\\ralph_agent_from_blog_hyde_semantic_search_spike.md"
+        },
+        {
+          "check": "file_min_bytes data/ralph_agent_from_blog_hyde_semantic_search_spike.md >= 800",
+          "passed": true,
+          "detail": "size=6992"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
     }
   ],
   "quarantined_task_ids": [],
@@ -2297,9 +2359,9 @@
     "from_blog_stateful_ai_memory_path_convention": 1
   },
   "api_usage": {
-    "calls_total": 15,
-    "tokens_in_total": 6243,
-    "tokens_out_total": 18991,
+    "calls_total": 16,
+    "tokens_in_total": 6603,
+    "tokens_out_total": 20822,
     "window": [
       [
         "2026-05-11T14:44:31.454805+00:00",
@@ -2366,6 +2428,12 @@
         1,
         314,
         2539
+      ],
+      [
+        "2026-05-12T11:48:08.071251+00:00",
+        1,
+        360,
+        1831
       ]
     ]
   },
