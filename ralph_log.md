@@ -101,3 +101,7 @@ _Consolidated learnings from prior ticks. Append, don't replace.
 | 2026-05-12T14:17 | from_ralph_yt_03_audit_negative_prompts | cleanup | FAILED |  | [from-ralph-yt] Audit ralph_tick.py system prompt, CLAUDE.md, ralph_backlog.yaml / QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No |
 | 2026-05-12T15:15 | from_ai_graph_cohere_rerank_ab_impl | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |
 | 2026-05-12T15:46 | from_ralph_yt_04_parallel_worktree_spike | agent_creative | DONE_WITH_CONCERNS |  | manual backend — deliverable produced out-of-band; gate will validate |
+| 2026-05-12T16:47 | extract_eval_common | cleanup | FAILED |  | Extract eval_qrcd_*.py shared helpers (expand_verse_range, hit_at_k, recall_at_k / QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No |
+| 2026-05-12T16:47 | extract_eval_common | cleanup | FAILED |  | Extract eval_qrcd_*.py shared helpers (expand_verse_range, hit_at_k, recall_at_k / QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No |
+| 2026-05-12T16:48 | extract_eval_common | cleanup | DONE |  | Extract eval_qrcd_*.py shared helpers (expand_verse_range, hit_at_k, recall_at_k |
+| 2026-05-12T17:17 | from_blog_tool_input_validation | cleanup | FAILED |  | [from-research] Add input validation to chat.py tool schemas: enforce Surah numb / QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No |

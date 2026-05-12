@@ -107,6 +107,53 @@ def _get_sem_model_for(index_name: str = None):
 def _get_sem_model():
     return _get_sem_model_for(_SEMANTIC_INDEX)
 
+# ── input validation helpers ──────────────────────────────────────────────────
+
+import re as _re
+
+_VALID_LANG_CODES = {"en", "ar", "english", "arabic"}
+
+def _validate_surah_number(surah_number) -> dict | None:
+    """Return an error dict if surah_number is out of range, else None."""
+    try:
+        n = int(surah_number)
+    except (TypeError, ValueError):
+        return {"error": f"Invalid surah number: {surah_number!r}",
+                "reason": "surah_number must be an integer",
+                "valid_range": "1-114"}
+    if not (1 <= n <= 114):
+        return {"error": f"Surah number {n} is out of range",
+                "reason": "The Quran has 114 surahs",
+                "valid_range": "1-114"}
+    return None
+
+
+def _validate_verse_id(verse_id: str) -> dict | None:
+    """Return an error dict if verse_id format is invalid (expected S:A), else None."""
+    vid = str(verse_id).strip().replace(" ", ":")
+    m = _re.match(r'^(\d+):(\d+)$', vid)
+    if not m:
+        return {"error": f"Invalid verse ID format: {verse_id!r}",
+                "reason": "Expected format is surah:ayah, e.g. '2:255'"}
+    s, a = int(m.group(1)), int(m.group(2))
+    if not (1 <= s <= 114):
+        return {"error": f"Surah number {s} in verse ID {verse_id!r} is out of range",
+                "reason": "The Quran has 114 surahs",
+                "valid_range": "1-114"}
+    if a < 1:
+        return {"error": f"Ayah number {a} in verse ID {verse_id!r} is invalid",
+                "reason": "Ayah numbers start at 1"}
+    return None
+
+
+def _validate_language(lang: str) -> dict | None:
+    """Return an error dict if lang code is not recognised, else None."""
+    if lang and lang.lower() not in _VALID_LANG_CODES:
+        return {"error": f"Unknown language code: {lang!r}",
+                "reason": "Supported values: 'en', 'ar', 'english', 'arabic'"}
+    return None
+
+
 # ── graph tool implementations ─────────────────────────────────────────────────
 
 def tool_search_keyword(session, keyword: str) -> dict:
@@ -158,6 +205,9 @@ def tool_search_keyword(session, keyword: str) -> dict:
 def tool_get_verse(session, verse_id: str) -> dict:
     """Get a verse's full text, its keywords, and all directly connected verses."""
     verse_id = verse_id.strip().replace(" ", ":")
+    err = _validate_verse_id(verse_id)
+    if err:
+        return err
     row = session.run("MATCH (v:Verse {verseId: $id}) RETURN v", id=verse_id).single()
     if not row:
         return {"error": f"Verse [{verse_id}] not found. Format: surah:verse e.g. 2:255"}
@@ -317,6 +367,11 @@ def tool_find_path(session, verse_id_1: str, verse_id_2: str) -> dict:
     v2 = verse_id_2.strip().replace(" ", ":")
 
     for vid in [v1, v2]:
+        err = _validate_verse_id(vid)
+        if err:
+            return err
+
+    for vid in [v1, v2]:
         if not session.run("MATCH (v:Verse {verseId: $id}) RETURN v", id=vid).single():
             return {"error": f"Verse [{vid}] not found"}
 
@@ -368,6 +423,9 @@ def tool_find_path(session, verse_id_1: str, verse_id_2: str) -> dict:
 
 def tool_explore_surah(session, surah_number: int) -> dict:
     """Get all verses in a surah and its top cross-surah thematic connections."""
+    err = _validate_surah_number(surah_number)
+    if err:
+        return err
     verses = list(session.run("""
         MATCH (v:Verse {surah: $s})
         RETURN v.verseId AS verseId, v.text AS text, v.verseNum AS verseNum
@@ -524,6 +582,9 @@ def tool_compare_arabic_usage(session, root: str) -> dict:
 def tool_query_typed_edges(session, verse_id: str, edge_type: str = None) -> dict:
     """Query verses connected by a specific relationship type (SUPPORTS, ELABORATES, etc.)."""
     verse_id = verse_id.strip().replace(" ", ":")
+    err = _validate_verse_id(verse_id)
+    if err:
+        return err
     row = session.run("MATCH (v:Verse {verseId: $id}) RETURN v", id=verse_id).single()
     if not row:
         return {"error": f"Verse [{verse_id}] not found. Format: surah:verse e.g. 2:255"}
@@ -775,6 +836,9 @@ def tool_explore_root_family(session, root: str) -> dict:
 
 def tool_get_verse_words(session, verse_id: str) -> dict:
     """Word-by-word breakdown of a verse."""
+    err = _validate_verse_id(verse_id)
+    if err:
+        return err
     results = session.run("""
         MATCH (w:WordToken {verseId: $vid})
         OPTIONAL MATCH (w)-[:HAS_LEMMA]->(l:Lemma)

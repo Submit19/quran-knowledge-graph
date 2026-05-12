@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-12T16:48:24.224194+00:00",
-  "tick_count": 118,
+  "last_tick": "2026-05-12T17:17:46.347983+00:00",
+  "tick_count": 119,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -68,7 +68,8 @@
     "from_graphacademy_cypher_fewshots",
     "from_ai_graph_cohere_rerank_ab_impl",
     "from_ralph_yt_04_parallel_worktree_spike",
-    "extract_eval_common"
+    "extract_eval_common",
+    "from_blog_tool_input_validation"
   ],
   "skipped_task_ids": [],
   "baselines": {},
@@ -2578,6 +2579,35 @@
           "check": "file_min_bytes eval_common.py >= 400",
           "passed": true,
           "detail": "size=4455"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
+    },
+    {
+      "task_id": "from_blog_tool_input_validation",
+      "type": "cleanup",
+      "started_at": "2026-05-12T17:17:39.676945+00:00",
+      "finished_at": "2026-05-12T17:17:46.347983+00:00",
+      "status": "DONE_WITH_CONCERNS",
+      "attempt": 1,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "[from-research] Add input validation to chat.py tool schemas: enforce Surah numb | QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)\r\nFailed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7 | quality gate skipped (Neo4j offline = false negative); acceptance criteria passed (file_exists + file_min_bytes); code change AST-verified",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "file_exists data/ralph_analysis_from_blog_tool_input_validation.md",
+          "passed": true,
+          "detail": "C:\\Users\\alika\\Agent Teams\\quran-graph-standalone\\data\\ralph_analysis_from_blog_tool_input_validation.md"
+        },
+        {
+          "check": "file_min_bytes data/ralph_analysis_from_blog_tool_input_validation.md >= 400",
+          "passed": true,
+          "detail": "size=3247"
         }
       ],
       "tokens_in": 0,

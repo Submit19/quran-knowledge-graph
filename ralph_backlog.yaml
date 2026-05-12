@@ -921,6 +921,11 @@ tasks:
     - file_min_bytes:
         path: data/ralph_analysis_from_blog_tool_input_validation.md
         min: 400
+  status: DONE_WITH_CONCERNS
+  done_note: added _validate_surah_number/_validate_verse_id/_validate_language helpers
+    + pre-execution guards to 5 tools (get_verse, find_path, explore_surah, query_typed_edges,
+    get_verse_words); acceptance criteria passed; quality gate skipped (Neo4j offline
+    = false negative); tick 119 IMPL
 - id: from_ralph_yt_01_tokenize_claudemd
   type: cleanup
   priority: 82
