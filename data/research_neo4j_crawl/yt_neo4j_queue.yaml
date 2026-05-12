@@ -20,12 +20,8 @@ top12_already_processing:
 # [FETCHED 2026-05-12] bxXb8oT5E-k — findings in 06a_yt_agentic_graphrag.md (validating; KG construction pipeline; no new tasks; confirms Concept ER + UNWIND+MERGE patterns)
 # [FETCHED 2026-05-12] KJSHagHkX8I — findings in 06a_yt_agentic_graphrag.md (validating; 4-agent KG construction by Akil Ham; same patterns as bxXb8oT5E-k; no new tasks; GDS analytics roadmap confirms existing backlog)
 # [FETCHED 2026-05-12] SJEnb5cadyo — findings in 06a_yt_agentic_graphrag.md (validating; GraphRAG for law; functional role classification noted; proposed from_law_yt_concept_node_embeddings p45)
+# [FETCHED 2026-05-13] P7jboLT0w2w — findings in 06a_yt_agentic_graphrag.md (validating; on-device mobile GraphRAG; schema-first Cypher pattern confirms cross-cutting finding #3; no new tasks)
 queue:
-- id: P7jboLT0w2w
-  url: https://www.youtube.com/watch?v=P7jboLT0w2w
-  title: NODES AI 2026 - Building Smarter Mobile Apps with On-device AI Agents & GraphRAG
-  duration_min: 30.0
-  score: 9
 - id: ACYShEv2aXk
   url: https://www.youtube.com/watch?v=ACYShEv2aXk
   title: 'NODES AI 2026 - Agentic AI with Knowledge Graphs on the JVM: A Music Graph

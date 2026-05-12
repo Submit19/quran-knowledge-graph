@@ -28,7 +28,7 @@ yt_neo4j:
   queue_file: data/research_neo4j_crawl/yt_neo4j_queue.yaml
   handler: yt-transcript-skill
   source_priority: 80
-  estimated_remaining: 80
+  estimated_remaining: 79
 
 # ── Source 2: Neo4j Developer Blog (~18 high-relevance posts) ─────────────
 # Posts surfaced from 3 category pages: /blog/developer/, /blog/genai/, /blog/agentic-ai/, /blog/knowledge-graph/

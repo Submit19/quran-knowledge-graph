@@ -205,6 +205,27 @@
 **Action verdict:** one potential task — add embeddings to `:Concept` nodes to enable semantic search over concept labels (e.g. "mercy" → finds concepts labeled "compassion", "forgiveness", "leniency"). Low-medium priority. Also flags `verse_type` classification property as a future pre-filter enhancement. Neither is immediately blocking; proposing `from_law_yt_concept_node_embeddings` at priority 45.
 
 **Proposed task:**
+---
+
+### NODES AI 2026 - Building Smarter Mobile Apps with On-device AI Agents & GraphRAG
+**URL:** https://www.youtube.com/watch?v=P7jboLT0w2w
+**Speaker / context:** Ashetta (AWS), 30-min NODES AI 2026 talk. Use-case: movie recommender with multi-constraint query (genre, runtime, director filmography, shared cast). Stack: Strands Agent TypeScript SDK + Claude 3.7 Sonnet on Bedrock + Neo4j, running on-device via React Native.
+
+**TL;DR:** Gentle three-attempt pedagogical talk (LLM-only → vector RAG → GraphRAG). Confirms patterns already captured in this file; primarily validating for QKG.
+
+**Most relevant QKG ideas:**
+
+- **Schema-first Cypher generation** `[25:00–26:10]`: agent calls `get_graph_schema` tool first (node types, relationships, properties), then generates the Cypher query using that schema. Reported result: agent learns what properties it can filter on and what relationships it can traverse before writing a single query. This is the same pattern as cross-cutting finding #3 above (schema + few-shot examples in system-prompt). QKG's `run_cypher` tool description now includes 8 few-shot Cypher examples (tick 109) — the schema piece is still partially implicit. An explicit compact schema block in the `run_cypher` description would close this gap further.
+
+- **Vector search numeric limitation clearly articulated** `[18:31–18:45]`: "embeddings don't understand numbers; you can't do less-than 150 on a vector; 150 and 149 look almost identical in embedding space." Not directly actionable for QKG (Quran verses don't have numeric runtime constraints), but confirms why hybrid_search + typed Cypher constraints must be used together for any count/threshold query.
+
+- **On-device via React Native / Strands SDK**: not relevant to QKG (server-side FastAPI).
+
+- **Agentic loop retry on empty results** `[27:54–28:09]`: if execute_cipher returns empty, agent regenerates query and retries — same pattern as QKG's multi-turn tool loop. Validating.
+
+**Action verdict:** validating. All actionable signals (schema-first Cypher, hybrid retrieval, agentic loop retry) are already represented in the backlog or recently shipped (tick 109 few-shot Cypher). No new tasks.
+
+---
 ```yaml
 - id: from_law_yt_concept_node_embeddings
   title: "Embed :Concept nodes to enable semantic concept-label search"
