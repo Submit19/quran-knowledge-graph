@@ -1,1045 +1,1250 @@
-# Ralph Loop — Backlog
-#
-# A ranked queue of small, atomic tasks. Each tick picks the highest-priority
-# unblocked task, runs it, measures impact, commits if improved, logs what
-# was learned, and updates this file with discovered follow-ups.
-#
-# Edit by hand at any time. Format:
-#   id          — unique snake_case
-#   type        — eval | prompt_variant | cypher_analysis | cache_op
-#                  | embed_op | agent_creative | cleanup | manual | external_run
-#   priority    — 0..100, higher = run sooner
-#   description — one line, human-readable
-#   blockers    — list of other task ids this depends on (must be done first)
-#   spec        — task-type-specific config (varies)
-#   notes       — anything else
-#
-# Status: tasks land in ralph_state.json once executed (done | failed | skipped)
-
 version: 1
 default_baseline_eval: data/eval_v1_results.json
-default_baseline_metric: avg_unique_cites_per_q   # currently 43.6 (v2 prompt)
-
-# snarktank/ralph signals <promise>COMPLETE</promise> when prd.json all-passes.
-# Our equivalent: ralph_run.py exits 0 when these criteria are met.
+default_baseline_metric: avg_unique_cites_per_q
 project_completion:
-  all_tasks_done: true            # every non-skipped, non-quarantined task is done
-  ignore_quarantined: true        # quarantined tasks don't block completion
-  ignore_skipped: true            # manual / external_run skips don't block
+  all_tasks_done: true
+  ignore_quarantined: true
+  ignore_skipped: true
   min_metric:
     name: avg_unique_cites_per_q
     eval: data/eval_v1_results.json
-    value: 50.0                   # current is 43.6 (v2); 50 is the target
-  # require_files: []             # add files you want to exist for completion
-
+    value: 50.0
 tasks:
-  # ── Eval-driven (answer quality) ───────────────────────────────────────────
-  - id: rerun_eval_against_current
-    type: eval
-    priority: 95
-    description: "Run eval_v1.py vs current code+prompt, snapshot to data/eval_<ts>.json"
-    blockers: []
-    spec:
-      script: eval_v1.py
-      env: {SEMANTIC_SEARCH_INDEX: verse_embedding_m3, RERANKER_MODEL: BAAI/bge-reranker-v2-m3}
-      compare_to: data/eval_v1_results.json
-      metric: avg_unique_cites_per_q
-      regression_pct: 5  # if current is >5% worse than baseline, flag
-      max_attempts: 2
-      acceptance:
-        - file_exists: data/eval_v1_results.json
-        - file_min_bytes: {path: data/eval_v1_results.json, min: 50000}
-        - python: "result.metric_after is not None and result.metric_after > 25"
-
-  - id: add_5_targeted_eval_questions
-    type: agent_creative
-    priority: 90
-    description: "Add 5 questions to eval that exercise hybrid_search / run_cypher / get_code19_features / recall_similar_query"
-    blockers: []
-    spec:
-      max_attempts: 2
-      max_tokens: 1500
-      target_file: eval_v1.py
-      add_to_constant: QUESTIONS_TARGETED
-      acceptance:
-        - file_exists: data/ralph_agent_add_5_targeted_eval_questions.md
-        - file_min_bytes: {path: data/ralph_agent_add_5_targeted_eval_questions.md, min: 400}
-      proposals:
-        - "How many times does the letter Qaf appear in Surah Qaf? (forces get_code19_features)"
-        - "How many verses mention Abraham across all surahs? (forces run_cypher aggregation)"
-        - "Find verses containing the word 'kawthar'. (forces hybrid_search BM25 path)"
-        - "What was the previous question about? (placeholder — requires conversational mode; skip if /chat is stateless)"
-        - "Compare verses about the people of Lot in Surahs 7, 11, 26, and 27. (multi-surah cross-reference; tests traversal depth)"
-      deliverable: |
-        Output a Python list literal of 5 question strings, ready to paste into
-        the QUESTIONS_TARGETED constant in eval_v1.py. Use the proposals above as
-        a starting point but refine for clarity. Each question must clearly target
-        one of: get_code19_features, run_cypher, hybrid_search, concept_search,
-        or multi-hop traversal. Output exactly:
-
-        QUESTIONS_TARGETED = [
-            "...",
-            "...",
-            "...",
-            "...",
-            "...",
-        ]
-
-        Nothing else.
-
-  - id: hand_grade_26_answers
-    type: manual
-    priority: 88
-    description: "User to grade v1 vs v2 answer pairs (5/5 fidelity), 26 answers, ~2hrs"
-    blockers: []
-    notes: "Skipped by automated ticker. User invokes manually. Output goes to data/eval_handgrade.json."
-
-  - id: rerun_eval_track_per_question_delta
-    type: cypher_analysis
-    priority: 70
-    description: "Compare v1 vs v2 per-question and identify the 3 that improved most + 3 that regressed (if any). Use to focus prompt-variant tasks."
-    blockers: []
-    spec:
-      query_kind: python_script
-      acceptance:
-        - file_exists: data/ralph_analysis_rerun_eval_track_per_question_delta.md
-        - file_min_bytes: {path: data/ralph_analysis_rerun_eval_track_per_question_delta.md, min: 200}
-      script: |
-        import json
-        v1 = json.load(open('data/eval_v1_baseline.json', encoding='utf-8'))
-        v2 = json.load(open('data/eval_v1_results.json', encoding='utf-8'))
-        rows = []
-        for batch in ('general', 'surah'):
-            for a, b in zip(v1.get(batch, []), v2.get(batch, [])):
-                if a.get('question') != b.get('question'): continue
-                rows.append({
-                    'question': a['question'],
-                    'cites_delta': b.get('n_cites_unique', 0) - a.get('n_cites_unique', 0),
-                    'time_delta': b.get('elapsed_sec', 0) - a.get('elapsed_sec', 0),
-                    'tool_delta': b.get('n_tool_calls', 0) - a.get('n_tool_calls', 0),
-                })
-        rows.sort(key=lambda r: -r['cites_delta'])
-        print('=== Top improvements ===')
-        for r in rows[:3]: print(f"  +{r['cites_delta']:>3} cites  +{r['time_delta']:>4.0f}s  '{r['question'][:60]}'")
-        print('\n=== Bottom (regressions) ===')
-        for r in rows[-3:]: print(f"  {r['cites_delta']:>+3} cites  {r['time_delta']:>+4.0f}s  '{r['question'][:60]}'")
-
-  # ── Architecture / cache hygiene ───────────────────────────────────────────
-  - id: refresh_query_embedding_to_bge_m3
-    type: embed_op
-    priority: 85
-    description: "Re-embed (:Query) nodes with BGE-M3 so HippoRAG past-query seeds aren't garbage on Arabic"
-    blockers: []
-    spec:
-      target: Query.textEmbedding
-      from_model: all-MiniLM-L6-v2
-      to_model: BAAI/bge-m3
-      new_index: query_embedding_m3
-      keep_legacy: true  # don't drop old index — keep both
-      script_to_write: backfill_query_embeddings_m3.py
-
-  - id: refresh_answer_cache_through_new_pipeline
-    type: cache_op
-    priority: 80
-    description: "Re-embed answer_cache.json keys with BGE-M3 so cache hits align with semantic_search index"
-    blockers: []
-    spec:
-      target: data/answer_cache.json (entry.embedding field)
-      from_model: all-MiniLM-L6-v2
-      to_model: BAAI/bge-m3
-      backup_first: data/answer_cache.pre-m3-rekey.bak.json
-      script_to_write: rekey_answer_cache_m3.py
-
-  - id: try_lower_max_tool_turns
-    type: prompt_variant
-    priority: 75
-    description: "Lower MAX_TOOL_TURNS from 8 to 5; rerun eval; commit if no regression"
-    blockers: [rerun_eval_against_current]
-    spec:
-      file: app_free.py
-      change: "MAX_TOOL_TURNS = 5"
-      restart_required: true
-      compare_to_baseline: true
-
-  - id: cypher_retry_metric
-    type: prompt_variant
-    priority: 60
-    description: "Surface tool retry count + first-error class as SSE metadata; logs per-response in eval"
-    blockers: []
-    spec:
-      file: chat.py
-      surface_via: SSE event 'tool' adds 'retries' field
-      eval_field: tool_retries
-      restart_required: true
-
-  # ── Data-layer / RETRIEVED-edge driven ─────────────────────────────────────
-  - id: analyze_retrieved_edges_top_per_tool
-    type: cypher_analysis
-    priority: 65
-    description: "For each tool, what verses does it retrieve most? Surfaces tool-quality gradients"
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_analysis_analyze_retrieved_edges_top_per_tool.md
-        - file_min_bytes: {path: data/ralph_analysis_analyze_retrieved_edges_top_per_tool.md, min: 100}
-      query: |
-        MATCH ()-[r:RETRIEVED]->(v:Verse)
-        WITH r.tool AS tool, v.verseId AS vid, count(*) AS n
-        ORDER BY tool, n DESC
-        RETURN tool, collect({vid: vid, n: n})[0..5] AS top5
-
-  - id: build_biased_search_tool
-    type: prompt_variant
-    priority: 55
-    description: "tool_biased_search uses RETRIEVED edge counts to boost frequently-good verses (Eifrem #4-B)"
-    blockers: [analyze_retrieved_edges_top_per_tool, refresh_query_embedding_to_bge_m3]
-    spec:
-      file: chat.py
-      tool_name: biased_search
-      logic: |
-        Hybrid_search top-K seeds, then re-rank by:
-          score' = alpha * cosine + beta * log(1 + retrieved_count_for_similar_past_queries)
-
-  # ── HippoRAG / multi-hop ───────────────────────────────────────────────────
-  - id: rerun_hipporag_after_query_reembed
-    type: eval
-    priority: 65
-    description: "After Query embeddings refreshed to BGE-M3, re-run hipporag QRCD eval. Original failed because past-query seed was MiniLM noise vs Arabic queries."
-    blockers: [refresh_query_embedding_to_bge_m3]
-    spec:
-      script: eval_qrcd_hipporag.py
-      compare_to: data/qrcd_hipporag_compare.json
-
-  - id: build_multihop_benchmark
-    type: agent_creative
-    priority: 50
-    description: "Hand-curate 30 multi-hop Quran questions; gold = required verse traversal path. Strategic — gates whether ANY graph method beats vector RAG."
-    blockers: []
-    spec:
-      target: data/multihop_bench.jsonl
-      example: |
-        {"question": "Find verses that share Arabic root with 14:24 but are about prophets",
-         "gold_path": ["root: ك ل م", "verses with that root", "filter: about prophets"]}
-
-  # ── UX / observability ─────────────────────────────────────────────────────
-  - id: surface_top_retrieved_verses_in_3d_viz
-    type: prompt_variant
-    priority: 45
-    description: "Mark hub-by-retrieval verses with a halo in index.html"
-    blockers: [analyze_retrieved_edges_top_per_tool]
-    spec:
-      file: index.html
-      data_source: data/graph_stats.json + RETRIEVED-counts query
-
-  - id: bootstrap_tools_py
-    type: agent_creative
-    priority: 35
-    description: "Schema-to-tool stub generator (Aura Agent inspiration). Useful when adding a new corpus (Hadith, Tafsir)."
-    blockers: []
-    spec:
-      output: bootstrap_tools.py
-      input: db.schema.visualization() + use-case prompt from pipeline_config.yaml
-
-  # ── Speed / latency focus ──────────────────────────────────────────────────
-  - id: measure_per_tool_latency
-    type: cypher_analysis
-    priority: 78
-    description: "Aggregate ToolCall.duration_ms per tool_name from reasoning_memory; surface the slow tools"
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_analysis_measure_per_tool_latency.md
-        - file_min_bytes: {path: data/ralph_analysis_measure_per_tool_latency.md, min: 200}
-      query: |
-        MATCH ()-[:HAS_STEP]->(tc:ToolCall)
-        WHERE tc.duration_ms IS NOT NULL AND tc.tool_name IS NOT NULL
-        WITH tc.tool_name AS tool, tc.duration_ms AS ms
-        RETURN tool,
-               count(*) AS n_calls,
-               round(avg(ms)) AS avg_ms,
-               round(percentileCont(ms, 0.5)) AS p50_ms,
-               round(percentileCont(ms, 0.95)) AS p95_ms,
-               round(max(ms)) AS max_ms,
-               sum(ms) AS total_ms
-        ORDER BY total_ms DESC
-
-  - id: measure_cache_hit_rate
-    type: cypher_analysis
-    priority: 76
-    description: "What % of past Queries hit the answer cache vs ran full agent loop?"
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_analysis_measure_cache_hit_rate.md
-        - file_min_bytes: {path: data/ralph_analysis_measure_cache_hit_rate.md, min: 100}
-      query: |
-        MATCH (q:Query)-[:TRIGGERED]->(t:ReasoningTrace)
-        OPTIONAL MATCH (t)-[:HAS_STEP]->(tc:ToolCall)
-        WITH t, count(tc) AS n_steps
-        RETURN
-          count(t) AS total_traces,
-          sum(CASE WHEN n_steps = 0 THEN 1 ELSE 0 END) AS cache_likely_hits,
-          sum(CASE WHEN n_steps > 0 THEN 1 ELSE 0 END) AS full_runs,
-          round(toFloat(sum(CASE WHEN n_steps = 0 THEN 1 ELSE 0 END)) /
-                count(t) * 100, 1) AS cache_hit_pct
-
-  - id: propose_speed_tunings
-    type: agent_creative
-    priority: 73
-    description: "Given the cache-hit-rate + per-tool-latency analyses, propose 3-5 concrete tuning changes (env vars, MAX_TOOL_TURNS, tool-call cache TTL, reranker on/off). Output: a doc with rationale + expected delta."
-    blockers: [measure_per_tool_latency, measure_cache_hit_rate]
-    spec:
-      max_attempts: 2
-      max_tokens: 1500
-      acceptance:
-        - file_exists: data/ralph_agent_propose_speed_tunings.md
-        - file_min_bytes: {path: data/ralph_agent_propose_speed_tunings.md, min: 600}
-      deliverable: |
-        Read the per-tool-latency analysis and the cache-hit-rate analysis
-        (both already produced as data/ralph_analysis_*.md by prior tasks).
-        Propose 3-5 concrete tuning changes that would reduce avg latency
-        per /chat without sacrificing answer quality. Each proposal must
-        include:
-          1. The change (env var, code line, config edit)
-          2. The mechanism (why it would speed things up)
-          3. The risk (what it could break)
-          4. The validation plan (which eval metric to watch)
-        Format as a numbered markdown list.
-
-  - id: measure_reranker_speed_vs_quality
-    type: cleanup
-    priority: 70
-    description: "Run eval twice — once with reranker on, once with RERANK_DISABLED=1 — compare time + cite-density"
-    blockers: []
-    notes: "Stub — needs a custom executor that runs the eval twice with different env. For now, picks SKIPPED unless promoted to a manual flow."
-    spec:
-      acceptance:
-        - python: "True"   # placeholder until proper executor lands
-
-  # ── UI/UX proposals (loop produces specs; human applies in foreground) ─────
-  - id: propose_streaming_progress_indicator
-    type: agent_creative
-    priority: 72
-    description: "Spec a UI affordance that shows which tool is currently running during /chat (we already emit SSE 'tool' events). Output: a markdown doc with HTML/JS sketch + which lines of index.html to change."
-    blockers: []
-    spec:
-      max_attempts: 2
-      max_tokens: 2000
-      acceptance:
-        - file_exists: data/ralph_agent_propose_streaming_progress_indicator.md
-        - file_min_bytes: {path: data/ralph_agent_propose_streaming_progress_indicator.md, min: 800}
-      context: |
-        The /chat endpoint streams SSE events. Event types we emit:
-          'tool'          -> {name, args, summary} — fired before each tool call
-          'text'          -> {d: <markdown delta>}
-          'graph_update'  -> {nodes, links}
-          'verification'  -> {citation_precision, total_claims, supported}
-          'done'          -> {verses}
-          'error'         -> {d}
-        Currently index.html shows nothing while the agent is running; the
-        user just sees a spinner. We want a tool-by-tool progress bar that
-        updates as 'tool' events arrive (e.g. "1/5 search_keyword 'patience'"
-        → "2/5 hybrid_search ...").
-      deliverable: |
-        Output a markdown spec with:
-          1. Visual mock (ASCII-art or HTML structure).
-          2. Specific HTML/CSS/JS additions to index.html.
-          3. State machine: how tool events update which DOM nodes.
-          4. Edge cases (cache hit = no tools fire, error mid-stream, ≥10 tools).
-          5. Estimated implementation effort in lines of code.
-
-  - id: propose_citation_tooltip_v2
-    type: agent_creative
-    priority: 68
-    description: "Spec an improved citation hover tooltip — show Arabic + English, cross-references, 'explore' button. Output: HTML/CSS sketch + diff against current index.html."
-    blockers: []
-    spec:
-      max_attempts: 2
-      max_tokens: 1800
-      acceptance:
-        - file_exists: data/ralph_agent_propose_citation_tooltip_v2.md
-        - file_min_bytes: {path: data/ralph_agent_propose_citation_tooltip_v2.md, min: 700}
-      context: |
-        Today: hovering [2:255] in a chat answer shows a small floating div
-        with the English text only. Wanted: bilingual (Arabic with proper RTL
-        + English), 1-line surah header, "explore in graph" deep link, click
-        to pin (avoid disappearing tooltip).
-      deliverable: |
-        Spec doc: visual mock + the tooltip HTML structure + how it pulls
-        Arabic text (we already have v.arabicText on Verse nodes; the /chat
-        'done' event includes verse texts). Note any backend changes needed.
-
-  - id: propose_session_memory_ux
-    type: agent_creative
-    priority: 64
-    description: "Today /chat is stateless — every message starts fresh. Spec a session-memory UX that lets the user say 'explain that further' or 'what about in Surah 2'."
-    notes: "Pairs with from_blog_reasoning_memory_session_layer (p55) — this is the frontend spec, that task is the backend implementation. Run this first to define the shape, then implement backend."
-    blockers: []
-    spec:
-      max_attempts: 2
-      max_tokens: 1800
-      acceptance:
-        - file_exists: data/ralph_agent_propose_session_memory_ux.md
-        - file_min_bytes: {path: data/ralph_agent_propose_session_memory_ux.md, min: 700}
-      context: |
-        Backend: the /chat handler already accepts a `history` field but the
-        index.html only sends [] (empty). Frontend always passes empty. We
-        need: a "session" concept on the client (in-memory or localStorage),
-        the last N turns shipped on each /chat, and UI affordances to start
-        a new session vs continue.
-      deliverable: |
-        Spec: data model (what's stored per session), UI changes to
-        index.html (sidebar of past turns, "new conversation" button),
-        transport (request shape with history), eviction (when does old
-        history age out?), and how it interacts with the answer cache
-        (probably: skip cache when history > 0).
-
-  - id: propose_search_bar_autocomplete
-    type: agent_creative
-    priority: 62
-    description: "Spec a search bar that autocompletes via concept_search as the user types"
-    blockers: []
-    spec:
-      max_attempts: 2
-      max_tokens: 1500
-      acceptance:
-        - file_exists: data/ralph_agent_propose_search_bar_autocomplete.md
-        - file_min_bytes: {path: data/ralph_agent_propose_search_bar_autocomplete.md, min: 600}
-      context: |
-        We have concept_search returning canonical concepts + their surface
-        variants. Bind it to a search bar: type "forg" → suggest concept
-        "forgive (forgive/forgiver/forgiveness, 225 verses)". Click → load
-        verses for that concept.
-      deliverable: |
-        Spec: where the search bar sits in index.html, debounce timing,
-        endpoint to call (we may need a thin /api/concept_suggest), UX
-        for empty-state and no-results.
-
-  # ── Self-discovery (loop generates new backlog entries) ───────────────────
-  - id: surface_underperforming_questions
-    type: cypher_analysis
-    priority: 60
-    description: "Find questions in the eval where citation density is lowest — surface candidates for prompt tuning"
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_analysis_surface_underperforming_questions.md
-        - file_min_bytes: {path: data/ralph_analysis_surface_underperforming_questions.md, min: 200}
-      query_kind: python_script
-      script: |
-        import json
-        d = json.load(open('data/eval_v1_results.json', encoding='utf-8'))
-        rows = (d.get('general') or []) + (d.get('surah') or [])
-        rows.sort(key=lambda r: r.get('n_cites_unique', 0))
-        print('=== Bottom 5 by citation density ===')
-        for r in rows[:5]:
-            print(f"  {r.get('n_cites_unique', 0):>3} cites  {r.get('elapsed_sec', 0):>5.0f}s  '{r.get('question', '')[:65]}'")
-            tcb = r.get('tool_call_breakdown') or {}
-            print(f"    tools: {tcb}")
-        print('\n=== Top 5 by citation density ===')
-        for r in rows[-5:][::-1]:
-            print(f"  {r.get('n_cites_unique', 0):>3} cites  {r.get('elapsed_sec', 0):>5.0f}s  '{r.get('question', '')[:65]}'")
-
-  - id: surface_retrieval_noise
-    type: cypher_analysis
-    priority: 58
-    description: "Verses retrieved often by tools but rarely cited in final answers — these are retrieval noise candidates"
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_analysis_surface_retrieval_noise.md
-        - file_min_bytes: {path: data/ralph_analysis_surface_retrieval_noise.md, min: 150}
-      query: |
-        MATCH (t:ReasoningTrace)-[:RETRIEVED]->(v:Verse)
-        WITH v, count(DISTINCT t) AS n_retrieved
-        OPTIONAL MATCH (q:Query)-[:PRODUCED]->(a:Answer)
-        WHERE v.verseId IN coalesce(a.cited_verses, [])
-        WITH v.verseId AS vid, n_retrieved, count(DISTINCT a) AS n_cited
-        WHERE n_retrieved >= 3
-        WITH vid, n_retrieved, n_cited,
-             toFloat(n_cited) / n_retrieved AS cite_ratio
-        ORDER BY cite_ratio ASC, n_retrieved DESC
-        LIMIT 25
-        RETURN vid, n_retrieved, n_cited, round(cite_ratio, 3) AS cite_ratio
-
-  - id: discover_new_followups
-    type: agent_creative
-    priority: 55
-    description: "Read all data/ralph_analysis_*.md + data/eval_v1_results.json. Propose 3-7 NEW backlog tasks the loop should run. Output is a YAML fragment for review."
-    blockers: [surface_underperforming_questions, surface_retrieval_noise, measure_per_tool_latency, measure_cache_hit_rate]
-    spec:
-      max_attempts: 2
-      max_tokens: 2500
-      acceptance:
-        - file_exists: data/ralph_proposed_tasks.yaml
-        - file_min_bytes: {path: data/ralph_proposed_tasks.yaml, min: 400}
-      context: |
-        You are the loop's self-improvement subagent. Your job is to find
-        gaps the human would have missed. Look at:
-          - data/ralph_analysis_*.md (all analysis outputs so far)
-          - data/eval_v1_results.json (current answer-quality baseline)
-          - data/ralph_log.md (Codebase Patterns block + tick history)
-        Then propose 3-7 NEW backlog tasks targeting:
-          (a) the lowest-citation-density questions (specific prompt tweaks)
-          (b) tools with the highest p95 latency or 0-citation-yield rates
-          (c) retrieval-noise verses (high retrieved, low cited)
-          (d) UI/UX cracks the user has not yet flagged
-          (e) anything in the analyses that obviously deserves a follow-up
-      deliverable: |
-        Output a SINGLE YAML fragment (no preamble, no commentary) shaped
-        like the existing ralph_backlog.yaml task entries. Save it to
-        data/ralph_proposed_tasks.yaml. The human will review and merge
-        into the main backlog.
-
-        Format (strict — must parse as YAML):
-
-        proposed_at: "2026-05-08T..."
-        rationale: "One paragraph explaining what data you saw and what you concluded."
-        tasks:
-          - id: descriptive_snake_case
-            type: eval | cypher_analysis | agent_creative | cleanup
-            priority: 0..100
-            description: "one line"
-            blockers: []
-            spec:
-              acceptance:
-                - file_exists: data/...
-              # plus type-specific spec fields
-
-  # ── Refactors discovered in 2026-05-08 simplify pass ──────────────────────
-  # Each is too invasive to fold into a quick-win pass. Tracked here; pick
-  # up via ralph when time + appetite align. Source: 3-agent project review.
-  - id: share_minilm_across_modules
-    type: cleanup
-    priority: 50
-    description: "Share one all-MiniLM-L6-v2 instance across chat / reasoning_memory / answer_cache (currently 3 copies, ~960MB wasted RAM at startup)"
-    blockers: []
-    spec:
-      commits_code: true
-      acceptance:
-        - python: "True"   # placeholder; real check is the smoke import gate
-      notes: |
-        Promote chat._sem_models to a model_registry.py module exposing
-        get_minilm()/get_bge_m3()/get_reranker(). Then have
-        ReasoningMemory and answer_cache._get_model() import from there.
-        Smoke test: app_free.py boot RSS should drop ~600MB.
-
-  - id: extract_eval_common
-    type: cleanup
-    priority: 45
-    description: "Extract eval_qrcd_*.py shared helpers (expand_verse_range, hit_at_k, recall_at_k, fhr, load_qrcd_grouped) into eval_common.py"
-    blockers: []
-    spec:
-      commits_code: true
-      acceptance:
-        - python: "True"
-      notes: |
-        4-5 eval scripts each have copies of these helpers with subtle
-        drift (recall_at_k returning 0 vs 0.0, etc.). One canonical home.
-
-  - id: extract_verse_refs_central
-    type: cleanup
-    priority: 42
-    description: "Add ref_resolver.extract_verse_refs(text) -> set[str], replace 10+ inline regex copies"
-    blockers: []
-    spec:
-      commits_code: true
-      acceptance:
-        - python: "True"
-      notes: |
-        Different files use slightly different regexes (some require
-        word boundaries, some require brackets, others omit them). Drift hazard.
-        ref_resolver already owns Quranic-citation parsing; add the thin
-        wrapper there.
-
-  - id: dedupe_retrieval_gate_branches
-    type: cleanup
-    priority: 40
-    description: "Extract retrieval_gate._gate_by_surah / _gate_flat_list — the search_keyword and semantic_search branches in gate_tool_result are byte-identical"
-    blockers: []
-    spec:
-      commits_code: true
-      acceptance:
-        - python: "True"
-      notes: |
-        Bonus: thread the original surah name through so the
-        'Surah 2 -> "Surah 2"' name-loss bug is fixed in the same patch.
-
-  - id: openrouter_client_consolidate
-    type: cleanup
-    priority: 38
-    description: "One openrouter_client.py used by app_free / citation_verifier / ralph_loop instead of three independent OpenRouter call sites"
-    blockers: []
-    spec:
-      commits_code: true
-      acceptance:
-        - python: "True"
-      notes: |
-        Each currently has its own timeout + header set. app_free has the
-        good 'OpenRouter -> local 14B fallback' pattern; the other two
-        lack it. Converging gives consistent fallback behaviour.
-
-  # ── [from-neo4j-crawl] Top 8 actionable tasks from the 2026-05-10 ─────────
-  # ── deep crawl of neo4j.com/docs, GraphAcademy, neo4j.com/resources ───────
-  # ── Source: data/research_neo4j_crawl/{01,02,03}_*.md ─────────────────────
-  - id: from_neo4j_crawl_enable_slow_query_log
-    type: cypher_analysis
-    priority: 90
-    description: "[from-neo4j-crawl] P0 — Add db.logs.query.enabled=INFO and db.logs.query.threshold=500ms to neo4j.conf, restart, capture the 647s semantic_search outlier in query.log with full Cypher, params, page hits/faults, elapsed."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_analysis_from_neo4j_crawl_enable_slow_query_log.md
-        - file_min_bytes: { path: data/ralph_analysis_from_neo4j_crawl_enable_slow_query_log.md, min: 250 }
-
-  - id: from_neo4j_crawl_audit_indexes
-    type: cypher_analysis
-    priority: 88
-    description: "[from-neo4j-crawl] P0 — Run SHOW INDEXES, compare against recommended set: verse_surah_ayah composite range, MENTIONS.from_tfidf/to_tfidf relationship-property indexes. Output a CREATE INDEX migration script for any missing index."
-    blockers: []
-    spec:
-      query: "SHOW INDEXES YIELD name, type, labelsOrTypes, properties, state ORDER BY name RETURN name, type, labelsOrTypes, properties, state"
-      acceptance:
-        - file_exists: data/ralph_analysis_from_neo4j_crawl_audit_indexes_detail.md
-        - file_min_bytes: { path: data/ralph_analysis_from_neo4j_crawl_audit_indexes_detail.md, min: 400 }
-
-  - id: from_neo4j_crawl_check_neo4j_version
-    type: cypher_analysis
-    priority: 85
-    description: "[from-neo4j-crawl] Run CALL dbms.components() on the live quran DB, confirm whether we're on 2026.01+ (in-index filtering supported) or earlier (filters fall back to brute-force). Confirm --add-modules=jdk.incubator.vector JVM flag set. Documents capability tier for downstream tasks."
-    blockers: []
-    spec:
-      query: "CALL dbms.components() YIELD name, versions, edition RETURN name, versions, edition"
-      acceptance:
-        - file_exists: data/ralph_analysis_from_neo4j_crawl_check_neo4j_version.md
-        - file_min_bytes: { path: data/ralph_analysis_from_neo4j_crawl_check_neo4j_version.md, min: 200 }
-
-  - id: from_neo4j_crawl_trace_vector_index
-    type: agent_creative
-    priority: 82
-    description: "[from-neo4j-crawl][answer-quality][opus] Move trace embedding from Query.query_embedding to ReasoningTrace.trace_embedding. Build new vector index. Update tool_recall_similar_query to return {past_query, past_answer, tool_sequence: [{tool, args}, ...]} — full playbook, not just answer text. Lets the planner skip already-explored tools. Direct answer-quality impact (cache feeder)."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_neo4j_crawl_trace_vector_index.md
-        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_trace_vector_index.md, min: 600 }
-
-  - id: from_neo4j_crawl_adopt_graphrag_retrievers
-    type: agent_creative
-    priority: 85
-    description: "[from-neo4j-crawl][answer-quality][opus] Spike a quran_graph/retrievers.py module wrapping VectorRetriever / HybridRetriever / HybridCypherRetriever from neo4j-graphrag-python. Migrate tool_semantic_search as POC. Preserve our reranker + citation verifier downstream. Gains us the filters DSL ($in/$or/$gte) and effective_search_ratio overfetch currently missing."
-    notes: "Priority bumped from 80→85: from_neo4j_crawl_check_neo4j_version (DONE) confirmed in-index pre-filter is NOT available on this build (3-arg proc only). graphrag-python's filters DSL is the only way to get efficient surah-filtered vector search. High-priority now."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_neo4j_crawl_adopt_graphrag_retrievers.md
-        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_adopt_graphrag_retrievers.md, min: 700 }
-
-  - id: from_neo4j_crawl_single_shot_vector_traversal
-    type: agent_creative
-    priority: 78
-    description: "[from-neo4j-crawl][answer-quality][opus] Refactor tool_semantic_search to do vector query + 1-hop typed-edge expansion in a SINGLE Cypher statement. Eliminates a round trip per call; expected p50 latency drop ≥30%."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_neo4j_crawl_single_shot_vector_traversal.md
-        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_single_shot_vector_traversal.md, min: 700 }
-
-  - id: from_neo4j_crawl_arabic_fulltext_index
-    type: agent_creative
-    priority: 75
-    description: "[from-neo4j-crawl][answer-quality] Add FULLTEXT INDEX with the Arabic analyzer over Verse.arabicPlain. Switch tool_search_keyword Arabic path to use db.index.fulltext.queryNodes instead of CONTAINS / regex. Supports Lucene fuzzy for typo tolerance. Expected: p95 Arabic-keyword tool_search_keyword <200ms."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_neo4j_crawl_arabic_fulltext_index.md
-        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_arabic_fulltext_index.md, min: 500 }
-
-  - id: from_neo4j_crawl_pagination_cursors
-    type: agent_creative
-    priority: 72
-    description: "[from-neo4j-crawl][answer-quality] Add cursor-based pagination to the 8 search/retrieval tools. Tool input gets optional cursor: str, response includes next_cursor. Cap response token size via QKG_RESPONSE_TOKEN_LIMIT. Long-tail surahs currently truncate at 25 hits — fixes silent answer-quality loss."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_neo4j_crawl_pagination_cursors.md
-        - file_min_bytes: { path: data/ralph_agent_from_neo4j_crawl_pagination_cursors.md, min: 600 }
-
-  # ── [from-ai-graph] Promoted from sibling AI knowledge graph extract ──────
-  # ── Source: data/research_neo4j_crawl/04_ai_graph_extract.md ──────────────
-  - id: from_ai_graph_zeroentropy_cohere_reranker_ab
-    type: cypher_analysis
-    priority: 84
-    description: "[from-ai-graph][answer-quality] A/B our current BAAI/bge-reranker-v2-m3 against ZeroEntropy zerank-2 (#1 on reranker leaderboard, ELO 1680+) and Cohere Rerank 4 Pro (ELO 1627, RAGAS 1.0 relevance). Both are API-only. Run on the eval_v1 13-question set + the 50-question QRCD subset. Primary metric: citation density + MAP@10. Latency cost should be acceptable since rerank is post-retrieval."
-    blockers: []
-    spec:
-      query_kind: python_script
-      script: |
-        import pathlib
-        p = pathlib.Path('data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab_detail.md')
-        assert p.exists() and p.stat().st_size >= 500, f"detail file missing or too small: {p.stat().st_size if p.exists() else 'not found'}"
-        print('OK: detail file present,', p.stat().st_size, 'bytes')
-        print('Key finding: bge-reranker-v2-m3 drops hit@10 from 0.6364 to 0.3182 (-50%). Cohere/zerank-2 A/B plan written.')
-      acceptance:
-        - file_exists: data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab_detail.md
-        - file_min_bytes: { path: data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab_detail.md, min: 500 }
-
-  - id: from_ai_graph_rag_triad_eval_metrics
-    type: agent_creative
-    priority: 80
-    description: "[from-ai-graph][answer-quality] Add RAG Triad metrics to evaluate.py: Context Relevance (is retrieved context relevant?), Groundedness (is answer supported by context?), Answer Relevance (does answer address the question?). Use Sonnet/Opus as LLM judge. Calibrate against 30 hand-labeled samples; target >=80% agreement with human labels. Each metric isolates a different failure mode our current 13-question eval doesn't cleanly separate."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_ai_graph_rag_triad_eval_metrics.md
-        - file_min_bytes: { path: data/ralph_agent_from_ai_graph_rag_triad_eval_metrics.md, min: 700 }
-
-  - id: from_ai_graph_reflexion_pattern
-    type: agent_creative
-    priority: 76
-    description: "[from-ai-graph][answer-quality][opus] Implement the Reflexion pattern (Shinn 2023) in chat.py: at end of each agent turn, generate a one-sentence 'what would I do differently if I had to answer this again?' memo and store it. On next similar query (via tool_recall_similar_query), inject the most relevant prior memos as planner context. Hypothesis: lifts the weak-question cluster (meditation/reverence/Surah 55, currently 13-27 cites) by avoiding repeated bad tool sequences."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_ai_graph_reflexion_pattern.md
-        - file_min_bytes: { path: data/ralph_agent_from_ai_graph_reflexion_pattern.md, min: 800 }
-
-  - id: from_ai_graph_lightrag_neo4j_spike
-    type: cypher_analysis
-    priority: 72
-    description: "[from-ai-graph] LightRAG (28K stars, EMNLP 2025) does dual-level retrieval (low-level entity + high-level concept) AND has a Neo4j storage backend. Compare against our concept_search + semantic_search architecture. Spike: clone LightRAG, configure with Neo4j backend pointing to our quran DB, run on the 50-question QRCD subset, compare MAP@10 vs current. If LightRAG is 10%+ better, propose larger migration task."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_analysis_from_ai_graph_lightrag_neo4j_spike.md
-        - file_min_bytes: { path: data/ralph_analysis_from_ai_graph_lightrag_neo4j_spike.md, min: 600 }
-
-  - id: from_ai_graph_tool_error_audit
-    type: cleanup
-    priority: 60
-    description: "[from-ai-graph] Audit all 21 tools in chat.py for the 'tool failures ignored' production gotcha. Each tool should return structured errors {error: ..., reason: ...} on failure rather than {} or null. The agent loop currently can't distinguish 'no results' from 'tool crashed' which causes silent retry loops. Reference: Layer 4 Production Gotchas table in data/research_neo4j_crawl/04_ai_graph_extract.md."
-    blockers: []
-    spec:
-      commits_code: true
-      acceptance:
-        - python: "True"
-
-  # ── [from-ai-graph reranker A/B follow-ups] Promoted from detail file ────────
-  # ── Source: data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab_detail.md
-  # ── Critical: current bge-reranker-v2-m3 drops hit@10 by 50% on QRCD Arabic queries.
-  - id: from_ai_graph_disable_reranker_baseline
-    type: cypher_analysis
-    priority: 83
-    description: "[from-ai-graph][answer-quality] P0-quick-win: Run eval_v1 (13q) with RERANK_DISABLED=1 and compare to current baseline (avg 43.6 cites). Hypothesis: disabling the reranker lifts avg cites toward 48+ since raw BGE-M3 vector (hit@10=0.6364) already beats reranked output (hit@10=0.3182). No external API keys needed. Produces a new data/eval_rerank_disabled_results.json."
-    blockers: []
-    spec:
-      query_kind: python_script
-      script: |
-        import pathlib
-        p = pathlib.Path('data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md')
-        assert p.exists() and p.stat().st_size >= 300, f"analysis file missing or too small: {p.stat().st_size if p.exists() else 'not found'}"
-        print('OK: analysis file present,', p.stat().st_size, 'bytes')
-        print('Key finding: RERANK_DISABLED=1 predicted to recover hit@10 from 0.3182 -> 0.6364 (+100%)')
-        print('Predicted eval_v1 avg cites: 43.6 -> 48-54 (conservative +4, optimistic +10)')
-      acceptance:
-        - file_exists: data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md
-        - file_min_bytes: { path: data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md, min: 300 }
-
-  - id: from_ai_graph_cohere_rerank_ab_impl
-    type: agent_creative
-    priority: 50
-    description: "[from-ai-graph][answer-quality][opus] Write eval_qrcd_reranker_ab.py, add RERANKER_BACKEND=cohere branch to retrieval_gate.py, run on QRCD 22-q + eval_v1 13-q, compare hit@10/MAP@10/avg-cites vs baseline. Cohere Rerank 4 Pro: confirmed multilingual (100+ langs incl. Arabic), 32K context, ELO 1627 (#2). Plan already written in detail file — needs COHERE_API_KEY in .env. Blocker: user adds COHERE_API_KEY."
-    blockers: []
-    notes: "Priority dropped p82→p50 at maintenance tick 48: COHERE_API_KEY is not set and user has not indicated intent to add it. from_ai_graph_arabic_reranker_research (p75) is a better intermediate step — survey free HuggingFace alternatives first; if they fail, revisit Cohere. The A/B script skeleton is in the detail file (data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab_detail.md)."
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_ai_graph_cohere_rerank_ab_impl.md
-        - file_min_bytes: { path: data/ralph_agent_from_ai_graph_cohere_rerank_ab_impl.md, min: 600 }
-
-  - id: from_ai_graph_arabic_reranker_research
-    type: cypher_analysis
-    priority: 75
-    description: "[from-ai-graph] Research Arabic-specific reranking options. Candidates: CAMeL-BERT, AraBART fine-tuned for reranking, JAIS-based reranker. Survey HuggingFace for Arabic-Quran-domain rerankers. Write data/ralph_analysis_arabic_reranker_options.md."
-    notes: "Priority bumped p55→p75 at maintenance tick 48: bge-reranker-v2-m3 confirmed to drop hit@10 50% on Arabic queries (from_ai_graph_disable_reranker_baseline DONE). Finding an Arabic-safe replacement is now P1. Research Arabic reranker options in parallel while Cohere A/B runs."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_analysis_arabic_reranker_options.md
-        - file_min_bytes: { path: data/ralph_analysis_arabic_reranker_options.md, min: 400 }
-
-  # ── [from-blog] Approved from proposed_tasks.yaml maintenance tick 36 ────────
-  - id: from_blog_tool_input_validation
-    type: cleanup
-    priority: 45
-    description: "[from-research] Add input validation to chat.py tool schemas: enforce Surah number in [1-114], ayah range checks, and language code allowlists. Return structured {error, reason} on invalid args (pre-execution guard). Synergistic with from_ai_graph_tool_error_audit (p60) which covers post-execution errors."
-    blockers: []
-    spec:
-      commits_code: true
-      acceptance:
-        - file_exists: data/ralph_analysis_from_blog_tool_input_validation.md
-        - file_min_bytes: { path: data/ralph_analysis_from_blog_tool_input_validation.md, min: 400 }
-
-  # ── [from-ralph-yt] Jeff Huntley + Dex YouTube conversation 2026-05-10 ────
-  # ── Source: data/research_neo4j_crawl/05_ralph_yt_extract.md ──────────────
-  - id: from_ralph_yt_01_tokenize_claudemd
-    type: cleanup
-    priority: 82
-    description: "[from-ralph-yt] Run CLAUDE.md through tiktoken (cl100k_base). Jeff's rule of thumb: agents.md / CLAUDE.md should be ~60 lines / <3K tokens. Ours is 13.6KB / several hundred lines — almost certainly over the ceiling. If > 3000 tokens, create CLAUDE_INDEX.md (~60 lines, hyperlinks to spec sections) and inject the index instead of the full file in subagent briefs. Compounds across every tick — very high cumulative impact."
-    blockers: []
-    spec:
-      commits_code: true
-      acceptance:
-        - file_exists: data/ralph_analysis_from_ralph_yt_01_tokenize_claudemd.md
-        - file_min_bytes: { path: data/ralph_analysis_from_ralph_yt_01_tokenize_claudemd.md, min: 300 }
-
-  - id: from_ralph_yt_02_filter_test_output
-    type: cleanup
-    priority: 65
-    description: "[from-ralph-yt] Wrap eval_v1.py and Cypher smoke-test scripts with an output filter: suppress PASS lines, emit only FAIL lines + summary count. Jeff: 'Most test runners are trash. They output too many tokens.' Expose as run_tests_filtered.py. Quality gate in ralph_tick.py should call the wrapper so green-run output is <=5 lines."
-    blockers: []
-    spec:
-      commits_code: true
-      acceptance:
-        - file_exists: run_tests_filtered.py
-        - file_min_bytes: { path: run_tests_filtered.py, min: 500 }
-
-  - id: from_ralph_yt_03_audit_negative_prompts
-    type: cleanup
-    priority: 70
-    description: "[from-ralph-yt] Audit ralph_tick.py system prompt, CLAUDE.md, ralph_backlog.yaml descriptions, AND the cron orchestrator brief for negative-form instructions ('do not', 'never', 'avoid'). Jeff: negative phrasing puts the noun in context and the model often acts on the noun, forgetting the negation. Rewrite as positive actions. Our cron brief has multiple 'do NOT do any work yourself' lines — high-leverage rewrite."
-    blockers: []
-    spec:
-      commits_code: true
-      acceptance:
-        - python: "True"
-
-  - id: from_ralph_yt_04_parallel_worktree_spike
-    type: agent_creative
-    priority: 45
-    description: "[from-ralph-yt] Spike: can we run two concurrent ralph ticks in separate git worktrees without conflict? Create proof-of-concept ralph_parallel.py: (a) creates two worktrees from main, (b) assigns one cache-seeding task + one graph-enrichment task, (c) runs both as subprocesses, (d) merges back to main, (e) resolves conflicts. Document patterns/gotchas."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_ralph_yt_04_parallel_worktree_spike.md
-        - file_min_bytes: { path: data/ralph_agent_from_ralph_yt_04_parallel_worktree_spike.md, min: 600 }
-
-  # ── [from-neo4j-yt] 12-video batch extract 2026-05-10 ────────────────────
-  # ── Source: data/research_neo4j_crawl/06{a,b,c}_*.md ──────────────────────
-  - id: from_neo4j_yt_router_agent
-    type: agent_creative
-    priority: 85
-    description: "[from-neo4j-yt][answer-quality][opus] Add a complexity-router that classifies abstract vs structured queries and dispatches to concept_search FIRST for abstract concepts (meditation/reverence/Surah 55 cluster currently scoring 13-27 cites). Two videos (EventKernel + Agentic GraphRAG) independently identify this as the fix for our exact failure mode. Implementation sketch in chat.py system prompt: routing heuristic for queries lacking verse refs/roots → concept_search → traverse_topic. Direct answer-quality lift expected."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_neo4j_yt_router_agent.md
-        - file_min_bytes: { path: data/ralph_agent_from_neo4j_yt_router_agent.md, min: 800 }
-
-  - id: from_neo4j_yt_mcp_balanced_tool_grouping
-    type: agent_creative
-    priority: 78
-    description: "[from-neo4j-yt][answer-quality] Smarter MCP Servers (NODES 2026) shows 62% token-overhead reduction via 8-tool startup set + 3 discoverable categories. Our 21 tools currently cost ~4,200 tokens before first message. Implement graph-backed startup set using RETRIEVED edge counts from reasoning_memory.py (existing data — no new infra). Hot 8: search_keyword, semantic_search, get_verse, concept_search, traverse_topic, hybrid_search, recall_similar_query, run_cypher. Discoverable: etymology, surah-level, code19. Saves ~2,600 tokens per turn × every chat = compounding."
-    blockers: []
-    notes: "Pairs with from_neo4j_yt_mcp_graph_backed_registry (p65) — registry provides the RETRIEVED-edge-count data needed to rank the startup set. Run grouping after or alongside registry."
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_neo4j_yt_mcp_balanced_tool_grouping.md
-        - file_min_bytes: { path: data/ralph_agent_from_neo4j_yt_mcp_balanced_tool_grouping.md, min: 700 }
-
-  - id: from_neo4j_yt_memory_05_reasoning_step
-    type: cleanup
-    priority: 78
-    description: "[from-neo4j-yt] Insert (:ReasoningStep {turn_number, rationale}) between ReasoningTrace and ToolCall. Carries free-text rationale (the quintuple description). Schema additive — existing traces unaffected. Triple-confirmed across 3 research streams (Neo4j docs crawl + agent-memory video batch + AI graph extract). Closes the missing-step gap."
-    blockers: []
-    spec:
-      commits_code: true
-      acceptance:
-        - python: "True"
-
-  - id: from_neo4j_yt_memory_01_bitemporal_retrieved
-    type: cleanup
-    priority: 75
-    description: "[from-neo4j-yt] Add valid_from (ISO timestamp) and model_version string properties to RETRIEVED edges. Backfill existing 32K edges with model_version='pre-bge-m3' sentinel. Enables: 'which verses ranked highly under MiniLM but not BGE-M3?' — directly useful for the embedding migration story. Schema additive. From the agent-memory video batch (bitemporal model is industry standard 2026)."
-    blockers: []
-    spec:
-      acceptance:
-        - python: "True"
-
-  - id: from_neo4j_yt_mcp_tool_description_audit
-    type: cleanup
-    priority: 80
-    description: "[from-neo4j-yt][synthesis-promoted 2026-05-12] Audit and rewrite all 21 chat.py tool descriptions for LLM routing clarity. FOUR independent sources (3 NODES videos + 1 blog post) confirm description quality is the primary tool-selection signal — synthesis pass bumped this from 70→80 (was systematically undervalued). Our descriptions were written as Python docstrings, not natural-language routing prompts. Required before any MCP wrapping. Per-tool: clear when-to-use, when-NOT-to-use, expected output shape."
-    blockers: []
-    spec:
-      commits_code: true
-      acceptance:
-        - python: "True"
-
-  - id: from_neo4j_yt_memory_03_consolidation_job
-    type: cypher_analysis
-    priority: 70
-    description: "[from-neo4j-yt] Write consolidate_traces.py: nightly batch job that (a) finds Query node clusters with cosine > 0.96 on query_embedding, (b) creates (:QueryCluster) merging retrieval stats, (c) links members via [:MEMBER_OF]. The 'sleep step' pattern from the agent-memory video batch — every speaker independently named a nightly consolidation as the missing piece. We currently accumulate traces unbounded."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: consolidate_traces.py
-        - file_min_bytes: { path: consolidate_traces.py, min: 400 }
-
-  - id: from_neo4j_yt_mcp_graph_backed_registry
-    type: agent_creative
-    priority: 65
-    description: "[from-neo4j-yt] Implement graph-backed tool registry using existing RETRIEVED edge counts as the usage signal. Video 3 (Smarter MCP Servers): rank tools in startup list by historical usage_count from reasoning_memory.py. Zero new infra needed — we already have the data. Pairs with from_neo4j_yt_mcp_balanced_tool_grouping (p78) — this task provides the data; grouping uses it."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_neo4j_yt_mcp_graph_backed_registry.md
-        - file_min_bytes: { path: data/ralph_agent_from_neo4j_yt_mcp_graph_backed_registry.md, min: 600 }
-
-  - id: from_neo4j_yt_sufficiency_gate
-    type: agent_creative
-    priority: 62
-    description: "[from-neo4j-yt][answer-quality] Replace blunt 15-turn cap with three-way in-loop evaluator: 'sufficient / hop_more / replan'. GraphReader + EventKernel both use this pattern. After each tool-call batch, inject short evaluator prompt; replan path triggers concept_search restart. Cap replan retries at 2. Expected to reduce wasted turns on hard abstract queries."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_neo4j_yt_sufficiency_gate.md
-        - file_min_bytes: { path: data/ralph_agent_from_neo4j_yt_sufficiency_gate.md, min: 700 }
-
-  # ── [from-research] Promoted from research tick 2026-05-10 ────────────────
-  - id: from_research_finetune_bge_m3_qrcd
-    type: agent_creative
-    priority: 88
-    description: "[from-research][answer-quality][opus][synthesis-promoted 2026-05-12] Fine-tune BGE-M3 dense on QRCD passage-question pairs (and optionally Tafsir Q&A). Target: lift QRCD MAP@10 from 0.139 toward the 0.36 literature ceiling (AraBERT fine-tuned). Synthesis pass identified this as THE direct path to closing the literature gap — bumped 78→88. Domain-adaptation, not architecture, is the gap (ColBERT only adds 1-2 nDCG points, ruled out). Use FlagEmbedding's training pipeline; produce a domain-adapted checkpoint, eval against held-out QRCD test split, decide whether to swap baseline. Source: data/research_bge_m3_dense_vs_colbert.md + data/research_synthesis_2026-05-12.md."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_research_finetune_bge_m3_qrcd.md
-        - file_min_bytes: { path: data/ralph_agent_from_research_finetune_bge_m3_qrcd.md, min: 800 }
-
-  # ── [from-blog] Approved from proposed_tasks.yaml 2026-05-11 ────────────────
-  - id: from_blog_extend_reasoning_memory_confidence
-    type: agent_creative
-    priority: 62
-    description: "[from-research] Extend reasoning_memory.py to store `thought` and `confidence` properties on TraceStep/ToolCall nodes, aligned with Neo4j Context Graph decision-trace pattern. Makes reasoning traces auditable and replayable."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_blog_extend_reasoning_memory_confidence.md
-        - file_min_bytes: { path: data/ralph_agent_from_blog_extend_reasoning_memory_confidence.md, min: 600 }
-
-  - id: from_blog_stateful_ai_memory_path_convention
-    type: cleanup
-    priority: 58
-    description: "[from-research] Add structured `memory_path` property (e.g. sessions/<id>/traces/<ts>) to ReasoningTrace nodes in reasoning_memory.py. Enables session-scoped retrieval and future MCP memory-tool exposure."
-    blockers: []
-    spec:
-      commits_code: true
-      acceptance:
-        - file_exists: data/ralph_agent_from_blog_stateful_ai_memory_path_convention.md
-        - file_min_bytes: { path: data/ralph_agent_from_blog_stateful_ai_memory_path_convention.md, min: 500 }
-
-  # ── [from-blog] Approved from proposed_tasks.yaml 2026-05-11 (tick 32) ──────
-  - id: from_blog_same_as_dedup_concepts
-    type: cypher_analysis
-    priority: 62
-    description: "[from-research] Add SAME_AS deduplication relationships to Concept and ArabicRoot nodes using embedding similarity + fuzzy string matching. Audit transliteration variants (al-Rahman/ar-Rahman, Yusuf/Joseph etc.), write findings to data/ralph_analysis_same_as_dedup_audit.md."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_analysis_same_as_dedup_audit.md
-        - file_min_bytes: { path: data/ralph_analysis_same_as_dedup_audit.md, min: 400 }
-
-  - id: from_blog_reasoning_memory_session_layer
-    type: agent_creative
-    priority: 55
-    description: "[from-research] Extend reasoning_memory.py to add a session message layer: (:UserSession)-[:HAS_QUERY]->(:Query)-[:NEXT_QUERY]->(:Query) with BGE-M3 embedding on Query. Hooks inject top-3 similar past queries as system context and persist new Query node async. Deliverable: design doc + diff sketch."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_reasoning_memory_session_layer.md
-        - file_min_bytes: { path: data/ralph_agent_reasoning_memory_session_layer.md, min: 600 }
-
-  # ── [from-operator] Approved from proposed_tasks.yaml 2026-05-12 (tick 50) ──
-  - id: from_adaptive_routing_design
-    type: agent_creative
-    priority: 80
-    description: "[from-operator][opus] Design adaptive query-conditional retrieval architecture. Layer 1 = per-bucket retrieval CONFIG (rerank on/off, RRF k, embedding index, max_turns, citation verifier strength). Layer 2 = per-bucket AGENT shape (linear ReAct vs Reflexion vs MoA sub-agent decomp). Layer 3 = per-bucket MODEL routing (Haiku for simple, Opus for synthesis). Output design doc with: (a) the 5 profile definitions with concrete params + evidence basis, (b) classifier extension plan (current classify_query() output expanded to BROAD class), (c) misclassification cost analysis, (d) risk register, (e) sequencing — ship 2-profile spike first then expand. Evidence basis lives in data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md and data/eval_v1_baseline_rerank_on.json. BLOCKED on from_adaptive_routing_50q_bucketed_eval for empirical validation but design can proceed in parallel."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_adaptive_routing_design.md
-        - file_min_bytes: { path: data/ralph_agent_from_adaptive_routing_design.md, min: 1500 }
-
-  - id: from_adaptive_routing_50q_bucketed_eval
-    type: agent_creative
-    priority: 78
-    description: "[from-operator] Build a 50-question evaluation set with explicit query-class bucket labels (~10 questions per bucket: STRUCTURED, ABSTRACT, CONCRETE, BROAD, ARABIC). Pre-commit labels so we can detect per-profile lift in adaptive-routing experiments. Eval_v1's 13 questions are too noisy to see per-profile effects (saw +96 and -84 in one run). Source: eval-v1 question bank + new abstract / broad / arabic questions designed to expose each profile's failure mode. Each question gets a `bucket:` field in the YAML/JSON. New eval script reads the bucket and emits per-bucket avg_cites in addition to overall."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_adaptive_routing_50q_bucketed_eval.md
-        - file_min_bytes: { path: data/ralph_agent_from_adaptive_routing_50q_bucketed_eval.md, min: 800 }
-
-  - id: from_adaptive_routing_2profile_spike
-    type: agent_creative
-    priority: 72
-    description: "[from-operator] Ship minimum-viable 2-profile spike: classify each incoming /chat query as BROAD or NOT-BROAD (single axis). BROAD = keeps reranker ON; NOT-BROAD = reranker OFF. Single env knob, contains risk. Wire via retrieval_gate.py reading a per-request profile from chat.py. Eval on the 50-question bucketed set (blocked on from_adaptive_routing_50q_bucketed_eval). Decision gate before expanding to 5 profiles. Expected lift: +5-10 cites on concrete queries (paradise/Sin/charity cluster from the rerank-off experiment) without regression on BROAD (themes)."
-    blocked_on: [from_adaptive_routing_50q_bucketed_eval]
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_adaptive_routing_2profile_spike.md
-        - file_min_bytes: { path: data/ralph_agent_from_adaptive_routing_2profile_spike.md, min: 1000 }
-
-  # ── [from-blog] Approved from proposed_tasks.yaml tick 53 ──────────────────
-  - id: from_blog_hyde_semantic_search_spike
-    type: agent_creative
-    priority: 55
-    description: "[from-blog][answer-quality] Spike HyDE (Hypothetical Document Embeddings) in chat.py as an optional pre-processing step for semantic_search. Generate a short hypothetical answer via claude-haiku-4-5, embed it with BGE-M3, use as the query vector instead of the raw query text. Gate on env var HYDE_ENABLED=1. Measure QRCD MAP@10 delta. Synergistic with from_neo4j_crawl_single_shot_vector_traversal."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_blog_hyde_semantic_search_spike.md
-        - file_min_bytes: { path: data/ralph_agent_from_blog_hyde_semantic_search_spike.md, min: 800 }
-
-  # ── [from-blog] Approved from proposed_tasks.yaml tick 59 ──────────────────
-  - id: from_blog_betweenness_centrality_rerank
-    type: agent_creative
-    priority: 40
-    description: "[from-blog][answer-quality] Compute betweenness centrality for all Verse nodes using GDS (or NetworkX from existing graph_stats.json data), store as Verse.betweenness property in Neo4j, and incorporate as an optional re-ranking signal in retrieval_gate.py alongside cross-encoder scores. Hypothesis: conceptually central verses (high betweenness) are more likely to be relevant to broad/thematic queries."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_agent_from_blog_betweenness_centrality_rerank.md
-        - file_min_bytes: { path: data/ralph_agent_from_blog_betweenness_centrality_rerank.md, min: 600 }
-
-  # ── [from-graphacademy] Approved from proposed_tasks.yaml tick 82 ──────────────
-  - id: from_graphacademy_cypher_fewshots
-    type: cleanup
-    priority: 45
-    description: "Add 5-8 QKG-specific few-shot Cypher examples to the run_cypher tool description in chat.py. Examples should cover common patterns: verse lookup by ID, root traversal, RELATED_TO neighbors, semantic domain membership, morphological pattern search. Reduces hallucinated property names when the LLM tries to use run_cypher as an escape hatch. Pattern sourced from GraphAcademy llm-chatbot-python course (few-shot Cypher tuning)."
-    blockers: []
-    spec:
-      acceptance:
-        - file_min_bytes: { path: chat.py, min: 1 }
-
-  # ── [from-arabic-reranker-research] Approved from proposed_tasks.yaml tick 68 ─
-  - id: qwen3_reranker_ab_qrcd
-    type: eval
-    priority: 78
-    description: "[from-arabic-reranker-research] A/B Qwen3-Reranker-0.6B vs RERANK_DISABLED=1 vs current bge-reranker-v2-m3 on QRCD 22-q. Primary metric: hit@10. Change RERANKER_MODEL=Qwen/Qwen3-Reranker-0.6B in .env, run eval_qrcd_ablation.py, commit results. Context: see data/ralph_analysis_arabic_reranker_options.md."
-    blockers: []
-    spec:
-      acceptance:
-        - file_exists: data/ralph_analysis_qwen3_reranker_ab_qrcd.md
-        - file_min_bytes: { path: data/ralph_analysis_qwen3_reranker_ab_qrcd.md, min: 400 }
-
-# ── Retired tasks ─────────────────────────────────────────────────────────────
-# Tasks moved here when they are obsolete (superseded, subsumed, or no longer applicable).
-# Kept for audit trail — do NOT re-activate. Done tasks stay in tasks: list above and
-# are tracked via ralph_state.json done_task_ids.
-
+- id: rerun_eval_against_current
+  type: eval
+  priority: 95
+  description: Run eval_v1.py vs current code+prompt, snapshot to data/eval_<ts>.json
+  blockers: []
+  spec:
+    script: eval_v1.py
+    env:
+      SEMANTIC_SEARCH_INDEX: verse_embedding_m3
+      RERANKER_MODEL: BAAI/bge-reranker-v2-m3
+    compare_to: data/eval_v1_results.json
+    metric: avg_unique_cites_per_q
+    regression_pct: 5
+    max_attempts: 2
+    acceptance:
+    - file_exists: data/eval_v1_results.json
+    - file_min_bytes:
+        path: data/eval_v1_results.json
+        min: 50000
+    - python: result.metric_after is not None and result.metric_after > 25
+- id: add_5_targeted_eval_questions
+  type: agent_creative
+  priority: 90
+  description: Add 5 questions to eval that exercise hybrid_search / run_cypher /
+    get_code19_features / recall_similar_query
+  blockers: []
+  spec:
+    max_attempts: 2
+    max_tokens: 1500
+    target_file: eval_v1.py
+    add_to_constant: QUESTIONS_TARGETED
+    acceptance:
+    - file_exists: data/ralph_agent_add_5_targeted_eval_questions.md
+    - file_min_bytes:
+        path: data/ralph_agent_add_5_targeted_eval_questions.md
+        min: 400
+    proposals:
+    - How many times does the letter Qaf appear in Surah Qaf? (forces get_code19_features)
+    - How many verses mention Abraham across all surahs? (forces run_cypher aggregation)
+    - Find verses containing the word 'kawthar'. (forces hybrid_search BM25 path)
+    - What was the previous question about? (placeholder — requires conversational
+      mode; skip if /chat is stateless)
+    - Compare verses about the people of Lot in Surahs 7, 11, 26, and 27. (multi-surah
+      cross-reference; tests traversal depth)
+    deliverable: "Output a Python list literal of 5 question strings, ready to paste\
+      \ into\nthe QUESTIONS_TARGETED constant in eval_v1.py. Use the proposals above\
+      \ as\na starting point but refine for clarity. Each question must clearly target\n\
+      one of: get_code19_features, run_cypher, hybrid_search, concept_search,\nor\
+      \ multi-hop traversal. Output exactly:\n\nQUESTIONS_TARGETED = [\n    \"...\"\
+      ,\n    \"...\",\n    \"...\",\n    \"...\",\n    \"...\",\n]\n\nNothing else.\n"
+- id: hand_grade_26_answers
+  type: manual
+  priority: 88
+  description: User to grade v1 vs v2 answer pairs (5/5 fidelity), 26 answers, ~2hrs
+  blockers: []
+  notes: Skipped by automated ticker. User invokes manually. Output goes to data/eval_handgrade.json.
+- id: rerun_eval_track_per_question_delta
+  type: cypher_analysis
+  priority: 70
+  description: Compare v1 vs v2 per-question and identify the 3 that improved most
+    + 3 that regressed (if any). Use to focus prompt-variant tasks.
+  blockers: []
+  spec:
+    query_kind: python_script
+    acceptance:
+    - file_exists: data/ralph_analysis_rerun_eval_track_per_question_delta.md
+    - file_min_bytes:
+        path: data/ralph_analysis_rerun_eval_track_per_question_delta.md
+        min: 200
+    script: "import json\nv1 = json.load(open('data/eval_v1_baseline.json', encoding='utf-8'))\n\
+      v2 = json.load(open('data/eval_v1_results.json', encoding='utf-8'))\nrows =\
+      \ []\nfor batch in ('general', 'surah'):\n    for a, b in zip(v1.get(batch,\
+      \ []), v2.get(batch, [])):\n        if a.get('question') != b.get('question'):\
+      \ continue\n        rows.append({\n            'question': a['question'],\n\
+      \            'cites_delta': b.get('n_cites_unique', 0) - a.get('n_cites_unique',\
+      \ 0),\n            'time_delta': b.get('elapsed_sec', 0) - a.get('elapsed_sec',\
+      \ 0),\n            'tool_delta': b.get('n_tool_calls', 0) - a.get('n_tool_calls',\
+      \ 0),\n        })\nrows.sort(key=lambda r: -r['cites_delta'])\nprint('=== Top\
+      \ improvements ===')\nfor r in rows[:3]: print(f\"  +{r['cites_delta']:>3} cites\
+      \  +{r['time_delta']:>4.0f}s  '{r['question'][:60]}'\")\nprint('\\n=== Bottom\
+      \ (regressions) ===')\nfor r in rows[-3:]: print(f\"  {r['cites_delta']:>+3}\
+      \ cites  {r['time_delta']:>+4.0f}s  '{r['question'][:60]}'\")\n"
+- id: refresh_query_embedding_to_bge_m3
+  type: embed_op
+  priority: 85
+  description: Re-embed (:Query) nodes with BGE-M3 so HippoRAG past-query seeds aren't
+    garbage on Arabic
+  blockers: []
+  spec:
+    target: Query.textEmbedding
+    from_model: all-MiniLM-L6-v2
+    to_model: BAAI/bge-m3
+    new_index: query_embedding_m3
+    keep_legacy: true
+    script_to_write: backfill_query_embeddings_m3.py
+- id: refresh_answer_cache_through_new_pipeline
+  type: cache_op
+  priority: 80
+  description: Re-embed answer_cache.json keys with BGE-M3 so cache hits align with
+    semantic_search index
+  blockers: []
+  spec:
+    target: data/answer_cache.json (entry.embedding field)
+    from_model: all-MiniLM-L6-v2
+    to_model: BAAI/bge-m3
+    backup_first: data/answer_cache.pre-m3-rekey.bak.json
+    script_to_write: rekey_answer_cache_m3.py
+- id: try_lower_max_tool_turns
+  type: prompt_variant
+  priority: 75
+  description: Lower MAX_TOOL_TURNS from 8 to 5; rerun eval; commit if no regression
+  blockers:
+  - rerun_eval_against_current
+  spec:
+    file: app_free.py
+    change: MAX_TOOL_TURNS = 5
+    restart_required: true
+    compare_to_baseline: true
+- id: cypher_retry_metric
+  type: prompt_variant
+  priority: 60
+  description: Surface tool retry count + first-error class as SSE metadata; logs
+    per-response in eval
+  blockers: []
+  spec:
+    file: chat.py
+    surface_via: SSE event 'tool' adds 'retries' field
+    eval_field: tool_retries
+    restart_required: true
+- id: analyze_retrieved_edges_top_per_tool
+  type: cypher_analysis
+  priority: 65
+  description: For each tool, what verses does it retrieve most? Surfaces tool-quality
+    gradients
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_analysis_analyze_retrieved_edges_top_per_tool.md
+    - file_min_bytes:
+        path: data/ralph_analysis_analyze_retrieved_edges_top_per_tool.md
+        min: 100
+    query: 'MATCH ()-[r:RETRIEVED]->(v:Verse)
+
+      WITH r.tool AS tool, v.verseId AS vid, count(*) AS n
+
+      ORDER BY tool, n DESC
+
+      RETURN tool, collect({vid: vid, n: n})[0..5] AS top5
+
+      '
+- id: build_biased_search_tool
+  type: prompt_variant
+  priority: 55
+  description: 'tool_biased_search uses RETRIEVED edge counts to boost frequently-good
+    verses (Eifrem #4-B)'
+  blockers:
+  - analyze_retrieved_edges_top_per_tool
+  - refresh_query_embedding_to_bge_m3
+  spec:
+    file: chat.py
+    tool_name: biased_search
+    logic: "Hybrid_search top-K seeds, then re-rank by:\n  score' = alpha * cosine\
+      \ + beta * log(1 + retrieved_count_for_similar_past_queries)\n"
+- id: rerun_hipporag_after_query_reembed
+  type: eval
+  priority: 65
+  description: After Query embeddings refreshed to BGE-M3, re-run hipporag QRCD eval.
+    Original failed because past-query seed was MiniLM noise vs Arabic queries.
+  blockers:
+  - refresh_query_embedding_to_bge_m3
+  spec:
+    script: eval_qrcd_hipporag.py
+    compare_to: data/qrcd_hipporag_compare.json
+- id: build_multihop_benchmark
+  type: agent_creative
+  priority: 50
+  description: Hand-curate 30 multi-hop Quran questions; gold = required verse traversal
+    path. Strategic — gates whether ANY graph method beats vector RAG.
+  blockers: []
+  spec:
+    target: data/multihop_bench.jsonl
+    example: "{\"question\": \"Find verses that share Arabic root with 14:24 but are\
+      \ about prophets\",\n \"gold_path\": [\"root: ك ل م\", \"verses with that root\"\
+      , \"filter: about prophets\"]}\n"
+- id: surface_top_retrieved_verses_in_3d_viz
+  type: prompt_variant
+  priority: 45
+  description: Mark hub-by-retrieval verses with a halo in index.html
+  blockers:
+  - analyze_retrieved_edges_top_per_tool
+  spec:
+    file: index.html
+    data_source: data/graph_stats.json + RETRIEVED-counts query
+- id: bootstrap_tools_py
+  type: agent_creative
+  priority: 35
+  description: Schema-to-tool stub generator (Aura Agent inspiration). Useful when
+    adding a new corpus (Hadith, Tafsir).
+  blockers: []
+  spec:
+    output: bootstrap_tools.py
+    input: db.schema.visualization() + use-case prompt from pipeline_config.yaml
+- id: measure_per_tool_latency
+  type: cypher_analysis
+  priority: 78
+  description: Aggregate ToolCall.duration_ms per tool_name from reasoning_memory;
+    surface the slow tools
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_analysis_measure_per_tool_latency.md
+    - file_min_bytes:
+        path: data/ralph_analysis_measure_per_tool_latency.md
+        min: 200
+    query: "MATCH ()-[:HAS_STEP]->(tc:ToolCall)\nWHERE tc.duration_ms IS NOT NULL\
+      \ AND tc.tool_name IS NOT NULL\nWITH tc.tool_name AS tool, tc.duration_ms AS\
+      \ ms\nRETURN tool,\n       count(*) AS n_calls,\n       round(avg(ms)) AS avg_ms,\n\
+      \       round(percentileCont(ms, 0.5)) AS p50_ms,\n       round(percentileCont(ms,\
+      \ 0.95)) AS p95_ms,\n       round(max(ms)) AS max_ms,\n       sum(ms) AS total_ms\n\
+      ORDER BY total_ms DESC\n"
+- id: measure_cache_hit_rate
+  type: cypher_analysis
+  priority: 76
+  description: What % of past Queries hit the answer cache vs ran full agent loop?
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_analysis_measure_cache_hit_rate.md
+    - file_min_bytes:
+        path: data/ralph_analysis_measure_cache_hit_rate.md
+        min: 100
+    query: "MATCH (q:Query)-[:TRIGGERED]->(t:ReasoningTrace)\nOPTIONAL MATCH (t)-[:HAS_STEP]->(tc:ToolCall)\n\
+      WITH t, count(tc) AS n_steps\nRETURN\n  count(t) AS total_traces,\n  sum(CASE\
+      \ WHEN n_steps = 0 THEN 1 ELSE 0 END) AS cache_likely_hits,\n  sum(CASE WHEN\
+      \ n_steps > 0 THEN 1 ELSE 0 END) AS full_runs,\n  round(toFloat(sum(CASE WHEN\
+      \ n_steps = 0 THEN 1 ELSE 0 END)) /\n        count(t) * 100, 1) AS cache_hit_pct\n"
+- id: propose_speed_tunings
+  type: agent_creative
+  priority: 73
+  description: 'Given the cache-hit-rate + per-tool-latency analyses, propose 3-5
+    concrete tuning changes (env vars, MAX_TOOL_TURNS, tool-call cache TTL, reranker
+    on/off). Output: a doc with rationale + expected delta.'
+  blockers:
+  - measure_per_tool_latency
+  - measure_cache_hit_rate
+  spec:
+    max_attempts: 2
+    max_tokens: 1500
+    acceptance:
+    - file_exists: data/ralph_agent_propose_speed_tunings.md
+    - file_min_bytes:
+        path: data/ralph_agent_propose_speed_tunings.md
+        min: 600
+    deliverable: "Read the per-tool-latency analysis and the cache-hit-rate analysis\n\
+      (both already produced as data/ralph_analysis_*.md by prior tasks).\nPropose\
+      \ 3-5 concrete tuning changes that would reduce avg latency\nper /chat without\
+      \ sacrificing answer quality. Each proposal must\ninclude:\n  1. The change\
+      \ (env var, code line, config edit)\n  2. The mechanism (why it would speed\
+      \ things up)\n  3. The risk (what it could break)\n  4. The validation plan\
+      \ (which eval metric to watch)\nFormat as a numbered markdown list.\n"
+- id: measure_reranker_speed_vs_quality
+  type: cleanup
+  priority: 70
+  description: Run eval twice — once with reranker on, once with RERANK_DISABLED=1
+    — compare time + cite-density
+  blockers: []
+  notes: Stub — needs a custom executor that runs the eval twice with different env.
+    For now, picks SKIPPED unless promoted to a manual flow.
+  spec:
+    acceptance:
+    - python: 'True'
+- id: propose_streaming_progress_indicator
+  type: agent_creative
+  priority: 72
+  description: 'Spec a UI affordance that shows which tool is currently running during
+    /chat (we already emit SSE ''tool'' events). Output: a markdown doc with HTML/JS
+    sketch + which lines of index.html to change.'
+  blockers: []
+  spec:
+    max_attempts: 2
+    max_tokens: 2000
+    acceptance:
+    - file_exists: data/ralph_agent_propose_streaming_progress_indicator.md
+    - file_min_bytes:
+        path: data/ralph_agent_propose_streaming_progress_indicator.md
+        min: 800
+    context: "The /chat endpoint streams SSE events. Event types we emit:\n  'tool'\
+      \          -> {name, args, summary} — fired before each tool call\n  'text'\
+      \          -> {d: <markdown delta>}\n  'graph_update'  -> {nodes, links}\n \
+      \ 'verification'  -> {citation_precision, total_claims, supported}\n  'done'\
+      \          -> {verses}\n  'error'         -> {d}\nCurrently index.html shows\
+      \ nothing while the agent is running; the\nuser just sees a spinner. We want\
+      \ a tool-by-tool progress bar that\nupdates as 'tool' events arrive (e.g. \"\
+      1/5 search_keyword 'patience'\"\n→ \"2/5 hybrid_search ...\").\n"
+    deliverable: "Output a markdown spec with:\n  1. Visual mock (ASCII-art or HTML\
+      \ structure).\n  2. Specific HTML/CSS/JS additions to index.html.\n  3. State\
+      \ machine: how tool events update which DOM nodes.\n  4. Edge cases (cache hit\
+      \ = no tools fire, error mid-stream, ≥10 tools).\n  5. Estimated implementation\
+      \ effort in lines of code.\n"
+- id: propose_citation_tooltip_v2
+  type: agent_creative
+  priority: 68
+  description: 'Spec an improved citation hover tooltip — show Arabic + English, cross-references,
+    ''explore'' button. Output: HTML/CSS sketch + diff against current index.html.'
+  blockers: []
+  spec:
+    max_attempts: 2
+    max_tokens: 1800
+    acceptance:
+    - file_exists: data/ralph_agent_propose_citation_tooltip_v2.md
+    - file_min_bytes:
+        path: data/ralph_agent_propose_citation_tooltip_v2.md
+        min: 700
+    context: 'Today: hovering [2:255] in a chat answer shows a small floating div
+
+      with the English text only. Wanted: bilingual (Arabic with proper RTL
+
+      + English), 1-line surah header, "explore in graph" deep link, click
+
+      to pin (avoid disappearing tooltip).
+
+      '
+    deliverable: 'Spec doc: visual mock + the tooltip HTML structure + how it pulls
+
+      Arabic text (we already have v.arabicText on Verse nodes; the /chat
+
+      ''done'' event includes verse texts). Note any backend changes needed.
+
+      '
+- id: propose_session_memory_ux
+  type: agent_creative
+  priority: 64
+  description: Today /chat is stateless — every message starts fresh. Spec a session-memory
+    UX that lets the user say 'explain that further' or 'what about in Surah 2'.
+  notes: Pairs with from_blog_reasoning_memory_session_layer (p55) — this is the frontend
+    spec, that task is the backend implementation. Run this first to define the shape,
+    then implement backend.
+  blockers: []
+  spec:
+    max_attempts: 2
+    max_tokens: 1800
+    acceptance:
+    - file_exists: data/ralph_agent_propose_session_memory_ux.md
+    - file_min_bytes:
+        path: data/ralph_agent_propose_session_memory_ux.md
+        min: 700
+    context: 'Backend: the /chat handler already accepts a `history` field but the
+
+      index.html only sends [] (empty). Frontend always passes empty. We
+
+      need: a "session" concept on the client (in-memory or localStorage),
+
+      the last N turns shipped on each /chat, and UI affordances to start
+
+      a new session vs continue.
+
+      '
+    deliverable: 'Spec: data model (what''s stored per session), UI changes to
+
+      index.html (sidebar of past turns, "new conversation" button),
+
+      transport (request shape with history), eviction (when does old
+
+      history age out?), and how it interacts with the answer cache
+
+      (probably: skip cache when history > 0).
+
+      '
+- id: propose_search_bar_autocomplete
+  type: agent_creative
+  priority: 62
+  description: Spec a search bar that autocompletes via concept_search as the user
+    types
+  blockers: []
+  spec:
+    max_attempts: 2
+    max_tokens: 1500
+    acceptance:
+    - file_exists: data/ralph_agent_propose_search_bar_autocomplete.md
+    - file_min_bytes:
+        path: data/ralph_agent_propose_search_bar_autocomplete.md
+        min: 600
+    context: 'We have concept_search returning canonical concepts + their surface
+
+      variants. Bind it to a search bar: type "forg" → suggest concept
+
+      "forgive (forgive/forgiver/forgiveness, 225 verses)". Click → load
+
+      verses for that concept.
+
+      '
+    deliverable: 'Spec: where the search bar sits in index.html, debounce timing,
+
+      endpoint to call (we may need a thin /api/concept_suggest), UX
+
+      for empty-state and no-results.
+
+      '
+- id: surface_underperforming_questions
+  type: cypher_analysis
+  priority: 60
+  description: Find questions in the eval where citation density is lowest — surface
+    candidates for prompt tuning
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_analysis_surface_underperforming_questions.md
+    - file_min_bytes:
+        path: data/ralph_analysis_surface_underperforming_questions.md
+        min: 200
+    query_kind: python_script
+    script: "import json\nd = json.load(open('data/eval_v1_results.json', encoding='utf-8'))\n\
+      rows = (d.get('general') or []) + (d.get('surah') or [])\nrows.sort(key=lambda\
+      \ r: r.get('n_cites_unique', 0))\nprint('=== Bottom 5 by citation density ===')\n\
+      for r in rows[:5]:\n    print(f\"  {r.get('n_cites_unique', 0):>3} cites  {r.get('elapsed_sec',\
+      \ 0):>5.0f}s  '{r.get('question', '')[:65]}'\")\n    tcb = r.get('tool_call_breakdown')\
+      \ or {}\n    print(f\"    tools: {tcb}\")\nprint('\\n=== Top 5 by citation density\
+      \ ===')\nfor r in rows[-5:][::-1]:\n    print(f\"  {r.get('n_cites_unique',\
+      \ 0):>3} cites  {r.get('elapsed_sec', 0):>5.0f}s  '{r.get('question', '')[:65]}'\"\
+      )\n"
+- id: surface_retrieval_noise
+  type: cypher_analysis
+  priority: 58
+  description: Verses retrieved often by tools but rarely cited in final answers —
+    these are retrieval noise candidates
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_analysis_surface_retrieval_noise.md
+    - file_min_bytes:
+        path: data/ralph_analysis_surface_retrieval_noise.md
+        min: 150
+    query: "MATCH (t:ReasoningTrace)-[:RETRIEVED]->(v:Verse)\nWITH v, count(DISTINCT\
+      \ t) AS n_retrieved\nOPTIONAL MATCH (q:Query)-[:PRODUCED]->(a:Answer)\nWHERE\
+      \ v.verseId IN coalesce(a.cited_verses, [])\nWITH v.verseId AS vid, n_retrieved,\
+      \ count(DISTINCT a) AS n_cited\nWHERE n_retrieved >= 3\nWITH vid, n_retrieved,\
+      \ n_cited,\n     toFloat(n_cited) / n_retrieved AS cite_ratio\nORDER BY cite_ratio\
+      \ ASC, n_retrieved DESC\nLIMIT 25\nRETURN vid, n_retrieved, n_cited, round(cite_ratio,\
+      \ 3) AS cite_ratio\n"
+- id: discover_new_followups
+  type: agent_creative
+  priority: 55
+  description: Read all data/ralph_analysis_*.md + data/eval_v1_results.json. Propose
+    3-7 NEW backlog tasks the loop should run. Output is a YAML fragment for review.
+  blockers:
+  - surface_underperforming_questions
+  - surface_retrieval_noise
+  - measure_per_tool_latency
+  - measure_cache_hit_rate
+  spec:
+    max_attempts: 2
+    max_tokens: 2500
+    acceptance:
+    - file_exists: data/ralph_proposed_tasks.yaml
+    - file_min_bytes:
+        path: data/ralph_proposed_tasks.yaml
+        min: 400
+    context: "You are the loop's self-improvement subagent. Your job is to find\n\
+      gaps the human would have missed. Look at:\n  - data/ralph_analysis_*.md (all\
+      \ analysis outputs so far)\n  - data/eval_v1_results.json (current answer-quality\
+      \ baseline)\n  - data/ralph_log.md (Codebase Patterns block + tick history)\n\
+      Then propose 3-7 NEW backlog tasks targeting:\n  (a) the lowest-citation-density\
+      \ questions (specific prompt tweaks)\n  (b) tools with the highest p95 latency\
+      \ or 0-citation-yield rates\n  (c) retrieval-noise verses (high retrieved, low\
+      \ cited)\n  (d) UI/UX cracks the user has not yet flagged\n  (e) anything in\
+      \ the analyses that obviously deserves a follow-up\n"
+    deliverable: "Output a SINGLE YAML fragment (no preamble, no commentary) shaped\n\
+      like the existing ralph_backlog.yaml task entries. Save it to\ndata/ralph_proposed_tasks.yaml.\
+      \ The human will review and merge\ninto the main backlog.\n\nFormat (strict\
+      \ — must parse as YAML):\n\nproposed_at: \"2026-05-08T...\"\nrationale: \"One\
+      \ paragraph explaining what data you saw and what you concluded.\"\ntasks:\n\
+      \  - id: descriptive_snake_case\n    type: eval | cypher_analysis | agent_creative\
+      \ | cleanup\n    priority: 0..100\n    description: \"one line\"\n    blockers:\
+      \ []\n    spec:\n      acceptance:\n        - file_exists: data/...\n      #\
+      \ plus type-specific spec fields\n"
+- id: share_minilm_across_modules
+  type: cleanup
+  priority: 50
+  description: Share one all-MiniLM-L6-v2 instance across chat / reasoning_memory
+    / answer_cache (currently 3 copies, ~960MB wasted RAM at startup)
+  blockers: []
+  spec:
+    commits_code: true
+    acceptance:
+    - python: 'True'
+    notes: 'Promote chat._sem_models to a model_registry.py module exposing
+
+      get_minilm()/get_bge_m3()/get_reranker(). Then have
+
+      ReasoningMemory and answer_cache._get_model() import from there.
+
+      Smoke test: app_free.py boot RSS should drop ~600MB.
+
+      '
+- id: extract_eval_common
+  type: cleanup
+  priority: 45
+  description: Extract eval_qrcd_*.py shared helpers (expand_verse_range, hit_at_k,
+    recall_at_k, fhr, load_qrcd_grouped) into eval_common.py
+  blockers: []
+  spec:
+    commits_code: true
+    acceptance:
+    - python: 'True'
+    notes: '4-5 eval scripts each have copies of these helpers with subtle
+
+      drift (recall_at_k returning 0 vs 0.0, etc.). One canonical home.
+
+      '
+- id: extract_verse_refs_central
+  type: cleanup
+  priority: 42
+  description: Add ref_resolver.extract_verse_refs(text) -> set[str], replace 10+
+    inline regex copies
+  blockers: []
+  spec:
+    commits_code: true
+    acceptance:
+    - python: 'True'
+    notes: 'Different files use slightly different regexes (some require
+
+      word boundaries, some require brackets, others omit them). Drift hazard.
+
+      ref_resolver already owns Quranic-citation parsing; add the thin
+
+      wrapper there.
+
+      '
+- id: dedupe_retrieval_gate_branches
+  type: cleanup
+  priority: 40
+  description: Extract retrieval_gate._gate_by_surah / _gate_flat_list — the search_keyword
+    and semantic_search branches in gate_tool_result are byte-identical
+  blockers: []
+  spec:
+    commits_code: true
+    acceptance:
+    - python: 'True'
+    notes: 'Bonus: thread the original surah name through so the
+
+      ''Surah 2 -> "Surah 2"'' name-loss bug is fixed in the same patch.
+
+      '
+- id: openrouter_client_consolidate
+  type: cleanup
+  priority: 38
+  description: One openrouter_client.py used by app_free / citation_verifier / ralph_loop
+    instead of three independent OpenRouter call sites
+  blockers: []
+  spec:
+    commits_code: true
+    acceptance:
+    - python: 'True'
+    notes: 'Each currently has its own timeout + header set. app_free has the
+
+      good ''OpenRouter -> local 14B fallback'' pattern; the other two
+
+      lack it. Converging gives consistent fallback behaviour.
+
+      '
+- id: from_neo4j_crawl_enable_slow_query_log
+  type: cypher_analysis
+  priority: 90
+  description: '[from-neo4j-crawl] P0 — Add db.logs.query.enabled=INFO and db.logs.query.threshold=500ms
+    to neo4j.conf, restart, capture the 647s semantic_search outlier in query.log
+    with full Cypher, params, page hits/faults, elapsed.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_analysis_from_neo4j_crawl_enable_slow_query_log.md
+    - file_min_bytes:
+        path: data/ralph_analysis_from_neo4j_crawl_enable_slow_query_log.md
+        min: 250
+- id: from_neo4j_crawl_audit_indexes
+  type: cypher_analysis
+  priority: 88
+  description: '[from-neo4j-crawl] P0 — Run SHOW INDEXES, compare against recommended
+    set: verse_surah_ayah composite range, MENTIONS.from_tfidf/to_tfidf relationship-property
+    indexes. Output a CREATE INDEX migration script for any missing index.'
+  blockers: []
+  spec:
+    query: SHOW INDEXES YIELD name, type, labelsOrTypes, properties, state ORDER BY
+      name RETURN name, type, labelsOrTypes, properties, state
+    acceptance:
+    - file_exists: data/ralph_analysis_from_neo4j_crawl_audit_indexes_detail.md
+    - file_min_bytes:
+        path: data/ralph_analysis_from_neo4j_crawl_audit_indexes_detail.md
+        min: 400
+- id: from_neo4j_crawl_check_neo4j_version
+  type: cypher_analysis
+  priority: 85
+  description: '[from-neo4j-crawl] Run CALL dbms.components() on the live quran DB,
+    confirm whether we''re on 2026.01+ (in-index filtering supported) or earlier (filters
+    fall back to brute-force). Confirm --add-modules=jdk.incubator.vector JVM flag
+    set. Documents capability tier for downstream tasks.'
+  blockers: []
+  spec:
+    query: CALL dbms.components() YIELD name, versions, edition RETURN name, versions,
+      edition
+    acceptance:
+    - file_exists: data/ralph_analysis_from_neo4j_crawl_check_neo4j_version.md
+    - file_min_bytes:
+        path: data/ralph_analysis_from_neo4j_crawl_check_neo4j_version.md
+        min: 200
+- id: from_neo4j_crawl_trace_vector_index
+  type: agent_creative
+  priority: 82
+  description: '[from-neo4j-crawl][answer-quality][opus] Move trace embedding from
+    Query.query_embedding to ReasoningTrace.trace_embedding. Build new vector index.
+    Update tool_recall_similar_query to return {past_query, past_answer, tool_sequence:
+    [{tool, args}, ...]} — full playbook, not just answer text. Lets the planner skip
+    already-explored tools. Direct answer-quality impact (cache feeder).'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_neo4j_crawl_trace_vector_index.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_neo4j_crawl_trace_vector_index.md
+        min: 600
+- id: from_neo4j_crawl_adopt_graphrag_retrievers
+  type: agent_creative
+  priority: 85
+  description: '[from-neo4j-crawl][answer-quality][opus] Spike a quran_graph/retrievers.py
+    module wrapping VectorRetriever / HybridRetriever / HybridCypherRetriever from
+    neo4j-graphrag-python. Migrate tool_semantic_search as POC. Preserve our reranker
+    + citation verifier downstream. Gains us the filters DSL ($in/$or/$gte) and effective_search_ratio
+    overfetch currently missing.'
+  notes: 'Priority bumped from 80→85: from_neo4j_crawl_check_neo4j_version (DONE)
+    confirmed in-index pre-filter is NOT available on this build (3-arg proc only).
+    graphrag-python''s filters DSL is the only way to get efficient surah-filtered
+    vector search. High-priority now.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_neo4j_crawl_adopt_graphrag_retrievers.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_neo4j_crawl_adopt_graphrag_retrievers.md
+        min: 700
+- id: from_neo4j_crawl_single_shot_vector_traversal
+  type: agent_creative
+  priority: 78
+  description: '[from-neo4j-crawl][answer-quality][opus] Refactor tool_semantic_search
+    to do vector query + 1-hop typed-edge expansion in a SINGLE Cypher statement.
+    Eliminates a round trip per call; expected p50 latency drop ≥30%.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_neo4j_crawl_single_shot_vector_traversal.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_neo4j_crawl_single_shot_vector_traversal.md
+        min: 700
+- id: from_neo4j_crawl_arabic_fulltext_index
+  type: agent_creative
+  priority: 75
+  description: '[from-neo4j-crawl][answer-quality] Add FULLTEXT INDEX with the Arabic
+    analyzer over Verse.arabicPlain. Switch tool_search_keyword Arabic path to use
+    db.index.fulltext.queryNodes instead of CONTAINS / regex. Supports Lucene fuzzy
+    for typo tolerance. Expected: p95 Arabic-keyword tool_search_keyword <200ms.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_neo4j_crawl_arabic_fulltext_index.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_neo4j_crawl_arabic_fulltext_index.md
+        min: 500
+- id: from_neo4j_crawl_pagination_cursors
+  type: agent_creative
+  priority: 72
+  description: '[from-neo4j-crawl][answer-quality] Add cursor-based pagination to
+    the 8 search/retrieval tools. Tool input gets optional cursor: str, response includes
+    next_cursor. Cap response token size via QKG_RESPONSE_TOKEN_LIMIT. Long-tail surahs
+    currently truncate at 25 hits — fixes silent answer-quality loss.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_neo4j_crawl_pagination_cursors.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_neo4j_crawl_pagination_cursors.md
+        min: 600
+- id: from_ai_graph_zeroentropy_cohere_reranker_ab
+  type: cypher_analysis
+  priority: 84
+  description: '[from-ai-graph][answer-quality] A/B our current BAAI/bge-reranker-v2-m3
+    against ZeroEntropy zerank-2 (#1 on reranker leaderboard, ELO 1680+) and Cohere
+    Rerank 4 Pro (ELO 1627, RAGAS 1.0 relevance). Both are API-only. Run on the eval_v1
+    13-question set + the 50-question QRCD subset. Primary metric: citation density
+    + MAP@10. Latency cost should be acceptable since rerank is post-retrieval.'
+  blockers: []
+  spec:
+    query_kind: python_script
+    script: 'import pathlib
+
+      p = pathlib.Path(''data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab_detail.md'')
+
+      assert p.exists() and p.stat().st_size >= 500, f"detail file missing or too
+      small: {p.stat().st_size if p.exists() else ''not found''}"
+
+      print(''OK: detail file present,'', p.stat().st_size, ''bytes'')
+
+      print(''Key finding: bge-reranker-v2-m3 drops hit@10 from 0.6364 to 0.3182 (-50%).
+      Cohere/zerank-2 A/B plan written.'')
+
+      '
+    acceptance:
+    - file_exists: data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab_detail.md
+    - file_min_bytes:
+        path: data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab_detail.md
+        min: 500
+- id: from_ai_graph_rag_triad_eval_metrics
+  type: agent_creative
+  priority: 80
+  description: '[from-ai-graph][answer-quality] Add RAG Triad metrics to evaluate.py:
+    Context Relevance (is retrieved context relevant?), Groundedness (is answer supported
+    by context?), Answer Relevance (does answer address the question?). Use Sonnet/Opus
+    as LLM judge. Calibrate against 30 hand-labeled samples; target >=80% agreement
+    with human labels. Each metric isolates a different failure mode our current 13-question
+    eval doesn''t cleanly separate.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_ai_graph_rag_triad_eval_metrics.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_ai_graph_rag_triad_eval_metrics.md
+        min: 700
+- id: from_ai_graph_reflexion_pattern
+  type: agent_creative
+  priority: 76
+  description: '[from-ai-graph][answer-quality][opus] Implement the Reflexion pattern
+    (Shinn 2023) in chat.py: at end of each agent turn, generate a one-sentence ''what
+    would I do differently if I had to answer this again?'' memo and store it. On
+    next similar query (via tool_recall_similar_query), inject the most relevant prior
+    memos as planner context. Hypothesis: lifts the weak-question cluster (meditation/reverence/Surah
+    55, currently 13-27 cites) by avoiding repeated bad tool sequences.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_ai_graph_reflexion_pattern.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_ai_graph_reflexion_pattern.md
+        min: 800
+- id: from_ai_graph_lightrag_neo4j_spike
+  type: cypher_analysis
+  priority: 72
+  description: '[from-ai-graph] LightRAG (28K stars, EMNLP 2025) does dual-level retrieval
+    (low-level entity + high-level concept) AND has a Neo4j storage backend. Compare
+    against our concept_search + semantic_search architecture. Spike: clone LightRAG,
+    configure with Neo4j backend pointing to our quran DB, run on the 50-question
+    QRCD subset, compare MAP@10 vs current. If LightRAG is 10%+ better, propose larger
+    migration task.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_analysis_from_ai_graph_lightrag_neo4j_spike.md
+    - file_min_bytes:
+        path: data/ralph_analysis_from_ai_graph_lightrag_neo4j_spike.md
+        min: 600
+- id: from_ai_graph_tool_error_audit
+  type: cleanup
+  priority: 60
+  description: '[from-ai-graph] Audit all 21 tools in chat.py for the ''tool failures
+    ignored'' production gotcha. Each tool should return structured errors {error:
+    ..., reason: ...} on failure rather than {} or null. The agent loop currently
+    can''t distinguish ''no results'' from ''tool crashed'' which causes silent retry
+    loops. Reference: Layer 4 Production Gotchas table in data/research_neo4j_crawl/04_ai_graph_extract.md.'
+  blockers: []
+  spec:
+    commits_code: true
+    acceptance:
+    - python: 'True'
+- id: from_ai_graph_disable_reranker_baseline
+  type: cypher_analysis
+  priority: 83
+  description: '[from-ai-graph][answer-quality] P0-quick-win: Run eval_v1 (13q) with
+    RERANK_DISABLED=1 and compare to current baseline (avg 43.6 cites). Hypothesis:
+    disabling the reranker lifts avg cites toward 48+ since raw BGE-M3 vector (hit@10=0.6364)
+    already beats reranked output (hit@10=0.3182). No external API keys needed. Produces
+    a new data/eval_rerank_disabled_results.json.'
+  blockers: []
+  spec:
+    query_kind: python_script
+    script: 'import pathlib
+
+      p = pathlib.Path(''data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md'')
+
+      assert p.exists() and p.stat().st_size >= 300, f"analysis file missing or too
+      small: {p.stat().st_size if p.exists() else ''not found''}"
+
+      print(''OK: analysis file present,'', p.stat().st_size, ''bytes'')
+
+      print(''Key finding: RERANK_DISABLED=1 predicted to recover hit@10 from 0.3182
+      -> 0.6364 (+100%)'')
+
+      print(''Predicted eval_v1 avg cites: 43.6 -> 48-54 (conservative +4, optimistic
+      +10)'')
+
+      '
+    acceptance:
+    - file_exists: data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md
+    - file_min_bytes:
+        path: data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md
+        min: 300
+- id: from_ai_graph_cohere_rerank_ab_impl
+  type: agent_creative
+  priority: 50
+  description: '[from-ai-graph][answer-quality][opus] Write eval_qrcd_reranker_ab.py,
+    add RERANKER_BACKEND=cohere branch to retrieval_gate.py, run on QRCD 22-q + eval_v1
+    13-q, compare hit@10/MAP@10/avg-cites vs baseline. Cohere Rerank 4 Pro: confirmed
+    multilingual (100+ langs incl. Arabic), 32K context, ELO 1627 (#2). Plan already
+    written in detail file — needs COHERE_API_KEY in .env. Blocker: user adds COHERE_API_KEY.'
+  blockers: []
+  notes: 'Priority dropped p82→p50 at maintenance tick 48: COHERE_API_KEY is not set
+    and user has not indicated intent to add it. from_ai_graph_arabic_reranker_research
+    (p75) is a better intermediate step — survey free HuggingFace alternatives first;
+    if they fail, revisit Cohere. The A/B script skeleton is in the detail file (data/ralph_analysis_from_ai_graph_zeroentropy_cohere_reranker_ab_detail.md).'
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_ai_graph_cohere_rerank_ab_impl.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_ai_graph_cohere_rerank_ab_impl.md
+        min: 600
+- id: from_ai_graph_arabic_reranker_research
+  type: cypher_analysis
+  priority: 75
+  description: '[from-ai-graph] Research Arabic-specific reranking options. Candidates:
+    CAMeL-BERT, AraBART fine-tuned for reranking, JAIS-based reranker. Survey HuggingFace
+    for Arabic-Quran-domain rerankers. Write data/ralph_analysis_arabic_reranker_options.md.'
+  notes: 'Priority bumped p55→p75 at maintenance tick 48: bge-reranker-v2-m3 confirmed
+    to drop hit@10 50% on Arabic queries (from_ai_graph_disable_reranker_baseline
+    DONE). Finding an Arabic-safe replacement is now P1. Research Arabic reranker
+    options in parallel while Cohere A/B runs.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_analysis_arabic_reranker_options.md
+    - file_min_bytes:
+        path: data/ralph_analysis_arabic_reranker_options.md
+        min: 400
+- id: from_blog_tool_input_validation
+  type: cleanup
+  priority: 45
+  description: '[from-research] Add input validation to chat.py tool schemas: enforce
+    Surah number in [1-114], ayah range checks, and language code allowlists. Return
+    structured {error, reason} on invalid args (pre-execution guard). Synergistic
+    with from_ai_graph_tool_error_audit (p60) which covers post-execution errors.'
+  blockers: []
+  spec:
+    commits_code: true
+    acceptance:
+    - file_exists: data/ralph_analysis_from_blog_tool_input_validation.md
+    - file_min_bytes:
+        path: data/ralph_analysis_from_blog_tool_input_validation.md
+        min: 400
+- id: from_ralph_yt_01_tokenize_claudemd
+  type: cleanup
+  priority: 82
+  description: '[from-ralph-yt] Run CLAUDE.md through tiktoken (cl100k_base). Jeff''s
+    rule of thumb: agents.md / CLAUDE.md should be ~60 lines / <3K tokens. Ours is
+    13.6KB / several hundred lines — almost certainly over the ceiling. If > 3000
+    tokens, create CLAUDE_INDEX.md (~60 lines, hyperlinks to spec sections) and inject
+    the index instead of the full file in subagent briefs. Compounds across every
+    tick — very high cumulative impact.'
+  blockers: []
+  spec:
+    commits_code: true
+    acceptance:
+    - file_exists: data/ralph_analysis_from_ralph_yt_01_tokenize_claudemd.md
+    - file_min_bytes:
+        path: data/ralph_analysis_from_ralph_yt_01_tokenize_claudemd.md
+        min: 300
+- id: from_ralph_yt_02_filter_test_output
+  type: cleanup
+  priority: 65
+  description: '[from-ralph-yt] Wrap eval_v1.py and Cypher smoke-test scripts with
+    an output filter: suppress PASS lines, emit only FAIL lines + summary count. Jeff:
+    ''Most test runners are trash. They output too many tokens.'' Expose as run_tests_filtered.py.
+    Quality gate in ralph_tick.py should call the wrapper so green-run output is <=5
+    lines.'
+  blockers: []
+  spec:
+    commits_code: true
+    acceptance:
+    - file_exists: run_tests_filtered.py
+    - file_min_bytes:
+        path: run_tests_filtered.py
+        min: 500
+- id: from_ralph_yt_03_audit_negative_prompts
+  type: cleanup
+  priority: 70
+  description: '[from-ralph-yt] Audit ralph_tick.py system prompt, CLAUDE.md, ralph_backlog.yaml
+    descriptions, AND the cron orchestrator brief for negative-form instructions (''do
+    not'', ''never'', ''avoid''). Jeff: negative phrasing puts the noun in context
+    and the model often acts on the noun, forgetting the negation. Rewrite as positive
+    actions. Our cron brief has multiple ''do NOT do any work yourself'' lines — high-leverage
+    rewrite.'
+  blockers: []
+  spec:
+    commits_code: true
+    acceptance:
+    - python: 'True'
+- id: from_ralph_yt_04_parallel_worktree_spike
+  type: agent_creative
+  priority: 45
+  description: '[from-ralph-yt] Spike: can we run two concurrent ralph ticks in separate
+    git worktrees without conflict? Create proof-of-concept ralph_parallel.py: (a)
+    creates two worktrees from main, (b) assigns one cache-seeding task + one graph-enrichment
+    task, (c) runs both as subprocesses, (d) merges back to main, (e) resolves conflicts.
+    Document patterns/gotchas.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_ralph_yt_04_parallel_worktree_spike.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_ralph_yt_04_parallel_worktree_spike.md
+        min: 600
+- id: from_neo4j_yt_router_agent
+  type: agent_creative
+  priority: 85
+  description: '[from-neo4j-yt][answer-quality][opus] Add a complexity-router that
+    classifies abstract vs structured queries and dispatches to concept_search FIRST
+    for abstract concepts (meditation/reverence/Surah 55 cluster currently scoring
+    13-27 cites). Two videos (EventKernel + Agentic GraphRAG) independently identify
+    this as the fix for our exact failure mode. Implementation sketch in chat.py system
+    prompt: routing heuristic for queries lacking verse refs/roots → concept_search
+    → traverse_topic. Direct answer-quality lift expected.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_neo4j_yt_router_agent.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_neo4j_yt_router_agent.md
+        min: 800
+- id: from_neo4j_yt_mcp_balanced_tool_grouping
+  type: agent_creative
+  priority: 78
+  description: '[from-neo4j-yt][answer-quality] Smarter MCP Servers (NODES 2026) shows
+    62% token-overhead reduction via 8-tool startup set + 3 discoverable categories.
+    Our 21 tools currently cost ~4,200 tokens before first message. Implement graph-backed
+    startup set using RETRIEVED edge counts from reasoning_memory.py (existing data
+    — no new infra). Hot 8: search_keyword, semantic_search, get_verse, concept_search,
+    traverse_topic, hybrid_search, recall_similar_query, run_cypher. Discoverable:
+    etymology, surah-level, code19. Saves ~2,600 tokens per turn × every chat = compounding.'
+  blockers: []
+  notes: Pairs with from_neo4j_yt_mcp_graph_backed_registry (p65) — registry provides
+    the RETRIEVED-edge-count data needed to rank the startup set. Run grouping after
+    or alongside registry.
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_neo4j_yt_mcp_balanced_tool_grouping.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_neo4j_yt_mcp_balanced_tool_grouping.md
+        min: 700
+- id: from_neo4j_yt_memory_05_reasoning_step
+  type: cleanup
+  priority: 78
+  description: '[from-neo4j-yt] Insert (:ReasoningStep {turn_number, rationale}) between
+    ReasoningTrace and ToolCall. Carries free-text rationale (the quintuple description).
+    Schema additive — existing traces unaffected. Triple-confirmed across 3 research
+    streams (Neo4j docs crawl + agent-memory video batch + AI graph extract). Closes
+    the missing-step gap.'
+  blockers: []
+  spec:
+    commits_code: true
+    acceptance:
+    - python: 'True'
+- id: from_neo4j_yt_memory_01_bitemporal_retrieved
+  type: cleanup
+  priority: 75
+  description: '[from-neo4j-yt] Add valid_from (ISO timestamp) and model_version string
+    properties to RETRIEVED edges. Backfill existing 32K edges with model_version=''pre-bge-m3''
+    sentinel. Enables: ''which verses ranked highly under MiniLM but not BGE-M3?''
+    — directly useful for the embedding migration story. Schema additive. From the
+    agent-memory video batch (bitemporal model is industry standard 2026).'
+  blockers: []
+  spec:
+    acceptance:
+    - python: 'True'
+- id: from_neo4j_yt_mcp_tool_description_audit
+  type: cleanup
+  priority: 80
+  description: '[from-neo4j-yt][synthesis-promoted 2026-05-12] Audit and rewrite all
+    21 chat.py tool descriptions for LLM routing clarity. FOUR independent sources
+    (3 NODES videos + 1 blog post) confirm description quality is the primary tool-selection
+    signal — synthesis pass bumped this from 70→80 (was systematically undervalued).
+    Our descriptions were written as Python docstrings, not natural-language routing
+    prompts. Required before any MCP wrapping. Per-tool: clear when-to-use, when-NOT-to-use,
+    expected output shape.'
+  blockers: []
+  spec:
+    commits_code: true
+    acceptance:
+    - python: 'True'
+  status: DONE_WITH_CONCERNS
+  done_notes: Audited all 21 tool descriptions; 6 improved for routing clarity (search_keyword,
+    semantic_search, concept_search, hybrid_search, recall_similar_query, run_cypher).
+    See data/ralph_analysis_from_neo4j_yt_mcp_tool_description_audit.md
+- id: from_neo4j_yt_memory_03_consolidation_job
+  type: cypher_analysis
+  priority: 70
+  description: '[from-neo4j-yt] Write consolidate_traces.py: nightly batch job that
+    (a) finds Query node clusters with cosine > 0.96 on query_embedding, (b) creates
+    (:QueryCluster) merging retrieval stats, (c) links members via [:MEMBER_OF]. The
+    ''sleep step'' pattern from the agent-memory video batch — every speaker independently
+    named a nightly consolidation as the missing piece. We currently accumulate traces
+    unbounded.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: consolidate_traces.py
+    - file_min_bytes:
+        path: consolidate_traces.py
+        min: 400
+- id: from_neo4j_yt_mcp_graph_backed_registry
+  type: agent_creative
+  priority: 65
+  description: '[from-neo4j-yt] Implement graph-backed tool registry using existing
+    RETRIEVED edge counts as the usage signal. Video 3 (Smarter MCP Servers): rank
+    tools in startup list by historical usage_count from reasoning_memory.py. Zero
+    new infra needed — we already have the data. Pairs with from_neo4j_yt_mcp_balanced_tool_grouping
+    (p78) — this task provides the data; grouping uses it.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_neo4j_yt_mcp_graph_backed_registry.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_neo4j_yt_mcp_graph_backed_registry.md
+        min: 600
+- id: from_neo4j_yt_sufficiency_gate
+  type: agent_creative
+  priority: 62
+  description: '[from-neo4j-yt][answer-quality] Replace blunt 15-turn cap with three-way
+    in-loop evaluator: ''sufficient / hop_more / replan''. GraphReader + EventKernel
+    both use this pattern. After each tool-call batch, inject short evaluator prompt;
+    replan path triggers concept_search restart. Cap replan retries at 2. Expected
+    to reduce wasted turns on hard abstract queries.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_neo4j_yt_sufficiency_gate.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_neo4j_yt_sufficiency_gate.md
+        min: 700
+- id: from_research_finetune_bge_m3_qrcd
+  type: agent_creative
+  priority: 88
+  description: '[from-research][answer-quality][opus][synthesis-promoted 2026-05-12]
+    Fine-tune BGE-M3 dense on QRCD passage-question pairs (and optionally Tafsir Q&A).
+    Target: lift QRCD MAP@10 from 0.139 toward the 0.36 literature ceiling (AraBERT
+    fine-tuned). Synthesis pass identified this as THE direct path to closing the
+    literature gap — bumped 78→88. Domain-adaptation, not architecture, is the gap
+    (ColBERT only adds 1-2 nDCG points, ruled out). Use FlagEmbedding''s training
+    pipeline; produce a domain-adapted checkpoint, eval against held-out QRCD test
+    split, decide whether to swap baseline. Source: data/research_bge_m3_dense_vs_colbert.md
+    + data/research_synthesis_2026-05-12.md.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_research_finetune_bge_m3_qrcd.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_research_finetune_bge_m3_qrcd.md
+        min: 800
+- id: from_blog_extend_reasoning_memory_confidence
+  type: agent_creative
+  priority: 62
+  description: '[from-research] Extend reasoning_memory.py to store `thought` and
+    `confidence` properties on TraceStep/ToolCall nodes, aligned with Neo4j Context
+    Graph decision-trace pattern. Makes reasoning traces auditable and replayable.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_blog_extend_reasoning_memory_confidence.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_blog_extend_reasoning_memory_confidence.md
+        min: 600
+- id: from_blog_stateful_ai_memory_path_convention
+  type: cleanup
+  priority: 58
+  description: '[from-research] Add structured `memory_path` property (e.g. sessions/<id>/traces/<ts>)
+    to ReasoningTrace nodes in reasoning_memory.py. Enables session-scoped retrieval
+    and future MCP memory-tool exposure.'
+  blockers: []
+  spec:
+    commits_code: true
+    acceptance:
+    - file_exists: data/ralph_agent_from_blog_stateful_ai_memory_path_convention.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_blog_stateful_ai_memory_path_convention.md
+        min: 500
+- id: from_blog_same_as_dedup_concepts
+  type: cypher_analysis
+  priority: 62
+  description: '[from-research] Add SAME_AS deduplication relationships to Concept
+    and ArabicRoot nodes using embedding similarity + fuzzy string matching. Audit
+    transliteration variants (al-Rahman/ar-Rahman, Yusuf/Joseph etc.), write findings
+    to data/ralph_analysis_same_as_dedup_audit.md.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_analysis_same_as_dedup_audit.md
+    - file_min_bytes:
+        path: data/ralph_analysis_same_as_dedup_audit.md
+        min: 400
+- id: from_blog_reasoning_memory_session_layer
+  type: agent_creative
+  priority: 55
+  description: '[from-research] Extend reasoning_memory.py to add a session message
+    layer: (:UserSession)-[:HAS_QUERY]->(:Query)-[:NEXT_QUERY]->(:Query) with BGE-M3
+    embedding on Query. Hooks inject top-3 similar past queries as system context
+    and persist new Query node async. Deliverable: design doc + diff sketch.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_reasoning_memory_session_layer.md
+    - file_min_bytes:
+        path: data/ralph_agent_reasoning_memory_session_layer.md
+        min: 600
+- id: from_adaptive_routing_design
+  type: agent_creative
+  priority: 80
+  description: '[from-operator][opus] Design adaptive query-conditional retrieval
+    architecture. Layer 1 = per-bucket retrieval CONFIG (rerank on/off, RRF k, embedding
+    index, max_turns, citation verifier strength). Layer 2 = per-bucket AGENT shape
+    (linear ReAct vs Reflexion vs MoA sub-agent decomp). Layer 3 = per-bucket MODEL
+    routing (Haiku for simple, Opus for synthesis). Output design doc with: (a) the
+    5 profile definitions with concrete params + evidence basis, (b) classifier extension
+    plan (current classify_query() output expanded to BROAD class), (c) misclassification
+    cost analysis, (d) risk register, (e) sequencing — ship 2-profile spike first
+    then expand. Evidence basis lives in data/ralph_analysis_from_ai_graph_disable_reranker_baseline.md
+    and data/eval_v1_baseline_rerank_on.json. BLOCKED on from_adaptive_routing_50q_bucketed_eval
+    for empirical validation but design can proceed in parallel.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_adaptive_routing_design.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_adaptive_routing_design.md
+        min: 1500
+- id: from_adaptive_routing_50q_bucketed_eval
+  type: agent_creative
+  priority: 78
+  description: '[from-operator] Build a 50-question evaluation set with explicit query-class
+    bucket labels (~10 questions per bucket: STRUCTURED, ABSTRACT, CONCRETE, BROAD,
+    ARABIC). Pre-commit labels so we can detect per-profile lift in adaptive-routing
+    experiments. Eval_v1''s 13 questions are too noisy to see per-profile effects
+    (saw +96 and -84 in one run). Source: eval-v1 question bank + new abstract / broad
+    / arabic questions designed to expose each profile''s failure mode. Each question
+    gets a `bucket:` field in the YAML/JSON. New eval script reads the bucket and
+    emits per-bucket avg_cites in addition to overall.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_adaptive_routing_50q_bucketed_eval.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_adaptive_routing_50q_bucketed_eval.md
+        min: 800
+- id: from_adaptive_routing_2profile_spike
+  type: agent_creative
+  priority: 72
+  description: '[from-operator] Ship minimum-viable 2-profile spike: classify each
+    incoming /chat query as BROAD or NOT-BROAD (single axis). BROAD = keeps reranker
+    ON; NOT-BROAD = reranker OFF. Single env knob, contains risk. Wire via retrieval_gate.py
+    reading a per-request profile from chat.py. Eval on the 50-question bucketed set
+    (blocked on from_adaptive_routing_50q_bucketed_eval). Decision gate before expanding
+    to 5 profiles. Expected lift: +5-10 cites on concrete queries (paradise/Sin/charity
+    cluster from the rerank-off experiment) without regression on BROAD (themes).'
+  blocked_on:
+  - from_adaptive_routing_50q_bucketed_eval
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_adaptive_routing_2profile_spike.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_adaptive_routing_2profile_spike.md
+        min: 1000
+- id: from_blog_hyde_semantic_search_spike
+  type: agent_creative
+  priority: 55
+  description: '[from-blog][answer-quality] Spike HyDE (Hypothetical Document Embeddings)
+    in chat.py as an optional pre-processing step for semantic_search. Generate a
+    short hypothetical answer via claude-haiku-4-5, embed it with BGE-M3, use as the
+    query vector instead of the raw query text. Gate on env var HYDE_ENABLED=1. Measure
+    QRCD MAP@10 delta. Synergistic with from_neo4j_crawl_single_shot_vector_traversal.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_blog_hyde_semantic_search_spike.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_blog_hyde_semantic_search_spike.md
+        min: 800
+- id: from_blog_betweenness_centrality_rerank
+  type: agent_creative
+  priority: 40
+  description: '[from-blog][answer-quality] Compute betweenness centrality for all
+    Verse nodes using GDS (or NetworkX from existing graph_stats.json data), store
+    as Verse.betweenness property in Neo4j, and incorporate as an optional re-ranking
+    signal in retrieval_gate.py alongside cross-encoder scores. Hypothesis: conceptually
+    central verses (high betweenness) are more likely to be relevant to broad/thematic
+    queries.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_agent_from_blog_betweenness_centrality_rerank.md
+    - file_min_bytes:
+        path: data/ralph_agent_from_blog_betweenness_centrality_rerank.md
+        min: 600
+- id: from_graphacademy_cypher_fewshots
+  type: cleanup
+  priority: 45
+  description: 'Add 5-8 QKG-specific few-shot Cypher examples to the run_cypher tool
+    description in chat.py. Examples should cover common patterns: verse lookup by
+    ID, root traversal, RELATED_TO neighbors, semantic domain membership, morphological
+    pattern search. Reduces hallucinated property names when the LLM tries to use
+    run_cypher as an escape hatch. Pattern sourced from GraphAcademy llm-chatbot-python
+    course (few-shot Cypher tuning).'
+  blockers: []
+  spec:
+    acceptance:
+    - file_min_bytes:
+        path: chat.py
+        min: 1
+- id: qwen3_reranker_ab_qrcd
+  type: eval
+  priority: 78
+  description: '[from-arabic-reranker-research] A/B Qwen3-Reranker-0.6B vs RERANK_DISABLED=1
+    vs current bge-reranker-v2-m3 on QRCD 22-q. Primary metric: hit@10. Change RERANKER_MODEL=Qwen/Qwen3-Reranker-0.6B
+    in .env, run eval_qrcd_ablation.py, commit results. Context: see data/ralph_analysis_arabic_reranker_options.md.'
+  blockers: []
+  spec:
+    acceptance:
+    - file_exists: data/ralph_analysis_qwen3_reranker_ab_qrcd.md
+    - file_min_bytes:
+        path: data/ralph_analysis_qwen3_reranker_ab_qrcd.md
+        min: 400
 retired:
-  - id: append_ralph_status_to_AUTONOMOUS_RUN
-    retired_at: "2026-05-11T01:07:00+00:00"
-    reason: "Superseded by SESSION_LOG.md + STATE_SNAPSHOT.md (auto-generated) + MORNING_REPORT.md (every 12 ticks). Appending status to a static legacy report file is now redundant and conflicts with the structured state architecture."
+- id: append_ralph_status_to_AUTONOMOUS_RUN
+  retired_at: '2026-05-11T01:07:00+00:00'
+  reason: Superseded by SESSION_LOG.md + STATE_SNAPSHOT.md (auto-generated) + MORNING_REPORT.md
+    (every 12 ticks). Appending status to a static legacy report file is now redundant
+    and conflicts with the structured state architecture.

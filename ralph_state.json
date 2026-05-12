@@ -1,8 +1,8 @@
 {
   "version": 1,
   "in_progress": null,
-  "last_tick": "2026-05-12T06:17:14.724683+00:00",
-  "tick_count": 94,
+  "last_tick": "2026-05-12T07:17:57.149755+00:00",
+  "tick_count": 95,
   "done_task_ids": [
     "add_5_targeted_eval_questions",
     "rerun_eval_track_per_question_delta",
@@ -2126,13 +2126,37 @@
       "tokens_in": 0,
       "tokens_out": 0,
       "api_calls": 0
+    },
+    {
+      "task_id": "from_neo4j_yt_mcp_tool_description_audit",
+      "type": "cleanup",
+      "started_at": "2026-05-12T07:16:53.175939+00:00",
+      "finished_at": "2026-05-12T07:16:59.947908+00:00",
+      "status": "FAILED",
+      "attempt": 3,
+      "metric_before": null,
+      "metric_after": null,
+      "delta": null,
+      "notes": "[from-neo4j-yt][synthesis-promoted 2026-05-12] Audit and rewrite all 21 chat.py  | QUALITY GATE FAILED: Address(('::1', 7687, 0, 0)) (reason [WinError 10061] No connection could be made because the target machine actively refused it)\r\nFailed to establish connection to ResolvedIPv4Address(('127.0.0.1', 7",
+      "artefacts": [],
+      "error": null,
+      "acceptance_results": [
+        {
+          "check": "python True",
+          "passed": true,
+          "detail": "ok"
+        }
+      ],
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "api_calls": 0
     }
   ],
   "quarantined_task_ids": [],
   "attempts": {
     "from_neo4j_crawl_enable_slow_query_log": 2,
     "from_neo4j_crawl_check_neo4j_version": 3,
-    "from_neo4j_yt_mcp_tool_description_audit": 2
+    "from_neo4j_yt_mcp_tool_description_audit": 3
   },
   "api_usage": {
     "calls_total": 14,
@@ -2208,5 +2232,5 @@
     ]
   },
   "last_tick_time": "2026-05-11T21:44:55.791758+00:00",
-  "last_task_id": "maintenance"
+  "last_task_id": "from_neo4j_yt_mcp_tool_description_audit"
 }
