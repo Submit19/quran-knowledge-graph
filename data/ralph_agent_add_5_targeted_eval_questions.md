@@ -9,6 +9,6 @@ QUESTIONS_TARGETED = [
     "How many times does the letter Qaf appear in Surah Qaf? (forces get_code19_features)",
     "How many verses mention Abraham across all surahs? (forces run_cypher aggregation)",
     "Find verses containing the word 'kawthar'. (forces hybrid_search BM25 path)",
-    "What are the key concepts associated with the story of Prophet Yusuf? (forces concept_search)",
-    "Compare verses about the people of Lot in Surahs 7, 11, 26, and 27. (tests multi-hop traversal)",
+    "What concepts are associated with the term 'mercy' in the Quran? (forces concept_search)",
+    "Compare verses about the people of Lot in Surahs 7, 11, 26, and 27. (multi‑surah cross‑reference traversal)",
 ]
