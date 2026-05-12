@@ -1,29 +1,10 @@
 version: 1
-pending:
-- id: from_graphacademy_cypher_fewshots
-  priority: 45
-  type: cleanup
-  description: 'Add 5-8 QKG-specific few-shot Cypher examples to the run_cypher tool description in chat.py. Examples should
-    cover common patterns: verse lookup by ID, root traversal, RELATED_TO neighbors, semantic domain membership, morphological
-    pattern search. Reduces hallucinated property names when the LLM tries to use run_cypher as an escape hatch. Pattern sourced
-    from GraphAcademy llm-chatbot-python course (few-shot Cypher tuning).
-
-    '
-  acceptance:
-    file_min_bytes:
-      path: chat.py
-      min: 1
-  proposed_by: research:graphacademy:llm-chatbot-python
-  proposed_at: '2026-05-12T01:30:00+00:00'
-  seen_count: 0
-  haiku_notes:
-    classification: obvious_reject
-    duplicate_of: null
-    relates_to: []
-    note: Proposal is empty (no type, priority, or description provided). Cannot triage.
-    annotated_at: '2026-05-12T01:44:49.693573+00:00'
-    model: claude-haiku-4-5
+pending: []
 approved:
+- approved_at: '2026-05-12T02:00:00+00:00'
+  reason: APPROVED (overriding incorrect haiku_notes — task has full type/priority/description; no duplicate in backlog; actionable few-shot Cypher improvement for run_cypher tool). Added at p45 cleanup.
+  task_id: from_graphacademy_cypher_fewshots
+  proposed_by: research:graphacademy:llm-chatbot-python
 - approved_at: '2026-05-12T20:00:00+00:00'
   reason: actionable (Haiku confirmed) — no duplicate in backlog; direct follow-on to Arabic reranker research; Qwen3-Reranker-0.6B
     not yet tested. Added at p78.

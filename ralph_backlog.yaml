@@ -1013,6 +1013,16 @@ tasks:
         - file_exists: data/ralph_agent_from_blog_betweenness_centrality_rerank.md
         - file_min_bytes: { path: data/ralph_agent_from_blog_betweenness_centrality_rerank.md, min: 600 }
 
+  # ── [from-graphacademy] Approved from proposed_tasks.yaml tick 82 ──────────────
+  - id: from_graphacademy_cypher_fewshots
+    type: cleanup
+    priority: 45
+    description: "Add 5-8 QKG-specific few-shot Cypher examples to the run_cypher tool description in chat.py. Examples should cover common patterns: verse lookup by ID, root traversal, RELATED_TO neighbors, semantic domain membership, morphological pattern search. Reduces hallucinated property names when the LLM tries to use run_cypher as an escape hatch. Pattern sourced from GraphAcademy llm-chatbot-python course (few-shot Cypher tuning)."
+    blockers: []
+    spec:
+      acceptance:
+        - file_min_bytes: { path: chat.py, min: 1 }
+
   # ── [from-arabic-reranker-research] Approved from proposed_tasks.yaml tick 68 ─
   - id: qwen3_reranker_ab_qrcd
     type: eval
