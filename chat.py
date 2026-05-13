@@ -2403,8 +2403,11 @@ def _tool_cache_get(key: str):
     if _TOOL_CACHE_TTL <= 0:
         return None
     import time
-    now = time.time()
     with _TOOL_CACHE_LOCK:
+        # Read wall-clock INSIDE the lock so the read-then-validate is
+        # atomic w.r.t. time progress while blocked acquiring the lock.
+        # Otherwise a stale `now` can mark an expired entry as fresh.
+        now = time.time()
         entry = _TOOL_CACHE.get(key)
         if entry is None:
             _TOOL_CACHE_STATS["misses"] += 1

@@ -47,10 +47,6 @@ def _clean_cache_state():
         chat._TOOL_CACHE.clear()
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="Bug C: _tool_cache_get reads `now` outside the lock; Phase 3b fix",
-)
 def test_get_does_not_return_stale_entry_under_lock_contention():
     """The headline race: lock-blocked get must not return an expired entry."""
     chat._TOOL_CACHE_TTL = 0.05  # 50ms TTL
