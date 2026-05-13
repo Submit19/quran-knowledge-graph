@@ -546,51 +546,7 @@ async def quran_linker_js():
 DEEP_DIVE_MODEL = "qwen3:14b"  # escalation model for complex questions
 
 
-async def _pump_worker_into_sse(run_fn, *, join_timeout: float = 1.0):
-    """Run `run_fn(queue, stop_event)` in a daemon thread; yield SSE frames.
-
-    Encapsulates the daemon-thread + queue orchestration that powers the
-    streaming /chat endpoint. The worker pushes dict events into the queue
-    and a final None sentinel when done; this helper drains the queue and
-    yields each event as an SSE-formatted line.
-
-    On consumer disconnect — FastAPI calls aclose() on the generator when
-    the client goes away, or an upstream exception propagates — the finally
-    block sets the stop_event and joins the worker thread with a short
-    timeout. Workers with long-running steps (LLM calls, large Cypher) MUST
-    poll stop_event between steps for the teardown to take effect; the
-    daemon flag ensures the process can still exit even if a step blocks
-    past the join timeout.
-    """
-    import queue as tqueue
-
-    q: tqueue.SimpleQueue = tqueue.SimpleQueue()
-    stop_event = threading.Event()
-
-    def target():
-        try:
-            run_fn(q, stop_event)
-        finally:
-            # Belt-and-braces sentinel — guarantees the consumer's
-            # `if event is None: break` fires even if run_fn raised.
-            q.put(None)
-
-    thread = threading.Thread(target=target, daemon=True)
-    thread.start()
-
-    try:
-        while True:
-            try:
-                event = q.get_nowait()
-            except Exception:
-                await asyncio.sleep(0.05)
-                continue
-            if event is None:
-                break
-            yield f"data: {json.dumps(event, ensure_ascii=False)}\n\n"
-    finally:
-        stop_event.set()
-        thread.join(timeout=join_timeout)
+from sse_pump import pump_worker_into_sse as _pump_worker_into_sse
 
 
 @app.post("/chat")

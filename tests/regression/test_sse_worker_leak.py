@@ -1,29 +1,30 @@
 """
-Regression: app_free._pump_worker_into_sse leaks the worker thread.
+Regression: SSE worker thread leaks after consumer disconnect (Bug D).
 
-The /chat SSE endpoint spawns a daemon thread that does LLM calls, Neo4j
-queries, and pushes events into a queue. The async generator yields those
-events as SSE frames. Today, if the consumer (client) disconnects, the
-generator stops being driven — but the daemon thread keeps running through
-its remaining LLM calls and tool dispatches. The work is wasted and, on a
-real server, can pin CPU/GPU and quota.
+The /chat SSE endpoint in app_free spawns a daemon thread that does LLM
+calls, Neo4j queries, and pushes events into a queue. The async generator
+yields those events as SSE frames. Before this fix, if the consumer
+(client) disconnected, the generator stopped being driven — but the
+daemon thread kept running through its remaining LLM calls and tool
+dispatches. The work was wasted and, on a real server, could pin CPU/GPU
+and burn API quota.
 
-This test extracts the orchestration into a helper `_pump_worker_into_sse`
-so the leak can be reproduced without spinning up the whole agent loop.
-A fake worker emulates the "LLM keeps returning tool_use forever" pattern
-by ticking events at ~10ms intervals until told to stop.
+The orchestration was extracted into sse_pump.pump_worker_into_sse so it
+can be tested without spinning up the whole agent loop (no Neo4j, no
+LLM client, no FastAPI required in CI). A fake worker emulates the "LLM
+keeps returning tool_use forever" pattern by ticking events at ~10ms
+intervals until told to stop.
 
-  - test_consumer_aclose_stops_the_worker (xfail today):
-      Drives the generator, pulls a few events, calls aclose(). Expects the
-      worker to wind down within ~1.5s. Today the helper has no try/finally
-      and no stop signal, so the worker keeps ticking forever.
+  - test_consumer_aclose_stops_the_worker:
+      Drives the generator, pulls a few events, calls aclose(). Asserts
+      the worker winds down within ~1.5s. Before the fix the worker
+      kept ticking forever; the fix wraps the yield loop in try/finally,
+      sets a threading.Event the worker polls, and joins with a short
+      timeout.
 
   - test_worker_completion_terminates_normally:
-      Triangulation. Same helper, but the worker finishes on its own.
-      Verifies the normal-completion path is not broken by the fix.
-
-The Phase 3b fix wraps the consume loop in try/finally, sets the
-stop_event in the finally, and joins the thread with a short timeout.
+      Triangulation. Same helper, worker finishes on its own. Verifies
+      the normal-completion path is not broken by the fix.
 """
 
 from __future__ import annotations
@@ -32,8 +33,7 @@ import asyncio
 import threading
 import time
 
-
-import app_free
+import sse_pump
 
 
 def _drive(gen, *, events_to_pull: int, then_close: bool) -> list:
@@ -65,7 +65,7 @@ def test_consumer_aclose_stops_the_worker():
         finally:
             finished.set()
 
-    gen = app_free._pump_worker_into_sse(never_exiting_worker)
+    gen = sse_pump.pump_worker_into_sse(never_exiting_worker)
     pulled = _drive(gen, events_to_pull=3, then_close=True)
 
     assert len(pulled) == 3, f"expected to pull 3 events; got {pulled!r}"
@@ -89,7 +89,7 @@ def test_worker_completion_terminates_normally():
         finally:
             finished.set()
 
-    gen = app_free._pump_worker_into_sse(short_worker)
+    gen = sse_pump.pump_worker_into_sse(short_worker)
     pulled = _drive(gen, events_to_pull=3, then_close=False)
 
     # After 3 events the worker has pushed the None sentinel.
