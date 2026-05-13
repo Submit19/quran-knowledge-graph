@@ -1,0 +1,24 @@
+# Normalise line endings across mixed Windows/Linux contributors.
+# Per Phase 3b housekeeping (docs/QKG_RETROFIT_PLAN.md H1).
+
+* text=auto eol=lf
+
+# Windows-native scripts keep CRLF so cmd.exe / powershell.exe don't choke.
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# POSIX scripts always LF.
+*.sh text eol=lf
+
+# Binary assets — never normalise.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary
+*.zip  binary
+*.gz   binary
+*.dump binary
+*.bin  binary
+*.onnx binary
