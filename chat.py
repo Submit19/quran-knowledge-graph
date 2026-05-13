@@ -204,7 +204,7 @@ def tool_search_keyword(session, keyword: str) -> dict:
 
 def tool_get_verse(session, verse_id: str) -> dict:
     """Get a verse's full text, its keywords, and all directly connected verses."""
-    verse_id = verse_id.strip().replace(" ", ":")
+    verse_id = verse_id.strip().replace(" ", "")
     err = _validate_verse_id(verse_id)
     if err:
         return err

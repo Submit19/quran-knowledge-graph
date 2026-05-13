@@ -23,7 +23,6 @@ import chat
 from tests.fakes.neo4j_session import FakeNeo4jSession, graph_with_fatiha_opening
 
 
-@pytest.mark.xfail(strict=True, reason="chat.py:207 replace(' ',':') bug; Phase 3 fix")
 @pytest.mark.parametrize(
     "raw_input",
     [
