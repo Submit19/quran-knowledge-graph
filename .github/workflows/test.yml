@@ -17,6 +17,8 @@ on:
       - main
       - 'phase-*'
       - 'claude/*'
+      - 'housekeeping/*'
+      - 'docs/*'
   pull_request:
     branches:
       - main
