@@ -36,6 +36,8 @@ data/answer_cache.json
 # Log and output files
 *.log
 *.txt
+!requirements*.txt
+!prompts/*.txt
 app_log.txt
 app_out.txt
 dashboard_output.txt

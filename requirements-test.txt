@@ -1,0 +1,10 @@
+# Test-only dependencies. Install with:
+#   pip install -r requirements-test.txt
+#
+# Production deps live in requirements.txt (or are installed ad-hoc per CLAUDE.md).
+# Kept separate so production installs aren't bloated by test infra.
+
+pytest>=8.0
+pytest-xdist>=3.5      # parallel test execution
+pytest-cov>=4.1        # coverage reporting
+hypothesis>=6.0        # property-based testing (Phase 1 item 1 of augmenting tools)
