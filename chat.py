@@ -595,8 +595,11 @@ def tool_query_typed_edges(session, verse_id: str, edge_type: str = None) -> dic
         edge_type = edge_type.upper()
         if edge_type not in valid_types:
             return {"error": f"Unknown edge type '{edge_type}'. Valid: {valid_types}"}
+        # Parameter-bind edge_type via WHERE type(r) = $etype instead of
+        # concatenating it into the MATCH pattern (Bug B foot-gun fix).
         rows = list(session.run("""
-            MATCH (v:Verse {verseId: $id})-[r:""" + edge_type + """]-(other:Verse)
+            MATCH (v:Verse {verseId: $id})-[r]-(other:Verse)
+            WHERE type(r) = $etype
             RETURN other.verseId AS otherId, other.surahName AS surahName,
                    other.text AS text, other.arabicText AS arabic,
                    r.score AS score, r.confidence AS confidence,
