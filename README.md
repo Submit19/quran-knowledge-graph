@@ -5,12 +5,18 @@
 <h1 align="center">Quran Knowledge Graph</h1>
 
 <p align="center">
-An AI-powered Quran explorer connecting all 6,234 verses from Rashad Khalifa's translation (<em>The Final Testament</em>) through a Neo4j knowledge graph with Arabic morphology, etymology, and 3D visualization. Ask questions in natural language and get answers grounded in specific verse citations.
+An AI-powered Quran study tool connecting all 6,234 verses through a Neo4j knowledge graph with Arabic morphology, etymology, typed cross-verse relationships, and 3D visualization. Ask questions in natural language and get answers grounded in specific verse citations.
 </p>
+
+## About
+
+The Quran Knowledge Graph is a study tool for exploring the Quran. All 6,234 verses are connected through a Neo4j knowledge graph that captures keyword co-occurrence, thematic relationships, Arabic root etymology, morphological patterns, and typed cross-verse connections (verses that support, elaborate, qualify, contrast, or repeat one another).
+
+Ask any question in natural language. The system explores the graph through 21 specialised tools — keyword search, semantic similarity, root-family lookup, multi-hop traversal, hybrid retrieval — and returns an answer grounded in specific verse citations. Every claim links back to a verse you can hover, click, and explore further.
 
 ## What It Does
 
-- **Conversational search** -- Ask anything about the Quran. An agentic LLM explores the graph using 15 tools and returns answers citing specific verses `[2:255]` that you can hover over to read the full text in English and Arabic.
+- **Conversational search** -- Ask anything about the Quran. An agentic LLM explores the graph using 21 tools and returns answers citing specific verses `[2:255]` that you can hover over to read the full text in English and Arabic.
 - **Arabic root analysis** -- Trace connections through tri-literal roots. "Book" (kitab), "prescribed" (kutiba), and "wrote" (kataba) all share root k-t-b, revealing relationships invisible in English.
 - **Word-level etymology** -- Look up any Arabic word's root, lemma, morphological pattern (wazn), and all Quranic occurrences. Explore semantic fields and polysemy (wujuh).
 - **3D graph visualization** -- 6,234 verses arranged on a Fibonacci sphere by surah. Connections light up in real-time as the agent explores. Fly through with WASD controls.
