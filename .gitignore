@@ -79,3 +79,31 @@ QKG Obsidian/.obsidian/plugins/*/styles.css
 QKG Obsidian/.obsidian/plugins/*/data.json
 # Keep manifest.json and community-plugins.json so fresh clones know which plugins to install.
 data/research_cache/
+
+# Obsidian view state — auto-generated, not for tracking
+QKG Obsidian/.obsidian/graph.json
+QKG Obsidian/.obsidian/workspace.json
+
+# Pre-retrofit cruft — physical cleanup in Phase 5/7 of docs/QKG_RETROFIT_PLAN.md
+overnight_seed*.py
+overnight_seed*.json
+overnight_seed.state*.json
+benchmark_models.py
+benchmark_results.json
+cache_validation*.py
+cache_validation*.json
+sandbox.html
+sandbox.py
+ckpts/
+thumbnails/
+make_thumbnails.py
+normalize_citations.py
+repair_citations.py
+seed_cache.py
+va_impact_report.md
+va_impact_results.json
+data/verse_analysis/
+data/answer_cache.baseline.json
+data/answer_cache.*.bak
+data/answer_cache.*.backup.json
+launch_free.bat
