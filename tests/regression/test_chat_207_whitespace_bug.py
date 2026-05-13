@@ -24,8 +24,17 @@ from tests.fakes.neo4j_session import FakeNeo4jSession, graph_with_fatiha_openin
 
 
 @pytest.mark.xfail(strict=True, reason="chat.py:207 replace(' ',':') bug; Phase 3 fix")
-def test_get_verse_normalises_inner_whitespace():
+@pytest.mark.parametrize(
+    "raw_input",
+    [
+        "1 : 1",  # canonical bug case: space-colon-space round trips to "1:::1"
+        "1 :1",  # asymmetric inner whitespace before the colon -> "1::1"
+        "1: 1",  # asymmetric inner whitespace after the colon -> "1::1"
+        "1  :  1",  # multiple inner spaces — replace each with colon -> "1::::1"
+    ],
+)
+def test_get_verse_normalises_inner_whitespace(raw_input):
     session = FakeNeo4jSession(graph_with_fatiha_opening())
-    result = chat.tool_get_verse(session, "1 : 1")
-    assert "error" not in result, f"normalisation failed: {result!r}"
+    result = chat.tool_get_verse(session, raw_input)
+    assert "error" not in result, f"normalisation failed for {raw_input!r}: {result!r}"
     assert result["verse_id"] == "1:1"
