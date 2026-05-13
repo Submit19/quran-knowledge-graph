@@ -32,7 +32,6 @@ import asyncio
 import threading
 import time
 
-import pytest
 
 import app_free
 
@@ -53,10 +52,6 @@ def _drive(gen, *, events_to_pull: int, then_close: bool) -> list:
     return pulled
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="Bug D: _pump_worker_into_sse has no try/finally; worker leaks on aclose",
-)
 def test_consumer_aclose_stops_the_worker():
     """The headline leak: closing the SSE generator must wind down the worker."""
     finished = threading.Event()

@@ -546,25 +546,21 @@ async def quran_linker_js():
 DEEP_DIVE_MODEL = "qwen3:14b"  # escalation model for complex questions
 
 
-async def _pump_worker_into_sse(run_fn):
+async def _pump_worker_into_sse(run_fn, *, join_timeout: float = 1.0):
     """Run `run_fn(queue, stop_event)` in a daemon thread; yield SSE frames.
 
     Encapsulates the daemon-thread + queue orchestration that powers the
-    streaming /chat endpoint. The worker is responsible for pushing dict
-    events into the queue and a final None sentinel when done; this helper
-    drains the queue and yields each event as an SSE-formatted line.
+    streaming /chat endpoint. The worker pushes dict events into the queue
+    and a final None sentinel when done; this helper drains the queue and
+    yields each event as an SSE-formatted line.
 
-    Bug D (Phase 3b): on consumer disconnect (client closes the SSE
-    connection, FastAPI calls aclose() on this generator) the worker
-    thread keeps running and continues to make LLM calls, Neo4j queries,
-    etc. Today there is no try/finally and no stop signal — the daemon
-    thread simply runs to completion regardless of whether anyone is
-    listening.
-
-    The Phase 3b fix wraps the consume loop in try/finally, signals the
-    worker via the supplied stop_event, and joins with a short timeout.
-    Workers that have long-running steps (e.g. an LLM call) should poll
-    stop_event between steps to cooperate with the teardown.
+    On consumer disconnect — FastAPI calls aclose() on the generator when
+    the client goes away, or an upstream exception propagates — the finally
+    block sets the stop_event and joins the worker thread with a short
+    timeout. Workers with long-running steps (LLM calls, large Cypher) MUST
+    poll stop_event between steps for the teardown to take effect; the
+    daemon flag ensures the process can still exit even if a step blocks
+    past the join timeout.
     """
     import queue as tqueue
 
@@ -572,22 +568,29 @@ async def _pump_worker_into_sse(run_fn):
     stop_event = threading.Event()
 
     def target():
-        # Bug-faithful for now: no try/finally → if run_fn raises, the
-        # consumer never sees a sentinel and stalls on q.get_nowait.
-        run_fn(q, stop_event)
+        try:
+            run_fn(q, stop_event)
+        finally:
+            # Belt-and-braces sentinel — guarantees the consumer's
+            # `if event is None: break` fires even if run_fn raised.
+            q.put(None)
 
     thread = threading.Thread(target=target, daemon=True)
     thread.start()
 
-    while True:
-        try:
-            event = q.get_nowait()
-        except Exception:
-            await asyncio.sleep(0.05)
-            continue
-        if event is None:
-            break
-        yield f"data: {json.dumps(event, ensure_ascii=False)}\n\n"
+    try:
+        while True:
+            try:
+                event = q.get_nowait()
+            except Exception:
+                await asyncio.sleep(0.05)
+                continue
+            if event is None:
+                break
+            yield f"data: {json.dumps(event, ensure_ascii=False)}\n\n"
+    finally:
+        stop_event.set()
+        thread.join(timeout=join_timeout)
 
 
 @app.post("/chat")
@@ -670,9 +673,6 @@ async def _agent_stream(message: str, history: list,
                          full_coverage: bool = False,
                          model_override: str | None = None,
                          local_only: bool = False):
-    import queue as tqueue
-    q: tqueue.SimpleQueue = tqueue.SimpleQueue()
-
     # Routing decision:
     # - local_only → skip OpenRouter entirely (use when quota hit or offline)
     # - model_override + key → use that OpenRouter model for this request
@@ -692,15 +692,17 @@ async def _agent_stream(message: str, history: list,
 
     # Log the routing decision and also tell the UI
     print(f"  [chat] {active_backend} :: {active_model}")
-    try:
-        q.put({"t": "tool", "name": "Model", "args": active_backend,
-               "summary": active_model})
-    except Exception:
-        pass
 
-    def run():
+    def run(q, stop_event):
         # Allow the fallback branch to rewrite these closures
         nonlocal active_model, active_backend
+        # Surface the routing decision to the UI as the first event.
+        try:
+            q.put({"t": "tool", "name": "Model", "args": active_backend,
+                   "summary": active_model})
+        except Exception:
+            pass
+
         # Start a reasoning-memory recording for this query
         try:
             rec = reasoning_memory.start_query(
@@ -824,6 +826,10 @@ async def _agent_stream(message: str, history: list,
                     return not (has_kw and has_sem)
 
                 while turn < MAX_TOOL_TURNS:
+                    if stop_event.is_set():
+                        # Consumer disconnected — bail out of the agent
+                        # loop before spending another LLM call.
+                        return
                     turn += 1
 
                     print(f"  [turn {turn}] backend={active_backend} model={active_model} msgs={len(msgs)}")
@@ -1128,18 +1134,8 @@ async def _agent_stream(message: str, history: list,
         finally:
             q.put(None)
 
-    thread = threading.Thread(target=run, daemon=True)
-    thread.start()
-
-    while True:
-        try:
-            event = q.get_nowait()
-        except Exception:
-            await asyncio.sleep(0.05)
-            continue
-        if event is None:
-            break
-        yield f"data: {json.dumps(event, ensure_ascii=False)}\n\n"
+    async for sse_frame in _pump_worker_into_sse(run):
+        yield sse_frame
 
 
 def _preload_model():
