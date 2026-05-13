@@ -285,6 +285,11 @@ def verify_acceptance(task: dict, result: TickResult) -> tuple[bool, list[dict]]
       - metric_above: {name, value}     (metric beat threshold)
       - metric_at_least_baseline: name  (metric did not regress)
       - python: <expr>                  (eval'd in a sandbox; truthy = pass)
+      - python_test_passes: <path>|[<path>, ...]
+          Run `python -m pytest <path> -q --tb=short` for each path.
+          All must exit 0. Stdout+stderr is captured into the detail
+          string on failure. Preferred gate for any task that touches
+          code (cleanup / cache_op / embed_op / prompt_variant).
     """
     spec = task.get("spec") or {}
     checks = spec.get("acceptance") or []
@@ -339,6 +344,23 @@ def verify_acceptance(task: dict, result: TickResult) -> tuple[bool, list[dict]]
                 out.append({"check": f"python {c['python'][:60]}",
                             "passed": False, "detail": f"raised: {e}"})
                 all_ok = False
+        elif "python_test_passes" in c:
+            paths = c["python_test_passes"]
+            if isinstance(paths, str):
+                paths = [paths]
+            for p in paths:
+                proc = subprocess.run(
+                    [sys.executable, "-m", "pytest", p, "-q", "--tb=short"],
+                    capture_output=True, text=True, timeout=300,
+                    cwd=str(ROOT),
+                )
+                passed = proc.returncode == 0
+                out.append({
+                    "check": f"python_test_passes {p}",
+                    "passed": passed,
+                    "detail": "ok" if passed else (proc.stdout + proc.stderr)[-2000:],
+                })
+                all_ok = all_ok and passed
         else:
             out.append({"check": str(c), "passed": False,
                         "detail": "unknown acceptance check shape"})

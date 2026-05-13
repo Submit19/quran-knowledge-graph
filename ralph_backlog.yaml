@@ -1,3 +1,25 @@
+# Ralph Loop — Backlog
+#
+# Each entry is a task picked up by ralph_loop.py via the executor registered
+# for its `type`. See ralph_loop.py:EXECUTORS for the dispatch table.
+#
+# Acceptance criteria (spec.acceptance) supported by verify_acceptance:
+#   - file_exists: <path>              — artefact was written
+#   - file_min_bytes: {path, min}      — artefact has content
+#   - metric_above: {name, value}      — metric beat threshold
+#   - metric_at_least_baseline: <name> — metric did not regress (>=95% of baseline)
+#   - python: <expr>                   — eval'd expression must be truthy
+#   - python_test_passes: <path>|[<path>, ...]
+#                                      — runs `python -m pytest <path> -q`; all
+#                                        listed paths must exit 0. This is the
+#                                        project-going-forward default for any
+#                                        task that touches code (cleanup /
+#                                        cache_op / embed_op / prompt_variant).
+#                                        File-presence gates remain supported
+#                                        for design-doc tasks (agent_creative /
+#                                        cypher_analysis / manual / external_run)
+#                                        but are NOT the default for new code work.
+#
 version: 1
 default_baseline_eval: data/eval_v1_results.json
 default_baseline_metric: avg_unique_cites_per_q
@@ -30,6 +52,7 @@ tasks:
         path: data/eval_v1_results.json
         min: 50000
     - python: result.metric_after is not None and result.metric_after > 25
+    - python_test_passes: tests/regression/test_eval_v1_baseline.py
   status: DONE_WITH_CONCERNS
   done_note: deliverable validated by acceptance criteria at tick 95 bulk-close pass
 - id: add_5_targeted_eval_questions
