@@ -36,9 +36,9 @@ This is the **sequenced operation list** for retrofitting TDD discipline and tri
 ## Phase 3 — Eliminate the worst duplication (Day 3–4)
 
 11. **Refactor `app.py` / `app_full.py` / `app_lite.py` / `app_free.py`** into `shared_agent.py` + four thin config wrappers. *(Beck: eliminate duplication. ~600 LOC of copy-paste eliminated.)*
-12. **Fix daemon-thread leak on client disconnect** (`app_free.py:1087`) — regression test first.
-13. **Fix Cypher string-concat in `tool_query_typed_edges`** (`chat.py:520`) — regression test first.
-14. **Fix tool-cache TTL race** (`chat.py:2263`) — regression test first.
+12. **Fix daemon-thread leak on client disconnect** (`app_free.py::_agent_stream`, the SSE generator + its `threading.Thread(target=run, daemon=True)`) — regression test first.
+13. **Fix Cypher string-concat in `chat.py::tool_query_typed_edges`** — regression test first.
+14. **Fix tool-cache TTL race** (`chat.py::_tool_cache_get` / `chat.py::_tool_cache_put`) — regression test first.
 
 ## Phase 4 — New behaviour-asserted eval (Day 4–5)
 

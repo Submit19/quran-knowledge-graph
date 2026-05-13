@@ -2,6 +2,11 @@
 
 Multi-consultant review of the Quran Knowledge Graph at HEAD `2d8de42`. Eight perspectives, no flattery. Companion plan: `docs/QKG_RETROFIT_PLAN.md`.
 
+> **Reference convention.** Code references in this document use the form
+> `path/to/file.py::function_name` rather than `path/to/file.py:N`. Line
+> numbers rot on every commit; function names are durable. LOC counts are
+> approximate snapshots of audit-time size, useful as scale signals only.
+
 ---
 
 ## Summary verdict
@@ -50,8 +55,8 @@ Multi-consultant review of the Quran Knowledge Graph at HEAD `2d8de42`. Eight pe
 
 - **Four near-duplicate apps** (`app.py` 587, `app_full.py` 616, `app_lite.py` 558, `app_free.py` 1148). ~600 lines of copy-paste. **Single biggest tech-debt item.**
 - **`chat.py` is 2,497 lines** in one file. Split: `tools/search.py`, `tools/etymology.py`, `tools/code19.py`, `dispatch.py`, `cache.py`.
-- **Daemon-thread leak on client disconnect** (`app_free.py:1087`) — burns Ollama/Neo4j cycles after tab close.
-- **String concatenation into Cypher** at `chat.py:520` — allowlisted today, foot-gun for next contributor.
+- **Daemon-thread leak on client disconnect** (`app_free.py::_agent_stream`, the SSE generator + `threading.Thread(target=run, daemon=True)`) — burns Ollama/Neo4j cycles after tab close.
+- **String concatenation into Cypher** at `chat.py::tool_query_typed_edges` — allowlisted today, foot-gun for next contributor.
 - **One real test file** (A/B harness, not unit tests). Every change is live-fire.
 - **Frontend `index.html` 1,651 LOC, all inline CSS, marked.parse() per keystroke** — works, near ceiling.
 - **38 `data/ralph_*.md` artefacts** the loop never deletes.
