@@ -1,0 +1,48 @@
+# Pre-commit hooks for QKG. Phase 1 of docs/QKG_RETROFIT_PLAN.md.
+#
+# Install once per clone:
+#   pip install pre-commit
+#   pre-commit install
+#
+# Then every `git commit` runs the hooks below. To bypass for a single commit
+# (use sparingly): `git commit --no-verify`.
+#
+# Run all hooks against all files (e.g. before pushing big changes):
+#   pre-commit run --all-files
+#
+# Phase 1 scope is intentionally narrow: only block obviously broken commits.
+# Mypy/ruff over the legacy chat.py / app_*.py files would surface hundreds
+# of pre-existing violations and is deferred to Phase 3 refactor.
+
+repos:
+  # Whitespace, end-of-file, large-file, merge-conflict guards
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: check-added-large-files
+        args: [--maxkb=500]
+
+  # Format + lint new and changed files (not yet enforced over legacy code)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.14.6
+    hooks:
+      - id: ruff-format
+        files: ^(tests/|scripts/)
+      - id: ruff
+        files: ^(tests/|scripts/)
+        args: [--fix, --exit-non-zero-on-fix]
+
+  # Run the test suite on every commit. Phase 1 baseline is fast (<2s).
+  # If this slows down past ~10s, switch to pre-push instead of pre-commit.
+  - repo: local
+    hooks:
+      - id: pytest-tests
+        name: pytest (tests/ only)
+        entry: python -m pytest tests/ -q
+        language: system
+        pass_filenames: false
+        always_run: true

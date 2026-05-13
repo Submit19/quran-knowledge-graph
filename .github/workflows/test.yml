@@ -1,0 +1,56 @@
+# CI for QKG — Phase 1 of docs/QKG_RETROFIT_PLAN.md.
+#
+# Runs the test suite on every push to main or any phase-* / claude/* branch
+# and on every PR targeting main. Currently this is just the tests/ directory
+# (no eval, no real Neo4j) — fast feedback loop.
+#
+# Future phases will add:
+#   - Phase 4: eval gate (run eval_v1_bucketed.py on every PR, post diff)
+#   - Phase 5: cost tracking
+#   - Phase 6: adversarial / safety eval
+
+name: tests
+
+on:
+  push:
+    branches:
+      - main
+      - 'phase-*'
+      - 'claude/*'
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install runtime deps (minimal subset for tests)
+        run: |
+          python -m pip install --upgrade pip
+          # Production deps that chat.py imports at module load
+          pip install anthropic neo4j python-dotenv nltk scikit-learn pyyaml
+          # NLTK data needed by build_graph.tokenize_and_lemmatize
+          python -c "import nltk; nltk.download('punkt_tab', quiet=True); nltk.download('stopwords', quiet=True); nltk.download('wordnet', quiet=True)"
+
+      - name: Install test deps
+        run: pip install -r requirements-test.txt
+
+      - name: Run tests
+        run: python -m pytest tests/ -v --tb=short
+
+      - name: Coverage report (informational, doesn't block)
+        if: always()
+        run: |
+          python -m pytest tests/ --cov=chat --cov=retrieval_gate --cov-report=term-missing || true
