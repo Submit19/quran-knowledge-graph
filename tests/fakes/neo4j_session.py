@@ -39,8 +39,6 @@ Synthetic graph shape (see SAMPLE_GRAPH below for an example):
 
 from __future__ import annotations
 
-from typing import Any
-
 
 class FakeResult:
     """Stand-in for neo4j.Result; supports iteration, .single(), list()."""
@@ -91,8 +89,13 @@ class FakeNeo4jSession:
         q = " ".join(query.split())  # collapse whitespace
 
         # MATCH (v:Verse {verseId: $id}) RETURN v
-        if "Verse {verseId: $id}" in q and "RETURN v" in q and "MENTIONS" not in q \
-                and "RELATED_TO" not in q and "MENTIONS_ROOT" not in q:
+        if (
+            "Verse {verseId: $id}" in q
+            and "RETURN v" in q
+            and "MENTIONS" not in q
+            and "RELATED_TO" not in q
+            and "MENTIONS_ROOT" not in q
+        ):
             v = self.graph.get("verses", {}).get(params.get("id"))
             return [{"v": v}] if v else []
 
@@ -111,8 +114,12 @@ class FakeNeo4jSession:
             return [
                 {
                     "otherId": other_id,
-                    "surahName": self.graph.get("verses", {}).get(other_id, {}).get("surahName", ""),
-                    "text": self.graph.get("verses", {}).get(other_id, {}).get("text", ""),
+                    "surahName": self.graph.get("verses", {})
+                    .get(other_id, {})
+                    .get("surahName", ""),
+                    "text": self.graph.get("verses", {})
+                    .get(other_id, {})
+                    .get("text", ""),
                     "score": score,
                 }
                 for (other_id, score) in rels[:limit]
@@ -126,7 +133,9 @@ class FakeNeo4jSession:
             v1_kws = {k for (k, _) in self.graph.get("mentions", {}).get(v1, [])}
             out = []
             for oid in other_ids:
-                other_kws = {k for (k, _) in self.graph.get("mentions", {}).get(oid, [])}
+                other_kws = {
+                    k for (k, _) in self.graph.get("mentions", {}).get(oid, [])
+                }
                 shared = sorted(v1_kws & other_kws)[:sk_limit]
                 out.append({"oid": oid, "kws": shared})
             return out
@@ -135,18 +144,50 @@ class FakeNeo4jSession:
         if "MENTIONS_ROOT]->(r:ArabicRoot)" in q:
             verse_id = params.get("id")
             roots = self.graph.get("roots", {}).get(verse_id, [])
-            return [
-                {"root": r, "gloss": g, "forms": f}
-                for (r, g, f, _count) in roots
-            ]
+            return [{"root": r, "gloss": g, "forms": f} for (r, g, f, _count) in roots]
 
-        # Typed edges (SUPPORTS, ELABORATES, etc.)
-        if "WHERE type(r) IN ['SUPPORTS','ELABORATES','QUALIFIES','CONTRASTS','REPEATS']" in q.replace(" ", "") \
-                or "type(r) IN" in q and "SUPPORTS" in q:
+        # Typed edges (SUPPORTS, ELABORATES, etc.) — three call shapes:
+        #   (1) no-filter union: WHERE type(r) IN [...]
+        #   (2) single-type concat: -[r:SUPPORTS]- (the Bug B foot-gun)
+        #   (3) single-type parameterised: -[r]- ... WHERE type(r) = $etype (post-fix)
+        q_compact = q.replace(" ", "")
+        valid_types = ("SUPPORTS", "ELABORATES", "QUALIFIES", "CONTRASTS", "REPEATS")
+
+        is_union = (
+            "WHEREtype(r)IN['SUPPORTS','ELABORATES','QUALIFIES','CONTRASTS','REPEATS']"
+            in q_compact
+        )
+        single_concat_type = next(
+            (t for t in valid_types if f"[r:{t}]" in q_compact), None
+        )
+        is_single_param = (
+            "[r]-(other:Verse)" in q_compact and "WHEREtype(r)=$etype" in q_compact
+        )
+
+        if is_union or single_concat_type is not None or is_single_param:
             verse_id = params.get("id")
             edges = self.graph.get("typed_edges", {}).get(verse_id, [])
+
+            if single_concat_type is not None:
+                edges = [e for e in edges if e[1] == single_concat_type]
+            elif is_single_param:
+                etype = params.get("etype")
+                edges = [e for e in edges if e[1] == etype]
+
             return [
-                {"otherId": oid, "relType": rt, "score": score, "confidence": conf}
+                {
+                    "otherId": oid,
+                    "surahName": self.graph.get("verses", {})
+                    .get(oid, {})
+                    .get("surahName", ""),
+                    "text": self.graph.get("verses", {}).get(oid, {}).get("text", ""),
+                    "arabic": self.graph.get("verses", {})
+                    .get(oid, {})
+                    .get("arabicText", ""),
+                    "relType": rt,
+                    "score": score,
+                    "confidence": conf,
+                }
                 for (oid, rt, score, conf) in edges
             ]
 
