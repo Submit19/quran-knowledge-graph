@@ -1,0 +1,20 @@
+phase-0 halt — 2026-05-13
+==========================
+
+Ralph loop paused per docs/QKG_RETROFIT_PLAN.md Phase 0.
+
+Do not resume until Phase 5 lands (see plan). The cron / session that hosts
+the loop has been stopped separately; this file is a belt-and-braces signal
+read by:
+  - scripts/CRON_BRIEF.md (step 1: halt check)
+  - scripts/state_snapshot.py (marks status as HALTED)
+  - CLAUDE_INDEX.md (stop-condition reference)
+
+Delete this file ONLY after:
+  1. Phase 1 (pytest + first failing test → green) has landed on main.
+  2. Phase 2 (file_min_bytes → python_test_passes acceptance gate) has landed.
+  3. Phases 3–5 (refactor + new eval + tame loop) have landed.
+
+Restarting the loop earlier will encode the existing problems deeper.
+
+— phase-0-stop-the-bleeding branch

@@ -181,10 +181,9 @@ DECOMPOSE_MODEL=openai/gpt-oss-120b:free
 - `data/code19_summary.json` — global Code-19 figures (6,346 = 19 × 334, etc.)
 
 ### Headline benchmark numbers
-- QRCD MAP@10: legacy MiniLM = 0.028 → BGE-M3-EN = **0.139** (5×) vs AraBERT-base fine-tuned = 0.36 (lit)
-- Multilingual reranker: hit@10 0.32 → 0.55 vs legacy English-only (which actively hurt Arabic queries)
-- Cache: 500 → **1,500** entries (target hit), 97% long-form, 77% strong (≥10 cites)
-- Tool-call cache: semantic_search **18,785× speedup** on hot calls (cold 18.8s → 0ms hit)
+- QRCD MAP@10: legacy MiniLM = 0.028 → BGE-M3-EN = 0.139 — **n=22 unique questions; no confidence intervals reported.** AraBERT-base fine-tuned = 0.36 in the literature, but that is an apples-to-oranges comparison (different training regime, different eval protocol). Treat all three numbers as directional, not definitive. See `docs/QKG_AUDIT.md` §1 and `docs/QKG_RETROFIT_PLAN.md` Phase 4 for the planned behaviour-asserted replacement eval.
+- Multilingual reranker: hit@10 0.32 → 0.55 vs legacy English-only on QRCD (the "drops 50%" finding was on the old English-only model and has not been re-measured on the multilingual `bge-reranker-v2-m3`; see audit §1).
+- Answer cache: **1,500 entries** (grown from a 500-entry baseline). The previous "77% strong (≥10 cites)" framing has been retired — citation count measures output volume, not output quality (see audit §1).
 
 ## Translation Context
 
