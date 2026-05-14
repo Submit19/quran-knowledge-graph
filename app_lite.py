@@ -12,25 +12,28 @@ Port: 8084
 
 Usage:
     py app_lite.py
+
+Phase 3a-3: the agent loop body lives in ``shared_agent.agent_stream``.
+This module is the thin wrapper that builds an AgentConfig + the per-
+process AgentCollaborators (including the Anthropic SDK client) and
+exposes the FastAPI surface.
 """
 
-import asyncio
-import json
 import os
-import re
 import sys
-import threading
 import webbrowser
 from pathlib import Path
 
+import anthropic
 from dotenv import load_dotenv
 from fastapi import FastAPI
-from fastapi.responses import HTMLResponse, StreamingResponse
-from pydantic import BaseModel
-import anthropic
+from fastapi.responses import HTMLResponse, Response, StreamingResponse
 from neo4j import GraphDatabase
+from pydantic import BaseModel
+
 
 # ── env ────────────────────────────────────────────────────────────────────────
+
 
 def _load_env():
     path = Path(__file__).parent / ".env"
@@ -44,27 +47,31 @@ def _load_env():
                 if v.strip():
                     os.environ[k.strip()] = v.strip()
 
+
 load_dotenv()
 _load_env()
 
 sys.path.insert(0, str(Path(__file__).parent))
-import config as cfg
-from chat import TOOLS, SYSTEM_PROMPT, dispatch_tool
-from answer_cache import save_answer, build_cache_context
-from tool_compressor import compress_tool_result
+from chat import SYSTEM_PROMPT, TOOLS  # noqa: E402
+from shared_agent import (  # noqa: E402
+    AgentCollaborators,
+    AgentConfig,
+    agent_stream as _shared_agent_stream,
+)
 
 # ── Lite config overrides ─────────────────────────────────────────────────────
 
-HAIKU_MODEL    = "claude-haiku-4-5-20251001"
+HAIKU_MODEL = "claude-haiku-4-5-20251001"
 LITE_MAX_TOKENS = 1536  # half of full version — keeps responses concise + cheap
+LITE_MAX_TOOL_TURNS = 8  # safety cap on the agentic loop
 
 # ── clients ────────────────────────────────────────────────────────────────────
 
-NEO4J_URI      = os.getenv("NEO4J_URI",      "bolt://localhost:7687")
-NEO4J_USER     = os.getenv("NEO4J_USER",     "neo4j")
+NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
+NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "")
-NEO4J_DB       = os.getenv("NEO4J_DATABASE", "quran")
-ANTHROPIC_KEY  = os.getenv("ANTHROPIC_API_KEY", "")
+NEO4J_DB = os.getenv("NEO4J_DATABASE", "quran")
+ANTHROPIC_KEY = os.getenv("ANTHROPIC_API_KEY", "")
 ANTHROPIC_TOKEN = os.getenv("ANTHROPIC_OAUTH_TOKEN", "")
 
 print(f"[LITE] Model: {HAIKU_MODEL}")
@@ -86,286 +93,48 @@ else:
     ai = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
     print("  Auth: API key")
 
-# ── helpers ────────────────────────────────────────────────────────────────────
 
-_BRACKET_REF = re.compile(r'(\d+:\d+)')
-_BRACKET_CONTEXT = re.compile(r'\[[\d:,\s]+\]')
+# ── AgentConfig + AgentCollaborators ──────────────────────────────────────────
+# Built once at import time and passed into every shared_agent.agent_stream()
+# call. Flags follow docs/PHASE_3A_PLAN.md §"variant axes" — app_lite is the
+# bare-bones Anthropic variant: no uncertainty probe, no citation density
+# retry, no NLI verifier, no priming graph, no reasoning-memory playbook, no
+# query classification, no required-tool-classes discipline, no fallback.
+# Tool-result compression stays on (Haiku's input window is tight) and the
+# answer cache stays on (shared across all four apps).
 
-def _extract_verse_refs(text: str) -> set:
-    refs = set()
-    for block in _BRACKET_CONTEXT.findall(text):
-        refs.update(_BRACKET_REF.findall(block))
-    return refs
+AGENT_CONFIG = AgentConfig(
+    backend="anthropic",
+    default_model=HAIKU_MODEL,
+    tools=TOOLS,
+    system_prompt=SYSTEM_PROMPT,
+    max_tool_turns=LITE_MAX_TOOL_TURNS,
+    max_tokens=LITE_MAX_TOKENS,
+    enable_citation_density_retry=False,
+    enable_uncertainty_probe=False,
+    enable_citation_verifier=False,
+    enable_priming_graph_update=False,
+    enable_reasoning_memory_playbook=False,
+    enable_query_classification=False,
+    enable_tool_result_compression=True,
+    enable_answer_cache_lookup=True,
+    enable_answer_cache_save=True,
+    required_tool_classes={},
+    fallback_chain=(),
+)
 
-def _fetch_verses(session, verse_ids: set) -> dict:
-    if not verse_ids:
-        return {}
-    result = session.run(
-        "UNWIND $ids AS vid "
-        "MATCH (v:Verse {reference: vid}) "
-        "RETURN v.reference AS id, v.text AS text, v.arabicText AS arabic",
-        ids=list(verse_ids),
-    )
-    return {r["id"]: {"text": r["text"], "arabic": r["arabic"] or ""} for r in result}
+AGENT_COLLABORATORS = AgentCollaborators(
+    driver=driver,
+    reasoning_memory=None,  # app_lite opts out of reasoning-memory recording
+    db_name=NEO4J_DB,
+    openrouter_api_key="",
+    anthropic_client=ai,
+)
+
 
 # ── FastAPI ────────────────────────────────────────────────────────────────────
 
 app = FastAPI()
-
-TOOL_LABELS = {
-    "search_keyword":              "Searching keywords",
-    "get_verse":                   "Looking up verse",
-    "traverse_topic":              "Traversing topic",
-    "find_path":                   "Finding path",
-    "explore_surah":               "Exploring surah",
-    "semantic_search":             "Semantic search",
-    "search_arabic_root":          "Searching Arabic root",
-    "compare_arabic_usage":        "Comparing Arabic usage",
-    "query_typed_edges":           "Querying typed edges",
-    "lookup_word":                 "Looking up word",
-    "explore_root_family":         "Exploring root family",
-    "get_verse_words":             "Analyzing verse words",
-    "search_semantic_field":       "Searching semantic field",
-    "lookup_wujuh":                "Looking up word meanings",
-    "search_morphological_pattern": "Searching patterns",
-}
-
-
-# ── graph extraction for 3D visualiser ────────────────────────────────────────
-
-def _graph_for_tool(name: str, inp: dict, result: dict):
-    nodes = {}
-    links = []
-    active = []
-
-    def vnode(vid, sname="", text="", arabic=""):
-        nid = f"v:{vid}"
-        if nid not in nodes:
-            try:
-                surah = int(vid.split(":")[0])
-            except Exception:
-                surah = 0
-            nodes[nid] = {"id": nid, "type": "verse", "label": f"[{vid}]",
-                          "verseId": vid, "surah": surah,
-                          "surahName": sname, "text": (text or "")[:200],
-                          "arabicText": (arabic or "")[:300]}
-        return nid
-
-    def knode(kw):
-        nid = f"k:{kw}"
-        if nid not in nodes:
-            nodes[nid] = {"id": nid, "type": "keyword", "label": kw}
-        return nid
-
-    def link(src, tgt, ltype):
-        links.append({"source": src, "target": tgt, "type": ltype})
-
-    try:
-        if name == "get_verse" and "verse_id" in result:
-            vid = result["verse_id"]
-            v = vnode(vid, result.get("surah_name", ""), result.get("text", ""), result.get("arabic_text", ""))
-            active.append(v)
-            for kw in result.get("keywords", [])[:10]:
-                k = knode(kw); link(v, k, "mentions")
-            for cv in result.get("connected_verses", [])[:cfg.vis("get_verse_max_connected")]:
-                cv_n = vnode(cv["verse_id"], cv.get("surah_name",""), cv.get("text",""))
-                link(v, cv_n, "related")
-                for kw in cv.get("shared_keywords", [])[:cfg.vis("get_verse_max_kw_per_neighbour")]:
-                    k = knode(kw); link(cv_n, k, "mentions")
-
-        elif name == "search_keyword" and "keyword" in result:
-            kw = result["keyword"]
-            k = knode(kw); active.append(k)
-            count = 0
-            _max_kw = cfg.vis("search_keyword_max_nodes")
-            for surah_verses in result.get("by_surah", {}).values():
-                for v_data in surah_verses[:3]:
-                    if count >= _max_kw: break
-                    v = vnode(v_data["verse_id"], "", v_data.get("text",""), v_data.get("arabic_text",""))
-                    link(v, k, "mentions"); count += 1
-                if count >= _max_kw: break
-
-        elif name == "traverse_topic":
-            direct_ids = {v["verse_id"] for v in result.get("direct_matches", [])}
-            for v_data in result.get("direct_matches", []):
-                v = vnode(v_data["verse_id"], v_data.get("surah_name",""), v_data.get("text",""))
-                active.append(v)
-                for kw in v_data.get("matched_keywords", []):
-                    k = knode(kw); link(v, k, "mentions")
-            for v_data in result.get("hop_1_connections", []):
-                v = vnode(v_data["verse_id"], v_data.get("surah_name",""), v_data.get("text",""))
-                for src_id in v_data.get("connected_via", [])[:2]:
-                    if src_id in direct_ids:
-                        link(f"v:{src_id}", v, "related")
-            for v_data in result.get("hop_2_connections", []):
-                vnode(v_data["verse_id"], v_data.get("surah_name",""), v_data.get("text",""))
-
-        elif name == "find_path" and "path" in result:
-            path = result["path"]
-            for i, step in enumerate(path):
-                v = vnode(step["verse_id"], step.get("surah_name",""), step.get("text",""))
-                if i == 0 or i == len(path) - 1:
-                    active.append(v)
-                if i > 0:
-                    link(f"v:{path[i-1]['verse_id']}", v, "related")
-                for kw in step.get("bridge_keywords", [])[:cfg.vis("find_path_max_bridge_kw")]:
-                    k = knode(kw); link(v, k, "mentions")
-
-        elif name == "explore_surah" and "verses" in result:
-            sname = result.get("surah_name", "")
-            for v_data in result.get("verses", [])[:cfg.vis("explore_surah_max_verses")]:
-                v = vnode(v_data["verse_id"], sname, v_data.get("text",""))
-            active = list(nodes.keys())[:5]
-
-        elif name == "search_arabic_root" and "root" in result:
-            root = result["root"]
-            rnid = f"r:{root}"
-            nodes[rnid] = {"id": rnid, "type": "arabicRoot", "label": root,
-                           "gloss": result.get("gloss", "")}
-            active.append(rnid)
-            count = 0
-            for surah_verses in result.get("by_surah", {}).values():
-                for v_data in surah_verses[:3]:
-                    if count >= 15: break
-                    v = vnode(v_data["verse_id"], "", v_data.get("text",""), v_data.get("arabic_text",""))
-                    link(v, rnid, "mentions_root"); count += 1
-                if count >= 15: break
-
-        elif name == "query_typed_edges" and "by_type" in result:
-            vid = result.get("verse_id", "")
-            v_center = vnode(vid)
-            active.append(v_center)
-            for rtype, edges in result.get("by_type", {}).items():
-                ltype = rtype.lower()
-                for e in edges[:8]:
-                    v = vnode(e["verse_id"], e.get("surah_name",""), e.get("text",""), e.get("arabic_text",""))
-                    link(v_center, v, ltype)
-
-        elif name == "compare_arabic_usage" and "root" in result:
-            root = result["root"]
-            rnid = f"r:{root}"
-            nodes[rnid] = {"id": rnid, "type": "arabicRoot", "label": root,
-                           "gloss": result.get("gloss", "")}
-            active.append(rnid)
-            for form_data in result.get("forms", [])[:8]:
-                fnid = f"f:{form_data['form']}"
-                nodes[fnid] = {"id": fnid, "type": "arabicForm", "label": form_data["form"]}
-                link(rnid, fnid, "derives")
-                for v_data in form_data.get("sample_verses", [])[:3]:
-                    v = vnode(v_data["verse_id"], v_data.get("surah_name",""), v_data.get("text",""), v_data.get("arabic_text",""))
-                    link(fnid, v, "appears_in")
-
-        elif name == "lookup_word" and result.get("found"):
-            for lem_data in result.get("lemmas", [])[:5]:
-                lnid = f"l:{lem_data['lemma']}"
-                nodes[lnid] = {"id": lnid, "type": "lemma",
-                               "label": lem_data['lemma'],
-                               "gloss": lem_data.get('rootGloss', '')}
-                active.append(lnid)
-                if lem_data.get('root'):
-                    rnid = f"r:{lem_data['root']}"
-                    nodes[rnid] = {"id": rnid, "type": "arabicRoot",
-                                   "label": lem_data['root'],
-                                   "gloss": lem_data.get('rootGloss', '')}
-                    link(lnid, rnid, "derives_from")
-                for occ in lem_data.get('occurrences', [])[:8]:
-                    v = vnode(occ['verse_id']); link(lnid, v, "appears_in")
-
-        elif name == "explore_root_family" and result.get("found"):
-            root_info = result.get("root", {})
-            rnid = f"r:{root_info.get('root', '')}"
-            nodes[rnid] = {"id": rnid, "type": "arabicRoot",
-                           "label": root_info.get('root', ''),
-                           "gloss": root_info.get('gloss', '')}
-            active.append(rnid)
-            for dom_id, dom_name in result.get("semantic_domains", {}).items():
-                dnid = f"d:{dom_id}"
-                nodes[dnid] = {"id": dnid, "type": "semanticDomain", "label": dom_name}
-                link(rnid, dnid, "in_domain")
-            for lem_data in result.get("lemmas", [])[:15]:
-                lnid = f"l:{lem_data['lemma']}"
-                nodes[lnid] = {"id": lnid, "type": "lemma",
-                               "label": lem_data['lemma'],
-                               "gloss": lem_data.get('gloss', '')}
-                link(rnid, lnid, "derives")
-                if lem_data.get('pattern'):
-                    pnid = f"p:{lem_data['pattern']}"
-                    nodes[pnid] = {"id": pnid, "type": "morphPattern",
-                                   "label": lem_data.get('pattern_label') or lem_data['pattern']}
-                    link(lnid, pnid, "follows_pattern")
-                for sv in lem_data.get('sample_verses', [])[:2]:
-                    v = vnode(sv['verse_id']); link(lnid, v, "appears_in")
-
-        elif name == "get_verse_words" and result.get("found"):
-            vid = result["verse_id"]
-            v = vnode(vid, result.get("surah_name", ""), result.get("translation", ""))
-            active.append(v)
-            for w in result.get("words", []):
-                if w.get('root'):
-                    rnid = f"r:{w['root']}"
-                    nodes[rnid] = {"id": rnid, "type": "arabicRoot",
-                                   "label": w['root'],
-                                   "gloss": w.get('root_gloss', '')}
-                    link(v, rnid, "mentions_root")
-
-        elif name == "search_semantic_field" and result.get("found"):
-            dom = result.get("domain", {})
-            dnid = f"d:{dom.get('domainId', '')}"
-            nodes[dnid] = {"id": dnid, "type": "semanticDomain",
-                           "label": dom.get('nameEn', '')}
-            active.append(dnid)
-            for root_data in result.get("roots", [])[:15]:
-                rnid = f"r:{root_data['root']}"
-                nodes[rnid] = {"id": rnid, "type": "arabicRoot",
-                               "label": root_data['root'],
-                               "gloss": root_data.get('gloss', '')}
-                link(dnid, rnid, "contains_root")
-                for lem in root_data.get('lemmas', [])[:3]:
-                    lnid = f"l:{lem['lemma']}"
-                    nodes[lnid] = {"id": lnid, "type": "lemma",
-                                   "label": lem['lemma'],
-                                   "gloss": lem.get('gloss', '')}
-                    link(rnid, lnid, "derives")
-
-        elif name == "lookup_wujuh" and result.get("found"):
-            root = result.get("root", "")
-            rnid = f"r:{root}"
-            nodes[rnid] = {"id": rnid, "type": "arabicRoot", "label": root}
-            active.append(rnid)
-            for sense in result.get("senses", []):
-                snid = f"s:{sense['sense_id']}"
-                nodes[snid] = {"id": snid, "type": "lemma",
-                               "label": sense['meaning_en'][:30]}
-                link(rnid, snid, "has_sense")
-                for sv in sense.get("sample_verses", [])[:3]:
-                    v = vnode(sv['verse_id'], "", sv.get('text', ''))
-                    link(snid, v, "example_in")
-
-        elif name == "search_morphological_pattern" and result.get("found"):
-            pat = result.get("pattern", "")
-            if pat:
-                pnid = f"p:{pat}"
-                nodes[pnid] = {"id": pnid, "type": "morphPattern", "label": pat}
-                active.append(pnid)
-            for root_data in result.get("by_root", [])[:10]:
-                if root_data.get('root'):
-                    rnid = f"r:{root_data['root']}"
-                    nodes[rnid] = {"id": rnid, "type": "arabicRoot",
-                                   "label": root_data['root'],
-                                   "gloss": root_data.get('gloss', '')}
-                    if pat:
-                        link(pnid, rnid, "used_by")
-                    for w in root_data.get('words', [])[:3]:
-                        lnid = f"l:{w.get('lemma', w['arabic'])}"
-                        nodes[lnid] = {"id": lnid, "type": "lemma",
-                                       "label": w.get('lemma', w['arabic'])}
-                        link(rnid, lnid, "derives")
-
-    except Exception as e:
-        print(f"  [graph] extract error ({name}): {e}")
-        return None
-
-    return {"nodes": list(nodes.values()), "links": links, "active": active} if nodes else None
 
 
 class ChatRequest(BaseModel):
@@ -396,6 +165,88 @@ async def all_verses():
     return {"verses": verses}
 
 
+@app.get("/model-info")
+async def model_info():
+    return {"model": HAIKU_MODEL, "backend": "anthropic", "cost": "paid"}
+
+
+@app.get("/cache-stats")
+async def get_cache_stats():
+    from answer_cache import cache_stats
+
+    return cache_stats()
+
+
+# ── Sefaria-inspired ref resolver / linker API ────────────────────────────────
+
+
+class ResolveRefsRequest(BaseModel):
+    text: str
+
+
+@app.post("/api/resolve_refs")
+async def api_resolve_refs(req: ResolveRefsRequest):
+    """Find Quranic citations in the given text, return resolved verseIds."""
+    from ref_resolver import resolve_refs
+
+    matches = resolve_refs(req.text)
+    return {
+        "input_length": len(req.text),
+        "match_count": len(matches),
+        "matches": [
+            {
+                "start": m.start,
+                "end": m.end,
+                "raw": m.raw,
+                "verse_id": m.canonical,
+                "kind": m.kind,
+                "confidence": m.confidence,
+            }
+            for m in matches
+        ],
+    }
+
+
+@app.get("/api/verse/{verse_id}")
+async def api_get_verse(verse_id: str):
+    """Return one verse by reference (e.g. '2:255')."""
+    if ":" not in verse_id:
+        return {"error": "verseId must be in format 'surah:verseNum'"}
+    with driver.session(database=NEO4J_DB) as s:
+        row = s.run(
+            """
+            MATCH (v:Verse)
+            WHERE v.reference = $vid OR v.verseId = $vid
+            RETURN v.reference AS id, v.text AS text,
+                   v.arabicText AS arabic, v.surahName AS surahName,
+                   v.surah AS surah, v.verseNum AS verseNum
+            LIMIT 1
+            """,
+            vid=verse_id,
+        ).single()
+    if not row or not row.get("id"):
+        return {"error": f"verse {verse_id} not found"}
+    return {
+        "verse_id": row["id"],
+        "surah": row["surah"],
+        "surah_name": row["surahName"],
+        "verse_num": row["verseNum"],
+        "text": row["text"],
+        "arabic": row["arabic"],
+    }
+
+
+@app.get("/quran_linker.js")
+async def quran_linker_js():
+    """Single-file JS widget — drops into any page to auto-link Quranic refs."""
+    js_path = Path(__file__).parent / "static" / "quran_linker.js"
+    if not js_path.exists():
+        return Response(content="// quran_linker.js not built yet",
+                        media_type="application/javascript")
+    return Response(content=js_path.read_text(encoding="utf-8"),
+                    media_type="application/javascript")
+
+
 @app.post("/chat")
 async def chat(req: ChatRequest):
     return StreamingResponse(
@@ -406,153 +257,21 @@ async def chat(req: ChatRequest):
 
 
 async def _agent_stream(message: str, history: list):
-    import queue as tqueue
-    q: tqueue.SimpleQueue = tqueue.SimpleQueue()
+    """Back-compat shim — the loop body now lives in shared_agent.agent_stream.
 
-    def run():
-        try:
-            msgs = []
-            for m in history:
-                r = m.get("role")    if isinstance(m, dict) else m["role"]
-                c = m.get("content") if isinstance(m, dict) else m["content"]
-                if r in ("user", "assistant") and c:
-                    msgs.append({"role": r, "content": str(c)})
-            msgs.append({"role": "user", "content": message})
-
-            full_text = ""
-            system_prompt = SYSTEM_PROMPT
-
-            # ── answer cache: check for relevant past answers ──
-            try:
-                cache_ctx = build_cache_context(message, top_k=3, threshold=0.6)
-                if cache_ctx:
-                    system_prompt = system_prompt + "\n\n" + cache_ctx
-                    q.put({"t": "tool", "name": "Answer cache", "args": message[:60],
-                           "summary": "Found relevant cached answers"})
-            except Exception as ce:
-                print(f"  [cache] lookup error: {ce}")
-
-            # No uncertainty probes — straight to the agentic loop
-            with driver.session(database=NEO4J_DB) as session:
-                while True:
-                    resp = ai.messages.create(
-                        model=HAIKU_MODEL,
-                        max_tokens=LITE_MAX_TOKENS,
-                        system=system_prompt,
-                        tools=TOOLS,
-                        messages=msgs,
-                    )
-
-                    for block in resp.content:
-                        if block.type == "text" and block.text.strip():
-                            full_text += block.text
-                            q.put({"t": "text", "d": block.text})
-
-                    if resp.stop_reason != "tool_use":
-                        break
-
-                    tool_results = []
-                    for block in resp.content:
-                        if block.type != "tool_use":
-                            continue
-
-                        label = TOOL_LABELS.get(block.name, block.name)
-                        args_s = json.dumps(block.input)
-                        if len(args_s) > 80:
-                            args_s = args_s[:77] + "..."
-
-                        result_str = dispatch_tool(session, block.name, block.input, user_query=message)
-
-                        try:
-                            res = json.loads(result_str)
-                            if "error" in res:
-                                summary = f"Error: {res['error']}"
-                            elif "total_verses" in res:
-                                summary = f"Found {res['total_verses']} verses for '{res.get('keyword','')}'"
-                            elif "verse_id" in res:
-                                summary = f"[{res['verse_id']}]: {res.get('text','')[:90]}..."
-                            elif "hops" in res:
-                                summary = f"Path in {res['hops']} hops"
-                            elif "verse_count" in res:
-                                summary = f"{res.get('surah_name','')} — {res['verse_count']} verses"
-                            elif "total_verses_found" in res:
-                                summary = f"Found {res['total_verses_found']} verses"
-                            else:
-                                summary = "Done"
-                        except Exception:
-                            summary = "Done"
-
-                        q.put({"t": "tool", "name": label, "args": args_s, "summary": summary})
-
-                        # graph update for 3D visualiser
-                        try:
-                            res_dict = json.loads(result_str)
-                            gu = _graph_for_tool(block.name, block.input, res_dict)
-                            if gu:
-                                q.put({"t": "graph_update",
-                                       "nodes": gu["nodes"],
-                                       "links": gu["links"],
-                                       "active": gu["active"]})
-                        except Exception:
-                            pass
-
-                        # etymology panel
-                        _ETYMOLOGY_TOOLS = {"lookup_word", "explore_root_family",
-                                            "get_verse_words", "search_semantic_field",
-                                            "lookup_wujuh", "search_morphological_pattern"}
-                        if block.name in _ETYMOLOGY_TOOLS:
-                            try:
-                                ep = json.loads(result_str)
-                                if ep.get("found") or ep.get("words") or ep.get("lemmas"):
-                                    q.put({"t": "etymology_panel",
-                                           "tool": block.name,
-                                           "result": ep})
-                            except Exception:
-                                pass
-
-                        compressed = compress_tool_result(block.name, result_str)
-                        tool_results.append({
-                            "type":        "tool_result",
-                            "tool_use_id": block.id,
-                            "content":     compressed,
-                        })
-
-                    msgs.append({"role": "assistant", "content": resp.content})
-                    msgs.append({"role": "user",      "content": tool_results})
-
-                # No citation retry, no NLI verification — just fetch verses for tooltips
-                refs   = _extract_verse_refs(full_text)
-                verses = _fetch_verses(session, refs)
-
-                # ── save to answer cache ──
-                try:
-                    save_answer(message, full_text, verses)
-                except Exception as ce:
-                    print(f"  [cache] save error: {ce}")
-
-                q.put({"t": "done", "verses": verses})
-
-        except Exception as e:
-            q.put({"t": "error", "d": str(e)})
-        finally:
-            q.put(None)
-
-    thread = threading.Thread(target=run, daemon=True)
-    thread.start()
-
-    while True:
-        try:
-            event = q.get_nowait()
-        except Exception:
-            await asyncio.sleep(0.05)
-            continue
-        if event is None:
-            break
-        yield f"data: {json.dumps(event, ensure_ascii=False)}\n\n"
+    Kept so scripts/capture_baseline_trajectory.py (and any external callers)
+    can keep using app_lite._agent_stream. New code should call
+    shared_agent.agent_stream(..., AGENT_CONFIG, ...) directly.
+    """
+    async for frame in _shared_agent_stream(
+        message, history, AGENT_CONFIG, AGENT_COLLABORATORS,
+    ):
+        yield frame
 
 
 if __name__ == "__main__":
     import uvicorn
+
     print("\n[LITE] Quran Graph — Haiku Cheap Mode: http://localhost:8084\n")
     webbrowser.open("http://localhost:8084")
     uvicorn.run(app, host="0.0.0.0", port=8084, log_level="info")

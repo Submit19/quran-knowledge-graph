@@ -370,6 +370,157 @@ def _graph_for_tool(name: str, inp: dict, result: dict):
                     lnk(v, rnid, "mentions_root"); count += 1
                 if count >= 15: break
 
+        elif name == "find_path" and "path" in result:
+            path = result["path"]
+            for i, step in enumerate(path):
+                v = vnode(step["verse_id"], step.get("surah_name", ""), step.get("text", ""))
+                if i == 0 or i == len(path) - 1:
+                    active.append(v)
+                if i > 0:
+                    lnk(f"v:{path[i - 1]['verse_id']}", v, "related")
+                for kw in step.get("bridge_keywords", [])[:5]:
+                    k = knode(kw); lnk(v, k, "mentions")
+
+        elif name == "explore_surah" and "verses" in result:
+            sname = result.get("surah_name", "")
+            for v_data in result.get("verses", [])[:30]:
+                vnode(v_data["verse_id"], sname, v_data.get("text", ""))
+            active = list(nodes.keys())[:5]
+
+        elif name == "query_typed_edges" and "by_type" in result:
+            vid = result.get("verse_id", "")
+            v_center = vnode(vid)
+            active.append(v_center)
+            for rtype, edges in result.get("by_type", {}).items():
+                ltype = rtype.lower()
+                for e in edges[:8]:
+                    v = vnode(e["verse_id"], e.get("surah_name", ""),
+                              e.get("text", ""), e.get("arabic_text", ""))
+                    lnk(v_center, v, ltype)
+
+        elif name == "compare_arabic_usage" and "root" in result:
+            root = result["root"]
+            rnid = f"r:{root}"
+            nodes[rnid] = {"id": rnid, "type": "arabicRoot", "label": root,
+                           "gloss": result.get("gloss", "")}
+            active.append(rnid)
+            for form_data in result.get("forms", [])[:8]:
+                fnid = f"f:{form_data['form']}"
+                nodes[fnid] = {"id": fnid, "type": "arabicForm",
+                               "label": form_data["form"]}
+                lnk(rnid, fnid, "derives")
+                for v_data in form_data.get("sample_verses", [])[:3]:
+                    v = vnode(v_data["verse_id"], v_data.get("surah_name", ""),
+                              v_data.get("text", ""), v_data.get("arabic_text", ""))
+                    lnk(fnid, v, "appears_in")
+
+        elif name == "lookup_word" and result.get("found"):
+            for lem_data in result.get("lemmas", [])[:5]:
+                lnid = f"l:{lem_data['lemma']}"
+                nodes[lnid] = {"id": lnid, "type": "lemma",
+                               "label": lem_data["lemma"],
+                               "gloss": lem_data.get("rootGloss", "")}
+                active.append(lnid)
+                if lem_data.get("root"):
+                    rnid = f"r:{lem_data['root']}"
+                    nodes[rnid] = {"id": rnid, "type": "arabicRoot",
+                                   "label": lem_data["root"],
+                                   "gloss": lem_data.get("rootGloss", "")}
+                    lnk(lnid, rnid, "derives_from")
+                for occ in lem_data.get("occurrences", [])[:8]:
+                    v = vnode(occ["verse_id"]); lnk(lnid, v, "appears_in")
+
+        elif name == "explore_root_family" and result.get("found"):
+            root_info = result.get("root", {})
+            rnid = f"r:{root_info.get('root', '')}"
+            nodes[rnid] = {"id": rnid, "type": "arabicRoot",
+                           "label": root_info.get("root", ""),
+                           "gloss": root_info.get("gloss", "")}
+            active.append(rnid)
+            for dom_id, dom_name in result.get("semantic_domains", {}).items():
+                dnid = f"d:{dom_id}"
+                nodes[dnid] = {"id": dnid, "type": "semanticDomain", "label": dom_name}
+                lnk(rnid, dnid, "in_domain")
+            for lem_data in result.get("lemmas", [])[:15]:
+                lnid = f"l:{lem_data['lemma']}"
+                nodes[lnid] = {"id": lnid, "type": "lemma",
+                               "label": lem_data["lemma"],
+                               "gloss": lem_data.get("gloss", "")}
+                lnk(rnid, lnid, "derives")
+                if lem_data.get("pattern"):
+                    pnid = f"p:{lem_data['pattern']}"
+                    nodes[pnid] = {"id": pnid, "type": "morphPattern",
+                                   "label": lem_data.get("pattern_label")
+                                            or lem_data["pattern"]}
+                    lnk(lnid, pnid, "follows_pattern")
+                for sv in lem_data.get("sample_verses", [])[:2]:
+                    v = vnode(sv["verse_id"]); lnk(lnid, v, "appears_in")
+
+        elif name == "get_verse_words" and result.get("found"):
+            vid = result["verse_id"]
+            v = vnode(vid, result.get("surah_name", ""), result.get("translation", ""))
+            active.append(v)
+            for w in result.get("words", []):
+                if w.get("root"):
+                    rnid = f"r:{w['root']}"
+                    nodes[rnid] = {"id": rnid, "type": "arabicRoot",
+                                   "label": w["root"],
+                                   "gloss": w.get("root_gloss", "")}
+                    lnk(v, rnid, "mentions_root")
+
+        elif name == "search_semantic_field" and result.get("found"):
+            dom = result.get("domain", {})
+            dnid = f"d:{dom.get('domainId', '')}"
+            nodes[dnid] = {"id": dnid, "type": "semanticDomain",
+                           "label": dom.get("nameEn", "")}
+            active.append(dnid)
+            for root_data in result.get("roots", [])[:15]:
+                rnid = f"r:{root_data['root']}"
+                nodes[rnid] = {"id": rnid, "type": "arabicRoot",
+                               "label": root_data["root"],
+                               "gloss": root_data.get("gloss", "")}
+                lnk(dnid, rnid, "contains_root")
+                for lem in root_data.get("lemmas", [])[:3]:
+                    lnid = f"l:{lem['lemma']}"
+                    nodes[lnid] = {"id": lnid, "type": "lemma",
+                                   "label": lem["lemma"],
+                                   "gloss": lem.get("gloss", "")}
+                    lnk(rnid, lnid, "derives")
+
+        elif name == "lookup_wujuh" and result.get("found"):
+            root = result.get("root", "")
+            rnid = f"r:{root}"
+            nodes[rnid] = {"id": rnid, "type": "arabicRoot", "label": root}
+            active.append(rnid)
+            for sense in result.get("senses", []):
+                snid = f"s:{sense['sense_id']}"
+                nodes[snid] = {"id": snid, "type": "lemma",
+                               "label": sense["meaning_en"][:30]}
+                lnk(rnid, snid, "has_sense")
+                for sv in sense.get("sample_verses", [])[:3]:
+                    v = vnode(sv["verse_id"], "", sv.get("text", ""))
+                    lnk(snid, v, "example_in")
+
+        elif name == "search_morphological_pattern" and result.get("found"):
+            pat = result.get("pattern", "")
+            if pat:
+                pnid = f"p:{pat}"
+                nodes[pnid] = {"id": pnid, "type": "morphPattern", "label": pat}
+                active.append(pnid)
+            for root_data in result.get("by_root", [])[:10]:
+                if root_data.get("root"):
+                    rnid = f"r:{root_data['root']}"
+                    nodes[rnid] = {"id": rnid, "type": "arabicRoot",
+                                   "label": root_data["root"],
+                                   "gloss": root_data.get("gloss", "")}
+                    if pat:
+                        lnk(pnid, rnid, "used_by")
+                    for w in root_data.get("words", [])[:3]:
+                        lnid = f"l:{w.get('lemma', w['arabic'])}"
+                        nodes[lnid] = {"id": lnid, "type": "lemma",
+                                       "label": w.get("lemma", w["arabic"])}
+                        lnk(rnid, lnid, "derives")
+
     except Exception as e:
         print(f"  [graph] extract error ({name}): {e}")
         return None
