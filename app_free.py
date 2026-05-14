@@ -205,7 +205,11 @@ except Exception as e:
 # shared_agent.py. The agent loop body itself (was _agent_stream) is
 # shared_agent.agent_stream — see the thin wrapper below.
 
-from shared_agent import AgentConfig, agent_stream as _shared_agent_stream
+from shared_agent import (
+    AgentCollaborators,
+    AgentConfig,
+    agent_stream as _shared_agent_stream,
+)
 
 
 # ── FastAPI ────────────────────────────────────────────────────────────────────
@@ -394,6 +398,17 @@ AGENT_CONFIG = AgentConfig(
 )
 
 
+# Per-process collaborators — built once from app_free's module globals and
+# threaded through every shared_agent.agent_stream() call. Replaces the
+# lazy-import seam that Phase 3a-1 left for cleanup.
+AGENT_COLLABORATORS = AgentCollaborators(
+    driver=driver,
+    reasoning_memory=reasoning_memory,
+    db_name=NEO4J_DB,
+    openrouter_api_key=OPENROUTER_API_KEY,
+)
+
+
 @app.post("/chat")
 async def chat(req: ChatRequest):
     return StreamingResponse(
@@ -419,7 +434,7 @@ async def _agent_stream(message: str, history: list,
     shared_agent.agent_stream(..., AGENT_CONFIG, ...) directly.
     """
     async for frame in _shared_agent_stream(
-        message, history, AGENT_CONFIG,
+        message, history, AGENT_CONFIG, AGENT_COLLABORATORS,
         deep_dive=deep_dive,
         full_coverage=full_coverage,
         model_override=model_override,

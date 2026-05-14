@@ -82,11 +82,34 @@ def test_agent_stream_is_async_generator_function():
 def test_agent_stream_signature_accepts_per_request_overrides():
     sig = inspect.signature(shared_agent.agent_stream)
     params = set(sig.parameters)
-    assert {"message", "history", "config"}.issubset(params)
+    assert {"message", "history", "config", "collaborators"}.issubset(params)
     # Per-request overrides the free app currently passes through.
     assert {"deep_dive", "full_coverage", "model_override", "local_only"}.issubset(
         params
     )
+
+
+def _make_minimal_collaborators():
+    """A lightweight stand-in suitable for surface tests; no real Neo4j."""
+
+    class _MockDriver:
+        def session(self, **_kw):  # not actually opened in surface tests
+            raise NotImplementedError("MockDriver.session — surface test only")
+
+    return shared_agent.AgentCollaborators(
+        driver=_MockDriver(),
+        reasoning_memory=None,
+        db_name="test",
+        openrouter_api_key="",
+    )
+
+
+def test_agent_collaborators_construction():
+    """AgentCollaborators is a plain mutable dataclass for live runtime resources."""
+    co = _make_minimal_collaborators()
+    assert co.db_name == "test"
+    assert co.openrouter_api_key == ""
+    assert co.reasoning_memory is None
 
 
 def test_agent_stream_is_callable_with_minimal_config():
@@ -95,7 +118,8 @@ def test_agent_stream_is_callable_with_minimal_config():
     Neo4j + Ollama. The structural baseline harness covers end-to-end).
     """
     cfg = _make_minimal_config(backend="ollama", default_model="dummy")
-    gen = shared_agent.agent_stream("hi", [], cfg)
+    co = _make_minimal_collaborators()
+    gen = shared_agent.agent_stream("hi", [], cfg, co)
     assert inspect.isasyncgen(gen), (
         f"agent_stream(...) should return an async generator, got {type(gen).__name__}"
     )

@@ -10,7 +10,10 @@ the other three apps (``app.py``, ``app_full.py``, ``app_lite.py``) keep
 their own ``_agent_stream`` for now and will be ported in later sessions.
 
 Public surface:
-    AgentConfig — frozen dataclass of per-app variant axes.
+    AgentConfig — frozen dataclass of per-app variant axes (configuration).
+    AgentCollaborators — dataclass carrying live runtime resources
+        (Neo4j driver, ReasoningMemory instance, OpenRouter key, DB name)
+        each app instantiates and passes to every ``agent_stream`` call.
     agent_stream — async generator that yields SSE frames.
 
 Wiring contract (preserved through the refactor):
@@ -18,14 +21,6 @@ Wiring contract (preserved through the refactor):
       Phase 3b daemon-thread leak fix remains active.
     - The agent loop body polls ``stop_event.is_set()`` at the top of
       every turn for cooperative cancellation on consumer disconnect.
-
-Known seam (cleanup task for future Phase 3a sessions):
-    ``agent_stream`` lazy-imports ``app_free`` to reach the per-process
-    singletons (``driver``, ``reasoning_memory``) and the OpenRouter API
-    config (``OPENROUTER_API_KEY``, ``OPENROUTER_URL``). Porting
-    ``app.py``/``app_full.py``/``app_lite.py`` will require replacing
-    these lazy imports with explicit injection (or per-app singletons)
-    so ``shared_agent`` no longer depends on ``app_free``.
 """
 
 from __future__ import annotations
@@ -36,7 +31,7 @@ import re
 import time
 from collections.abc import AsyncIterator
 from dataclasses import dataclass, field
-from typing import Literal
+from typing import Any, Literal
 
 import requests
 
@@ -115,6 +110,31 @@ class AgentConfig:
             raise TypeError(
                 f"AgentConfig.tools must be a list, got {type(self.tools).__name__}"
             )
+
+
+@dataclass
+class AgentCollaborators:
+    """Live per-process resources passed to every ``agent_stream`` call.
+
+    Each app constructs one of these from its own module-level globals
+    and passes it in. ``shared_agent`` no longer reaches into any app's
+    module to find live resources — this kills the lazy-import seam that
+    coupled Phase 3a-1's first cut to ``app_free``.
+
+    Fields:
+        driver: neo4j Driver (one per process; threadsafe; long-lived).
+        reasoning_memory: ReasoningMemory instance. May be None for apps
+            that opt out of reasoning-memory recording.
+        db_name: Neo4j database name (e.g. ``"quran"``).
+        openrouter_api_key: OpenRouter Bearer token. May be empty when
+            the app doesn't use OpenRouter; ``agent_stream``'s routing
+            decision treats an empty key as "OpenRouter unavailable".
+    """
+
+    driver: Any
+    reasoning_memory: Any = None
+    db_name: str = "quran"
+    openrouter_api_key: str = ""
 
 
 # ──────────────────────────────────────────────────────────────────────────
@@ -408,6 +428,7 @@ async def agent_stream(
     message: str,
     history: list,
     config: AgentConfig,
+    collaborators: AgentCollaborators,
     *,
     deep_dive: bool = False,
     full_coverage: bool = False,
@@ -422,14 +443,13 @@ async def agent_stream(
     ``stop_event`` between turns so a client disconnect cleanly tears down
     the agent loop (Phase 3b Bug D contract).
     """
-    # Lazy seam — see module docstring. These per-process singletons live in
-    # app_free until a later session swaps them for explicit injection.
-    import app_free
-
-    driver = app_free.driver
-    reasoning_memory = app_free.reasoning_memory
-    db_name = app_free.NEO4J_DB
-    openrouter_api_key = app_free.OPENROUTER_API_KEY
+    # Live runtime resources arrive via ``collaborators`` (Phase 3a-2). No
+    # lazy ``import app_free`` here — the module is now uncoupled from any
+    # particular app.
+    driver = collaborators.driver
+    reasoning_memory = collaborators.reasoning_memory
+    db_name = collaborators.db_name
+    openrouter_api_key = collaborators.openrouter_api_key
 
     # Routing decision (variant: app_free).
     use_openrouter = (
