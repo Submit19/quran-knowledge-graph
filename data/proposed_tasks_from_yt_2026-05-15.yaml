@@ -1,0 +1,303 @@
+# Proposed tasks from AIE Miami + AIE Europe video research
+# Generated 2026-05-15 by claude/research-aie-miami-2026 branch
+# Per-video docs: docs/research/yt_*.md
+# Synthesis: docs/research/aie_miami_synthesis_2026-05-15.md
+#
+# Operator triages these into ralph_backlog.yaml at their own discretion.
+# These do NOT enter the loop directly. This file is read-only research
+# output.
+#
+# Schema follows the brief; mirrors ralph_backlog.yaml shape but with
+# `source`, `rationale`, `proposed_acceptance`, `notes` fields the
+# operator wants for triage.
+
+version: 1
+proposed:
+
+- id: from_yt_arize_eval_add_latency_cost_tool_fidelity
+  type: eval
+  priority: 85
+  description: "Add latency, cost, and tool-fidelity dimensions to the Phase 4 v2 eval rubric"
+  source: "https://www.youtube.com/live/DeM_u2Ik0sk at ~438:20 (Lori Voss / Arize AI)"
+  blockers:
+    - "Phase 4a (eval/ scaffolding) — in flight on phase-4a-eval-infrastructure branch"
+  rationale: |
+    Lori Voss ran a 500-test eval of GitHub MCP vs CLI skills with five
+    metrics: correctness, output quality, latency, cost, tool fidelity.
+    The headline finding was that correctness was ~equal but latency and
+    cost differed wildly because of tool-fidelity failure: MCP-instructed
+    agents fell back to bash 71-call deep. QKG's Phase 4 plan currently
+    has 4 LLM-as-judge dimensions; latency (wall clock) and cost (token
+    count) are objective and free to add; tool fidelity (% allowed tool
+    calls / total) is a falsifiable behaviour-assert metric that catches
+    the EXHAUSTIVE SEARCH MANDATE over-call problem in a single number.
+  proposed_acceptance:
+    - "data/eval/v2/<bucket>.yaml schema gains a `tools_allowed` field per question (list)"
+    - "eval/v2 emits per-question latency_ms (wall clock from first SSE to done event)"
+    - "eval/v2 emits per-question token_cost (sum of prompt+completion tokens × per-model rate from a config table)"
+    - "eval/v2 emits per-question tool_fidelity = len(tool_calls ∩ tools_allowed) / max(1, len(tool_calls))"
+    - "Headline summary in data/eval/v2/runs/<ts>.json includes p50, p95 of each new metric"
+    - "Test: a synthetic trajectory with 2 allowed + 3 disallowed tool calls returns tool_fidelity = 0.4"
+  notes: |
+    Pair with Phase 4 item 17 (baseline + CIs). The conference data
+    suggests aggregating LLM-judge explanations (not just scores) as a
+    secondary diagnostic — operator may want to add that as a stretch goal.
+
+- id: from_yt_anthropic_progressive_discovery_tool_search
+  type: prompt_variant
+  priority: 75
+  description: "Spike: replace 21-tool upfront prompt with a tool_search meta-tool that loads tool descriptions on demand"
+  source: "https://www.youtube.com/live/_zdroS0Hc74 at ~38:54 (David Sora Par / Anthropic, creator of MCP)"
+  blockers:
+    - "Phase 4 v2 eval (need a measurement before/after)"
+  rationale: |
+    David Sora Par announced that Claude Code shipped a `tool_search`
+    meta-tool that defers loading of tool descriptions. Reported a
+    "massive reduction in tool context usage." This is an alternative
+    path to Phase 7 item 28 (consolidate 21 tools to 8-10) — keep the
+    21 tools, but expose them via deferred loading instead. The
+    Anthropic-shipped data point is the strongest single evidence in
+    the conference content. For QKG, the system prompt currently
+    inlines 21 tool descriptions plus Khalifa context plus EXHAUSTIVE
+    SEARCH MANDATE; a `tool_search` meta-tool would shrink it to
+    Khalifa context + the meta-tool description + on-demand
+    expansions.
+  proposed_acceptance:
+    - "shared_agent.py gains a meta-tool `tool_search(query: str, top_k: int=5)` that returns the top-K most relevant tool *descriptions* from a registry, ranked by BGE-M3 cosine vs an embedded query"
+    - "System prompt size on session start (zero turns) drops by at least 50%, measured via tiktoken on chat.py's tool-description block"
+    - "v2 eval mean_rubric_score does not regress more than 2 points vs baseline (with 95% CI)"
+    - "Per-question latency does not regress more than 10% mean (tool_search adds one extra turn for most queries)"
+    - "Tool-fidelity metric (from from_yt_arize_eval_*) stays ≥ baseline"
+  notes: |
+    This is an *alternative*, not a replacement, for Phase 7 item 28.
+    The two are mutually exclusive on the same prompt — pick one before
+    committing. The conference recommends progressive discovery; the
+    audit recommends consolidation. The operator should pick based on
+    eval results from a small comparison spike.
+
+- id: from_yt_anthropic_code_mode_spike
+  type: agent_creative
+  priority: 60
+  description: "Spike: expose QKG tools via a Python sandbox so the agent writes multi-tool scripts in one turn (Code Mode pattern)"
+  source: "https://www.youtube.com/live/_zdroS0Hc74 at ~40:25 (David Sora Par); https://www.youtube.com/live/6IxSbMhT7v4 at ~433:24 (Rita / Cloudflare)"
+  blockers:
+    - "Phase 4 v2 eval"
+    - "from_yt_anthropic_progressive_discovery_tool_search (measure that first)"
+  rationale: |
+    Cloudflare's Code Mode (referenced by Rita, Kent C. Dodds, and David
+    Sora Par across three different talks) replaces the multi-turn
+    tool-use loop with a single turn where the agent writes Python
+    against a TypeScript-ish API definition and the result executes in a
+    sandbox. Lori's eval data shows that MCP-based agents took 12 turns
+    where CLI-equivalents took 5; Code Mode is the conference's
+    consensus answer. For QKG's Neo4j-heavy retrieval (where many
+    queries naturally compose: `search → find_path → get_verse_words →
+    query_typed_edges`), this could collapse 3-5 tool-use turns into
+    one Python-script execution. Trade-off: harder to verify, larger
+    blast radius, requires a sandbox.
+  proposed_acceptance:
+    - "A new shared_agent.py mode `mode='code'` that gives the agent a single tool `run_qkg_script(code: str)`"
+    - "The sandbox is RestrictedPython or a subprocess-based namespace with imports limited to neo4j driver + chat.py tools"
+    - "v2 eval shows mean tool calls per question drops by at least 30% with mean_rubric_score regression ≤ 3 points"
+    - "Run-Cypher denylist guarantees still apply (no schema-modifying verbs)"
+    - "Test: a script that calls tool_semantic_search then tool_find_path then tool_get_verse returns the same answer set as the equivalent 3-turn tool-use loop"
+  notes: |
+    Large spike. Lower priority because the simpler alternative
+    (`tool_search`) likely captures most of the cost win at a tenth
+    of the implementation cost. Worth doing only if `tool_search` plus
+    consolidation don't get QKG to acceptable per-turn budgets.
+
+- id: from_yt_deepmind_matryoshka_two_tier_retrieval
+  type: embed_op
+  priority: 70
+  description: "Two-tier retrieval: first pass with 256-dim BGE-M3 (Matryoshka truncation), second pass with full 1024-dim on top-K"
+  source: "https://www.youtube.com/live/O_IMsEg91g8 at ~50:54 (DeepMind / Gemini Embeddings 2 talk introducing Matryoshka Representation Learning)"
+  blockers:
+    - "Phase 4 v2 eval"
+  rationale: |
+    BGE-M3 already supports Matryoshka Representation Learning (MRL) —
+    the same model produces nested embeddings at multiple dimensions.
+    DeepMind validated the pattern publicly at AIE Europe with Gemini
+    Embeddings 2. QKG currently uses full 1024-dim embeddings for all
+    retrieval. A two-tier approach — fast 256-dim first-pass for broad
+    recall, full 1024-dim re-ranking on top-K — would cut retrieval-
+    stage compute substantially. The 256-dim index is also small enough
+    to fit fully in memory for Neo4j-side similarity. Low-risk
+    optimisation; orthogonal to other tasks.
+  proposed_acceptance:
+    - "embed_verses_m3.py emits a second property `embedding_m3_short` (256-dim, MRL-truncated from same model output)"
+    - "A new Neo4j vector index `verse_embedding_m3_short` (cosine, 256-dim)"
+    - "tool_semantic_search switches to two-tier: first-pass 256-dim top-100 → second-pass 1024-dim re-rank top-20"
+    - "v2 eval mean_rubric_score regresses by ≤ 1 point"
+    - "Mean per-query Neo4j retrieval latency drops by at least 30%"
+    - "Same model embedding is used for both dims (i.e. no separate model load; uses sentence-transformers MRL truncation)"
+  notes: |
+    Confirm BGE-M3's MRL support before starting. If BGE-M3 doesn't
+    properly support MRL (some HuggingFace variants don't), this becomes
+    a research task. Cross-check with bge-m3's model card.
+
+- id: from_yt_pinterest_split_run_cypher_by_authority
+  type: cleanup
+  priority: 70
+  description: "Split run_cypher into read-only `cypher_query` and admin-only `cypher_admin`; remove the latter from the agent's tool list"
+  source: "https://www.youtube.com/live/6IxSbMhT7v4 at ~352:11 (Anna / Pinterest, on matching agent authority to workflow risk)"
+  blockers:
+    - "Phase 7 item 30 (audit + log run_cypher invocations)"
+  rationale: |
+    Anna at Pinterest framed the rule clearly: match agent authority to
+    workflow risk. Today QKG has a single `run_cypher` tool guarded by a
+    regex denylist. A regex denylist is a soft guard — easily defeated by
+    creative query construction. Splitting the tool into two — a
+    `cypher_query` exposed to the agent with no schema-modifying verbs
+    (`CREATE`, `MERGE`, `DELETE`, `DROP`, `SET`, `REMOVE`, etc.) at the
+    *parser* layer, and a `cypher_admin` not exposed at all — closes the
+    denylist-as-only-guard hole at the type-system level.
+  proposed_acceptance:
+    - "chat.py replaces `tool_run_cypher` with `tool_cypher_query` (read-only)"
+    - "Parser uses neo4j-cypher-parser (or equivalent) to reject any tree containing write clauses, not regex"
+    - "Reading-only smoke test: 50 valid queries pass"
+    - "Writing rejection test: 50 attack queries (including obfuscation via CASE / WITH / CALL) fail"
+    - "Phase 7 item 30's audit log scope reduces to just `cypher_query` (admin no longer agent-callable)"
+  notes: |
+    The current regex denylist has a known weakness flagged in the
+    audit. This task closes that hole. Pair with from_yt_arize_eval_*
+    so the tool-fidelity metric catches any regression.
+
+- id: from_yt_outrival_reasoning_memory_decay
+  type: cleanup
+  priority: 55
+  description: "Define + implement a forgetting policy for :ReasoningTrace nodes with no incident citation-check or RETRIEVED edges older than N days"
+  source: "https://www.youtube.com/live/DeM_u2Ik0sk at ~325:38 (Alvin / OutRrival, on memory lifecycle)"
+  blockers: []
+  rationale: |
+    Alvin's three components of memory are state, curation, **lifecycle**.
+    LongMemEval (and QKG's reasoning_memory by extension) only tests
+    state + curation. QKG's reasoning_memory writes a `:ReasoningTrace`
+    for every chat. Nothing prunes. Over time this grows unboundedly;
+    older traces represent retrieval patterns the agent has since
+    superseded. A decay policy — "drop traces older than 60 days with no
+    citation-check verdict ≥ 4 and no descendant RETRIEVED edge counted
+    in the past 30 days" — is the production-grade lifecycle Alvin
+    argued for. Affects Phase 9 item 36.
+  proposed_acceptance:
+    - "reasoning_memory.py gains a `prune_traces(max_age_days, min_citation_score)` function"
+    - "Cypher migration to drop traces matching the criterion, with full count + sample preserved in data/reasoning_memory_prune_<ts>.json"
+    - "Regression test: a synthetic 100-trace fixture pruned with default policy drops the expected 60% subset"
+    - "Documented decay policy in docs/PHASE_9_REASONING_MEMORY.md (new file or amendment)"
+  notes: |
+    Operator should decide the policy parameters (60 days, score ≥ 4 are
+    defaults). Pair with the existing recall_similar_query tool — pruning
+    should not break that tool's recall on recent queries. Acceptance
+    criterion is the regression test, not the migration itself.
+
+- id: from_yt_neo4j_decision_trace_traversal_tool
+  type: cypher_analysis
+  priority: 55
+  description: "Expose reasoning-memory subgraph as a queryable tool: `recall_traces_for_verse(verseId)` returning past traces that retrieved it"
+  source: "https://www.youtube.com/live/DeM_u2Ik0sk at ~167:00-175:30 (Nia / Neo4j, on context graphs as queryable decision traces)"
+  blockers: []
+  rationale: |
+    Nia's "context graph" pattern is exactly what QKG already builds via
+    reasoning_memory.py, but with one capability missing: the agent can
+    write traces but cannot read them. Exposing decision-trace traversal
+    as a tool lets the agent build on past reasoning ("show me traces
+    where the asker asked about 2:255 and was rated ≥ 4; what tools did
+    they use?"). This is a strict extension of recall_similar_query —
+    that tool returns similar queries by embedding; this returns past
+    traces by Verse retrieval-frequency. Affects Phase 9 item 36; depends
+    on the existence of (:CitationCheck) nodes' verdict property.
+  proposed_acceptance:
+    - "chat.py gains `tool_recall_traces_for_verse(verseId: str, min_citation_score: int = 3, limit: int = 5)`"
+    - "Returns: list of (query_text, tools_used, citation_score, retrieved_verses_count, age_days) tuples"
+    - "Excludes the current session's own trace to avoid self-reinforcement"
+    - "Regression test: a fixture with 3 past traces (1 above threshold, 1 below, 1 with no citation check) returns only the 1 above threshold"
+  notes: |
+    A natural pair with from_yt_outrival_reasoning_memory_decay — the
+    decay policy decides what stays *queryable*. Implement decay first,
+    then this tool, so the tool is reading from a curated set.
+
+- id: from_yt_opencode_split_system_prompt_by_bucket
+  type: prompt_variant
+  priority: 60
+  description: "Split monolithic system prompt into classify_query + per-bucket sub-prompts (STRUCTURED / ABSTRACT / etc.)"
+  source: "https://www.youtube.com/live/6IxSbMhT7v4 at ~42:48 (Dexter / OpenCode, instruction-budget framing)"
+  blockers:
+    - "Phase 7 item 29 (promote classify_query from prompt to code)"
+    - "Phase 4 v2 eval"
+  rationale: |
+    Dexter's "use control flow for control flow" reframes Phase 7 item 29.
+    Currently the QKG system prompt is one monolithic block (Khalifa
+    context + 21 tool descriptions + EXHAUSTIVE SEARCH MANDATE). Dexter's
+    Pinterest-CRISPY pattern is to classify the input first, then load a
+    smaller, bucket-specific instruction block. Mapping to QKG: classify
+    the query into one of 5 buckets (already in eval_v1_50q_bucketed.yaml:
+    STRUCTURED / ABSTRACT / CONCRETE / BROAD / ARABIC), then load only
+    that bucket's tool description block + bucket-specific instructions.
+  proposed_acceptance:
+    - "shared_agent.py gains a `classify_query(text)` function that returns one of {STRUCTURED, ABSTRACT, CONCRETE, BROAD, ARABIC}"
+    - "Per-bucket system prompts live in chat.py's PROMPT_BY_BUCKET dict"
+    - "Final system prompt = Khalifa context + bucket-specific tool list + bucket-specific instructions"
+    - "Token count of session-start system prompt drops by at least 30% for the most common bucket"
+    - "v2 eval mean_rubric_score does not regress > 2 points per bucket"
+  notes: |
+    This subsumes Phase 7 item 29 — pull classify_query into code first,
+    then use it as the prompt switch. The Dexter video specifically warns
+    "do not publish the magic prompts" — operator should expect to
+    iterate the per-bucket prompts based on eval feedback, not arrive at
+    them in one shot.
+
+- id: from_yt_deepmind_gemini_embeddings_2_qrcd_ab
+  type: eval
+  priority: 45
+  description: "Evaluate Gemini Embeddings 2 vs BGE-M3-EN on QRCD; comparison only — no production switch implied"
+  source: "https://www.youtube.com/live/O_IMsEg91g8 at ~49:42 (DeepMind, Gemini Embeddings 2 launch)"
+  blockers:
+    - "Phase 4 v2 eval (need bootstrap CIs before claiming any lift)"
+    - "Phase 6 item 22 (re-verify bge-reranker-v2-m3 first)"
+  rationale: |
+    The audit's "SKIP Aura Agent migration" decision (ADR) was made when
+    accessing Gemini Embeddings required Aura's stack-locked deployment.
+    Gemini Embeddings 2 is now a standalone API and is fully omnimodal
+    (text up to 8K tokens, video, audio, PDF in one vector space). This
+    is materially new information vs. the original decision. Worth a
+    head-to-head against BGE-M3-EN on the QRCD-style retrieval benchmark,
+    measured with v2 eval's bootstrap CIs. Result is informational only —
+    a switch would be a separate, much larger task.
+  proposed_acceptance:
+    - "Per-verse re-embedding with Gemini Embeddings 2 to a new property `embedding_gemini_v2`"
+    - "New Neo4j vector index `verse_embedding_gemini_v2`"
+    - "tool_semantic_search has an env-var switch SEMANTIC_SEARCH_INDEX=verse_embedding_gemini_v2"
+    - "v2 eval bucketed score reported for both indices with 95% bootstrap CIs"
+    - "Report committed to docs/research/gemini_embeddings_v2_qrcd.md with the comparison"
+  notes: |
+    Lower priority. Costs API tokens for the re-embedding (~6,234 verses).
+    Estimate cost before starting. Only worth doing once Phase 4 lands —
+    otherwise the "lift" claim collapses on the same statistical issues
+    that pulled MAP@10 numbers off the audit's headline metrics.
+
+- id: from_yt_openclaw_phase5_worktree_isolation_revision
+  type: cleanup
+  priority: 50
+  description: "Revise Phase 5 item 19 (worktree-per-tick): document Liam's heavy-harness warning, cap concurrent worktrees, evaluate clone-N alternative"
+  source: "https://www.youtube.com/live/O_IMsEg91g8 at ~186:21 (Liam Hapton / OpenClaw, on git-worktree pain at scale)"
+  blockers:
+    - "Phase 5 item 19 (the current worktree-isolation design)"
+  rationale: |
+    Phase 5 item 19 of the retrofit prescribes worktree-per-tick for
+    isolation. Liam at OpenClaw runs 70-80 active worktrees concurrently
+    on a heavy test harness and reports "that's kind of hell" — the
+    worktree + test-harness combination has pathological disk + state
+    interactions. QKG's loop runs one tick at a time, so this is far
+    less risky, but Phase 5's design doc currently states only "~50-200
+    MB per active worktree" without flagging the harness interaction.
+    Worth amending the plan with Liam's explicit hard-won warning and
+    a cap (e.g., MAX_CONCURRENT_WORKTREES=1) plus a documented fallback
+    (clone-N-times as Peter does, per Liam's recommendation).
+  proposed_acceptance:
+    - "docs/PHASE_5_LOOP_TAMING_PLAN.md gets a new section 'Worktree isolation: hard-won lessons from OpenClaw at scale'"
+    - "Section includes Liam's quote with timestamp and the recommended cap (MAX_CONCURRENT_WORKTREES = 1 for QKG given single-tick concurrency)"
+    - "Section documents the clone-N-times alternative as a fallback strategy"
+    - "ralph_loop.py gains a precondition check that aborts if >2 active worktrees exist when starting a tick"
+  notes: |
+    Documentation + small precondition check. No risky code changes.
+    Could be bundled with Phase 5's implementation when that lands.
