@@ -96,6 +96,13 @@ class AgentConfig:
     # — Tooling identifiers (informational; surfaced to the UI) —
     tool_labels: dict[str, str] = field(default_factory=dict)
 
+    # — Multi-tool discipline policy —
+    # Maps a class label (e.g. "keyword retrieval") to the list of tool names
+    # that satisfy that class. agent_stream nudges the model if it tries to
+    # answer without exercising every class. Empty dict = discipline disabled
+    # (anthropic apps default to this).
+    required_tool_classes: dict[str, list[str]] = field(default_factory=dict)
+
     def __post_init__(self) -> None:
         if self.backend not in ("anthropic", "ollama", "openrouter"):
             raise ValueError(
@@ -607,14 +614,19 @@ async def agent_stream(
                     re.search(r"\bverse\s*\d+[:.]\d+", message.lower())
                 ) or len(message.split()) < 4
 
+                discipline_classes = config.required_tool_classes
+
                 def _needs_more_tools() -> bool:
+                    if not discipline_classes:
+                        return False  # discipline disabled
                     if _is_simple_lookup:
                         return False
                     if total_tool_calls < 2:
                         return True
-                    has_kw = bool(tools_used_so_far & {"search_keyword", "traverse_topic"})
-                    has_sem = "semantic_search" in tools_used_so_far
-                    return not (has_kw and has_sem)
+                    for satisfying_tools in discipline_classes.values():
+                        if not (tools_used_so_far & set(satisfying_tools)):
+                            return True  # this class is unmet
+                    return False
 
                 num_predict_default = 8192 if full_coverage else config.max_tokens
                 num_ctx_default = 40960 if full_coverage else 24576
@@ -698,17 +710,15 @@ async def agent_stream(
                     # Discipline-nudge if the model tries to skip retrieval.
                     if not tool_calls and _needs_more_tools():
                         missing = []
-                        if (
-                            "search_keyword" not in tools_used_so_far
-                            and "traverse_topic" not in tools_used_so_far
-                        ):
-                            missing.append("search_keyword or traverse_topic")
-                        if "semantic_search" not in tools_used_so_far:
-                            missing.append("semantic_search")
+                        for class_name, satisfying_tools in discipline_classes.items():
+                            if not (tools_used_so_far & set(satisfying_tools)):
+                                missing.append(
+                                    f"{class_name} ({' or '.join(satisfying_tools)})"
+                                )
                         nudge = (
-                            "You have not done enough retrieval yet. "
-                            f"Before writing any answer, you MUST call: {', '.join(missing)}. "
-                            "Call them now with appropriate arguments for the user's question."
+                            "You have not done enough retrieval yet. Before writing "
+                            f"any answer, you MUST call one of: {'; '.join(missing)}. "
+                            "Call them now."
                         )
                         msgs.append({"role": "user", "content": nudge})
                         continue

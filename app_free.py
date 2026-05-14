@@ -395,6 +395,10 @@ AGENT_CONFIG = AgentConfig(
     prefer_openrouter=PREFER_OPENROUTER,
     ollama_url=OLLAMA_URL,
     openrouter_url=OPENROUTER_URL,
+    required_tool_classes={
+        "keyword retrieval": ["search_keyword", "traverse_topic"],
+        "semantic retrieval": ["semantic_search"],
+    },
 )
 
 

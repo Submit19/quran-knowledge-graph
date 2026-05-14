@@ -56,6 +56,24 @@ def test_agent_config_is_frozen():
         cfg.backend = "ollama"  # type: ignore[misc]
 
 
+def test_agent_config_required_tool_classes_defaults_empty():
+    """Discipline is opt-in. The default is no policy = no nudge."""
+    cfg = _make_minimal_config()
+    assert cfg.required_tool_classes == {}
+
+
+def test_agent_config_accepts_required_tool_classes_dict():
+    """Two-class policy mirroring app_free's preserved behaviour."""
+    cfg = _make_minimal_config(
+        required_tool_classes={
+            "keyword retrieval": ["search_keyword", "traverse_topic"],
+            "semantic retrieval": ["semantic_search"],
+        }
+    )
+    assert set(cfg.required_tool_classes) == {"keyword retrieval", "semantic retrieval"}
+    assert cfg.required_tool_classes["semantic retrieval"] == ["semantic_search"]
+
+
 def test_agent_config_default_flags_are_conservative():
     """Most feature flags default off — wrappers opt-in per the variant table."""
     cfg = _make_minimal_config()
