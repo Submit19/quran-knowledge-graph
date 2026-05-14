@@ -1,0 +1,73 @@
+# Eval v2 — EXAMPLE questions.
+#
+# These three questions exist to validate the eval runner end-to-end
+# (smoke test in CI + local sanity checks). They are NOT the production
+# 50q set — the operator authors that in Phase 4b across five files
+# (structured.yaml, abstract.yaml, concrete.yaml, broad.yaml,
+# arabic.yaml), each with 10 questions.
+#
+# See data/eval/v2/SCHEMA.md for the canonical schema and
+# docs/EVAL_V2_RUNNER.md for authoring guidance.
+
+- id: structured-001
+  bucket: STRUCTURED
+  question: "What does verse 2:255 say?"
+  asserts:
+    cites_must_include: ["2:255"]
+    tools_used_must_include: ["get_verse"]
+    tools_used_must_not_include: ["run_cypher"]
+  rubric_weights:
+    citation_accuracy: 0.4
+    answer_completeness: 0.3
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.1
+  notes: |
+    EXAMPLE — direct verse lookup (Ayat al-Kursi). Validates the
+    runner's citation extraction (verse appears as [2:255] in the
+    answer) and tool-usage assertions (get_verse should be the
+    primary tool; run_cypher would indicate the agent took the
+    escape hatch on a trivial lookup).
+  added: 2026-05-15
+  added_by: example-set
+
+- id: concrete-001
+  bucket: CONCRETE
+  question: "Where in the Quran is Moses mentioned?"
+  asserts:
+    tools_used_must_include: ["search_keyword"]
+    answer_substring_required: ["Moses"]
+  rubric_weights:
+    citation_accuracy: 0.3
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.1
+  notes: |
+    EXAMPLE — named-figure breadth query. Moses is the most-cited
+    prophet in the Quran (~136 references), so completeness matters
+    more than pinpoint citation accuracy. We don't pin specific
+    verse_ids since "where" admits many correct answers; instead
+    we require that search_keyword (the breadth tool) is in the
+    path and that "Moses" appears in the answer.
+  added: 2026-05-15
+  added_by: example-set
+
+- id: abstract-001
+  bucket: ABSTRACT
+  question: "What does the Quran say about patience?"
+  asserts:
+    tools_used_must_not_include: ["run_cypher"]
+  rubric_weights:
+    citation_accuracy: 0.3
+    answer_completeness: 0.3
+    tool_path_correctness: 0.15
+    framing_appropriateness: 0.25
+  notes: |
+    EXAMPLE — abstract theme question. No specific verse is required
+    (many verses discuss sabr/patience). Framing weight is boosted
+    because over-claim on theme questions is the typical failure
+    mode ("the Quran says X about patience" when the source is
+    actually ambiguous or context-dependent). run_cypher would
+    indicate the agent fell back to raw Cypher instead of using
+    semantic_search / concept_search / search_keyword.
+  added: 2026-05-15
+  added_by: example-set

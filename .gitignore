@@ -65,6 +65,9 @@ eval_baseline.json
 eval_phase1_2_4.json
 eval_all_phases.json
 
+# Eval v2 run outputs — large JSON trajectories, regenerable
+data/eval/v2/runs/
+
 # Per-machine state for the vault auto-update script
 .vault_update_state.json
 
