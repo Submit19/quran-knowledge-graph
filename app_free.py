@@ -154,9 +154,18 @@ OLLAMA_TOOLS = [
 _parser = argparse.ArgumentParser(add_help=False)
 _parser.add_argument("--model", default=DEFAULT_MODEL)
 _parser.add_argument("--port", type=int, default=8085)
+_parser.add_argument(
+    "--openrouter",
+    action="store_true",
+    help="Default to the OpenRouter free model for every chat request "
+         "(requires OPENROUTER_API_KEY in .env). Equivalent to PREFER_OPENROUTER=1.",
+)
 _args, _ = _parser.parse_known_args()
 OLLAMA_MODEL = _args.model
 OLLAMA_PORT = _args.port
+# Default backend toggle. The flag wins; env var is a fallback so desktop
+# shortcuts that can't easily pass flags can still set it via .env.
+PREFER_OPENROUTER = _args.openrouter or os.getenv("PREFER_OPENROUTER", "").strip().lower() in ("1", "true", "yes")
 
 # OpenRouter for deep-dive / cache seeding (larger free models)
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "").strip()
@@ -459,6 +468,11 @@ async def model_status():
 
 @app.get("/model-info")
 async def model_info():
+    # Reflect the default routing decision so the UI banner matches what
+    # chat requests will actually use. Mirrors the logic at the top of
+    # _agent_stream(): PREFER_OPENROUTER + key → OpenRouter by default.
+    if PREFER_OPENROUTER and OPENROUTER_API_KEY:
+        return {"model": OPENROUTER_MODEL, "backend": "openrouter", "cost": "free"}
     return {"model": OLLAMA_MODEL, "backend": "ollama", "cost": "free"}
 
 
@@ -633,9 +647,17 @@ async def _agent_stream(message: str, history: list,
     # - local_only → skip OpenRouter entirely (use when quota hit or offline)
     # - model_override + key → use that OpenRouter model for this request
     # - deep_dive + key → default OpenRouter model
+    # - PREFER_OPENROUTER + key → default OpenRouter model for every request
+    #   (set via --openrouter flag or PREFER_OPENROUTER=1 env var; intended
+    #   for desktop-shortcut launches where the operator prefers the larger
+    #   free OpenRouter model over the local 8B by default)
     # - deep_dive no key → local 14B
     # - otherwise → local 8B
-    use_openrouter = not local_only and bool(OPENROUTER_API_KEY) and (deep_dive or model_override)
+    use_openrouter = (
+        not local_only
+        and bool(OPENROUTER_API_KEY)
+        and (PREFER_OPENROUTER or deep_dive or model_override)
+    )
     if use_openrouter:
         active_model = model_override or OPENROUTER_MODEL
         active_backend = "openrouter"
@@ -1132,7 +1154,14 @@ def _preload_model():
 if __name__ == "__main__":
     _model_status["model"] = OLLAMA_MODEL
 
-    print(f"\n[FREE] Model: {OLLAMA_MODEL}")
+    if PREFER_OPENROUTER and OPENROUTER_API_KEY:
+        print(f"\n[FREE] Default backend: OpenRouter ({OPENROUTER_MODEL})")
+        print(f"[FREE] Local fallback model: {OLLAMA_MODEL}")
+    elif PREFER_OPENROUTER and not OPENROUTER_API_KEY:
+        print(f"\n[FREE] --openrouter requested but OPENROUTER_API_KEY is not set.")
+        print(f"[FREE] Falling back to local model: {OLLAMA_MODEL}")
+    else:
+        print(f"\n[FREE] Model: {OLLAMA_MODEL}")
     print(f"[FREE] Cost: $0.00 (local)")
     print(f"[FREE] Quran Graph: http://localhost:{OLLAMA_PORT}\n")
 
