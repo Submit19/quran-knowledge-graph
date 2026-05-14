@@ -1,0 +1,12 @@
+question           : 'What does verse 2:255 say?'
+elapsed            : 24.1s
+n_events           : 11
+event types        : ['tool', 'tool', 'text', 'tool', 'text', 'tool', 'graph_update', 'tool', 'graph_update', 'text', 'done']
+event_type_counts  : {'tool': 5, 'text': 3, 'graph_update': 2, 'done': 1}
+tool calls         : ['Model', 'Answer cache', 'Looking up verse', 'Looking up verse', 'Looking up verse']
+n_tool_calls       : 5
+text_total_chars   : 1369
+citations in text  : 2
+verses_in_done     : ['2:254', '2:256']
+has_done           : True
+has_error          : False
