@@ -11,14 +11,21 @@ Typical savings: 60-70% fewer tokens per tool result.
 import json
 
 
-def compress_tool_result(tool_name: str, result_str: str) -> str:
+def compress_tool_result(tool_name: str, result_str: str, full_coverage: bool = False) -> str:
     """
     Compress a tool result JSON string for feeding back to Claude.
     Keeps structure + references but trims long text fields.
 
     The FULL result_str is still used for graph extraction and etymology panels.
     Only the compressed version goes into the conversation history.
+
+    If full_coverage=True, compression is skipped entirely — the model sees
+    every retrieved verse in full. Used by app_free.py's deep-dive mode where
+    the larger context window can hold the un-trimmed output.
     """
+    if full_coverage:
+        return result_str
+
     try:
         result = json.loads(result_str)
     except (json.JSONDecodeError, TypeError):
