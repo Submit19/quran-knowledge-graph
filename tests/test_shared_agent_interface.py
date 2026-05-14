@@ -89,13 +89,15 @@ def test_agent_stream_signature_accepts_per_request_overrides():
     )
 
 
-def test_agent_stream_stub_raises_not_implemented():
-    """Until step 3 lands the body, calling agent_stream must fail loudly."""
-    cfg = _make_minimal_config()
-
-    async def drive():
-        async for _ in shared_agent.agent_stream("hi", [], cfg):
-            pass
-
-    with pytest.raises(NotImplementedError, match="Phase 3a stub"):
-        asyncio.run(drive())
+def test_agent_stream_is_callable_with_minimal_config():
+    """After step 3, agent_stream is implemented; invoking it returns a live
+    async generator (we don't drain it here — that would require a running
+    Neo4j + Ollama. The structural baseline harness covers end-to-end).
+    """
+    cfg = _make_minimal_config(backend="ollama", default_model="dummy")
+    gen = shared_agent.agent_stream("hi", [], cfg)
+    assert inspect.isasyncgen(gen), (
+        f"agent_stream(...) should return an async generator, got {type(gen).__name__}"
+    )
+    # Close immediately so we don't actually start the worker thread.
+    asyncio.run(gen.aclose())

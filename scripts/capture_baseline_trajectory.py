@@ -79,17 +79,17 @@ def _summarise(events: list[dict]) -> dict:
             continue
         event_types.append(t)
         if t == "tool":
-            tool_calls.append(
-                {
-                    "name": ev.get("name"),
-                    "args_keys": sorted(json.loads(ev.get("args")))
-                    if (
-                        isinstance(ev.get("args"), str)
-                        and ev.get("args").startswith("{")
-                    )
-                    else None,
-                }
-            )
+            raw_args = ev.get("args")
+            args_keys = None
+            if isinstance(raw_args, str) and raw_args.startswith("{"):
+                try:
+                    args_keys = sorted(json.loads(raw_args))
+                except (json.JSONDecodeError, TypeError):
+                    # Tool-call args strings are truncated to ~80 chars + "...".
+                    # Truncated JSON is unparseable; that's fine for the
+                    # structural fingerprint — we just record the name.
+                    args_keys = None
+            tool_calls.append({"name": ev.get("name"), "args_keys": args_keys})
         elif t == "text":
             text_chars += len(ev.get("d") or "")
         elif t == "done":
