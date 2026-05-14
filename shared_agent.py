@@ -172,8 +172,8 @@ def _fetch_verses(session, verse_ids: set) -> dict:
         return {}
     result = session.run(
         "UNWIND $ids AS vid "
-        "MATCH (v:Verse {reference: vid}) "
-        "RETURN v.reference AS id, v.text AS text, v.arabicText AS arabic",
+        "MATCH (v:Verse {verseId: vid}) "
+        "RETURN v.verseId AS id, v.text AS text, v.arabicText AS arabic",
         ids=list(verse_ids),
     )
     return {
@@ -216,9 +216,9 @@ def _priming_graph_update(session, message: str) -> dict | None:
             MATCH (k:Keyword) WHERE toLower(k.keyword) CONTAINS kw
             MATCH (k)<-[:MENTIONS]-(v:Verse)
             WITH v, count(DISTINCT k) AS matchCount
-            ORDER BY matchCount DESC, v.reference
+            ORDER BY matchCount DESC, v.verseId
             LIMIT 6
-            RETURN v.reference AS id, v.text AS text, v.surahName AS surahName,
+            RETURN v.verseId AS id, v.text AS text, v.surahName AS surahName,
                    v.arabicText AS arabicText
             """,
             kws=kws,
