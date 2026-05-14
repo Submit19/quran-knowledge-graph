@@ -1,0 +1,12 @@
+question           : 'What does verse 2:255 say?'
+elapsed            : 67.0s
+n_events           : 28
+event types        : ['tool', 'text', 'tool', 'text', 'tool', 'text', 'tool', 'graph_update', 'text', 'tool', 'graph_update', 'tool', 'tool', 'text', 'tool', 'graph_update', 'tool', 'text', 'tool', 'graph_update', 'text', 'tool', 'text', 'tool', 'text', 'tool', 'text', 'done']
+event_type_counts  : {'done': 1, 'text': 10, 'graph_update': 4, 'tool': 13}
+tool calls         : ['Answer cache', 'Looking up verse', 'Looking up verse', 'Searching keywords', 'Searching keywords', 'Searching keywords', 'Semantic search', 'Searching keywords', 'concept_search', 'Exploring surah', 'Looking up verse', 'run_cypher', 'run_cypher']
+n_tool_calls       : 13
+text_total_chars   : 1975
+citations in text  : 1
+verses_in_done     : ['3:2']
+has_done           : True
+has_error          : False

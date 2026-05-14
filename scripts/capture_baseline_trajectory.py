@@ -1,27 +1,28 @@
-"""Capture an SSE trajectory from app_free._agent_stream as a structural baseline.
+"""Capture an SSE trajectory from an app's _agent_stream as a structural baseline.
 
 Phase 3a safety net (docs/PHASE_3A_PLAN.md). Before extracting shared_agent.py
-from app_free.py, this harness records the shape of one canonical chat turn:
+from each app, this harness records the shape of one canonical chat turn:
 the sequence of SSE event types, the tool calls made, and the final answer's
 fingerprint. After the refactor, the same harness re-runs and we diff against
 the v0 trace to confirm no observable behaviour change.
 
 Outputs:
-  data/baseline_trajectory_v0.json — full event sequence + structural summary
-  data/baseline_trajectory_v0.summary.txt — human-readable summary
+  data/baseline_trajectory[_<app>]_v0.json — full event sequence + summary
+  data/baseline_trajectory[_<app>]_v0.summary.txt — human-readable summary
 
 The full sequence is non-deterministic across runs (LLM sampling, model
 warm-up), but the *structural* summary should match v0 vs v1 — same event
 types in the same order, same tool names called, similar text lengths.
 
 Usage:
-  python scripts/capture_baseline_trajectory.py [--output v0]
+  python scripts/capture_baseline_trajectory.py [--output v0] [--app app_free]
 """
 
 from __future__ import annotations
 
 import argparse
 import asyncio
+import importlib
 import json
 import re
 import sys
@@ -30,10 +31,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
-
-# Importing app_free is heavy (Neo4j connect, model imports). The harness pays
-# this cost once; the captured trajectory has none of it.
-import app_free  # noqa: E402
 
 
 BASELINE_QUESTION = "What does verse 2:255 say?"
@@ -53,10 +50,10 @@ def _parse_sse_frame(frame: str) -> dict | None:
         return None
 
 
-async def _drive_agent_stream(question: str) -> list[dict]:
+async def _drive_agent_stream(app_module, question: str) -> list[dict]:
     """Run _agent_stream end-to-end and collect every event."""
     events: list[dict] = []
-    async for raw_frame in app_free._agent_stream(question, history=[]):
+    async for raw_frame in app_module._agent_stream(question, history=[]):
         payload = _parse_sse_frame(raw_frame)
         if payload is None:
             continue
@@ -137,20 +134,37 @@ def main():
         help="Output suffix: 'v0' for pre-refactor baseline, 'v1' for post-refactor.",
     )
     parser.add_argument(
+        "--app",
+        default="app_free",
+        help="App module to drive (e.g. app_free, app_lite). Must expose "
+        "_agent_stream(message, history).",
+    )
+    parser.add_argument(
         "--question",
         default=BASELINE_QUESTION,
         help=f"Question to drive the agent with (default: {BASELINE_QUESTION!r}).",
     )
     args = parser.parse_args()
 
+    # Importing the app is heavy (Neo4j connect, model imports). The harness
+    # pays this cost once; the captured trajectory has none of it.
+    print(f"[capture] importing {args.app} …", flush=True)
+    app_module = importlib.import_module(args.app)
+
     OUTPUT_DIR.mkdir(exist_ok=True)
-    output_json = OUTPUT_DIR / f"baseline_trajectory_{args.output}.json"
-    output_summary = OUTPUT_DIR / f"baseline_trajectory_{args.output}.summary.txt"
+    # Default app (app_free) preserves the original filename for backwards-
+    # compat with earlier baselines; other apps get a tagged filename.
+    if args.app == "app_free":
+        stem = f"baseline_trajectory_{args.output}"
+    else:
+        stem = f"baseline_trajectory_{args.app}_{args.output}"
+    output_json = OUTPUT_DIR / f"{stem}.json"
+    output_summary = OUTPUT_DIR / f"{stem}.summary.txt"
 
     print(f"[capture] question: {args.question!r}", flush=True)
     print("[capture] driving _agent_stream …", flush=True)
     started = time.monotonic()
-    events = asyncio.run(_drive_agent_stream(args.question))
+    events = asyncio.run(_drive_agent_stream(app_module, args.question))
     elapsed = time.monotonic() - started
     print(f"[capture] {len(events)} events in {elapsed:.1f}s", flush=True)
 
