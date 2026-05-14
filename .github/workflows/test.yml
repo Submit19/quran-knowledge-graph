@@ -42,8 +42,10 @@ jobs:
       - name: Install runtime deps (minimal subset for tests)
         run: |
           python -m pip install --upgrade pip
-          # Production deps that chat.py imports at module load
-          pip install anthropic neo4j python-dotenv nltk scikit-learn pyyaml
+          # Production deps that chat.py + shared_agent.py import at module
+          # load. shared_agent imports requests for the HTTP clients moved
+          # out of app_free in Phase 3a.
+          pip install anthropic neo4j python-dotenv nltk scikit-learn pyyaml requests
           # NLTK data needed by build_graph.tokenize_and_lemmatize
           python -c "import nltk; nltk.download('punkt_tab', quiet=True); nltk.download('stopwords', quiet=True); nltk.download('wordnet', quiet=True)"
 
