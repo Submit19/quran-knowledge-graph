@@ -26,10 +26,6 @@ import chat
 # ── _validate_verse_id (chat.py:133) ────────────────────────────────────────
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="chat.py:133 _validate_verse_id replace(' ', ':') bug",
-)
 @pytest.mark.parametrize(
     "raw",
     [
@@ -53,10 +49,6 @@ def test_validate_verse_id_accepts_inner_whitespace(raw):
 # ── tool_find_path (chat.py:366, 367) ──────────────────────────────────────
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="chat.py:366-367 tool_find_path replace(' ', ':') on both refs",
-)
 @pytest.mark.parametrize(
     "raw1,raw2",
     [
@@ -82,10 +74,6 @@ def test_tool_find_path_normalises_both_verse_refs(raw1, raw2, fatiha_session):
 # ── tool_query_typed_edges (chat.py:584) ───────────────────────────────────
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="chat.py:584 tool_query_typed_edges replace(' ', ':') bug",
-)
 @pytest.mark.parametrize(
     "raw_input",
     [

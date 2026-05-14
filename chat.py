@@ -130,7 +130,7 @@ def _validate_surah_number(surah_number) -> dict | None:
 
 def _validate_verse_id(verse_id: str) -> dict | None:
     """Return an error dict if verse_id format is invalid (expected S:A), else None."""
-    vid = str(verse_id).strip().replace(" ", ":")
+    vid = str(verse_id).strip().replace(" ", "")
     m = _re.match(r'^(\d+):(\d+)$', vid)
     if not m:
         return {"error": f"Invalid verse ID format: {verse_id!r}",
@@ -363,8 +363,8 @@ def tool_traverse_topic(session, keywords: list[str], hops: int = 1) -> dict:
 
 def tool_find_path(session, verse_id_1: str, verse_id_2: str) -> dict:
     """Find the shortest thematic path between two verses through the graph."""
-    v1 = verse_id_1.strip().replace(" ", ":")
-    v2 = verse_id_2.strip().replace(" ", ":")
+    v1 = verse_id_1.strip().replace(" ", "")
+    v2 = verse_id_2.strip().replace(" ", "")
 
     for vid in [v1, v2]:
         err = _validate_verse_id(vid)
@@ -581,7 +581,7 @@ def tool_compare_arabic_usage(session, root: str) -> dict:
 
 def tool_query_typed_edges(session, verse_id: str, edge_type: str = None) -> dict:
     """Query verses connected by a specific relationship type (SUPPORTS, ELABORATES, etc.)."""
-    verse_id = verse_id.strip().replace(" ", ":")
+    verse_id = verse_id.strip().replace(" ", "")
     err = _validate_verse_id(verse_id)
     if err:
         return err
