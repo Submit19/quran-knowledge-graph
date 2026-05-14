@@ -156,12 +156,16 @@ class AgentCollaborators:
         openrouter_api_key: OpenRouter Bearer token. May be empty when
             the app doesn't use OpenRouter; ``agent_stream``'s routing
             decision treats an empty key as "OpenRouter unavailable".
+        anthropic_client: ``anthropic.Anthropic`` client instance (or
+            test double). Required when ``config.backend == "anthropic"``;
+            ignored for Ollama-only apps.
     """
 
     driver: Any
     reasoning_memory: Any = None
     db_name: str = "quran"
     openrouter_api_key: str = ""
+    anthropic_client: Any = None
 
 
 # ──────────────────────────────────────────────────────────────────────────
@@ -447,6 +451,141 @@ def _ollama_chat(
 
 
 # ──────────────────────────────────────────────────────────────────────────
+# Anthropic SDK translation helpers
+# ──────────────────────────────────────────────────────────────────────────
+#
+# The agent loop operates on the OpenAI-ish message shape returned by
+# ``_ollama_chat`` and ``_openrouter_chat``. Anthropic's SDK speaks a
+# different dialect: messages have block-list content (``text`` / ``tool_use``
+# / ``tool_result``), tools are flat (``name`` + ``input_schema`` instead of
+# nested ``function.parameters``), and responses come back as ``Message``
+# objects with ``.content`` blocks + ``.stop_reason``.
+#
+# These three helpers form the boundary translation. Keeping them as
+# module-level pure functions makes them unit-testable without spinning up
+# the whole agent loop (see tests/test_shared_agent_anthropic.py).
+
+
+def _to_anthropic_messages(messages: list) -> list:
+    """OpenAI-ish messages → Anthropic ``messages`` param.
+
+    System messages are stripped (Anthropic takes ``system`` separately).
+    Tool results and assistant tool_calls are rewritten into Anthropic's
+    block-list shape.
+    """
+    out: list = []
+    for m in messages:
+        role = m.get("role")
+        if role == "system":
+            continue  # passed separately as the `system` param
+        if role == "tool":
+            out.append({
+                "role": "user",
+                "content": [{
+                    "type": "tool_result",
+                    "tool_use_id": m.get("tool_call_id", ""),
+                    "content": m.get("content", ""),
+                }],
+            })
+            continue
+        if role == "assistant" and m.get("tool_calls"):
+            blocks: list = []
+            if m.get("content"):
+                blocks.append({"type": "text", "text": m["content"]})
+            for tc in m["tool_calls"]:
+                fn = tc.get("function", {})
+                args = fn.get("arguments", {})
+                if isinstance(args, str):
+                    try:
+                        args = json.loads(args)
+                    except json.JSONDecodeError:
+                        args = {}
+                blocks.append({
+                    "type": "tool_use",
+                    "id": tc.get("id", ""),
+                    "name": fn.get("name", ""),
+                    "input": args,
+                })
+            out.append({"role": "assistant", "content": blocks})
+            continue
+        out.append({"role": role, "content": m.get("content", "")})
+    return out
+
+
+def _to_anthropic_tools(tools: list) -> list:
+    """OpenAI-style tool schema → Anthropic tool schema.
+
+    Anthropic expects ``{name, description, input_schema}`` (flat); OpenAI
+    nests them inside ``function``. Passes through anything already in
+    Anthropic shape (no ``function`` key).
+    """
+    out: list = []
+    for t in tools:
+        if "function" in t:
+            fn = t["function"]
+            out.append({
+                "name": fn.get("name", ""),
+                "description": fn.get("description", ""),
+                "input_schema": fn.get("parameters", {"type": "object"}),
+            })
+        else:
+            out.append(t)
+    return out
+
+
+def _from_anthropic_response(response) -> dict:
+    """Anthropic ``Message`` → OpenAI-ish ``{"message": {...}}`` dict.
+
+    Concatenates all text blocks; converts tool_use blocks into
+    ``tool_calls`` entries with JSON-stringified ``arguments``.
+    """
+    text_parts: list = []
+    tool_calls: list = []
+    for block in response.content:
+        btype = getattr(block, "type", None)
+        if btype == "text":
+            text_parts.append(getattr(block, "text", "") or "")
+        elif btype == "tool_use":
+            tool_calls.append({
+                "id": getattr(block, "id", ""),
+                "type": "function",
+                "function": {
+                    "name": getattr(block, "name", ""),
+                    "arguments": json.dumps(getattr(block, "input", {}) or {}),
+                },
+            })
+    return {
+        "message": {
+            "role": "assistant",
+            "content": "".join(text_parts),
+            "tool_calls": tool_calls,
+        },
+        "stop_reason": getattr(response, "stop_reason", None),
+    }
+
+
+def _anthropic_step(
+    *, client, model: str, system: str, tools: list,
+    messages: list, max_tokens: int = 4096, temperature: float = 0.3,
+) -> dict:
+    """Call Anthropic and return the OpenAI-ish shape the agent loop expects.
+
+    ``messages`` arrives in the OpenAI-ish shape used throughout the loop;
+    translation in both directions happens here so the rest of the loop is
+    backend-agnostic.
+    """
+    response = client.messages.create(
+        model=model,
+        max_tokens=max_tokens,
+        system=system,
+        tools=_to_anthropic_tools(tools),
+        messages=_to_anthropic_messages(messages),
+        temperature=temperature,
+    )
+    return _from_anthropic_response(response)
+
+
+# ──────────────────────────────────────────────────────────────────────────
 # Public entry-point — agent_stream
 # ──────────────────────────────────────────────────────────────────────────
 
@@ -477,22 +616,41 @@ async def agent_stream(
     reasoning_memory = collaborators.reasoning_memory
     db_name = collaborators.db_name
     openrouter_api_key = collaborators.openrouter_api_key
+    anthropic_client = collaborators.anthropic_client
 
-    # Routing decision (variant: app_free).
-    use_openrouter = (
-        not local_only
-        and bool(openrouter_api_key)
-        and (config.prefer_openrouter or deep_dive or model_override)
-    )
-    if use_openrouter:
-        active_model = model_override or (config.openrouter_model or config.default_model)
-        active_backend = "openrouter"
-    elif deep_dive or local_only:
-        active_model = config.deep_dive_model or config.default_model
-        active_backend = "ollama"
+    # Routing decision.
+    # For Anthropic-backed apps (app_lite, app.py, app_full.py) the default
+    # is just config.backend with no fallback — the OpenRouter/Ollama branches
+    # below only fire when an Ollama-default app gets `deep_dive` /
+    # `model_override` / etc. from the request layer.
+    if config.backend == "anthropic":
+        if anthropic_client is None:
+            raise RuntimeError(
+                "AgentConfig.backend == 'anthropic' but "
+                "AgentCollaborators.anthropic_client is None — apps using the "
+                "Anthropic backend must construct an anthropic.Anthropic "
+                "client and pass it in via AgentCollaborators."
+            )
+        active_model = model_override or config.default_model
+        active_backend = "anthropic"
     else:
-        active_model = config.default_model
-        active_backend = "ollama"
+        # Routing decision (variant: app_free).
+        use_openrouter = (
+            not local_only
+            and bool(openrouter_api_key)
+            and (config.prefer_openrouter or deep_dive or model_override)
+        )
+        if use_openrouter:
+            active_model = model_override or (
+                config.openrouter_model or config.default_model
+            )
+            active_backend = "openrouter"
+        elif deep_dive or local_only:
+            active_model = config.deep_dive_model or config.default_model
+            active_backend = "ollama"
+        else:
+            active_model = config.default_model
+            active_backend = "ollama"
 
     print(f"  [chat] {active_backend} :: {active_model}")
 
@@ -657,11 +815,10 @@ async def agent_stream(
                 pending_fallbacks = list(config.fallback_chain)
 
                 def _call_backend(backend: str, model: str) -> dict:
-                    """Dispatch one LLM call to the right HTTP client.
+                    """Dispatch one LLM call to the right backend.
 
                     Returns the normalised ``{"message": {content, tool_calls}}``
-                    shape both helpers produce. Anthropic backend is reserved
-                    for a future port and not yet supported here.
+                    shape every helper produces.
                     """
                     if backend == "openrouter":
                         return _openrouter_chat(
@@ -683,6 +840,26 @@ async def agent_stream(
                             num_ctx=num_ctx_default,
                             num_predict=num_predict_default,
                             think=full_coverage,
+                        )
+                    if backend == "anthropic":
+                        if anthropic_client is None:
+                            raise RuntimeError(
+                                "anthropic backend requested but "
+                                "collaborators.anthropic_client is None"
+                            )
+                        system_text = (
+                            msgs[0]["content"]
+                            if msgs and msgs[0].get("role") == "system"
+                            else config.system_prompt
+                        )
+                        return _anthropic_step(
+                            client=anthropic_client,
+                            model=model,
+                            system=system_text,
+                            tools=config.tools,
+                            messages=msgs,
+                            max_tokens=num_predict_default,
+                            temperature=0.3,
                         )
                     raise NotImplementedError(
                         f"_call_backend: backend {backend!r} not yet wired "

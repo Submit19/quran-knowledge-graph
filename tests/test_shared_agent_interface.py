@@ -147,19 +147,21 @@ def test_agent_stream_signature_accepts_per_request_overrides():
     )
 
 
-def _make_minimal_collaborators():
+def _make_minimal_collaborators(**overrides):
     """A lightweight stand-in suitable for surface tests; no real Neo4j."""
 
     class _MockDriver:
         def session(self, **_kw):  # not actually opened in surface tests
             raise NotImplementedError("MockDriver.session — surface test only")
 
-    return shared_agent.AgentCollaborators(
+    base = dict(
         driver=_MockDriver(),
         reasoning_memory=None,
         db_name="test",
         openrouter_api_key="",
     )
+    base.update(overrides)
+    return shared_agent.AgentCollaborators(**base)
 
 
 def test_agent_collaborators_construction():
@@ -168,6 +170,26 @@ def test_agent_collaborators_construction():
     assert co.db_name == "test"
     assert co.openrouter_api_key == ""
     assert co.reasoning_memory is None
+    # New in Phase 3a-3: Anthropic backend uses an injected client. Defaults
+    # to None for Ollama-only apps.
+    assert co.anthropic_client is None
+
+
+def test_agent_collaborators_accepts_anthropic_client():
+    """Anthropic-backed apps inject an SDK client via collaborators."""
+    sentinel = object()
+    co = _make_minimal_collaborators(anthropic_client=sentinel)
+    assert co.anthropic_client is sentinel
+
+
+def test_agent_stream_raises_when_anthropic_backend_lacks_client():
+    """Contract: config.backend='anthropic' demands a non-None anthropic_client."""
+    cfg = _make_minimal_config(backend="anthropic", default_model="claude-haiku-4-5")
+    co = _make_minimal_collaborators()  # anthropic_client defaults to None
+    with pytest.raises(RuntimeError, match="anthropic_client"):
+        gen = shared_agent.agent_stream("hi", [], cfg, co)
+        # Touch the generator to trigger the eager routing check.
+        asyncio.run(gen.__anext__())
 
 
 def test_agent_stream_is_callable_with_minimal_config():
