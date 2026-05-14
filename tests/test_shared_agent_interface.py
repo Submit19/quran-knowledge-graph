@@ -62,6 +62,46 @@ def test_agent_config_required_tool_classes_defaults_empty():
     assert cfg.required_tool_classes == {}
 
 
+def test_agent_config_fallback_chain_defaults_empty():
+    """No fallback by default — Anthropic apps inherit this when they port."""
+    cfg = _make_minimal_config()
+    assert cfg.fallback_chain == ()
+
+
+def test_agent_config_accepts_single_fallback_entry():
+    """app_free's preserved behaviour: one entry, ollama deep-dive."""
+    fb = shared_agent.FallbackBackend(backend="ollama", model="qwen3:14b")
+    cfg = _make_minimal_config(fallback_chain=(fb,))
+    assert len(cfg.fallback_chain) == 1
+    assert cfg.fallback_chain[0].backend == "ollama"
+    assert cfg.fallback_chain[0].model == "qwen3:14b"
+
+
+def test_agent_config_accepts_multi_step_fallback_chain():
+    """Multi-step chain: try backend A, then B, then C; raise after C."""
+    chain = (
+        shared_agent.FallbackBackend(
+            backend="openrouter", model="qwen/qwen3-coder:free"
+        ),
+        shared_agent.FallbackBackend(backend="ollama", model="qwen3:14b"),
+        shared_agent.FallbackBackend(backend="ollama", model="qwen3:8b"),
+    )
+    cfg = _make_minimal_config(fallback_chain=chain)
+    assert len(cfg.fallback_chain) == 3
+    assert [fb.model for fb in cfg.fallback_chain] == [
+        "qwen/qwen3-coder:free",
+        "qwen3:14b",
+        "qwen3:8b",
+    ]
+
+
+def test_fallback_backend_is_frozen():
+    """FallbackBackend is a frozen dataclass — chains are hashable/immutable."""
+    fb = shared_agent.FallbackBackend(backend="ollama", model="x")
+    with pytest.raises((AttributeError, Exception)):
+        fb.model = "y"  # type: ignore[misc]
+
+
 def test_agent_config_accepts_required_tool_classes_dict():
     """Two-class policy mirroring app_free's preserved behaviour."""
     cfg = _make_minimal_config(

@@ -51,6 +51,20 @@ BackendName = Literal["anthropic", "ollama", "openrouter"]
 
 
 @dataclass(frozen=True)
+class FallbackBackend:
+    """One entry in ``AgentConfig.fallback_chain``.
+
+    When the active backend raises during a turn, ``agent_stream`` walks the
+    chain in order: pops the next ``FallbackBackend``, switches the active
+    backend + model to it, and retries the turn. Once the chain is empty,
+    the original exception propagates.
+    """
+
+    backend: BackendName
+    model: str
+
+
+@dataclass(frozen=True)
 class AgentConfig:
     """Per-app variant axes for ``agent_stream``.
 
@@ -102,6 +116,12 @@ class AgentConfig:
     # answer without exercising every class. Empty dict = discipline disabled
     # (anthropic apps default to this).
     required_tool_classes: dict[str, list[str]] = field(default_factory=dict)
+
+    # — Fallback chain —
+    # Walked in order on API error: pop the next entry, switch
+    # active_backend/active_model to it, retry the turn. Empty tuple (default)
+    # = no fallback; the exception propagates.
+    fallback_chain: tuple[FallbackBackend, ...] = ()
 
     def __post_init__(self) -> None:
         if self.backend not in ("anthropic", "ollama", "openrouter"):
@@ -631,6 +651,62 @@ async def agent_stream(
                 num_predict_default = 8192 if full_coverage else config.max_tokens
                 num_ctx_default = 40960 if full_coverage else 24576
 
+                # Fallback chain (Phase 3a-2): on API error pop the next
+                # entry, switch active backend/model, retry. Empty = no
+                # fallback (current Anthropic-app behaviour when they port).
+                pending_fallbacks = list(config.fallback_chain)
+
+                def _call_backend(backend: str, model: str) -> dict:
+                    """Dispatch one LLM call to the right HTTP client.
+
+                    Returns the normalised ``{"message": {content, tool_calls}}``
+                    shape both helpers produce. Anthropic backend is reserved
+                    for a future port and not yet supported here.
+                    """
+                    if backend == "openrouter":
+                        return _openrouter_chat(
+                            api_key=openrouter_api_key,
+                            url=config.openrouter_url,
+                            model=model,
+                            messages=msgs,
+                            tools=config.tools,
+                            temperature=0.3,
+                            num_predict=num_predict_default,
+                        )
+                    if backend == "ollama":
+                        return _ollama_chat(
+                            url=config.ollama_url,
+                            model=model,
+                            messages=msgs,
+                            tools=config.tools,
+                            temperature=0.3,
+                            num_ctx=num_ctx_default,
+                            num_predict=num_predict_default,
+                            think=full_coverage,
+                        )
+                    raise NotImplementedError(
+                        f"_call_backend: backend {backend!r} not yet wired "
+                        "in shared_agent — port the corresponding step "
+                        "function before adding it to fallback_chain."
+                    )
+
+                def _sanitise_messages_for_backend_switch(from_b: str, to_b: str) -> None:
+                    """OpenAI/OpenRouter returns tool_call arguments as JSON strings;
+                    Ollama expects parsed dicts. Convert in-place when switching."""
+                    if not (from_b == "openrouter" and to_b == "ollama"):
+                        return
+                    for m in msgs:
+                        if m.get("role") == "assistant" and isinstance(
+                            m.get("tool_calls"), list
+                        ):
+                            for tc in m["tool_calls"]:
+                                args = tc.get("function", {}).get("arguments")
+                                if isinstance(args, str):
+                                    try:
+                                        tc["function"]["arguments"] = json.loads(args)
+                                    except Exception:
+                                        pass
+
                 while turn < config.max_tool_turns:
                     if stop_event.is_set():
                         return  # consumer disconnect — Phase 3b Bug D contract
@@ -640,27 +716,7 @@ async def agent_stream(
                         f"model={active_model} msgs={len(msgs)}"
                     )
                     try:
-                        if active_backend == "openrouter":
-                            resp = _openrouter_chat(
-                                api_key=openrouter_api_key,
-                                url=config.openrouter_url,
-                                model=active_model,
-                                messages=msgs,
-                                tools=config.tools,
-                                temperature=0.3,
-                                num_predict=num_predict_default,
-                            )
-                        else:
-                            resp = _ollama_chat(
-                                url=config.ollama_url,
-                                model=active_model,
-                                messages=msgs,
-                                tools=config.tools,
-                                temperature=0.3,
-                                num_ctx=num_ctx_default,
-                                num_predict=num_predict_default,
-                                think=full_coverage,
-                            )
+                        resp = _call_backend(active_backend, active_model)
                     except Exception as e:
                         err_body = ""
                         if hasattr(e, "response") and e.response is not None:
@@ -669,37 +725,24 @@ async def agent_stream(
                             except Exception:
                                 pass
                         print(f"  [api error] {active_backend}: {e}  body={err_body!r}")
-                        # Graceful fallback: OpenRouter → local deep-dive model.
-                        if active_backend == "openrouter" and config.deep_dive_model:
-                            print("  [fallback] OpenRouter -> local deep-dive")
-                            active_backend = "ollama"
-                            active_model = config.deep_dive_model
+                        # Walk the configured fallback chain (Phase 3a-2).
+                        if pending_fallbacks:
+                            fb = pending_fallbacks.pop(0)
+                            print(
+                                f"  [fallback] {active_backend} -> "
+                                f"{fb.backend}:{fb.model}"
+                            )
+                            _sanitise_messages_for_backend_switch(
+                                active_backend, fb.backend
+                            )
+                            active_backend = fb.backend
+                            active_model = fb.model
                             q.put({
                                 "t": "tool", "name": "Fallback",
-                                "args": "OpenRouter unavailable",
+                                "args": f"{e.__class__.__name__}",
                                 "summary": f"Switching to {active_model}",
                             })
-                            for m in msgs:
-                                if m.get("role") == "assistant" and isinstance(
-                                    m.get("tool_calls"), list
-                                ):
-                                    for tc in m["tool_calls"]:
-                                        args = tc.get("function", {}).get("arguments")
-                                        if isinstance(args, str):
-                                            try:
-                                                tc["function"]["arguments"] = json.loads(args)
-                                            except Exception:
-                                                pass
-                            resp = _ollama_chat(
-                                url=config.ollama_url,
-                                model=active_model,
-                                messages=msgs,
-                                tools=config.tools,
-                                temperature=0.3,
-                                num_ctx=num_ctx_default,
-                                num_predict=num_predict_default,
-                                think=full_coverage,
-                            )
+                            resp = _call_backend(active_backend, active_model)
                         else:
                             raise
 
@@ -867,27 +910,7 @@ async def agent_stream(
                         "Every paragraph must contain at least one [surah:verse] citation."
                     )
                     msgs.append({"role": "user", "content": expand})
-                    if active_backend == "openrouter":
-                        retry_resp = _openrouter_chat(
-                            api_key=openrouter_api_key,
-                            url=config.openrouter_url,
-                            model=active_model,
-                            messages=msgs,
-                            tools=config.tools,
-                            temperature=0.3,
-                            num_predict=num_predict_default,
-                        )
-                    else:
-                        retry_resp = _ollama_chat(
-                            url=config.ollama_url,
-                            model=active_model,
-                            messages=msgs,
-                            tools=config.tools,
-                            temperature=0.3,
-                            num_ctx=num_ctx_default,
-                            num_predict=num_predict_default,
-                            think=full_coverage,
-                        )
+                    retry_resp = _call_backend(active_backend, active_model)
                     retry_msg = retry_resp.get("message", {})
                     retry_content = retry_msg.get("content", "")
                     if retry_content and retry_content.strip():

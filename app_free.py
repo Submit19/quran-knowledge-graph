@@ -208,6 +208,7 @@ except Exception as e:
 from shared_agent import (
     AgentCollaborators,
     AgentConfig,
+    FallbackBackend,
     agent_stream as _shared_agent_stream,
 )
 
@@ -399,6 +400,9 @@ AGENT_CONFIG = AgentConfig(
         "keyword retrieval": ["search_keyword", "traverse_topic"],
         "semantic retrieval": ["semantic_search"],
     },
+    # Preserves the pre-3a-2 inline fallback: OpenRouter → local deep-dive
+    # (qwen3:14b) when OpenRouter raises.
+    fallback_chain=(FallbackBackend(backend="ollama", model=DEEP_DIVE_MODEL),),
 )
 
 
