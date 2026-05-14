@@ -41,6 +41,8 @@ data/quran-arabic-raw.json
 data/quran-morphology.txt
 data/morph_patterns.json
 data/answer_cache.json
+data/baseline_trajectory_*.json
+data/baseline_trajectory_*.summary.txt
 
 # Log and output files
 *.log
