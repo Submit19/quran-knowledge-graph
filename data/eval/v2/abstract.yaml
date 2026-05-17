@@ -386,13 +386,26 @@
 - id: abstract-015
   bucket: ABSTRACT
   question: "What does sincere worship look like according to the Quran?"
-  asserts: {}
+  asserts:
+    cites_must_include: ["98:5"]
+    tools_used_must_include: ["concept_search", "search_arabic_root"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["sincere", "ikhlas", "خ-ل-ص"]
   rubric_weights:
     citation_accuracy: 0.25
     answer_completeness: 0.4
-    tool_path_correctness: 0.15
-    framing_appropriateness: 0.2
-  notes: "Theme: sincere worship / ikhlas. [AR] root خ-ل-ص / ikhlas. Asserts pending."
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: sincere worship / ikhlas. [AR] root خ-ل-ص / ikhlas.
+    Three-substring AR gate.
+    Anchor candidates considered: 98:5 (Khalifa: "All that was
+    asked of them was to worship GOD, devoting the religion
+    absolutely to Him alone" — most direct command), 39:2
+    ("worship GOD, devoting your religion absolutely to Him alone"),
+    112:1-4 (Surah Al-Ikhlas — sincerity by way of God's oneness).
+    Picked 98:5 because it explicitly frames worship as the
+    primary command and connects it to devotion.
   added: 2026-05-17
   added_by: operator
 
