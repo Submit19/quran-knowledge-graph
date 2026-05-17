@@ -468,13 +468,26 @@
 - id: broad-018
   bucket: BROAD
   question: "Summarise the Quranic account of Jesus."
-  asserts: {}
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["hybrid_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Jesus"]
   rubric_weights:
     citation_accuracy: 0.2
     answer_completeness: 0.5
     tool_path_correctness: 0.1
     framing_appropriateness: 0.2
-  notes: "Isa; tests theological distinctions vs Christian framing. Asserts pending."
+  notes: |
+    Prophet-bio sub-shape. hybrid_search pin (proper noun grammar).
+    cites_must_include empty by design.
+    Phase 4d any_of candidate: substring "Jesus" vs "Isa"
+    (transliterated form).
+    Failure mode: agent flattens the Quranic Jesus into the
+    Christian framing and misses the distinctive Quranic
+    claims: divine status rejected (5:72, 5:75), not crucified
+    (4:157-158), Word from God (4:171), born of Mary without
+    a father (3:47), spoke from the cradle (19:29-33).
   added: 2026-05-17
   added_by: operator
 
