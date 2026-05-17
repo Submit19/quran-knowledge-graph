@@ -98,13 +98,26 @@
 - id: abstract-004
   bucket: ABSTRACT
   question: "Describe what the Quran reveals about sin."
-  asserts: {}
+  asserts:
+    cites_must_include: ["4:31"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["sin"]
   rubric_weights:
     citation_accuracy: 0.25
     answer_completeness: 0.4
-    tool_path_correctness: 0.15
-    framing_appropriateness: 0.2
-  notes: "Theme: sin (minor vs major distinctions). Asserts pending."
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: sin (Khalifa distinguishes "gross sins" from minor offenses).
+    Failure mode: answer treats all sin uniformly without surfacing
+    the major/minor distinction central to Khalifa's framing.
+    Anchor candidates considered: 4:31 (Khalifa: "If you refrain from
+    committing the gross sins... we will remit your sins" — cleanest
+    statement of the major/minor divide), 53:32 (those who avoid
+    gross sins... except for minor offenses), 42:37 (avoid gross
+    sins and vice). Picked 4:31 as most canonical. Promote to
+    any_of cluster in Phase 4d if it proves brittle.
   added: 2026-05-17
   added_by: operator
 
