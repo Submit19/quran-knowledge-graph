@@ -334,13 +334,27 @@
 - id: broad-013
   bucket: BROAD
   question: "Who are the prophets mentioned in the Quran?"
-  asserts: {}
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["25"]
   rubric_weights:
     citation_accuracy: 0.2
     answer_completeness: 0.5
     tool_path_correctness: 0.1
     framing_appropriateness: 0.2
-  notes: "25 named prophets; tests roster completeness. Asserts pending."
+  notes: |
+    Theme-survey sub-shape per operator decision — "THE prophets"
+    is categorical, not entity-specific. Phase 4d any_of candidate:
+    {concept_search, hybrid_search} — if the roster comes back
+    incomplete via concept_search alone, hybrid_search on prophet
+    names would catch the long tail. cites_must_include empty
+    (the canonical roster spans 4:163-165, 6:83-86, 19:54-58, etc.;
+    no single anchor). Substring "25" pins the canonical count
+    of named prophets in the Quran.
+    Failure mode: agent enumerates the famous 5-7 prophets and
+    misses Idris, Dhul-Kifl, Hud, Salih, Shu'aib, etc.
   added: 2026-05-17
   added_by: operator
 
