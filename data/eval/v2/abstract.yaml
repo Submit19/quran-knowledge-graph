@@ -517,13 +517,26 @@
 - id: abstract-020
   bucket: ABSTRACT
   question: "How does the Quran discuss wealth and worldly attachment?"
-  asserts: {}
+  asserts:
+    cites_must_include: ["3:14"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["wealth"]
   rubric_weights:
     citation_accuracy: 0.25
     answer_completeness: 0.4
-    tool_path_correctness: 0.15
-    framing_appropriateness: 0.2
-  notes: "Theme: wealth, dunya, attachment. Asserts pending."
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: wealth + worldly attachment (dunya). Substring "wealth"
+    chosen over "worldly" because Khalifa's translation more often
+    uses "money / wealth / possessions" than the abstract "worldly."
+    Anchor candidates considered: 3:14 (Khalifa: "Adorned for the
+    people are the worldly pleasures... GOD possesses the ultimate
+    abode" — definitive catalogue of worldly attachments), 18:46
+    (money and children are the joys of this world, but the
+    lasting good deeds are far better), 57:20 (the life of this
+    world is no more than play and games). Picked 3:14.
   added: 2026-05-17
   added_by: operator
 
