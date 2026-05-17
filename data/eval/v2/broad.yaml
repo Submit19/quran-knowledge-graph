@@ -37,13 +37,28 @@
 - id: broad-002
   bucket: BROAD
   question: "Provide a summary of Surah Yusuf."
-  asserts: {}
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["explore_surah"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Joseph"]
   rubric_weights:
     citation_accuracy: 0.2
     answer_completeness: 0.5
     tool_path_correctness: 0.1
     framing_appropriateness: 0.2
-  notes: "111-verse self-contained Joseph narrative (was Al-Fatiha, swapped for length). Asserts pending."
+  notes: |
+    Surah summary (111 verses — Khalifa renders the surah name as
+    "Joseph"; the Arabic name Yusuf is in the question). Routing:
+    surah-summary sub-shape -> explore_surah pin. cites_must_include
+    empty by design (whole-surah summary). Substring "Joseph" picks
+    Khalifa's preferred rendering — the agent should use it
+    consistently when working from this translation.
+    Phase 4d any_of candidate: substring "Joseph" vs "Yusuf" —
+    a good answer might use either or both.
+    Failure mode: agent gives a generic Joseph-story summary
+    without surfacing surah-specific structure (the dream framing,
+    the chiastic narrative, the closing reflection).
   added: 2026-05-17
   added_by: operator
 
