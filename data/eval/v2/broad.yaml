@@ -200,13 +200,25 @@
 - id: broad-008
   bucket: BROAD
   question: "Outline the contents of Surah An-Nisa."
-  asserts: {}
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["explore_surah"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Nisa"]
   rubric_weights:
     citation_accuracy: 0.2
     answer_completeness: 0.5
     tool_path_correctness: 0.1
     framing_appropriateness: 0.2
-  notes: "Women / family law; tests legal-content handling. Asserts pending."
+  notes: |
+    Surah summary (176 verses — Madinan, women / family law
+    centerpiece). Routing: surah-summary -> explore_surah pin.
+    cites_must_include empty by design.
+    Failure mode: agent emphasises the inheritance verses
+    (4:11-12) at the expense of the marriage / orphan / hypocrites
+    / scriptures-of-the-book sections.
+    Phase 4d any_of candidate: substring "Nisa" vs "The Women"
+    (Khalifa's translated surah name).
   added: 2026-05-17
   added_by: operator
 
