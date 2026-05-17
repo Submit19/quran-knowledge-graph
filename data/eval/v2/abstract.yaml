@@ -43,13 +43,26 @@
 - id: abstract-002
   bucket: ABSTRACT
   question: "What does the Quran teach about forgiveness?"
-  asserts: {}
+  asserts:
+    cites_must_include: ["39:53"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["forgive"]
   rubric_weights:
     citation_accuracy: 0.25
     answer_completeness: 0.4
-    tool_path_correctness: 0.15
-    framing_appropriateness: 0.2
-  notes: "Theme: forgiveness (bidirectional — divine and interpersonal). Asserts pending."
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: forgiveness (bidirectional — divine and interpersonal).
+    Required substring is "forgive" (matches "forgives" / "forgiving"
+    / "forgiveness" via prefix). Failure mode: agent only covers
+    divine forgiveness and misses interpersonal dimension.
+    Anchor candidates considered: 39:53 (Khalifa: "Never despair of
+    God's mercy. God forgives all sins" — most iconic), 42:40
+    (those who pardon and reform), 7:199 (be tolerant / overlook).
+    Picked 39:53 as most canonical single anchor. Promote to
+    any_of cluster in Phase 4d if it proves brittle.
   added: 2026-05-17
   added_by: operator
 
