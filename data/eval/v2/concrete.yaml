@@ -36,13 +36,26 @@
 - id: concrete-002
   bucket: CONCRETE
   question: "How does the Quran identify and describe the hypocrites?"
-  asserts: {}
+  asserts:
+    cites_must_include: ["63:1"]
+    tools_used_must_include: ["hybrid_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["hypocri"]
   rubric_weights:
     citation_accuracy: 0.25
     answer_completeness: 0.35
     tool_path_correctness: 0.3
     framing_appropriateness: 0.1
-  notes: "Munafiqun; should anchor on Surah Al-Munafiqun (63) + 2:8-20. Asserts pending."
+  notes: |
+    Named-entity sub-shape (munafiqun) -> hybrid_search pin.
+    Substring "hypocri" matches hypocrite/hypocrites/hypocrisy/
+    hypocritical.
+    Anchor candidates considered: 63:1 (Khalifa: opening of Surah
+    Al-Munafiqun — the named-after-them surah), 2:8 (the canonical
+    early-Quran passage on hypocrisy), 4:142 (hypocrites try to
+    deceive GOD). Picked 63:1 because CONCRETE-bucket routing tests
+    that the agent reaches the named-after-them surah; abstract-009
+    already anchors on 2:8 from the ABSTRACT angle.
   added: 2026-05-17
   added_by: operator
 
