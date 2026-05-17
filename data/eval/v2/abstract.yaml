@@ -204,13 +204,27 @@
 - id: abstract-008
   bucket: ABSTRACT
   question: "How does the Quran describe true belief?"
-  asserts: {}
+  asserts:
+    cites_must_include: ["49:15"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["belief"]
   rubric_weights:
     citation_accuracy: 0.25
     answer_completeness: 0.4
-    tool_path_correctness: 0.15
-    framing_appropriateness: 0.2
-  notes: "Theme: true belief (iman). Asserts pending."
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: true belief (iman). Failure mode: answer reduces belief
+    to verbal affirmation without surfacing the active-striving
+    dimension Khalifa emphasises.
+    Anchor candidates considered: 49:15 (Khalifa: "The true
+    believers are those who believe in GOD and His messenger, then
+    attain the status of having no doubt whatsoever, and strive
+    with their money and their lives" — definitive), 2:2-5 (the
+    righteous: believe in unseen, observe prayer, give charity),
+    8:2 (true believers' hearts tremble when GOD is mentioned).
+    Picked 49:15.
   added: 2026-05-17
   added_by: operator
 
