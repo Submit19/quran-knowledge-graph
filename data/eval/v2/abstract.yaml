@@ -92,6 +92,9 @@
     and be thankful to Me"), 31:12 (Luqman's wisdom on gratitude).
     Picked 14:7 as most canonical. Promote to any_of cluster in
     Phase 4d if it proves brittle.
+    Phase 4d any_of candidate: substring "thank" vs "gratitude" —
+    Khalifa uses "thank" but a good answer may also use
+    "gratitude" alone.
   added: 2026-05-17
   added_by: operator
 
@@ -360,7 +363,7 @@
   bucket: ABSTRACT
   question: "How does the Quran address doubt and certainty?"
   asserts:
-    cites_must_include: ["2:2"]
+    cites_must_include: ["102:7"]
     tools_used_must_include: ["concept_search", "search_arabic_root"]
     tools_used_must_not_include: ["run_cypher"]
     answer_substring_required: ["certainty", "yaqeen", "ي-ق-ن"]
@@ -374,12 +377,17 @@
     Three-substring AR gate uses "certainty" (the yaqeen
     translation pair) rather than "doubt"; the AR augmentation
     angle is the certainty side, not the doubt side.
-    Anchor candidates considered: 2:2 (Khalifa: "This scripture is
-    infallible; a beacon for the righteous" — opens the Quran's
-    main body with "no doubt" framing), 2:4 ("attained certainty
-    about the Hereafter"), 56:95 ("this is the certain truth").
-    Picked 2:2 for its structural prominence as the no-doubt
-    opener.
+    Anchor candidates considered: 102:7 (Khalifa: "Then on that
+    day, you shall see it with the eye of certainty" — yaqeen
+    appears explicitly), 2:2 (infallible scripture, no doubt —
+    indirect on yaqeen but structurally prominent), 2:4 ("attained
+    certainty about the Hereafter"). Picked 102:7 because it
+    grounds yaqeen most directly; the [AR] root augmentation gate
+    pairs naturally with the verse where the root actually
+    surfaces.
+    Phase 4d any_of candidate: "certainty" vs "doubt" substring —
+    a good answer might over-index on the doubt side and miss
+    certainty (or vice versa).
   added: 2026-05-17
   added_by: operator
 
@@ -638,6 +646,10 @@
     specific times"), 2:238 ("you shall consistently observe the
     Contact Prayers"). Picked 29:45 because the question asks for
     "insight" — function-oriented rather than obligation-oriented.
+    Phase 4d any_of candidate: substring "prayer" vs "Contact
+    Prayers" vs "salat" — Khalifa uses "Contact Prayers" as the
+    distinctive rendering; "prayer" is the lowest-common-
+    denominator surface form.
   added: 2026-05-17
   added_by: operator
 
