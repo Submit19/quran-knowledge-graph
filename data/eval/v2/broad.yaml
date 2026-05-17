@@ -65,13 +65,27 @@
 - id: broad-003
   bucket: BROAD
   question: "What is the main theme of Surah Yasin?"
-  asserts: {}
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["explore_surah"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Yasin"]
   rubric_weights:
     citation_accuracy: 0.2
     answer_completeness: 0.5
     tool_path_correctness: 0.1
     framing_appropriateness: 0.2
-  notes: "Tests theme extraction on the 'heart of the Quran.' Asserts pending."
+  notes: |
+    Surah summary / theme-extraction on the "heart of the Quran"
+    (Surah 36, 83 verses). Routing: surah-summary sub-shape ->
+    explore_surah pin. cites_must_include empty by design.
+    Failure mode: agent invokes the popular "heart of the Quran"
+    framing without grounding what about the surah earns that
+    epithet (resurrection emphasis, the Companions of the Town
+    parable, the cosmic signs sequence).
+    Phase 4d any_of candidate: substring "Yasin" vs "Y. S."
+    (Khalifa renders the muqatta'at opening as "Y. S.") — the
+    agent might lead with Khalifa's spelling.
   added: 2026-05-17
   added_by: operator
 
