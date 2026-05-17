@@ -439,13 +439,27 @@
 - id: abstract-017
   bucket: ABSTRACT
   question: "What lessons does the Quran offer about being led astray (dalal)?"
-  asserts: {}
+  asserts:
+    cites_must_include: ["2:26"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["astray"]
   rubric_weights:
     citation_accuracy: 0.25
     answer_completeness: 0.4
-    tool_path_correctness: 0.15
-    framing_appropriateness: 0.2
-  notes: "Theme: going astray / dalal. Asserts pending."
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: going astray / dalal. NOT flagged [AR] in the original
+    list — operator's word "dalal" is in the question text itself,
+    so the Arabic-grounding test is implicit via the question rather
+    than via answer substrings.
+    Anchor candidates considered: 2:26 (Khalifa: "He misleads
+    thereby many, and He guides thereby many" — the canonical
+    statement of God's role in both), 6:125 ("Whomever GOD wills
+    to send astray, He renders his chest intolerant"), 7:30 ("some
+    He guided, and some were committed to straying"). Picked 2:26
+    for the explicit guide-vs-mislead symmetry.
   added: 2026-05-17
   added_by: operator
 
