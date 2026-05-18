@@ -1074,6 +1074,17 @@ async def agent_stream(
                         else:
                             raise
 
+                    # Mid-turn stop-poll: the LLM call we just awaited is the
+                    # longest blocking syscall in the loop on slow backends
+                    # (qwen3:14b can spend 60-120s here on a thematic turn).
+                    # If the consumer disconnected during that wait, abort
+                    # before parsing the response or dispatching any tools.
+                    # Phase 3b Bug D's between-turns poll is not enough on
+                    # its own — that's the daemon-thread leak amplifier the
+                    # 2026-05-19 degradation diagnosis ruled IN.
+                    if stop_event.is_set():
+                        return
+
                     msg = resp.get("message", {})
                     content = msg.get("content", "")
                     tool_calls = msg.get("tool_calls", [])
@@ -1104,6 +1115,14 @@ async def agent_stream(
                     msgs.append(msg)
 
                     for tc in tool_calls:
+                        # Per-tool stop-poll: a tool dispatch can itself block
+                        # on Neo4j (large traversals can take several seconds).
+                        # Checking before each one means a stop_event that
+                        # fires mid-turn ends the loop after at most one
+                        # in-flight tool, not after all of them.
+                        if stop_event.is_set():
+                            return
+
                         func = tc.get("function", {})
                         tool_name = func.get("name", "")
                         tool_args = func.get("arguments", {})
