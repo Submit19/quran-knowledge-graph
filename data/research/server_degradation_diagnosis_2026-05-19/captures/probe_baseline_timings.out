@@ -1,0 +1,79 @@
+========================================================================
+Phase comparison
+========================================================================
+  Phase 1 (Q1-Q23):  ok=23  fail= 0  median=165.3s  max=277.2s
+  Phase 2 (Q24-Q50): ok= 9  fail=18  median=223.6s  max=296.3s
+
+========================================================================
+Rolling median (window=5) — does elapsed grow over the run?
+========================================================================
+    Q 1  status=ok        elapsed= 268.5s  rolling_med5= 268.5s
+    Q 2  status=ok        elapsed= 213.2s  rolling_med5= 240.8s
+    Q 3  status=ok        elapsed= 153.7s  rolling_med5= 213.2s
+    Q 4  status=ok        elapsed= 151.3s  rolling_med5= 183.4s
+    Q 5  status=ok        elapsed= 223.5s  rolling_med5= 213.2s
+    Q 6  status=ok        elapsed=  98.7s  rolling_med5= 153.7s
+    Q 7  status=ok        elapsed= 114.1s  rolling_med5= 151.3s
+    Q 8  status=ok        elapsed= 191.3s  rolling_med5= 151.3s
+    Q 9  status=ok        elapsed= 182.2s  rolling_med5= 182.2s
+    Q10  status=ok        elapsed= 182.3s  rolling_med5= 182.2s
+    Q11  status=ok        elapsed= 277.2s  rolling_med5= 182.3s
+    Q12  status=ok        elapsed= 161.0s  rolling_med5= 182.3s
+    Q13  status=ok        elapsed= 139.0s  rolling_med5= 182.2s
+    Q14  status=ok        elapsed= 121.3s  rolling_med5= 161.0s
+    Q15  status=ok        elapsed= 130.1s  rolling_med5= 139.0s
+    Q16  status=ok        elapsed= 117.9s  rolling_med5= 130.1s
+    Q17  status=ok        elapsed= 191.7s  rolling_med5= 130.1s
+    Q18  status=ok        elapsed= 189.1s  rolling_med5= 130.1s
+    Q19  status=ok        elapsed= 165.3s  rolling_med5= 165.3s
+    Q20  status=ok        elapsed= 142.9s  rolling_med5= 165.3s
+    Q21  status=ok        elapsed= 202.5s  rolling_med5= 189.1s
+    Q22  status=ok        elapsed= 212.2s  rolling_med5= 189.1s
+    Q23  status=ok        elapsed= 123.8s  rolling_med5= 165.3s
+  ** Q24  status=error     elapsed= 325.8s  rolling_med5= 202.5s
+    Q25  status=ok        elapsed= 172.4s  rolling_med5= 202.5s
+  ** Q26  status=error     elapsed= 334.6s  rolling_med5= 212.2s
+  ?? Q27  status=timeout   elapsed= 327.7s  rolling_med5= 325.8s
+    Q28  status=ok        elapsed= 267.3s  rolling_med5= 325.8s
+    Q29  status=ok        elapsed= 223.6s  rolling_med5= 267.3s
+  ** Q30  status=error     elapsed= 317.5s  rolling_med5= 317.5s
+    Q31  status=ok        elapsed= 170.1s  rolling_med5= 267.3s
+  ?? Q32  status=timeout   elapsed= 396.5s  rolling_med5= 267.3s
+  ?? Q33  status=timeout   elapsed= 300.9s  rolling_med5= 300.9s
+  ?? Q34  status=timeout   elapsed= 329.9s  rolling_med5= 317.5s
+  ** Q35  status=error     elapsed= 333.0s  rolling_med5= 329.9s
+  ?? Q36  status=timeout   elapsed= 314.3s  rolling_med5= 329.9s
+    Q37  status=ok        elapsed= 296.3s  rolling_med5= 314.3s
+  ?? Q38  status=timeout   elapsed= 370.2s  rolling_med5= 329.9s
+  ** Q39  status=error     elapsed= 415.3s  rolling_med5= 333.0s
+  ** Q40  status=error     elapsed= 451.5s  rolling_med5= 370.2s
+  ?? Q41  status=timeout   elapsed= 367.8s  rolling_med5= 370.2s
+  ** Q42  status=error     elapsed= 363.1s  rolling_med5= 370.2s
+    Q43  status=ok        elapsed= 294.6s  rolling_med5= 367.8s
+    Q44  status=ok        elapsed= 182.5s  rolling_med5= 363.1s
+  ?? Q45  status=timeout   elapsed= 385.5s  rolling_med5= 363.1s
+    Q46  status=ok        elapsed= 290.4s  rolling_med5= 294.6s
+  ?? Q47  status=timeout   elapsed= 327.1s  rolling_med5= 294.6s
+  ?? Q48  status=timeout   elapsed= 331.4s  rolling_med5= 327.1s
+  ?? Q49  status=timeout   elapsed= 325.0s  rolling_med5= 327.1s
+    Q50  status=ok        elapsed= 178.7s  rolling_med5= 325.0s
+
+========================================================================
+Failure clustering (status != ok)
+========================================================================
+  Total failures: 18
+  First failure: Q24
+  Last failure: Q49
+  Longest consecutive-failure streak: 5
+
+========================================================================
+Elapsed distribution for 'error' status (no SSE bytes for 300s)
+========================================================================
+  count=7  min=317.5s  median=334.6s  max=451.5s
+  (Runner read-timeout = 300s; an 'error' verdict means the server
+   stopped emitting SSE frames for >=300s straight.)
+
+========================================================================
+Elapsed distribution for 'timeout' status (received some bytes, total >300s)
+========================================================================
+  count=11  min=300.9s  median=329.9s  max=396.5s

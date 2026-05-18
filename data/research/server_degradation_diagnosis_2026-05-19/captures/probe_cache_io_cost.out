@@ -1,0 +1,12 @@
+  cache: C:\Users\alika\Agent Teams\quran-graph-standalone\data\answer_cache.json
+  size:  47.1 MB
+
+  entries:        1,561
+  load times (ms): min=430  median=450  max=473  (N=5)
+  save times (ms): min=949  median=970  max=1043  (N=5)
+
+  est. cache I/O per /chat (1 load + 1 load + 1 save) = 1871 ms
+  over 50 sequential requests: 93.5 s of pure cache I/O (no LLM, no Neo4j)
+
+  embeddings matrix: shape=(1561, 384)  nbytes=2.3 MB
+  save_answer dedup scan (pure-Python loop): median=27 ms  max=37 ms  (N=20)
