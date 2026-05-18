@@ -1323,5 +1323,5 @@ async def agent_stream(
         finally:
             q.put(None)
 
-    async for sse_frame in pump_worker_into_sse(run):
+    async for sse_frame in pump_worker_into_sse(run, dedup_text=True):
         yield sse_frame

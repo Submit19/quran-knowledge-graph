@@ -10,6 +10,21 @@ finally block signals the worker via a threading.Event and joins
 with a short timeout. Workers with long-running steps (LLM calls,
 large Cypher) should poll the event between steps to cooperate
 with the teardown.
+
+When called with ``dedup_text=True`` the pump also buffers all
+``{"t": "text", "d": ...}`` events for the lifetime of the stream,
+runs ``bullet_dedup.BulletDedup`` over the concatenated text right
+before forwarding the terminating ``{"t": "done", ...}`` event, and
+emits a single cleaned text frame in their place. This is the
+verbatim-bullet suppression introduced after the 2026-05-17 baseline
+measured a 31% verse-explanation duplicate rate on qwen3:14b.
+
+The buffering trade-off: with ``dedup_text=True`` users no longer
+see prose stream in as it arrives — they see it once at the end of
+the agent loop. Tool/graph_update/verification events still pass
+through immediately. The agent_stream caller opts in; legacy callers
+(see ``tests/regression/test_sse_worker_leak.py``) keep the
+forward-immediately default.
 """
 
 from __future__ import annotations
@@ -21,11 +36,14 @@ import threading
 from collections.abc import AsyncIterator
 from typing import Callable
 
+from bullet_dedup import BulletDedup
+
 
 async def pump_worker_into_sse(
     run_fn: Callable[[tqueue.SimpleQueue, threading.Event], None],
     *,
     join_timeout: float = 1.0,
+    dedup_text: bool = False,
 ) -> AsyncIterator[str]:
     """Run `run_fn(queue, stop_event)` in a daemon thread; yield SSE frames.
 
@@ -39,6 +57,14 @@ async def pump_worker_into_sse(
     running steps MUST poll stop_event between steps for the teardown
     to take effect; the daemon flag ensures the process can still exit
     even if a step blocks past the join timeout.
+
+    With ``dedup_text=True`` text events are buffered until the
+    ``done`` event arrives (or the stream ends), at which point
+    ``bullet_dedup.BulletDedup`` strips verbatim verse-explanation
+    duplicates and a single cleaned text frame is emitted before the
+    ``done`` event is forwarded. A short summary line is printed to
+    stdout for ops visibility; nothing about the suppression goes out
+    over SSE.
     """
     q: tqueue.SimpleQueue = tqueue.SimpleQueue()
     stop_event = threading.Event()
@@ -54,6 +80,28 @@ async def pump_worker_into_sse(
     thread = threading.Thread(target=target, daemon=True)
     thread.start()
 
+    dedup: BulletDedup | None = BulletDedup() if dedup_text else None
+    text_buffer: list[str] = []
+    text_flushed = False
+
+    def _flush_text_frame() -> str | None:
+        """Return a single SSE frame holding the dedup'd buffered text, or None."""
+        nonlocal text_flushed
+        if not dedup_text or text_flushed:
+            return None
+        text_flushed = True
+        if not text_buffer:
+            return None
+        full = "".join(text_buffer)
+        assert dedup is not None  # mypy; guarded by dedup_text
+        cleaned, suppressed = dedup.filter_text(full)
+        if suppressed:
+            print(
+                f"  [dedup] suppressed {len(suppressed)} verbatim bullets "
+                f"in response (verses: {', '.join(suppressed)})"
+            )
+        return f"data: {json.dumps({'t': 'text', 'd': cleaned}, ensure_ascii=False)}\n\n"
+
     try:
         while True:
             try:
@@ -62,7 +110,26 @@ async def pump_worker_into_sse(
                 await asyncio.sleep(0.05)
                 continue
             if event is None:
+                # End of stream. If we were buffering text and never saw
+                # a `done` event, flush the buffered text now so callers
+                # that omit `done` (and tests that don't model it) still
+                # see the prose.
+                flushed = _flush_text_frame()
+                if flushed is not None:
+                    yield flushed
                 break
+
+            if dedup_text and isinstance(event, dict) and event.get("t") == "text":
+                text_buffer.append(event.get("d", "") or "")
+                continue
+
+            if dedup_text and isinstance(event, dict) and event.get("t") == "done":
+                flushed = _flush_text_frame()
+                if flushed is not None:
+                    yield flushed
+                yield f"data: {json.dumps(event, ensure_ascii=False)}\n\n"
+                continue
+
             yield f"data: {json.dumps(event, ensure_ascii=False)}\n\n"
     finally:
         stop_event.set()
