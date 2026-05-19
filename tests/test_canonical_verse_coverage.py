@@ -2,9 +2,10 @@
 Regression guard: every canonical verse the project claims to ship MUST be
 present as a :Verse node in Neo4j.
 
-In May 2026 a manual Neo4j inspection turned up just 6,231 :Verse nodes when
-the project claims 6,232 (the canonical 6,234 minus the two Khalifa-excluded
-verses 9:128 and 9:129). Three iconic verses were silently absent:
+In May 2026 a manual Neo4j inspection turned up just 6,231 :Verse nodes
+when the project ships 6,234 (the canonical 6,236 minus the two
+Khalifa-excluded verses 9:128 and 9:129). Three iconic verses were
+silently absent:
 
   - 2:255  Ayat al-Kursi  (the Throne Verse)
   - 2:286  closing du'a of Al-Baqarah
@@ -19,9 +20,11 @@ layer pins down the desired state regardless of the entry point.
 Tests are skipped when Neo4j is unreachable so CI without infrastructure
 still passes. When Neo4j IS reachable the tests are authoritative.
 
-Khalifa-excluded verses (9:128, 9:129) are explicitly allow-listed: Rashad
-Khalifa flagged them as forged via the 19-based mathematical code, and the
-GraphMeta node records this rationale (see migrate_graph.phase_7).
+Note: `data/verses.json` is already post-Khalifa-exclusion (6,234 entries,
+9:128 and 9:129 absent from the source file itself), so the per-surah
+coverage test does not need to subtract them. The KHALIFA_EXCLUDED guard
+below is a defence-in-depth check in case a future revision re-adds them
+to verses.json without updating the translation policy.
 """
 
 from __future__ import annotations
@@ -75,10 +78,6 @@ def neo4j_session():
         driver.close()
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="Pre-fix: 3 canonical verses (2:255, 2:286, 24:35) absent from Neo4j",
-)
 def test_three_iconic_verses_present(neo4j_session):
     """Direct lookups for the three iconic verses must return non-empty text."""
     missing = []
@@ -102,16 +101,12 @@ def test_three_iconic_verses_present(neo4j_session):
     )
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="Pre-fix: per-surah coverage will surface 2:255, 2:286, 24:35 as missing",
-)
 def test_no_canonical_verse_missing(neo4j_session):
     """Every Khalifa-canonical (surah, verseNum) pair must exist as a Verse node.
 
-    Source of truth: data/verses.json (6,234 entries). After removing the two
-    Khalifa-excluded verses (9:128, 9:129) we expect 6,232 nodes — and every
-    one of them present, not just the count.
+    Source of truth: data/verses.json. The file already excludes the two
+    Khalifa-rejected verses (9:128, 9:129) — it ships 6,234 entries, and we
+    expect every one of them as a :Verse node, not just the count.
     """
     verses_json = Path(__file__).resolve().parent.parent / "data" / "verses.json"
     with verses_json.open(encoding="utf-8") as f:
@@ -122,10 +117,10 @@ def test_no_canonical_verse_missing(neo4j_session):
         for item in canonical
         if (item["surah"], item["verse"]) not in KHALIFA_EXCLUDED
     }
-    assert len(expected_pairs) == 6232, (
-        f"data/verses.json count drift: expected 6,232 after Khalifa exclusions, "
-        f"got {len(expected_pairs)}. Update KHALIFA_EXCLUDED if the translation "
-        f"policy changed."
+    assert len(expected_pairs) == 6234, (
+        f"data/verses.json count drift: expected 6,234, got {len(expected_pairs)}. "
+        f"If the translation policy changed, update both the count and "
+        f"KHALIFA_EXCLUDED."
     )
 
     present_rows = neo4j_session.run(
