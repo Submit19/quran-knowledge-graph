@@ -9,8 +9,8 @@ Read-only pass; no entries mutated.
 | Tier | Count | % |
 |---|---:|---:|
 | HIGH (q ≥ 0.7) | 1387 | 86.0% |
-| MEDIUM (q ≥ 0.3) | 221 | 13.7% |
-| LOW (q ≥ 0.0) | 5 | 0.3% |
+| MEDIUM (q ≥ 0.3) | 143 | 8.9% |
+| LOW (q ≥ 0.0) | 83 | 5.1% |
 
 ## Aggregate signals
 
@@ -24,13 +24,13 @@ Read-only pass; no entries mutated.
 
 | Bucket | Count |
 |---|---:|
-| [0.00,0.10) | 0 |
-| [0.10,0.20) | 3 |
-| [0.20,0.30) | 2 |
-| [0.30,0.40) | 6 |
+| [0.00,0.10) | 7 |
+| [0.10,0.20) | 0 |
+| [0.20,0.30) | 76 |
+| [0.30,0.40) | 39 |
 | [0.40,0.50) | 76 |
-| [0.50,0.60) | 91 |
-| [0.60,0.70) | 48 |
+| [0.50,0.60) | 15 |
+| [0.60,0.70) | 13 |
 | [0.70,0.80) | 30 |
 | [0.80,0.90) | 1081 |
 | [0.90,inf) | 276 |
@@ -132,16 +132,26 @@ Read-only pass; no entries mutated.
 
 ## Example entries — LOW
 
+- **Q:** Explain verse 2:186 — what does it promise about God answering prayers?
+  - score=0.20 | cites=0 (valid=0.00) | len=8847 | rep=False | ar=False
+- **Q:** Explain verse 7:180 — what does it teach about God's most beautiful names?
+  - score=0.20 | cites=0 (valid=0.00) | len=7084 | rep=False | ar=False
+- **Q:** Explain verse 9:51 — what does 'nothing befalls us but what God has written' teach?
+  - score=0.20 | cites=0 (valid=0.00) | len=9936 | rep=False | ar=False
+- **Q:** Explain verse 12:87 — what does 'do not despair of God's mercy' teach?
+  - score=0.20 | cites=0 (valid=0.00) | len=3705 | rep=False | ar=False
+- **Q:** Explain verse 14:7 — what does 'if you are grateful, I will increase you' teach?
+  - score=0.20 | cites=0 (valid=0.00) | len=13410 | rep=False | ar=False
+- **Q:** Explain verse 30:21 — what does it teach about marriage as a sign of God?
+  - score=0.20 | cites=0 (valid=0.00) | len=9086 | rep=False | ar=False
 - **Q:** what is the significance of the number 43 in the quran
-  - score=0.10 | cites=0 (valid=1.00) | len=14253 | rep=True | ar=False
-- **Q:** Explain verse 43:36 — 'whoever turns away from God's remembrance, We assign a devil'
-  - score=0.20 | cites=0 (valid=1.00) | len=10076 | rep=True | ar=True
-- **Q:** Compare how the Quran treats Mary and Zechariah — both miraculous conceptions
-  - score=0.10 | cites=0 (valid=1.00) | len=8371 | rep=True | ar=False
-- **Q:** Explain the parable of God's words as ink of the sea (31:27)
-  - score=0.10 | cites=0 (valid=1.00) | len=5698 | rep=True | ar=False
-- **Q:** What does the Quran say about the Blessed Land around the Aqsa mosque?
-  - score=0.20 | cites=0 (valid=1.00) | len=8420 | rep=True | ar=True
+  - score=0.00 | cites=0 (valid=0.00) | len=14253 | rep=True | ar=False
+- **Q:** Explain verse 42:30 — what does it teach about affliction being from our own hands?
+  - score=0.20 | cites=0 (valid=0.00) | len=6588 | rep=False | ar=False
+- **Q:** What Quranic evidence supports the Dawn (Fajr) and Afternoon (Asr) prayers?
+  - score=0.20 | cites=0 (valid=0.00) | len=7451 | rep=False | ar=False
+- **Q:** What does the Quran say about the direction of Kaaba as a qiblah?
+  - score=0.20 | cites=0 (valid=0.00) | len=5600 | rep=False | ar=False
 
 ## Missing-citation breakdown
 

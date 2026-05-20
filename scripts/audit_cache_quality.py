@@ -61,10 +61,15 @@ def score_entry(rec: dict, valid_cites: set[tuple[int, int]]) -> dict:
     cite_set = set(cites)
     cite_count = len(cites)
     unique_cite_count = len(cite_set)
+    # No-cite entries are treated as validity=0 (not 1.0). The intent is that
+    # an answer without any verse citations cannot inherit a "everything I
+    # cited was valid" credit — there's nothing TO be valid. This keeps the
+    # Pass 2 "score<0.15 AND len<200 AND cites==0" triple-AND prune criterion
+    # actually able to fire on obvious junk (e.g. the "test" stub).
     validity = (
         sum(1 for c in cite_set if c in valid_cites) / len(cite_set)
         if cite_set
-        else 1.0  # no cites => can't be invalid; downweighted by cite_count=0 in quality
+        else 0.0
     )
     answer_len = len(answer)
     rep = has_repetition(answer)
