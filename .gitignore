@@ -112,4 +112,9 @@ data/verse_analysis/
 data/answer_cache.baseline.json
 data/answer_cache.*.bak
 data/answer_cache.*.backup.json
+
+# Cache audit sidecar JSON (per-entry scoring; reused by downstream passes,
+# regenerated cheaply, exceeds tracked-file size threshold).
+data/research/cache_*audit*.json
+data/research/cache_*coverage*.json
 launch_free.bat
