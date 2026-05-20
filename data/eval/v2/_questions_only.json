@@ -1,0 +1,287 @@
+[
+  {
+    "id": "abstract-001",
+    "bucket": "ABSTRACT",
+    "question": "Tell me what the Quran says about charity."
+  },
+  {
+    "id": "abstract-002",
+    "bucket": "ABSTRACT",
+    "question": "What does the Quran teach about forgiveness?"
+  },
+  {
+    "id": "abstract-003",
+    "bucket": "ABSTRACT",
+    "question": "How does the Quran portray gratitude?"
+  },
+  {
+    "id": "abstract-004",
+    "bucket": "ABSTRACT",
+    "question": "Describe what the Quran reveals about sin."
+  },
+  {
+    "id": "abstract-005",
+    "bucket": "ABSTRACT",
+    "question": "What does the Quran say about patience?"
+  },
+  {
+    "id": "abstract-006",
+    "bucket": "ABSTRACT",
+    "question": "How is humility presented in the Quran?"
+  },
+  {
+    "id": "abstract-007",
+    "bucket": "ABSTRACT",
+    "question": "What is the Quran's teaching on repentance?"
+  },
+  {
+    "id": "abstract-008",
+    "bucket": "ABSTRACT",
+    "question": "How does the Quran describe true belief?"
+  },
+  {
+    "id": "abstract-009",
+    "bucket": "ABSTRACT",
+    "question": "What does the Quran reveal about hypocrisy?"
+  },
+  {
+    "id": "abstract-010",
+    "bucket": "ABSTRACT",
+    "question": "What is the Quran's view of justice?"
+  },
+  {
+    "id": "abstract-011",
+    "bucket": "ABSTRACT",
+    "question": "How does the Quran warn about the consequences of arrogance?"
+  },
+  {
+    "id": "abstract-012",
+    "bucket": "ABSTRACT",
+    "question": "Walk me through the Quran's description of the path of righteousness."
+  },
+  {
+    "id": "abstract-013",
+    "bucket": "ABSTRACT",
+    "question": "What guidance does the Quran offer on trusting in God?"
+  },
+  {
+    "id": "abstract-014",
+    "bucket": "ABSTRACT",
+    "question": "How does the Quran address doubt and certainty?"
+  },
+  {
+    "id": "abstract-015",
+    "bucket": "ABSTRACT",
+    "question": "What does sincere worship look like according to the Quran?"
+  },
+  {
+    "id": "abstract-016",
+    "bucket": "ABSTRACT",
+    "question": "How does the Quran characterise Satan and the ways he misleads people?"
+  },
+  {
+    "id": "abstract-017",
+    "bucket": "ABSTRACT",
+    "question": "What lessons does the Quran offer about being led astray (dalal)?"
+  },
+  {
+    "id": "abstract-018",
+    "bucket": "ABSTRACT",
+    "question": "Explain how the Quran describes the whisperings of Satan (waswasa)."
+  },
+  {
+    "id": "abstract-019",
+    "bucket": "ABSTRACT",
+    "question": "What consequences does the Quran tie to following Satan?"
+  },
+  {
+    "id": "abstract-020",
+    "bucket": "ABSTRACT",
+    "question": "How does the Quran discuss wealth and worldly attachment?"
+  },
+  {
+    "id": "abstract-021",
+    "bucket": "ABSTRACT",
+    "question": "Trace the Quran's depiction of death and the soul."
+  },
+  {
+    "id": "abstract-022",
+    "bucket": "ABSTRACT",
+    "question": "Discuss what the Quran says about reflection and contemplation."
+  },
+  {
+    "id": "abstract-023",
+    "bucket": "ABSTRACT",
+    "question": "How does the Quran depict the mercy of God?"
+  },
+  {
+    "id": "abstract-024",
+    "bucket": "ABSTRACT",
+    "question": "What insight does the Quran provide about prayer (salat)?"
+  },
+  {
+    "id": "abstract-025",
+    "bucket": "ABSTRACT",
+    "question": "Why does the Quran emphasise honouring one's parents?"
+  },
+  {
+    "id": "broad-001",
+    "bucket": "BROAD",
+    "question": "Summarize Surah Al-Baqarah."
+  },
+  {
+    "id": "broad-002",
+    "bucket": "BROAD",
+    "question": "Provide a summary of Surah Yusuf."
+  },
+  {
+    "id": "broad-003",
+    "bucket": "BROAD",
+    "question": "What is the main theme of Surah Yasin?"
+  },
+  {
+    "id": "broad-004",
+    "bucket": "BROAD",
+    "question": "Give me an overview of Surah Al-Imran."
+  },
+  {
+    "id": "broad-005",
+    "bucket": "BROAD",
+    "question": "What are the main themes of the Quran?"
+  },
+  {
+    "id": "broad-006",
+    "bucket": "BROAD",
+    "question": "In what ways does the Quran describe itself?"
+  },
+  {
+    "id": "broad-007",
+    "bucket": "BROAD",
+    "question": "How does the Quran present the concept of revelation?"
+  },
+  {
+    "id": "broad-008",
+    "bucket": "BROAD",
+    "question": "Outline the contents of Surah An-Nisa."
+  },
+  {
+    "id": "broad-009",
+    "bucket": "BROAD",
+    "question": "What is the central message of Surah Al-Kahf?"
+  },
+  {
+    "id": "broad-010",
+    "bucket": "BROAD",
+    "question": "According to the Quran, how should we understand the relationship between God and humanity?"
+  },
+  {
+    "id": "broad-011",
+    "bucket": "BROAD",
+    "question": "Explain the structure of the Quran."
+  },
+  {
+    "id": "broad-012",
+    "bucket": "BROAD",
+    "question": "How does the Quran speak of its own miraculous nature?"
+  },
+  {
+    "id": "broad-013",
+    "bucket": "BROAD",
+    "question": "Who are the prophets mentioned in the Quran?"
+  },
+  {
+    "id": "broad-014",
+    "bucket": "BROAD",
+    "question": "What is the Quran's portrayal of the Day of Judgment?"
+  },
+  {
+    "id": "broad-015",
+    "bucket": "BROAD",
+    "question": "What is the Quran's perspective on the Torah and the Gospel?"
+  },
+  {
+    "id": "broad-016",
+    "bucket": "BROAD",
+    "question": "Tell me about Abraham in the Quran."
+  },
+  {
+    "id": "broad-017",
+    "bucket": "BROAD",
+    "question": "Recount the story of Moses in the Quran."
+  },
+  {
+    "id": "broad-018",
+    "bucket": "BROAD",
+    "question": "Summarise the Quranic account of Jesus."
+  },
+  {
+    "id": "broad-019",
+    "bucket": "BROAD",
+    "question": "Describe Muhammad as he appears in the Quran."
+  },
+  {
+    "id": "broad-020",
+    "bucket": "BROAD",
+    "question": "What does the Quran tell us about Noah?"
+  },
+  {
+    "id": "broad-021",
+    "bucket": "BROAD",
+    "question": "From a Quranic perspective, how does Satan succeed in misleading humanity?"
+  },
+  {
+    "id": "concrete-001",
+    "bucket": "CONCRETE",
+    "question": "Tell me about Paradise."
+  },
+  {
+    "id": "concrete-002",
+    "bucket": "CONCRETE",
+    "question": "How does the Quran identify and describe the hypocrites?"
+  },
+  {
+    "id": "concrete-003",
+    "bucket": "CONCRETE",
+    "question": "Tell me about the people of Aad."
+  },
+  {
+    "id": "concrete-004",
+    "bucket": "CONCRETE",
+    "question": "What befell Lot's people according to the Quran?"
+  },
+  {
+    "id": "concrete-005",
+    "bucket": "CONCRETE",
+    "question": "Who is Dhul-Qarnayn?"
+  },
+  {
+    "id": "concrete-006",
+    "bucket": "CONCRETE",
+    "question": "Tell the story of the Cave (Ashab al-Kahf) as the Quran presents it."
+  },
+  {
+    "id": "concrete-007",
+    "bucket": "CONCRETE",
+    "question": "How is Pharaoh depicted across the Quran?"
+  },
+  {
+    "id": "structured-001",
+    "bucket": "STRUCTURED",
+    "question": "How many times does the letter Qaf appear in Surah Qaf, and how does this relate to the Code-19 system?"
+  },
+  {
+    "id": "structured-002",
+    "bucket": "STRUCTURED",
+    "question": "Which surahs open with mysterious letters (muqatta'at), and what patterns connect them?"
+  },
+  {
+    "id": "structured-003",
+    "bucket": "STRUCTURED",
+    "question": "Which surahs are Meccan and which are Medinan?"
+  },
+  {
+    "id": "structured-004",
+    "bucket": "STRUCTURED",
+    "question": "What are the thematic differences between Meccan and Medinan revelations?"
+  }
+]
