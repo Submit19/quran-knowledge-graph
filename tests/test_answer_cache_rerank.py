@@ -106,9 +106,6 @@ def _make_entries() -> list[dict]:
     ]
 
 
-@pytest.mark.xfail(
-    strict=True, reason="rerank not yet implemented in answer_cache.search_cache"
-)
 def test_rerank_changes_order(tmp_cache, monkeypatch):
     """When the reranker disagrees with cosine, rerank wins."""
     answer_cache._save_cache(_make_entries())
@@ -134,9 +131,6 @@ def test_rerank_changes_order(tmp_cache, monkeypatch):
     assert len(fake_reranker.calls[0]) == 4
 
 
-@pytest.mark.xfail(
-    strict=True, reason="rerank not yet implemented; env-gate has no behavior to gate"
-)
 def test_rerank_disabled_by_env(tmp_cache, monkeypatch):
     """CACHE_RERANK_DISABLED=1 must short-circuit before the reranker runs."""
     answer_cache._save_cache(_make_entries())
@@ -157,9 +151,6 @@ def test_rerank_disabled_by_env(tmp_cache, monkeypatch):
     )
 
 
-@pytest.mark.xfail(
-    strict=True, reason="rerank not yet implemented; _get_reranker attr missing"
-)
 def test_rerank_handles_empty_cache(tmp_cache, monkeypatch):
     """Empty cache returns []; no encoder or reranker calls."""
     fake_encoder = _FakeEncoder({})  # would KeyError if called

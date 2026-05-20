@@ -29,6 +29,25 @@ def _get_model():
     return get_minilm()
 
 
+def _get_reranker():
+    """Return the cross-encoder used to refine cache search hits, or None.
+
+    Returns None silently if:
+      - CACHE_RERANK_DISABLED=1 (cache-side kill switch), or
+      - the broader retrieval_gate reranker is unavailable / disabled.
+
+    Lazy-loads via retrieval_gate._get_reranker so we share the same model
+    instance and respect its env-gates (RERANKER_MODEL, RERANK_DISABLED).
+    """
+    if os.environ.get("CACHE_RERANK_DISABLED") == "1":
+        return None
+    try:
+        from retrieval_gate import _get_reranker as _gate_get
+        return _gate_get()
+    except Exception:
+        return None
+
+
 # ── cache I/O ─────────────────────────────────────────────────────────────────
 #
 # Each /chat request used to read answer_cache.json twice (once in
@@ -150,8 +169,15 @@ def search_cache(question: str, top_k: int = 3, threshold: float = 0.6) -> list[
     """
     Find past answers relevant to the current question.
 
-    Returns up to top_k entries with similarity >= threshold.
-    Each entry has: question, answer, verses, similarity.
+    Two-stage retrieval:
+      1. Cosine pre-filter on the legacy 384d MiniLM embedding widens the
+         pool to max(top_k, 10) candidates above `threshold`.
+      2. If a cross-encoder reranker is available, score (question,
+         cached_question) pairs and re-sort. Falls back silently to
+         cosine-only when the reranker is None.
+
+    Returns up to top_k entries. Each entry has: question, answer,
+    verses, similarity (cosine), and rerank_score when reranked.
     """
     entries = _load_cache()
     if not entries:
@@ -172,7 +198,20 @@ def search_cache(question: str, top_k: int = 3, threshold: float = 0.6) -> list[
             })
 
     scored.sort(key=lambda x: x["similarity"], reverse=True)
-    return scored[:top_k]
+
+    pool_size = max(top_k, 10)
+    pool = scored[:pool_size]
+
+    if os.environ.get("CACHE_RERANK_DISABLED") != "1" and len(pool) > 1:
+        reranker = _get_reranker()
+        if reranker is not None:
+            pairs = [(question, p["question"]) for p in pool]
+            rerank_scores = reranker.predict(pairs)
+            for p, s in zip(pool, rerank_scores):
+                p["rerank_score"] = round(float(s), 4)
+            pool.sort(key=lambda x: x["rerank_score"], reverse=True)
+
+    return pool[:top_k]
 
 
 def build_cache_context(question: str, top_k: int = 3, threshold: float = 0.6) -> str | None:
