@@ -134,7 +134,8 @@ Single-file SPA. Three.js r160, 3d-force-graph, marked.js. All 6,234 verses pre-
 
 ## Environment
 
-Requires `.env` with:
+Requires `.env` (gitignored). The tracked `.env.example` lists every key with placeholder values — copy it and fill in real secrets:
+
 ```
 NEO4J_URI=bolt://localhost:7687
 NEO4J_USER=neo4j
@@ -144,6 +145,30 @@ OPENROUTER_API_KEY=sk-or-v1-...   # for free-tier models + atomic decomposer
 ```
 
 Neo4j database name: `quran` (set via `NEO4J_DATABASE` env var).
+
+### Fresh-worktree setup
+
+When you create a clean worktree off `origin/main` (`git worktree add .claude/worktrees/foo origin/main`), two gitignored files are missing:
+
+- `.env` — secrets
+- `data/answer_cache.json` — ~49 MB cached Q&A; the app lazy-loads, so an empty file is fine for tests
+
+Run the bootstrap script to hydrate them from the parent checkout (or from tracked example files if no parent is found):
+
+```powershell
+.\scripts\bootstrap_worktree.ps1
+```
+
+The script is idempotent — re-running it after a successful copy is a no-op. The verse_analysis prompt files (`prompts/verse_analysis/v2_*.txt`) are tracked in git and don't need bootstrapping.
+
+Then verify:
+
+```powershell
+python -m pytest tests/ -q
+# expect: 204 passed, 1 skipped
+```
+
+> Note: bare `pytest` (no path arg) also picks up two top-level harness scripts (`test_va_impact.py`, `test_verse_analysis.py`) that eagerly read `.env` at import. Use `pytest tests/` for the unit suite — the top-level harnesses are manual eval tooling, not pytest tests.
 
 ### Optional env vars
 
