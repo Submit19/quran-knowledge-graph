@@ -77,13 +77,12 @@ def fetch_valid_set(
 
 
 def strip_token(answer: str, surah: int, verse: int) -> tuple[str, int]:
-    """Remove every literal `[surah:verse]` occurrence from `answer`.
-    Returns (new_text, occurrences_removed)."""
-    tok = f"[{surah}:{verse}]"
-    n = answer.count(tok)
-    if n == 0:
-        return answer, 0
-    return answer.replace(tok, ""), n
+    """Remove every `[surah:verse]` occurrence from `answer`, tolerating
+    zero-padded surah/verse digits (e.g. `[01:8]` and `[1:08]` both match
+    the canonical (1, 8) tuple). Returns (new_text, occurrences_removed)."""
+    pattern = rf"\[0*{surah}:0*{verse}\]"
+    new, n = re.subn(pattern, "", answer)
+    return new, n
 
 
 def cleanup_residue(text: str) -> str:
