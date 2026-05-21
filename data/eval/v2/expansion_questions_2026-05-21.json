@@ -1,0 +1,7769 @@
+{
+  "primary": [
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 113 (Daybreak)?",
+      "target_themes": [
+        "Daybreak"
+      ],
+      "target_verses": [
+        "113:1",
+        "113:2",
+        "113:3"
+      ],
+      "priority_score": 1075,
+      "gap_addressed": "surah_113_hits_25",
+      "id": "expansion-001"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 105 (The Elephant)?",
+      "target_themes": [
+        "The Elephant"
+      ],
+      "target_verses": [
+        "105:1",
+        "105:2",
+        "105:3"
+      ],
+      "priority_score": 1070,
+      "gap_addressed": "surah_105_hits_30",
+      "id": "expansion-002"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 106 (Quraish Tribe)?",
+      "target_themes": [
+        "Quraish Tribe"
+      ],
+      "target_verses": [
+        "106:1",
+        "106:2",
+        "106:3"
+      ],
+      "priority_score": 1070,
+      "gap_addressed": "surah_106_hits_30",
+      "id": "expansion-003"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 108 (Bounty)?",
+      "target_themes": [
+        "Bounty"
+      ],
+      "target_verses": [
+        "108:1",
+        "108:2",
+        "108:3"
+      ],
+      "priority_score": 1068,
+      "gap_addressed": "surah_108_hits_32",
+      "id": "expansion-004"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 109 (The Disbelievers)?",
+      "target_themes": [
+        "The Disbelievers"
+      ],
+      "target_verses": [
+        "109:1",
+        "109:2",
+        "109:3"
+      ],
+      "priority_score": 1066,
+      "gap_addressed": "surah_109_hits_34",
+      "id": "expansion-005"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 111 (Thorns)?",
+      "target_themes": [
+        "Thorns"
+      ],
+      "target_verses": [
+        "111:1",
+        "111:2",
+        "111:3"
+      ],
+      "priority_score": 1062,
+      "gap_addressed": "surah_111_hits_38",
+      "id": "expansion-006"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 114 (People)?",
+      "target_themes": [
+        "People"
+      ],
+      "target_verses": [
+        "114:1",
+        "114:2",
+        "114:3"
+      ],
+      "priority_score": 1061,
+      "gap_addressed": "surah_114_hits_39",
+      "id": "expansion-007"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 112 (Absoluteness)?",
+      "target_themes": [
+        "Absoluteness"
+      ],
+      "target_verses": [
+        "112:1",
+        "112:2",
+        "112:3"
+      ],
+      "priority_score": 1055,
+      "gap_addressed": "surah_112_hits_45",
+      "id": "expansion-008"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 103 (The Afternoon)?",
+      "target_themes": [
+        "The Afternoon"
+      ],
+      "target_verses": [
+        "103:1",
+        "103:2",
+        "103:3"
+      ],
+      "priority_score": 1051,
+      "gap_addressed": "surah_103_hits_49",
+      "id": "expansion-009"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 104 (The Backbiter)?",
+      "target_themes": [
+        "The Backbiter"
+      ],
+      "target_verses": [
+        "104:1",
+        "104:2",
+        "104:3"
+      ],
+      "priority_score": 1051,
+      "gap_addressed": "surah_104_hits_49",
+      "id": "expansion-010"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Dhulkifl as the Quran narrates it.",
+      "target_themes": [
+        "Dhulkifl",
+        "story"
+      ],
+      "target_verses": [],
+      "priority_score": 1047,
+      "gap_addressed": "prophet_Dhulkifl_story_hits_1",
+      "id": "expansion-011"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 107 (Charity)?",
+      "target_themes": [
+        "Charity"
+      ],
+      "target_verses": [
+        "107:1",
+        "107:2",
+        "107:3"
+      ],
+      "priority_score": 1042,
+      "gap_addressed": "surah_107_hits_58",
+      "id": "expansion-012"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Alyasa as the Quran narrates it.",
+      "target_themes": [
+        "Alyasa",
+        "story"
+      ],
+      "target_verses": [],
+      "priority_score": 1041,
+      "gap_addressed": "prophet_Alyasa_story_hits_3",
+      "id": "expansion-013"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 101 (The Shocker)?",
+      "target_themes": [
+        "The Shocker"
+      ],
+      "target_verses": [
+        "101:1",
+        "101:2",
+        "101:3"
+      ],
+      "priority_score": 1039,
+      "gap_addressed": "surah_101_hits_61",
+      "id": "expansion-014"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Zakariya as the Quran narrates it.",
+      "target_themes": [
+        "Zakariya",
+        "story"
+      ],
+      "target_verses": [],
+      "priority_score": 1035,
+      "gap_addressed": "prophet_Zakariya_story_hits_5",
+      "id": "expansion-015"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 102 (Hoarding)?",
+      "target_themes": [
+        "Hoarding"
+      ],
+      "target_verses": [
+        "102:1",
+        "102:2",
+        "102:3"
+      ],
+      "priority_score": 1035,
+      "gap_addressed": "surah_102_hits_65",
+      "id": "expansion-016"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 110 (Triumph)?",
+      "target_themes": [
+        "Triumph"
+      ],
+      "target_verses": [
+        "110:1",
+        "110:2",
+        "110:3"
+      ],
+      "priority_score": 1035,
+      "gap_addressed": "surah_110_hits_65",
+      "id": "expansion-017"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Ilyas as the Quran narrates it.",
+      "target_themes": [
+        "Ilyas",
+        "story"
+      ],
+      "target_verses": [],
+      "priority_score": 1032,
+      "gap_addressed": "prophet_Ilyas_story_hits_6",
+      "id": "expansion-018"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Idris as the Quran narrates it.",
+      "target_themes": [
+        "Idris",
+        "story"
+      ],
+      "target_verses": [
+        "19:56",
+        "21:85"
+      ],
+      "priority_score": 1029,
+      "gap_addressed": "prophet_Idris_story_hits_7",
+      "id": "expansion-019"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Dhulkifl?",
+      "target_themes": [
+        "Dhulkifl",
+        "lesson"
+      ],
+      "target_verses": [],
+      "priority_score": 1022,
+      "gap_addressed": "prophet_Dhulkifl_lesson_hits_1",
+      "id": "expansion-020"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Alyasa?",
+      "target_themes": [
+        "Alyasa",
+        "lesson"
+      ],
+      "target_verses": [],
+      "priority_score": 1016,
+      "gap_addressed": "prophet_Alyasa_lesson_hits_3",
+      "id": "expansion-021"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Yahya as the Quran narrates it.",
+      "target_themes": [
+        "Yahya",
+        "story"
+      ],
+      "target_verses": [
+        "19:7"
+      ],
+      "priority_score": 1014,
+      "gap_addressed": "prophet_Yahya_story_hits_12",
+      "id": "expansion-022"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Zakariya?",
+      "target_themes": [
+        "Zakariya",
+        "lesson"
+      ],
+      "target_verses": [],
+      "priority_score": 1010,
+      "gap_addressed": "prophet_Zakariya_lesson_hits_5",
+      "id": "expansion-023"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Ilyas?",
+      "target_themes": [
+        "Ilyas",
+        "lesson"
+      ],
+      "target_verses": [],
+      "priority_score": 1007,
+      "gap_addressed": "prophet_Ilyas_lesson_hits_6",
+      "id": "expansion-024"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Idris?",
+      "target_themes": [
+        "Idris",
+        "lesson"
+      ],
+      "target_verses": [
+        "19:56",
+        "21:85"
+      ],
+      "priority_score": 1004,
+      "gap_addressed": "prophet_Idris_lesson_hits_7",
+      "id": "expansion-025"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 99 (The Quake)?",
+      "target_themes": [
+        "The Quake"
+      ],
+      "target_verses": [
+        "99:1",
+        "99:2",
+        "99:3"
+      ],
+      "priority_score": 1001,
+      "gap_addressed": "surah_99_hits_99",
+      "id": "expansion-026"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Salih as the Quran narrates it.",
+      "target_themes": [
+        "Salih",
+        "story"
+      ],
+      "target_verses": [],
+      "priority_score": 999,
+      "gap_addressed": "prophet_Salih_story_hits_17",
+      "id": "expansion-027"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Dhulkifl and what was their fate?",
+      "target_themes": [
+        "Dhulkifl",
+        "people"
+      ],
+      "target_verses": [],
+      "priority_score": 997,
+      "gap_addressed": "prophet_Dhulkifl_people_hits_1",
+      "id": "expansion-028"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Dhulkifl's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Dhulkifl",
+        "relationship"
+      ],
+      "target_verses": [],
+      "priority_score": 997,
+      "gap_addressed": "prophet_Dhulkifl_relationship_hits_1",
+      "id": "expansion-029"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Shuaib as the Quran narrates it.",
+      "target_themes": [
+        "Shuaib",
+        "story"
+      ],
+      "target_verses": [
+        "7:84",
+        "7:85",
+        "7:88",
+        "7:90",
+        "7:92",
+        "11:83"
+      ],
+      "priority_score": 996,
+      "gap_addressed": "prophet_Shuaib_story_hits_18",
+      "id": "expansion-030"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 94 (Cooling the Temper)?",
+      "target_themes": [
+        "Cooling the Temper"
+      ],
+      "target_verses": [
+        "94:1",
+        "94:2",
+        "94:3"
+      ],
+      "priority_score": 994,
+      "gap_addressed": "surah_94_hits_106",
+      "id": "expansion-031"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 100 (The Gallopers)?",
+      "target_themes": [
+        "The Gallopers"
+      ],
+      "target_verses": [
+        "100:1",
+        "100:2",
+        "100:3"
+      ],
+      "priority_score": 994,
+      "gap_addressed": "surah_100_hits_106",
+      "id": "expansion-032"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Alyasa and what was their fate?",
+      "target_themes": [
+        "Alyasa",
+        "people"
+      ],
+      "target_verses": [],
+      "priority_score": 991,
+      "gap_addressed": "prophet_Alyasa_people_hits_3",
+      "id": "expansion-033"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Alyasa's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Alyasa",
+        "relationship"
+      ],
+      "target_verses": [],
+      "priority_score": 991,
+      "gap_addressed": "prophet_Alyasa_relationship_hits_3",
+      "id": "expansion-034"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 95 (The Fig)?",
+      "target_themes": [
+        "The Fig"
+      ],
+      "target_verses": [
+        "95:1",
+        "95:2",
+        "95:3"
+      ],
+      "priority_score": 991,
+      "gap_addressed": "surah_95_hits_109",
+      "id": "expansion-035"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Yahya?",
+      "target_themes": [
+        "Yahya",
+        "lesson"
+      ],
+      "target_verses": [
+        "19:7"
+      ],
+      "priority_score": 989,
+      "gap_addressed": "prophet_Yahya_lesson_hits_12",
+      "id": "expansion-036"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 93 (The Forenoon)?",
+      "target_themes": [
+        "The Forenoon"
+      ],
+      "target_verses": [
+        "93:1",
+        "93:2",
+        "93:3"
+      ],
+      "priority_score": 986,
+      "gap_addressed": "surah_93_hits_114",
+      "id": "expansion-037"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Zakariya and what was their fate?",
+      "target_themes": [
+        "Zakariya",
+        "people"
+      ],
+      "target_verses": [],
+      "priority_score": 985,
+      "gap_addressed": "prophet_Zakariya_people_hits_5",
+      "id": "expansion-038"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Zakariya's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Zakariya",
+        "relationship"
+      ],
+      "target_verses": [],
+      "priority_score": 985,
+      "gap_addressed": "prophet_Zakariya_relationship_hits_5",
+      "id": "expansion-039"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Ilyas and what was their fate?",
+      "target_themes": [
+        "Ilyas",
+        "people"
+      ],
+      "target_verses": [],
+      "priority_score": 982,
+      "gap_addressed": "prophet_Ilyas_people_hits_6",
+      "id": "expansion-040"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Ilyas's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Ilyas",
+        "relationship"
+      ],
+      "target_verses": [],
+      "priority_score": 982,
+      "gap_addressed": "prophet_Ilyas_relationship_hits_6",
+      "id": "expansion-041"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 97 (Destiny)?",
+      "target_themes": [
+        "Destiny"
+      ],
+      "target_verses": [
+        "97:1",
+        "97:2",
+        "97:3"
+      ],
+      "priority_score": 982,
+      "gap_addressed": "surah_97_hits_118",
+      "id": "expansion-042"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Ayyub as the Quran narrates it.",
+      "target_themes": [
+        "Ayyub",
+        "story"
+      ],
+      "target_verses": [],
+      "priority_score": 981,
+      "gap_addressed": "prophet_Ayyub_story_hits_23",
+      "id": "expansion-043"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Idris and what was their fate?",
+      "target_themes": [
+        "Idris",
+        "people"
+      ],
+      "target_verses": [
+        "19:56",
+        "21:85"
+      ],
+      "priority_score": 979,
+      "gap_addressed": "prophet_Idris_people_hits_7",
+      "id": "expansion-044"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Idris's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Idris",
+        "relationship"
+      ],
+      "target_verses": [
+        "19:56",
+        "21:85"
+      ],
+      "priority_score": 979,
+      "gap_addressed": "prophet_Idris_relationship_hits_7",
+      "id": "expansion-045"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Yunus as the Quran narrates it.",
+      "target_themes": [
+        "Yunus",
+        "story"
+      ],
+      "target_verses": [],
+      "priority_score": 975,
+      "gap_addressed": "prophet_Yunus_story_hits_25",
+      "id": "expansion-046"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 113 (Daybreak) verse by verse.",
+      "target_themes": [
+        "Daybreak",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "113:1",
+        "113:2",
+        "113:3",
+        "113:4",
+        "113:5"
+      ],
+      "priority_score": 975,
+      "gap_addressed": "surah_113_verse_walk",
+      "id": "expansion-047"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Salih?",
+      "target_themes": [
+        "Salih",
+        "lesson"
+      ],
+      "target_verses": [],
+      "priority_score": 974,
+      "gap_addressed": "prophet_Salih_lesson_hits_17",
+      "id": "expansion-048"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Shuaib?",
+      "target_themes": [
+        "Shuaib",
+        "lesson"
+      ],
+      "target_verses": [
+        "7:84",
+        "7:85",
+        "7:88",
+        "7:90",
+        "7:92",
+        "11:83"
+      ],
+      "priority_score": 971,
+      "gap_addressed": "prophet_Shuaib_lesson_hits_18",
+      "id": "expansion-049"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 105 (The Elephant) verse by verse.",
+      "target_themes": [
+        "The Elephant",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "105:1",
+        "105:2",
+        "105:3",
+        "105:4",
+        "105:5"
+      ],
+      "priority_score": 970,
+      "gap_addressed": "surah_105_verse_walk",
+      "id": "expansion-050"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 106 (Quraish Tribe) verse by verse.",
+      "target_themes": [
+        "Quraish Tribe",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "106:1",
+        "106:2",
+        "106:3",
+        "106:4"
+      ],
+      "priority_score": 970,
+      "gap_addressed": "surah_106_verse_walk",
+      "id": "expansion-051"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 86 (The Bright Star)?",
+      "target_themes": [
+        "The Bright Star"
+      ],
+      "target_verses": [
+        "86:1",
+        "86:2",
+        "86:3"
+      ],
+      "priority_score": 966,
+      "gap_addressed": "surah_86_hits_134",
+      "id": "expansion-052"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 109 (The Disbelievers) verse by verse.",
+      "target_themes": [
+        "The Disbelievers",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "109:1",
+        "109:2",
+        "109:3",
+        "109:4",
+        "109:5",
+        "109:6"
+      ],
+      "priority_score": 966,
+      "gap_addressed": "surah_109_verse_walk",
+      "id": "expansion-053"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Yahya and what was their fate?",
+      "target_themes": [
+        "Yahya",
+        "people"
+      ],
+      "target_verses": [
+        "19:7"
+      ],
+      "priority_score": 964,
+      "gap_addressed": "prophet_Yahya_people_hits_12",
+      "id": "expansion-054"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Yahya's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Yahya",
+        "relationship"
+      ],
+      "target_verses": [
+        "19:7"
+      ],
+      "priority_score": 964,
+      "gap_addressed": "prophet_Yahya_relationship_hits_12",
+      "id": "expansion-055"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 111 (Thorns) verse by verse.",
+      "target_themes": [
+        "Thorns",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "111:1",
+        "111:2",
+        "111:3",
+        "111:4",
+        "111:5"
+      ],
+      "priority_score": 962,
+      "gap_addressed": "surah_111_verse_walk",
+      "id": "expansion-056"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 88 (Overwhelming)?",
+      "target_themes": [
+        "Overwhelming"
+      ],
+      "target_verses": [
+        "88:1",
+        "88:2",
+        "88:3"
+      ],
+      "priority_score": 961,
+      "gap_addressed": "surah_88_hits_139",
+      "id": "expansion-057"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 114 (People) verse by verse.",
+      "target_themes": [
+        "People",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "114:1",
+        "114:2",
+        "114:3",
+        "114:4",
+        "114:5",
+        "114:6"
+      ],
+      "priority_score": 961,
+      "gap_addressed": "surah_114_verse_walk",
+      "id": "expansion-058"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 83 (The Cheaters)?",
+      "target_themes": [
+        "The Cheaters"
+      ],
+      "target_verses": [
+        "83:1",
+        "83:2",
+        "83:3"
+      ],
+      "priority_score": 960,
+      "gap_addressed": "surah_83_hits_140",
+      "id": "expansion-059"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 96 (The Embryo)?",
+      "target_themes": [
+        "The Embryo"
+      ],
+      "target_verses": [
+        "96:1",
+        "96:2",
+        "96:3"
+      ],
+      "priority_score": 958,
+      "gap_addressed": "surah_96_hits_142",
+      "id": "expansion-060"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Ayyub?",
+      "target_themes": [
+        "Ayyub",
+        "lesson"
+      ],
+      "target_verses": [],
+      "priority_score": 956,
+      "gap_addressed": "prophet_Ayyub_lesson_hits_23",
+      "id": "expansion-061"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 112 (Absoluteness) verse by verse.",
+      "target_themes": [
+        "Absoluteness",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "112:1",
+        "112:2",
+        "112:3",
+        "112:4"
+      ],
+      "priority_score": 955,
+      "gap_addressed": "surah_112_verse_walk",
+      "id": "expansion-062"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 87 (The Most High)?",
+      "target_themes": [
+        "The Most High"
+      ],
+      "target_verses": [
+        "87:1",
+        "87:2",
+        "87:3"
+      ],
+      "priority_score": 954,
+      "gap_addressed": "surah_87_hits_146",
+      "id": "expansion-063"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 104 (The Backbiter) verse by verse.",
+      "target_themes": [
+        "The Backbiter",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "104:1",
+        "104:2",
+        "104:3",
+        "104:4",
+        "104:5",
+        "104:6",
+        "104:7",
+        "104:8",
+        "104:9"
+      ],
+      "priority_score": 951,
+      "gap_addressed": "surah_104_verse_walk",
+      "id": "expansion-064"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Yunus?",
+      "target_themes": [
+        "Yunus",
+        "lesson"
+      ],
+      "target_verses": [],
+      "priority_score": 950,
+      "gap_addressed": "prophet_Yunus_lesson_hits_25",
+      "id": "expansion-065"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 91 (The Sun)?",
+      "target_themes": [
+        "The Sun"
+      ],
+      "target_verses": [
+        "91:1",
+        "91:2",
+        "91:3"
+      ],
+      "priority_score": 950,
+      "gap_addressed": "surah_91_hits_150",
+      "id": "expansion-066"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Salih and what was their fate?",
+      "target_themes": [
+        "Salih",
+        "people"
+      ],
+      "target_verses": [],
+      "priority_score": 949,
+      "gap_addressed": "prophet_Salih_people_hits_17",
+      "id": "expansion-067"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Salih's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Salih",
+        "relationship"
+      ],
+      "target_verses": [],
+      "priority_score": 949,
+      "gap_addressed": "prophet_Salih_relationship_hits_17",
+      "id": "expansion-068"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Shuaib and what was their fate?",
+      "target_themes": [
+        "Shuaib",
+        "people"
+      ],
+      "target_verses": [
+        "7:84",
+        "7:85",
+        "7:88",
+        "7:90",
+        "7:92",
+        "11:83"
+      ],
+      "priority_score": 946,
+      "gap_addressed": "prophet_Shuaib_people_hits_18",
+      "id": "expansion-069"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Shuaib's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Shuaib",
+        "relationship"
+      ],
+      "target_verses": [
+        "7:84",
+        "7:85",
+        "7:88",
+        "7:90",
+        "7:92",
+        "11:83"
+      ],
+      "priority_score": 946,
+      "gap_addressed": "prophet_Shuaib_relationship_hits_18",
+      "id": "expansion-070"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 62 (Friday)?",
+      "target_themes": [
+        "Friday"
+      ],
+      "target_verses": [
+        "62:1",
+        "62:2",
+        "62:3"
+      ],
+      "priority_score": 944,
+      "gap_addressed": "surah_62_hits_156",
+      "id": "expansion-071"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 77 (Dispatched)?",
+      "target_themes": [
+        "Dispatched"
+      ],
+      "target_verses": [
+        "77:1",
+        "77:2",
+        "77:3"
+      ],
+      "priority_score": 943,
+      "gap_addressed": "surah_77_hits_157",
+      "id": "expansion-072"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 92 (The Night)?",
+      "target_themes": [
+        "The Night"
+      ],
+      "target_verses": [
+        "92:1",
+        "92:2",
+        "92:3"
+      ],
+      "priority_score": 943,
+      "gap_addressed": "surah_92_hits_157",
+      "id": "expansion-073"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 107 (Charity) verse by verse.",
+      "target_themes": [
+        "Charity",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "107:1",
+        "107:2",
+        "107:3",
+        "107:4",
+        "107:5",
+        "107:6",
+        "107:7"
+      ],
+      "priority_score": 942,
+      "gap_addressed": "surah_107_verse_walk",
+      "id": "expansion-074"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 101 (The Shocker) verse by verse.",
+      "target_themes": [
+        "The Shocker",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "101:1",
+        "101:2",
+        "101:3",
+        "101:4",
+        "101:5",
+        "101:6",
+        "101:7",
+        "101:8",
+        "101:9",
+        "101:10",
+        "101:11"
+      ],
+      "priority_score": 939,
+      "gap_addressed": "surah_101_verse_walk",
+      "id": "expansion-075"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 1 (The Key)?",
+      "target_themes": [
+        "The Key"
+      ],
+      "target_verses": [
+        "1:1",
+        "1:2",
+        "1:3"
+      ],
+      "priority_score": 937,
+      "gap_addressed": "surah_1_hits_163",
+      "id": "expansion-076"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 80 (He Frowned)?",
+      "target_themes": [
+        "He Frowned"
+      ],
+      "target_verses": [
+        "80:1",
+        "80:2",
+        "80:3"
+      ],
+      "priority_score": 936,
+      "gap_addressed": "surah_80_hits_164",
+      "id": "expansion-077"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 102 (Hoarding) verse by verse.",
+      "target_themes": [
+        "Hoarding",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "102:1",
+        "102:2",
+        "102:3",
+        "102:4",
+        "102:5",
+        "102:6",
+        "102:7",
+        "102:8"
+      ],
+      "priority_score": 935,
+      "gap_addressed": "surah_102_verse_walk",
+      "id": "expansion-078"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 79 (The Snatchers)?",
+      "target_themes": [
+        "The Snatchers"
+      ],
+      "target_verses": [
+        "79:1",
+        "79:2",
+        "79:3"
+      ],
+      "priority_score": 933,
+      "gap_addressed": "surah_79_hits_167",
+      "id": "expansion-079"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 52 (Mount Sinai)?",
+      "target_themes": [
+        "Mount Sinai"
+      ],
+      "target_verses": [
+        "52:1",
+        "52:2",
+        "52:3"
+      ],
+      "priority_score": 932,
+      "gap_addressed": "surah_52_hits_168",
+      "id": "expansion-080"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Ayyub and what was their fate?",
+      "target_themes": [
+        "Ayyub",
+        "people"
+      ],
+      "target_verses": [],
+      "priority_score": 931,
+      "gap_addressed": "prophet_Ayyub_people_hits_23",
+      "id": "expansion-081"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Ayyub's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Ayyub",
+        "relationship"
+      ],
+      "target_verses": [],
+      "priority_score": 931,
+      "gap_addressed": "prophet_Ayyub_relationship_hits_23",
+      "id": "expansion-082"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 89 (Dawn)?",
+      "target_themes": [
+        "Dawn"
+      ],
+      "target_verses": [
+        "89:1",
+        "89:2",
+        "89:3"
+      ],
+      "priority_score": 929,
+      "gap_addressed": "surah_89_hits_171",
+      "id": "expansion-083"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 67 (Kingship)?",
+      "target_themes": [
+        "Kingship"
+      ],
+      "target_verses": [
+        "67:1",
+        "67:2",
+        "67:3"
+      ],
+      "priority_score": 927,
+      "gap_addressed": "surah_67_hits_173",
+      "id": "expansion-084"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Yunus and what was their fate?",
+      "target_themes": [
+        "Yunus",
+        "people"
+      ],
+      "target_verses": [],
+      "priority_score": 925,
+      "gap_addressed": "prophet_Yunus_people_hits_25",
+      "id": "expansion-085"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Yunus's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Yunus",
+        "relationship"
+      ],
+      "target_verses": [],
+      "priority_score": 925,
+      "gap_addressed": "prophet_Yunus_relationship_hits_25",
+      "id": "expansion-086"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 60 (The Test)?",
+      "target_themes": [
+        "The Test"
+      ],
+      "target_verses": [
+        "60:1",
+        "60:2",
+        "60:3"
+      ],
+      "priority_score": 924,
+      "gap_addressed": "surah_60_hits_176",
+      "id": "expansion-087"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Ismail as the Quran narrates it.",
+      "target_themes": [
+        "Ismail",
+        "story"
+      ],
+      "target_verses": [
+        "2:125",
+        "2:127",
+        "2:133",
+        "2:136",
+        "2:140",
+        "3:84"
+      ],
+      "priority_score": 921,
+      "gap_addressed": "prophet_Ismail_story_hits_43",
+      "id": "expansion-088"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Harun as the Quran narrates it.",
+      "target_themes": [
+        "Harun",
+        "story"
+      ],
+      "target_verses": [],
+      "priority_score": 921,
+      "gap_addressed": "prophet_Harun_story_hits_43",
+      "id": "expansion-089"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 72 (Jinns)?",
+      "target_themes": [
+        "Jinns"
+      ],
+      "target_verses": [
+        "72:1",
+        "72:2",
+        "72:3"
+      ],
+      "priority_score": 920,
+      "gap_addressed": "surah_72_hits_180",
+      "id": "expansion-090"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 44 (Smoke)?",
+      "target_themes": [
+        "Smoke"
+      ],
+      "target_verses": [
+        "44:1",
+        "44:2",
+        "44:3"
+      ],
+      "priority_score": 916,
+      "gap_addressed": "surah_44_hits_184",
+      "id": "expansion-091"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 63 (The Hypocrites)?",
+      "target_themes": [
+        "The Hypocrites"
+      ],
+      "target_verses": [
+        "63:1",
+        "63:2",
+        "63:3"
+      ],
+      "priority_score": 913,
+      "gap_addressed": "surah_63_hits_187",
+      "id": "expansion-092"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Ishaq as the Quran narrates it.",
+      "target_themes": [
+        "Ishaq",
+        "story"
+      ],
+      "target_verses": [],
+      "priority_score": 909,
+      "gap_addressed": "prophet_Ishaq_story_hits_47",
+      "id": "expansion-093"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 98 (Proof)?",
+      "target_themes": [
+        "Proof"
+      ],
+      "target_verses": [
+        "98:1",
+        "98:2",
+        "98:3"
+      ],
+      "priority_score": 909,
+      "gap_addressed": "surah_98_hits_191",
+      "id": "expansion-094"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 82 (The Shattering)?",
+      "target_themes": [
+        "The Shattering"
+      ],
+      "target_verses": [
+        "82:1",
+        "82:2",
+        "82:3"
+      ],
+      "priority_score": 907,
+      "gap_addressed": "surah_82_hits_193",
+      "id": "expansion-095"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 61 (The Column)?",
+      "target_themes": [
+        "The Column"
+      ],
+      "target_verses": [
+        "61:1",
+        "61:2",
+        "61:3"
+      ],
+      "priority_score": 906,
+      "gap_addressed": "surah_61_hits_194",
+      "id": "expansion-096"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 99 (The Quake) verse by verse.",
+      "target_themes": [
+        "The Quake",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "99:1",
+        "99:2",
+        "99:3",
+        "99:4",
+        "99:5",
+        "99:6",
+        "99:7",
+        "99:8"
+      ],
+      "priority_score": 901,
+      "gap_addressed": "surah_99_verse_walk",
+      "id": "expansion-097"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Hud as the Quran narrates it.",
+      "target_themes": [
+        "Hud",
+        "story"
+      ],
+      "target_verses": [
+        "114:6"
+      ],
+      "priority_score": 900,
+      "gap_addressed": "prophet_Hud_story_hits_50",
+      "id": "expansion-098"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 85 (The Galaxies)?",
+      "target_themes": [
+        "The Galaxies"
+      ],
+      "target_verses": [
+        "85:1",
+        "85:2",
+        "85:3"
+      ],
+      "priority_score": 897,
+      "gap_addressed": "surah_85_hits_203",
+      "id": "expansion-099"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Ismail?",
+      "target_themes": [
+        "Ismail",
+        "lesson"
+      ],
+      "target_verses": [
+        "2:125",
+        "2:127",
+        "2:133",
+        "2:136",
+        "2:140",
+        "3:84"
+      ],
+      "priority_score": 896,
+      "gap_addressed": "prophet_Ismail_lesson_hits_43",
+      "id": "expansion-100"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Harun?",
+      "target_themes": [
+        "Harun",
+        "lesson"
+      ],
+      "target_verses": [],
+      "priority_score": 896,
+      "gap_addressed": "prophet_Harun_lesson_hits_43",
+      "id": "expansion-101"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 94 (Cooling the Temper) verse by verse.",
+      "target_themes": [
+        "Cooling the Temper",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "94:1",
+        "94:2",
+        "94:3",
+        "94:4",
+        "94:5",
+        "94:6",
+        "94:7",
+        "94:8"
+      ],
+      "priority_score": 894,
+      "gap_addressed": "surah_94_verse_walk",
+      "id": "expansion-102"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 100 (The Gallopers) verse by verse.",
+      "target_themes": [
+        "The Gallopers",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "100:1",
+        "100:2",
+        "100:3",
+        "100:4",
+        "100:5",
+        "100:6",
+        "100:7",
+        "100:8",
+        "100:9",
+        "100:10",
+        "100:11"
+      ],
+      "priority_score": 894,
+      "gap_addressed": "surah_100_verse_walk",
+      "id": "expansion-103"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 95 (The Fig) verse by verse.",
+      "target_themes": [
+        "The Fig",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "95:1",
+        "95:2",
+        "95:3",
+        "95:4",
+        "95:5",
+        "95:6",
+        "95:7",
+        "95:8"
+      ],
+      "priority_score": 891,
+      "gap_addressed": "surah_95_verse_walk",
+      "id": "expansion-104"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Dawud as the Quran narrates it.",
+      "target_themes": [
+        "Dawud",
+        "story"
+      ],
+      "target_verses": [],
+      "priority_score": 888,
+      "gap_addressed": "prophet_Dawud_story_hits_54",
+      "id": "expansion-105"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 93 (The Forenoon) verse by verse.",
+      "target_themes": [
+        "The Forenoon",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "93:1",
+        "93:2",
+        "93:3",
+        "93:4",
+        "93:5",
+        "93:6",
+        "93:7",
+        "93:8",
+        "93:9",
+        "93:10",
+        "93:11"
+      ],
+      "priority_score": 886,
+      "gap_addressed": "surah_93_verse_walk",
+      "id": "expansion-106"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Ishaq?",
+      "target_themes": [
+        "Ishaq",
+        "lesson"
+      ],
+      "target_verses": [],
+      "priority_score": 884,
+      "gap_addressed": "prophet_Ishaq_lesson_hits_47",
+      "id": "expansion-107"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 97 (Destiny) verse by verse.",
+      "target_themes": [
+        "Destiny",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "97:1",
+        "97:2",
+        "97:3",
+        "97:4",
+        "97:5"
+      ],
+      "priority_score": 882,
+      "gap_addressed": "surah_97_verse_walk",
+      "id": "expansion-108"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Hud?",
+      "target_themes": [
+        "Hud",
+        "lesson"
+      ],
+      "target_verses": [
+        "114:6"
+      ],
+      "priority_score": 875,
+      "gap_addressed": "prophet_Hud_lesson_hits_50",
+      "id": "expansion-109"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 81 (The Rolling)?",
+      "target_themes": [
+        "The Rolling"
+      ],
+      "target_verses": [
+        "81:1",
+        "81:2",
+        "81:3"
+      ],
+      "priority_score": 874,
+      "gap_addressed": "surah_81_hits_226",
+      "id": "expansion-110"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Ismail and what was their fate?",
+      "target_themes": [
+        "Ismail",
+        "people"
+      ],
+      "target_verses": [
+        "2:125",
+        "2:127",
+        "2:133",
+        "2:136",
+        "2:140",
+        "3:84"
+      ],
+      "priority_score": 871,
+      "gap_addressed": "prophet_Ismail_people_hits_43",
+      "id": "expansion-111"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Ismail's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Ismail",
+        "relationship"
+      ],
+      "target_verses": [
+        "2:125",
+        "2:127",
+        "2:133",
+        "2:136",
+        "2:140",
+        "3:84"
+      ],
+      "priority_score": 871,
+      "gap_addressed": "prophet_Ismail_relationship_hits_43",
+      "id": "expansion-112"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Harun and what was their fate?",
+      "target_themes": [
+        "Harun",
+        "people"
+      ],
+      "target_verses": [],
+      "priority_score": 871,
+      "gap_addressed": "prophet_Harun_people_hits_43",
+      "id": "expansion-113"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Harun's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Harun",
+        "relationship"
+      ],
+      "target_verses": [],
+      "priority_score": 871,
+      "gap_addressed": "prophet_Harun_relationship_hits_43",
+      "id": "expansion-114"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 90 (The Town)?",
+      "target_themes": [
+        "The Town"
+      ],
+      "target_verses": [
+        "90:1",
+        "90:2",
+        "90:3"
+      ],
+      "priority_score": 869,
+      "gap_addressed": "surah_90_hits_231",
+      "id": "expansion-115"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 86 (The Bright Star) verse by verse.",
+      "target_themes": [
+        "The Bright Star",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "86:1",
+        "86:2",
+        "86:3",
+        "86:4",
+        "86:5",
+        "86:6",
+        "86:7",
+        "86:8",
+        "86:9",
+        "86:10",
+        "86:11",
+        "86:12"
+      ],
+      "priority_score": 866,
+      "gap_addressed": "surah_86_verse_walk",
+      "id": "expansion-116"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Dawud?",
+      "target_themes": [
+        "Dawud",
+        "lesson"
+      ],
+      "target_verses": [],
+      "priority_score": 863,
+      "gap_addressed": "prophet_Dawud_lesson_hits_54",
+      "id": "expansion-117"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 88 (Overwhelming) verse by verse.",
+      "target_themes": [
+        "Overwhelming",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "88:1",
+        "88:2",
+        "88:3",
+        "88:4",
+        "88:5",
+        "88:6",
+        "88:7",
+        "88:8",
+        "88:9",
+        "88:10",
+        "88:11",
+        "88:12"
+      ],
+      "priority_score": 861,
+      "gap_addressed": "surah_88_verse_walk",
+      "id": "expansion-118"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 69 (Incontestable)?",
+      "target_themes": [
+        "Incontestable"
+      ],
+      "target_verses": [
+        "69:1",
+        "69:2",
+        "69:3"
+      ],
+      "priority_score": 860,
+      "gap_addressed": "surah_69_hits_240",
+      "id": "expansion-119"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 83 (The Cheaters) verse by verse.",
+      "target_themes": [
+        "The Cheaters",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "83:1",
+        "83:2",
+        "83:3",
+        "83:4",
+        "83:5",
+        "83:6",
+        "83:7",
+        "83:8",
+        "83:9",
+        "83:10",
+        "83:11",
+        "83:12"
+      ],
+      "priority_score": 860,
+      "gap_addressed": "surah_83_verse_walk",
+      "id": "expansion-120"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Ishaq and what was their fate?",
+      "target_themes": [
+        "Ishaq",
+        "people"
+      ],
+      "target_verses": [],
+      "priority_score": 859,
+      "gap_addressed": "prophet_Ishaq_people_hits_47",
+      "id": "expansion-121"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Ishaq's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Ishaq",
+        "relationship"
+      ],
+      "target_verses": [],
+      "priority_score": 859,
+      "gap_addressed": "prophet_Ishaq_relationship_hits_47",
+      "id": "expansion-122"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 96 (The Embryo) verse by verse.",
+      "target_themes": [
+        "The Embryo",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "96:1",
+        "96:2",
+        "96:3",
+        "96:4",
+        "96:5",
+        "96:6",
+        "96:7",
+        "96:8",
+        "96:9",
+        "96:10",
+        "96:11",
+        "96:12"
+      ],
+      "priority_score": 858,
+      "gap_addressed": "surah_96_verse_walk",
+      "id": "expansion-123"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 87 (The Most High) verse by verse.",
+      "target_themes": [
+        "The Most High",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "87:1",
+        "87:2",
+        "87:3",
+        "87:4",
+        "87:5",
+        "87:6",
+        "87:7",
+        "87:8",
+        "87:9",
+        "87:10",
+        "87:11",
+        "87:12"
+      ],
+      "priority_score": 854,
+      "gap_addressed": "surah_87_verse_walk",
+      "id": "expansion-124"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Hud and what was their fate?",
+      "target_themes": [
+        "Hud",
+        "people"
+      ],
+      "target_verses": [
+        "114:6"
+      ],
+      "priority_score": 850,
+      "gap_addressed": "prophet_Hud_people_hits_50",
+      "id": "expansion-125"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Hud's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Hud",
+        "relationship"
+      ],
+      "target_verses": [
+        "114:6"
+      ],
+      "priority_score": 850,
+      "gap_addressed": "prophet_Hud_relationship_hits_50",
+      "id": "expansion-126"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 91 (The Sun) verse by verse.",
+      "target_themes": [
+        "The Sun",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "91:1",
+        "91:2",
+        "91:3",
+        "91:4",
+        "91:5",
+        "91:6",
+        "91:7",
+        "91:8",
+        "91:9",
+        "91:10",
+        "91:11",
+        "91:12"
+      ],
+      "priority_score": 850,
+      "gap_addressed": "surah_91_verse_walk",
+      "id": "expansion-127"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 62 (Friday) verse by verse.",
+      "target_themes": [
+        "Friday",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "62:1",
+        "62:2",
+        "62:3",
+        "62:4",
+        "62:5",
+        "62:6",
+        "62:7",
+        "62:8",
+        "62:9",
+        "62:10",
+        "62:11"
+      ],
+      "priority_score": 844,
+      "gap_addressed": "surah_62_verse_walk",
+      "id": "expansion-128"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Sulaiman as the Quran narrates it.",
+      "target_themes": [
+        "Sulaiman",
+        "story"
+      ],
+      "target_verses": [],
+      "priority_score": 843,
+      "gap_addressed": "prophet_Sulaiman_story_hits_69",
+      "id": "expansion-129"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 77 (Dispatched) verse by verse.",
+      "target_themes": [
+        "Dispatched",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "77:1",
+        "77:2",
+        "77:3",
+        "77:4",
+        "77:5",
+        "77:6",
+        "77:7",
+        "77:8",
+        "77:9",
+        "77:10",
+        "77:11",
+        "77:12"
+      ],
+      "priority_score": 843,
+      "gap_addressed": "surah_77_verse_walk",
+      "id": "expansion-130"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 92 (The Night) verse by verse.",
+      "target_themes": [
+        "The Night",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "92:1",
+        "92:2",
+        "92:3",
+        "92:4",
+        "92:5",
+        "92:6",
+        "92:7",
+        "92:8",
+        "92:9",
+        "92:10",
+        "92:11",
+        "92:12"
+      ],
+      "priority_score": 843,
+      "gap_addressed": "surah_92_verse_walk",
+      "id": "expansion-131"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Dawud and what was their fate?",
+      "target_themes": [
+        "Dawud",
+        "people"
+      ],
+      "target_verses": [],
+      "priority_score": 838,
+      "gap_addressed": "prophet_Dawud_people_hits_54",
+      "id": "expansion-132"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Dawud's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Dawud",
+        "relationship"
+      ],
+      "target_verses": [],
+      "priority_score": 838,
+      "gap_addressed": "prophet_Dawud_relationship_hits_54",
+      "id": "expansion-133"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 1 (The Key) verse by verse.",
+      "target_themes": [
+        "The Key",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "1:1",
+        "1:2",
+        "1:3",
+        "1:4",
+        "1:5",
+        "1:6",
+        "1:7"
+      ],
+      "priority_score": 837,
+      "gap_addressed": "surah_1_verse_walk",
+      "id": "expansion-134"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 80 (He Frowned) verse by verse.",
+      "target_themes": [
+        "He Frowned",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "80:1",
+        "80:2",
+        "80:3",
+        "80:4",
+        "80:5",
+        "80:6",
+        "80:7",
+        "80:8",
+        "80:9",
+        "80:10",
+        "80:11",
+        "80:12"
+      ],
+      "priority_score": 836,
+      "gap_addressed": "surah_80_verse_walk",
+      "id": "expansion-135"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 50 (Q.)?",
+      "target_themes": [
+        "Q."
+      ],
+      "target_verses": [
+        "50:1",
+        "50:2",
+        "50:3"
+      ],
+      "priority_score": 833,
+      "gap_addressed": "surah_50_hits_267",
+      "id": "expansion-136"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 76 (The Human)?",
+      "target_themes": [
+        "The Human"
+      ],
+      "target_verses": [
+        "76:1",
+        "76:2",
+        "76:3"
+      ],
+      "priority_score": 833,
+      "gap_addressed": "surah_76_hits_267",
+      "id": "expansion-137"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 79 (The Snatchers) verse by verse.",
+      "target_themes": [
+        "The Snatchers",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "79:1",
+        "79:2",
+        "79:3",
+        "79:4",
+        "79:5",
+        "79:6",
+        "79:7",
+        "79:8",
+        "79:9",
+        "79:10",
+        "79:11",
+        "79:12"
+      ],
+      "priority_score": 833,
+      "gap_addressed": "surah_79_verse_walk",
+      "id": "expansion-138"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 52 (Mount Sinai) verse by verse.",
+      "target_themes": [
+        "Mount Sinai",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "52:1",
+        "52:2",
+        "52:3",
+        "52:4",
+        "52:5",
+        "52:6",
+        "52:7",
+        "52:8",
+        "52:9",
+        "52:10",
+        "52:11",
+        "52:12"
+      ],
+      "priority_score": 832,
+      "gap_addressed": "surah_52_verse_walk",
+      "id": "expansion-139"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 32 (Prostration)?",
+      "target_themes": [
+        "Prostration"
+      ],
+      "target_verses": [
+        "32:1",
+        "32:2",
+        "32:3"
+      ],
+      "priority_score": 830,
+      "gap_addressed": "surah_32_hits_270",
+      "id": "expansion-140"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 89 (Dawn) verse by verse.",
+      "target_themes": [
+        "Dawn",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "89:1",
+        "89:2",
+        "89:3",
+        "89:4",
+        "89:5",
+        "89:6",
+        "89:7",
+        "89:8",
+        "89:9",
+        "89:10",
+        "89:11",
+        "89:12"
+      ],
+      "priority_score": 829,
+      "gap_addressed": "surah_89_verse_walk",
+      "id": "expansion-141"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 67 (Kingship) verse by verse.",
+      "target_themes": [
+        "Kingship",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "67:1",
+        "67:2",
+        "67:3",
+        "67:4",
+        "67:5",
+        "67:6",
+        "67:7",
+        "67:8",
+        "67:9",
+        "67:10",
+        "67:11",
+        "67:12"
+      ],
+      "priority_score": 827,
+      "gap_addressed": "surah_67_verse_walk",
+      "id": "expansion-142"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 60 (The Test) verse by verse.",
+      "target_themes": [
+        "The Test",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "60:1",
+        "60:2",
+        "60:3",
+        "60:4",
+        "60:5",
+        "60:6",
+        "60:7",
+        "60:8",
+        "60:9",
+        "60:10",
+        "60:11",
+        "60:12"
+      ],
+      "priority_score": 824,
+      "gap_addressed": "surah_60_verse_walk",
+      "id": "expansion-143"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 72 (Jinns) verse by verse.",
+      "target_themes": [
+        "Jinns",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "72:1",
+        "72:2",
+        "72:3",
+        "72:4",
+        "72:5",
+        "72:6",
+        "72:7",
+        "72:8",
+        "72:9",
+        "72:10",
+        "72:11",
+        "72:12"
+      ],
+      "priority_score": 820,
+      "gap_addressed": "surah_72_verse_walk",
+      "id": "expansion-144"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Sulaiman?",
+      "target_themes": [
+        "Sulaiman",
+        "lesson"
+      ],
+      "target_verses": [],
+      "priority_score": 818,
+      "gap_addressed": "prophet_Sulaiman_lesson_hits_69",
+      "id": "expansion-145"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 44 (Smoke) verse by verse.",
+      "target_themes": [
+        "Smoke",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "44:1",
+        "44:2",
+        "44:3",
+        "44:4",
+        "44:5",
+        "44:6",
+        "44:7",
+        "44:8",
+        "44:9",
+        "44:10",
+        "44:11",
+        "44:12"
+      ],
+      "priority_score": 816,
+      "gap_addressed": "surah_44_verse_walk",
+      "id": "expansion-146"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 63 (The Hypocrites) verse by verse.",
+      "target_themes": [
+        "The Hypocrites",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "63:1",
+        "63:2",
+        "63:3",
+        "63:4",
+        "63:5",
+        "63:6",
+        "63:7",
+        "63:8",
+        "63:9",
+        "63:10",
+        "63:11"
+      ],
+      "priority_score": 813,
+      "gap_addressed": "surah_63_verse_walk",
+      "id": "expansion-147"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 98 (Proof) verse by verse.",
+      "target_themes": [
+        "Proof",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "98:1",
+        "98:2",
+        "98:3",
+        "98:4",
+        "98:5",
+        "98:6",
+        "98:7",
+        "98:8"
+      ],
+      "priority_score": 809,
+      "gap_addressed": "surah_98_verse_walk",
+      "id": "expansion-148"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 82 (The Shattering) verse by verse.",
+      "target_themes": [
+        "The Shattering",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "82:1",
+        "82:2",
+        "82:3",
+        "82:4",
+        "82:5",
+        "82:6",
+        "82:7",
+        "82:8",
+        "82:9",
+        "82:10",
+        "82:11",
+        "82:12"
+      ],
+      "priority_score": 807,
+      "gap_addressed": "surah_82_verse_walk",
+      "id": "expansion-149"
+    },
+    {
+      "category": "surah_themes",
+      "question": "Explain Surah 61 (The Column) verse by verse.",
+      "target_themes": [
+        "The Column",
+        "verse-by-verse"
+      ],
+      "target_verses": [
+        "61:1",
+        "61:2",
+        "61:3",
+        "61:4",
+        "61:5",
+        "61:6",
+        "61:7",
+        "61:8",
+        "61:9",
+        "61:10",
+        "61:11",
+        "61:12"
+      ],
+      "priority_score": 806,
+      "gap_addressed": "surah_61_verse_walk",
+      "id": "expansion-150"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 58 (The Debate)?",
+      "target_themes": [
+        "The Debate"
+      ],
+      "target_verses": [
+        "58:1",
+        "58:2",
+        "58:3"
+      ],
+      "priority_score": 797,
+      "gap_addressed": "surah_58_hits_303",
+      "id": "expansion-151"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Sulaiman and what was their fate?",
+      "target_themes": [
+        "Sulaiman",
+        "people"
+      ],
+      "target_verses": [],
+      "priority_score": 793,
+      "gap_addressed": "prophet_Sulaiman_people_hits_69",
+      "id": "expansion-152"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Sulaiman's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Sulaiman",
+        "relationship"
+      ],
+      "target_verses": [],
+      "priority_score": 793,
+      "gap_addressed": "prophet_Sulaiman_relationship_hits_69",
+      "id": "expansion-153"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 64 (Mutual Blaming)?",
+      "target_themes": [
+        "Mutual Blaming"
+      ],
+      "target_verses": [
+        "64:1",
+        "64:2",
+        "64:3"
+      ],
+      "priority_score": 792,
+      "gap_addressed": "surah_64_hits_308",
+      "id": "expansion-154"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 51 (Drivers of the Winds)?",
+      "target_themes": [
+        "Drivers of the Winds"
+      ],
+      "target_verses": [
+        "51:1",
+        "51:2",
+        "51:3"
+      ],
+      "priority_score": 790,
+      "gap_addressed": "surah_51_hits_310",
+      "id": "expansion-155"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 53 (The Stars)?",
+      "target_themes": [
+        "The Stars"
+      ],
+      "target_verses": [
+        "53:1",
+        "53:2",
+        "53:3"
+      ],
+      "priority_score": 788,
+      "gap_addressed": "surah_53_hits_312",
+      "id": "expansion-156"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 54 (The Moon)?",
+      "target_themes": [
+        "The Moon"
+      ],
+      "target_verses": [
+        "54:1",
+        "54:2",
+        "54:3"
+      ],
+      "priority_score": 788,
+      "gap_addressed": "surah_54_hits_312",
+      "id": "expansion-157"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 74 (The Hidden Secret)?",
+      "target_themes": [
+        "The Hidden Secret"
+      ],
+      "target_verses": [
+        "74:1",
+        "74:2",
+        "74:3"
+      ],
+      "priority_score": 786,
+      "gap_addressed": "surah_74_hits_314",
+      "id": "expansion-158"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 66 (Prohibition)?",
+      "target_themes": [
+        "Prohibition"
+      ],
+      "target_verses": [
+        "66:1",
+        "66:2",
+        "66:3"
+      ],
+      "priority_score": 783,
+      "gap_addressed": "surah_66_hits_317",
+      "id": "expansion-159"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 75 (Resurrection)?",
+      "target_themes": [
+        "Resurrection"
+      ],
+      "target_verses": [
+        "75:1",
+        "75:2",
+        "75:3"
+      ],
+      "priority_score": 768,
+      "gap_addressed": "surah_75_hits_332",
+      "id": "expansion-160"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What are the mysterious letters at the start of Surah 44 and what does the Quran do with them?",
+      "target_themes": [
+        "muqattaat",
+        "Smoke"
+      ],
+      "target_verses": [
+        "44:1"
+      ],
+      "priority_score": 766,
+      "gap_addressed": "surah_44_muqattaat",
+      "id": "expansion-161"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 70 (The Heights)?",
+      "target_themes": [
+        "The Heights"
+      ],
+      "target_verses": [
+        "70:1",
+        "70:2",
+        "70:3"
+      ],
+      "priority_score": 765,
+      "gap_addressed": "surah_70_hits_335",
+      "id": "expansion-162"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Yusuf as the Quran narrates it.",
+      "target_themes": [
+        "Yusuf",
+        "story"
+      ],
+      "target_verses": [
+        "114:6"
+      ],
+      "priority_score": 756,
+      "gap_addressed": "prophet_Yusuf_story_hits_98",
+      "id": "expansion-163"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 78 (The Event)?",
+      "target_themes": [
+        "The Event"
+      ],
+      "target_verses": [
+        "78:1",
+        "78:2",
+        "78:3"
+      ],
+      "priority_score": 752,
+      "gap_addressed": "surah_78_hits_348",
+      "id": "expansion-164"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 56 (The Inevitable)?",
+      "target_themes": [
+        "The Inevitable"
+      ],
+      "target_verses": [
+        "56:1",
+        "56:2",
+        "56:3"
+      ],
+      "priority_score": 745,
+      "gap_addressed": "surah_56_hits_355",
+      "id": "expansion-165"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 71 (Noah)?",
+      "target_themes": [
+        "Noah"
+      ],
+      "target_verses": [
+        "71:1",
+        "71:2",
+        "71:3"
+      ],
+      "priority_score": 745,
+      "gap_addressed": "surah_71_hits_355",
+      "id": "expansion-166"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Adam as the Quran narrates it.",
+      "target_themes": [
+        "Adam",
+        "story"
+      ],
+      "target_verses": [
+        "2:31",
+        "2:33",
+        "2:34",
+        "2:35",
+        "2:37",
+        "3:33"
+      ],
+      "priority_score": 732,
+      "gap_addressed": "prophet_Adam_story_hits_106",
+      "id": "expansion-167"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Yusuf?",
+      "target_themes": [
+        "Yusuf",
+        "lesson"
+      ],
+      "target_verses": [
+        "114:6"
+      ],
+      "priority_score": 731,
+      "gap_addressed": "prophet_Yusuf_lesson_hits_98",
+      "id": "expansion-168"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 43 (Ornaments)?",
+      "target_themes": [
+        "Ornaments"
+      ],
+      "target_verses": [
+        "43:1",
+        "43:2",
+        "43:3"
+      ],
+      "priority_score": 718,
+      "gap_addressed": "surah_43_hits_382",
+      "id": "expansion-169"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Adam?",
+      "target_themes": [
+        "Adam",
+        "lesson"
+      ],
+      "target_verses": [
+        "2:31",
+        "2:33",
+        "2:34",
+        "2:35",
+        "2:37",
+        "3:33"
+      ],
+      "priority_score": 707,
+      "gap_addressed": "prophet_Adam_lesson_hits_106",
+      "id": "expansion-170"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Yusuf and what was their fate?",
+      "target_themes": [
+        "Yusuf",
+        "people"
+      ],
+      "target_verses": [
+        "114:6"
+      ],
+      "priority_score": 706,
+      "gap_addressed": "prophet_Yusuf_people_hits_98",
+      "id": "expansion-171"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Yusuf's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Yusuf",
+        "relationship"
+      ],
+      "target_verses": [
+        "114:6"
+      ],
+      "priority_score": 706,
+      "gap_addressed": "prophet_Yusuf_relationship_hits_98",
+      "id": "expansion-172"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What are the mysterious letters at the start of Surah 50 and what does the Quran do with them?",
+      "target_themes": [
+        "muqattaat",
+        "Q."
+      ],
+      "target_verses": [
+        "50:1"
+      ],
+      "priority_score": 683,
+      "gap_addressed": "surah_50_muqattaat",
+      "id": "expansion-173"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Adam and what was their fate?",
+      "target_themes": [
+        "Adam",
+        "people"
+      ],
+      "target_verses": [
+        "2:31",
+        "2:33",
+        "2:34",
+        "2:35",
+        "2:37",
+        "3:33"
+      ],
+      "priority_score": 682,
+      "gap_addressed": "prophet_Adam_people_hits_106",
+      "id": "expansion-174"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Adam's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Adam",
+        "relationship"
+      ],
+      "target_verses": [
+        "2:31",
+        "2:33",
+        "2:34",
+        "2:35",
+        "2:37",
+        "3:33"
+      ],
+      "priority_score": 682,
+      "gap_addressed": "prophet_Adam_relationship_hits_106",
+      "id": "expansion-175"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What are the mysterious letters at the start of Surah 32 and what does the Quran do with them?",
+      "target_themes": [
+        "muqattaat",
+        "Prostration"
+      ],
+      "target_verses": [
+        "32:1"
+      ],
+      "priority_score": 680,
+      "gap_addressed": "surah_32_muqattaat",
+      "id": "expansion-176"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 47 (Muhammad)?",
+      "target_themes": [
+        "Muhammad"
+      ],
+      "target_verses": [
+        "47:1",
+        "47:2",
+        "47:3"
+      ],
+      "priority_score": 680,
+      "gap_addressed": "surah_47_hits_420",
+      "id": "expansion-177"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 34 (Sheba)?",
+      "target_themes": [
+        "Sheba"
+      ],
+      "target_verses": [
+        "34:1",
+        "34:2",
+        "34:3"
+      ],
+      "priority_score": 676,
+      "gap_addressed": "surah_34_hits_424",
+      "id": "expansion-178"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 49 (The Walls)?",
+      "target_themes": [
+        "The Walls"
+      ],
+      "target_verses": [
+        "49:1",
+        "49:2",
+        "49:3"
+      ],
+      "priority_score": 657,
+      "gap_addressed": "surah_49_hits_443",
+      "id": "expansion-179"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 46 (The Dunes)?",
+      "target_themes": [
+        "The Dunes"
+      ],
+      "target_verses": [
+        "46:1",
+        "46:2",
+        "46:3"
+      ],
+      "priority_score": 641,
+      "gap_addressed": "surah_46_hits_459",
+      "id": "expansion-180"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 15 (Al-Hijr Valley)?",
+      "target_themes": [
+        "Al-Hijr Valley"
+      ],
+      "target_verses": [
+        "15:1",
+        "15:2",
+        "15:3"
+      ],
+      "priority_score": 637,
+      "gap_addressed": "surah_15_hits_463",
+      "id": "expansion-181"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What is the central message of Surah 35 (Initiator)?",
+      "target_themes": [
+        "Initiator"
+      ],
+      "target_verses": [
+        "35:1",
+        "35:2",
+        "35:3"
+      ],
+      "priority_score": 629,
+      "gap_addressed": "surah_35_hits_471",
+      "id": "expansion-182"
+    },
+    {
+      "category": "theological",
+      "question": "How does the Quran describe God's mercy (Ar-Rahman, Ar-Rahim)?",
+      "target_themes": [
+        "mercy",
+        "rahmah",
+        "rahman"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "theological_Divine attributes: mercy",
+      "id": "expansion-183"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran say about God's knowledge being all-encompassing?",
+      "target_themes": [
+        "knowledge",
+        "ilm",
+        "alim"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "theological_Divine attributes: knowledge",
+      "id": "expansion-184"
+    },
+    {
+      "category": "theological",
+      "question": "How does the Quran portray God's justice (`adl)?",
+      "target_themes": [
+        "justice",
+        "adl",
+        "qist"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "theological_Divine attributes: justice",
+      "id": "expansion-185"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran teach about God's omnipotence (qudrah)?",
+      "target_themes": [
+        "omnipotent",
+        "qadeer",
+        "power"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "theological_Divine attributes: power",
+      "id": "expansion-186"
+    },
+    {
+      "category": "theological",
+      "question": "How is God's wisdom (hikmah) described in the Quran?",
+      "target_themes": [
+        "wisdom",
+        "hikmah"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "theological_Divine attributes: wisdom",
+      "id": "expansion-187"
+    },
+    {
+      "category": "theological",
+      "question": "How does the Quran define the absolute oneness of God (tawhid)?",
+      "target_themes": [
+        "tawhid",
+        "ahad",
+        "wahid"
+      ],
+      "target_verses": [
+        "112:1",
+        "112:2",
+        "112:3",
+        "112:4"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Tawhid: definition",
+      "id": "expansion-188"
+    },
+    {
+      "category": "theological",
+      "question": "What is shirk in the Quran and what are its forms?",
+      "target_themes": [
+        "shirk",
+        "associate"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "theological_Shirk: forms",
+      "id": "expansion-189"
+    },
+    {
+      "category": "theological",
+      "question": "What are the most beautiful names of God (asma al-husna) in the Quran?",
+      "target_themes": [
+        "names",
+        "asma"
+      ],
+      "target_verses": [
+        "7:180",
+        "20:8",
+        "17:110",
+        "59:24"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Names of God",
+      "id": "expansion-190"
+    },
+    {
+      "category": "theological",
+      "question": "How does the Quran describe the chain of revelation from earlier scriptures?",
+      "target_themes": [
+        "revelation",
+        "scripture",
+        "torah",
+        "gospel"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "theological_Revelation: chain",
+      "id": "expansion-191"
+    },
+    {
+      "category": "theological",
+      "question": "What is the barzakh in the Quran?",
+      "target_themes": [
+        "barzakh",
+        "intermediate state"
+      ],
+      "target_verses": [
+        "23:100"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Eschatology: barzakh",
+      "id": "expansion-192"
+    },
+    {
+      "category": "theological",
+      "question": "How does the Quran describe the trumpet (sur) of the Day of Resurrection?",
+      "target_themes": [
+        "trumpet",
+        "sur"
+      ],
+      "target_verses": [
+        "39:68",
+        "69:13",
+        "78:18"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Eschatology: trumpet",
+      "id": "expansion-193"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran say about the scales (mizan) of deeds?",
+      "target_themes": [
+        "scales",
+        "mizan",
+        "weight"
+      ],
+      "target_verses": [
+        "7:8",
+        "7:9",
+        "23:102",
+        "23:103"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Eschatology: scales",
+      "id": "expansion-194"
+    },
+    {
+      "category": "theological",
+      "question": "Does the Quran mention the bridge over Hell (sirat)?",
+      "target_themes": [
+        "sirat",
+        "path",
+        "bridge"
+      ],
+      "target_verses": [
+        "1:6",
+        "37:23"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Eschatology: bridge",
+      "id": "expansion-195"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran say about the angel of death?",
+      "target_themes": [
+        "death",
+        "angel"
+      ],
+      "target_verses": [
+        "32:11"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Eschatology: angel of death",
+      "id": "expansion-196"
+    },
+    {
+      "category": "theological",
+      "question": "How is the Contact Prayer (Salat) structured in the Quran?",
+      "target_themes": [
+        "salat",
+        "prayer"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "theological_Worship: salat",
+      "id": "expansion-197"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran specify about zakat — who pays, who receives?",
+      "target_themes": [
+        "zakat",
+        "alms"
+      ],
+      "target_verses": [
+        "9:60",
+        "2:177"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Worship: zakat detail",
+      "id": "expansion-198"
+    },
+    {
+      "category": "theological",
+      "question": "How does the Quran describe the practice of fasting?",
+      "target_themes": [
+        "fasting",
+        "siyam",
+        "sawm"
+      ],
+      "target_verses": [
+        "2:183",
+        "2:184",
+        "2:185",
+        "2:187"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Worship: fasting",
+      "id": "expansion-199"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran say about the rites of hajj?",
+      "target_themes": [
+        "hajj",
+        "pilgrimage"
+      ],
+      "target_verses": [
+        "2:196",
+        "2:197",
+        "3:96",
+        "3:97",
+        "22:27"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Worship: hajj",
+      "id": "expansion-200"
+    },
+    {
+      "category": "theological",
+      "question": "How does the Quran describe God as the Forgiver (Al-Ghafur, Al-Ghaffar)?",
+      "target_themes": [
+        "forgiver",
+        "ghafur",
+        "ghafir"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "theological_Divine attribute: forgiveness",
+      "id": "expansion-201"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran mean by God as Rabb (Lord, Sustainer)?",
+      "target_themes": [
+        "rabb",
+        "lord"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "theological_Divine: lordship",
+      "id": "expansion-202"
+    },
+    {
+      "category": "theological",
+      "question": "How does the Quran balance predestination (qadar) and human responsibility?",
+      "target_themes": [
+        "qadar",
+        "qada",
+        "destiny"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "theological_Predestination",
+      "id": "expansion-203"
+    },
+    {
+      "category": "theological",
+      "question": "Explain the Light Verse (24:35) — what does it teach about God's light?",
+      "target_themes": [
+        "light",
+        "nur"
+      ],
+      "target_verses": [
+        "24:35",
+        "24:36"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Light verse",
+      "id": "expansion-204"
+    },
+    {
+      "category": "theological",
+      "question": "Explain Ayat al-Kursi (2:255) verse by verse.",
+      "target_themes": [
+        "throne",
+        "kursi"
+      ],
+      "target_verses": [
+        "2:255",
+        "2:256"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Throne verse",
+      "id": "expansion-205"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran say about God's nearness (closer than the jugular vein)?",
+      "target_themes": [
+        "nearness",
+        "close",
+        "jugular"
+      ],
+      "target_verses": [
+        "50:16",
+        "2:186"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_God's nearness",
+      "id": "expansion-206"
+    },
+    {
+      "category": "theological",
+      "question": "How does the Quran describe God speaking — direct, behind a veil, through a messenger?",
+      "target_themes": [
+        "speech",
+        "kalam"
+      ],
+      "target_verses": [
+        "42:51"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Divine speech",
+      "id": "expansion-207"
+    },
+    {
+      "category": "theological",
+      "question": "What honour does God bestow on humans according to the Quran?",
+      "target_themes": [
+        "honour",
+        "karam",
+        "khalifa"
+      ],
+      "target_verses": [
+        "17:70",
+        "2:30"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Honour to humans",
+      "id": "expansion-208"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran mean by 'God sealing the hearts'?",
+      "target_themes": [
+        "heart",
+        "seal",
+        "khatm"
+      ],
+      "target_verses": [
+        "2:7",
+        "16:108",
+        "47:24"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Heart and seal",
+      "id": "expansion-209"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran teach about God saying 'Be' (kun)?",
+      "target_themes": [
+        "kun",
+        "be",
+        "creation"
+      ],
+      "target_verses": [
+        "2:117",
+        "3:47",
+        "3:59",
+        "6:73",
+        "16:40",
+        "19:35",
+        "36:82",
+        "40:68"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Divine will: 'Be'",
+      "id": "expansion-210"
+    },
+    {
+      "category": "theological",
+      "question": "How does the Quran teach that God's mercy precedes His wrath?",
+      "target_themes": [
+        "mercy",
+        "wrath"
+      ],
+      "target_verses": [
+        "6:12",
+        "6:54",
+        "7:156"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Mercy precedence",
+      "id": "expansion-211"
+    },
+    {
+      "category": "theological",
+      "question": "How does the Quran describe God as First, Last, Inner, Outer (57:3)?",
+      "target_themes": [
+        "first",
+        "last"
+      ],
+      "target_verses": [
+        "57:3",
+        "57:4"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Divine attributes: First and Last",
+      "id": "expansion-212"
+    },
+    {
+      "category": "theological",
+      "question": "Does the Quran use anthropomorphic language for God? How should it be read?",
+      "target_themes": [
+        "face",
+        "hand",
+        "throne"
+      ],
+      "target_verses": [
+        "55:27",
+        "5:64",
+        "39:67"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Anthropomorphism",
+      "id": "expansion-213"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran mean by the two seas not mixing (55:19-20)?",
+      "target_themes": [
+        "seas",
+        "barrier"
+      ],
+      "target_verses": [
+        "25:53",
+        "55:19",
+        "55:20",
+        "27:61"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Two seas verse",
+      "id": "expansion-214"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran say about the Preserved Tablet (lawh mahfuz) and the Pen?",
+      "target_themes": [
+        "tablet",
+        "pen",
+        "lawh"
+      ],
+      "target_verses": [
+        "85:21",
+        "85:22",
+        "68:1",
+        "96:4"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Pen and tablet",
+      "id": "expansion-215"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran say about mountains being pegs?",
+      "target_themes": [
+        "mountain",
+        "peg",
+        "stabilize"
+      ],
+      "target_verses": [
+        "78:6",
+        "78:7",
+        "21:31",
+        "16:15",
+        "31:10"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Mountains as pegs",
+      "id": "expansion-216"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran say about human embryological development?",
+      "target_themes": [
+        "embryo",
+        "clot",
+        "alaqah"
+      ],
+      "target_verses": [
+        "22:5",
+        "23:13",
+        "23:14",
+        "75:37",
+        "75:38",
+        "96:2"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Embryology",
+      "id": "expansion-217"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran say about the sun running on a course?",
+      "target_themes": [
+        "sun",
+        "orbit",
+        "mustaqarr"
+      ],
+      "target_verses": [
+        "36:38",
+        "36:39",
+        "36:40",
+        "21:33"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Sun's orbit",
+      "id": "expansion-218"
+    },
+    {
+      "category": "theological",
+      "question": "Is there big-bang imagery in the Quran (21:30)?",
+      "target_themes": [
+        "creation",
+        "ratq",
+        "fatq"
+      ],
+      "target_verses": [
+        "21:30",
+        "41:11"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Big-bang imagery",
+      "id": "expansion-219"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran mean by iron sent down from the sky (57:25)?",
+      "target_themes": [
+        "iron",
+        "hadid"
+      ],
+      "target_verses": [
+        "57:25",
+        "57:26"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Iron from sky",
+      "id": "expansion-220"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran mean by God 'revealing' to bees (16:68-69)?",
+      "target_themes": [
+        "bee",
+        "honey",
+        "wahy"
+      ],
+      "target_verses": [
+        "16:68",
+        "16:69"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Bees revelation",
+      "id": "expansion-221"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran narrate about the speech of the ant (27:18-19)?",
+      "target_themes": [
+        "ant",
+        "naml"
+      ],
+      "target_verses": [
+        "27:18",
+        "27:19",
+        "27:20"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Ant's speech",
+      "id": "expansion-222"
+    },
+    {
+      "category": "theological",
+      "question": "How does the Quran describe Solomon's command of birds and jinn?",
+      "target_themes": [
+        "birds",
+        "solomon",
+        "jinn"
+      ],
+      "target_verses": [
+        "27:16",
+        "27:17",
+        "27:39",
+        "34:12",
+        "34:13"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Solomon and birds",
+      "id": "expansion-223"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran say about God's throne being over water (11:7)?",
+      "target_themes": [
+        "throne",
+        "water"
+      ],
+      "target_verses": [
+        "11:7"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Throne over water",
+      "id": "expansion-224"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran teach about the seven heavens?",
+      "target_themes": [
+        "seven heavens",
+        "sama"
+      ],
+      "target_verses": [
+        "2:29",
+        "23:17",
+        "41:12",
+        "65:12",
+        "67:3",
+        "71:15"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Seven heavens",
+      "id": "expansion-225"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran say about the nature and origin of the jinn?",
+      "target_themes": [
+        "jinn",
+        "smokeless fire"
+      ],
+      "target_verses": [
+        "15:27",
+        "55:15",
+        "72:1",
+        "72:2",
+        "72:11"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Jinn nature",
+      "id": "expansion-226"
+    },
+    {
+      "category": "theological",
+      "question": "How does the Quran describe the angels and their roles?",
+      "target_themes": [
+        "angels",
+        "malaikah"
+      ],
+      "target_verses": [
+        "2:30",
+        "11:69",
+        "16:2",
+        "35:1",
+        "97:4"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Angelic hierarchy",
+      "id": "expansion-227"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran mean by belief in the Unseen (al-ghayb)?",
+      "target_themes": [
+        "ghayb",
+        "unseen"
+      ],
+      "target_verses": [
+        "2:3",
+        "6:50",
+        "6:59",
+        "27:65",
+        "72:26"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Al-ghayb",
+      "id": "expansion-228"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran say about the pre-existence covenant of souls (7:172)?",
+      "target_themes": [
+        "covenant",
+        "alast"
+      ],
+      "target_verses": [
+        "7:172",
+        "7:173"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Pre-existence covenant",
+      "id": "expansion-229"
+    },
+    {
+      "category": "theological",
+      "question": "What does the Quran mean by the light running before believers on Judgment Day (57:12)?",
+      "target_themes": [
+        "light",
+        "believers"
+      ],
+      "target_verses": [
+        "57:12",
+        "57:13",
+        "57:14",
+        "57:15",
+        "66:8"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "theological_Light of believers",
+      "id": "expansion-230"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Nuh as the Quran narrates it.",
+      "target_themes": [
+        "Nuh",
+        "story"
+      ],
+      "target_verses": [
+        "3:33",
+        "4:163",
+        "6:84",
+        "7:59",
+        "7:69",
+        "9:70"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "prophet_Nuh_story_hits_150",
+      "id": "expansion-231"
+    },
+    {
+      "category": "ethical",
+      "question": "What is taqwa in the Quran and how is it cultivated?",
+      "target_themes": [
+        "taqwa",
+        "righteousness"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Taqwa: definition",
+      "id": "expansion-232"
+    },
+    {
+      "category": "ethical",
+      "question": "How does the Quran describe sabr (patience) and its different forms?",
+      "target_themes": [
+        "sabr",
+        "patience"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Sabr: forms",
+      "id": "expansion-233"
+    },
+    {
+      "category": "ethical",
+      "question": "What does the Quran teach about sincerity (ikhlas) of intention?",
+      "target_themes": [
+        "ikhlas",
+        "sincerity"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Ikhlas: sincerity",
+      "id": "expansion-234"
+    },
+    {
+      "category": "ethical",
+      "question": "What is ihsan (excellence) in the Quran?",
+      "target_themes": [
+        "ihsan",
+        "excellence"
+      ],
+      "target_verses": [
+        "2:195",
+        "16:90"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Ihsan: excellence",
+      "id": "expansion-235"
+    },
+    {
+      "category": "ethical",
+      "question": "How does the Quran value truthfulness (sidq)?",
+      "target_themes": [
+        "sidq",
+        "truth"
+      ],
+      "target_verses": [
+        "9:119",
+        "33:35",
+        "39:33"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Sidq: truthfulness",
+      "id": "expansion-236"
+    },
+    {
+      "category": "ethical",
+      "question": "What does the Quran say about honesty in trade and measure?",
+      "target_themes": [
+        "measure",
+        "scale"
+      ],
+      "target_verses": [
+        "6:152",
+        "7:85",
+        "11:84",
+        "11:85",
+        "26:181",
+        "26:182",
+        "55:7",
+        "55:8",
+        "55:9",
+        "83:1",
+        "83:2",
+        "83:3"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Honesty in trade",
+      "id": "expansion-237"
+    },
+    {
+      "category": "ethical",
+      "question": "What duties does the Quran assign children toward their parents?",
+      "target_themes": [
+        "parents",
+        "honour"
+      ],
+      "target_verses": [
+        "17:23",
+        "17:24",
+        "29:8",
+        "31:14",
+        "31:15",
+        "46:15"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Parents: honour",
+      "id": "expansion-238"
+    },
+    {
+      "category": "ethical",
+      "question": "How does the Quran instruct treatment of neighbours?",
+      "target_themes": [
+        "neighbours"
+      ],
+      "target_verses": [
+        "4:36"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Neighbours",
+      "id": "expansion-239"
+    },
+    {
+      "category": "ethical",
+      "question": "What does the Quran say about the rights of orphans?",
+      "target_themes": [
+        "orphan",
+        "yatim"
+      ],
+      "target_verses": [
+        "2:220",
+        "4:2",
+        "4:6",
+        "4:10",
+        "6:152",
+        "17:34",
+        "89:17",
+        "93:9",
+        "107:2"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Orphans",
+      "id": "expansion-240"
+    },
+    {
+      "category": "ethical",
+      "question": "What does the Quran say about forgiving debt or giving time to a debtor?",
+      "target_themes": [
+        "debt",
+        "dayn"
+      ],
+      "target_verses": [
+        "2:280",
+        "2:282",
+        "2:283"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Debt forgiveness",
+      "id": "expansion-241"
+    },
+    {
+      "category": "ethical",
+      "question": "How does the Quran address anger and its restraint?",
+      "target_themes": [
+        "anger",
+        "kazm"
+      ],
+      "target_verses": [
+        "3:134",
+        "42:37"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Anger",
+      "id": "expansion-242"
+    },
+    {
+      "category": "ethical",
+      "question": "What does the Quran say about backbiting (ghibah)?",
+      "target_themes": [
+        "backbiting",
+        "ghibah"
+      ],
+      "target_verses": [
+        "49:11",
+        "49:12",
+        "104:1"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Backbiting",
+      "id": "expansion-243"
+    },
+    {
+      "category": "ethical",
+      "question": "How does the Quran punish slander and false accusation?",
+      "target_themes": [
+        "slander",
+        "qadhf"
+      ],
+      "target_verses": [
+        "24:4",
+        "24:23"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Slander",
+      "id": "expansion-244"
+    },
+    {
+      "category": "ethical",
+      "question": "What does the Quran teach about envy (hasad)?",
+      "target_themes": [
+        "envy",
+        "hasad"
+      ],
+      "target_verses": [
+        "4:54",
+        "113:5"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Envy",
+      "id": "expansion-245"
+    },
+    {
+      "category": "ethical",
+      "question": "How does the Quran warn against pride (kibr)?",
+      "target_themes": [
+        "pride",
+        "kibr",
+        "arrogance"
+      ],
+      "target_verses": [
+        "7:13",
+        "16:23",
+        "31:18",
+        "40:60",
+        "57:23"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Pride",
+      "id": "expansion-246"
+    },
+    {
+      "category": "ethical",
+      "question": "What does the Quran teach about modesty (haya') and dress?",
+      "target_themes": [
+        "modesty",
+        "haya",
+        "hijab"
+      ],
+      "target_verses": [
+        "7:26",
+        "24:30",
+        "24:31",
+        "33:33",
+        "33:59"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Modesty",
+      "id": "expansion-247"
+    },
+    {
+      "category": "ethical",
+      "question": "Why does the Quran praise hidden charity over public charity?",
+      "target_themes": [
+        "secret charity"
+      ],
+      "target_verses": [
+        "2:271",
+        "2:272",
+        "2:273"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Charity hidden",
+      "id": "expansion-248"
+    },
+    {
+      "category": "ethical",
+      "question": "What does the Quran teach about gentle speech?",
+      "target_themes": [
+        "speech",
+        "qawl"
+      ],
+      "target_verses": [
+        "17:23",
+        "17:53",
+        "20:44",
+        "31:18",
+        "31:19",
+        "41:34"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Gentle speech",
+      "id": "expansion-249"
+    },
+    {
+      "category": "ethical",
+      "question": "How does the Quran condemn lying and false witness?",
+      "target_themes": [
+        "lie",
+        "shahada"
+      ],
+      "target_verses": [
+        "2:283",
+        "4:135",
+        "25:72"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Lying",
+      "id": "expansion-250"
+    },
+    {
+      "category": "ethical",
+      "question": "What are the marks of the hypocrite (munafiq) in the Quran?",
+      "target_themes": [
+        "munafiq",
+        "hypocrite"
+      ],
+      "target_verses": [
+        "2:8",
+        "2:9",
+        "2:10",
+        "4:142",
+        "63:1"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Hypocrisy",
+      "id": "expansion-251"
+    },
+    {
+      "category": "ethical",
+      "question": "What is the process of true repentance (tawbah nasuh) in the Quran?",
+      "target_themes": [
+        "tawbah",
+        "repentance"
+      ],
+      "target_verses": [
+        "66:8",
+        "39:53",
+        "25:70"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Repentance: process",
+      "id": "expansion-252"
+    },
+    {
+      "category": "ethical",
+      "question": "Why does the Quran make forgiving others a high virtue?",
+      "target_themes": [
+        "forgive",
+        "afw"
+      ],
+      "target_verses": [
+        "3:134",
+        "42:40",
+        "42:43",
+        "64:14"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Forgiving others",
+      "id": "expansion-253"
+    },
+    {
+      "category": "ethical",
+      "question": "What does the Quran teach about hospitality, drawing on Abraham?",
+      "target_themes": [
+        "hospitality"
+      ],
+      "target_verses": [
+        "11:69",
+        "11:70",
+        "11:71",
+        "51:24",
+        "51:25",
+        "51:26",
+        "51:27"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Hospitality",
+      "id": "expansion-254"
+    },
+    {
+      "category": "ethical",
+      "question": "How does the Quran describe gratitude (shukr) being tested by ease and hardship?",
+      "target_themes": [
+        "shukr",
+        "gratitude"
+      ],
+      "target_verses": [
+        "14:7",
+        "27:40",
+        "2:155",
+        "2:156"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Gratitude tests",
+      "id": "expansion-255"
+    },
+    {
+      "category": "ethical",
+      "question": "Why does the Quran call wealth and children a test (fitnah)?",
+      "target_themes": [
+        "wealth",
+        "fitnah"
+      ],
+      "target_verses": [
+        "8:28",
+        "64:15",
+        "63:9",
+        "57:20"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Wealth as test",
+      "id": "expansion-256"
+    },
+    {
+      "category": "ethical",
+      "question": "How does the Quran describe the deceptive nature of worldly life (dunya)?",
+      "target_themes": [
+        "dunya",
+        "world"
+      ],
+      "target_verses": [
+        "3:14",
+        "3:185",
+        "6:32",
+        "29:64",
+        "57:20"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Worldly life",
+      "id": "expansion-257"
+    },
+    {
+      "category": "ethical",
+      "question": "What does the Quran say about trusting in God (tawakkul)?",
+      "target_themes": [
+        "tawakkul",
+        "trust"
+      ],
+      "target_verses": [
+        "3:159",
+        "8:2",
+        "65:3"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Trust in God",
+      "id": "expansion-258"
+    },
+    {
+      "category": "ethical",
+      "question": "How does the Quran warn against bad companionship?",
+      "target_themes": [
+        "companion",
+        "friend"
+      ],
+      "target_verses": [
+        "25:27",
+        "25:28",
+        "25:29",
+        "43:67"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Companionship: bad",
+      "id": "expansion-259"
+    },
+    {
+      "category": "ethical",
+      "question": "What does the Quran identify as the purpose of marriage (30:21)?",
+      "target_themes": [
+        "marriage",
+        "zawj"
+      ],
+      "target_verses": [
+        "30:21",
+        "7:189"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Marriage purpose",
+      "id": "expansion-260"
+    },
+    {
+      "category": "ethical",
+      "question": "How does the Quran command kindness in marriage even at divorce?",
+      "target_themes": [
+        "marriage",
+        "divorce"
+      ],
+      "target_verses": [
+        "2:228",
+        "2:229",
+        "2:231",
+        "4:19",
+        "65:1",
+        "65:2"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Marriage: kindness",
+      "id": "expansion-261"
+    },
+    {
+      "category": "ethical",
+      "question": "What is the Quranic procedure for divorce?",
+      "target_themes": [
+        "talaq",
+        "divorce"
+      ],
+      "target_verses": [
+        "2:226",
+        "2:227",
+        "2:228",
+        "2:229",
+        "65:1",
+        "65:2",
+        "65:4"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Divorce procedure",
+      "id": "expansion-262"
+    },
+    {
+      "category": "ethical",
+      "question": "How does the Quran specify inheritance shares?",
+      "target_themes": [
+        "inheritance",
+        "fara'id"
+      ],
+      "target_verses": [
+        "4:11",
+        "4:12",
+        "4:176"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Inheritance fixed",
+      "id": "expansion-263"
+    },
+    {
+      "category": "ethical",
+      "question": "What does the Quran clarify about adoption (33:4-5)?",
+      "target_themes": [
+        "adoption"
+      ],
+      "target_verses": [
+        "33:4",
+        "33:5"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Adoption rules",
+      "id": "expansion-264"
+    },
+    {
+      "category": "ethical",
+      "question": "Under what conditions does the Quran permit plural marriage?",
+      "target_themes": [
+        "polygamy"
+      ],
+      "target_verses": [
+        "4:3",
+        "4:129"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Plural marriage",
+      "id": "expansion-265"
+    },
+    {
+      "category": "ethical",
+      "question": "What does the Quran say about the dower (mahr / saduqah)?",
+      "target_themes": [
+        "mahr",
+        "dower"
+      ],
+      "target_verses": [
+        "4:4",
+        "4:24",
+        "60:10"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Mahr: bride gift",
+      "id": "expansion-266"
+    },
+    {
+      "category": "ethical",
+      "question": "What does the Quran specify about breastfeeding (2:233)?",
+      "target_themes": [
+        "breastfeeding",
+        "rida"
+      ],
+      "target_verses": [
+        "2:233",
+        "31:14",
+        "46:15",
+        "65:6"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Breastfeeding period",
+      "id": "expansion-267"
+    },
+    {
+      "category": "ethical",
+      "question": "What is the Quranic ruling on theft (5:38)?",
+      "target_themes": [
+        "theft",
+        "sariqah"
+      ],
+      "target_verses": [
+        "5:38",
+        "5:39",
+        "12:75"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Hudud: theft",
+      "id": "expansion-268"
+    },
+    {
+      "category": "ethical",
+      "question": "How does the Quran address adultery (zina)?",
+      "target_themes": [
+        "zina",
+        "adultery"
+      ],
+      "target_verses": [
+        "17:32",
+        "24:2",
+        "24:3"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Hudud: adultery",
+      "id": "expansion-269"
+    },
+    {
+      "category": "ethical",
+      "question": "What does the Quran prescribe for false witness against chaste women?",
+      "target_themes": [
+        "qadhf",
+        "slander"
+      ],
+      "target_verses": [
+        "24:4",
+        "24:5",
+        "24:11",
+        "24:12",
+        "24:13"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Hudud: false witness",
+      "id": "expansion-270"
+    },
+    {
+      "category": "ethical",
+      "question": "How does the Quran balance retaliation (qisas) and pardon?",
+      "target_themes": [
+        "qisas",
+        "retaliation"
+      ],
+      "target_verses": [
+        "2:178",
+        "2:179",
+        "5:45",
+        "17:33",
+        "42:40"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Retaliation: qisas",
+      "id": "expansion-271"
+    },
+    {
+      "category": "ethical",
+      "question": "Why does the Quran liken the killing of one person to killing all humanity (5:32)?",
+      "target_themes": [
+        "murder",
+        "qatl"
+      ],
+      "target_verses": [
+        "5:32",
+        "5:33",
+        "6:151",
+        "17:33"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Murder: gravity",
+      "id": "expansion-272"
+    },
+    {
+      "category": "ethical",
+      "question": "What does the Quran say about not killing oneself (4:29)?",
+      "target_themes": [
+        "suicide"
+      ],
+      "target_verses": [
+        "4:29",
+        "4:30"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Suicide",
+      "id": "expansion-273"
+    },
+    {
+      "category": "ethical",
+      "question": "Why does the Quran call riba (usury) war against God (2:279)?",
+      "target_themes": [
+        "riba",
+        "usury"
+      ],
+      "target_verses": [
+        "2:275",
+        "2:276",
+        "2:277",
+        "2:278",
+        "2:279",
+        "3:130",
+        "30:39"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Riba: gravity",
+      "id": "expansion-274"
+    },
+    {
+      "category": "ethical",
+      "question": "How does the Quran gradually prohibit intoxicants?",
+      "target_themes": [
+        "khamr",
+        "wine"
+      ],
+      "target_verses": [
+        "2:219",
+        "4:43",
+        "5:90",
+        "5:91"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Wine prohibition",
+      "id": "expansion-275"
+    },
+    {
+      "category": "ethical",
+      "question": "What does the Quran specify as forbidden foods?",
+      "target_themes": [
+        "food",
+        "halal",
+        "haram"
+      ],
+      "target_verses": [
+        "2:172",
+        "2:173",
+        "5:3",
+        "5:5",
+        "6:118",
+        "6:119",
+        "6:121",
+        "6:145",
+        "16:115"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Food: halal",
+      "id": "expansion-276"
+    },
+    {
+      "category": "ethical",
+      "question": "Why does the Quran specifically prohibit pork?",
+      "target_themes": [
+        "pork",
+        "swine"
+      ],
+      "target_verses": [
+        "2:173",
+        "5:3",
+        "6:145",
+        "16:115"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Food: pork",
+      "id": "expansion-277"
+    },
+    {
+      "category": "ethical",
+      "question": "What does the Quran say about hunting and game during ihram?",
+      "target_themes": [
+        "hunting",
+        "game"
+      ],
+      "target_verses": [
+        "5:1",
+        "5:2",
+        "5:4",
+        "5:94",
+        "5:95",
+        "5:96"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Hunting",
+      "id": "expansion-278"
+    },
+    {
+      "category": "ethical",
+      "question": "Why must God's name be pronounced on slaughtered animals?",
+      "target_themes": [
+        "slaughter",
+        "name"
+      ],
+      "target_verses": [
+        "6:118",
+        "6:119",
+        "6:121",
+        "5:3"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "ethical_Slaughter: God's name",
+      "id": "expansion-279"
+    },
+    {
+      "category": "legal_ritual",
+      "question": "Does the Quran specify five or fewer daily prayers, per Khalifa's reading?",
+      "target_themes": [
+        "salat",
+        "prayers"
+      ],
+      "target_verses": [
+        "2:238",
+        "4:103",
+        "11:114",
+        "17:78",
+        "20:130"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "legal_ritual_Salat: five vs three prayers",
+      "id": "expansion-280"
+    },
+    {
+      "category": "legal_ritual",
+      "question": "What does the Quran teach about ablution (wudu)?",
+      "target_themes": [
+        "wudu",
+        "ablution"
+      ],
+      "target_verses": [
+        "5:6"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "legal_ritual_Wudu",
+      "id": "expansion-281"
+    },
+    {
+      "category": "legal_ritual",
+      "question": "When does the Quran allow dry ablution (tayammum)?",
+      "target_themes": [
+        "tayammum"
+      ],
+      "target_verses": [
+        "4:43",
+        "5:6"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "legal_ritual_Tayammum",
+      "id": "expansion-282"
+    },
+    {
+      "category": "legal_ritual",
+      "question": "Who is exempted from fasting in Ramadan per the Quran?",
+      "target_themes": [
+        "fasting",
+        "exempt"
+      ],
+      "target_verses": [
+        "2:184",
+        "2:185"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "legal_ritual_Fasting: exemptions",
+      "id": "expansion-283"
+    },
+    {
+      "category": "legal_ritual",
+      "question": "Who is exempted from hajj?",
+      "target_themes": [
+        "hajj",
+        "exempt"
+      ],
+      "target_verses": [
+        "3:97",
+        "2:196",
+        "2:197"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "legal_ritual_Pilgrimage exemptions",
+      "id": "expansion-284"
+    },
+    {
+      "category": "legal_ritual",
+      "question": "What does the Quran say about jizya from the People of the Book?",
+      "target_themes": [
+        "jizya"
+      ],
+      "target_verses": [
+        "9:29"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "legal_ritual_Jizya",
+      "id": "expansion-285"
+    },
+    {
+      "category": "legal_ritual",
+      "question": "How does the Quran regulate the distribution of spoils of war (8:41)?",
+      "target_themes": [
+        "ghanima",
+        "spoils"
+      ],
+      "target_verses": [
+        "8:1",
+        "8:41",
+        "59:7",
+        "59:8"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "legal_ritual_Spoils of war",
+      "id": "expansion-286"
+    },
+    {
+      "category": "legal_ritual",
+      "question": "What does the Quran instruct about treating captives kindly?",
+      "target_themes": [
+        "captives",
+        "asra"
+      ],
+      "target_verses": [
+        "8:67",
+        "8:68",
+        "8:69",
+        "8:70",
+        "47:4",
+        "76:8"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "legal_ritual_Captives",
+      "id": "expansion-287"
+    },
+    {
+      "category": "legal_ritual",
+      "question": "How does the Quran command honouring treaties?",
+      "target_themes": [
+        "treaty",
+        "ahd"
+      ],
+      "target_verses": [
+        "8:55",
+        "8:56",
+        "8:58",
+        "9:1",
+        "9:4",
+        "9:7",
+        "16:91",
+        "16:92"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "legal_ritual_Treaties",
+      "id": "expansion-288"
+    },
+    {
+      "category": "legal_ritual",
+      "question": "When is fighting permitted according to the Quran?",
+      "target_themes": [
+        "fighting",
+        "qital"
+      ],
+      "target_verses": [
+        "2:190",
+        "2:191",
+        "2:192",
+        "2:193",
+        "2:194",
+        "22:39",
+        "22:40",
+        "60:8",
+        "60:9"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "legal_ritual_War: just cause",
+      "id": "expansion-289"
+    },
+    {
+      "category": "legal_ritual",
+      "question": "Why does the Quran say there is no compulsion in religion (2:256)?",
+      "target_themes": [
+        "compulsion",
+        "religion"
+      ],
+      "target_verses": [
+        "2:256",
+        "10:99",
+        "18:29",
+        "88:21",
+        "88:22"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "legal_ritual_No compulsion",
+      "id": "expansion-290"
+    },
+    {
+      "category": "legal_ritual",
+      "question": "What does the Quran say about witnesses in commercial transactions?",
+      "target_themes": [
+        "witness",
+        "trade"
+      ],
+      "target_verses": [
+        "2:282",
+        "2:283"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "legal_ritual_Witnesses in trade",
+      "id": "expansion-291"
+    },
+    {
+      "category": "legal_ritual",
+      "question": "What does the Quran specify about writing a will (wasiyyah)?",
+      "target_themes": [
+        "will",
+        "wasiyyah"
+      ],
+      "target_verses": [
+        "2:180",
+        "2:181",
+        "2:182",
+        "5:106"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "legal_ritual_Will and testament",
+      "id": "expansion-292"
+    },
+    {
+      "category": "legal_ritual",
+      "question": "What greeting does the Quran teach (salam)?",
+      "target_themes": [
+        "salam",
+        "greeting"
+      ],
+      "target_verses": [
+        "4:86",
+        "6:54",
+        "10:10",
+        "13:24",
+        "24:27",
+        "24:61",
+        "25:75",
+        "33:44",
+        "56:25",
+        "56:26"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "legal_ritual_Greeting peace",
+      "id": "expansion-293"
+    },
+    {
+      "category": "legal_ritual",
+      "question": "What rules of asking permission to enter houses does the Quran prescribe (24:27-29)?",
+      "target_themes": [
+        "permission",
+        "house"
+      ],
+      "target_verses": [
+        "24:27",
+        "24:28",
+        "24:29",
+        "24:58",
+        "24:59"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "legal_ritual_Asking permission",
+      "id": "expansion-294"
+    },
+    {
+      "category": "comparative_religion",
+      "question": "How does the Quran call on dialogue with People of the Book (3:64)?",
+      "target_themes": [
+        "people of book"
+      ],
+      "target_verses": [
+        "3:64",
+        "3:113",
+        "3:114",
+        "3:199",
+        "29:46"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "comparative_religion_People of Book: respect",
+      "id": "expansion-295"
+    },
+    {
+      "category": "comparative_religion",
+      "question": "What does the Quran say in rebuttal of Trinitarian theology?",
+      "target_themes": [
+        "trinity"
+      ],
+      "target_verses": [
+        "4:171",
+        "5:17",
+        "5:72",
+        "5:73",
+        "5:75",
+        "5:116",
+        "5:117",
+        "5:118",
+        "112:1",
+        "112:2",
+        "112:3",
+        "112:4"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "comparative_religion_Trinity rebuttal",
+      "id": "expansion-296"
+    },
+    {
+      "category": "comparative_religion",
+      "question": "Why does the Quran reject the claim that Jesus was crucified (4:157)?",
+      "target_themes": [
+        "crucify",
+        "jesus"
+      ],
+      "target_verses": [
+        "4:157",
+        "4:158"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "comparative_religion_Crucifixion claim",
+      "id": "expansion-297"
+    },
+    {
+      "category": "comparative_religion",
+      "question": "Why does the Quran deny Jesus is the son of God?",
+      "target_themes": [
+        "son",
+        "begotten"
+      ],
+      "target_verses": [
+        "19:88",
+        "19:89",
+        "19:90",
+        "19:91",
+        "19:92",
+        "19:93",
+        "112:3"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "comparative_religion_Sonship denied",
+      "id": "expansion-298"
+    },
+    {
+      "category": "comparative_religion",
+      "question": "What does the Quran say about the covenants God made with the Israelites?",
+      "target_themes": [
+        "covenant",
+        "israel"
+      ],
+      "target_verses": [
+        "2:40",
+        "2:41",
+        "2:63",
+        "2:83",
+        "2:84",
+        "2:93",
+        "5:12",
+        "5:13",
+        "5:70"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "comparative_religion_Israelite covenant",
+      "id": "expansion-299"
+    },
+    {
+      "category": "comparative_religion",
+      "question": "Who are the Sabi'un in 2:62 and 5:69?",
+      "target_themes": [
+        "sabaeans",
+        "sabi"
+      ],
+      "target_verses": [
+        "2:62",
+        "5:69",
+        "22:17"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "comparative_religion_Sabaeans",
+      "id": "expansion-300"
+    },
+    {
+      "category": "comparative_religion",
+      "question": "Who are the Majus (Magians) in 22:17?",
+      "target_themes": [
+        "majus",
+        "magian"
+      ],
+      "target_verses": [
+        "22:17"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "comparative_religion_Magians",
+      "id": "expansion-301"
+    },
+    {
+      "category": "comparative_religion",
+      "question": "How does 3:64 frame the 'common word' between Muslims and People of the Book?",
+      "target_themes": [
+        "common word"
+      ],
+      "target_verses": [
+        "3:64"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "comparative_religion_Common word",
+      "id": "expansion-302"
+    },
+    {
+      "category": "comparative_religion",
+      "question": "How does the Quran describe the Torah as light and guidance?",
+      "target_themes": [
+        "torah",
+        "tawrah"
+      ],
+      "target_verses": [
+        "3:3",
+        "5:43",
+        "5:44",
+        "5:46",
+        "5:48",
+        "6:91",
+        "61:6"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "comparative_religion_Torah authority",
+      "id": "expansion-303"
+    },
+    {
+      "category": "comparative_religion",
+      "question": "How does the Quran describe the Gospel (Injil)?",
+      "target_themes": [
+        "injil",
+        "gospel"
+      ],
+      "target_verses": [
+        "3:3",
+        "5:46",
+        "5:47",
+        "5:66",
+        "5:68",
+        "9:111",
+        "57:27"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "comparative_religion_Gospel authority",
+      "id": "expansion-304"
+    },
+    {
+      "category": "comparative_religion",
+      "question": "What does the Quran mean by 'changing the words' (4:46, 5:13)?",
+      "target_themes": [
+        "tahrif",
+        "corrupt"
+      ],
+      "target_verses": [
+        "2:75",
+        "4:46",
+        "5:13",
+        "5:41"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "comparative_religion_Scripture corruption",
+      "id": "expansion-305"
+    },
+    {
+      "category": "comparative_religion",
+      "question": "What does the Quran say is praiseworthy about the followers of Jesus (5:82)?",
+      "target_themes": [
+        "nasara",
+        "christians"
+      ],
+      "target_verses": [
+        "5:82",
+        "5:83",
+        "57:27"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "comparative_religion_Followers of Jesus",
+      "id": "expansion-306"
+    },
+    {
+      "category": "code19_khalifa",
+      "question": "Explain the 'Over it is 19' verse (74:30) and Khalifa's reading.",
+      "target_themes": [
+        "code-19",
+        "nineteen"
+      ],
+      "target_verses": [
+        "74:30",
+        "74:31"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "code19_khalifa_19 verse: explanation",
+      "id": "expansion-307"
+    },
+    {
+      "category": "code19_khalifa",
+      "question": "What is significant about the 19 letters of the Basmalah in Khalifa's system?",
+      "target_themes": [
+        "basmalah",
+        "code-19"
+      ],
+      "target_verses": [
+        "1:1",
+        "27:30"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "code19_khalifa_Code-19: basmalah",
+      "id": "expansion-308"
+    },
+    {
+      "category": "code19_khalifa",
+      "question": "Why are the first revealed words (96:1-5) Code-19 significant?",
+      "target_themes": [
+        "first revelation",
+        "code-19"
+      ],
+      "target_verses": [
+        "96:1",
+        "96:2",
+        "96:3",
+        "96:4",
+        "96:5"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "code19_khalifa_Sura 96 first revelation",
+      "id": "expansion-309"
+    },
+    {
+      "category": "code19_khalifa",
+      "question": "Introduce the mysterious letters (muqatta`at) and their Code-19 framing.",
+      "target_themes": [
+        "muqattaat"
+      ],
+      "target_verses": [
+        "2:1",
+        "3:1",
+        "7:1",
+        "10:1",
+        "11:1",
+        "12:1",
+        "13:1",
+        "14:1",
+        "15:1",
+        "19:1",
+        "20:1",
+        "26:1",
+        "27:1",
+        "28:1",
+        "29:1",
+        "30:1",
+        "31:1",
+        "32:1",
+        "36:1",
+        "38:1",
+        "40:1",
+        "41:1",
+        "42:1",
+        "43:1",
+        "44:1",
+        "45:1",
+        "46:1",
+        "50:1",
+        "68:1"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "code19_khalifa_Mysterious letters: introduction",
+      "id": "expansion-310"
+    },
+    {
+      "category": "code19_khalifa",
+      "question": "Why does Khalifa identify Surah 110 (Triumph) as the last revealed?",
+      "target_themes": [
+        "110",
+        "last revelation"
+      ],
+      "target_verses": [
+        "110:1",
+        "110:2",
+        "110:3"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "code19_khalifa_Last revelation 110",
+      "id": "expansion-311"
+    },
+    {
+      "category": "code19_khalifa",
+      "question": "Who is the Messenger of the Covenant in Khalifa's reading of 3:81?",
+      "target_themes": [
+        "messenger of covenant"
+      ],
+      "target_verses": [
+        "3:81"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "code19_khalifa_Khalifa: Messenger of Covenant",
+      "id": "expansion-312"
+    },
+    {
+      "category": "code19_khalifa",
+      "question": "What is Khalifa's position on 9:128-129 and why?",
+      "target_themes": [
+        "9:128",
+        "forgery"
+      ],
+      "target_verses": [
+        "9:127"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "code19_khalifa_Khalifa: 9:128-129 status",
+      "id": "expansion-313"
+    },
+    {
+      "category": "code19_khalifa",
+      "question": "On what Quranic basis does Khalifa reject hadith as religious source?",
+      "target_themes": [
+        "hadith",
+        "tradition"
+      ],
+      "target_verses": [
+        "6:38",
+        "6:114",
+        "7:185",
+        "12:111",
+        "31:6",
+        "45:6",
+        "77:50"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "code19_khalifa_Khalifa: hadith rejection",
+      "id": "expansion-314"
+    },
+    {
+      "category": "code19_khalifa",
+      "question": "What does the Quran call the followers of God's religion, per Khalifa?",
+      "target_themes": [
+        "submitters",
+        "muslim"
+      ],
+      "target_verses": [
+        "3:67",
+        "22:78",
+        "27:91",
+        "39:11",
+        "39:12"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "code19_khalifa_Submitters: identity",
+      "id": "expansion-315"
+    },
+    {
+      "category": "code19_khalifa",
+      "question": "How does Khalifa interpret 3:144 as warning against idolizing Muhammad?",
+      "target_themes": [
+        "idolize"
+      ],
+      "target_verses": [
+        "3:144",
+        "39:65"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "code19_khalifa_Idol worship of Muhammad",
+      "id": "expansion-316"
+    },
+    {
+      "category": "code19_khalifa",
+      "question": "How does Khalifa describe the Quran's mathematical 'code' as a sign for non-Arabs?",
+      "target_themes": [
+        "code",
+        "mathematical"
+      ],
+      "target_verses": [
+        "74:30",
+        "74:31",
+        "41:53",
+        "85:21",
+        "85:22"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "code19_khalifa_System of mathematics",
+      "id": "expansion-317"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of the root ع-ب-د (worship, slave, servant) in the Quran.",
+      "target_themes": [
+        "عبد",
+        "worship"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: عبد",
+      "id": "expansion-318"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of the root ر-ح-م (mercy, womb) in the Quran.",
+      "target_themes": [
+        "رحم",
+        "mercy"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: رحم",
+      "id": "expansion-319"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of the root ع-ل-م (knowledge, sign) in the Quran.",
+      "target_themes": [
+        "علم",
+        "knowledge"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ع-ل-م",
+      "id": "expansion-320"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of the root ك-ت-ب (write, book, decree) in the Quran.",
+      "target_themes": [
+        "كتب",
+        "book"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ك-ت-ب",
+      "id": "expansion-321"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of the root ذ-ك-ر (remember, mention) in the Quran.",
+      "target_themes": [
+        "ذكر",
+        "remember"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ذ-ك-ر",
+      "id": "expansion-322"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of the root ر-ز-ق (provide, sustain) in the Quran.",
+      "target_themes": [
+        "رزق",
+        "provision"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ر-ز-ق",
+      "id": "expansion-323"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of the root ح-ك-م (judge, wise) in the Quran.",
+      "target_themes": [
+        "حكم",
+        "wisdom"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ح-ك-م",
+      "id": "expansion-324"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "What does the Quran mean by the verb jahada (root ج-ه-د)?",
+      "target_themes": [
+        "جهد",
+        "jihad"
+      ],
+      "target_verses": [
+        "2:218",
+        "3:142",
+        "9:20",
+        "9:24",
+        "9:88",
+        "22:78",
+        "25:52",
+        "29:69"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ج-ه-د",
+      "id": "expansion-325"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of fitnah (root ف-ت-ن) — trial, persecution.",
+      "target_themes": [
+        "فتن",
+        "fitnah"
+      ],
+      "target_verses": [
+        "2:191",
+        "2:193",
+        "2:217",
+        "8:25",
+        "8:39",
+        "8:73"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ف-ت-ن",
+      "id": "expansion-326"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of zulm (root ظ-ل-م) — injustice, darkness.",
+      "target_themes": [
+        "ظلم",
+        "zulm"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ظ-ل-م",
+      "id": "expansion-327"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the imagery of nur (root ن-و-ر, light) in the Quran.",
+      "target_themes": [
+        "نور",
+        "light"
+      ],
+      "target_verses": [
+        "5:15",
+        "5:16",
+        "5:44",
+        "5:46",
+        "7:157",
+        "9:32",
+        "24:35",
+        "33:43",
+        "39:22",
+        "57:9",
+        "61:8",
+        "64:8",
+        "65:11",
+        "66:8"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ن-و-ر",
+      "id": "expansion-328"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of huda (root ه-د-ي, guidance).",
+      "target_themes": [
+        "هدي",
+        "huda"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ه-د-ي",
+      "id": "expansion-329"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of dalal (root ض-ل-ل, going astray).",
+      "target_themes": [
+        "ضلل",
+        "stray"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ض-ل-ل",
+      "id": "expansion-330"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "What does it mean to attain falah (root ف-ل-ح, success/flourishing)?",
+      "target_themes": [
+        "فلح",
+        "success"
+      ],
+      "target_verses": [
+        "2:5",
+        "3:104",
+        "7:69",
+        "23:1",
+        "30:38",
+        "31:5"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ف-ل-ح",
+      "id": "expansion-331"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of khusr (root خ-س-ر, loss).",
+      "target_themes": [
+        "خسر",
+        "loss"
+      ],
+      "target_verses": [
+        "103:2"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: خ-س-ر",
+      "id": "expansion-332"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of qiyam / qawm (root ق-و-م).",
+      "target_themes": [
+        "قوم",
+        "stand"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ق-و-م",
+      "id": "expansion-333"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of nafs (root ن-ف-س, soul, self).",
+      "target_themes": [
+        "نفس",
+        "soul"
+      ],
+      "target_verses": [
+        "12:53",
+        "75:2",
+        "89:27",
+        "89:28",
+        "89:29",
+        "89:30",
+        "91:7",
+        "91:8",
+        "91:9",
+        "91:10"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ن-ف-س",
+      "id": "expansion-334"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of qalb (root ق-ل-ب, heart) in the Quran.",
+      "target_themes": [
+        "قلب",
+        "heart"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ق-ل-ب",
+      "id": "expansion-335"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of `aql (root ع-ق-ل, intellect).",
+      "target_themes": [
+        "عقل",
+        "intellect"
+      ],
+      "target_verses": [
+        "2:44",
+        "2:73",
+        "2:75",
+        "2:76",
+        "2:164",
+        "2:170",
+        "2:171",
+        "3:65",
+        "3:118",
+        "5:58",
+        "5:103",
+        "6:32",
+        "6:151",
+        "7:169",
+        "8:22",
+        "10:16",
+        "10:42",
+        "10:100",
+        "11:51",
+        "12:2",
+        "12:109",
+        "13:4",
+        "16:12",
+        "16:67",
+        "21:10",
+        "21:67",
+        "22:46",
+        "23:80",
+        "24:61",
+        "25:44",
+        "28:60",
+        "29:35",
+        "29:43",
+        "29:63",
+        "30:24",
+        "30:28",
+        "36:62",
+        "36:68",
+        "37:138",
+        "39:43",
+        "40:67",
+        "43:3",
+        "45:5",
+        "49:4",
+        "57:17",
+        "59:14",
+        "67:10"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ع-ق-ل",
+      "id": "expansion-336"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of ruh (root ر-و-ح, spirit).",
+      "target_themes": [
+        "روح",
+        "spirit"
+      ],
+      "target_verses": [
+        "15:29",
+        "16:2",
+        "17:85",
+        "21:91",
+        "26:193",
+        "32:9",
+        "38:72",
+        "40:15",
+        "42:52",
+        "58:22",
+        "66:12",
+        "70:4",
+        "78:38",
+        "97:4"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ر-و-ح",
+      "id": "expansion-337"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of sam` (root س-م-ع, hearing).",
+      "target_themes": [
+        "سمع",
+        "hearing"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: س-م-ع",
+      "id": "expansion-338"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of basar (root ب-ص-ر, sight, insight).",
+      "target_themes": [
+        "بصر",
+        "sight"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ب-ص-ر",
+      "id": "expansion-339"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of tanzil (root ن-ز-ل, sending down).",
+      "target_themes": [
+        "نزل",
+        "send down"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ن-ز-ل",
+      "id": "expansion-340"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of salam/islam (root س-ل-م).",
+      "target_themes": [
+        "سلم",
+        "peace"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: س-ل-م",
+      "id": "expansion-341"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of kufr (root ك-ف-ر, cover, deny).",
+      "target_themes": [
+        "كفر",
+        "kufr"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ك-ف-ر",
+      "id": "expansion-342"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of shukr (root ش-ك-ر, gratitude).",
+      "target_themes": [
+        "شكر",
+        "gratitude"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ش-ك-ر",
+      "id": "expansion-343"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of tawakkul (root و-ك-ل, reliance).",
+      "target_themes": [
+        "وكل",
+        "tawakkul"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: و-ك-ل",
+      "id": "expansion-344"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of sidq (root ص-د-ق, truth, sincerity, charity).",
+      "target_themes": [
+        "صدق",
+        "truth"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ص-د-ق",
+      "id": "expansion-345"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of haqq (root ح-ق-ق, truth, right).",
+      "target_themes": [
+        "حقق",
+        "haqq"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ح-ق-ق",
+      "id": "expansion-346"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of barakah (root ب-ر-ك, blessing).",
+      "target_themes": [
+        "برك",
+        "blessing"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ب-ر-ك",
+      "id": "expansion-347"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of qudus (root ق-د-س, holy, sanctity).",
+      "target_themes": [
+        "قدس",
+        "holy"
+      ],
+      "target_verses": [
+        "2:30",
+        "2:87",
+        "2:253",
+        "5:21",
+        "5:110",
+        "16:102",
+        "20:12",
+        "21:73",
+        "59:23",
+        "62:1",
+        "79:16"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ق-د-س",
+      "id": "expansion-348"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of sujud (root س-ج-د, prostration).",
+      "target_themes": [
+        "سجد",
+        "prostration"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: س-ج-د",
+      "id": "expansion-349"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of takbir / kibr (root ك-ب-ر).",
+      "target_themes": [
+        "كبر",
+        "takbir"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ك-ب-ر",
+      "id": "expansion-350"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of ghufran (root غ-ف-ر, forgiveness).",
+      "target_themes": [
+        "غفر",
+        "ghufran"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: غ-ف-ر",
+      "id": "expansion-351"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of ni`mah (root ن-ع-م, blessing, favour).",
+      "target_themes": [
+        "نعم",
+        "blessing"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ن-ع-م",
+      "id": "expansion-352"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of `adl (root ع-د-ل, justice).",
+      "target_themes": [
+        "عدل",
+        "justice"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ع-د-ل",
+      "id": "expansion-353"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of qist (root ق-س-ط, equity).",
+      "target_themes": [
+        "قسط",
+        "qist"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: ق-س-ط",
+      "id": "expansion-354"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "Trace the semantic range of amn / iman (root أ-م-ن, security, faith).",
+      "target_themes": [
+        "أمن",
+        "amn"
+      ],
+      "target_verses": [],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Root: أ-م-ن",
+      "id": "expansion-355"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "How does the Quran use the word barakah, especially in 17:1 and 19:31?",
+      "target_themes": [
+        "barakah",
+        "blessed"
+      ],
+      "target_verses": [
+        "17:1",
+        "19:31"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Term: barakah",
+      "id": "expansion-356"
+    },
+    {
+      "category": "linguistic_etymological",
+      "question": "What does the Quran mean by hanif, especially for Abraham?",
+      "target_themes": [
+        "hanif"
+      ],
+      "target_verses": [
+        "3:67",
+        "3:95",
+        "4:125",
+        "6:79",
+        "6:161",
+        "10:105",
+        "16:120",
+        "16:123",
+        "22:31",
+        "30:30",
+        "98:5"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "linguistic_etymological_Term: hanif",
+      "id": "expansion-357"
+    },
+    {
+      "category": "practical_contemporary",
+      "question": "How does the Quran model decision-making by consultation (shura)?",
+      "target_themes": [
+        "shura",
+        "consultation"
+      ],
+      "target_verses": [
+        "3:159",
+        "42:38"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "practical_contemporary_Decision making: shura",
+      "id": "expansion-358"
+    },
+    {
+      "category": "practical_contemporary",
+      "question": "What does the Quran prescribe for anxiety and unease of heart?",
+      "target_themes": [
+        "dhikr",
+        "rest"
+      ],
+      "target_verses": [
+        "13:28",
+        "20:124",
+        "2:152"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "practical_contemporary_Anxiety: remembrance",
+      "id": "expansion-359"
+    },
+    {
+      "category": "practical_contemporary",
+      "question": "How does the Quran respond to worry about provision (rizq)?",
+      "target_themes": [
+        "rizq",
+        "sustenance"
+      ],
+      "target_verses": [
+        "11:6",
+        "29:60",
+        "30:40",
+        "65:2",
+        "65:3",
+        "67:21"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "practical_contemporary_Provision worry",
+      "id": "expansion-360"
+    },
+    {
+      "category": "practical_contemporary",
+      "question": "What hope does the Quran give those who feel hopeless?",
+      "target_themes": [
+        "hope",
+        "despair"
+      ],
+      "target_verses": [
+        "12:87",
+        "15:56",
+        "39:53",
+        "94:5",
+        "94:6"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "practical_contemporary_Hopelessness",
+      "id": "expansion-361"
+    },
+    {
+      "category": "practical_contemporary",
+      "question": "Does the Quran teach anything about the urgency of time (asr)?",
+      "target_themes": [
+        "asr",
+        "time"
+      ],
+      "target_verses": [
+        "103:1",
+        "103:2",
+        "103:3"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "practical_contemporary_Time management",
+      "id": "expansion-362"
+    },
+    {
+      "category": "practical_contemporary",
+      "question": "What does the Quran teach about sleep and rest?",
+      "target_themes": [
+        "sleep",
+        "rest"
+      ],
+      "target_verses": [
+        "25:47",
+        "30:23",
+        "39:42",
+        "78:9"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "practical_contemporary_Sleep as sign",
+      "id": "expansion-363"
+    },
+    {
+      "category": "practical_contemporary",
+      "question": "What guidance does the Quran offer for travel and journeys?",
+      "target_themes": [
+        "travel",
+        "safar"
+      ],
+      "target_verses": [
+        "2:184",
+        "2:283",
+        "4:43",
+        "4:101",
+        "5:6"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "practical_contemporary_Travel etiquette",
+      "id": "expansion-364"
+    },
+    {
+      "category": "practical_contemporary",
+      "question": "What manners of eating and drinking does the Quran teach?",
+      "target_themes": [
+        "eat",
+        "drink"
+      ],
+      "target_verses": [
+        "2:172",
+        "2:173",
+        "5:88",
+        "7:31",
+        "20:81"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "practical_contemporary_Eating manners",
+      "id": "expansion-365"
+    },
+    {
+      "category": "practical_contemporary",
+      "question": "What does the Quran teach about how to prioritize spending?",
+      "target_themes": [
+        "spending",
+        "infaq"
+      ],
+      "target_verses": [
+        "2:215",
+        "2:219",
+        "2:267",
+        "9:60"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "practical_contemporary_Wealth: priorities",
+      "id": "expansion-366"
+    },
+    {
+      "category": "practical_contemporary",
+      "question": "What qualities make a just leader, per the Quran?",
+      "target_themes": [
+        "leader",
+        "just"
+      ],
+      "target_verses": [
+        "4:58",
+        "4:59",
+        "5:8",
+        "21:73",
+        "32:24"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "practical_contemporary_Leadership",
+      "id": "expansion-367"
+    },
+    {
+      "category": "practical_contemporary",
+      "question": "How does the Quran teach reconciling between disputing parties?",
+      "target_themes": [
+        "islah",
+        "reconcile"
+      ],
+      "target_verses": [
+        "4:35",
+        "4:114",
+        "49:9",
+        "49:10"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "practical_contemporary_Conflict resolution",
+      "id": "expansion-368"
+    },
+    {
+      "category": "practical_contemporary",
+      "question": "What does the Quran say about forgiving oneself after sin?",
+      "target_themes": [
+        "sin",
+        "forgive self"
+      ],
+      "target_verses": [
+        "12:53",
+        "39:53",
+        "4:110"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "practical_contemporary_Forgiveness of self",
+      "id": "expansion-369"
+    },
+    {
+      "category": "practical_contemporary",
+      "question": "How does the Quran encourage seeking knowledge?",
+      "target_themes": [
+        "knowledge",
+        "ilm"
+      ],
+      "target_verses": [
+        "20:114",
+        "35:28",
+        "39:9",
+        "58:11",
+        "96:1",
+        "96:2",
+        "96:3",
+        "96:4",
+        "96:5"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "practical_contemporary_Knowledge seeking",
+      "id": "expansion-370"
+    },
+    {
+      "category": "practical_contemporary",
+      "question": "How does the Quran call on humans to reflect on creation?",
+      "target_themes": [
+        "reflect",
+        "tafakkur"
+      ],
+      "target_verses": [
+        "3:190",
+        "3:191",
+        "16:11",
+        "16:12",
+        "16:69",
+        "30:8"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "practical_contemporary_Reflection on creation",
+      "id": "expansion-371"
+    },
+    {
+      "category": "practical_contemporary",
+      "question": "What specific guidance does 17:23-24 give about aged parents?",
+      "target_themes": [
+        "parents",
+        "elderly"
+      ],
+      "target_verses": [
+        "17:23",
+        "17:24"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "practical_contemporary_Aging parents",
+      "id": "expansion-372"
+    },
+    {
+      "category": "practical_contemporary",
+      "question": "How does the Quran teach kindness to one's children?",
+      "target_themes": [
+        "children",
+        "kind"
+      ],
+      "target_verses": [
+        "6:151",
+        "17:31",
+        "60:12"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "practical_contemporary_Children: kindness",
+      "id": "expansion-373"
+    },
+    {
+      "category": "practical_contemporary",
+      "question": "Why does the Quran condemn killing children for fear of poverty?",
+      "target_themes": [
+        "children",
+        "poverty"
+      ],
+      "target_verses": [
+        "6:151",
+        "17:31",
+        "60:12",
+        "81:8",
+        "81:9"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "practical_contemporary_Killing children for poverty",
+      "id": "expansion-374"
+    },
+    {
+      "category": "practical_contemporary",
+      "question": "What does the Quran say about pre-Islamic Arab female infanticide?",
+      "target_themes": [
+        "female",
+        "infanticide"
+      ],
+      "target_verses": [
+        "16:58",
+        "16:59",
+        "81:8",
+        "81:9"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "practical_contemporary_Female infanticide",
+      "id": "expansion-375"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "What does the Quran mean by creation in six days?",
+      "target_themes": [
+        "six days",
+        "creation"
+      ],
+      "target_verses": [
+        "7:54",
+        "10:3",
+        "11:7",
+        "32:4",
+        "41:9",
+        "41:10",
+        "41:11",
+        "41:12",
+        "50:38",
+        "57:4"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Creation: six days",
+      "id": "expansion-376"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "What is the meaning of Adam being God's viceregent (khalifa) on earth?",
+      "target_themes": [
+        "khalifa",
+        "adam"
+      ],
+      "target_verses": [
+        "2:30",
+        "2:31",
+        "2:32",
+        "2:33",
+        "2:34",
+        "6:165",
+        "35:39"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Adam: viceregency",
+      "id": "expansion-377"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "Why did Iblis refuse to prostrate, according to the Quran?",
+      "target_themes": [
+        "iblis",
+        "satan"
+      ],
+      "target_verses": [
+        "2:34",
+        "7:11",
+        "7:12",
+        "7:13",
+        "7:14",
+        "7:15",
+        "7:16",
+        "7:17",
+        "15:28",
+        "15:29",
+        "15:30",
+        "15:31",
+        "15:32",
+        "15:33",
+        "15:34",
+        "15:35",
+        "15:36",
+        "15:37",
+        "15:38",
+        "15:39",
+        "15:40",
+        "18:50",
+        "38:71",
+        "38:72",
+        "38:73",
+        "38:74",
+        "38:75",
+        "38:76",
+        "38:77",
+        "38:78"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Iblis: refusal",
+      "id": "expansion-378"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "What is the Garden where Adam and Eve lived, per the Quran?",
+      "target_themes": [
+        "garden",
+        "eden"
+      ],
+      "target_verses": [
+        "2:35",
+        "2:36",
+        "7:19",
+        "7:20",
+        "7:21",
+        "7:22",
+        "7:23",
+        "7:24",
+        "7:25",
+        "20:117",
+        "20:118",
+        "20:119",
+        "20:120",
+        "20:121",
+        "20:122",
+        "20:123"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Gardens of Eden",
+      "id": "expansion-379"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "What signs of the Hour does the Quran mention?",
+      "target_themes": [
+        "hour",
+        "qiyamah"
+      ],
+      "target_verses": [
+        "6:158",
+        "7:187",
+        "16:77",
+        "21:96",
+        "21:97",
+        "27:82",
+        "33:63",
+        "47:18",
+        "54:1"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_The Hour: signs",
+      "id": "expansion-380"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "What is the Beast of the earth (dabbat al-ard, 27:82)?",
+      "target_themes": [
+        "beast"
+      ],
+      "target_verses": [
+        "27:82"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Beast of the earth",
+      "id": "expansion-381"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "Who are Yajuj and Majuj (Gog and Magog) in the Quran?",
+      "target_themes": [
+        "yajuj",
+        "majuj"
+      ],
+      "target_verses": [
+        "18:94",
+        "18:95",
+        "18:96",
+        "18:97",
+        "18:98",
+        "21:96",
+        "21:97"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Gog and Magog",
+      "id": "expansion-382"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "What does the Quran narrate about Dhul-Qarnayn?",
+      "target_themes": [
+        "dhul-qarnayn"
+      ],
+      "target_verses": [
+        "18:83",
+        "18:84",
+        "18:85",
+        "18:86",
+        "18:87",
+        "18:88",
+        "18:89",
+        "18:90",
+        "18:91",
+        "18:92",
+        "18:93",
+        "18:94",
+        "18:95",
+        "18:96",
+        "18:97",
+        "18:98"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Dhul-Qarnayn",
+      "id": "expansion-383"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "What is the story of the Sleepers of the Cave (Ashab al-Kahf)?",
+      "target_themes": [
+        "cave",
+        "kahf"
+      ],
+      "target_verses": [
+        "18:9",
+        "18:10",
+        "18:11",
+        "18:12",
+        "18:13",
+        "18:14",
+        "18:15",
+        "18:16",
+        "18:17",
+        "18:18",
+        "18:19",
+        "18:20",
+        "18:21",
+        "18:22",
+        "18:25",
+        "18:26"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Cave companions",
+      "id": "expansion-384"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "What does the Quran teach through Moses' encounter with Khidr (18:60-82)?",
+      "target_themes": [
+        "khidr",
+        "moses"
+      ],
+      "target_verses": [
+        "18:60",
+        "18:61",
+        "18:62",
+        "18:63",
+        "18:64",
+        "18:65",
+        "18:66",
+        "18:67",
+        "18:68",
+        "18:69",
+        "18:70",
+        "18:71",
+        "18:72",
+        "18:73",
+        "18:74",
+        "18:75",
+        "18:76",
+        "18:77",
+        "18:78",
+        "18:79",
+        "18:80",
+        "18:81",
+        "18:82"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Khidr encounter",
+      "id": "expansion-385"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "What does the Quran say about Muhammad's night journey (isra)?",
+      "target_themes": [
+        "isra",
+        "night journey"
+      ],
+      "target_verses": [
+        "17:1"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Night journey",
+      "id": "expansion-386"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "Does the Quran describe Muhammad's ascension (mi`raj)?",
+      "target_themes": [
+        "miraj",
+        "ascension"
+      ],
+      "target_verses": [
+        "17:1",
+        "53:1",
+        "53:2",
+        "53:3",
+        "53:4",
+        "53:5",
+        "53:6",
+        "53:7",
+        "53:8",
+        "53:9",
+        "53:10",
+        "53:11",
+        "53:12",
+        "53:13",
+        "53:14",
+        "53:15",
+        "53:16",
+        "53:17",
+        "53:18"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Ascension",
+      "id": "expansion-387"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "What does the Quran mean by 'two bows' length' or nearer (53:9)?",
+      "target_themes": [
+        "bow",
+        "qaba"
+      ],
+      "target_verses": [
+        "53:8",
+        "53:9",
+        "53:10"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Two horizons",
+      "id": "expansion-388"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "How does the Quran describe Mary conceiving Jesus?",
+      "target_themes": [
+        "mary",
+        "maryam"
+      ],
+      "target_verses": [
+        "3:42",
+        "3:43",
+        "3:44",
+        "3:45",
+        "3:46",
+        "3:47",
+        "19:16",
+        "19:17",
+        "19:18",
+        "19:19",
+        "19:20",
+        "19:21",
+        "19:22",
+        "19:23",
+        "19:24",
+        "19:25",
+        "19:26",
+        "19:27",
+        "19:28",
+        "19:29",
+        "19:30",
+        "19:31",
+        "19:32",
+        "19:33",
+        "21:91",
+        "66:12"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Mary virgin birth",
+      "id": "expansion-389"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "What does the Quran teach about Jesus not being crucified?",
+      "target_themes": [
+        "jesus",
+        "crucify"
+      ],
+      "target_verses": [
+        "4:157",
+        "4:158",
+        "4:159"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Jesus: not crucified",
+      "id": "expansion-390"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "Does the Quran reference Jesus' second coming?",
+      "target_themes": [
+        "jesus",
+        "return"
+      ],
+      "target_verses": [
+        "43:61"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Jesus second coming",
+      "id": "expansion-391"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "What does the Quran say about the companions in Paradise (hur)?",
+      "target_themes": [
+        "hur",
+        "paradise"
+      ],
+      "target_verses": [
+        "44:54",
+        "52:20",
+        "55:56",
+        "55:72",
+        "56:22",
+        "56:35",
+        "56:36",
+        "56:37",
+        "78:33"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Houris",
+      "id": "expansion-392"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "What rivers does the Quran describe in paradise?",
+      "target_themes": [
+        "river",
+        "paradise"
+      ],
+      "target_verses": [
+        "47:15"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Rivers of paradise",
+      "id": "expansion-393"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "What trees does the Quran mention in paradise (sidrat al-muntaha, tuba)?",
+      "target_themes": [
+        "sidrah",
+        "tuba"
+      ],
+      "target_verses": [
+        "53:14",
+        "53:15",
+        "53:16",
+        "13:29",
+        "56:28",
+        "56:29"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Trees of paradise",
+      "id": "expansion-394"
+    },
+    {
+      "category": "cosmology_metaphysics",
+      "question": "Does the Quran describe levels or names of Hell?",
+      "target_themes": [
+        "hell",
+        "jahannam"
+      ],
+      "target_verses": [
+        "104:4",
+        "104:5",
+        "104:6",
+        "104:7",
+        "104:8",
+        "104:9",
+        "70:15",
+        "70:16",
+        "70:17",
+        "70:18",
+        "70:19",
+        "70:20",
+        "70:21",
+        "70:22",
+        "70:23",
+        "70:24",
+        "70:25",
+        "70:26",
+        "70:27",
+        "70:28"
+      ],
+      "priority_score": 600,
+      "gap_addressed": "cosmology_metaphysics_Hell levels",
+      "id": "expansion-395"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Nuh?",
+      "target_themes": [
+        "Nuh",
+        "lesson"
+      ],
+      "target_verses": [
+        "3:33",
+        "4:163",
+        "6:84",
+        "7:59",
+        "7:69",
+        "9:70"
+      ],
+      "priority_score": 575,
+      "gap_addressed": "prophet_Nuh_lesson_hits_150",
+      "id": "expansion-396"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What are the mysterious letters at the start of Surah 43 and what does the Quran do with them?",
+      "target_themes": [
+        "muqattaat",
+        "Ornaments"
+      ],
+      "target_verses": [
+        "43:1"
+      ],
+      "priority_score": 568,
+      "gap_addressed": "surah_43_muqattaat",
+      "id": "expansion-397"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Nuh and what was their fate?",
+      "target_themes": [
+        "Nuh",
+        "people"
+      ],
+      "target_verses": [
+        "3:33",
+        "4:163",
+        "6:84",
+        "7:59",
+        "7:69",
+        "9:70"
+      ],
+      "priority_score": 550,
+      "gap_addressed": "prophet_Nuh_people_hits_150",
+      "id": "expansion-398"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Nuh's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Nuh",
+        "relationship"
+      ],
+      "target_verses": [
+        "3:33",
+        "4:163",
+        "6:84",
+        "7:59",
+        "7:69",
+        "9:70"
+      ],
+      "priority_score": 550,
+      "gap_addressed": "prophet_Nuh_relationship_hits_150",
+      "id": "expansion-399"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What are the mysterious letters at the start of Surah 46 and what does the Quran do with them?",
+      "target_themes": [
+        "muqattaat",
+        "The Dunes"
+      ],
+      "target_verses": [
+        "46:1"
+      ],
+      "priority_score": 491,
+      "gap_addressed": "surah_46_muqattaat",
+      "id": "expansion-400"
+    },
+    {
+      "category": "surah_themes",
+      "question": "What are the mysterious letters at the start of Surah 15 and what does the Quran do with them?",
+      "target_themes": [
+        "muqattaat",
+        "Al-Hijr Valley"
+      ],
+      "target_verses": [
+        "15:1"
+      ],
+      "priority_score": 487,
+      "gap_addressed": "surah_15_muqattaat",
+      "id": "expansion-401"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 72:20 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "72:20"
+      ],
+      "priority_score": 483,
+      "gap_addressed": "iconic_72:20_deg_83",
+      "id": "expansion-402"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 2:213 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "2:213"
+      ],
+      "priority_score": 465,
+      "gap_addressed": "iconic_2:213_deg_65",
+      "id": "expansion-403"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 24:64 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "24:64"
+      ],
+      "priority_score": 462,
+      "gap_addressed": "iconic_24:64_deg_62",
+      "id": "expansion-404"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 23:59 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "23:59"
+      ],
+      "priority_score": 460,
+      "gap_addressed": "iconic_23:59_deg_60",
+      "id": "expansion-405"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 64:4 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "64:4"
+      ],
+      "priority_score": 457,
+      "gap_addressed": "iconic_64:4_deg_57",
+      "id": "expansion-406"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 3:29 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "3:29"
+      ],
+      "priority_score": 456,
+      "gap_addressed": "iconic_3:29_deg_56",
+      "id": "expansion-407"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 21:110 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "21:110"
+      ],
+      "priority_score": 453,
+      "gap_addressed": "iconic_21:110_deg_53",
+      "id": "expansion-408"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 74:43 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "74:43"
+      ],
+      "priority_score": 452,
+      "gap_addressed": "iconic_74:43_deg_52",
+      "id": "expansion-409"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 28:62 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "28:62"
+      ],
+      "priority_score": 452,
+      "gap_addressed": "iconic_28:62_deg_52",
+      "id": "expansion-410"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 70:23 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "70:23"
+      ],
+      "priority_score": 451,
+      "gap_addressed": "iconic_70:23_deg_51",
+      "id": "expansion-411"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 2:103 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "2:103"
+      ],
+      "priority_score": 451,
+      "gap_addressed": "iconic_2:103_deg_51",
+      "id": "expansion-412"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 23:9 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "23:9"
+      ],
+      "priority_score": 451,
+      "gap_addressed": "iconic_23:9_deg_51",
+      "id": "expansion-413"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 65:11 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "65:11"
+      ],
+      "priority_score": 450,
+      "gap_addressed": "iconic_65:11_deg_50",
+      "id": "expansion-414"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 85:20 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "85:20"
+      ],
+      "priority_score": 450,
+      "gap_addressed": "iconic_85:20_deg_50",
+      "id": "expansion-415"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 7:197 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "7:197"
+      ],
+      "priority_score": 448,
+      "gap_addressed": "iconic_7:197_deg_48",
+      "id": "expansion-416"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 40:65 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "40:65"
+      ],
+      "priority_score": 447,
+      "gap_addressed": "iconic_40:65_deg_47",
+      "id": "expansion-417"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 10:63 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "10:63"
+      ],
+      "priority_score": 447,
+      "gap_addressed": "iconic_10:63_deg_47",
+      "id": "expansion-418"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 17:9 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "17:9"
+      ],
+      "priority_score": 447,
+      "gap_addressed": "iconic_17:9_deg_47",
+      "id": "expansion-419"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 13:27 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "13:27"
+      ],
+      "priority_score": 447,
+      "gap_addressed": "iconic_13:27_deg_47",
+      "id": "expansion-420"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 16:86 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "16:86"
+      ],
+      "priority_score": 447,
+      "gap_addressed": "iconic_16:86_deg_47",
+      "id": "expansion-421"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 73:20 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "73:20"
+      ],
+      "priority_score": 446,
+      "gap_addressed": "iconic_73:20_deg_46",
+      "id": "expansion-422"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 16:20 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "16:20"
+      ],
+      "priority_score": 445,
+      "gap_addressed": "iconic_16:20_deg_45",
+      "id": "expansion-423"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 12:98 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "12:98"
+      ],
+      "priority_score": 445,
+      "gap_addressed": "iconic_12:98_deg_45",
+      "id": "expansion-424"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 72:2 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "72:2"
+      ],
+      "priority_score": 445,
+      "gap_addressed": "iconic_72:2_deg_45",
+      "id": "expansion-425"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 84:25 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "84:25"
+      ],
+      "priority_score": 444,
+      "gap_addressed": "iconic_84:25_deg_44",
+      "id": "expansion-426"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 6:100 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "6:100"
+      ],
+      "priority_score": 444,
+      "gap_addressed": "iconic_6:100_deg_44",
+      "id": "expansion-427"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 6:117 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "6:117"
+      ],
+      "priority_score": 443,
+      "gap_addressed": "iconic_6:117_deg_43",
+      "id": "expansion-428"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 8:3 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "8:3"
+      ],
+      "priority_score": 443,
+      "gap_addressed": "iconic_8:3_deg_43",
+      "id": "expansion-429"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 29:9 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "29:9"
+      ],
+      "priority_score": 443,
+      "gap_addressed": "iconic_29:9_deg_43",
+      "id": "expansion-430"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 23:51 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "23:51"
+      ],
+      "priority_score": 443,
+      "gap_addressed": "iconic_23:51_deg_43",
+      "id": "expansion-431"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 37:118 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "37:118"
+      ],
+      "priority_score": 442,
+      "gap_addressed": "iconic_37:118_deg_42",
+      "id": "expansion-432"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 6:99 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "6:99"
+      ],
+      "priority_score": 442,
+      "gap_addressed": "iconic_6:99_deg_42",
+      "id": "expansion-433"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 5:86 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "5:86"
+      ],
+      "priority_score": 442,
+      "gap_addressed": "iconic_5:86_deg_42",
+      "id": "expansion-434"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 80:18 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "80:18"
+      ],
+      "priority_score": 442,
+      "gap_addressed": "iconic_80:18_deg_42",
+      "id": "expansion-435"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 45:37 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "45:37"
+      ],
+      "priority_score": 442,
+      "gap_addressed": "iconic_45:37_deg_42",
+      "id": "expansion-436"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 2:277 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "2:277"
+      ],
+      "priority_score": 442,
+      "gap_addressed": "iconic_2:277_deg_42",
+      "id": "expansion-437"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 64:1 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "64:1"
+      ],
+      "priority_score": 442,
+      "gap_addressed": "iconic_64:1_deg_42",
+      "id": "expansion-438"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 24:56 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "24:56"
+      ],
+      "priority_score": 442,
+      "gap_addressed": "iconic_24:56_deg_42",
+      "id": "expansion-439"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 3:109 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "3:109"
+      ],
+      "priority_score": 442,
+      "gap_addressed": "iconic_3:109_deg_42",
+      "id": "expansion-440"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 41:8 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "41:8"
+      ],
+      "priority_score": 442,
+      "gap_addressed": "iconic_41:8_deg_42",
+      "id": "expansion-441"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 3:116 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "3:116"
+      ],
+      "priority_score": 442,
+      "gap_addressed": "iconic_3:116_deg_42",
+      "id": "expansion-442"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 68:7 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "68:7"
+      ],
+      "priority_score": 442,
+      "gap_addressed": "iconic_68:7_deg_42",
+      "id": "expansion-443"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 2:177 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "2:177"
+      ],
+      "priority_score": 441,
+      "gap_addressed": "iconic_2:177_deg_41",
+      "id": "expansion-444"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 10:55 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "10:55"
+      ],
+      "priority_score": 441,
+      "gap_addressed": "iconic_10:55_deg_41",
+      "id": "expansion-445"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 80:12 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "80:12"
+      ],
+      "priority_score": 441,
+      "gap_addressed": "iconic_80:12_deg_41",
+      "id": "expansion-446"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 1:6 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "1:6"
+      ],
+      "priority_score": 441,
+      "gap_addressed": "iconic_1:6_deg_41",
+      "id": "expansion-447"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 29:17 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "29:17"
+      ],
+      "priority_score": 441,
+      "gap_addressed": "iconic_29:17_deg_41",
+      "id": "expansion-448"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 32:19 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "32:19"
+      ],
+      "priority_score": 441,
+      "gap_addressed": "iconic_32:19_deg_41",
+      "id": "expansion-449"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 4:68 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "4:68"
+      ],
+      "priority_score": 441,
+      "gap_addressed": "iconic_4:68_deg_41",
+      "id": "expansion-450"
+    },
+    {
+      "category": "iconic_verses",
+      "question": "Explain verse 34:37 and its place in the Quran.",
+      "target_themes": [
+        "verse_deep_dive"
+      ],
+      "target_verses": [
+        "34:37"
+      ],
+      "priority_score": 441,
+      "gap_addressed": "iconic_34:37_deg_41",
+      "id": "expansion-451"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Ibrahim as the Quran narrates it.",
+      "target_themes": [
+        "Ibrahim",
+        "story"
+      ],
+      "target_verses": [
+        "2:124",
+        "2:125",
+        "2:126",
+        "2:127",
+        "2:130",
+        "2:132"
+      ],
+      "priority_score": 387,
+      "gap_addressed": "prophet_Ibrahim_story_hits_221",
+      "id": "expansion-452"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Ibrahim?",
+      "target_themes": [
+        "Ibrahim",
+        "lesson"
+      ],
+      "target_verses": [
+        "2:124",
+        "2:125",
+        "2:126",
+        "2:127",
+        "2:130",
+        "2:132"
+      ],
+      "priority_score": 362,
+      "gap_addressed": "prophet_Ibrahim_lesson_hits_221",
+      "id": "expansion-453"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Ibrahim and what was their fate?",
+      "target_themes": [
+        "Ibrahim",
+        "people"
+      ],
+      "target_verses": [
+        "2:124",
+        "2:125",
+        "2:126",
+        "2:127",
+        "2:130",
+        "2:132"
+      ],
+      "priority_score": 337,
+      "gap_addressed": "prophet_Ibrahim_people_hits_221",
+      "id": "expansion-454"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Ibrahim's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Ibrahim",
+        "relationship"
+      ],
+      "target_verses": [
+        "2:124",
+        "2:125",
+        "2:126",
+        "2:127",
+        "2:130",
+        "2:132"
+      ],
+      "priority_score": 337,
+      "gap_addressed": "prophet_Ibrahim_relationship_hits_221",
+      "id": "expansion-455"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Yaqub as the Quran narrates it.",
+      "target_themes": [
+        "Yaqub",
+        "story"
+      ],
+      "target_verses": [],
+      "priority_score": 336,
+      "gap_addressed": "prophet_Yaqub_story_hits_238",
+      "id": "expansion-456"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Yaqub?",
+      "target_themes": [
+        "Yaqub",
+        "lesson"
+      ],
+      "target_verses": [],
+      "priority_score": 311,
+      "gap_addressed": "prophet_Yaqub_lesson_hits_238",
+      "id": "expansion-457"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Yaqub and what was their fate?",
+      "target_themes": [
+        "Yaqub",
+        "people"
+      ],
+      "target_verses": [],
+      "priority_score": 286,
+      "gap_addressed": "prophet_Yaqub_people_hits_238",
+      "id": "expansion-458"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Yaqub's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Yaqub",
+        "relationship"
+      ],
+      "target_verses": [],
+      "priority_score": 286,
+      "gap_addressed": "prophet_Yaqub_relationship_hits_238",
+      "id": "expansion-459"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Musa as the Quran narrates it.",
+      "target_themes": [
+        "Musa",
+        "story"
+      ],
+      "target_verses": [
+        "114:6"
+      ],
+      "priority_score": 63,
+      "gap_addressed": "prophet_Musa_story_hits_329",
+      "id": "expansion-460"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Lut as the Quran narrates it.",
+      "target_themes": [
+        "Lut",
+        "story"
+      ],
+      "target_verses": [
+        "2:233",
+        "3:54",
+        "3:75",
+        "3:186",
+        "4:5",
+        "4:19"
+      ],
+      "priority_score": 50,
+      "gap_addressed": "prophet_Lut_story_hits_591",
+      "id": "expansion-461"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Isa as the Quran narrates it.",
+      "target_themes": [
+        "Isa",
+        "story"
+      ],
+      "target_verses": [
+        "2:87",
+        "2:136",
+        "2:253",
+        "3:45",
+        "3:52",
+        "3:55"
+      ],
+      "priority_score": 50,
+      "gap_addressed": "prophet_Isa_story_hits_387",
+      "id": "expansion-462"
+    },
+    {
+      "category": "prophets",
+      "question": "Tell me the story of Muhammad as the Quran narrates it.",
+      "target_themes": [
+        "Muhammad",
+        "story"
+      ],
+      "target_verses": [
+        "2:285",
+        "3:121",
+        "3:144",
+        "7:157",
+        "8:43",
+        "10:19"
+      ],
+      "priority_score": 50,
+      "gap_addressed": "prophet_Muhammad_story_hits_596",
+      "id": "expansion-463"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Musa?",
+      "target_themes": [
+        "Musa",
+        "lesson"
+      ],
+      "target_verses": [
+        "114:6"
+      ],
+      "priority_score": 38,
+      "gap_addressed": "prophet_Musa_lesson_hits_329",
+      "id": "expansion-464"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Lut?",
+      "target_themes": [
+        "Lut",
+        "lesson"
+      ],
+      "target_verses": [
+        "2:233",
+        "3:54",
+        "3:75",
+        "3:186",
+        "4:5",
+        "4:19"
+      ],
+      "priority_score": 25,
+      "gap_addressed": "prophet_Lut_lesson_hits_591",
+      "id": "expansion-465"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Isa?",
+      "target_themes": [
+        "Isa",
+        "lesson"
+      ],
+      "target_verses": [
+        "2:87",
+        "2:136",
+        "2:253",
+        "3:45",
+        "3:52",
+        "3:55"
+      ],
+      "priority_score": 25,
+      "gap_addressed": "prophet_Isa_lesson_hits_387",
+      "id": "expansion-466"
+    },
+    {
+      "category": "prophets",
+      "question": "What lessons does the Quran draw from the story of Muhammad?",
+      "target_themes": [
+        "Muhammad",
+        "lesson"
+      ],
+      "target_verses": [
+        "2:285",
+        "3:121",
+        "3:144",
+        "7:157",
+        "8:43",
+        "10:19"
+      ],
+      "priority_score": 25,
+      "gap_addressed": "prophet_Muhammad_lesson_hits_596",
+      "id": "expansion-467"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Musa and what was their fate?",
+      "target_themes": [
+        "Musa",
+        "people"
+      ],
+      "target_verses": [
+        "114:6"
+      ],
+      "priority_score": 13,
+      "gap_addressed": "prophet_Musa_people_hits_329",
+      "id": "expansion-468"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Musa's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Musa",
+        "relationship"
+      ],
+      "target_verses": [
+        "114:6"
+      ],
+      "priority_score": 13,
+      "gap_addressed": "prophet_Musa_relationship_hits_329",
+      "id": "expansion-469"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Lut and what was their fate?",
+      "target_themes": [
+        "Lut",
+        "people"
+      ],
+      "target_verses": [
+        "2:233",
+        "3:54",
+        "3:75",
+        "3:186",
+        "4:5",
+        "4:19"
+      ],
+      "priority_score": 0,
+      "gap_addressed": "prophet_Lut_people_hits_591",
+      "id": "expansion-470"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Lut's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Lut",
+        "relationship"
+      ],
+      "target_verses": [
+        "2:233",
+        "3:54",
+        "3:75",
+        "3:186",
+        "4:5",
+        "4:19"
+      ],
+      "priority_score": 0,
+      "gap_addressed": "prophet_Lut_relationship_hits_591",
+      "id": "expansion-471"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Isa and what was their fate?",
+      "target_themes": [
+        "Isa",
+        "people"
+      ],
+      "target_verses": [
+        "2:87",
+        "2:136",
+        "2:253",
+        "3:45",
+        "3:52",
+        "3:55"
+      ],
+      "priority_score": 0,
+      "gap_addressed": "prophet_Isa_people_hits_387",
+      "id": "expansion-472"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Isa's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Isa",
+        "relationship"
+      ],
+      "target_verses": [
+        "2:87",
+        "2:136",
+        "2:253",
+        "3:45",
+        "3:52",
+        "3:55"
+      ],
+      "priority_score": 0,
+      "gap_addressed": "prophet_Isa_relationship_hits_387",
+      "id": "expansion-473"
+    },
+    {
+      "category": "prophets",
+      "question": "Who were the people of Muhammad and what was their fate?",
+      "target_themes": [
+        "Muhammad",
+        "people"
+      ],
+      "target_verses": [
+        "2:285",
+        "3:121",
+        "3:144",
+        "7:157",
+        "8:43",
+        "10:19"
+      ],
+      "priority_score": 0,
+      "gap_addressed": "prophet_Muhammad_people_hits_596",
+      "id": "expansion-474"
+    },
+    {
+      "category": "prophets",
+      "question": "How is Muhammad's relationship with God portrayed in the Quran?",
+      "target_themes": [
+        "Muhammad",
+        "relationship"
+      ],
+      "target_verses": [
+        "2:285",
+        "3:121",
+        "3:144",
+        "7:157",
+        "8:43",
+        "10:19"
+      ],
+      "priority_score": 0,
+      "gap_addressed": "prophet_Muhammad_relationship_hits_596",
+      "id": "expansion-475"
+    }
+  ],
+  "reserve": [],
+  "total_candidates": 475
+}
