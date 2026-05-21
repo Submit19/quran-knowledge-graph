@@ -118,3 +118,4 @@ data/answer_cache.*.backup.json
 data/research/cache_*audit*.json
 data/research/cache_*coverage*.json
 launch_free.bat
+.regen_tmp/
