@@ -1,0 +1,7170 @@
+{
+  "generated_at": "2026-05-21",
+  "cache_total_entries": 1612,
+  "surahs": [
+    {
+      "number": 1,
+      "name": "The Key",
+      "rev_loc": "Meccan",
+      "rev_order": 5,
+      "mysterious_letters": null,
+      "verses_count": 7,
+      "cache_hits": 163
+    },
+    {
+      "number": 2,
+      "name": "The Heifer",
+      "rev_loc": "Medinan",
+      "rev_order": 87,
+      "mysterious_letters": "ALM",
+      "verses_count": 286,
+      "cache_hits": 7623
+    },
+    {
+      "number": 3,
+      "name": "The Amramites",
+      "rev_loc": "Medinan",
+      "rev_order": 89,
+      "mysterious_letters": "ALM",
+      "verses_count": 200,
+      "cache_hits": 3319
+    },
+    {
+      "number": 4,
+      "name": "Women",
+      "rev_loc": "Medinan",
+      "rev_order": 92,
+      "mysterious_letters": null,
+      "verses_count": 176,
+      "cache_hits": 3181
+    },
+    {
+      "number": 5,
+      "name": "The Feast",
+      "rev_loc": "Medinan",
+      "rev_order": 112,
+      "mysterious_letters": null,
+      "verses_count": 120,
+      "cache_hits": 2815
+    },
+    {
+      "number": 6,
+      "name": "Livestock",
+      "rev_loc": "Meccan",
+      "rev_order": 55,
+      "mysterious_letters": null,
+      "verses_count": 165,
+      "cache_hits": 3514
+    },
+    {
+      "number": 7,
+      "name": "The Purgatory",
+      "rev_loc": "Meccan",
+      "rev_order": 39,
+      "mysterious_letters": "ALMS",
+      "verses_count": 206,
+      "cache_hits": 2546
+    },
+    {
+      "number": 8,
+      "name": "The Spoils of War",
+      "rev_loc": "Medinan",
+      "rev_order": 88,
+      "mysterious_letters": null,
+      "verses_count": 75,
+      "cache_hits": 1104
+    },
+    {
+      "number": 9,
+      "name": "Ultimatum",
+      "rev_loc": "Medinan",
+      "rev_order": 113,
+      "mysterious_letters": null,
+      "verses_count": 127,
+      "cache_hits": 3191
+    },
+    {
+      "number": 10,
+      "name": "Jonah",
+      "rev_loc": "Meccan",
+      "rev_order": 51,
+      "mysterious_letters": "ALR",
+      "verses_count": 109,
+      "cache_hits": 1384
+    },
+    {
+      "number": 11,
+      "name": "Hood",
+      "rev_loc": "Meccan",
+      "rev_order": 52,
+      "mysterious_letters": "ALR",
+      "verses_count": 123,
+      "cache_hits": 690
+    },
+    {
+      "number": 12,
+      "name": "Joseph",
+      "rev_loc": "Meccan",
+      "rev_order": 53,
+      "mysterious_letters": "ALR",
+      "verses_count": 111,
+      "cache_hits": 912
+    },
+    {
+      "number": 13,
+      "name": "Thunder",
+      "rev_loc": "Medinan",
+      "rev_order": 96,
+      "mysterious_letters": "ALMR",
+      "verses_count": 43,
+      "cache_hits": 510
+    },
+    {
+      "number": 14,
+      "name": "Abraham",
+      "rev_loc": "Meccan",
+      "rev_order": 72,
+      "mysterious_letters": "ALR",
+      "verses_count": 52,
+      "cache_hits": 667
+    },
+    {
+      "number": 15,
+      "name": "Al-Hijr Valley",
+      "rev_loc": "Meccan",
+      "rev_order": 54,
+      "mysterious_letters": "ALR",
+      "verses_count": 99,
+      "cache_hits": 463
+    },
+    {
+      "number": 16,
+      "name": "The Bee",
+      "rev_loc": "Meccan",
+      "rev_order": 70,
+      "mysterious_letters": null,
+      "verses_count": 128,
+      "cache_hits": 1438
+    },
+    {
+      "number": 17,
+      "name": "The Children of Israel",
+      "rev_loc": "Meccan",
+      "rev_order": 50,
+      "mysterious_letters": null,
+      "verses_count": 111,
+      "cache_hits": 1268
+    },
+    {
+      "number": 18,
+      "name": "The Cave",
+      "rev_loc": "Meccan",
+      "rev_order": 69,
+      "mysterious_letters": null,
+      "verses_count": 110,
+      "cache_hits": 871
+    },
+    {
+      "number": 19,
+      "name": "Mary",
+      "rev_loc": "Meccan",
+      "rev_order": 44,
+      "mysterious_letters": "KhYAinS",
+      "verses_count": 98,
+      "cache_hits": 531
+    },
+    {
+      "number": 20,
+      "name": "T.H.",
+      "rev_loc": "Meccan",
+      "rev_order": 45,
+      "mysterious_letters": "Th",
+      "verses_count": 135,
+      "cache_hits": 793
+    },
+    {
+      "number": 21,
+      "name": "The Prophets",
+      "rev_loc": "Meccan",
+      "rev_order": 73,
+      "mysterious_letters": null,
+      "verses_count": 112,
+      "cache_hits": 769
+    },
+    {
+      "number": 22,
+      "name": "Pilgrimage",
+      "rev_loc": "Medinan",
+      "rev_order": 103,
+      "mysterious_letters": null,
+      "verses_count": 78,
+      "cache_hits": 1096
+    },
+    {
+      "number": 23,
+      "name": "The Believers",
+      "rev_loc": "Meccan",
+      "rev_order": 74,
+      "mysterious_letters": null,
+      "verses_count": 118,
+      "cache_hits": 704
+    },
+    {
+      "number": 24,
+      "name": "Light",
+      "rev_loc": "Medinan",
+      "rev_order": 102,
+      "mysterious_letters": null,
+      "verses_count": 64,
+      "cache_hits": 1656
+    },
+    {
+      "number": 25,
+      "name": "The Statute Book",
+      "rev_loc": "Meccan",
+      "rev_order": 42,
+      "mysterious_letters": null,
+      "verses_count": 77,
+      "cache_hits": 501
+    },
+    {
+      "number": 26,
+      "name": "The Poets",
+      "rev_loc": "Meccan",
+      "rev_order": 47,
+      "mysterious_letters": "TSinM",
+      "verses_count": 227,
+      "cache_hits": 501
+    },
+    {
+      "number": 27,
+      "name": "The Ant",
+      "rev_loc": "Meccan",
+      "rev_order": 48,
+      "mysterious_letters": "TSin",
+      "verses_count": 93,
+      "cache_hits": 550
+    },
+    {
+      "number": 28,
+      "name": "History",
+      "rev_loc": "Meccan",
+      "rev_order": 49,
+      "mysterious_letters": "TSinM",
+      "verses_count": 88,
+      "cache_hits": 537
+    },
+    {
+      "number": 29,
+      "name": "The Spider",
+      "rev_loc": "Meccan",
+      "rev_order": 85,
+      "mysterious_letters": "ALM",
+      "verses_count": 69,
+      "cache_hits": 559
+    },
+    {
+      "number": 30,
+      "name": "The Romans",
+      "rev_loc": "Meccan",
+      "rev_order": 84,
+      "mysterious_letters": "ALM",
+      "verses_count": 60,
+      "cache_hits": 1368
+    },
+    {
+      "number": 31,
+      "name": "Luqmaan",
+      "rev_loc": "Meccan",
+      "rev_order": 57,
+      "mysterious_letters": "ALM",
+      "verses_count": 34,
+      "cache_hits": 592
+    },
+    {
+      "number": 32,
+      "name": "Prostration",
+      "rev_loc": "Meccan",
+      "rev_order": 75,
+      "mysterious_letters": "ALM",
+      "verses_count": 30,
+      "cache_hits": 270
+    },
+    {
+      "number": 33,
+      "name": "The Parties",
+      "rev_loc": "Medinan",
+      "rev_order": 90,
+      "mysterious_letters": null,
+      "verses_count": 73,
+      "cache_hits": 2413
+    },
+    {
+      "number": 34,
+      "name": "Sheba",
+      "rev_loc": "Meccan",
+      "rev_order": 58,
+      "mysterious_letters": null,
+      "verses_count": 54,
+      "cache_hits": 424
+    },
+    {
+      "number": 35,
+      "name": "Initiator",
+      "rev_loc": "Meccan",
+      "rev_order": 43,
+      "mysterious_letters": null,
+      "verses_count": 45,
+      "cache_hits": 471
+    },
+    {
+      "number": 36,
+      "name": "Y.S.",
+      "rev_loc": "Meccan",
+      "rev_order": 41,
+      "mysterious_letters": "YSin",
+      "verses_count": 83,
+      "cache_hits": 578
+    },
+    {
+      "number": 37,
+      "name": "The Arrangers",
+      "rev_loc": "Meccan",
+      "rev_order": 56,
+      "mysterious_letters": null,
+      "verses_count": 182,
+      "cache_hits": 606
+    },
+    {
+      "number": 38,
+      "name": "S.",
+      "rev_loc": "Meccan",
+      "rev_order": 38,
+      "mysterious_letters": "S",
+      "verses_count": 88,
+      "cache_hits": 905
+    },
+    {
+      "number": 39,
+      "name": "The Throngs",
+      "rev_loc": "Meccan",
+      "rev_order": 59,
+      "mysterious_letters": null,
+      "verses_count": 75,
+      "cache_hits": 1832
+    },
+    {
+      "number": 40,
+      "name": "Forgiver",
+      "rev_loc": "Meccan",
+      "rev_order": 60,
+      "mysterious_letters": "HM",
+      "verses_count": 85,
+      "cache_hits": 1013
+    },
+    {
+      "number": 41,
+      "name": "Detailed",
+      "rev_loc": "Meccan",
+      "rev_order": 61,
+      "mysterious_letters": "HM",
+      "verses_count": 54,
+      "cache_hits": 875
+    },
+    {
+      "number": 42,
+      "name": "Consultation",
+      "rev_loc": "Meccan",
+      "rev_order": 62,
+      "mysterious_letters": "HMAinSinQ",
+      "verses_count": 53,
+      "cache_hits": 989
+    },
+    {
+      "number": 43,
+      "name": "Ornaments",
+      "rev_loc": "Meccan",
+      "rev_order": 63,
+      "mysterious_letters": "HM",
+      "verses_count": 89,
+      "cache_hits": 382
+    },
+    {
+      "number": 44,
+      "name": "Smoke",
+      "rev_loc": "Meccan",
+      "rev_order": 64,
+      "mysterious_letters": "HM",
+      "verses_count": 59,
+      "cache_hits": 184
+    },
+    {
+      "number": 45,
+      "name": "Kneeling",
+      "rev_loc": "Meccan",
+      "rev_order": 65,
+      "mysterious_letters": "HM",
+      "verses_count": 37,
+      "cache_hits": 717
+    },
+    {
+      "number": 46,
+      "name": "The Dunes",
+      "rev_loc": "Meccan",
+      "rev_order": 66,
+      "mysterious_letters": "HM",
+      "verses_count": 35,
+      "cache_hits": 459
+    },
+    {
+      "number": 47,
+      "name": "Muhammad",
+      "rev_loc": "Medinan",
+      "rev_order": 95,
+      "mysterious_letters": null,
+      "verses_count": 38,
+      "cache_hits": 420
+    },
+    {
+      "number": 48,
+      "name": "Victory",
+      "rev_loc": "Medinan",
+      "rev_order": 111,
+      "mysterious_letters": null,
+      "verses_count": 29,
+      "cache_hits": 603
+    },
+    {
+      "number": 49,
+      "name": "The Walls",
+      "rev_loc": "Medinan",
+      "rev_order": 106,
+      "mysterious_letters": null,
+      "verses_count": 18,
+      "cache_hits": 443
+    },
+    {
+      "number": 50,
+      "name": "Q.",
+      "rev_loc": "Meccan",
+      "rev_order": 34,
+      "mysterious_letters": "Q",
+      "verses_count": 45,
+      "cache_hits": 267
+    },
+    {
+      "number": 51,
+      "name": "Drivers of the Winds",
+      "rev_loc": "Meccan",
+      "rev_order": 67,
+      "mysterious_letters": null,
+      "verses_count": 60,
+      "cache_hits": 310
+    },
+    {
+      "number": 52,
+      "name": "Mount Sinai",
+      "rev_loc": "Meccan",
+      "rev_order": 76,
+      "mysterious_letters": null,
+      "verses_count": 49,
+      "cache_hits": 168
+    },
+    {
+      "number": 53,
+      "name": "The Stars",
+      "rev_loc": "Meccan",
+      "rev_order": 23,
+      "mysterious_letters": null,
+      "verses_count": 62,
+      "cache_hits": 312
+    },
+    {
+      "number": 54,
+      "name": "The Moon",
+      "rev_loc": "Meccan",
+      "rev_order": 37,
+      "mysterious_letters": null,
+      "verses_count": 55,
+      "cache_hits": 312
+    },
+    {
+      "number": 55,
+      "name": "Most Gracious",
+      "rev_loc": "Medinan",
+      "rev_order": 97,
+      "mysterious_letters": null,
+      "verses_count": 78,
+      "cache_hits": 1140
+    },
+    {
+      "number": 56,
+      "name": "The Inevitable",
+      "rev_loc": "Meccan",
+      "rev_order": 46,
+      "mysterious_letters": null,
+      "verses_count": 96,
+      "cache_hits": 355
+    },
+    {
+      "number": 57,
+      "name": "Iron",
+      "rev_loc": "Medinan",
+      "rev_order": 94,
+      "mysterious_letters": null,
+      "verses_count": 29,
+      "cache_hits": 1357
+    },
+    {
+      "number": 58,
+      "name": "The Debate",
+      "rev_loc": "Medinan",
+      "rev_order": 105,
+      "mysterious_letters": null,
+      "verses_count": 22,
+      "cache_hits": 303
+    },
+    {
+      "number": 59,
+      "name": "Exodus",
+      "rev_loc": "Medinan",
+      "rev_order": 101,
+      "mysterious_letters": null,
+      "verses_count": 24,
+      "cache_hits": 636
+    },
+    {
+      "number": 60,
+      "name": "The Test",
+      "rev_loc": "Medinan",
+      "rev_order": 91,
+      "mysterious_letters": null,
+      "verses_count": 13,
+      "cache_hits": 176
+    },
+    {
+      "number": 61,
+      "name": "The Column",
+      "rev_loc": "Medinan",
+      "rev_order": 109,
+      "mysterious_letters": null,
+      "verses_count": 14,
+      "cache_hits": 194
+    },
+    {
+      "number": 62,
+      "name": "Friday",
+      "rev_loc": "Medinan",
+      "rev_order": 110,
+      "mysterious_letters": null,
+      "verses_count": 11,
+      "cache_hits": 156
+    },
+    {
+      "number": 63,
+      "name": "The Hypocrites",
+      "rev_loc": "Medinan",
+      "rev_order": 104,
+      "mysterious_letters": null,
+      "verses_count": 11,
+      "cache_hits": 187
+    },
+    {
+      "number": 64,
+      "name": "Mutual Blaming",
+      "rev_loc": "Medinan",
+      "rev_order": 108,
+      "mysterious_letters": null,
+      "verses_count": 18,
+      "cache_hits": 308
+    },
+    {
+      "number": 65,
+      "name": "Divorce",
+      "rev_loc": "Medinan",
+      "rev_order": 99,
+      "mysterious_letters": null,
+      "verses_count": 12,
+      "cache_hits": 565
+    },
+    {
+      "number": 66,
+      "name": "Prohibition",
+      "rev_loc": "Medinan",
+      "rev_order": 107,
+      "mysterious_letters": null,
+      "verses_count": 12,
+      "cache_hits": 317
+    },
+    {
+      "number": 67,
+      "name": "Kingship",
+      "rev_loc": "Meccan",
+      "rev_order": 77,
+      "mysterious_letters": null,
+      "verses_count": 30,
+      "cache_hits": 173
+    },
+    {
+      "number": 68,
+      "name": "The Pen",
+      "rev_loc": "Meccan",
+      "rev_order": 2,
+      "mysterious_letters": "N",
+      "verses_count": 52,
+      "cache_hits": 736
+    },
+    {
+      "number": 69,
+      "name": "Incontestable",
+      "rev_loc": "Meccan",
+      "rev_order": 78,
+      "mysterious_letters": null,
+      "verses_count": 52,
+      "cache_hits": 240
+    },
+    {
+      "number": 70,
+      "name": "The Heights",
+      "rev_loc": "Meccan",
+      "rev_order": 79,
+      "mysterious_letters": null,
+      "verses_count": 44,
+      "cache_hits": 335
+    },
+    {
+      "number": 71,
+      "name": "Noah",
+      "rev_loc": "Meccan",
+      "rev_order": 71,
+      "mysterious_letters": null,
+      "verses_count": 28,
+      "cache_hits": 355
+    },
+    {
+      "number": 72,
+      "name": "Jinns",
+      "rev_loc": "Meccan",
+      "rev_order": 40,
+      "mysterious_letters": null,
+      "verses_count": 28,
+      "cache_hits": 180
+    },
+    {
+      "number": 73,
+      "name": "Cloaked",
+      "rev_loc": "Meccan",
+      "rev_order": 3,
+      "mysterious_letters": null,
+      "verses_count": 20,
+      "cache_hits": 940
+    },
+    {
+      "number": 74,
+      "name": "The Hidden Secret",
+      "rev_loc": "Meccan",
+      "rev_order": 4,
+      "mysterious_letters": null,
+      "verses_count": 56,
+      "cache_hits": 314
+    },
+    {
+      "number": 75,
+      "name": "Resurrection",
+      "rev_loc": "Meccan",
+      "rev_order": 31,
+      "mysterious_letters": null,
+      "verses_count": 40,
+      "cache_hits": 332
+    },
+    {
+      "number": 76,
+      "name": "The Human",
+      "rev_loc": "Medinan",
+      "rev_order": 98,
+      "mysterious_letters": null,
+      "verses_count": 31,
+      "cache_hits": 267
+    },
+    {
+      "number": 77,
+      "name": "Dispatched",
+      "rev_loc": "Meccan",
+      "rev_order": 33,
+      "mysterious_letters": null,
+      "verses_count": 50,
+      "cache_hits": 157
+    },
+    {
+      "number": 78,
+      "name": "The Event",
+      "rev_loc": "Meccan",
+      "rev_order": 80,
+      "mysterious_letters": null,
+      "verses_count": 40,
+      "cache_hits": 348
+    },
+    {
+      "number": 79,
+      "name": "The Snatchers",
+      "rev_loc": "Meccan",
+      "rev_order": 81,
+      "mysterious_letters": null,
+      "verses_count": 46,
+      "cache_hits": 167
+    },
+    {
+      "number": 80,
+      "name": "He Frowned",
+      "rev_loc": "Meccan",
+      "rev_order": 24,
+      "mysterious_letters": null,
+      "verses_count": 42,
+      "cache_hits": 164
+    },
+    {
+      "number": 81,
+      "name": "The Rolling",
+      "rev_loc": "Meccan",
+      "rev_order": 7,
+      "mysterious_letters": null,
+      "verses_count": 29,
+      "cache_hits": 226
+    },
+    {
+      "number": 82,
+      "name": "The Shattering",
+      "rev_loc": "Meccan",
+      "rev_order": 82,
+      "mysterious_letters": null,
+      "verses_count": 19,
+      "cache_hits": 193
+    },
+    {
+      "number": 83,
+      "name": "The Cheaters",
+      "rev_loc": "Meccan",
+      "rev_order": 86,
+      "mysterious_letters": null,
+      "verses_count": 36,
+      "cache_hits": 140
+    },
+    {
+      "number": 84,
+      "name": "The Rupture",
+      "rev_loc": "Meccan",
+      "rev_order": 83,
+      "mysterious_letters": null,
+      "verses_count": 25,
+      "cache_hits": 632
+    },
+    {
+      "number": 85,
+      "name": "The Galaxies",
+      "rev_loc": "Meccan",
+      "rev_order": 27,
+      "mysterious_letters": null,
+      "verses_count": 22,
+      "cache_hits": 203
+    },
+    {
+      "number": 86,
+      "name": "The Bright Star",
+      "rev_loc": "Meccan",
+      "rev_order": 36,
+      "mysterious_letters": null,
+      "verses_count": 17,
+      "cache_hits": 134
+    },
+    {
+      "number": 87,
+      "name": "The Most High",
+      "rev_loc": "Meccan",
+      "rev_order": 8,
+      "mysterious_letters": null,
+      "verses_count": 19,
+      "cache_hits": 146
+    },
+    {
+      "number": 88,
+      "name": "Overwhelming",
+      "rev_loc": "Meccan",
+      "rev_order": 68,
+      "mysterious_letters": null,
+      "verses_count": 26,
+      "cache_hits": 139
+    },
+    {
+      "number": 89,
+      "name": "Dawn",
+      "rev_loc": "Meccan",
+      "rev_order": 10,
+      "mysterious_letters": null,
+      "verses_count": 30,
+      "cache_hits": 171
+    },
+    {
+      "number": 90,
+      "name": "The Town",
+      "rev_loc": "Meccan",
+      "rev_order": 35,
+      "mysterious_letters": null,
+      "verses_count": 20,
+      "cache_hits": 231
+    },
+    {
+      "number": 91,
+      "name": "The Sun",
+      "rev_loc": "Meccan",
+      "rev_order": 26,
+      "mysterious_letters": null,
+      "verses_count": 15,
+      "cache_hits": 150
+    },
+    {
+      "number": 92,
+      "name": "The Night",
+      "rev_loc": "Meccan",
+      "rev_order": 9,
+      "mysterious_letters": null,
+      "verses_count": 21,
+      "cache_hits": 157
+    },
+    {
+      "number": 93,
+      "name": "The Forenoon",
+      "rev_loc": "Meccan",
+      "rev_order": 11,
+      "mysterious_letters": null,
+      "verses_count": 11,
+      "cache_hits": 114
+    },
+    {
+      "number": 94,
+      "name": "Cooling the Temper",
+      "rev_loc": "Meccan",
+      "rev_order": 12,
+      "mysterious_letters": null,
+      "verses_count": 8,
+      "cache_hits": 106
+    },
+    {
+      "number": 95,
+      "name": "The Fig",
+      "rev_loc": "Meccan",
+      "rev_order": 28,
+      "mysterious_letters": null,
+      "verses_count": 8,
+      "cache_hits": 109
+    },
+    {
+      "number": 96,
+      "name": "The Embryo",
+      "rev_loc": "Meccan",
+      "rev_order": 1,
+      "mysterious_letters": null,
+      "verses_count": 19,
+      "cache_hits": 142
+    },
+    {
+      "number": 97,
+      "name": "Destiny",
+      "rev_loc": "Meccan",
+      "rev_order": 25,
+      "mysterious_letters": null,
+      "verses_count": 5,
+      "cache_hits": 118
+    },
+    {
+      "number": 98,
+      "name": "Proof",
+      "rev_loc": "Medinan",
+      "rev_order": 100,
+      "mysterious_letters": null,
+      "verses_count": 8,
+      "cache_hits": 191
+    },
+    {
+      "number": 99,
+      "name": "The Quake",
+      "rev_loc": "Medinan",
+      "rev_order": 93,
+      "mysterious_letters": null,
+      "verses_count": 8,
+      "cache_hits": 99
+    },
+    {
+      "number": 100,
+      "name": "The Gallopers",
+      "rev_loc": "Meccan",
+      "rev_order": 14,
+      "mysterious_letters": null,
+      "verses_count": 11,
+      "cache_hits": 106
+    },
+    {
+      "number": 101,
+      "name": "The Shocker",
+      "rev_loc": "Meccan",
+      "rev_order": 30,
+      "mysterious_letters": null,
+      "verses_count": 11,
+      "cache_hits": 61
+    },
+    {
+      "number": 102,
+      "name": "Hoarding",
+      "rev_loc": "Meccan",
+      "rev_order": 16,
+      "mysterious_letters": null,
+      "verses_count": 8,
+      "cache_hits": 65
+    },
+    {
+      "number": 103,
+      "name": "The Afternoon",
+      "rev_loc": "Meccan",
+      "rev_order": 13,
+      "mysterious_letters": null,
+      "verses_count": 3,
+      "cache_hits": 49
+    },
+    {
+      "number": 104,
+      "name": "The Backbiter",
+      "rev_loc": "Meccan",
+      "rev_order": 32,
+      "mysterious_letters": null,
+      "verses_count": 9,
+      "cache_hits": 49
+    },
+    {
+      "number": 105,
+      "name": "The Elephant",
+      "rev_loc": "Meccan",
+      "rev_order": 19,
+      "mysterious_letters": null,
+      "verses_count": 5,
+      "cache_hits": 30
+    },
+    {
+      "number": 106,
+      "name": "Quraish Tribe",
+      "rev_loc": "Meccan",
+      "rev_order": 29,
+      "mysterious_letters": null,
+      "verses_count": 4,
+      "cache_hits": 30
+    },
+    {
+      "number": 107,
+      "name": "Charity",
+      "rev_loc": "Meccan",
+      "rev_order": 17,
+      "mysterious_letters": null,
+      "verses_count": 7,
+      "cache_hits": 58
+    },
+    {
+      "number": 108,
+      "name": "Bounty",
+      "rev_loc": "Meccan",
+      "rev_order": 15,
+      "mysterious_letters": null,
+      "verses_count": 3,
+      "cache_hits": 32
+    },
+    {
+      "number": 109,
+      "name": "The Disbelievers",
+      "rev_loc": "Meccan",
+      "rev_order": 18,
+      "mysterious_letters": null,
+      "verses_count": 6,
+      "cache_hits": 34
+    },
+    {
+      "number": 110,
+      "name": "Triumph",
+      "rev_loc": "Medinan",
+      "rev_order": 114,
+      "mysterious_letters": null,
+      "verses_count": 3,
+      "cache_hits": 65
+    },
+    {
+      "number": 111,
+      "name": "Thorns",
+      "rev_loc": "Meccan",
+      "rev_order": 6,
+      "mysterious_letters": null,
+      "verses_count": 5,
+      "cache_hits": 38
+    },
+    {
+      "number": 112,
+      "name": "Absoluteness",
+      "rev_loc": "Meccan",
+      "rev_order": 22,
+      "mysterious_letters": null,
+      "verses_count": 4,
+      "cache_hits": 45
+    },
+    {
+      "number": 113,
+      "name": "Daybreak",
+      "rev_loc": "Meccan",
+      "rev_order": 20,
+      "mysterious_letters": null,
+      "verses_count": 5,
+      "cache_hits": 25
+    },
+    {
+      "number": 114,
+      "name": "People",
+      "rev_loc": "Meccan",
+      "rev_order": 21,
+      "mysterious_letters": null,
+      "verses_count": 6,
+      "cache_hits": 39
+    }
+  ],
+  "surahs_by_gap": [
+    {
+      "number": 113,
+      "name": "Daybreak",
+      "rev_loc": "Meccan",
+      "rev_order": 20,
+      "mysterious_letters": null,
+      "verses_count": 5,
+      "cache_hits": 25
+    },
+    {
+      "number": 105,
+      "name": "The Elephant",
+      "rev_loc": "Meccan",
+      "rev_order": 19,
+      "mysterious_letters": null,
+      "verses_count": 5,
+      "cache_hits": 30
+    },
+    {
+      "number": 106,
+      "name": "Quraish Tribe",
+      "rev_loc": "Meccan",
+      "rev_order": 29,
+      "mysterious_letters": null,
+      "verses_count": 4,
+      "cache_hits": 30
+    },
+    {
+      "number": 108,
+      "name": "Bounty",
+      "rev_loc": "Meccan",
+      "rev_order": 15,
+      "mysterious_letters": null,
+      "verses_count": 3,
+      "cache_hits": 32
+    },
+    {
+      "number": 109,
+      "name": "The Disbelievers",
+      "rev_loc": "Meccan",
+      "rev_order": 18,
+      "mysterious_letters": null,
+      "verses_count": 6,
+      "cache_hits": 34
+    },
+    {
+      "number": 111,
+      "name": "Thorns",
+      "rev_loc": "Meccan",
+      "rev_order": 6,
+      "mysterious_letters": null,
+      "verses_count": 5,
+      "cache_hits": 38
+    },
+    {
+      "number": 114,
+      "name": "People",
+      "rev_loc": "Meccan",
+      "rev_order": 21,
+      "mysterious_letters": null,
+      "verses_count": 6,
+      "cache_hits": 39
+    },
+    {
+      "number": 112,
+      "name": "Absoluteness",
+      "rev_loc": "Meccan",
+      "rev_order": 22,
+      "mysterious_letters": null,
+      "verses_count": 4,
+      "cache_hits": 45
+    },
+    {
+      "number": 103,
+      "name": "The Afternoon",
+      "rev_loc": "Meccan",
+      "rev_order": 13,
+      "mysterious_letters": null,
+      "verses_count": 3,
+      "cache_hits": 49
+    },
+    {
+      "number": 104,
+      "name": "The Backbiter",
+      "rev_loc": "Meccan",
+      "rev_order": 32,
+      "mysterious_letters": null,
+      "verses_count": 9,
+      "cache_hits": 49
+    },
+    {
+      "number": 107,
+      "name": "Charity",
+      "rev_loc": "Meccan",
+      "rev_order": 17,
+      "mysterious_letters": null,
+      "verses_count": 7,
+      "cache_hits": 58
+    },
+    {
+      "number": 101,
+      "name": "The Shocker",
+      "rev_loc": "Meccan",
+      "rev_order": 30,
+      "mysterious_letters": null,
+      "verses_count": 11,
+      "cache_hits": 61
+    },
+    {
+      "number": 102,
+      "name": "Hoarding",
+      "rev_loc": "Meccan",
+      "rev_order": 16,
+      "mysterious_letters": null,
+      "verses_count": 8,
+      "cache_hits": 65
+    },
+    {
+      "number": 110,
+      "name": "Triumph",
+      "rev_loc": "Medinan",
+      "rev_order": 114,
+      "mysterious_letters": null,
+      "verses_count": 3,
+      "cache_hits": 65
+    },
+    {
+      "number": 99,
+      "name": "The Quake",
+      "rev_loc": "Medinan",
+      "rev_order": 93,
+      "mysterious_letters": null,
+      "verses_count": 8,
+      "cache_hits": 99
+    },
+    {
+      "number": 94,
+      "name": "Cooling the Temper",
+      "rev_loc": "Meccan",
+      "rev_order": 12,
+      "mysterious_letters": null,
+      "verses_count": 8,
+      "cache_hits": 106
+    },
+    {
+      "number": 100,
+      "name": "The Gallopers",
+      "rev_loc": "Meccan",
+      "rev_order": 14,
+      "mysterious_letters": null,
+      "verses_count": 11,
+      "cache_hits": 106
+    },
+    {
+      "number": 95,
+      "name": "The Fig",
+      "rev_loc": "Meccan",
+      "rev_order": 28,
+      "mysterious_letters": null,
+      "verses_count": 8,
+      "cache_hits": 109
+    },
+    {
+      "number": 93,
+      "name": "The Forenoon",
+      "rev_loc": "Meccan",
+      "rev_order": 11,
+      "mysterious_letters": null,
+      "verses_count": 11,
+      "cache_hits": 114
+    },
+    {
+      "number": 97,
+      "name": "Destiny",
+      "rev_loc": "Meccan",
+      "rev_order": 25,
+      "mysterious_letters": null,
+      "verses_count": 5,
+      "cache_hits": 118
+    },
+    {
+      "number": 86,
+      "name": "The Bright Star",
+      "rev_loc": "Meccan",
+      "rev_order": 36,
+      "mysterious_letters": null,
+      "verses_count": 17,
+      "cache_hits": 134
+    },
+    {
+      "number": 88,
+      "name": "Overwhelming",
+      "rev_loc": "Meccan",
+      "rev_order": 68,
+      "mysterious_letters": null,
+      "verses_count": 26,
+      "cache_hits": 139
+    },
+    {
+      "number": 83,
+      "name": "The Cheaters",
+      "rev_loc": "Meccan",
+      "rev_order": 86,
+      "mysterious_letters": null,
+      "verses_count": 36,
+      "cache_hits": 140
+    },
+    {
+      "number": 96,
+      "name": "The Embryo",
+      "rev_loc": "Meccan",
+      "rev_order": 1,
+      "mysterious_letters": null,
+      "verses_count": 19,
+      "cache_hits": 142
+    },
+    {
+      "number": 87,
+      "name": "The Most High",
+      "rev_loc": "Meccan",
+      "rev_order": 8,
+      "mysterious_letters": null,
+      "verses_count": 19,
+      "cache_hits": 146
+    },
+    {
+      "number": 91,
+      "name": "The Sun",
+      "rev_loc": "Meccan",
+      "rev_order": 26,
+      "mysterious_letters": null,
+      "verses_count": 15,
+      "cache_hits": 150
+    },
+    {
+      "number": 62,
+      "name": "Friday",
+      "rev_loc": "Medinan",
+      "rev_order": 110,
+      "mysterious_letters": null,
+      "verses_count": 11,
+      "cache_hits": 156
+    },
+    {
+      "number": 77,
+      "name": "Dispatched",
+      "rev_loc": "Meccan",
+      "rev_order": 33,
+      "mysterious_letters": null,
+      "verses_count": 50,
+      "cache_hits": 157
+    },
+    {
+      "number": 92,
+      "name": "The Night",
+      "rev_loc": "Meccan",
+      "rev_order": 9,
+      "mysterious_letters": null,
+      "verses_count": 21,
+      "cache_hits": 157
+    },
+    {
+      "number": 1,
+      "name": "The Key",
+      "rev_loc": "Meccan",
+      "rev_order": 5,
+      "mysterious_letters": null,
+      "verses_count": 7,
+      "cache_hits": 163
+    }
+  ],
+  "roots_top200": [
+    {
+      "root": "أتي",
+      "bw": ">ty",
+      "gloss": "",
+      "mentions": 486,
+      "cache_hits": 1
+    },
+    {
+      "root": "كفر",
+      "bw": "kfr",
+      "gloss": "disbelieve, cover",
+      "mentions": 465,
+      "cache_hits": 1
+    },
+    {
+      "root": "بين",
+      "bw": "byn",
+      "gloss": "",
+      "mentions": 454,
+      "cache_hits": 0
+    },
+    {
+      "root": "شيأ",
+      "bw": "$y>",
+      "gloss": "",
+      "mentions": 449,
+      "cache_hits": 0
+    },
+    {
+      "root": "أرض",
+      "bw": ">rD",
+      "gloss": "earth, land",
+      "mentions": 440,
+      "cache_hits": 0
+    },
+    {
+      "root": "يوم",
+      "bw": "ywm",
+      "gloss": "day",
+      "mentions": 437,
+      "cache_hits": 3
+    },
+    {
+      "root": "رسل",
+      "bw": "rsl",
+      "gloss": "messenger, send",
+      "mentions": 428,
+      "cache_hits": 1
+    },
+    {
+      "root": "كلل",
+      "bw": "kll",
+      "gloss": "",
+      "mentions": 355,
+      "cache_hits": 0
+    },
+    {
+      "root": "سمو",
+      "bw": "smw",
+      "gloss": "name, heaven, sky",
+      "mentions": 352,
+      "cache_hits": 0
+    },
+    {
+      "root": "عذب",
+      "bw": "E*b",
+      "gloss": "punish, torment",
+      "mentions": 336,
+      "cache_hits": 0
+    },
+    {
+      "root": "أنس",
+      "bw": ">ns",
+      "gloss": "",
+      "mentions": 317,
+      "cache_hits": 1
+    },
+    {
+      "root": "عمل",
+      "bw": "Eml",
+      "gloss": "",
+      "mentions": 313,
+      "cache_hits": 1
+    },
+    {
+      "root": "رحم",
+      "bw": "rHm",
+      "gloss": "mercy, compassion",
+      "mentions": 312,
+      "cache_hits": 4
+    },
+    {
+      "root": "جعل",
+      "bw": "jEl",
+      "gloss": "",
+      "mentions": 311,
+      "cache_hits": 1
+    },
+    {
+      "root": "رأي",
+      "bw": "r>y",
+      "gloss": "",
+      "mentions": 297,
+      "cache_hits": 0
+    },
+    {
+      "root": "ظلم",
+      "bw": "Zlm",
+      "gloss": "wrong, oppress",
+      "mentions": 290,
+      "cache_hits": 3
+    },
+    {
+      "root": "قبل",
+      "bw": "qbl",
+      "gloss": "",
+      "mentions": 282,
+      "cache_hits": 0
+    },
+    {
+      "root": "كتب",
+      "bw": "ktb",
+      "gloss": "write, prescribe, book",
+      "mentions": 279,
+      "cache_hits": 0
+    },
+    {
+      "root": "نفس",
+      "bw": "nfs",
+      "gloss": "soul, self",
+      "mentions": 269,
+      "cache_hits": 5
+    },
+    {
+      "root": "هدي",
+      "bw": "hdy",
+      "gloss": "guide, guidance",
+      "mentions": 268,
+      "cache_hits": 1
+    },
+    {
+      "root": "ذكر",
+      "bw": "*kr",
+      "gloss": "",
+      "mentions": 264,
+      "cache_hits": 0
+    },
+    {
+      "root": "حقق",
+      "bw": "Hqq",
+      "gloss": "truth, right",
+      "mentions": 263,
+      "cache_hits": 0
+    },
+    {
+      "root": "جيأ",
+      "bw": "jy>",
+      "gloss": "",
+      "mentions": 261,
+      "cache_hits": 0
+    },
+    {
+      "root": "نزل",
+      "bw": "nzl",
+      "gloss": "",
+      "mentions": 257,
+      "cache_hits": 0
+    },
+    {
+      "root": "كذب",
+      "bw": "k*b",
+      "gloss": "",
+      "mentions": 257,
+      "cache_hits": 0
+    },
+    {
+      "root": "عبد",
+      "bw": "Ebd",
+      "gloss": "worship, serve",
+      "mentions": 251,
+      "cache_hits": 0
+    },
+    {
+      "root": "أخذ",
+      "bw": ">x*",
+      "gloss": "",
+      "mentions": 244,
+      "cache_hits": 0
+    },
+    {
+      "root": "أخر",
+      "bw": ">xr",
+      "gloss": "",
+      "mentions": 242,
+      "cache_hits": 0
+    },
+    {
+      "root": "وقي",
+      "bw": "wqy",
+      "gloss": "",
+      "mentions": 237,
+      "cache_hits": 0
+    },
+    {
+      "root": "أمر",
+      "bw": ">mr",
+      "gloss": "",
+      "mentions": 226,
+      "cache_hits": 2
+    },
+    {
+      "root": "بعد",
+      "bw": "bEd",
+      "gloss": "",
+      "mentions": 223,
+      "cache_hits": 0
+    },
+    {
+      "root": "خلق",
+      "bw": "xlq",
+      "gloss": "create, creation",
+      "mentions": 218,
+      "cache_hits": 1
+    },
+    {
+      "root": "غفر",
+      "bw": "gfr",
+      "gloss": "forgive",
+      "mentions": 202,
+      "cache_hits": 3
+    },
+    {
+      "root": "ولي",
+      "bw": "wly",
+      "gloss": "",
+      "mentions": 201,
+      "cache_hits": 0
+    },
+    {
+      "root": "جنن",
+      "bw": "jnn",
+      "gloss": "paradise, garden, jinn",
+      "mentions": 196,
+      "cache_hits": 2
+    },
+    {
+      "root": "ملك",
+      "bw": "mlk",
+      "gloss": "king, own, possess",
+      "mentions": 191,
+      "cache_hits": 0
+    },
+    {
+      "root": "حكم",
+      "bw": "Hkm",
+      "gloss": "",
+      "mentions": 189,
+      "cache_hits": 0
+    },
+    {
+      "root": "عند",
+      "bw": "End",
+      "gloss": "",
+      "mentions": 189,
+      "cache_hits": 0
+    },
+    {
+      "root": "دعو",
+      "bw": "dEw",
+      "gloss": "",
+      "mentions": 182,
+      "cache_hits": 3
+    },
+    {
+      "root": "خير",
+      "bw": "xyr",
+      "gloss": "",
+      "mentions": 178,
+      "cache_hits": 1
+    },
+    {
+      "root": "حسن",
+      "bw": "Hsn",
+      "gloss": "",
+      "mentions": 177,
+      "cache_hits": 1
+    },
+    {
+      "root": "نور",
+      "bw": "nwr",
+      "gloss": "",
+      "mentions": 174,
+      "cache_hits": 2
+    },
+    {
+      "root": "صلح",
+      "bw": "SlH",
+      "gloss": "",
+      "mentions": 170,
+      "cache_hits": 0
+    },
+    {
+      "root": "ضلل",
+      "bw": "Dll",
+      "gloss": "stray, go astray",
+      "mentions": 170,
+      "cache_hits": 1
+    },
+    {
+      "root": "حيي",
+      "bw": "Hyy",
+      "gloss": "",
+      "mentions": 166,
+      "cache_hits": 0
+    },
+    {
+      "root": "سبل",
+      "bw": "sbl",
+      "gloss": "",
+      "mentions": 164,
+      "cache_hits": 0
+    },
+    {
+      "root": "سمع",
+      "bw": "smE",
+      "gloss": "hear, listen",
+      "mentions": 163,
+      "cache_hits": 0
+    },
+    {
+      "root": "كثر",
+      "bw": "kvr",
+      "gloss": "",
+      "mentions": 162,
+      "cache_hits": 0
+    },
+    {
+      "root": "خرج",
+      "bw": "xrj",
+      "gloss": "",
+      "mentions": 157,
+      "cache_hits": 0
+    },
+    {
+      "root": "تبع",
+      "bw": "tbE",
+      "gloss": "",
+      "mentions": 156,
+      "cache_hits": 0
+    },
+    {
+      "root": "قلب",
+      "bw": "qlb",
+      "gloss": "heart",
+      "mentions": 155,
+      "cache_hits": 7
+    },
+    {
+      "root": "كبر",
+      "bw": "kbr",
+      "gloss": "",
+      "mentions": 153,
+      "cache_hits": 2
+    },
+    {
+      "root": "سوأ",
+      "bw": "sw>",
+      "gloss": "",
+      "mentions": 151,
+      "cache_hits": 0
+    },
+    {
+      "root": "نبأ",
+      "bw": "nb>",
+      "gloss": "prophet, news",
+      "mentions": 151,
+      "cache_hits": 0
+    },
+    {
+      "root": "بني",
+      "bw": "bny",
+      "gloss": "",
+      "mentions": 150,
+      "cache_hits": 0
+    },
+    {
+      "root": "مثل",
+      "bw": "mvl",
+      "gloss": "",
+      "mentions": 148,
+      "cache_hits": 0
+    },
+    {
+      "root": "غير",
+      "bw": "gyr",
+      "gloss": "",
+      "mentions": 146,
+      "cache_hits": 0
+    },
+    {
+      "root": "صدق",
+      "bw": "Sdq",
+      "gloss": "",
+      "mentions": 144,
+      "cache_hits": 1
+    },
+    {
+      "root": "شرك",
+      "bw": "$rk",
+      "gloss": "associate, polytheism",
+      "mentions": 143,
+      "cache_hits": 0
+    },
+    {
+      "root": "موت",
+      "bw": "mwt",
+      "gloss": "death, die",
+      "mentions": 143,
+      "cache_hits": 3
+    },
+    {
+      "root": "دون",
+      "bw": "dwn",
+      "gloss": "",
+      "mentions": 142,
+      "cache_hits": 0
+    },
+    {
+      "root": "بصر",
+      "bw": "bSr",
+      "gloss": "sight, see",
+      "mentions": 139,
+      "cache_hits": 1
+    },
+    {
+      "root": "نصر",
+      "bw": "nSr",
+      "gloss": "",
+      "mentions": 137,
+      "cache_hits": 0
+    },
+    {
+      "root": "لقي",
+      "bw": "lqy",
+      "gloss": "",
+      "mentions": 135,
+      "cache_hits": 2
+    },
+    {
+      "root": "وعد",
+      "bw": "wEd",
+      "gloss": "",
+      "mentions": 130,
+      "cache_hits": 0
+    },
+    {
+      "root": "نعم",
+      "bw": "nEm",
+      "gloss": "blessing, grace",
+      "mentions": 128,
+      "cache_hits": 0
+    },
+    {
+      "root": "دنو",
+      "bw": "dnw",
+      "gloss": "",
+      "mentions": 128,
+      "cache_hits": 1
+    },
+    {
+      "root": "سلم",
+      "bw": "slm",
+      "gloss": "peace, submit, Islam",
+      "mentions": 127,
+      "cache_hits": 0
+    },
+    {
+      "root": "عظم",
+      "bw": "EZm",
+      "gloss": "",
+      "mentions": 126,
+      "cache_hits": 0
+    },
+    {
+      "root": "جمع",
+      "bw": "jmE",
+      "gloss": "",
+      "mentions": 123,
+      "cache_hits": 1
+    },
+    {
+      "root": "شهد",
+      "bw": "$hd",
+      "gloss": "",
+      "mentions": 123,
+      "cache_hits": 0
+    },
+    {
+      "root": "قتل",
+      "bw": "qtl",
+      "gloss": "",
+      "mentions": 122,
+      "cache_hits": 0
+    },
+    {
+      "root": "قدر",
+      "bw": "qdr",
+      "gloss": "",
+      "mentions": 121,
+      "cache_hits": 0
+    },
+    {
+      "root": "أهل",
+      "bw": ">hl",
+      "gloss": "family, people",
+      "mentions": 120,
+      "cache_hits": 0
+    },
+    {
+      "root": "رود",
+      "bw": "rwd",
+      "gloss": "",
+      "mentions": 120,
+      "cache_hits": 0
+    },
+    {
+      "root": "أول",
+      "bw": ">wl",
+      "gloss": "",
+      "mentions": 119,
+      "cache_hits": 0
+    },
+    {
+      "root": "بشر",
+      "bw": "b$r",
+      "gloss": "",
+      "mentions": 119,
+      "cache_hits": 1
+    },
+    {
+      "root": "طوع",
+      "bw": "TwE",
+      "gloss": "",
+      "mentions": 118,
+      "cache_hits": 0
+    },
+    {
+      "root": "سأل",
+      "bw": "s>l",
+      "gloss": "",
+      "mentions": 118,
+      "cache_hits": 1
+    },
+    {
+      "root": "خلف",
+      "bw": "xlf",
+      "gloss": "",
+      "mentions": 116,
+      "cache_hits": 0
+    },
+    {
+      "root": "عزز",
+      "bw": "Ezz",
+      "gloss": "",
+      "mentions": 116,
+      "cache_hits": 0
+    },
+    {
+      "root": "نظر",
+      "bw": "nZr",
+      "gloss": "",
+      "mentions": 115,
+      "cache_hits": 0
+    },
+    {
+      "root": "نذر",
+      "bw": "n*r",
+      "gloss": "",
+      "mentions": 115,
+      "cache_hits": 0
+    },
+    {
+      "root": "خوف",
+      "bw": "xwf",
+      "gloss": "",
+      "mentions": 112,
+      "cache_hits": 1
+    },
+    {
+      "root": "دخل",
+      "bw": "dxl",
+      "gloss": "",
+      "mentions": 111,
+      "cache_hits": 0
+    },
+    {
+      "root": "يدي",
+      "bw": "ydy",
+      "gloss": "",
+      "mentions": 110,
+      "cache_hits": 0
+    },
+    {
+      "root": "جزي",
+      "bw": "jzy",
+      "gloss": "",
+      "mentions": 109,
+      "cache_hits": 0
+    },
+    {
+      "root": "رزق",
+      "bw": "rzq",
+      "gloss": "",
+      "mentions": 109,
+      "cache_hits": 5
+    },
+    {
+      "root": "أمم",
+      "bw": ">mm",
+      "gloss": "",
+      "mentions": 108,
+      "cache_hits": 0
+    },
+    {
+      "root": "أبو",
+      "bw": ">bw",
+      "gloss": "",
+      "mentions": 104,
+      "cache_hits": 0
+    },
+    {
+      "root": "رجع",
+      "bw": "rjE",
+      "gloss": "",
+      "mentions": 103,
+      "cache_hits": 4
+    },
+    {
+      "root": "فعل",
+      "bw": "fEl",
+      "gloss": "",
+      "mentions": 102,
+      "cache_hits": 0
+    },
+    {
+      "root": "نهر",
+      "bw": "nhr",
+      "gloss": "",
+      "mentions": 102,
+      "cache_hits": 0
+    },
+    {
+      "root": "حسب",
+      "bw": "Hsb",
+      "gloss": "reckon, account",
+      "mentions": 101,
+      "cache_hits": 1
+    },
+    {
+      "root": "أكل",
+      "bw": ">kl",
+      "gloss": "",
+      "mentions": 101,
+      "cache_hits": 1
+    },
+    {
+      "root": "شدد",
+      "bw": "$dd",
+      "gloss": "",
+      "mentions": 99,
+      "cache_hits": 0
+    },
+    {
+      "root": "أجر",
+      "bw": ">jr",
+      "gloss": "",
+      "mentions": 99,
+      "cache_hits": 1
+    },
+    {
+      "root": "وجد",
+      "bw": "wjd",
+      "gloss": "",
+      "mentions": 99,
+      "cache_hits": 0
+    },
+    {
+      "root": "صبر",
+      "bw": "Sbr",
+      "gloss": "patience, persevere",
+      "mentions": 93,
+      "cache_hits": 4
+    },
+    {
+      "root": "عدو",
+      "bw": "Edw",
+      "gloss": "",
+      "mentions": 92,
+      "cache_hits": 0
+    },
+    {
+      "root": "فضل",
+      "bw": "fDl",
+      "gloss": "",
+      "mentions": 92,
+      "cache_hits": 0
+    },
+    {
+      "root": "قرب",
+      "bw": "qrb",
+      "gloss": "",
+      "mentions": 91,
+      "cache_hits": 0
+    },
+    {
+      "root": "أذن",
+      "bw": ">*n",
+      "gloss": "",
+      "mentions": 90,
+      "cache_hits": 0
+    },
+    {
+      "root": "بغي",
+      "bw": "bgy",
+      "gloss": "",
+      "mentions": 90,
+      "cache_hits": 0
+    },
+    {
+      "root": "صلو",
+      "bw": "Slw",
+      "gloss": "prayer, contact",
+      "mentions": 90,
+      "cache_hits": 1
+    },
+    {
+      "root": "صحب",
+      "bw": "SHb",
+      "gloss": "",
+      "mentions": 89,
+      "cache_hits": 0
+    },
+    {
+      "root": "دين",
+      "bw": "dyn",
+      "gloss": "",
+      "mentions": 87,
+      "cache_hits": 1
+    },
+    {
+      "root": "سبح",
+      "bw": "sbH",
+      "gloss": "",
+      "mentions": 87,
+      "cache_hits": 0
+    },
+    {
+      "root": "بعض",
+      "bw": "bED",
+      "gloss": "",
+      "mentions": 87,
+      "cache_hits": 0
+    },
+    {
+      "root": "خلد",
+      "bw": "xld",
+      "gloss": "",
+      "mentions": 86,
+      "cache_hits": 0
+    },
+    {
+      "root": "نفق",
+      "bw": "nfq",
+      "gloss": "",
+      "mentions": 86,
+      "cache_hits": 2
+    },
+    {
+      "root": "حبب",
+      "bw": "Hbb",
+      "gloss": "",
+      "mentions": 85,
+      "cache_hits": 0
+    },
+    {
+      "root": "ليس",
+      "bw": "lys",
+      "gloss": "",
+      "mentions": 85,
+      "cache_hits": 0
+    },
+    {
+      "root": "كيف",
+      "bw": "kyf",
+      "gloss": "",
+      "mentions": 83,
+      "cache_hits": 0
+    },
+    {
+      "root": "أحد",
+      "bw": ">Hd",
+      "gloss": "",
+      "mentions": 82,
+      "cache_hits": 0
+    },
+    {
+      "root": "سجد",
+      "bw": "sjd",
+      "gloss": "",
+      "mentions": 81,
+      "cache_hits": 2
+    },
+    {
+      "root": "ليل",
+      "bw": "lyl",
+      "gloss": "",
+      "mentions": 81,
+      "cache_hits": 2
+    },
+    {
+      "root": "مول",
+      "bw": "mwl",
+      "gloss": "",
+      "mentions": 80,
+      "cache_hits": 1
+    },
+    {
+      "root": "أخو",
+      "bw": ">xw",
+      "gloss": "",
+      "mentions": 80,
+      "cache_hits": 0
+    },
+    {
+      "root": "ولد",
+      "bw": "wld",
+      "gloss": "child, born",
+      "mentions": 80,
+      "cache_hits": 1
+    },
+    {
+      "root": "سوي",
+      "bw": "swy",
+      "gloss": "",
+      "mentions": 80,
+      "cache_hits": 0
+    },
+    {
+      "root": "قرأ",
+      "bw": "qr>",
+      "gloss": "",
+      "mentions": 79,
+      "cache_hits": 0
+    },
+    {
+      "root": "شطن",
+      "bw": "$Tn",
+      "gloss": "",
+      "mentions": 78,
+      "cache_hits": 1
+    },
+    {
+      "root": "نجو",
+      "bw": "njw",
+      "gloss": "",
+      "mentions": 75,
+      "cache_hits": 1
+    },
+    {
+      "root": "عقب",
+      "bw": "Eqb",
+      "gloss": "",
+      "mentions": 74,
+      "cache_hits": 0
+    },
+    {
+      "root": "قلل",
+      "bw": "qll",
+      "gloss": "",
+      "mentions": 74,
+      "cache_hits": 0
+    },
+    {
+      "root": "بلغ",
+      "bw": "blg",
+      "gloss": "",
+      "mentions": 73,
+      "cache_hits": 0
+    },
+    {
+      "root": "ألم",
+      "bw": ">lm",
+      "gloss": "",
+      "mentions": 73,
+      "cache_hits": 0
+    },
+    {
+      "root": "غني",
+      "bw": "gny",
+      "gloss": "",
+      "mentions": 72,
+      "cache_hits": 0
+    },
+    {
+      "root": "عرض",
+      "bw": "ErD",
+      "gloss": "",
+      "mentions": 72,
+      "cache_hits": 0
+    },
+    {
+      "root": "زوج",
+      "bw": "zwj",
+      "gloss": "",
+      "mentions": 72,
+      "cache_hits": 1
+    },
+    {
+      "root": "وجه",
+      "bw": "wjh",
+      "gloss": "",
+      "mentions": 71,
+      "cache_hits": 1
+    },
+    {
+      "root": "حرم",
+      "bw": "Hrm",
+      "gloss": "",
+      "mentions": 71,
+      "cache_hits": 1
+    },
+    {
+      "root": "كلم",
+      "bw": "klm",
+      "gloss": "",
+      "mentions": 71,
+      "cache_hits": 2
+    },
+    {
+      "root": "بأس",
+      "bw": "b>s",
+      "gloss": "",
+      "mentions": 70,
+      "cache_hits": 0
+    },
+    {
+      "root": "وحي",
+      "bw": "wHy",
+      "gloss": "",
+      "mentions": 70,
+      "cache_hits": 1
+    },
+    {
+      "root": "ضرر",
+      "bw": "Drr",
+      "gloss": "",
+      "mentions": 70,
+      "cache_hits": 0
+    },
+    {
+      "root": "شكر",
+      "bw": "$kr",
+      "gloss": "gratitude, thanks",
+      "mentions": 69,
+      "cache_hits": 2
+    },
+    {
+      "root": "توب",
+      "bw": "twb",
+      "gloss": "repent, repentance",
+      "mentions": 69,
+      "cache_hits": 2
+    },
+    {
+      "root": "علو",
+      "bw": "Elw",
+      "gloss": "",
+      "mentions": 68,
+      "cache_hits": 0
+    },
+    {
+      "root": "وحد",
+      "bw": "wHd",
+      "gloss": "one, unity",
+      "mentions": 67,
+      "cache_hits": 0
+    },
+    {
+      "root": "رجل",
+      "bw": "rjl",
+      "gloss": "",
+      "mentions": 66,
+      "cache_hits": 0
+    },
+    {
+      "root": "فرق",
+      "bw": "frq",
+      "gloss": "",
+      "mentions": 66,
+      "cache_hits": 0
+    },
+    {
+      "root": "سكن",
+      "bw": "skn",
+      "gloss": "",
+      "mentions": 66,
+      "cache_hits": 0
+    },
+    {
+      "root": "حمد",
+      "bw": "Hmd",
+      "gloss": "praise",
+      "mentions": 66,
+      "cache_hits": 1
+    },
+    {
+      "root": "متع",
+      "bw": "mtE",
+      "gloss": "",
+      "mentions": 65,
+      "cache_hits": 0
+    },
+    {
+      "root": "جرم",
+      "bw": "jrm",
+      "gloss": "",
+      "mentions": 65,
+      "cache_hits": 0
+    },
+    {
+      "root": "رضو",
+      "bw": "rDw",
+      "gloss": "",
+      "mentions": 64,
+      "cache_hits": 0
+    },
+    {
+      "root": "بعث",
+      "bw": "bEv",
+      "gloss": "",
+      "mentions": 64,
+      "cache_hits": 1
+    },
+    {
+      "root": "جري",
+      "bw": "jry",
+      "gloss": "",
+      "mentions": 64,
+      "cache_hits": 0
+    },
+    {
+      "root": "وفي",
+      "bw": "wfy",
+      "gloss": "",
+      "mentions": 64,
+      "cache_hits": 0
+    },
+    {
+      "root": "يمن",
+      "bw": "ymn",
+      "gloss": "",
+      "mentions": 63,
+      "cache_hits": 0
+    },
+    {
+      "root": "عرف",
+      "bw": "Erf",
+      "gloss": "",
+      "mentions": 63,
+      "cache_hits": 0
+    },
+    {
+      "root": "عين",
+      "bw": "Eyn",
+      "gloss": "",
+      "mentions": 63,
+      "cache_hits": 1
+    },
+    {
+      "root": "هلك",
+      "bw": "hlk",
+      "gloss": "",
+      "mentions": 63,
+      "cache_hits": 0
+    },
+    {
+      "root": "ذوق",
+      "bw": "*wq",
+      "gloss": "",
+      "mentions": 61,
+      "cache_hits": 2
+    },
+    {
+      "root": "تلو",
+      "bw": "tlw",
+      "gloss": "",
+      "mentions": 61,
+      "cache_hits": 0
+    },
+    {
+      "root": "موه",
+      "bw": "mwh",
+      "gloss": "",
+      "mentions": 60,
+      "cache_hits": 0
+    },
+    {
+      "root": "كسب",
+      "bw": "ksb",
+      "gloss": "",
+      "mentions": 60,
+      "cache_hits": 0
+    },
+    {
+      "root": "وكل",
+      "bw": "wkl",
+      "gloss": "",
+      "mentions": 60,
+      "cache_hits": 1
+    },
+    {
+      "root": "خسر",
+      "bw": "xsr",
+      "gloss": "",
+      "mentions": 60,
+      "cache_hits": 0
+    },
+    {
+      "root": "سحر",
+      "bw": "sHr",
+      "gloss": "",
+      "mentions": 59,
+      "cache_hits": 0
+    },
+    {
+      "root": "غيب",
+      "bw": "gyb",
+      "gloss": "",
+      "mentions": 59,
+      "cache_hits": 2
+    },
+    {
+      "root": "قضي",
+      "bw": "qDy",
+      "gloss": "",
+      "mentions": 59,
+      "cache_hits": 0
+    },
+    {
+      "root": "زيد",
+      "bw": "zyd",
+      "gloss": "",
+      "mentions": 59,
+      "cache_hits": 0
+    },
+    {
+      "root": "عود",
+      "bw": "Ewd",
+      "gloss": "",
+      "mentions": 58,
+      "cache_hits": 0
+    },
+    {
+      "root": "فتن",
+      "bw": "ftn",
+      "gloss": "trial, test",
+      "mentions": 58,
+      "cache_hits": 0
+    },
+    {
+      "root": "ردد",
+      "bw": "rdd",
+      "gloss": "",
+      "mentions": 57,
+      "cache_hits": 0
+    },
+    {
+      "root": "ظهر",
+      "bw": "Zhr",
+      "gloss": "",
+      "mentions": 57,
+      "cache_hits": 0
+    },
+    {
+      "root": "ظنن",
+      "bw": "Znn",
+      "gloss": "",
+      "mentions": 57,
+      "cache_hits": 0
+    },
+    {
+      "root": "مسس",
+      "bw": "mss",
+      "gloss": "",
+      "mentions": 57,
+      "cache_hits": 0
+    },
+    {
+      "root": "زكو",
+      "bw": "zkw",
+      "gloss": "charity, purity",
+      "mentions": 56,
+      "cache_hits": 1
+    },
+    {
+      "root": "ذهب",
+      "bw": "*hb",
+      "gloss": "",
+      "mentions": 56,
+      "cache_hits": 0
+    },
+    {
+      "root": "صوب",
+      "bw": "Swb",
+      "gloss": "",
+      "mentions": 56,
+      "cache_hits": 0
+    },
+    {
+      "root": "ضرب",
+      "bw": "Drb",
+      "gloss": "",
+      "mentions": 54,
+      "cache_hits": 0
+    },
+    {
+      "root": "قري",
+      "bw": "qry",
+      "gloss": "",
+      "mentions": 54,
+      "cache_hits": 1
+    },
+    {
+      "root": "بيت",
+      "bw": "byt",
+      "gloss": "",
+      "mentions": 54,
+      "cache_hits": 0
+    },
+    {
+      "root": "نهي",
+      "bw": "nhy",
+      "gloss": "",
+      "mentions": 54,
+      "cache_hits": 0
+    },
+    {
+      "root": "فري",
+      "bw": "fry",
+      "gloss": "",
+      "mentions": 54,
+      "cache_hits": 0
+    },
+    {
+      "root": "فسق",
+      "bw": "fsq",
+      "gloss": "",
+      "mentions": 54,
+      "cache_hits": 0
+    },
+    {
+      "root": "نسو",
+      "bw": "nsw",
+      "gloss": "",
+      "mentions": 53,
+      "cache_hits": 0
+    },
+    {
+      "root": "دور",
+      "bw": "dwr",
+      "gloss": "",
+      "mentions": 53,
+      "cache_hits": 1
+    },
+    {
+      "root": "خبر",
+      "bw": "xbr",
+      "gloss": "",
+      "mentions": 52,
+      "cache_hits": 0
+    },
+    {
+      "root": "روح",
+      "bw": "rwH",
+      "gloss": "",
+      "mentions": 52,
+      "cache_hits": 2
+    },
+    {
+      "root": "تحت",
+      "bw": "tHt",
+      "gloss": "",
+      "mentions": 50,
+      "cache_hits": 1
+    },
+    {
+      "root": "ندي",
+      "bw": "ndy",
+      "gloss": "",
+      "mentions": 50,
+      "cache_hits": 0
+    },
+    {
+      "root": "عدد",
+      "bw": "Edd",
+      "gloss": "",
+      "mentions": 50,
+      "cache_hits": 0
+    },
+    {
+      "root": "حمل",
+      "bw": "Hml",
+      "gloss": "",
+      "mentions": 50,
+      "cache_hits": 1
+    },
+    {
+      "root": "عقل",
+      "bw": "Eql",
+      "gloss": "",
+      "mentions": 49,
+      "cache_hits": 1
+    },
+    {
+      "root": "نفع",
+      "bw": "nfE",
+      "gloss": "",
+      "mentions": 49,
+      "cache_hits": 0
+    },
+    {
+      "root": "قدم",
+      "bw": "qdm",
+      "gloss": "",
+      "mentions": 48,
+      "cache_hits": 0
+    },
+    {
+      "root": "أجل",
+      "bw": ">jl",
+      "gloss": "",
+      "mentions": 48,
+      "cache_hits": 0
+    },
+    {
+      "root": "فسد",
+      "bw": "fsd",
+      "gloss": "",
+      "mentions": 47,
+      "cache_hits": 2
+    },
+    {
+      "root": "كرم",
+      "bw": "krm",
+      "gloss": "",
+      "mentions": 46,
+      "cache_hits": 1
+    },
+    {
+      "root": "طيب",
+      "bw": "Tyb",
+      "gloss": "",
+      "mentions": 46,
+      "cache_hits": 2
+    },
+    {
+      "root": "صرط",
+      "bw": "SrT",
+      "gloss": "path",
+      "mentions": 45,
+      "cache_hits": 0
+    },
+    {
+      "root": "ضعف",
+      "bw": "DEf",
+      "gloss": "",
+      "mentions": 45,
+      "cache_hits": 0
+    },
+    {
+      "root": "دبر",
+      "bw": "dbr",
+      "gloss": "",
+      "mentions": 44,
+      "cache_hits": 1
+    },
+    {
+      "root": "عجل",
+      "bw": "Ejl",
+      "gloss": "",
+      "mentions": 44,
+      "cache_hits": 0
+    },
+    {
+      "root": "سوع",
+      "bw": "swE",
+      "gloss": "",
+      "mentions": 44,
+      "cache_hits": 0
+    }
+  ],
+  "roots_by_gap": [
+    {
+      "root": "بين",
+      "bw": "byn",
+      "gloss": "",
+      "mentions": 454,
+      "cache_hits": 0
+    },
+    {
+      "root": "شيأ",
+      "bw": "$y>",
+      "gloss": "",
+      "mentions": 449,
+      "cache_hits": 0
+    },
+    {
+      "root": "أرض",
+      "bw": ">rD",
+      "gloss": "earth, land",
+      "mentions": 440,
+      "cache_hits": 0
+    },
+    {
+      "root": "كلل",
+      "bw": "kll",
+      "gloss": "",
+      "mentions": 355,
+      "cache_hits": 0
+    },
+    {
+      "root": "سمو",
+      "bw": "smw",
+      "gloss": "name, heaven, sky",
+      "mentions": 352,
+      "cache_hits": 0
+    },
+    {
+      "root": "عذب",
+      "bw": "E*b",
+      "gloss": "punish, torment",
+      "mentions": 336,
+      "cache_hits": 0
+    },
+    {
+      "root": "رأي",
+      "bw": "r>y",
+      "gloss": "",
+      "mentions": 297,
+      "cache_hits": 0
+    },
+    {
+      "root": "قبل",
+      "bw": "qbl",
+      "gloss": "",
+      "mentions": 282,
+      "cache_hits": 0
+    },
+    {
+      "root": "كتب",
+      "bw": "ktb",
+      "gloss": "write, prescribe, book",
+      "mentions": 279,
+      "cache_hits": 0
+    },
+    {
+      "root": "ذكر",
+      "bw": "*kr",
+      "gloss": "",
+      "mentions": 264,
+      "cache_hits": 0
+    },
+    {
+      "root": "حقق",
+      "bw": "Hqq",
+      "gloss": "truth, right",
+      "mentions": 263,
+      "cache_hits": 0
+    },
+    {
+      "root": "جيأ",
+      "bw": "jy>",
+      "gloss": "",
+      "mentions": 261,
+      "cache_hits": 0
+    },
+    {
+      "root": "نزل",
+      "bw": "nzl",
+      "gloss": "",
+      "mentions": 257,
+      "cache_hits": 0
+    },
+    {
+      "root": "كذب",
+      "bw": "k*b",
+      "gloss": "",
+      "mentions": 257,
+      "cache_hits": 0
+    },
+    {
+      "root": "عبد",
+      "bw": "Ebd",
+      "gloss": "worship, serve",
+      "mentions": 251,
+      "cache_hits": 0
+    },
+    {
+      "root": "أخذ",
+      "bw": ">x*",
+      "gloss": "",
+      "mentions": 244,
+      "cache_hits": 0
+    },
+    {
+      "root": "أخر",
+      "bw": ">xr",
+      "gloss": "",
+      "mentions": 242,
+      "cache_hits": 0
+    },
+    {
+      "root": "وقي",
+      "bw": "wqy",
+      "gloss": "",
+      "mentions": 237,
+      "cache_hits": 0
+    },
+    {
+      "root": "بعد",
+      "bw": "bEd",
+      "gloss": "",
+      "mentions": 223,
+      "cache_hits": 0
+    },
+    {
+      "root": "ولي",
+      "bw": "wly",
+      "gloss": "",
+      "mentions": 201,
+      "cache_hits": 0
+    },
+    {
+      "root": "ملك",
+      "bw": "mlk",
+      "gloss": "king, own, possess",
+      "mentions": 191,
+      "cache_hits": 0
+    },
+    {
+      "root": "حكم",
+      "bw": "Hkm",
+      "gloss": "",
+      "mentions": 189,
+      "cache_hits": 0
+    },
+    {
+      "root": "عند",
+      "bw": "End",
+      "gloss": "",
+      "mentions": 189,
+      "cache_hits": 0
+    },
+    {
+      "root": "صلح",
+      "bw": "SlH",
+      "gloss": "",
+      "mentions": 170,
+      "cache_hits": 0
+    },
+    {
+      "root": "حيي",
+      "bw": "Hyy",
+      "gloss": "",
+      "mentions": 166,
+      "cache_hits": 0
+    },
+    {
+      "root": "سبل",
+      "bw": "sbl",
+      "gloss": "",
+      "mentions": 164,
+      "cache_hits": 0
+    },
+    {
+      "root": "سمع",
+      "bw": "smE",
+      "gloss": "hear, listen",
+      "mentions": 163,
+      "cache_hits": 0
+    },
+    {
+      "root": "كثر",
+      "bw": "kvr",
+      "gloss": "",
+      "mentions": 162,
+      "cache_hits": 0
+    },
+    {
+      "root": "خرج",
+      "bw": "xrj",
+      "gloss": "",
+      "mentions": 157,
+      "cache_hits": 0
+    },
+    {
+      "root": "تبع",
+      "bw": "tbE",
+      "gloss": "",
+      "mentions": 156,
+      "cache_hits": 0
+    },
+    {
+      "root": "سوأ",
+      "bw": "sw>",
+      "gloss": "",
+      "mentions": 151,
+      "cache_hits": 0
+    },
+    {
+      "root": "نبأ",
+      "bw": "nb>",
+      "gloss": "prophet, news",
+      "mentions": 151,
+      "cache_hits": 0
+    },
+    {
+      "root": "بني",
+      "bw": "bny",
+      "gloss": "",
+      "mentions": 150,
+      "cache_hits": 0
+    },
+    {
+      "root": "مثل",
+      "bw": "mvl",
+      "gloss": "",
+      "mentions": 148,
+      "cache_hits": 0
+    },
+    {
+      "root": "غير",
+      "bw": "gyr",
+      "gloss": "",
+      "mentions": 146,
+      "cache_hits": 0
+    },
+    {
+      "root": "شرك",
+      "bw": "$rk",
+      "gloss": "associate, polytheism",
+      "mentions": 143,
+      "cache_hits": 0
+    },
+    {
+      "root": "دون",
+      "bw": "dwn",
+      "gloss": "",
+      "mentions": 142,
+      "cache_hits": 0
+    },
+    {
+      "root": "نصر",
+      "bw": "nSr",
+      "gloss": "",
+      "mentions": 137,
+      "cache_hits": 0
+    },
+    {
+      "root": "وعد",
+      "bw": "wEd",
+      "gloss": "",
+      "mentions": 130,
+      "cache_hits": 0
+    },
+    {
+      "root": "نعم",
+      "bw": "nEm",
+      "gloss": "blessing, grace",
+      "mentions": 128,
+      "cache_hits": 0
+    },
+    {
+      "root": "سلم",
+      "bw": "slm",
+      "gloss": "peace, submit, Islam",
+      "mentions": 127,
+      "cache_hits": 0
+    },
+    {
+      "root": "عظم",
+      "bw": "EZm",
+      "gloss": "",
+      "mentions": 126,
+      "cache_hits": 0
+    },
+    {
+      "root": "شهد",
+      "bw": "$hd",
+      "gloss": "",
+      "mentions": 123,
+      "cache_hits": 0
+    },
+    {
+      "root": "قتل",
+      "bw": "qtl",
+      "gloss": "",
+      "mentions": 122,
+      "cache_hits": 0
+    },
+    {
+      "root": "قدر",
+      "bw": "qdr",
+      "gloss": "",
+      "mentions": 121,
+      "cache_hits": 0
+    },
+    {
+      "root": "أهل",
+      "bw": ">hl",
+      "gloss": "family, people",
+      "mentions": 120,
+      "cache_hits": 0
+    },
+    {
+      "root": "رود",
+      "bw": "rwd",
+      "gloss": "",
+      "mentions": 120,
+      "cache_hits": 0
+    },
+    {
+      "root": "أول",
+      "bw": ">wl",
+      "gloss": "",
+      "mentions": 119,
+      "cache_hits": 0
+    },
+    {
+      "root": "طوع",
+      "bw": "TwE",
+      "gloss": "",
+      "mentions": 118,
+      "cache_hits": 0
+    },
+    {
+      "root": "خلف",
+      "bw": "xlf",
+      "gloss": "",
+      "mentions": 116,
+      "cache_hits": 0
+    }
+  ],
+  "concepts": [
+    {
+      "canonical": "disbelieve",
+      "verse_count": 483,
+      "kw_count": 2,
+      "cache_hits": 764
+    },
+    {
+      "canonical": "righteous",
+      "verse_count": 274,
+      "kw_count": 1,
+      "cache_hits": 923
+    },
+    {
+      "canonical": "merciful",
+      "verse_count": 254,
+      "kw_count": 2,
+      "cache_hits": 265
+    },
+    {
+      "canonical": "life",
+      "verse_count": 252,
+      "kw_count": 1,
+      "cache_hits": 810
+    },
+    {
+      "canonical": "worship",
+      "verse_count": 237,
+      "kw_count": 2,
+      "cache_hits": 703
+    },
+    {
+      "canonical": "truth",
+      "verse_count": 235,
+      "kw_count": 4,
+      "cache_hits": 690
+    },
+    {
+      "canonical": "forgive",
+      "verse_count": 225,
+      "kw_count": 3,
+      "cache_hits": 525
+    },
+    {
+      "canonical": "heaven",
+      "verse_count": 220,
+      "kw_count": 1,
+      "cache_hits": 523
+    },
+    {
+      "canonical": "revelation",
+      "verse_count": 209,
+      "kw_count": 1,
+      "cache_hits": 685
+    },
+    {
+      "canonical": "guide",
+      "verse_count": 198,
+      "kw_count": 1,
+      "cache_hits": 640
+    },
+    {
+      "canonical": "believer",
+      "verse_count": 198,
+      "kw_count": 1,
+      "cache_hits": 1335
+    },
+    {
+      "canonical": "idol",
+      "verse_count": 198,
+      "kw_count": 2,
+      "cache_hits": 388
+    },
+    {
+      "canonical": "scripture",
+      "verse_count": 195,
+      "kw_count": 1,
+      "cache_hits": 502
+    },
+    {
+      "canonical": "create",
+      "verse_count": 186,
+      "kw_count": 1,
+      "cache_hits": 599
+    },
+    {
+      "canonical": "bless",
+      "verse_count": 180,
+      "kw_count": 2,
+      "cache_hits": 627
+    },
+    {
+      "canonical": "work",
+      "verse_count": 176,
+      "kw_count": 1,
+      "cache_hits": 759
+    },
+    {
+      "canonical": "follow",
+      "verse_count": 173,
+      "kw_count": 2,
+      "cache_hits": 788
+    },
+    {
+      "canonical": "hell",
+      "verse_count": 172,
+      "kw_count": 1,
+      "cache_hits": 347
+    },
+    {
+      "canonical": "consequently",
+      "verse_count": 168,
+      "kw_count": 2,
+      "cache_hits": 218
+    },
+    {
+      "canonical": "commit",
+      "verse_count": 165,
+      "kw_count": 1,
+      "cache_hits": 363
+    },
+    {
+      "canonical": "beside",
+      "verse_count": 165,
+      "kw_count": 2,
+      "cache_hits": 247
+    },
+    {
+      "canonical": "incur",
+      "verse_count": 163,
+      "kw_count": 1,
+      "cache_hits": 264
+    },
+    {
+      "canonical": "except",
+      "verse_count": 161,
+      "kw_count": 1,
+      "cache_hits": 504
+    },
+    {
+      "canonical": "proof",
+      "verse_count": 152,
+      "kw_count": 1,
+      "cache_hits": 413
+    },
+    {
+      "canonical": "fully",
+      "verse_count": 150,
+      "kw_count": 1,
+      "cache_hits": 464
+    },
+    {
+      "canonical": "provide",
+      "verse_count": 139,
+      "kw_count": 2,
+      "cache_hits": 741
+    },
+    {
+      "canonical": "moses",
+      "verse_count": 137,
+      "kw_count": 1,
+      "cache_hits": 328
+    },
+    {
+      "canonical": "sin",
+      "verse_count": 134,
+      "kw_count": 4,
+      "cache_hits": 1377
+    },
+    {
+      "canonical": "ask",
+      "verse_count": 130,
+      "kw_count": 1,
+      "cache_hits": 584
+    },
+    {
+      "canonical": "could",
+      "verse_count": 127,
+      "kw_count": 1,
+      "cache_hits": 324
+    },
+    {
+      "canonical": "lead",
+      "verse_count": 127,
+      "kw_count": 1,
+      "cache_hits": 859
+    },
+    {
+      "canonical": "human",
+      "verse_count": 126,
+      "kw_count": 1,
+      "cache_hits": 1046
+    },
+    {
+      "canonical": "resurrection",
+      "verse_count": 126,
+      "kw_count": 2,
+      "cache_hits": 345
+    },
+    {
+      "canonical": "wish",
+      "verse_count": 122,
+      "kw_count": 2,
+      "cache_hits": 305
+    },
+    {
+      "canonical": "abide",
+      "verse_count": 120,
+      "kw_count": 1,
+      "cache_hits": 81
+    },
+    {
+      "canonical": "path",
+      "verse_count": 119,
+      "kw_count": 1,
+      "cache_hits": 464
+    },
+    {
+      "canonical": "without",
+      "verse_count": 119,
+      "kw_count": 1,
+      "cache_hits": 626
+    },
+    {
+      "canonical": "child",
+      "verse_count": 116,
+      "kw_count": 1,
+      "cache_hits": 371
+    },
+    {
+      "canonical": "possess",
+      "verse_count": 114,
+      "kw_count": 2,
+      "cache_hits": 311
+    },
+    {
+      "canonical": "belong",
+      "verse_count": 114,
+      "kw_count": 1,
+      "cache_hits": 907
+    },
+    {
+      "canonical": "hereafter",
+      "verse_count": 114,
+      "kw_count": 1,
+      "cache_hits": 472
+    },
+    {
+      "canonical": "command",
+      "verse_count": 113,
+      "kw_count": 2,
+      "cache_hits": 857
+    },
+    {
+      "canonical": "evil",
+      "verse_count": 113,
+      "kw_count": 1,
+      "cache_hits": 441
+    },
+    {
+      "canonical": "every",
+      "verse_count": 112,
+      "kw_count": 1,
+      "cache_hits": 935
+    },
+    {
+      "canonical": "better",
+      "verse_count": 112,
+      "kw_count": 1,
+      "cache_hits": 309
+    },
+    {
+      "canonical": "heart",
+      "verse_count": 110,
+      "kw_count": 1,
+      "cache_hits": 559
+    },
+    {
+      "canonical": "cause",
+      "verse_count": 110,
+      "kw_count": 1,
+      "cache_hits": 843
+    },
+    {
+      "canonical": "soul",
+      "verse_count": 108,
+      "kw_count": 1,
+      "cache_hits": 453
+    },
+    {
+      "canonical": "reveal",
+      "verse_count": 107,
+      "kw_count": 1,
+      "cache_hits": 516
+    },
+    {
+      "canonical": "observe",
+      "verse_count": 106,
+      "kw_count": 1,
+      "cache_hits": 368
+    },
+    {
+      "canonical": "quran",
+      "verse_count": 106,
+      "kw_count": 2,
+      "cache_hits": 463
+    },
+    {
+      "canonical": "aware",
+      "verse_count": 105,
+      "kw_count": 1,
+      "cache_hits": 385
+    },
+    {
+      "canonical": "reverence",
+      "verse_count": 103,
+      "kw_count": 2,
+      "cache_hits": 227
+    },
+    {
+      "canonical": "leave",
+      "verse_count": 103,
+      "kw_count": 1,
+      "cache_hits": 206
+    },
+    {
+      "canonical": "reject",
+      "verse_count": 103,
+      "kw_count": 2,
+      "cache_hits": 631
+    },
+    {
+      "canonical": "witness",
+      "verse_count": 102,
+      "kw_count": 1,
+      "cache_hits": 333
+    },
+    {
+      "canonical": "transgress",
+      "verse_count": 102,
+      "kw_count": 2,
+      "cache_hits": 370
+    },
+    {
+      "canonical": "great",
+      "verse_count": 101,
+      "kw_count": 2,
+      "cache_hits": 494
+    },
+    {
+      "canonical": "return",
+      "verse_count": 101,
+      "kw_count": 1,
+      "cache_hits": 639
+    },
+    {
+      "canonical": "night",
+      "verse_count": 101,
+      "kw_count": 1,
+      "cache_hits": 355
+    },
+    {
+      "canonical": "knowledge",
+      "verse_count": 100,
+      "kw_count": 2,
+      "cache_hits": 743
+    },
+    {
+      "canonical": "right",
+      "verse_count": 100,
+      "kw_count": 3,
+      "cache_hits": 1068
+    },
+    {
+      "canonical": "help",
+      "verse_count": 98,
+      "kw_count": 1,
+      "cache_hits": 358
+    },
+    {
+      "canonical": "whomever",
+      "verse_count": 98,
+      "kw_count": 1,
+      "cache_hits": 246
+    },
+    {
+      "canonical": "prayer",
+      "verse_count": 98,
+      "kw_count": 1,
+      "cache_hits": 573
+    },
+    {
+      "canonical": "generation",
+      "verse_count": 98,
+      "kw_count": 3,
+      "cache_hits": 131
+    },
+    {
+      "canonical": "provision",
+      "verse_count": 98,
+      "kw_count": 1,
+      "cache_hits": 406
+    },
+    {
+      "canonical": "servant",
+      "verse_count": 98,
+      "kw_count": 1,
+      "cache_hits": 284
+    },
+    {
+      "canonical": "another",
+      "verse_count": 97,
+      "kw_count": 1,
+      "cache_hits": 380
+    },
+    {
+      "canonical": "wicked",
+      "verse_count": 97,
+      "kw_count": 1,
+      "cache_hits": 228
+    },
+    {
+      "canonical": "use",
+      "verse_count": 96,
+      "kw_count": 2,
+      "cache_hits": 1405
+    },
+    {
+      "canonical": "cannot",
+      "verse_count": 96,
+      "kw_count": 1,
+      "cache_hits": 381
+    },
+    {
+      "canonical": "far",
+      "verse_count": 95,
+      "kw_count": 1,
+      "cache_hits": 348
+    },
+    {
+      "canonical": "place",
+      "verse_count": 95,
+      "kw_count": 1,
+      "cache_hits": 708
+    },
+    {
+      "canonical": "wise",
+      "verse_count": 95,
+      "kw_count": 1,
+      "cache_hits": 271
+    },
+    {
+      "canonical": "transgressor",
+      "verse_count": 95,
+      "kw_count": 1,
+      "cache_hits": 178
+    },
+    {
+      "canonical": "fear",
+      "verse_count": 94,
+      "kw_count": 3,
+      "cache_hits": 429
+    },
+    {
+      "canonical": "hear",
+      "verse_count": 94,
+      "kw_count": 1,
+      "cache_hits": 720
+    },
+    {
+      "canonical": "seek",
+      "verse_count": 93,
+      "kw_count": 1,
+      "cache_hits": 627
+    },
+    {
+      "canonical": "anything",
+      "verse_count": 93,
+      "kw_count": 1,
+      "cache_hits": 226
+    },
+    {
+      "canonical": "become",
+      "verse_count": 92,
+      "kw_count": 1,
+      "cache_hits": 419
+    },
+    {
+      "canonical": "angel",
+      "verse_count": 92,
+      "kw_count": 1,
+      "cache_hits": 321
+    },
+    {
+      "canonical": "astray",
+      "verse_count": 92,
+      "kw_count": 1,
+      "cache_hits": 173
+    },
+    {
+      "canonical": "reward",
+      "verse_count": 91,
+      "kw_count": 1,
+      "cache_hits": 720
+    },
+    {
+      "canonical": "righteousness",
+      "verse_count": 91,
+      "kw_count": 1,
+      "cache_hits": 494
+    },
+    {
+      "canonical": "promise",
+      "verse_count": 89,
+      "kw_count": 1,
+      "cache_hits": 678
+    },
+    {
+      "canonical": "receive",
+      "verse_count": 88,
+      "kw_count": 1,
+      "cache_hits": 491
+    },
+    {
+      "canonical": "grant",
+      "verse_count": 88,
+      "kw_count": 1,
+      "cache_hits": 463
+    },
+    {
+      "canonical": "almighty",
+      "verse_count": 88,
+      "kw_count": 1,
+      "cache_hits": 134
+    },
+    {
+      "canonical": "omniscient",
+      "verse_count": 88,
+      "kw_count": 1,
+      "cache_hits": 83
+    },
+    {
+      "canonical": "others",
+      "verse_count": 87,
+      "kw_count": 1,
+      "cache_hits": 466
+    },
+    {
+      "canonical": "show",
+      "verse_count": 87,
+      "kw_count": 1,
+      "cache_hits": 1245
+    },
+    {
+      "canonical": "woman",
+      "verse_count": 87,
+      "kw_count": 1,
+      "cache_hits": 86
+    },
+    {
+      "canonical": "kind",
+      "verse_count": 87,
+      "kw_count": 2,
+      "cache_hits": 327
+    },
+    {
+      "canonical": "choose",
+      "verse_count": 87,
+      "kw_count": 1,
+      "cache_hits": 179
+    },
+    {
+      "canonical": "alone",
+      "verse_count": 84,
+      "kw_count": 1,
+      "cache_hits": 460
+    },
+    {
+      "canonical": "go",
+      "verse_count": 84,
+      "kw_count": 1,
+      "cache_hits": 1588
+    },
+    {
+      "canonical": "community",
+      "verse_count": 84,
+      "kw_count": 2,
+      "cache_hits": 523
+    },
+    {
+      "canonical": "time",
+      "verse_count": 83,
+      "kw_count": 1,
+      "cache_hits": 533
+    },
+    {
+      "canonical": "news",
+      "verse_count": 82,
+      "kw_count": 1,
+      "cache_hits": 239
+    },
+    {
+      "canonical": "save",
+      "verse_count": 80,
+      "kw_count": 1,
+      "cache_hits": 218
+    },
+    {
+      "canonical": "think",
+      "verse_count": 80,
+      "kw_count": 1,
+      "cache_hits": 188
+    },
+    {
+      "canonical": "salat",
+      "verse_count": 79,
+      "kw_count": 1,
+      "cache_hits": 182
+    },
+    {
+      "canonical": "contact",
+      "verse_count": 79,
+      "kw_count": 1,
+      "cache_hits": 210
+    },
+    {
+      "canonical": "sky",
+      "verse_count": 78,
+      "kw_count": 1,
+      "cache_hits": 182
+    },
+    {
+      "canonical": "charity",
+      "verse_count": 78,
+      "kw_count": 1,
+      "cache_hits": 402
+    },
+    {
+      "canonical": "religion",
+      "verse_count": 77,
+      "kw_count": 1,
+      "cache_hits": 257
+    },
+    {
+      "canonical": "son",
+      "verse_count": 77,
+      "kw_count": 1,
+      "cache_hits": 973
+    },
+    {
+      "canonical": "painful",
+      "verse_count": 77,
+      "kw_count": 2,
+      "cache_hits": 195
+    },
+    {
+      "canonical": "message",
+      "verse_count": 77,
+      "kw_count": 1,
+      "cache_hits": 503
+    },
+    {
+      "canonical": "annihilate",
+      "verse_count": 76,
+      "kw_count": 2,
+      "cache_hits": 76
+    },
+    {
+      "canonical": "death",
+      "verse_count": 76,
+      "kw_count": 1,
+      "cache_hits": 325
+    },
+    {
+      "canonical": "devil",
+      "verse_count": 76,
+      "kw_count": 1,
+      "cache_hits": 187
+    },
+    {
+      "canonical": "live",
+      "verse_count": 76,
+      "kw_count": 1,
+      "cache_hits": 526
+    },
+    {
+      "canonical": "deserve",
+      "verse_count": 74,
+      "kw_count": 1,
+      "cache_hits": 177
+    },
+    {
+      "canonical": "eat",
+      "verse_count": 74,
+      "kw_count": 1,
+      "cache_hits": 1514
+    },
+    {
+      "canonical": "power",
+      "verse_count": 74,
+      "kw_count": 2,
+      "cache_hits": 576
+    },
+    {
+      "canonical": "destiny",
+      "verse_count": 74,
+      "kw_count": 1,
+      "cache_hits": 220
+    },
+    {
+      "canonical": "garden",
+      "verse_count": 74,
+      "kw_count": 1,
+      "cache_hits": 242
+    },
+    {
+      "canonical": "accordance",
+      "verse_count": 74,
+      "kw_count": 2,
+      "cache_hits": 129
+    },
+    {
+      "canonical": "forever",
+      "verse_count": 73,
+      "kw_count": 1,
+      "cache_hits": 125
+    },
+    {
+      "canonical": "prophet",
+      "verse_count": 73,
+      "kw_count": 1,
+      "cache_hits": 825
+    },
+    {
+      "canonical": "eye",
+      "verse_count": 73,
+      "kw_count": 1,
+      "cache_hits": 232
+    },
+    {
+      "canonical": "summon",
+      "verse_count": 72,
+      "kw_count": 2,
+      "cache_hits": 167
+    },
+    {
+      "canonical": "judgment",
+      "verse_count": 72,
+      "kw_count": 1,
+      "cache_hits": 694
+    },
+    {
+      "canonical": "abraham",
+      "verse_count": 71,
+      "kw_count": 1,
+      "cache_hits": 221
+    },
+    {
+      "canonical": "utterance",
+      "verse_count": 71,
+      "kw_count": 2,
+      "cache_hits": 84
+    },
+    {
+      "canonical": "kill",
+      "verse_count": 71,
+      "kw_count": 1,
+      "cache_hits": 245
+    },
+    {
+      "canonical": "support",
+      "verse_count": 70,
+      "kw_count": 2,
+      "cache_hits": 669
+    },
+    {
+      "canonical": "obey",
+      "verse_count": 70,
+      "kw_count": 1,
+      "cache_hits": 353
+    },
+    {
+      "canonical": "money",
+      "verse_count": 70,
+      "kw_count": 1,
+      "cache_hits": 175
+    },
+    {
+      "canonical": "requite",
+      "verse_count": 70,
+      "kw_count": 2,
+      "cache_hits": 60
+    },
+    {
+      "canonical": "towards",
+      "verse_count": 69,
+      "kw_count": 1,
+      "cache_hits": 108
+    },
+    {
+      "canonical": "pharaoh",
+      "verse_count": 69,
+      "kw_count": 1,
+      "cache_hits": 139
+    },
+    {
+      "canonical": "ultimate",
+      "verse_count": 68,
+      "kw_count": 2,
+      "cache_hits": 821
+    },
+    {
+      "canonical": "punish",
+      "verse_count": 68,
+      "kw_count": 2,
+      "cache_hits": 679
+    },
+    {
+      "canonical": "best",
+      "verse_count": 68,
+      "kw_count": 1,
+      "cache_hits": 438
+    },
+    {
+      "canonical": "paradise",
+      "verse_count": 67,
+      "kw_count": 1,
+      "cache_hits": 320
+    },
+    {
+      "canonical": "glorify",
+      "verse_count": 67,
+      "kw_count": 1,
+      "cache_hits": 124
+    },
+    {
+      "canonical": "warn",
+      "verse_count": 67,
+      "kw_count": 2,
+      "cache_hits": 921
+    },
+    {
+      "canonical": "hand",
+      "verse_count": 67,
+      "kw_count": 1,
+      "cache_hits": 214
+    },
+    {
+      "canonical": "guidance",
+      "verse_count": 67,
+      "kw_count": 1,
+      "cache_hits": 884
+    },
+    {
+      "canonical": "attain",
+      "verse_count": 66,
+      "kw_count": 2,
+      "cache_hits": 276
+    },
+    {
+      "canonical": "parent",
+      "verse_count": 66,
+      "kw_count": 1,
+      "cache_hits": 226
+    },
+    {
+      "canonical": "understand",
+      "verse_count": 66,
+      "kw_count": 1,
+      "cache_hits": 363
+    },
+    {
+      "canonical": "die",
+      "verse_count": 66,
+      "kw_count": 1,
+      "cache_hits": 776
+    },
+    {
+      "canonical": "world",
+      "verse_count": 66,
+      "kw_count": 1,
+      "cache_hits": 633
+    },
+    {
+      "canonical": "recompense",
+      "verse_count": 66,
+      "kw_count": 1,
+      "cache_hits": 297
+    },
+    {
+      "canonical": "disregard",
+      "verse_count": 66,
+      "kw_count": 1,
+      "cache_hits": 111
+    },
+    {
+      "canonical": "unless",
+      "verse_count": 65,
+      "kw_count": 1,
+      "cache_hits": 158
+    },
+    {
+      "canonical": "water",
+      "verse_count": 65,
+      "kw_count": 1,
+      "cache_hits": 196
+    },
+    {
+      "canonical": "miserable",
+      "verse_count": 65,
+      "kw_count": 1,
+      "cache_hits": 71
+    },
+    {
+      "canonical": "suffer",
+      "verse_count": 65,
+      "kw_count": 1,
+      "cache_hits": 203
+    },
+    {
+      "canonical": "brother",
+      "verse_count": 63,
+      "kw_count": 1,
+      "cache_hits": 137
+    },
+    {
+      "canonical": "appreciative",
+      "verse_count": 63,
+      "kw_count": 3,
+      "cache_hits": 137
+    },
+    {
+      "canonical": "doubt",
+      "verse_count": 63,
+      "kw_count": 2,
+      "cache_hits": 202
+    },
+    {
+      "canonical": "way",
+      "verse_count": 62,
+      "kw_count": 1,
+      "cache_hits": 752
+    },
+    {
+      "canonical": "produce",
+      "verse_count": 62,
+      "kw_count": 1,
+      "cache_hits": 261
+    },
+    {
+      "canonical": "example",
+      "verse_count": 62,
+      "kw_count": 1,
+      "cache_hits": 432
+    },
+    {
+      "canonical": "face",
+      "verse_count": 62,
+      "kw_count": 1,
+      "cache_hits": 553
+    },
+    {
+      "canonical": "implore",
+      "verse_count": 62,
+      "kw_count": 1,
+      "cache_hits": 136
+    },
+    {
+      "canonical": "law",
+      "verse_count": 60,
+      "kw_count": 2,
+      "cache_hits": 429
+    },
+    {
+      "canonical": "condemn",
+      "verse_count": 60,
+      "kw_count": 2,
+      "cache_hits": 389
+    },
+    {
+      "canonical": "enter",
+      "verse_count": 60,
+      "kw_count": 1,
+      "cache_hits": 307
+    },
+    {
+      "canonical": "heed",
+      "verse_count": 60,
+      "kw_count": 1,
+      "cache_hits": 246
+    },
+    {
+      "canonical": "land",
+      "verse_count": 59,
+      "kw_count": 1,
+      "cache_hits": 237
+    },
+    {
+      "canonical": "peace",
+      "verse_count": 59,
+      "kw_count": 2,
+      "cache_hits": 312
+    },
+    {
+      "canonical": "note",
+      "verse_count": 59,
+      "kw_count": 1,
+      "cache_hits": 460
+    },
+    {
+      "canonical": "family",
+      "verse_count": 59,
+      "kw_count": 1,
+      "cache_hits": 232
+    },
+    {
+      "canonical": "past",
+      "verse_count": 59,
+      "kw_count": 1,
+      "cache_hits": 184
+    },
+    {
+      "canonical": "repent",
+      "verse_count": 59,
+      "kw_count": 3,
+      "cache_hits": 292
+    },
+    {
+      "canonical": "end",
+      "verse_count": 58,
+      "kw_count": 1,
+      "cache_hits": 1300
+    },
+    {
+      "canonical": "sign",
+      "verse_count": 58,
+      "kw_count": 1,
+      "cache_hits": 976
+    },
+    {
+      "canonical": "gracious",
+      "verse_count": 57,
+      "kw_count": 1,
+      "cache_hits": 125
+    },
+    {
+      "canonical": "control",
+      "verse_count": 57,
+      "kw_count": 1,
+      "cache_hits": 298
+    },
+    {
+      "canonical": "instead",
+      "verse_count": 57,
+      "kw_count": 1,
+      "cache_hits": 130
+    },
+    {
+      "canonical": "shower",
+      "verse_count": 57,
+      "kw_count": 1,
+      "cache_hits": 116
+    },
+    {
+      "canonical": "universe",
+      "verse_count": 56,
+      "kw_count": 1,
+      "cache_hits": 185
+    },
+    {
+      "canonical": "fall",
+      "verse_count": 56,
+      "kw_count": 1,
+      "cache_hits": 345
+    },
+    {
+      "canonical": "home",
+      "verse_count": 55,
+      "kw_count": 1,
+      "cache_hits": 362
+    },
+    {
+      "canonical": "decree",
+      "verse_count": 55,
+      "kw_count": 1,
+      "cache_hits": 321
+    },
+    {
+      "canonical": "test",
+      "verse_count": 55,
+      "kw_count": 1,
+      "cache_hits": 774
+    },
+    {
+      "canonical": "arrogant",
+      "verse_count": 55,
+      "kw_count": 2,
+      "cache_hits": 167
+    },
+    {
+      "canonical": "proclaim",
+      "verse_count": 54,
+      "kw_count": 1,
+      "cache_hits": 137
+    },
+    {
+      "canonical": "recite",
+      "verse_count": 54,
+      "kw_count": 1,
+      "cache_hits": 236
+    },
+    {
+      "canonical": "love",
+      "verse_count": 54,
+      "kw_count": 1,
+      "cache_hits": 263
+    },
+    {
+      "canonical": "matter",
+      "verse_count": 54,
+      "kw_count": 1,
+      "cache_hits": 392
+    },
+    {
+      "canonical": "fight",
+      "verse_count": 54,
+      "kw_count": 1,
+      "cache_hits": 152
+    },
+    {
+      "canonical": "wrong",
+      "verse_count": 53,
+      "kw_count": 1,
+      "cache_hits": 255
+    },
+    {
+      "canonical": "enemy",
+      "verse_count": 53,
+      "kw_count": 1,
+      "cache_hits": 108
+    },
+    {
+      "canonical": "accept",
+      "verse_count": 53,
+      "kw_count": 3,
+      "cache_hits": 393
+    },
+    {
+      "canonical": "prostrate",
+      "verse_count": 53,
+      "kw_count": 3,
+      "cache_hits": 169
+    },
+    {
+      "canonical": "whose",
+      "verse_count": 53,
+      "kw_count": 1,
+      "cache_hits": 414
+    },
+    {
+      "canonical": "throw",
+      "verse_count": 52,
+      "kw_count": 1,
+      "cache_hits": 68
+    },
+    {
+      "canonical": "full",
+      "verse_count": 52,
+      "kw_count": 1,
+      "cache_hits": 681
+    },
+    {
+      "canonical": "fact",
+      "verse_count": 52,
+      "kw_count": 1,
+      "cache_hits": 142
+    },
+    {
+      "canonical": "deliver",
+      "verse_count": 51,
+      "kw_count": 1,
+      "cache_hits": 187
+    },
+    {
+      "canonical": "honorable",
+      "verse_count": 50,
+      "kw_count": 2,
+      "cache_hits": 102
+    },
+    {
+      "canonical": "previous",
+      "verse_count": 50,
+      "kw_count": 1,
+      "cache_hits": 262
+    },
+    {
+      "canonical": "seer",
+      "verse_count": 50,
+      "kw_count": 1,
+      "cache_hits": 82
+    },
+    {
+      "canonical": "remember",
+      "verse_count": 50,
+      "kw_count": 1,
+      "cache_hits": 270
+    },
+    {
+      "canonical": "order",
+      "verse_count": 49,
+      "kw_count": 1,
+      "cache_hits": 449
+    },
+    {
+      "canonical": "father",
+      "verse_count": 49,
+      "kw_count": 1,
+      "cache_hits": 129
+    },
+    {
+      "canonical": "reminder",
+      "verse_count": 49,
+      "kw_count": 2,
+      "cache_hits": 310
+    },
+    {
+      "canonical": "last",
+      "verse_count": 48,
+      "kw_count": 1,
+      "cache_hits": 284
+    },
+    {
+      "canonical": "meet",
+      "verse_count": 48,
+      "kw_count": 1,
+      "cache_hits": 145
+    },
+    {
+      "canonical": "drink",
+      "verse_count": 48,
+      "kw_count": 1,
+      "cache_hits": 95
+    },
+    {
+      "canonical": "inform",
+      "verse_count": 48,
+      "kw_count": 2,
+      "cache_hits": 123
+    },
+    {
+      "canonical": "devote",
+      "verse_count": 48,
+      "kw_count": 2,
+      "cache_hits": 124
+    },
+    {
+      "canonical": "dead",
+      "verse_count": 48,
+      "kw_count": 1,
+      "cache_hits": 211
+    },
+    {
+      "canonical": "hearer",
+      "verse_count": 48,
+      "kw_count": 1,
+      "cache_hits": 86
+    },
+    {
+      "canonical": "creation",
+      "verse_count": 48,
+      "kw_count": 1,
+      "cache_hits": 548
+    },
+    {
+      "canonical": "fabricate",
+      "verse_count": 48,
+      "kw_count": 3,
+      "cache_hits": 98
+    },
+    {
+      "canonical": "lest",
+      "verse_count": 48,
+      "kw_count": 1,
+      "cache_hits": 262
+    },
+    {
+      "canonical": "men",
+      "verse_count": 47,
+      "kw_count": 1,
+      "cache_hits": 1578
+    },
+    {
+      "canonical": "scheme",
+      "verse_count": 47,
+      "kw_count": 1,
+      "cache_hits": 74
+    },
+    {
+      "canonical": "fulfill",
+      "verse_count": 47,
+      "kw_count": 3,
+      "cache_hits": 298
+    },
+    {
+      "canonical": "certain",
+      "verse_count": 47,
+      "kw_count": 1,
+      "cache_hits": 398
+    },
+    {
+      "canonical": "together",
+      "verse_count": 47,
+      "kw_count": 1,
+      "cache_hits": 731
+    },
+    {
+      "canonical": "equitably",
+      "verse_count": 47,
+      "kw_count": 2,
+      "cache_hits": 86
+    },
+    {
+      "canonical": "victory",
+      "verse_count": 47,
+      "kw_count": 1,
+      "cache_hits": 154
+    },
+    {
+      "canonical": "dispute",
+      "verse_count": 47,
+      "kw_count": 1,
+      "cache_hits": 177
+    },
+    {
+      "canonical": "protect",
+      "verse_count": 46,
+      "kw_count": 2,
+      "cache_hits": 514
+    },
+    {
+      "canonical": "name",
+      "verse_count": 46,
+      "kw_count": 1,
+      "cache_hits": 423
+    },
+    {
+      "canonical": "lot",
+      "verse_count": 46,
+      "kw_count": 1,
+      "cache_hits": 217
+    },
+    {
+      "canonical": "bear",
+      "verse_count": 46,
+      "kw_count": 1,
+      "cache_hits": 284
+    },
+    {
+      "canonical": "trust",
+      "verse_count": 46,
+      "kw_count": 1,
+      "cache_hits": 398
+    },
+    {
+      "canonical": "light",
+      "verse_count": 46,
+      "kw_count": 1,
+      "cache_hits": 1193
+    },
+    {
+      "canonical": "look",
+      "verse_count": 46,
+      "kw_count": 1,
+      "cache_hits": 129
+    },
+    {
+      "canonical": "stay",
+      "verse_count": 46,
+      "kw_count": 1,
+      "cache_hits": 149
+    },
+    {
+      "canonical": "warner",
+      "verse_count": 46,
+      "kw_count": 1,
+      "cache_hits": 85
+    },
+    {
+      "canonical": "flow",
+      "verse_count": 45,
+      "kw_count": 1,
+      "cache_hits": 149
+    },
+    {
+      "canonical": "master",
+      "verse_count": 45,
+      "kw_count": 1,
+      "cache_hits": 92
+    },
+    {
+      "canonical": "man",
+      "verse_count": 45,
+      "kw_count": 1,
+      "cache_hits": 1577
+    },
+    {
+      "canonical": "loser",
+      "verse_count": 44,
+      "kw_count": 1,
+      "cache_hits": 134
+    },
+    {
+      "canonical": "inspire",
+      "verse_count": 44,
+      "kw_count": 2,
+      "cache_hits": 100
+    },
+    {
+      "canonical": "cognizant",
+      "verse_count": 44,
+      "kw_count": 1,
+      "cache_hits": 54
+    },
+    {
+      "canonical": "prohibit",
+      "verse_count": 44,
+      "kw_count": 2,
+      "cache_hits": 340
+    },
+    {
+      "canonical": "clear",
+      "verse_count": 44,
+      "kw_count": 1,
+      "cache_hits": 653
+    },
+    {
+      "canonical": "judge",
+      "verse_count": 44,
+      "kw_count": 1,
+      "cache_hits": 259
+    },
+    {
+      "canonical": "redeem",
+      "verse_count": 44,
+      "kw_count": 2,
+      "cache_hits": 121
+    },
+    {
+      "canonical": "lie",
+      "verse_count": 44,
+      "kw_count": 1,
+      "cache_hits": 1528
+    },
+    {
+      "canonical": "benefit",
+      "verse_count": 43,
+      "kw_count": 1,
+      "cache_hits": 329
+    },
+    {
+      "canonical": "noah",
+      "verse_count": 43,
+      "kw_count": 1,
+      "cache_hits": 148
+    },
+    {
+      "canonical": "grace",
+      "verse_count": 43,
+      "kw_count": 1,
+      "cache_hits": 134
+    },
+    {
+      "canonical": "profound",
+      "verse_count": 43,
+      "kw_count": 1,
+      "cache_hits": 111
+    },
+    {
+      "canonical": "omnipotent",
+      "verse_count": 43,
+      "kw_count": 1,
+      "cache_hits": 39
+    },
+    {
+      "canonical": "teach",
+      "verse_count": 43,
+      "kw_count": 2,
+      "cache_hits": 568
+    },
+    {
+      "canonical": "praise",
+      "verse_count": 43,
+      "kw_count": 1,
+      "cache_hits": 293
+    },
+    {
+      "canonical": "record",
+      "verse_count": 43,
+      "kw_count": 1,
+      "cache_hits": 316
+    },
+    {
+      "canonical": "carry",
+      "verse_count": 43,
+      "kw_count": 1,
+      "cache_hits": 107
+    },
+    {
+      "canonical": "israel",
+      "verse_count": 43,
+      "kw_count": 1,
+      "cache_hits": 185
+    },
+    {
+      "canonical": "severe",
+      "verse_count": 43,
+      "kw_count": 4,
+      "cache_hits": 363
+    },
+    {
+      "canonical": "bestow",
+      "verse_count": 42,
+      "kw_count": 1,
+      "cache_hits": 176
+    },
+    {
+      "canonical": "least",
+      "verse_count": 42,
+      "kw_count": 1,
+      "cache_hits": 182
+    },
+    {
+      "canonical": "must",
+      "verse_count": 42,
+      "kw_count": 1,
+      "cache_hits": 530
+    },
+    {
+      "canonical": "woe",
+      "verse_count": 42,
+      "kw_count": 1,
+      "cache_hits": 89
+    },
+    {
+      "canonical": "regard",
+      "verse_count": 42,
+      "kw_count": 1,
+      "cache_hits": 293
+    },
+    {
+      "canonical": "fire",
+      "verse_count": 42,
+      "kw_count": 1,
+      "cache_hits": 281
+    },
+    {
+      "canonical": "around",
+      "verse_count": 42,
+      "kw_count": 1,
+      "cache_hits": 123
+    },
+    {
+      "canonical": "recall",
+      "verse_count": 42,
+      "kw_count": 1,
+      "cache_hits": 111
+    },
+    {
+      "canonical": "invite",
+      "verse_count": 41,
+      "kw_count": 2,
+      "cache_hits": 273
+    },
+    {
+      "canonical": "continue",
+      "verse_count": 41,
+      "kw_count": 3,
+      "cache_hits": 181
+    },
+    {
+      "canonical": "realize",
+      "verse_count": 41,
+      "kw_count": 1,
+      "cache_hits": 75
+    },
+    {
+      "canonical": "long",
+      "verse_count": 41,
+      "kw_count": 1,
+      "cache_hits": 1053
+    },
+    {
+      "canonical": "submitter",
+      "verse_count": 41,
+      "kw_count": 1,
+      "cache_hits": 122
+    },
+    {
+      "canonical": "first",
+      "verse_count": 41,
+      "kw_count": 1,
+      "cache_hits": 306
+    },
+    {
+      "canonical": "mountain",
+      "verse_count": 41,
+      "kw_count": 1,
+      "cache_hits": 155
+    },
+    {
+      "canonical": "afflict",
+      "verse_count": 40,
+      "kw_count": 2,
+      "cache_hits": 106
+    },
+    {
+      "canonical": "guilty",
+      "verse_count": 40,
+      "kw_count": 1,
+      "cache_hits": 75
+    },
+    {
+      "canonical": "word",
+      "verse_count": 40,
+      "kw_count": 1,
+      "cache_hits": 1302
+    },
+    {
+      "canonical": "strike",
+      "verse_count": 40,
+      "kw_count": 1,
+      "cache_hits": 97
+    },
+    {
+      "canonical": "pay",
+      "verse_count": 40,
+      "kw_count": 1,
+      "cache_hits": 111
+    },
+    {
+      "canonical": "submit",
+      "verse_count": 40,
+      "kw_count": 1,
+      "cache_hits": 248
+    },
+    {
+      "canonical": "responsible",
+      "verse_count": 40,
+      "kw_count": 3,
+      "cache_hits": 74
+    },
+    {
+      "canonical": "steadfastly",
+      "verse_count": 40,
+      "kw_count": 1,
+      "cache_hits": 100
+    },
+    {
+      "canonical": "swear",
+      "verse_count": 40,
+      "kw_count": 1,
+      "cache_hits": 108
+    },
+    {
+      "canonical": "deny",
+      "verse_count": 40,
+      "kw_count": 1,
+      "cache_hits": 136
+    },
+    {
+      "canonical": "force",
+      "verse_count": 39,
+      "kw_count": 1,
+      "cache_hits": 1023
+    },
+    {
+      "canonical": "miracle",
+      "verse_count": 39,
+      "kw_count": 1,
+      "cache_hits": 211
+    },
+    {
+      "canonical": "though",
+      "verse_count": 39,
+      "kw_count": 1,
+      "cache_hits": 655
+    },
+    {
+      "canonical": "declare",
+      "verse_count": 39,
+      "kw_count": 2,
+      "cache_hits": 331
+    },
+    {
+      "canonical": "soon",
+      "verse_count": 39,
+      "kw_count": 1,
+      "cache_hits": 49
+    },
+    {
+      "canonical": "prepare",
+      "verse_count": 39,
+      "kw_count": 2,
+      "cache_hits": 158
+    },
+    {
+      "canonical": "establish",
+      "verse_count": 39,
+      "kw_count": 1,
+      "cache_hits": 623
+    },
+    {
+      "canonical": "eternal",
+      "verse_count": 39,
+      "kw_count": 3,
+      "cache_hits": 407
+    },
+    {
+      "canonical": "fruit",
+      "verse_count": 39,
+      "kw_count": 1,
+      "cache_hits": 128
+    },
+    {
+      "canonical": "stand",
+      "verse_count": 39,
+      "kw_count": 1,
+      "cache_hits": 628
+    },
+    {
+      "canonical": "want",
+      "verse_count": 39,
+      "kw_count": 1,
+      "cache_hits": 63
+    },
+    {
+      "canonical": "sufficient",
+      "verse_count": 38,
+      "kw_count": 2,
+      "cache_hits": 184
+    },
+    {
+      "canonical": "hour",
+      "verse_count": 38,
+      "kw_count": 1,
+      "cache_hits": 139
+    },
+    {
+      "canonical": "poor",
+      "verse_count": 38,
+      "kw_count": 1,
+      "cache_hits": 169
+    },
+    {
+      "canonical": "earn",
+      "verse_count": 38,
+      "kw_count": 2,
+      "cache_hits": 314
+    },
+    {
+      "canonical": "disbelief",
+      "verse_count": 38,
+      "kw_count": 1,
+      "cache_hits": 332
+    },
+    {
+      "canonical": "injustice",
+      "verse_count": 38,
+      "kw_count": 1,
+      "cache_hits": 224
+    },
+    {
+      "canonical": "stream",
+      "verse_count": 38,
+      "kw_count": 1,
+      "cache_hits": 91
+    },
+    {
+      "canonical": "reach",
+      "verse_count": 38,
+      "kw_count": 1,
+      "cache_hits": 302
+    },
+    {
+      "canonical": "substitute",
+      "verse_count": 38,
+      "kw_count": 1,
+      "cache_hits": 96
+    },
+    {
+      "canonical": "terrible",
+      "verse_count": 38,
+      "kw_count": 1,
+      "cache_hits": 42
+    },
+    {
+      "canonical": "uphold",
+      "verse_count": 38,
+      "kw_count": 1,
+      "cache_hits": 206
+    },
+    {
+      "canonical": "book",
+      "verse_count": 38,
+      "kw_count": 1,
+      "cache_hits": 278
+    },
+    {
+      "canonical": "lesson",
+      "verse_count": 38,
+      "kw_count": 1,
+      "cache_hits": 239
+    },
+    {
+      "canonical": "predetermine",
+      "verse_count": 38,
+      "kw_count": 1,
+      "cache_hits": 90
+    },
+    {
+      "canonical": "enjoy",
+      "verse_count": 38,
+      "kw_count": 1,
+      "cache_hits": 105
+    },
+    {
+      "canonical": "expect",
+      "verse_count": 37,
+      "kw_count": 1,
+      "cache_hits": 170
+    },
+    {
+      "canonical": "advocate",
+      "verse_count": 37,
+      "kw_count": 1,
+      "cache_hits": 112
+    },
+    {
+      "canonical": "need",
+      "verse_count": 37,
+      "kw_count": 1,
+      "cache_hits": 396
+    },
+    {
+      "canonical": "due",
+      "verse_count": 37,
+      "kw_count": 1,
+      "cache_hits": 158
+    },
+    {
+      "canonical": "admit",
+      "verse_count": 37,
+      "kw_count": 1,
+      "cache_hits": 140
+    },
+    {
+      "canonical": "fail",
+      "verse_count": 37,
+      "kw_count": 1,
+      "cache_hits": 342
+    },
+    {
+      "canonical": "secret",
+      "verse_count": 36,
+      "kw_count": 1,
+      "cache_hits": 136
+    },
+    {
+      "canonical": "behind",
+      "verse_count": 36,
+      "kw_count": 1,
+      "cache_hits": 164
+    },
+    {
+      "canonical": "decision",
+      "verse_count": 36,
+      "kw_count": 1,
+      "cache_hits": 111
+    },
+    {
+      "canonical": "humiliate",
+      "verse_count": 36,
+      "kw_count": 2,
+      "cache_hits": 24
+    },
+    {
+      "canonical": "initiate",
+      "verse_count": 36,
+      "kw_count": 3,
+      "cache_hits": 91
+    },
+    {
+      "canonical": "pas",
+      "verse_count": 36,
+      "kw_count": 1,
+      "cache_hits": 800
+    },
+    {
+      "canonical": "covenant",
+      "verse_count": 36,
+      "kw_count": 1,
+      "cache_hits": 311
+    },
+    {
+      "canonical": "argue",
+      "verse_count": 36,
+      "kw_count": 1,
+      "cache_hits": 102
+    },
+    {
+      "canonical": "blow",
+      "verse_count": 35,
+      "kw_count": 1,
+      "cache_hits": 95
+    },
+    {
+      "canonical": "wisdom",
+      "verse_count": 35,
+      "kw_count": 1,
+      "cache_hits": 288
+    },
+    {
+      "canonical": "food",
+      "verse_count": 35,
+      "kw_count": 1,
+      "cache_hits": 138
+    },
+    {
+      "canonical": "saw",
+      "verse_count": 35,
+      "kw_count": 1,
+      "cache_hits": 73
+    },
+    {
+      "canonical": "conceal",
+      "verse_count": 35,
+      "kw_count": 1,
+      "cache_hits": 148
+    },
+    {
+      "canonical": "persevere",
+      "verse_count": 35,
+      "kw_count": 1,
+      "cache_hits": 160
+    },
+    {
+      "canonical": "respond",
+      "verse_count": 35,
+      "kw_count": 1,
+      "cache_hits": 196
+    },
+    {
+      "canonical": "strive",
+      "verse_count": 35,
+      "kw_count": 1,
+      "cache_hits": 151
+    },
+    {
+      "canonical": "perfect",
+      "verse_count": 35,
+      "kw_count": 1,
+      "cache_hits": 261
+    },
+    {
+      "canonical": "really",
+      "verse_count": 35,
+      "kw_count": 1,
+      "cache_hits": 17
+    },
+    {
+      "canonical": "design",
+      "verse_count": 35,
+      "kw_count": 3,
+      "cache_hits": 201
+    },
+    {
+      "canonical": "share",
+      "verse_count": 35,
+      "kw_count": 1,
+      "cache_hits": 442
+    },
+    {
+      "canonical": "speak",
+      "verse_count": 35,
+      "kw_count": 1,
+      "cache_hits": 683
+    },
+    {
+      "canonical": "liar",
+      "verse_count": 35,
+      "kw_count": 1,
+      "cache_hits": 92
+    },
+    {
+      "canonical": "appoint",
+      "verse_count": 35,
+      "kw_count": 2,
+      "cache_hits": 220
+    },
+    {
+      "canonical": "sea",
+      "verse_count": 34,
+      "kw_count": 1,
+      "cache_hits": 1219
+    },
+    {
+      "canonical": "blind",
+      "verse_count": 34,
+      "kw_count": 2,
+      "cache_hits": 153
+    },
+    {
+      "canonical": "knower",
+      "verse_count": 34,
+      "kw_count": 1,
+      "cache_hits": 64
+    },
+    {
+      "canonical": "wait",
+      "verse_count": 34,
+      "kw_count": 1,
+      "cache_hits": 218
+    },
+    {
+      "canonical": "sacred",
+      "verse_count": 34,
+      "kw_count": 1,
+      "cache_hits": 173
+    },
+    {
+      "canonical": "challenge",
+      "verse_count": 34,
+      "kw_count": 1,
+      "cache_hits": 210
+    },
+    {
+      "canonical": "marvel",
+      "verse_count": 34,
+      "kw_count": 1,
+      "cache_hits": 22
+    },
+    {
+      "canonical": "enlighten",
+      "verse_count": 34,
+      "kw_count": 2,
+      "cache_hits": 75
+    },
+    {
+      "canonical": "however",
+      "verse_count": 33,
+      "kw_count": 1,
+      "cache_hits": 90
+    },
+    {
+      "canonical": "maintain",
+      "verse_count": 33,
+      "kw_count": 1,
+      "cache_hits": 249
+    },
+    {
+      "canonical": "hide",
+      "verse_count": 33,
+      "kw_count": 1,
+      "cache_hits": 51
+    },
+    {
+      "canonical": "creature",
+      "verse_count": 33,
+      "kw_count": 1,
+      "cache_hits": 169
+    },
+    {
+      "canonical": "ignorant",
+      "verse_count": 33,
+      "kw_count": 3,
+      "cache_hits": 41
+    },
+    {
+      "canonical": "render",
+      "verse_count": 33,
+      "kw_count": 1,
+      "cache_hits": 265
+    },
+    {
+      "canonical": "mind",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 540
+    },
+    {
+      "canonical": "sun",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 223
+    },
+    {
+      "canonical": "neither",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 94
+    },
+    {
+      "canonical": "wife",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 90
+    },
+    {
+      "canonical": "dweller",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 78
+    },
+    {
+      "canonical": "final",
+      "verse_count": 32,
+      "kw_count": 2,
+      "cache_hits": 645
+    },
+    {
+      "canonical": "tree",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 105
+    },
+    {
+      "canonical": "claim",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 557
+    },
+    {
+      "canonical": "hellfire",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 44
+    },
+    {
+      "canonical": "mother",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 123
+    },
+    {
+      "canonical": "divert",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 79
+    },
+    {
+      "canonical": "jesus",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 153
+    },
+    {
+      "canonical": "unappreciative",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 51
+    },
+    {
+      "canonical": "mary",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 416
+    },
+    {
+      "canonical": "raise",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 442
+    },
+    {
+      "canonical": "specific",
+      "verse_count": 31,
+      "kw_count": 2,
+      "cache_hits": 478
+    },
+    {
+      "canonical": "worst",
+      "verse_count": 31,
+      "kw_count": 1,
+      "cache_hits": 70
+    },
+    {
+      "canonical": "joseph",
+      "verse_count": 31,
+      "kw_count": 1,
+      "cache_hits": 96
+    },
+    {
+      "canonical": "subsequently",
+      "verse_count": 31,
+      "kw_count": 2,
+      "cache_hits": 20
+    },
+    {
+      "canonical": "high",
+      "verse_count": 31,
+      "kw_count": 1,
+      "cache_hits": 1133
+    },
+    {
+      "canonical": "whether",
+      "verse_count": 31,
+      "kw_count": 1,
+      "cache_hits": 288
+    },
+    {
+      "canonical": "authority",
+      "verse_count": 31,
+      "kw_count": 4,
+      "cache_hits": 383
+    },
+    {
+      "canonical": "group",
+      "verse_count": 31,
+      "kw_count": 1,
+      "cache_hits": 431
+    },
+    {
+      "canonical": "side",
+      "verse_count": 31,
+      "kw_count": 1,
+      "cache_hits": 585
+    },
+    {
+      "canonical": "listen",
+      "verse_count": 31,
+      "kw_count": 1,
+      "cache_hits": 175
+    },
+    {
+      "canonical": "part",
+      "verse_count": 31,
+      "kw_count": 1,
+      "cache_hits": 848
+    },
+    {
+      "canonical": "harm",
+      "verse_count": 31,
+      "kw_count": 2,
+      "cache_hits": 281
+    },
+    {
+      "canonical": "therefrom",
+      "verse_count": 31,
+      "kw_count": 1,
+      "cache_hits": 35
+    },
+    {
+      "canonical": "please",
+      "verse_count": 31,
+      "kw_count": 1,
+      "cache_hits": 86
+    },
+    {
+      "canonical": "leader",
+      "verse_count": 30,
+      "kw_count": 1,
+      "cache_hits": 127
+    },
+    {
+      "canonical": "zakat",
+      "verse_count": 30,
+      "kw_count": 1,
+      "cache_hits": 130
+    },
+    {
+      "canonical": "decide",
+      "verse_count": 30,
+      "kw_count": 1,
+      "cache_hits": 64
+    },
+    {
+      "canonical": "person",
+      "verse_count": 30,
+      "kw_count": 3,
+      "cache_hits": 586
+    },
+    {
+      "canonical": "true",
+      "verse_count": 30,
+      "kw_count": 1,
+      "cache_hits": 555
+    },
+    {
+      "canonical": "inevitable",
+      "verse_count": 30,
+      "kw_count": 2,
+      "cache_hits": 175
+    },
+    {
+      "canonical": "jinns",
+      "verse_count": 30,
+      "kw_count": 1,
+      "cache_hits": 71
+    },
+    {
+      "canonical": "female",
+      "verse_count": 30,
+      "kw_count": 1,
+      "cache_hits": 82
+    },
+    {
+      "canonical": "touch",
+      "verse_count": 30,
+      "kw_count": 1,
+      "cache_hits": 108
+    },
+    {
+      "canonical": "serve",
+      "verse_count": 30,
+      "kw_count": 1,
+      "cache_hits": 969
+    },
+    {
+      "canonical": "disobey",
+      "verse_count": 29,
+      "kw_count": 1,
+      "cache_hits": 81
+    },
+    {
+      "canonical": "defeat",
+      "verse_count": 29,
+      "kw_count": 1,
+      "cache_hits": 91
+    },
+    {
+      "canonical": "forget",
+      "verse_count": 29,
+      "kw_count": 1,
+      "cache_hits": 115
+    },
+    {
+      "canonical": "explain",
+      "verse_count": 29,
+      "kw_count": 1,
+      "cache_hits": 219
+    },
+    {
+      "canonical": "bad",
+      "verse_count": 29,
+      "kw_count": 1,
+      "cache_hits": 141
+    },
+    {
+      "canonical": "persecute",
+      "verse_count": 29,
+      "kw_count": 2,
+      "cache_hits": 37
+    },
+    {
+      "canonical": "darkness",
+      "verse_count": 29,
+      "kw_count": 2,
+      "cache_hits": 121
+    },
+    {
+      "canonical": "treat",
+      "verse_count": 29,
+      "kw_count": 1,
+      "cache_hits": 401
+    },
+    {
+      "canonical": "roam",
+      "verse_count": 29,
+      "kw_count": 1,
+      "cache_hits": 75
+    },
+    {
+      "canonical": "steadfast",
+      "verse_count": 29,
+      "kw_count": 2,
+      "cache_hits": 335
+    },
+    {
+      "canonical": "harbor",
+      "verse_count": 29,
+      "kw_count": 1,
+      "cache_hits": 59
+    },
+    {
+      "canonical": "taste",
+      "verse_count": 29,
+      "kw_count": 1,
+      "cache_hits": 95
+    },
+    {
+      "canonical": "obligatory",
+      "verse_count": 29,
+      "kw_count": 1,
+      "cache_hits": 133
+    },
+    {
+      "canonical": "wind",
+      "verse_count": 28,
+      "kw_count": 1,
+      "cache_hits": 116
+    }
+  ],
+  "concepts_by_gap": [
+    {
+      "canonical": "really",
+      "verse_count": 35,
+      "kw_count": 1,
+      "cache_hits": 17
+    },
+    {
+      "canonical": "subsequently",
+      "verse_count": 31,
+      "kw_count": 2,
+      "cache_hits": 20
+    },
+    {
+      "canonical": "marvel",
+      "verse_count": 34,
+      "kw_count": 1,
+      "cache_hits": 22
+    },
+    {
+      "canonical": "humiliate",
+      "verse_count": 36,
+      "kw_count": 2,
+      "cache_hits": 24
+    },
+    {
+      "canonical": "therefrom",
+      "verse_count": 31,
+      "kw_count": 1,
+      "cache_hits": 35
+    },
+    {
+      "canonical": "persecute",
+      "verse_count": 29,
+      "kw_count": 2,
+      "cache_hits": 37
+    },
+    {
+      "canonical": "omnipotent",
+      "verse_count": 43,
+      "kw_count": 1,
+      "cache_hits": 39
+    },
+    {
+      "canonical": "ignorant",
+      "verse_count": 33,
+      "kw_count": 3,
+      "cache_hits": 41
+    },
+    {
+      "canonical": "terrible",
+      "verse_count": 38,
+      "kw_count": 1,
+      "cache_hits": 42
+    },
+    {
+      "canonical": "hellfire",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 44
+    },
+    {
+      "canonical": "soon",
+      "verse_count": 39,
+      "kw_count": 1,
+      "cache_hits": 49
+    },
+    {
+      "canonical": "hide",
+      "verse_count": 33,
+      "kw_count": 1,
+      "cache_hits": 51
+    },
+    {
+      "canonical": "unappreciative",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 51
+    },
+    {
+      "canonical": "cognizant",
+      "verse_count": 44,
+      "kw_count": 1,
+      "cache_hits": 54
+    },
+    {
+      "canonical": "harbor",
+      "verse_count": 29,
+      "kw_count": 1,
+      "cache_hits": 59
+    },
+    {
+      "canonical": "requite",
+      "verse_count": 70,
+      "kw_count": 2,
+      "cache_hits": 60
+    },
+    {
+      "canonical": "want",
+      "verse_count": 39,
+      "kw_count": 1,
+      "cache_hits": 63
+    },
+    {
+      "canonical": "knower",
+      "verse_count": 34,
+      "kw_count": 1,
+      "cache_hits": 64
+    },
+    {
+      "canonical": "decide",
+      "verse_count": 30,
+      "kw_count": 1,
+      "cache_hits": 64
+    },
+    {
+      "canonical": "throw",
+      "verse_count": 52,
+      "kw_count": 1,
+      "cache_hits": 68
+    },
+    {
+      "canonical": "worst",
+      "verse_count": 31,
+      "kw_count": 1,
+      "cache_hits": 70
+    },
+    {
+      "canonical": "miserable",
+      "verse_count": 65,
+      "kw_count": 1,
+      "cache_hits": 71
+    },
+    {
+      "canonical": "jinns",
+      "verse_count": 30,
+      "kw_count": 1,
+      "cache_hits": 71
+    },
+    {
+      "canonical": "saw",
+      "verse_count": 35,
+      "kw_count": 1,
+      "cache_hits": 73
+    },
+    {
+      "canonical": "scheme",
+      "verse_count": 47,
+      "kw_count": 1,
+      "cache_hits": 74
+    },
+    {
+      "canonical": "responsible",
+      "verse_count": 40,
+      "kw_count": 3,
+      "cache_hits": 74
+    },
+    {
+      "canonical": "realize",
+      "verse_count": 41,
+      "kw_count": 1,
+      "cache_hits": 75
+    },
+    {
+      "canonical": "guilty",
+      "verse_count": 40,
+      "kw_count": 1,
+      "cache_hits": 75
+    },
+    {
+      "canonical": "enlighten",
+      "verse_count": 34,
+      "kw_count": 2,
+      "cache_hits": 75
+    },
+    {
+      "canonical": "roam",
+      "verse_count": 29,
+      "kw_count": 1,
+      "cache_hits": 75
+    },
+    {
+      "canonical": "annihilate",
+      "verse_count": 76,
+      "kw_count": 2,
+      "cache_hits": 76
+    },
+    {
+      "canonical": "dweller",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 78
+    },
+    {
+      "canonical": "divert",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 79
+    },
+    {
+      "canonical": "abide",
+      "verse_count": 120,
+      "kw_count": 1,
+      "cache_hits": 81
+    },
+    {
+      "canonical": "disobey",
+      "verse_count": 29,
+      "kw_count": 1,
+      "cache_hits": 81
+    },
+    {
+      "canonical": "seer",
+      "verse_count": 50,
+      "kw_count": 1,
+      "cache_hits": 82
+    },
+    {
+      "canonical": "female",
+      "verse_count": 30,
+      "kw_count": 1,
+      "cache_hits": 82
+    },
+    {
+      "canonical": "omniscient",
+      "verse_count": 88,
+      "kw_count": 1,
+      "cache_hits": 83
+    },
+    {
+      "canonical": "utterance",
+      "verse_count": 71,
+      "kw_count": 2,
+      "cache_hits": 84
+    },
+    {
+      "canonical": "warner",
+      "verse_count": 46,
+      "kw_count": 1,
+      "cache_hits": 85
+    },
+    {
+      "canonical": "woman",
+      "verse_count": 87,
+      "kw_count": 1,
+      "cache_hits": 86
+    },
+    {
+      "canonical": "hearer",
+      "verse_count": 48,
+      "kw_count": 1,
+      "cache_hits": 86
+    },
+    {
+      "canonical": "equitably",
+      "verse_count": 47,
+      "kw_count": 2,
+      "cache_hits": 86
+    },
+    {
+      "canonical": "please",
+      "verse_count": 31,
+      "kw_count": 1,
+      "cache_hits": 86
+    },
+    {
+      "canonical": "woe",
+      "verse_count": 42,
+      "kw_count": 1,
+      "cache_hits": 89
+    },
+    {
+      "canonical": "predetermine",
+      "verse_count": 38,
+      "kw_count": 1,
+      "cache_hits": 90
+    },
+    {
+      "canonical": "however",
+      "verse_count": 33,
+      "kw_count": 1,
+      "cache_hits": 90
+    },
+    {
+      "canonical": "wife",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 90
+    },
+    {
+      "canonical": "stream",
+      "verse_count": 38,
+      "kw_count": 1,
+      "cache_hits": 91
+    },
+    {
+      "canonical": "initiate",
+      "verse_count": 36,
+      "kw_count": 3,
+      "cache_hits": 91
+    },
+    {
+      "canonical": "defeat",
+      "verse_count": 29,
+      "kw_count": 1,
+      "cache_hits": 91
+    },
+    {
+      "canonical": "master",
+      "verse_count": 45,
+      "kw_count": 1,
+      "cache_hits": 92
+    },
+    {
+      "canonical": "liar",
+      "verse_count": 35,
+      "kw_count": 1,
+      "cache_hits": 92
+    },
+    {
+      "canonical": "neither",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 94
+    },
+    {
+      "canonical": "drink",
+      "verse_count": 48,
+      "kw_count": 1,
+      "cache_hits": 95
+    },
+    {
+      "canonical": "blow",
+      "verse_count": 35,
+      "kw_count": 1,
+      "cache_hits": 95
+    },
+    {
+      "canonical": "taste",
+      "verse_count": 29,
+      "kw_count": 1,
+      "cache_hits": 95
+    },
+    {
+      "canonical": "substitute",
+      "verse_count": 38,
+      "kw_count": 1,
+      "cache_hits": 96
+    },
+    {
+      "canonical": "joseph",
+      "verse_count": 31,
+      "kw_count": 1,
+      "cache_hits": 96
+    },
+    {
+      "canonical": "strike",
+      "verse_count": 40,
+      "kw_count": 1,
+      "cache_hits": 97
+    },
+    {
+      "canonical": "fabricate",
+      "verse_count": 48,
+      "kw_count": 3,
+      "cache_hits": 98
+    },
+    {
+      "canonical": "inspire",
+      "verse_count": 44,
+      "kw_count": 2,
+      "cache_hits": 100
+    },
+    {
+      "canonical": "steadfastly",
+      "verse_count": 40,
+      "kw_count": 1,
+      "cache_hits": 100
+    },
+    {
+      "canonical": "honorable",
+      "verse_count": 50,
+      "kw_count": 2,
+      "cache_hits": 102
+    },
+    {
+      "canonical": "argue",
+      "verse_count": 36,
+      "kw_count": 1,
+      "cache_hits": 102
+    },
+    {
+      "canonical": "enjoy",
+      "verse_count": 38,
+      "kw_count": 1,
+      "cache_hits": 105
+    },
+    {
+      "canonical": "tree",
+      "verse_count": 32,
+      "kw_count": 1,
+      "cache_hits": 105
+    },
+    {
+      "canonical": "afflict",
+      "verse_count": 40,
+      "kw_count": 2,
+      "cache_hits": 106
+    },
+    {
+      "canonical": "carry",
+      "verse_count": 43,
+      "kw_count": 1,
+      "cache_hits": 107
+    },
+    {
+      "canonical": "towards",
+      "verse_count": 69,
+      "kw_count": 1,
+      "cache_hits": 108
+    },
+    {
+      "canonical": "enemy",
+      "verse_count": 53,
+      "kw_count": 1,
+      "cache_hits": 108
+    },
+    {
+      "canonical": "swear",
+      "verse_count": 40,
+      "kw_count": 1,
+      "cache_hits": 108
+    },
+    {
+      "canonical": "touch",
+      "verse_count": 30,
+      "kw_count": 1,
+      "cache_hits": 108
+    },
+    {
+      "canonical": "disregard",
+      "verse_count": 66,
+      "kw_count": 1,
+      "cache_hits": 111
+    },
+    {
+      "canonical": "profound",
+      "verse_count": 43,
+      "kw_count": 1,
+      "cache_hits": 111
+    },
+    {
+      "canonical": "recall",
+      "verse_count": 42,
+      "kw_count": 1,
+      "cache_hits": 111
+    },
+    {
+      "canonical": "pay",
+      "verse_count": 40,
+      "kw_count": 1,
+      "cache_hits": 111
+    },
+    {
+      "canonical": "decision",
+      "verse_count": 36,
+      "kw_count": 1,
+      "cache_hits": 111
+    },
+    {
+      "canonical": "advocate",
+      "verse_count": 37,
+      "kw_count": 1,
+      "cache_hits": 112
+    },
+    {
+      "canonical": "forget",
+      "verse_count": 29,
+      "kw_count": 1,
+      "cache_hits": 115
+    }
+  ],
+  "semantic_domains": [
+    {
+      "name": "Afterlife",
+      "description": "Hereafter, resurrection, judgment, paradise, hellfire",
+      "member_count": 11,
+      "cache_hits": 117
+    },
+    {
+      "name": "Knowledge",
+      "description": "Knowledge, understanding, intellect, wisdom",
+      "member_count": 10,
+      "cache_hits": 743
+    },
+    {
+      "name": "Prayer",
+      "description": "Worship, prayer, devotion, ritual",
+      "member_count": 10,
+      "cache_hits": 573
+    },
+    {
+      "name": "Cosmos",
+      "description": "Heaven, earth, celestial bodies",
+      "member_count": 10,
+      "cache_hits": 63
+    },
+    {
+      "name": "Divinity",
+      "description": "God's names, attributes, and divine nature",
+      "member_count": 9,
+      "cache_hits": 37
+    },
+    {
+      "name": "Faith",
+      "description": "Belief, trust, faith, certainty",
+      "member_count": 9,
+      "cache_hits": 733
+    },
+    {
+      "name": "Disbelief",
+      "description": "Disbelief, denial, hypocrisy, ingratitude",
+      "member_count": 9,
+      "cache_hits": 332
+    },
+    {
+      "name": "Scripture",
+      "description": "Revelation, scripture, divine communication",
+      "member_count": 9,
+      "cache_hits": 502
+    },
+    {
+      "name": "Justice",
+      "description": "Justice, equity, oppression, wrong",
+      "member_count": 9,
+      "cache_hits": 524
+    },
+    {
+      "name": "Provision",
+      "description": "Sustenance, provision, wealth, spending",
+      "member_count": 8,
+      "cache_hits": 406
+    },
+    {
+      "name": "Movement",
+      "description": "Movement, travel, journey",
+      "member_count": 8,
+      "cache_hits": 50
+    },
+    {
+      "name": "Guidance",
+      "description": "Guidance, path, direction",
+      "member_count": 8,
+      "cache_hits": 884
+    },
+    {
+      "name": "Human Nature",
+      "description": "Humanity, nature, creation of humans",
+      "member_count": 8,
+      "cache_hits": 9
+    },
+    {
+      "name": "Family",
+      "description": "Family, kinship, marriage",
+      "member_count": 8,
+      "cache_hits": 232
+    },
+    {
+      "name": "Mercy",
+      "description": "Compassion, mercy, divine nurturing",
+      "member_count": 7,
+      "cache_hits": 715
+    },
+    {
+      "name": "Community",
+      "description": "Community, people, nations, messengers",
+      "member_count": 7,
+      "cache_hits": 523
+    },
+    {
+      "name": "Law",
+      "description": "Divine law, commandments, permissible and forbidden",
+      "member_count": 7,
+      "cache_hits": 429
+    },
+    {
+      "name": "Warfare",
+      "description": "Striving, warfare, defense, patience",
+      "member_count": 7,
+      "cache_hits": 35
+    },
+    {
+      "name": "Speech",
+      "description": "Speech, language, communication",
+      "member_count": 7,
+      "cache_hits": 119
+    },
+    {
+      "name": "Sustenance",
+      "description": "Food, drink, sustenance",
+      "member_count": 7,
+      "cache_hits": 129
+    },
+    {
+      "name": "Trial",
+      "description": "Testing, trial, affliction",
+      "member_count": 6,
+      "cache_hits": 217
+    },
+    {
+      "name": "Covenant",
+      "description": "Covenant, promise, pledge",
+      "member_count": 6,
+      "cache_hits": 311
+    },
+    {
+      "name": "Creation",
+      "description": "Creation, cosmos, natural world",
+      "member_count": 6,
+      "cache_hits": 548
+    },
+    {
+      "name": "Time",
+      "description": "Time, day, seasons, eschatology",
+      "member_count": 6,
+      "cache_hits": 533
+    },
+    {
+      "name": "Life",
+      "description": "Life, death, soul, spirit",
+      "member_count": 6,
+      "cache_hits": 810
+    },
+    {
+      "name": "Sight",
+      "description": "Vision, sight, perception",
+      "member_count": 5,
+      "cache_hits": 270
+    },
+    {
+      "name": "Hearing",
+      "description": "Hearing, listening, obedience",
+      "member_count": 5,
+      "cache_hits": 95
+    },
+    {
+      "name": "Gratitude",
+      "description": "Gratitude, thankfulness, ingratitude",
+      "member_count": 3,
+      "cache_hits": 274
+    }
+  ],
+  "prophets": [
+    {
+      "canonical": "Adam",
+      "aliases": [
+        "adam"
+      ],
+      "cache_hits": 106,
+      "anchor_verses": [
+        "2:31",
+        "2:33",
+        "2:34",
+        "2:35",
+        "2:37",
+        "3:33",
+        "3:59",
+        "5:27"
+      ]
+    },
+    {
+      "canonical": "Idris",
+      "aliases": [
+        "idris",
+        "enoch"
+      ],
+      "cache_hits": 7,
+      "anchor_verses": [
+        "19:56",
+        "21:85"
+      ]
+    },
+    {
+      "canonical": "Nuh",
+      "aliases": [
+        "noah",
+        "nuh"
+      ],
+      "cache_hits": 150,
+      "anchor_verses": [
+        "3:33",
+        "4:163",
+        "6:84",
+        "7:59",
+        "7:69",
+        "9:70",
+        "10:71",
+        "11:25"
+      ]
+    },
+    {
+      "canonical": "Hud",
+      "aliases": [
+        "hud"
+      ],
+      "cache_hits": 50,
+      "anchor_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "canonical": "Salih",
+      "aliases": [
+        "salih",
+        "saleh"
+      ],
+      "cache_hits": 17,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Ibrahim",
+      "aliases": [
+        "abraham",
+        "ibrahim"
+      ],
+      "cache_hits": 221,
+      "anchor_verses": [
+        "2:124",
+        "2:125",
+        "2:126",
+        "2:127",
+        "2:130",
+        "2:132",
+        "2:133",
+        "2:134"
+      ]
+    },
+    {
+      "canonical": "Lut",
+      "aliases": [
+        "lot",
+        "lut"
+      ],
+      "cache_hits": 591,
+      "anchor_verses": [
+        "2:233",
+        "3:54",
+        "3:75",
+        "3:186",
+        "4:5",
+        "4:19",
+        "5:89",
+        "6:86"
+      ]
+    },
+    {
+      "canonical": "Ismail",
+      "aliases": [
+        "ismail",
+        "ishmael"
+      ],
+      "cache_hits": 43,
+      "anchor_verses": [
+        "2:125",
+        "2:127",
+        "2:133",
+        "2:136",
+        "2:140",
+        "3:84",
+        "4:163",
+        "6:86"
+      ]
+    },
+    {
+      "canonical": "Ishaq",
+      "aliases": [
+        "ishaq",
+        "isaac"
+      ],
+      "cache_hits": 47,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Yaqub",
+      "aliases": [
+        "ya'qub",
+        "yaqub",
+        "ya`qub",
+        "jacob",
+        "israel"
+      ],
+      "cache_hits": 238,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Yusuf",
+      "aliases": [
+        "yusuf",
+        "joseph"
+      ],
+      "cache_hits": 98,
+      "anchor_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "canonical": "Shuaib",
+      "aliases": [
+        "shu`aib",
+        "shuaib",
+        "shu'aib",
+        "shu‘aib",
+        "shu’aib",
+        "shu`ayb",
+        "shoaib",
+        "jethro"
+      ],
+      "cache_hits": 18,
+      "anchor_verses": [
+        "7:84",
+        "7:85",
+        "7:88",
+        "7:90",
+        "7:92",
+        "11:83",
+        "11:84",
+        "11:87"
+      ]
+    },
+    {
+      "canonical": "Ayyub",
+      "aliases": [
+        "ayyub",
+        "job"
+      ],
+      "cache_hits": 23,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Dhulkifl",
+      "aliases": [
+        "dhul-kifl",
+        "dhul kifl",
+        "dhulkifl",
+        "ezekiel"
+      ],
+      "cache_hits": 1,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Musa",
+      "aliases": [
+        "musa",
+        "moses"
+      ],
+      "cache_hits": 329,
+      "anchor_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "canonical": "Harun",
+      "aliases": [
+        "harun",
+        "aaron"
+      ],
+      "cache_hits": 43,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Dawud",
+      "aliases": [
+        "dawud",
+        "david"
+      ],
+      "cache_hits": 54,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Sulaiman",
+      "aliases": [
+        "sulaiman",
+        "solomon"
+      ],
+      "cache_hits": 69,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Ilyas",
+      "aliases": [
+        "ilyas",
+        "ilyasin",
+        "elijah",
+        "elias"
+      ],
+      "cache_hits": 6,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Alyasa",
+      "aliases": [
+        "al-yasa",
+        "al-yasa`",
+        "alyasa",
+        "elisha"
+      ],
+      "cache_hits": 3,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Yunus",
+      "aliases": [
+        "yunus",
+        "jonah",
+        "dhun-nun"
+      ],
+      "cache_hits": 25,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Zakariya",
+      "aliases": [
+        "zakariya",
+        "zechariah",
+        "zakariyya"
+      ],
+      "cache_hits": 5,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Yahya",
+      "aliases": [
+        "yahya",
+        "john the baptist"
+      ],
+      "cache_hits": 12,
+      "anchor_verses": [
+        "19:7"
+      ]
+    },
+    {
+      "canonical": "Isa",
+      "aliases": [
+        "jesus",
+        "isa",
+        "messiah",
+        "christ"
+      ],
+      "cache_hits": 387,
+      "anchor_verses": [
+        "2:87",
+        "2:136",
+        "2:253",
+        "3:45",
+        "3:52",
+        "3:55",
+        "3:59",
+        "3:84"
+      ]
+    },
+    {
+      "canonical": "Muhammad",
+      "aliases": [
+        "muhammad",
+        "mohammed",
+        "the prophet"
+      ],
+      "cache_hits": 596,
+      "anchor_verses": [
+        "2:285",
+        "3:121",
+        "3:144",
+        "7:157",
+        "8:43",
+        "10:19",
+        "16:122",
+        "16:123"
+      ]
+    }
+  ],
+  "prophets_by_gap": [
+    {
+      "canonical": "Dhulkifl",
+      "aliases": [
+        "dhul-kifl",
+        "dhul kifl",
+        "dhulkifl",
+        "ezekiel"
+      ],
+      "cache_hits": 1,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Alyasa",
+      "aliases": [
+        "al-yasa",
+        "al-yasa`",
+        "alyasa",
+        "elisha"
+      ],
+      "cache_hits": 3,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Zakariya",
+      "aliases": [
+        "zakariya",
+        "zechariah",
+        "zakariyya"
+      ],
+      "cache_hits": 5,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Ilyas",
+      "aliases": [
+        "ilyas",
+        "ilyasin",
+        "elijah",
+        "elias"
+      ],
+      "cache_hits": 6,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Idris",
+      "aliases": [
+        "idris",
+        "enoch"
+      ],
+      "cache_hits": 7,
+      "anchor_verses": [
+        "19:56",
+        "21:85"
+      ]
+    },
+    {
+      "canonical": "Yahya",
+      "aliases": [
+        "yahya",
+        "john the baptist"
+      ],
+      "cache_hits": 12,
+      "anchor_verses": [
+        "19:7"
+      ]
+    },
+    {
+      "canonical": "Salih",
+      "aliases": [
+        "salih",
+        "saleh"
+      ],
+      "cache_hits": 17,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Shuaib",
+      "aliases": [
+        "shu`aib",
+        "shuaib",
+        "shu'aib",
+        "shu‘aib",
+        "shu’aib",
+        "shu`ayb",
+        "shoaib",
+        "jethro"
+      ],
+      "cache_hits": 18,
+      "anchor_verses": [
+        "7:84",
+        "7:85",
+        "7:88",
+        "7:90",
+        "7:92",
+        "11:83",
+        "11:84",
+        "11:87"
+      ]
+    },
+    {
+      "canonical": "Ayyub",
+      "aliases": [
+        "ayyub",
+        "job"
+      ],
+      "cache_hits": 23,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Yunus",
+      "aliases": [
+        "yunus",
+        "jonah",
+        "dhun-nun"
+      ],
+      "cache_hits": 25,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Ismail",
+      "aliases": [
+        "ismail",
+        "ishmael"
+      ],
+      "cache_hits": 43,
+      "anchor_verses": [
+        "2:125",
+        "2:127",
+        "2:133",
+        "2:136",
+        "2:140",
+        "3:84",
+        "4:163",
+        "6:86"
+      ]
+    },
+    {
+      "canonical": "Harun",
+      "aliases": [
+        "harun",
+        "aaron"
+      ],
+      "cache_hits": 43,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Ishaq",
+      "aliases": [
+        "ishaq",
+        "isaac"
+      ],
+      "cache_hits": 47,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Hud",
+      "aliases": [
+        "hud"
+      ],
+      "cache_hits": 50,
+      "anchor_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "canonical": "Dawud",
+      "aliases": [
+        "dawud",
+        "david"
+      ],
+      "cache_hits": 54,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Sulaiman",
+      "aliases": [
+        "sulaiman",
+        "solomon"
+      ],
+      "cache_hits": 69,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Yusuf",
+      "aliases": [
+        "yusuf",
+        "joseph"
+      ],
+      "cache_hits": 98,
+      "anchor_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "canonical": "Adam",
+      "aliases": [
+        "adam"
+      ],
+      "cache_hits": 106,
+      "anchor_verses": [
+        "2:31",
+        "2:33",
+        "2:34",
+        "2:35",
+        "2:37",
+        "3:33",
+        "3:59",
+        "5:27"
+      ]
+    },
+    {
+      "canonical": "Nuh",
+      "aliases": [
+        "noah",
+        "nuh"
+      ],
+      "cache_hits": 150,
+      "anchor_verses": [
+        "3:33",
+        "4:163",
+        "6:84",
+        "7:59",
+        "7:69",
+        "9:70",
+        "10:71",
+        "11:25"
+      ]
+    },
+    {
+      "canonical": "Ibrahim",
+      "aliases": [
+        "abraham",
+        "ibrahim"
+      ],
+      "cache_hits": 221,
+      "anchor_verses": [
+        "2:124",
+        "2:125",
+        "2:126",
+        "2:127",
+        "2:130",
+        "2:132",
+        "2:133",
+        "2:134"
+      ]
+    },
+    {
+      "canonical": "Yaqub",
+      "aliases": [
+        "ya'qub",
+        "yaqub",
+        "ya`qub",
+        "jacob",
+        "israel"
+      ],
+      "cache_hits": 238,
+      "anchor_verses": []
+    },
+    {
+      "canonical": "Musa",
+      "aliases": [
+        "musa",
+        "moses"
+      ],
+      "cache_hits": 329,
+      "anchor_verses": [
+        "114:6"
+      ]
+    },
+    {
+      "canonical": "Isa",
+      "aliases": [
+        "jesus",
+        "isa",
+        "messiah",
+        "christ"
+      ],
+      "cache_hits": 387,
+      "anchor_verses": [
+        "2:87",
+        "2:136",
+        "2:253",
+        "3:45",
+        "3:52",
+        "3:55",
+        "3:59",
+        "3:84"
+      ]
+    },
+    {
+      "canonical": "Lut",
+      "aliases": [
+        "lot",
+        "lut"
+      ],
+      "cache_hits": 591,
+      "anchor_verses": [
+        "2:233",
+        "3:54",
+        "3:75",
+        "3:186",
+        "4:5",
+        "4:19",
+        "5:89",
+        "6:86"
+      ]
+    },
+    {
+      "canonical": "Muhammad",
+      "aliases": [
+        "muhammad",
+        "mohammed",
+        "the prophet"
+      ],
+      "cache_hits": 596,
+      "anchor_verses": [
+        "2:285",
+        "3:121",
+        "3:144",
+        "7:157",
+        "8:43",
+        "10:19",
+        "16:122",
+        "16:123"
+      ]
+    }
+  ],
+  "iconic_verses": [
+    {
+      "verseId": "72:20",
+      "text": "Say, \"I worship only my Lord; I never set up any idols beside Him.\"",
+      "degree": 83
+    },
+    {
+      "verseId": "2:213",
+      "text": "The people used to be one community when GOD sent the prophets as bearers of good news, as well as warners. He sent down with them the scripture, bearing the tr",
+      "degree": 65
+    },
+    {
+      "verseId": "24:64",
+      "text": "Absolutely, to GOD belongs everything in the heavens and the earth. He fully knows every condition you may be in. The day you are returned to Him, He will infor",
+      "degree": 62
+    },
+    {
+      "verseId": "23:59",
+      "text": "And who never set up any idols beside their Lord,",
+      "degree": 60
+    },
+    {
+      "verseId": "64:4",
+      "text": "He knows everything in the heavens and the earth, and He knows everything you conceal and everything you declare. GOD is fully aware of the innermost thoughts.",
+      "degree": 57
+    },
+    {
+      "verseId": "3:29",
+      "text": "Say, \"Whether you conceal your innermost thought, or declare it, GOD is fully aware thereof.\" He is fully aware of everything in the heavens and the earth. GOD ",
+      "degree": 56
+    },
+    {
+      "verseId": "21:110",
+      "text": "\"He is fully aware of your public utterances, and He is fully aware of everything you conceal.",
+      "degree": 53
+    },
+    {
+      "verseId": "74:43",
+      "text": "They will say, \"We did not observe the contact prayers (Salat).",
+      "degree": 52
+    },
+    {
+      "verseId": "28:62",
+      "text": "The day will come when He calls upon them, saying, \"Where are those idols you had set up beside Me?\"",
+      "degree": 52
+    },
+    {
+      "verseId": "70:23",
+      "text": "Who always observe their contact prayers (Salat).",
+      "degree": 51
+    },
+    {
+      "verseId": "2:103",
+      "text": "If they believe and lead a righteous life, the reward from GOD is far better, if they only knew.",
+      "degree": 51
+    },
+    {
+      "verseId": "23:9",
+      "text": "And they observe their Contact Prayers (Salat) regularly.",
+      "degree": 51
+    },
+    {
+      "verseId": "65:11",
+      "text": "a messenger who recites to you GOD's revelations, clearly, to lead those who believe and work righteousness out of the darkness into the light. Anyone who belie",
+      "degree": 50
+    },
+    {
+      "verseId": "85:20",
+      "text": "GOD is fully aware of them.",
+      "degree": 50
+    },
+    {
+      "verseId": "7:197",
+      "text": "\"As for the idols you set up beside Him, they cannot help you, nor can they help themselves.\"",
+      "degree": 48
+    },
+    {
+      "verseId": "40:65",
+      "text": "He is the Living; there is no god except He. You shall worship Him alone, devoting your religion absolutely to Him alone. Praise be to GOD, Lord of the universe",
+      "degree": 47
+    },
+    {
+      "verseId": "10:63",
+      "text": "They are those who believe and lead a righteous life.",
+      "degree": 47
+    },
+    {
+      "verseId": "17:9",
+      "text": "This Quran guides to the best path, and brings good news to the believers who lead a righteous life, that they have deserved a great recompense.",
+      "degree": 47
+    },
+    {
+      "verseId": "13:27",
+      "text": "Those who disbelieve would say, \"If only a miracle could come down to him from his Lord (we would believe).\" Say, \"GOD sends astray whomever He wills, and guide",
+      "degree": 47
+    },
+    {
+      "verseId": "16:86",
+      "text": "And when those who committed idol worship see their idols, they will say, \"Our Lord, these are the idols we had set up beside You.\" The idols will then confront",
+      "degree": 47
+    },
+    {
+      "verseId": "73:20",
+      "text": "Your Lord knows that you meditate during two-thirds of the night, or half of it, or one-third of it, and so do some of those who believed with you. GOD has desi",
+      "degree": 46
+    },
+    {
+      "verseId": "16:20",
+      "text": "As for the idols they set up beside GOD, they do not create anything; they themselves were created.",
+      "degree": 45
+    },
+    {
+      "verseId": "12:98",
+      "text": "He said, \"I will implore my Lord to forgive you; He is the Forgiver, Most Merciful.\"",
+      "degree": 45
+    },
+    {
+      "verseId": "72:2",
+      "text": "\" `It guides to righteousness, and we have believed in it; we will never set up any idols beside our Lord.",
+      "degree": 45
+    },
+    {
+      "verseId": "84:25",
+      "text": "As for those who believed and led a righteous life, they receive a recompense that is well-deserved.",
+      "degree": 44
+    },
+    {
+      "verseId": "6:100",
+      "text": "Yet, they set up beside GOD idols from among the jinns, though He is the One who created them. They even attribute to Him sons and daughters, without any knowle",
+      "degree": 44
+    },
+    {
+      "verseId": "6:117",
+      "text": "Your Lord is fully aware of those who stray off His path, and He is fully aware of those who are guided.",
+      "degree": 43
+    },
+    {
+      "verseId": "8:3",
+      "text": "They observe the Contact Prayers (Salat), and from our provisions to them, they give to charity.",
+      "degree": 43
+    },
+    {
+      "verseId": "29:9",
+      "text": "Those who believe and lead a righteous life, we will certainly admit them with the righteous.",
+      "degree": 43
+    },
+    {
+      "verseId": "23:51",
+      "text": "O you messengers, eat from the good provisions, and work righteousness. I am fully aware of everything you do.",
+      "degree": 43
+    },
+    {
+      "verseId": "37:118",
+      "text": "We guided them in the right path.",
+      "degree": 42
+    },
+    {
+      "verseId": "6:99",
+      "text": "He is the One who sends down from the sky water, whereby we produce all kinds of plants. We produce from the green material multitudes of complex grains, palm t",
+      "degree": 42
+    },
+    {
+      "verseId": "5:86",
+      "text": "As for those who disbelieve and reject our revelations, they are the dwellers of Hell.",
+      "degree": 42
+    },
+    {
+      "verseId": "80:18",
+      "text": "What did He create him from?",
+      "degree": 42
+    },
+    {
+      "verseId": "45:37",
+      "text": "To Him belongs all supremacy in the heavens and the earth. He is the Almighty, Most Wise.",
+      "degree": 42
+    },
+    {
+      "verseId": "2:277",
+      "text": "Those who believe and lead a righteous life, and observe the Contact Prayers (Salat), and give the obligatory charity (Zakat), they receive their recompense fro",
+      "degree": 42
+    },
+    {
+      "verseId": "64:1",
+      "text": "Glorifying GOD is everything in the heavens and everything on earth. To Him belongs all kingship, and to Him belongs all praise, and He is Omnipotent.",
+      "degree": 42
+    },
+    {
+      "verseId": "24:56",
+      "text": "You shall observe the Contact Prayers (Salat) and give the obligatory charity (Zakat), and obey the messenger, that you may attain mercy.",
+      "degree": 42
+    },
+    {
+      "verseId": "3:109",
+      "text": "To GOD belongs everything in the heavens and everything on earth, and all matters are controlled by GOD.",
+      "degree": 42
+    },
+    {
+      "verseId": "41:8",
+      "text": "As for those who believe and lead a righteous life, they receive a well deserved recompense.",
+      "degree": 42
+    },
+    {
+      "verseId": "3:116",
+      "text": "Those who disbelieved can never be helped by their money or their children against GOD. They have incurred Hell, wherein they abide forever.",
+      "degree": 42
+    },
+    {
+      "verseId": "68:7",
+      "text": "Your Lord is fully aware of those who strayed off His path, and He is fully aware of those who are guided.",
+      "degree": 42
+    },
+    {
+      "verseId": "2:177",
+      "text": "Righteousness is not turning your faces towards the east or the west. Righteous are those who believe in GOD, the Last Day, the angels, the scripture, and the p",
+      "degree": 41
+    },
+    {
+      "verseId": "10:55",
+      "text": "Absolutely, to GOD belongs everything in the heavens and the earth. Absolutely, GOD's promise is truth, but most of them do not know.",
+      "degree": 41
+    },
+    {
+      "verseId": "80:12",
+      "text": "Whoever wills shall take heed.",
+      "degree": 41
+    },
+    {
+      "verseId": "1:6",
+      "text": "Guide us in the right path;",
+      "degree": 41
+    },
+    {
+      "verseId": "29:17",
+      "text": "\"What you worship instead of GOD are powerless idols; you have invented a lie.\" The idols you worship beside GOD do not possess any provisions for you. Therefor",
+      "degree": 41
+    },
+    {
+      "verseId": "32:19",
+      "text": "As for those who believe and lead a righteous life, they have deserved the eternal Paradise. Such is their abode, in return for their works.",
+      "degree": 41
+    },
+    {
+      "verseId": "4:68",
+      "text": "And we would have guided them in the right path.",
+      "degree": 41
+    },
+    {
+      "verseId": "34:37",
+      "text": "It is not your money or your children that bring you closer to us. Only those who believe and lead a righteous life will receive the reward for their works, mul",
+      "degree": 41
+    },
+    {
+      "verseId": "107:4",
+      "text": "And woe to those who observe the contact prayers (Salat) -",
+      "degree": 41
+    },
+    {
+      "verseId": "45:15",
+      "text": "Whoever works righteousness does so for his own good, and whoever works evil does so to his own detriment. To your Lord you will be returned.",
+      "degree": 41
+    },
+    {
+      "verseId": "7:36",
+      "text": "As for those who reject our revelations, and are too arrogant to uphold them, they have incurred Hell, wherein they abide forever.",
+      "degree": 41
+    },
+    {
+      "verseId": "39:70",
+      "text": "Every soul will be paid for whatever it did, for He is fully aware of everything they have done.",
+      "degree": 41
+    },
+    {
+      "verseId": "22:68",
+      "text": "If they argue with you, then say, \"GOD is fully aware of everything you do.\"",
+      "degree": 40
+    },
+    {
+      "verseId": "10:18",
+      "text": "They worship beside GOD idols that possess no power to harm them or benefit them, and they say, \"These are our intercessors at GOD!\" Say, \"Are you informing GOD",
+      "degree": 40
+    },
+    {
+      "verseId": "75:31",
+      "text": "For he observed neither the charity, nor the contact prayers (Salat).",
+      "degree": 40
+    },
+    {
+      "verseId": "93:4",
+      "text": "The Hereafter is far better for you than this first (life).",
+      "degree": 40
+    },
+    {
+      "verseId": "26:152",
+      "text": "\"Who commit evil, not good works.\"",
+      "degree": 39
+    },
+    {
+      "verseId": "37:155",
+      "text": "Why do you not take heed?",
+      "degree": 39
+    },
+    {
+      "verseId": "3:198",
+      "text": "As for those who observe their Lord, they have deserved gardens with flowing streams; they abide therein forever. Such is the abode given to them by GOD. What G",
+      "degree": 39
+    },
+    {
+      "verseId": "15:54",
+      "text": "He said, \"How can you give me such good news, when I am so old? Do you still give me this good news?\"",
+      "degree": 39
+    },
+    {
+      "verseId": "23:32",
+      "text": "We sent to them a messenger from among them, saying, \"You shall worship GOD. You have no other god beside Him. Would you not be righteous?\"",
+      "degree": 39
+    },
+    {
+      "verseId": "4:103",
+      "text": "Once you complete your Contact Prayer (Salat), you shall remember GOD while standing, sitting, or lying down. Once the war is over, you shall observe the Contac",
+      "degree": 39
+    },
+    {
+      "verseId": "16:2",
+      "text": "He sends down the angels with the revelations, carrying His commands, to whomever He chooses from among His servants: \"You shall preach that there is no other g",
+      "degree": 39
+    },
+    {
+      "verseId": "5:85",
+      "text": "GOD has rewarded them for saying this; He will admit them into gardens with flowing streams. They abide therein forever. Such is the reward for the righteous.",
+      "degree": 39
+    },
+    {
+      "verseId": "5:48",
+      "text": "Then we revealed to you this scripture, truthfully, confirming previous scriptures, and superseding them. You shall rule among them in accordance with GOD's rev",
+      "degree": 39
+    },
+    {
+      "verseId": "56:59",
+      "text": "Did you create it, or did we?",
+      "degree": 39
+    },
+    {
+      "verseId": "46:30",
+      "text": "They said, \"O our people, we have heard a book that was revealed after Moses, and confirms the previous scriptures. It guides to the truth; to the right path.",
+      "degree": 39
+    },
+    {
+      "verseId": "39:14",
+      "text": "Say, \"GOD is the only One I worship, devoting my religion absolutely to Him alone.",
+      "degree": 39
+    },
+    {
+      "verseId": "53:31",
+      "text": "To GOD belongs everything in the heavens and everything on earth. He will requite those who commit evil for their works, and will reward the righteous for their",
+      "degree": 39
+    },
+    {
+      "verseId": "3:179",
+      "text": "GOD is not to leave the believers as you are, without distinguishing the bad from the good. Nor does GOD inform you of the future, but GOD bestows such knowledg",
+      "degree": 39
+    },
+    {
+      "verseId": "74:25",
+      "text": "\"This is human made.\"",
+      "degree": 39
+    },
+    {
+      "verseId": "20:41",
+      "text": "\"I have made you just for Me.",
+      "degree": 38
+    },
+    {
+      "verseId": "70:39",
+      "text": "Never; we created them, and they know from what.",
+      "degree": 38
+    },
+    {
+      "verseId": "5:55",
+      "text": "Your real allies are GOD and His messenger, and the believers who observe the Contact Prayers (Salat), and give the obligatory charity (Zakat), and they bow dow",
+      "degree": 38
+    },
+    {
+      "verseId": "64:9",
+      "text": "The day will come when He summons you to the Day of Summoning. That is the Day of Mutual Blaming. Anyone who believes in GOD and leads a righteous life, He will",
+      "degree": 38
+    },
+    {
+      "verseId": "42:4",
+      "text": "To Him belongs everything in the heavens and everything on earth, and He is the Most High, the Great.",
+      "degree": 38
+    },
+    {
+      "verseId": "42:48",
+      "text": "If they turn away, we did not send you as their guardian. Your sole mission is delivering the message. When we shower the human beings with mercy, they become p",
+      "degree": 38
+    },
+    {
+      "verseId": "2:82",
+      "text": "As for those who believe, and lead a righteous life, they will be the dwellers of Paradise; they abide in it forever.",
+      "degree": 38
+    }
+  ]
+}
