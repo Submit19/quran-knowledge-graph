@@ -49,11 +49,6 @@ def _shuaib_aliases():
     raise AssertionError("Shu`aib entry missing from PROPHETS_25")
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="alias list ships only straight-apostrophe/de-diacritised forms; "
-    "fix lands in the same commit that flips this marker off",
-)
 def test_shuaib_alias_matches_backtick_form():
     """The alias list must match the backtick ʿayn form ("Shu`aib")."""
     aliases = _shuaib_aliases()
@@ -64,11 +59,6 @@ def test_shuaib_alias_matches_backtick_form():
     )
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="alias list ships only straight-apostrophe/de-diacritised forms; "
-    "fix lands in the same commit that flips this marker off",
-)
 @pytest.mark.skipif(
     not CACHE.exists(), reason="answer_cache.json absent (gitignored fixture)"
 )

@@ -52,7 +52,7 @@ PROPHETS_25 = [
     ("Ya`qub", ["ya'qub", "yaqub", "jacob"]),
     ("Yusuf", ["yusuf", "joseph"]),
     ("Ayyub", ["ayyub", "job"]),
-    ("Shu`aib", ["shu'aib", "shuaib", "shoaib"]),
+    ("Shu`aib", ["shu'aib", "shu`aib", "shuaib", "shoaib"]),
     ("Musa", ["musa", "moses"]),
     ("Harun", ["harun", "aaron"]),
     ("Dawud", ["dawud", "david"]),
