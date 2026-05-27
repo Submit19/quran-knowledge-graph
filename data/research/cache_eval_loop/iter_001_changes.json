@@ -1,0 +1,72 @@
+{
+  "fixes": [
+    {
+      "id": "abstract-003",
+      "outcome": "APPLIED",
+      "old_length": 4588,
+      "new_length": 4602,
+      "delta": 14,
+      "added_cites": [],
+      "total_cites_after": 12,
+      "intent": "add 'shukr' romanization inline"
+    },
+    {
+      "id": "abstract-014",
+      "outcome": "APPLIED",
+      "old_length": 5095,
+      "new_length": 5126,
+      "delta": 31,
+      "added_cites": [],
+      "total_cites_after": 13,
+      "intent": "add 'yaqeen' Khalifa romanization"
+    },
+    {
+      "id": "abstract-016",
+      "outcome": "APPLIED",
+      "old_length": 6045,
+      "new_length": 6511,
+      "delta": 466,
+      "added_cites": [
+        "35:6"
+      ],
+      "total_cites_after": 19,
+      "intent": "add [35:6] 'devil is your enemy' section"
+    },
+    {
+      "id": "abstract-017",
+      "outcome": "APPLIED",
+      "old_length": 5998,
+      "new_length": 6730,
+      "delta": 732,
+      "added_cites": [
+        "2:26"
+      ],
+      "total_cites_after": 12,
+      "intent": "add [2:26] bidirectional-revelation section"
+    },
+    {
+      "id": "broad-012",
+      "outcome": "APPLIED",
+      "old_length": 7156,
+      "new_length": 7359,
+      "delta": 203,
+      "added_cites": [
+        "74:30"
+      ],
+      "total_cites_after": 21,
+      "intent": "add [74:30] Code-19 anchor"
+    },
+    {
+      "id": "concrete-004",
+      "outcome": "APPLIED",
+      "old_length": 4041,
+      "new_length": 4263,
+      "delta": 222,
+      "added_cites": [
+        "11:77"
+      ],
+      "total_cites_after": 23,
+      "intent": "add [11:77] messenger-visit parallel"
+    }
+  ]
+}
