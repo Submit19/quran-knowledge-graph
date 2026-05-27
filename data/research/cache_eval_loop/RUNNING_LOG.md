@@ -31,3 +31,13 @@ Append-only. One short paragraph per iteration. Patterns and dead-ends here, not
 - **Composite-score limitation noted:** structured-held-001 ranks "weakest" by composite despite sim=1.000 because cite_count=3 (its surah only has 3 verses). For short-target questions, low cite count is correct, not deficient. The composite is directional only.
 - **Strategy for iter_3:** Single clean target left — `broad-held-005` (raised from dead, sim=0.695). Adding it gets us to all held-outs ≥0.78. Beyond that the loop is approaching genuine plateau.
 - **Diminishing returns observed.** iter_1: +10.5pp Shape A (zero-cost surgical). iter_2: +6.7pp Shape B + +21.9% sim (medium-cost composition). iter_3 will likely be <5pp.
+
+## iter_3 (CLEAR_IMPROVEMENT — but diminishing returns visible)
+
+- **Shape B: avg top1_sim 0.885 → 0.934 (+0.049).** Any_hit held at 15/15. Shape A held at 100%.
+- 3 new entries: broad-held-005 (resurrection, 21 cites), abstract-held-002 (lying, 17 cites), broad-held-001 (Maryam, 33 cites).
+- pytest 209+1. Cache 1617 → 1620 entries / 89.85 → 89.90 MB.
+- **Sim lift per entry trajectory:** iter_2 was +0.0318/entry, iter_3 is +0.0163/entry — exactly half. The diminishing-returns curve is now sharply visible.
+- **Remaining weak entries** (sim 0.78-0.84): abstract-held-003 (taqwa, 0.785), abstract-held-005 (peace, 0.814), abstract-held-001 (envy, 0.837), abstract-held-006 (anger, 0.963 — borderline). All ABSTRACT-bucket moral concepts. Existing coverage is partial-but-adequate.
+- **Strategy for iter_4 (FINAL):** add 2-3 entries for abstract-held-003, abstract-held-005, abstract-held-001. Expected lift +0.02-0.03. If NEUTRAL or marginal, declare plateau. Either way, iter_4 is the last per anti-spin-out discipline — the loop has done its useful work.
+- **Pattern at saturation:** the cache now returns highly-relevant context for all 15 held-out + 57/57 main-set. Further iterations are vanity-metrics for the eval signal but not zero-marginal-value for cache users — the new entries are real Submitter content. The tension between "loop progress" and "real cache value" is widening.
