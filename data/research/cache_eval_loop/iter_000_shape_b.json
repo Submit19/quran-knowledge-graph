@@ -1,0 +1,436 @@
+{
+  "total": 15,
+  "any_hit": 14,
+  "any_hit_rate": 0.9333,
+  "avg_top1_similarity": 0.726,
+  "avg_top1_answer_length": 7665.8,
+  "avg_top1_cite_count": 23.47,
+  "by_bucket": {
+    "ABSTRACT": {
+      "total": 6,
+      "any_hit": 6
+    },
+    "BROAD": {
+      "total": 5,
+      "any_hit": 5
+    },
+    "CONCRETE": {
+      "total": 3,
+      "any_hit": 3
+    },
+    "STRUCTURED": {
+      "total": 1,
+      "any_hit": 0
+    }
+  },
+  "weakest": [
+    {
+      "id": "structured-held-001",
+      "bucket": "STRUCTURED",
+      "any_hit": false,
+      "top1_similarity": null,
+      "top1_rerank": null,
+      "top1_question": null,
+      "top1_answer_length": 0,
+      "top1_cite_count": 0,
+      "top3_mean_similarity": null,
+      "top3_questions": [],
+      "cache_quality_score": 0.0
+    },
+    {
+      "id": "concrete-held-002",
+      "bucket": "CONCRETE",
+      "any_hit": true,
+      "top1_similarity": 0.604,
+      "top1_rerank": null,
+      "top1_question": "What does the Quran teach in detail about Prophet David's psalms and wisdom?",
+      "top1_answer_length": 7090,
+      "top1_cite_count": 13,
+      "top3_mean_similarity": 0.604,
+      "top3_questions": [
+        "What does the Quran teach in detail about Prophet David's psalms and wisdom?"
+      ],
+      "cache_quality_score": 0.762
+    },
+    {
+      "id": "broad-held-002",
+      "bucket": "BROAD",
+      "any_hit": true,
+      "top1_similarity": 0.667,
+      "top1_rerank": 0.2529,
+      "top1_question": "What does Surah Ar-Rahman teach about divine blessings and responsibility?",
+      "top1_answer_length": 6187,
+      "top1_cite_count": 14,
+      "top3_mean_similarity": 0.672,
+      "top3_questions": [
+        "What does Surah Ar-Rahman teach about divine blessings and responsibility?",
+        "Summarize Surah Ar-Rahman (55) and its main insights.",
+        "Explain Surah Ar-Rahman (55)"
+      ],
+      "cache_quality_score": 0.813
+    },
+    {
+      "id": "broad-held-003",
+      "bucket": "BROAD",
+      "any_hit": true,
+      "top1_similarity": 0.674,
+      "top1_rerank": 0.9418,
+      "top1_question": "What does the Quran teach in detail about Prophet Solomon's kingdom?",
+      "top1_answer_length": 10749,
+      "top1_cite_count": 22,
+      "top3_mean_similarity": 0.661,
+      "top3_questions": [
+        "What does the Quran teach in detail about Prophet Solomon's kingdom?",
+        "What does the Quran teach through the archetype of the righteous king (Solomon)?",
+        "What does the Quran say about Luqman?"
+      ],
+      "cache_quality_score": 0.837
+    },
+    {
+      "id": "concrete-held-001",
+      "bucket": "CONCRETE",
+      "any_hit": true,
+      "top1_similarity": 0.674,
+      "top1_rerank": null,
+      "top1_question": "What does the Quran say about the people of Thamud?",
+      "top1_answer_length": 5494,
+      "top1_cite_count": 22,
+      "top3_mean_similarity": 0.674,
+      "top3_questions": [
+        "What does the Quran say about the people of Thamud?"
+      ],
+      "cache_quality_score": 0.837
+    },
+    {
+      "id": "broad-held-005",
+      "bucket": "BROAD",
+      "any_hit": true,
+      "top1_similarity": 0.695,
+      "top1_rerank": 0.9727,
+      "top1_question": "What does the Quran say about resurrection?",
+      "top1_answer_length": 8116,
+      "top1_cite_count": 19,
+      "top3_mean_similarity": 0.696,
+      "top3_questions": [
+        "What does the Quran say about resurrection?",
+        "What does the Quran say about the journey of the soul after death?",
+        "What does the Quran teach about the body in the resurrection?"
+      ],
+      "cache_quality_score": 0.847
+    },
+    {
+      "id": "abstract-held-002",
+      "bucket": "ABSTRACT",
+      "any_hit": true,
+      "top1_similarity": 0.786,
+      "top1_rerank": 0.9844,
+      "top1_question": "What does the Quran say about lying and false testimony?",
+      "top1_answer_length": 10426,
+      "top1_cite_count": 48,
+      "top3_mean_similarity": 0.833,
+      "top3_questions": [
+        "What does the Quran say about lying and false testimony?",
+        "What does the Quran teach about truthfulness versus deception?",
+        "What does the Quran teach about lying and truthfulness?"
+      ],
+      "cache_quality_score": 0.893
+    },
+    {
+      "id": "abstract-held-003",
+      "bucket": "ABSTRACT",
+      "any_hit": true,
+      "top1_similarity": 0.785,
+      "top1_rerank": 0.9931,
+      "top1_question": "What does the Quran say about fear of God?",
+      "top1_answer_length": 6281,
+      "top1_cite_count": 16,
+      "top3_mean_similarity": 0.752,
+      "top3_questions": [
+        "What does the Quran say about fear of God?",
+        "How does the Quran contrast fear of people with fear of God?",
+        "What does the Quran teach about fear and hope in God?"
+      ],
+      "cache_quality_score": 0.893
+    },
+    {
+      "id": "broad-held-001",
+      "bucket": "BROAD",
+      "any_hit": true,
+      "top1_similarity": 0.785,
+      "top1_rerank": 0.2912,
+      "top1_question": "Explain Surah Maryam chapter 19",
+      "top1_answer_length": 9514,
+      "top1_cite_count": 42,
+      "top3_mean_similarity": 0.692,
+      "top3_questions": [
+        "Explain Surah Maryam chapter 19",
+        "Summarize Surah Al-Fatihah (1) and its main insights.",
+        "What does Surah Maryam teach about mercy and divine intimacy?"
+      ],
+      "cache_quality_score": 0.893
+    },
+    {
+      "id": "abstract-held-005",
+      "bucket": "ABSTRACT",
+      "any_hit": true,
+      "top1_similarity": 0.814,
+      "top1_rerank": 0.9941,
+      "top1_question": "What does the Quran teach about peace?",
+      "top1_answer_length": 6838,
+      "top1_cite_count": 16,
+      "top3_mean_similarity": 0.734,
+      "top3_questions": [
+        "What does the Quran teach about peace?",
+        "How does the Quran describe the path of righteousness?",
+        "How does the Quran relate remembrance of God and inner peace?"
+      ],
+      "cache_quality_score": 0.907
+    }
+  ],
+  "per_question": [
+    {
+      "id": "abstract-held-001",
+      "bucket": "ABSTRACT",
+      "any_hit": true,
+      "top1_similarity": 0.837,
+      "top1_rerank": 0.6934,
+      "top1_question": "What does the Quran say about envy and its consequences?",
+      "top1_answer_length": 9766,
+      "top1_cite_count": 31,
+      "top3_mean_similarity": 0.821,
+      "top3_questions": [
+        "What does the Quran say about envy and its consequences?",
+        "What guidance does the Quran give about handling envy from others?"
+      ],
+      "cache_quality_score": 0.918
+    },
+    {
+      "id": "abstract-held-002",
+      "bucket": "ABSTRACT",
+      "any_hit": true,
+      "top1_similarity": 0.786,
+      "top1_rerank": 0.9844,
+      "top1_question": "What does the Quran say about lying and false testimony?",
+      "top1_answer_length": 10426,
+      "top1_cite_count": 48,
+      "top3_mean_similarity": 0.833,
+      "top3_questions": [
+        "What does the Quran say about lying and false testimony?",
+        "What does the Quran teach about truthfulness versus deception?",
+        "What does the Quran teach about lying and truthfulness?"
+      ],
+      "cache_quality_score": 0.893
+    },
+    {
+      "id": "abstract-held-003",
+      "bucket": "ABSTRACT",
+      "any_hit": true,
+      "top1_similarity": 0.785,
+      "top1_rerank": 0.9931,
+      "top1_question": "What does the Quran say about fear of God?",
+      "top1_answer_length": 6281,
+      "top1_cite_count": 16,
+      "top3_mean_similarity": 0.752,
+      "top3_questions": [
+        "What does the Quran say about fear of God?",
+        "How does the Quran contrast fear of people with fear of God?",
+        "What does the Quran teach about fear and hope in God?"
+      ],
+      "cache_quality_score": 0.893
+    },
+    {
+      "id": "abstract-held-004",
+      "bucket": "ABSTRACT",
+      "any_hit": true,
+      "top1_similarity": 0.915,
+      "top1_rerank": 1.0,
+      "top1_question": "What does the Quran say about generosity?",
+      "top1_answer_length": 8267,
+      "top1_cite_count": 35,
+      "top3_mean_similarity": 0.827,
+      "top3_questions": [
+        "What does the Quran say about generosity?",
+        "What does the Quran teach about generosity as a transformative act?",
+        "What does the Quran say about charity?"
+      ],
+      "cache_quality_score": 0.958
+    },
+    {
+      "id": "abstract-held-005",
+      "bucket": "ABSTRACT",
+      "any_hit": true,
+      "top1_similarity": 0.814,
+      "top1_rerank": 0.9941,
+      "top1_question": "What does the Quran teach about peace?",
+      "top1_answer_length": 6838,
+      "top1_cite_count": 16,
+      "top3_mean_similarity": 0.734,
+      "top3_questions": [
+        "What does the Quran teach about peace?",
+        "How does the Quran describe the path of righteousness?",
+        "How does the Quran relate remembrance of God and inner peace?"
+      ],
+      "cache_quality_score": 0.907
+    },
+    {
+      "id": "abstract-held-006",
+      "bucket": "ABSTRACT",
+      "any_hit": true,
+      "top1_similarity": 0.963,
+      "top1_rerank": null,
+      "top1_question": "What does the Quran say about anger and self-control?",
+      "top1_answer_length": 5959,
+      "top1_cite_count": 12,
+      "top3_mean_similarity": 0.963,
+      "top3_questions": [
+        "What does the Quran say about anger and self-control?"
+      ],
+      "cache_quality_score": 0.921
+    },
+    {
+      "id": "broad-held-001",
+      "bucket": "BROAD",
+      "any_hit": true,
+      "top1_similarity": 0.785,
+      "top1_rerank": 0.2912,
+      "top1_question": "Explain Surah Maryam chapter 19",
+      "top1_answer_length": 9514,
+      "top1_cite_count": 42,
+      "top3_mean_similarity": 0.692,
+      "top3_questions": [
+        "Explain Surah Maryam chapter 19",
+        "Summarize Surah Al-Fatihah (1) and its main insights.",
+        "What does Surah Maryam teach about mercy and divine intimacy?"
+      ],
+      "cache_quality_score": 0.893
+    },
+    {
+      "id": "broad-held-002",
+      "bucket": "BROAD",
+      "any_hit": true,
+      "top1_similarity": 0.667,
+      "top1_rerank": 0.2529,
+      "top1_question": "What does Surah Ar-Rahman teach about divine blessings and responsibility?",
+      "top1_answer_length": 6187,
+      "top1_cite_count": 14,
+      "top3_mean_similarity": 0.672,
+      "top3_questions": [
+        "What does Surah Ar-Rahman teach about divine blessings and responsibility?",
+        "Summarize Surah Ar-Rahman (55) and its main insights.",
+        "Explain Surah Ar-Rahman (55)"
+      ],
+      "cache_quality_score": 0.813
+    },
+    {
+      "id": "broad-held-003",
+      "bucket": "BROAD",
+      "any_hit": true,
+      "top1_similarity": 0.674,
+      "top1_rerank": 0.9418,
+      "top1_question": "What does the Quran teach in detail about Prophet Solomon's kingdom?",
+      "top1_answer_length": 10749,
+      "top1_cite_count": 22,
+      "top3_mean_similarity": 0.661,
+      "top3_questions": [
+        "What does the Quran teach in detail about Prophet Solomon's kingdom?",
+        "What does the Quran teach through the archetype of the righteous king (Solomon)?",
+        "What does the Quran say about Luqman?"
+      ],
+      "cache_quality_score": 0.837
+    },
+    {
+      "id": "broad-held-004",
+      "bucket": "BROAD",
+      "any_hit": true,
+      "top1_similarity": 0.846,
+      "top1_rerank": 0.9302,
+      "top1_question": "How does the Quran address the angels?",
+      "top1_answer_length": 12396,
+      "top1_cite_count": 41,
+      "top3_mean_similarity": 0.799,
+      "top3_questions": [
+        "How does the Quran address the angels?",
+        "What does the Quran say about angels and their hierarchies?",
+        "What does the Quran teach about perception of angels in certain moments?"
+      ],
+      "cache_quality_score": 0.923
+    },
+    {
+      "id": "broad-held-005",
+      "bucket": "BROAD",
+      "any_hit": true,
+      "top1_similarity": 0.695,
+      "top1_rerank": 0.9727,
+      "top1_question": "What does the Quran say about resurrection?",
+      "top1_answer_length": 8116,
+      "top1_cite_count": 19,
+      "top3_mean_similarity": 0.696,
+      "top3_questions": [
+        "What does the Quran say about resurrection?",
+        "What does the Quran say about the journey of the soul after death?",
+        "What does the Quran teach about the body in the resurrection?"
+      ],
+      "cache_quality_score": 0.847
+    },
+    {
+      "id": "concrete-held-001",
+      "bucket": "CONCRETE",
+      "any_hit": true,
+      "top1_similarity": 0.674,
+      "top1_rerank": null,
+      "top1_question": "What does the Quran say about the people of Thamud?",
+      "top1_answer_length": 5494,
+      "top1_cite_count": 22,
+      "top3_mean_similarity": 0.674,
+      "top3_questions": [
+        "What does the Quran say about the people of Thamud?"
+      ],
+      "cache_quality_score": 0.837
+    },
+    {
+      "id": "concrete-held-002",
+      "bucket": "CONCRETE",
+      "any_hit": true,
+      "top1_similarity": 0.604,
+      "top1_rerank": null,
+      "top1_question": "What does the Quran teach in detail about Prophet David's psalms and wisdom?",
+      "top1_answer_length": 7090,
+      "top1_cite_count": 13,
+      "top3_mean_similarity": 0.604,
+      "top3_questions": [
+        "What does the Quran teach in detail about Prophet David's psalms and wisdom?"
+      ],
+      "cache_quality_score": 0.762
+    },
+    {
+      "id": "concrete-held-003",
+      "bucket": "CONCRETE",
+      "any_hit": true,
+      "top1_similarity": 0.849,
+      "top1_rerank": 0.9826,
+      "top1_question": "How does the Quran address the jinn?",
+      "top1_answer_length": 7904,
+      "top1_cite_count": 21,
+      "top3_mean_similarity": 0.756,
+      "top3_questions": [
+        "How does the Quran address the jinn?",
+        "What does the Quran say about jinn who believed versus those who did not?",
+        "What does the Quran say about the creation of jinn from smokeless fire?"
+      ],
+      "cache_quality_score": 0.924
+    },
+    {
+      "id": "structured-held-001",
+      "bucket": "STRUCTURED",
+      "any_hit": false,
+      "top1_similarity": null,
+      "top1_rerank": null,
+      "top1_question": null,
+      "top1_answer_length": 0,
+      "top1_cite_count": 0,
+      "top3_mean_similarity": null,
+      "top3_questions": [],
+      "cache_quality_score": 0.0
+    }
+  ]
+}

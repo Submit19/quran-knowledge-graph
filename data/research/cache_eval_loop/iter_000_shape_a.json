@@ -1,0 +1,1508 @@
+{
+  "total": 57,
+  "hard_pass": 51,
+  "hard_pass_rate": 0.8947,
+  "cache_hits": 57,
+  "cache_hit_rate": 1.0,
+  "by_bucket": {
+    "ABSTRACT": {
+      "total": 25,
+      "hard_pass": 21,
+      "cache_hits": 25
+    },
+    "BROAD": {
+      "total": 21,
+      "hard_pass": 20,
+      "cache_hits": 21
+    },
+    "CONCRETE": {
+      "total": 7,
+      "hard_pass": 6,
+      "cache_hits": 7
+    },
+    "STRUCTURED": {
+      "total": 4,
+      "hard_pass": 4,
+      "cache_hits": 4
+    }
+  },
+  "worst_failures": [
+    {
+      "id": "abstract-003",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "How does the Quran portray gratitude?",
+      "answer_length": 4588,
+      "cite_count": 12,
+      "asserts": {
+        "passed": [
+          "cites_must_include:14:7",
+          "answer_substring_required:thank",
+          "answer_substring_required:ش-ك-ر"
+        ],
+        "failed": [
+          "answer_substring_required:shukr"
+        ],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_include:search_arabic_root",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": false,
+      "applicable_asserts": 4
+    },
+    {
+      "id": "abstract-014",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "How does the Quran address doubt and certainty?",
+      "answer_length": 5095,
+      "cite_count": 13,
+      "asserts": {
+        "passed": [
+          "cites_must_include:102:7",
+          "answer_substring_required:certainty",
+          "answer_substring_required:ي-ق-ن"
+        ],
+        "failed": [
+          "answer_substring_required:yaqeen"
+        ],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_include:search_arabic_root",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": false,
+      "applicable_asserts": 4
+    },
+    {
+      "id": "abstract-016",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "How does the Quran characterise Satan and the ways he misleads people?",
+      "answer_length": 6045,
+      "cite_count": 18,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:devil",
+          "answer_substring_required:shaytan",
+          "answer_substring_required:ش-ط-ن"
+        ],
+        "failed": [
+          "cites_must_include:35:6"
+        ],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_include:search_arabic_root",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": false,
+      "applicable_asserts": 4
+    },
+    {
+      "id": "abstract-017",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What lessons does the Quran offer about being led astray (dalal)?",
+      "answer_length": 5998,
+      "cite_count": 11,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:astray"
+        ],
+        "failed": [
+          "cites_must_include:2:26"
+        ],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": false,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "broad-012",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "How does the Quran speak of its own miraculous nature?",
+      "answer_length": 7156,
+      "cite_count": 20,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:19"
+        ],
+        "failed": [
+          "cites_must_include:74:30"
+        ],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_include:get_code19_features",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": false,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "concrete-004",
+      "bucket": "CONCRETE",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What befell Lot's people according to the Quran?",
+      "answer_length": 4041,
+      "cite_count": 22,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:Lot"
+        ],
+        "failed": [
+          "cites_must_include:11:77"
+        ],
+        "skipped": [
+          "tools_used_must_include:hybrid_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": false,
+      "applicable_asserts": 2
+    }
+  ],
+  "per_question": [
+    {
+      "id": "abstract-001",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Tell me what the Quran says about charity.",
+      "answer_length": 4338,
+      "cite_count": 17,
+      "asserts": {
+        "passed": [
+          "cites_must_include:2:177",
+          "answer_substring_required:charity"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "abstract-002",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What does the Quran teach about forgiveness?",
+      "answer_length": 3932,
+      "cite_count": 12,
+      "asserts": {
+        "passed": [
+          "cites_must_include:39:53",
+          "answer_substring_required:forgive"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "abstract-003",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "How does the Quran portray gratitude?",
+      "answer_length": 4588,
+      "cite_count": 12,
+      "asserts": {
+        "passed": [
+          "cites_must_include:14:7",
+          "answer_substring_required:thank",
+          "answer_substring_required:ش-ك-ر"
+        ],
+        "failed": [
+          "answer_substring_required:shukr"
+        ],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_include:search_arabic_root",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": false,
+      "applicable_asserts": 4
+    },
+    {
+      "id": "abstract-004",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Describe what the Quran reveals about sin.",
+      "answer_length": 3641,
+      "cite_count": 12,
+      "asserts": {
+        "passed": [
+          "cites_must_include:4:31",
+          "answer_substring_required:sin"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "abstract-005",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What does the Quran say about patience?",
+      "answer_length": 4208,
+      "cite_count": 12,
+      "asserts": {
+        "passed": [
+          "cites_must_include:2:153",
+          "answer_substring_required:patience",
+          "answer_substring_required:sabr",
+          "answer_substring_required:ص-ب-ر"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_include:search_arabic_root",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 4
+    },
+    {
+      "id": "abstract-006",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "How is humility presented in the Quran?",
+      "answer_length": 4215,
+      "cite_count": 12,
+      "asserts": {
+        "passed": [
+          "cites_must_include:25:63",
+          "answer_substring_required:humility"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "abstract-007",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What is the Quran's teaching on repentance?",
+      "answer_length": 4402,
+      "cite_count": 12,
+      "asserts": {
+        "passed": [
+          "cites_must_include:2:222",
+          "answer_substring_required:repent",
+          "answer_substring_required:tawba",
+          "answer_substring_required:ت-و-ب"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_include:search_arabic_root",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 4
+    },
+    {
+      "id": "abstract-008",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "How does the Quran describe true belief?",
+      "answer_length": 5426,
+      "cite_count": 13,
+      "asserts": {
+        "passed": [
+          "cites_must_include:49:15",
+          "answer_substring_required:belief"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "abstract-009",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What does the Quran reveal about hypocrisy?",
+      "answer_length": 4196,
+      "cite_count": 10,
+      "asserts": {
+        "passed": [
+          "cites_must_include:2:8",
+          "answer_substring_required:hypocri"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "abstract-010",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What is the Quran's view of justice?",
+      "answer_length": 4357,
+      "cite_count": 11,
+      "asserts": {
+        "passed": [
+          "cites_must_include:4:135",
+          "answer_substring_required:justice",
+          "answer_substring_required:adl",
+          "answer_substring_required:ع-د-ل"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_include:search_arabic_root",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 4
+    },
+    {
+      "id": "abstract-011",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "How does the Quran warn about the consequences of arrogance?",
+      "answer_length": 4537,
+      "cite_count": 16,
+      "asserts": {
+        "passed": [
+          "cites_must_include:7:13",
+          "answer_substring_required:arrogan"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "abstract-012",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Walk me through the Quran's description of the path of righteousness.",
+      "answer_length": 4354,
+      "cite_count": 12,
+      "asserts": {
+        "passed": [
+          "cites_must_include:2:177",
+          "answer_substring_required:righteous"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "abstract-013",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What guidance does the Quran offer on trusting in God?",
+      "answer_length": 4475,
+      "cite_count": 10,
+      "asserts": {
+        "passed": [
+          "cites_must_include:65:3",
+          "answer_substring_required:trust",
+          "answer_substring_required:tawakkul",
+          "answer_substring_required:و-ك-ل"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_include:search_arabic_root",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 4
+    },
+    {
+      "id": "abstract-014",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "How does the Quran address doubt and certainty?",
+      "answer_length": 5095,
+      "cite_count": 13,
+      "asserts": {
+        "passed": [
+          "cites_must_include:102:7",
+          "answer_substring_required:certainty",
+          "answer_substring_required:ي-ق-ن"
+        ],
+        "failed": [
+          "answer_substring_required:yaqeen"
+        ],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_include:search_arabic_root",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": false,
+      "applicable_asserts": 4
+    },
+    {
+      "id": "abstract-015",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What does sincere worship look like according to the Quran?",
+      "answer_length": 5114,
+      "cite_count": 14,
+      "asserts": {
+        "passed": [
+          "cites_must_include:98:5",
+          "answer_substring_required:sincere",
+          "answer_substring_required:ikhlas",
+          "answer_substring_required:خ-ل-ص"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_include:search_arabic_root",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 4
+    },
+    {
+      "id": "abstract-016",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "How does the Quran characterise Satan and the ways he misleads people?",
+      "answer_length": 6045,
+      "cite_count": 18,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:devil",
+          "answer_substring_required:shaytan",
+          "answer_substring_required:ش-ط-ن"
+        ],
+        "failed": [
+          "cites_must_include:35:6"
+        ],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_include:search_arabic_root",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": false,
+      "applicable_asserts": 4
+    },
+    {
+      "id": "abstract-017",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What lessons does the Quran offer about being led astray (dalal)?",
+      "answer_length": 5998,
+      "cite_count": 11,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:astray"
+        ],
+        "failed": [
+          "cites_must_include:2:26"
+        ],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": false,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "abstract-018",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Explain how the Quran describes the whisperings of Satan (waswasa).",
+      "answer_length": 5269,
+      "cite_count": 9,
+      "asserts": {
+        "passed": [
+          "cites_must_include:114:4",
+          "answer_substring_required:whisper"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "abstract-019",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What consequences does the Quran tie to following Satan?",
+      "answer_length": 5304,
+      "cite_count": 13,
+      "asserts": {
+        "passed": [
+          "cites_must_include:14:22",
+          "answer_substring_required:devil"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "abstract-020",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "How does the Quran discuss wealth and worldly attachment?",
+      "answer_length": 6151,
+      "cite_count": 16,
+      "asserts": {
+        "passed": [
+          "cites_must_include:3:14",
+          "answer_substring_required:wealth"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "abstract-021",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Trace the Quran's depiction of death and the soul.",
+      "answer_length": 5780,
+      "cite_count": 21,
+      "asserts": {
+        "passed": [
+          "cites_must_include:39:42",
+          "answer_substring_required:soul"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "abstract-022",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Discuss what the Quran says about reflection and contemplation.",
+      "answer_length": 6352,
+      "cite_count": 12,
+      "asserts": {
+        "passed": [
+          "cites_must_include:38:29",
+          "answer_substring_required:reflect"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "abstract-023",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "How does the Quran depict the mercy of God?",
+      "answer_length": 6494,
+      "cite_count": 14,
+      "asserts": {
+        "passed": [
+          "cites_must_include:7:156",
+          "answer_substring_required:mercy",
+          "answer_substring_required:rahma",
+          "answer_substring_required:ر-ح-م"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_include:search_arabic_root",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 4
+    },
+    {
+      "id": "abstract-024",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What insight does the Quran provide about prayer (salat)?",
+      "answer_length": 5926,
+      "cite_count": 19,
+      "asserts": {
+        "passed": [
+          "cites_must_include:29:45",
+          "answer_substring_required:prayer"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "abstract-025",
+      "bucket": "ABSTRACT",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Why does the Quran emphasise honouring one's parents?",
+      "answer_length": 6156,
+      "cite_count": 9,
+      "asserts": {
+        "passed": [
+          "cites_must_include:17:23",
+          "answer_substring_required:parent"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "broad-001",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Summarize Surah Al-Baqarah.",
+      "answer_length": 4840,
+      "cite_count": 34,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:Baqarah"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:explore_surah",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 1
+    },
+    {
+      "id": "broad-002",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Provide a summary of Surah Yusuf.",
+      "answer_length": 4415,
+      "cite_count": 24,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:Joseph"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:explore_surah",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 1
+    },
+    {
+      "id": "broad-003",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What is the main theme of Surah Yasin?",
+      "answer_length": 5578,
+      "cite_count": 21,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:Yasin"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:explore_surah",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 1
+    },
+    {
+      "id": "broad-004",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Give me an overview of Surah Al-Imran.",
+      "answer_length": 6523,
+      "cite_count": 26,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:Imran"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:explore_surah",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 1
+    },
+    {
+      "id": "broad-005",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What are the main themes of the Quran?",
+      "answer_length": 5398,
+      "cite_count": 59,
+      "asserts": {
+        "passed": [],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 0
+    },
+    {
+      "id": "broad-006",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "In what ways does the Quran describe itself?",
+      "answer_length": 6232,
+      "cite_count": 23,
+      "asserts": {
+        "passed": [],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 0
+    },
+    {
+      "id": "broad-007",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "How does the Quran present the concept of revelation?",
+      "answer_length": 6594,
+      "cite_count": 27,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:revelation"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 1
+    },
+    {
+      "id": "broad-008",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Outline the contents of Surah An-Nisa.",
+      "answer_length": 7098,
+      "cite_count": 19,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:Nisa"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:explore_surah",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 1
+    },
+    {
+      "id": "broad-009",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What is the central message of Surah Al-Kahf?",
+      "answer_length": 6250,
+      "cite_count": 17,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:Kahf"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:explore_surah",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 1
+    },
+    {
+      "id": "broad-010",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "According to the Quran, how should we understand the relationship between God and humanity?",
+      "answer_length": 6495,
+      "cite_count": 18,
+      "asserts": {
+        "passed": [],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 0
+    },
+    {
+      "id": "broad-011",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Explain the structure of the Quran.",
+      "answer_length": 5889,
+      "cite_count": 4,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:114"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 1
+    },
+    {
+      "id": "broad-012",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "How does the Quran speak of its own miraculous nature?",
+      "answer_length": 7156,
+      "cite_count": 20,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:19"
+        ],
+        "failed": [
+          "cites_must_include:74:30"
+        ],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_include:get_code19_features",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": false,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "broad-013",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Who are the prophets mentioned in the Quran?",
+      "answer_length": 7457,
+      "cite_count": 168,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:25"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 1
+    },
+    {
+      "id": "broad-014",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What is the Quran's portrayal of the Day of Judgment?",
+      "answer_length": 6593,
+      "cite_count": 31,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:Judgment"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:concept_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 1
+    },
+    {
+      "id": "broad-015",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What is the Quran's perspective on the Torah and the Gospel?",
+      "answer_length": 6602,
+      "cite_count": 17,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:Torah"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:hybrid_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 1
+    },
+    {
+      "id": "broad-016",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Tell me about Abraham in the Quran.",
+      "answer_length": 7455,
+      "cite_count": 23,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:Abraham"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:hybrid_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 1
+    },
+    {
+      "id": "broad-017",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Recount the story of Moses in the Quran.",
+      "answer_length": 6768,
+      "cite_count": 55,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:Moses"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:hybrid_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 1
+    },
+    {
+      "id": "broad-018",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Summarise the Quranic account of Jesus.",
+      "answer_length": 8091,
+      "cite_count": 29,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:Jesus"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:hybrid_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 1
+    },
+    {
+      "id": "broad-019",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Describe Muhammad as he appears in the Quran.",
+      "answer_length": 8230,
+      "cite_count": 19,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:Muhammad"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:hybrid_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 1
+    },
+    {
+      "id": "broad-020",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What does the Quran tell us about Noah?",
+      "answer_length": 7449,
+      "cite_count": 25,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:Noah"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:hybrid_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 1
+    },
+    {
+      "id": "broad-021",
+      "bucket": "BROAD",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "From a Quranic perspective, how does Satan succeed in misleading humanity?",
+      "answer_length": 8593,
+      "cite_count": 20,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:devil"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:hybrid_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 1
+    },
+    {
+      "id": "concrete-001",
+      "bucket": "CONCRETE",
+      "cache_hit": true,
+      "similarity": 0.989,
+      "rerank_score": 1.0,
+      "retrieved_question": "Tell me about paradise",
+      "answer_length": 3016,
+      "cite_count": 15,
+      "asserts": {
+        "passed": [
+          "cites_must_include:47:15",
+          "answer_substring_required:Paradise",
+          "answer_substring_required:janna",
+          "answer_substring_required:ج-ن-ن"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:hybrid_search",
+          "tools_used_must_include:search_arabic_root",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 4
+    },
+    {
+      "id": "concrete-002",
+      "bucket": "CONCRETE",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "How does the Quran identify and describe the hypocrites?",
+      "answer_length": 3771,
+      "cite_count": 10,
+      "asserts": {
+        "passed": [
+          "cites_must_include:63:1",
+          "answer_substring_required:hypocri"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:hybrid_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "concrete-003",
+      "bucket": "CONCRETE",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": null,
+      "retrieved_question": "Tell me about the people of Aad.",
+      "answer_length": 3649,
+      "cite_count": 18,
+      "asserts": {
+        "passed": [
+          "cites_must_include:7:65",
+          "answer_substring_required:Aad"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:hybrid_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "concrete-004",
+      "bucket": "CONCRETE",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What befell Lot's people according to the Quran?",
+      "answer_length": 4041,
+      "cite_count": 22,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:Lot"
+        ],
+        "failed": [
+          "cites_must_include:11:77"
+        ],
+        "skipped": [
+          "tools_used_must_include:hybrid_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": false,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "concrete-005",
+      "bucket": "CONCRETE",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": null,
+      "retrieved_question": "Who is Dhul-Qarnayn?",
+      "answer_length": 4463,
+      "cite_count": 11,
+      "asserts": {
+        "passed": [
+          "cites_must_include:18:83",
+          "answer_substring_required:Qarnayn"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:hybrid_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "concrete-006",
+      "bucket": "CONCRETE",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Tell the story of the Cave (Ashab al-Kahf) as the Quran presents it.",
+      "answer_length": 4933,
+      "cite_count": 13,
+      "asserts": {
+        "passed": [
+          "cites_must_include:18:9",
+          "answer_substring_required:Cave"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:hybrid_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "concrete-007",
+      "bucket": "CONCRETE",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "How is Pharaoh depicted across the Quran?",
+      "answer_length": 5326,
+      "cite_count": 21,
+      "asserts": {
+        "passed": [
+          "cites_must_include:28:38",
+          "answer_substring_required:Pharaoh"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:hybrid_search",
+          "tools_used_must_not_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "structured-001",
+      "bucket": "STRUCTURED",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "How many times does the letter Qaf appear in Surah Qaf, and how does this relate to the Code-19 system?",
+      "answer_length": 2030,
+      "cite_count": 4,
+      "asserts": {
+        "passed": [
+          "cites_must_include:50:1",
+          "answer_substring_required:57",
+          "answer_substring_required:19"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:get_code19_features"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 3
+    },
+    {
+      "id": "structured-002",
+      "bucket": "STRUCTURED",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Which surahs open with mysterious letters (muqatta'at), and what patterns connect them?",
+      "answer_length": 2711,
+      "cite_count": 30,
+      "asserts": {
+        "passed": [
+          "cites_must_include:2:1",
+          "answer_substring_required:29"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    },
+    {
+      "id": "structured-003",
+      "bucket": "STRUCTURED",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "Which surahs are Meccan and which are Medinan?",
+      "answer_length": 1514,
+      "cite_count": 0,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:Meccan",
+          "answer_substring_required:Medinan",
+          "answer_substring_required:86",
+          "answer_substring_required:28"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:run_cypher"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 4
+    },
+    {
+      "id": "structured-004",
+      "bucket": "STRUCTURED",
+      "cache_hit": true,
+      "similarity": 1.0,
+      "rerank_score": 1.0,
+      "retrieved_question": "What are the thematic differences between Meccan and Medinan revelations?",
+      "answer_length": 3540,
+      "cite_count": 37,
+      "asserts": {
+        "passed": [
+          "answer_substring_required:Meccan",
+          "answer_substring_required:Medinan"
+        ],
+        "failed": [],
+        "skipped": [
+          "tools_used_must_include:run_cypher",
+          "tools_used_must_include:concept_search"
+        ]
+      },
+      "hard_pass": true,
+      "applicable_asserts": 2
+    }
+  ]
+}

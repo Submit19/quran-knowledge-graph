@@ -1,0 +1,192 @@
+# Eval v2 — CONCRETE bucket (7 questions).
+#
+# Tests named non-prophet entities, named events, and named places.
+# Prophet biographies (Abraham, Moses, Jesus, Muhammad, Noah) moved to
+# BROAD because the answer space is survey-shaped, not pinpoint.
+# Failure mode: agent semantic-searches when keyword would land
+# cleanly on the proper noun.
+
+- id: concrete-001
+  bucket: CONCRETE
+  question: "Tell me about Paradise."
+  asserts:
+    cites_must_include: ["47:15"]
+    tools_used_must_include: ["hybrid_search", "search_arabic_root"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Paradise", "janna", "ج-ن-ن"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.35
+    tool_path_correctness: 0.3
+    framing_appropriateness: 0.1
+  notes: |
+    Named-entity sub-shape (proper noun "Paradise") -> hybrid_search
+    pin per system-prompt CONCRETE routing. [AR] root ج-ن-ن / janna.
+    Three-substring AR gate.
+    Anchor candidates considered: 47:15 (Khalifa: "the allegory of
+    Paradise that is promised for the righteous" — definitive
+    descriptive verse), 55:46 (two gardens for those who reverence
+    their Lord), 76:5-22 (Khalifa's vivid Paradise description).
+    Picked 47:15 for the explicit "allegory of Paradise" framing.
+    Phase 4d any_of candidate: substring "janna" vs "Garden" vs
+    "Paradise" — Khalifa uses all three across the text.
+  added: 2026-05-17
+  added_by: operator
+
+- id: concrete-002
+  bucket: CONCRETE
+  question: "How does the Quran identify and describe the hypocrites?"
+  asserts:
+    cites_must_include: ["63:1"]
+    tools_used_must_include: ["hybrid_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["hypocri"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.35
+    tool_path_correctness: 0.3
+    framing_appropriateness: 0.1
+  notes: |
+    Named-entity sub-shape (munafiqun) -> hybrid_search pin.
+    Substring "hypocri" matches hypocrite/hypocrites/hypocrisy/
+    hypocritical.
+    Anchor candidates considered: 63:1 (Khalifa: opening of Surah
+    Al-Munafiqun — the named-after-them surah), 2:8 (the canonical
+    early-Quran passage on hypocrisy), 4:142 (hypocrites try to
+    deceive GOD). Picked 63:1 because CONCRETE-bucket routing tests
+    that the agent reaches the named-after-them surah; abstract-009
+    already anchors on 2:8 from the ABSTRACT angle.
+  added: 2026-05-17
+  added_by: operator
+
+- id: concrete-003
+  bucket: CONCRETE
+  question: "Tell me about the people of Aad."
+  asserts:
+    cites_must_include: ["7:65"]
+    tools_used_must_include: ["hybrid_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Aad"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.35
+    tool_path_correctness: 0.3
+    framing_appropriateness: 0.1
+  notes: |
+    Named-entity sub-shape (proper noun "Aad") -> hybrid_search pin.
+    Less-common named group; failure mode = agent confabulates
+    from training data rather than retrieving the specific verses.
+    Anchor candidates considered: 7:65-72 (Hud sent to Aad —
+    concise narrative), 46:21-25 (the punishment wind, Khalifa-
+    iconic), 41:15-16 (Aad's arrogance). Picked 7:65 as the
+    cleanest opening of the Aad narrative.
+    Phase 4d any_of candidate: substring "Aad" vs "Ad" (Khalifa
+    spelling varies) vs "people of Aad" — agent might use any.
+  added: 2026-05-17
+  added_by: operator
+
+- id: concrete-004
+  bucket: CONCRETE
+  question: "What befell Lot's people according to the Quran?"
+  asserts:
+    cites_must_include: ["11:77"]
+    tools_used_must_include: ["hybrid_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Lot"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.35
+    tool_path_correctness: 0.3
+    framing_appropriateness: 0.1
+  notes: |
+    Named-entity sub-shape (proper noun "Lot") -> hybrid_search pin.
+    Tests narrative synthesis across Surah Hud, Ash-Shu'ara,
+    Al-Ankabut.
+    Anchor candidates considered: 11:77 (Khalifa: messengers arrive
+    at Lot's house — opens the most narrative version), 26:160-175
+    (Lot in Ash-Shu'ara), 29:28-35 (Al-Ankabut framing). Picked
+    11:77 because Surah Hud holds the most prose-narrative
+    treatment.
+  added: 2026-05-17
+  added_by: operator
+
+- id: concrete-005
+  bucket: CONCRETE
+  question: "Who is Dhul-Qarnayn?"
+  asserts:
+    cites_must_include: ["18:83"]
+    tools_used_must_include: ["hybrid_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Qarnayn"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.35
+    tool_path_correctness: 0.3
+    framing_appropriateness: 0.1
+  notes: |
+    Named-entity sub-shape (proper noun) -> hybrid_search pin.
+    Single canonical location: 18:83-98 in Surah Al-Kahf — the
+    only place Dhul-Qarnayn is named.
+    Substring "Qarnayn" matches "Dhul-Qarnayn" / "Dhu al-Qarnayn"
+    / "Zul-Qarnayn" via prefix.
+    Anchor candidates considered: 18:83 (opening of the narrative),
+    18:86 (the first journey), 18:96 (the iron-and-copper barrier).
+    Picked 18:83 as the opening.
+    Failure mode: agent imports extra-Quranic Alexander-the-Great
+    identification without flagging the Quranic ambiguity.
+  added: 2026-05-17
+  added_by: operator
+
+- id: concrete-006
+  bucket: CONCRETE
+  question: "Tell the story of the Cave (Ashab al-Kahf) as the Quran presents it."
+  asserts:
+    cites_must_include: ["18:9"]
+    tools_used_must_include: ["hybrid_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Cave"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.35
+    tool_path_correctness: 0.3
+    framing_appropriateness: 0.1
+  notes: |
+    Named-entity sub-shape (named narrative) -> hybrid_search pin.
+    Single canonical location: 18:9-26 in Surah Al-Kahf.
+    Anchor candidates considered: 18:9 (opening), 18:13 (the
+    young men sought refuge in the Cave), 18:21 (their numbers
+    debate). Picked 18:9 as the opening.
+    Failure mode: agent spiritualises the Cave narrative into
+    abstract themes (faith / refuge / sleep-as-trial) without
+    grounding in the specific verses; or imports the Christian
+    "Seven Sleepers of Ephesus" tradition uncritically.
+  added: 2026-05-17
+  added_by: operator
+
+- id: concrete-007
+  bucket: CONCRETE
+  question: "How is Pharaoh depicted across the Quran?"
+  asserts:
+    cites_must_include: ["28:38"]
+    tools_used_must_include: ["hybrid_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Pharaoh"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.35
+    tool_path_correctness: 0.3
+    framing_appropriateness: 0.1
+  notes: |
+    Named-entity sub-shape (proper noun "Pharaoh") -> hybrid_search
+    pin. Recurring antagonist across many surahs (7, 10, 11, 20,
+    26, 28, 40, 43, 79, etc.).
+    Anchor candidates considered: 28:38 (Khalifa: Pharaoh's
+    self-deification: "I am your only god" — iconic and Khalifa-
+    distinctive in rendering), 79:24 ("I am your Lord, most high"),
+    7:103 (the Moses-vs-Pharaoh confrontation opens). Picked
+    28:38 because Pharaoh's self-deification is the moral hinge
+    of the Quranic portrayal.
+    Phase 4d any_of candidate: substring "Pharaoh" vs "Fir'awn"
+    (transliterated form) — Khalifa uses "Pharaoh."
+  added: 2026-05-17
+  added_by: operator

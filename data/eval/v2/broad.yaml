@@ -1,0 +1,586 @@
+# Eval v2 — BROAD bucket (21 questions).
+#
+# Tests surveys, surah summaries, theological overviews, and prophet
+# biographies. Failure mode: shallow answer that doesn't span enough
+# surahs / verses, or that confabulates roster items. Should use
+# explore_surah for surah-summary questions and traverse multiple
+# keyword paths for theme surveys.
+
+- id: broad-001
+  bucket: BROAD
+  question: "Summarize Surah Al-Baqarah."
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["explore_surah"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Baqarah"]
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Surah summary (286 verses — the Quran's longest). Routing:
+    surah-summary sub-shape -> explore_surah pin per system prompt
+    ("ALWAYS call explore_surah for any 'Tell me about Surah X' /
+    'Summarize Surah X' question"). cites_must_include is empty
+    by design: no single canonical anchor exists for a whole-surah
+    summary, so the rubric (especially completeness 0.5) is the
+    only citation-quality signal. Failure mode: agent cites only
+    2:255 (Throne Verse) and ignores the surah's legal + narrative
+    breadth.
+    Phase 4d any_of candidate: substring "Baqarah" vs "The Cow"
+    (Khalifa's translated surah name) — agent might use either.
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-002
+  bucket: BROAD
+  question: "Provide a summary of Surah Yusuf."
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["explore_surah"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Joseph"]
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Surah summary (111 verses — Khalifa renders the surah name as
+    "Joseph"; the Arabic name Yusuf is in the question). Routing:
+    surah-summary sub-shape -> explore_surah pin. cites_must_include
+    empty by design (whole-surah summary). Substring "Joseph" picks
+    Khalifa's preferred rendering — the agent should use it
+    consistently when working from this translation.
+    Phase 4d any_of candidate: substring "Joseph" vs "Yusuf" —
+    a good answer might use either or both.
+    Failure mode: agent gives a generic Joseph-story summary
+    without surfacing surah-specific structure (the dream framing,
+    the chiastic narrative, the closing reflection).
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-003
+  bucket: BROAD
+  question: "What is the main theme of Surah Yasin?"
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["explore_surah"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Yasin"]
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Surah summary / theme-extraction on the "heart of the Quran"
+    (Surah 36, 83 verses). Routing: surah-summary sub-shape ->
+    explore_surah pin. cites_must_include empty by design.
+    Failure mode: agent invokes the popular "heart of the Quran"
+    framing without grounding what about the surah earns that
+    epithet (resurrection emphasis, the Companions of the Town
+    parable, the cosmic signs sequence).
+    Phase 4d any_of candidate: substring "Yasin" vs "Y. S."
+    (Khalifa renders the muqatta'at opening as "Y. S.") — the
+    agent might lead with Khalifa's spelling.
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-004
+  bucket: BROAD
+  question: "Give me an overview of Surah Al-Imran."
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["explore_surah"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Imran"]
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Surah summary (200-verse Madinan surah). Routing: surah-summary
+    sub-shape -> explore_surah pin. cites_must_include empty by
+    design. Substring "Imran" matches "Al-Imran" / "Aal-Imran" /
+    "Imran" — case-insensitive substring catches any common form.
+    Failure mode: agent treats the surah as a Mary-and-Jesus
+    biography and misses the doctrinal sections (3:7 on
+    interpretation, 3:64 on common-ground theology, 3:103 on
+    unity, 3:159 on consultation).
+    Phase 4d any_of candidate: substring "Imran" vs "Amran" —
+    Khalifa specifically uses "Amran" (no I); if the agent
+    strictly follows Khalifa it may bypass "Imran" entirely.
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-005
+  bucket: BROAD
+  question: "What are the main themes of the Quran?"
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: []
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Theme-survey sub-shape of BROAD (no specific surah → routing
+    is concept_search-led, NOT explore_surah). cites_must_include
+    empty by design — no single canonical anchor exists for "main
+    themes of the whole Quran." answer_substring_required also
+    empty — any required word ("Quran", "themes", "God") would
+    be trivially present and add no signal.
+    The rubric (especially completeness 0.5 and framing 0.2) is
+    the ONLY quality signal for this question. Watch this one on
+    first eval run: if it scores high purely on hand-waving prose
+    that the judge can't penalise, the rubric anchors need
+    tightening in Phase 4d.
+    Failure mode: shallow listicle ("monotheism, prophets,
+    afterlife, morality, …") without verse grounding for any
+    of the listed themes.
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-006
+  bucket: BROAD
+  question: "In what ways does the Quran describe itself?"
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: []
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Theme-survey sub-shape. Self-referential question — should
+    surface 2:2 (infallible scripture), 15:9 (preservation guarantee),
+    17:88 (inimitability), 41:42 (no falsehood), 39:23 (the best
+    of all narrations), etc. No single canonical anchor — rubric
+    (completeness 0.5) is the only quality signal.
+    Failure mode: shallow paraphrase ("the Quran calls itself a
+    guidance, a reminder…") without citing the self-description
+    verses verbatim.
+    Commit hygiene note (2026-05-17): the original commit for this
+    question accidentally bundled 13 unrelated research files
+    staged elsewhere; reset and re-committed cleanly. All
+    subsequent commits on this branch use path-scoped
+    `git commit <path> -m '...'` to prevent recurrence.
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-007
+  bucket: BROAD
+  question: "How does the Quran present the concept of revelation?"
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["revelation"]
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Theme-survey sub-shape. Tests breadth across revelation-related
+    verses (wahy, tanzeel). No single canonical anchor (3:3, 42:51,
+    53:4, 25:32, etc. all candidates) — rubric is the quality
+    signal.
+    Failure mode: agent gives generic "the Quran was revealed
+    gradually" framing without the active-revelation verses
+    (42:51 on the modes of wahy, 53:4 on the source).
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-008
+  bucket: BROAD
+  question: "Outline the contents of Surah An-Nisa."
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["explore_surah"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Nisa"]
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Surah summary (176 verses — Madinan, women / family law
+    centerpiece). Routing: surah-summary -> explore_surah pin.
+    cites_must_include empty by design.
+    Failure mode: agent emphasises the inheritance verses
+    (4:11-12) at the expense of the marriage / orphan / hypocrites
+    / scriptures-of-the-book sections.
+    Phase 4d any_of candidate: substring "Nisa" vs "The Women"
+    (Khalifa's translated surah name).
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-009
+  bucket: BROAD
+  question: "What is the central message of Surah Al-Kahf?"
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["explore_surah"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Kahf"]
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Surah summary (110 verses — Makki, story-heavy). Routing:
+    surah-summary -> explore_surah pin. cites_must_include empty
+    by design. Four narratives interweave: Companions of the Cave,
+    Owner of the Two Gardens, Moses + the servant, Dhul-Qarnayn.
+    Failure mode: agent recounts only the Cave story (the most
+    famous) and treats the other three as appendices.
+    Phase 4d any_of candidate: substring "Kahf" vs "The Cave"
+    (Khalifa's translated surah name).
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-010
+  bucket: BROAD
+  question: "According to the Quran, how should we understand the relationship between God and humanity?"
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: []
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Theme-survey sub-shape. Highest-level theological question.
+    No single canonical anchor — relevant verses span 2:30
+    (humanity as khalifa), 51:56 (created to worship), 7:172
+    (covenant of the souls), etc. Rubric (especially completeness
+    0.5) is the only quality signal.
+    Failure mode: vague abstraction ("a covenant relationship",
+    "God is creator, we are servants") without verse grounding.
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-011
+  bucket: BROAD
+  question: "Explain the structure of the Quran."
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: []
+    answer_substring_required: ["114"]
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Meta question — should describe surah counts, Makki/Madani,
+    chronological vs canonical order, verse counts, muqatta'at,
+    etc. Substring "114" pins the canonical surah count — a clean
+    factual gate (no false-positive risk; "114" is unlikely to
+    appear in a structure answer for any reason other than the
+    surah count).
+    run_cypher is NOT forbidden for this question — structure
+    questions can legitimately benefit from aggregation queries
+    over Sura nodes (verse counts, classification distributions).
+    The Meccan/Medinan backfill recently landed on main; with it,
+    a "verses per Madinan surah" Cypher query is a reasonable
+    retrieval path.
+    Failure mode: agent answers without citing the 114-surah count
+    or the Makki/Madani division.
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-012
+  bucket: BROAD
+  question: "How does the Quran speak of its own miraculous nature?"
+  asserts:
+    cites_must_include: ["74:30"]
+    tools_used_must_include: ["concept_search", "get_code19_features"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["19"]
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Khalifa-specific framing. Pinned anchor 74:30 ("Over it are
+    nineteen") is THE Code-19 lynchpin verse — every Khalifa
+    miraculous-nature discussion routes through it. Tool pin
+    requires both concept_search AND get_code19_features per the
+    system prompt's mandate ("For QUESTIONS ABOUT THE NUMBER 19,
+    MATHEMATICAL MIRACLE… call get_code19_features"). Substring
+    "19" gates that the agent surfaces the Code-19 angle (not
+    just generic i'jaz).
+    Anchor candidates considered: 74:30 (the Code-19 anchor),
+    15:9 (preservation guarantee), 17:88 (inimitability challenge).
+    Picked 74:30 because Khalifa's specific contribution is the
+    mathematical code — a generic i'jaz answer would skip 74:30.
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-013
+  bucket: BROAD
+  question: "Who are the prophets mentioned in the Quran?"
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["25"]
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Theme-survey sub-shape per operator decision — "THE prophets"
+    is categorical, not entity-specific. Phase 4d any_of candidate:
+    {concept_search, hybrid_search} — if the roster comes back
+    incomplete via concept_search alone, hybrid_search on prophet
+    names would catch the long tail. cites_must_include empty
+    (the canonical roster spans 4:163-165, 6:83-86, 19:54-58, etc.;
+    no single anchor). Substring "25" pins the canonical count
+    of named prophets in the Quran.
+    Failure mode: agent enumerates the famous 5-7 prophets and
+    misses Idris, Dhul-Kifl, Hud, Salih, Shu'aib, etc.
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-014
+  bucket: BROAD
+  question: "What is the Quran's portrayal of the Day of Judgment?"
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Judgment"]
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Theme-survey sub-shape. Heavy eschatology — Surahs 75 (Al-
+    Qiyama), 99 (Az-Zalzala), 101 (Al-Qaria), 81 (At-Takwir) all
+    deep-dive on this; plus 2:177, 22:1-2, 39:67-75 scattered
+    throughout. No single canonical anchor — rubric is the
+    quality signal.
+    Failure mode: agent stops at the famous closing-surah trumpet
+    imagery without surfacing the cosmic-collapse + accountability
+    sequence in the longer treatments.
+    Phase 4d any_of candidate: substring {"Day of Judgment", "Day
+    of Resurrection", "Day of the Last", "Last Day"} — Khalifa
+    renders yawm al-din / al-qiyama / al-akhir variably across
+    the text.
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-015
+  bucket: BROAD
+  question: "What is the Quran's perspective on the Torah and the Gospel?"
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["hybrid_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Torah"]
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Per operator's grammar rule: proper nouns (Torah, Gospel) ->
+    hybrid_search pin. Tests inter-scriptural framing — should
+    surface 5:44-48 (Torah, Gospel, and the Quran each as guidance),
+    3:3-4 (revealed in truth), 5:13 (corruption of the scriptures).
+    cites_must_include empty (no single canonical anchor).
+    Substring "Torah" sufficient (if Torah is mentioned, Gospel
+    is almost certainly also mentioned given the question).
+    Phase 4d any_of candidate: {hybrid_search, concept_search} —
+    this is the bucket-vs-tool-pin edge case operator flagged.
+    Re-evaluate after first run.
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-016
+  bucket: BROAD
+  question: "Tell me about Abraham in the Quran."
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["hybrid_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Abraham"]
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Prophet-bio sub-shape. Routing: hybrid_search (BM25 catches the
+    proper noun cleanly) per operator's grammar rule. concept_search
+    is NOT forbidden. cites_must_include empty by design — Abraham's
+    biography spans many surahs (2, 6, 14, 19, 21, 26, 37, 51, 60,
+    87) and no single anchor is canonical.
+    Phase 4d any_of candidate: substring "Abraham" vs "Ibrahim"
+    (transliterated form) — Khalifa uses "Abraham" but the agent
+    might use either or both.
+    Failure mode: agent treats Abraham as a single-surah figure
+    rather than a recurring archetype (the model of pure
+    monotheism in 16:120, the questioner of Nimrod in 2:258, the
+    Kaaba builder in 2:127, the sacrifice in 37:102).
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-017
+  bucket: BROAD
+  question: "Recount the story of Moses in the Quran."
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["hybrid_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Moses"]
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Prophet-bio sub-shape. hybrid_search pin (proper noun grammar).
+    cites_must_include empty by design — Moses is mentioned ~136
+    times across multiple surahs.
+    Phase 4d any_of candidate: substring "Moses" vs "Musa"
+    (transliterated form).
+    Failure mode: agent telescopes the long Moses arc into the
+    Exodus highlight (Pharaoh + parting the sea) and skips the
+    Mount Sinai chapters, the encounter with the servant
+    (18:60-82), and the burning bush (20:9-24).
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-018
+  bucket: BROAD
+  question: "Summarise the Quranic account of Jesus."
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["hybrid_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Jesus"]
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Prophet-bio sub-shape. hybrid_search pin (proper noun grammar).
+    cites_must_include empty by design.
+    Phase 4d any_of candidate: substring "Jesus" vs "Isa"
+    (transliterated form).
+    Failure mode: agent flattens the Quranic Jesus into the
+    Christian framing and misses the distinctive Quranic
+    claims: divine status rejected (5:72, 5:75), not crucified
+    (4:157-158), Word from God (4:171), born of Mary without
+    a father (3:47), spoke from the cradle (19:29-33).
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-019
+  bucket: BROAD
+  question: "Describe Muhammad as he appears in the Quran."
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["hybrid_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Muhammad"]
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Prophet-bio sub-shape. hybrid_search pin (proper noun grammar).
+    cites_must_include empty by design — Muhammad's portrayal
+    spans 3:144, 33:40 (Khalifa: final prophet), 48:29, 9:128,
+    33:21 (good example), 68:4 (sublime character), etc.
+    Failure mode: agent gives a hagiographic biography drawn from
+    hadith / sira material rather than what the QURAN ITSELF says
+    about Muhammad. Should anchor in verses, not in
+    extra-Quranic tradition.
+    Khalifa-specific note: 33:40 ("the final prophet") is a
+    Khalifa lynchpin verse — agent ideally surfaces it.
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-020
+  bucket: BROAD
+  question: "What does the Quran tell us about Noah?"
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["hybrid_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["Noah"]
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Prophet-bio sub-shape. hybrid_search pin (proper noun grammar).
+    cites_must_include empty by design — Noah is across Surah 71
+    (Nuh), Surah Hud (11), Al-Ankabut (29:14), and ~30 other refs.
+    Phase 4d any_of candidate: substring "Noah" vs "Nuh"
+    (transliterated form).
+    Failure mode: agent recounts the flood without surfacing the
+    long preaching mission (950 years per 29:14), the dialogue
+    with the son (11:42-46), and Noah's own surah's structure
+    (71:5-9 the preaching, 71:10-12 the call to repentance,
+    71:25-26 the supplication).
+  added: 2026-05-17
+  added_by: operator
+
+- id: broad-021
+  bucket: BROAD
+  question: "From a Quranic perspective, how does Satan succeed in misleading humanity?"
+  asserts:
+    cites_must_include: []
+    tools_used_must_include: ["hybrid_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["devil"]
+  rubric_weights:
+    citation_accuracy: 0.2
+    answer_completeness: 0.5
+    tool_path_correctness: 0.1
+    framing_appropriateness: 0.2
+  notes: |
+    Reclassified per operator decision: prophet-bio sub-shape (Satan
+    is a named proper noun) -> hybrid_search pin. concept_search
+    NOT forbidden. cites_must_include empty by design — Satan
+    appears across 2:36, 2:208, 7:11-25, 17:53-65, 35:6, 38:71-85,
+    etc.
+    BROAD framing complements ABSTRACT 16-19 (mechanism,
+    whisperings, consequences) — this question is about HOW
+    Satan succeeds across the totality of the Quran, narrative
+    + theological. Substring "devil" matches Khalifa's preferred
+    rendering (consistent with abstract-016 / abstract-019).
+    Failure mode: agent recycles only the ABSTRACT-bucket
+    mechanisms (waswasa, false hopes) and misses the cosmic
+    narrative (Iblis's refusal, the granted respite till the
+    Last Day in 38:79-85).
+  added: 2026-05-17
+  added_by: operator

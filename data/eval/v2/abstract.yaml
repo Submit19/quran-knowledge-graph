@@ -1,0 +1,680 @@
+# Eval v2 — ABSTRACT bucket (25 questions).
+#
+# Tests thematic / conceptual questions with no proper nouns. Real-user
+# shape: open-ended "what does the Quran say about X" prompts where X
+# is a virtue, vice, or theological concept. Failure mode: agent
+# semantic-searches and returns thematically-adjacent verses without
+# anchoring in high-confidence keyword hits.
+#
+# 10 questions are flagged [AR] in notes — these expect Arabic-root
+# augmentation (root substring required + search_arabic_root tool call).
+# The agent-side behaviour change that produces this augmentation
+# is being implemented in a parallel session; until it ships, [AR]
+# questions will score low, which is the intended baseline signal.
+
+- id: abstract-001
+  bucket: ABSTRACT
+  question: "Tell me what the Quran says about charity."
+  asserts:
+    cites_must_include: ["2:177"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["charity"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: charity. Routing: ABSTRACT lane -> concept_search first
+    (per system prompt). run_cypher forbidden as long-tail escape
+    hatch — should not fire on a thematic query. tool_path weight
+    nudged to 0.2 because tool-lane discipline is exactly what this
+    bucket tests.
+    Anchor candidates considered: 2:177 (definitional Khalifa
+    "righteousness" verse, defines charity to relatives / orphans /
+    needy), 9:103 (Khalifa: take from their money a charity to
+    purify them), 2:267 (give from the good of what you earn).
+    Picked 2:177 as most canonical. Promote to any_of cluster in
+    Phase 4d if it proves brittle.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-002
+  bucket: ABSTRACT
+  question: "What does the Quran teach about forgiveness?"
+  asserts:
+    cites_must_include: ["39:53"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["forgive"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: forgiveness (bidirectional — divine and interpersonal).
+    Required substring is "forgive" (matches "forgives" / "forgiving"
+    / "forgiveness" via prefix). Failure mode: agent only covers
+    divine forgiveness and misses interpersonal dimension.
+    Anchor candidates considered: 39:53 (Khalifa: "Never despair of
+    God's mercy. God forgives all sins" — most iconic), 42:40
+    (those who pardon and reform), 7:199 (be tolerant / overlook).
+    Picked 39:53 as most canonical single anchor. Promote to
+    any_of cluster in Phase 4d if it proves brittle.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-003
+  bucket: ABSTRACT
+  question: "How does the Quran portray gratitude?"
+  asserts:
+    cites_must_include: ["14:7"]
+    tools_used_must_include: ["concept_search", "search_arabic_root"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["thank", "shukr", "ش-ك-ر"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: gratitude. [AR] root ش-ك-ر / shukr.
+    Required substrings: "thank" (Khalifa renders shukr as
+    "thank/appreciate") AND "shukr" (the AR augmentation signal).
+    Until the parallel system-prompt change for Arabic augmentation
+    lands, this question will fail on the search_arabic_root tool
+    requirement and on the "shukr" substring — that's the intended
+    baseline signal.
+    Anchor candidates considered: 14:7 (Khalifa: "The more you thank
+    Me, the more I give you" — most iconic), 2:152 ("remember Me
+    and be thankful to Me"), 31:12 (Luqman's wisdom on gratitude).
+    Picked 14:7 as most canonical. Promote to any_of cluster in
+    Phase 4d if it proves brittle.
+    Phase 4d any_of candidate: substring "thank" vs "gratitude" —
+    Khalifa uses "thank" but a good answer may also use
+    "gratitude" alone.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-004
+  bucket: ABSTRACT
+  question: "Describe what the Quran reveals about sin."
+  asserts:
+    cites_must_include: ["4:31"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["sin"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: sin (Khalifa distinguishes "gross sins" from minor offenses).
+    Failure mode: answer treats all sin uniformly without surfacing
+    the major/minor distinction central to Khalifa's framing.
+    Anchor candidates considered: 4:31 (Khalifa: "If you refrain from
+    committing the gross sins... we will remit your sins" — cleanest
+    statement of the major/minor divide), 53:32 (those who avoid
+    gross sins... except for minor offenses), 42:37 (avoid gross
+    sins and vice). Picked 4:31 as most canonical. Promote to
+    any_of cluster in Phase 4d if it proves brittle.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-005
+  bucket: ABSTRACT
+  question: "What does the Quran say about patience?"
+  asserts:
+    cites_must_include: ["2:153"]
+    tools_used_must_include: ["concept_search", "search_arabic_root"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["patience", "sabr", "ص-ب-ر"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: patience. [AR] root ص-ب-ر / sabr.
+    Required substrings: "patience" (English topic) AND "sabr"
+    (the AR augmentation signal). Until the parallel system-prompt
+    change ships, this question will fail on the search_arabic_root
+    tool requirement and on the "sabr" substring — intended
+    baseline-then-improve signal.
+    Anchor candidates considered: 2:153 (Khalifa: "Seek help through
+    perseverance and the contact prayer. GOD is with those who
+    steadfastly persevere" — most iconic single anchor), 2:155
+    (test of patience), 39:10 (steadfast receive recompense
+    generously). Picked 2:153 as most canonical. Promote to any_of
+    cluster in Phase 4d if it proves brittle.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-006
+  bucket: ABSTRACT
+  question: "How is humility presented in the Quran?"
+  asserts:
+    cites_must_include: ["25:63"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["humility"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: humility. Failure mode: answer focuses only on what NOT
+    to do (don't be arrogant) without surfacing the positive
+    description of the humble.
+    Anchor candidates considered: 25:63 (Khalifa: "The worshipers
+    of the Most Gracious are those who tread the earth gently" —
+    most direct positive description), 17:37 (don't walk arrogantly),
+    31:18 (don't strut; God hates the arrogant). Picked 25:63.
+    Promote to any_of cluster in Phase 4d if it proves brittle.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-007
+  bucket: ABSTRACT
+  question: "What is the Quran's teaching on repentance?"
+  asserts:
+    cites_must_include: ["2:222"]
+    tools_used_must_include: ["concept_search", "search_arabic_root"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["repent", "tawba", "ت-و-ب"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: repentance. [AR] root ت-و-ب / tawba. Three-substring
+    AR-augmentation gate ("repent" English topic, "tawba"
+    transliteration, "ت-و-ب" Arabic letters). "repent" matches
+    repent/repents/repentance/repenting.
+    Anchor candidates considered: 2:222 (Khalifa: "GOD loves those
+    who repent" — canonical bidirectional repentance verse), 39:54
+    ("Repent to your Lord and submit to Him"), 25:71 ("whoever
+    repents and reforms... will be redeemed"). Picked 2:222.
+    Promote to any_of cluster in Phase 4d if it proves brittle.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-008
+  bucket: ABSTRACT
+  question: "How does the Quran describe true belief?"
+  asserts:
+    cites_must_include: ["49:15"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["belief"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: true belief (iman). Failure mode: answer reduces belief
+    to verbal affirmation without surfacing the active-striving
+    dimension Khalifa emphasises.
+    Anchor candidates considered: 49:15 (Khalifa: "The true
+    believers are those who believe in GOD and His messenger, then
+    attain the status of having no doubt whatsoever, and strive
+    with their money and their lives" — definitive), 2:2-5 (the
+    righteous: believe in unseen, observe prayer, give charity),
+    8:2 (true believers' hearts tremble when GOD is mentioned).
+    Picked 49:15.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-009
+  bucket: ABSTRACT
+  question: "What does the Quran reveal about hypocrisy?"
+  asserts:
+    cites_must_include: ["2:8"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["hypocri"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: hypocrisy (nifaq). Substring "hypocri" matches
+    hypocrite/hypocrites/hypocrisy/hypocritical.
+    Anchor candidates considered: 2:8 (Khalifa: "Some people say,
+    'We believe in GOD and the Last Day,' while they are not
+    believers" — opening passage on hypocrisy), 63:1 (Surah
+    Al-Munafiqun: hypocrites' false testimony), 4:142 (hypocrites
+    try to deceive GOD). Picked 2:8 as the most canonical opening
+    anchor; Surah 63 is the deep-dive but 2:8 is the first
+    extended treatment in the Quran's order.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-010
+  bucket: ABSTRACT
+  question: "What is the Quran's view of justice?"
+  asserts:
+    cites_must_include: ["4:135"]
+    tools_used_must_include: ["concept_search", "search_arabic_root"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["justice", "adl", "ع-د-ل"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: justice. [AR] root ع-د-ل / adl. Three-substring AR gate.
+    Note: qist (ق-س-ط) is an adjacent root the Quran also uses for
+    justice — if many answers cite qist verses and miss adl ones,
+    this becomes an any_of candidate in Phase 4d.
+    Anchor candidates considered: 4:135 (Khalifa: "you shall be
+    absolutely equitable, and observe GOD, when you serve as
+    witnesses, even against yourselves" — definitive justice
+    command), 5:8 (be just even with those you hate), 16:90 (GOD
+    enjoins justice and charity). Picked 4:135.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-011
+  bucket: ABSTRACT
+  question: "How does the Quran warn about the consequences of arrogance?"
+  asserts:
+    cites_must_include: ["7:13"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["arrogan"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: arrogance + consequences (compound). Substring "arrogan"
+    matches arrogant/arrogance/arrogantly.
+    Anchor candidates considered: 7:13 (Iblis cast down for
+    arrogance — the prototypical cosmic case), 31:18 (don't strut;
+    GOD does not love the arrogant), 40:35 (GOD seals every
+    arrogant tyrant's heart). Picked 7:13 because it anchors the
+    cosmic narrative — every other arrogance verse echoes Iblis's
+    fall.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-012
+  bucket: ABSTRACT
+  question: "Walk me through the Quran's description of the path of righteousness."
+  asserts:
+    cites_must_include: ["2:177"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["righteous"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: path of righteousness. Substring "righteous" matches
+    righteous/righteously/righteousness. Note: 2:177 is also
+    abstract-001's anchor (charity) — same verse legitimately
+    grounds both since it defines righteousness in terms of
+    charity-giving conduct.
+    Anchor candidates considered: 2:177 (Khalifa's definitional
+    "righteousness" verse), 1:6 (Fatiha's "guide us to the straight
+    path"), 90:11-18 ("the difficult path: freeing the slave...
+    feeding the orphan"). Picked 2:177 as the most explicit
+    definitional verse.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-013
+  bucket: ABSTRACT
+  question: "What guidance does the Quran offer on trusting in God?"
+  asserts:
+    cites_must_include: ["65:3"]
+    tools_used_must_include: ["concept_search", "search_arabic_root"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["trust", "tawakkul", "و-ك-ل"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: trust in God / tawakkul. [AR] root و-ك-ل / tawakkul.
+    Three-substring AR-augmentation gate.
+    Anchor candidates considered: 65:3 (Khalifa: "Anyone who trusts
+    in GOD, He suffices him" — most iconic single-line statement),
+    3:159 ("once you make a decision... trust in GOD"), 8:2 (true
+    believers... trust in their Lord). Picked 65:3 for compactness
+    and explicit reciprocity.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-014
+  bucket: ABSTRACT
+  question: "How does the Quran address doubt and certainty?"
+  asserts:
+    cites_must_include: ["102:7"]
+    tools_used_must_include: ["concept_search", "search_arabic_root"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["certainty", "yaqeen", "ي-ق-ن"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: doubt and certainty. [AR] root ي-ق-ن / yaqeen.
+    Three-substring AR gate uses "certainty" (the yaqeen
+    translation pair) rather than "doubt"; the AR augmentation
+    angle is the certainty side, not the doubt side.
+    Anchor candidates considered: 102:7 (Khalifa: "Then on that
+    day, you shall see it with the eye of certainty" — yaqeen
+    appears explicitly), 2:2 (infallible scripture, no doubt —
+    indirect on yaqeen but structurally prominent), 2:4 ("attained
+    certainty about the Hereafter"). Picked 102:7 because it
+    grounds yaqeen most directly; the [AR] root augmentation gate
+    pairs naturally with the verse where the root actually
+    surfaces.
+    Phase 4d any_of candidate: "certainty" vs "doubt" substring —
+    a good answer might over-index on the doubt side and miss
+    certainty (or vice versa).
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-015
+  bucket: ABSTRACT
+  question: "What does sincere worship look like according to the Quran?"
+  asserts:
+    cites_must_include: ["98:5"]
+    tools_used_must_include: ["concept_search", "search_arabic_root"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["sincere", "ikhlas", "خ-ل-ص"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: sincere worship / ikhlas. [AR] root خ-ل-ص / ikhlas.
+    Three-substring AR gate.
+    Anchor candidates considered: 98:5 (Khalifa: "All that was
+    asked of them was to worship GOD, devoting the religion
+    absolutely to Him alone" — most direct command), 39:2
+    ("worship GOD, devoting your religion absolutely to Him alone"),
+    112:1-4 (Surah Al-Ikhlas — sincerity by way of God's oneness).
+    Picked 98:5 because it explicitly frames worship as the
+    primary command and connects it to devotion.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-016
+  bucket: ABSTRACT
+  question: "How does the Quran characterise Satan and the ways he misleads people?"
+  asserts:
+    cites_must_include: ["35:6"]
+    tools_used_must_include: ["concept_search", "search_arabic_root"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["devil", "shaytan", "ش-ط-ن"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: Satan + misleading. [AR] root ش-ط-ن / shaytan. Three-
+    substring AR gate. Substring uses "devil" (Khalifa's preferred
+    rendering of shaytan) rather than "Satan" — Khalifa generally
+    uses lowercase "devil" except when referencing the proper name
+    Iblis. If many answers use only "Satan" and miss "devil", this
+    becomes a Phase 4d any_of candidate.
+    Anchor candidates considered: 35:6 (Khalifa: "the devil is your
+    enemy, so treat him as an enemy" — most direct command), 7:16-17
+    (Satan: "I will set up traps... on Your straight path"), 17:53
+    (the devil is the human's most ardent enemy). Picked 35:6.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-017
+  bucket: ABSTRACT
+  question: "What lessons does the Quran offer about being led astray (dalal)?"
+  asserts:
+    cites_must_include: ["2:26"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["astray"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: going astray / dalal. NOT flagged [AR] in the original
+    list — operator's word "dalal" is in the question text itself,
+    so the Arabic-grounding test is implicit via the question rather
+    than via answer substrings.
+    Anchor candidates considered: 2:26 (Khalifa: "He misleads
+    thereby many, and He guides thereby many" — the canonical
+    statement of God's role in both), 6:125 ("Whomever GOD wills
+    to send astray, He renders his chest intolerant"), 7:30 ("some
+    He guided, and some were committed to straying"). Picked 2:26
+    for the explicit guide-vs-mislead symmetry.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-018
+  bucket: ABSTRACT
+  question: "Explain how the Quran describes the whisperings of Satan (waswasa)."
+  asserts:
+    cites_must_include: ["114:4"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["whisper"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: whisperings of Satan / waswasa. Substring "whisper"
+    matches whisper/whispers/whispering/whisperings.
+    Anchor candidates considered: 114:4 (Khalifa: "From the evil
+    of the sneaky whisperer" — Surah An-Nas, most direct on
+    waswasa), 7:20 ("the devil whispered to them in order to
+    reveal their bodies"), 20:120 ("the devil whispered to him").
+    Picked 114:4 for the explicit "whisperer" naming in Surah
+    An-Nas; the closing surah of the Quran is the canonical refuge
+    against waswasa.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-019
+  bucket: ABSTRACT
+  question: "What consequences does the Quran tie to following Satan?"
+  asserts:
+    cites_must_include: ["14:22"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["devil"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: consequences of following Satan. Substring "devil"
+    matches Khalifa's preferred rendering.
+    Anchor candidates considered: 14:22 (Khalifa: the devil disowns
+    his followers on Judgment Day — "I had no power over you, you
+    responded to me. Therefore, do not blame me; blame only
+    yourselves" — most iconic single-verse consequences statement),
+    4:119-120 (Satan's false promises lead to loss), 22:4 (whoever
+    befriends him will be led astray to hell). Picked 14:22.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-020
+  bucket: ABSTRACT
+  question: "How does the Quran discuss wealth and worldly attachment?"
+  asserts:
+    cites_must_include: ["3:14"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["wealth"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: wealth + worldly attachment (dunya). Substring "wealth"
+    chosen over "worldly" because Khalifa's translation more often
+    uses "money / wealth / possessions" than the abstract "worldly."
+    Anchor candidates considered: 3:14 (Khalifa: "Adorned for the
+    people are the worldly pleasures... GOD possesses the ultimate
+    abode" — definitive catalogue of worldly attachments), 18:46
+    (money and children are the joys of this world, but the
+    lasting good deeds are far better), 57:20 (the life of this
+    world is no more than play and games). Picked 3:14.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-021
+  bucket: ABSTRACT
+  question: "Trace the Quran's depiction of death and the soul."
+  asserts:
+    cites_must_include: ["39:42"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["soul"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: death + soul (nafs / ruh).
+    Anchor candidates considered: 39:42 (Khalifa: "GOD puts the
+    souls to death when the end of their life comes, and also for
+    those who do not die during their sleep" — most explicit on
+    God's role as life-and-death-taker of the soul), 56:83-87
+    (when the soul reaches the throat), 75:26-30 (the soul
+    reaches the collar-bones). Picked 39:42.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-022
+  bucket: ABSTRACT
+  question: "Discuss what the Quran says about reflection and contemplation."
+  asserts:
+    cites_must_include: ["38:29"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["reflect"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: reflection / contemplation (tadabbur, tafakkur).
+    Substring "reflect" matches reflect/reflects/reflection/
+    reflecting.
+    Anchor candidates considered: 38:29 (Khalifa: "This is a
+    scripture that we sent down to you, that is sacred, perhaps
+    they reflect on its verses" — canonical Quran-as-reflection-
+    object verse), 47:24 ("Why do they not study the Quran
+    carefully?"), 3:191 (those who remember GOD and reflect on
+    the creation of heavens and earth). Picked 38:29.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-023
+  bucket: ABSTRACT
+  question: "How does the Quran depict the mercy of God?"
+  asserts:
+    cites_must_include: ["7:156"]
+    tools_used_must_include: ["concept_search", "search_arabic_root"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["mercy", "rahma", "ر-ح-م"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: mercy / rahma. [AR] root ر-ح-م / rahma. Three-substring
+    AR gate.
+    Anchor candidates considered: 7:156 (Khalifa: "My mercy
+    encompasses all things" — the iconic unbounded-mercy verse),
+    6:54 ("Your Lord has decreed that mercy is His attribute"),
+    39:53 (also a mercy verse, but already used as forgiveness
+    anchor in abstract-002). Picked 7:156.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-024
+  bucket: ABSTRACT
+  question: "What insight does the Quran provide about prayer (salat)?"
+  asserts:
+    cites_must_include: ["29:45"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["prayer"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: prayer / salat. Many canonical verses exist (2:43, 2:238,
+    4:103, 17:78, 29:45, …); kept candidates to the top three
+    considered per the per-question annotation guideline.
+    Anchor candidates considered: 29:45 (Khalifa: "the Contact
+    Prayer prohibits evil and vice" — distinctive Khalifa rendering
+    that surfaces the FUNCTION of prayer, not just the obligation),
+    4:103 ("the Contact Prayers are decreed for the believers at
+    specific times"), 2:238 ("you shall consistently observe the
+    Contact Prayers"). Picked 29:45 because the question asks for
+    "insight" — function-oriented rather than obligation-oriented.
+    Phase 4d any_of candidate: substring "prayer" vs "Contact
+    Prayers" vs "salat" — Khalifa uses "Contact Prayers" as the
+    distinctive rendering; "prayer" is the lowest-common-
+    denominator surface form.
+  added: 2026-05-17
+  added_by: operator
+
+- id: abstract-025
+  bucket: ABSTRACT
+  question: "Why does the Quran emphasise honouring one's parents?"
+  asserts:
+    cites_must_include: ["17:23"]
+    tools_used_must_include: ["concept_search"]
+    tools_used_must_not_include: ["run_cypher"]
+    answer_substring_required: ["parent"]
+  rubric_weights:
+    citation_accuracy: 0.25
+    answer_completeness: 0.4
+    tool_path_correctness: 0.2
+    framing_appropriateness: 0.15
+  notes: |
+    Theme: honouring parents. Substring "parent" matches
+    parent/parents/parental.
+    Anchor candidates considered: 17:23 (Khalifa: "Your Lord has
+    decreed that... your parents shall be honored" — definitive
+    commandment, paired immediately with worship-only-God), 31:14
+    (we enjoined the human being to honour his parents), 46:15
+    (be appreciative to your parents). Picked 17:23 because the
+    pairing with monotheism in the same verse signals its
+    foundational status.
+  added: 2026-05-17
+  added_by: operator
