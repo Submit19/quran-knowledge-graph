@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-27",
+  "generated_by": "claude/khalifa-corpus-discovery-2026-05-27",
+  "binding_rule": "memory/feedback_khalifa_only_sources.md",
+  "primary_site": "masjidtucson.org",
+  "secondary_sites_used": [],
+  "excluded_sites": ["submission.org", "19.org", "masjidtucson.com"],
+  "items": [
+    {
+      "id": "intro_final_testament",
+      "title": "Introduction to The Final Testament",
+      "author": "Rashad Khalifa",
+      "author_evidence": "Signed 'Rashad Khalifa / Tucson / Ramadan 26, 1409' at end of essay",
+      "year": 1989,
+      "format": "html",
+      "url": "https://www.masjidtucson.org/quran/appendices/introduction.html",
+      "estimated_size_chars": 22000,
+      "estimated_word_count": 3700,
+      "category": "translation_apparatus",
+      "khalifa_primary": true,
+      "notes": "Substantive theological introduction to Khalifa's Quran translation. Covers cosmology, Satan's rebellion, the Code-19 miracle."
+    },
+    {
+      "id": "appendices_index",
+      "title": "All 38 Appendices to The Final Testament",
+      "author": "Rashad Khalifa",
+      "author_evidence": "Inventoried from /quran/appendices/ index; all attributed to Khalifa as Appendices to his translation",
+      "year": 1989,
+      "format": "html",
+      "url_base": "https://www.masjidtucson.org/quran/appendices/",
+      "url_pattern": "appendix{N}.html for N in 1..38",
+      "urls": [
+        {"n": 1, "title": "One of the Great Miracles [74:35]", "url": "https://www.masjidtucson.org/quran/appendices/appendix1.html"},
+        {"n": 2, "title": "God's Messenger of the Covenant [3:81]", "url": "https://www.masjidtucson.org/quran/appendices/appendix2.html"},
+        {"n": 3, "title": "We Made the Quran Easy [54:17]", "url": "https://www.masjidtucson.org/quran/appendices/appendix3.html"},
+        {"n": 4, "title": "Why Was the Quran Revealed in Arabic?", "url": "https://www.masjidtucson.org/quran/appendices/appendix4.html"},
+        {"n": 5, "title": "Heaven and Hell", "url": "https://www.masjidtucson.org/quran/appendices/appendix5.html"},
+        {"n": 6, "title": "Greatness of God", "url": "https://www.masjidtucson.org/quran/appendices/appendix6.html"},
+        {"n": 7, "title": "Why Were We Created?", "url": "https://www.masjidtucson.org/quran/appendices/appendix7.html"},
+        {"n": 8, "title": "The Myth of Intercession", "url": "https://www.masjidtucson.org/quran/appendices/appendix8.html"},
+        {"n": 9, "title": "Abraham: Original Messenger of Islam", "url": "https://www.masjidtucson.org/quran/appendices/appendix9.html"},
+        {"n": 10, "title": "God's Usage of the Plural Tense", "url": "https://www.masjidtucson.org/quran/appendices/appendix10.html"},
+        {"n": 11, "title": "The Day of Resurrection", "url": "https://www.masjidtucson.org/quran/appendices/appendix11.html"},
+        {"n": 12, "title": "Role of the Prophet Muhammad", "url": "https://www.masjidtucson.org/quran/appendices/appendix12.html"},
+        {"n": 13, "title": "The First Pillar of Islam", "url": "https://www.masjidtucson.org/quran/appendices/appendix13.html"},
+        {"n": 14, "title": "Predestination", "url": "https://www.masjidtucson.org/quran/appendices/appendix14.html"},
+        {"n": 15, "title": "Religious Duties: Gift from God", "url": "https://www.masjidtucson.org/quran/appendices/appendix15.html"},
+        {"n": 16, "title": "Dietary Prohibition", "url": "https://www.masjidtucson.org/quran/appendices/appendix16.html"},
+        {"n": 17, "title": "Death", "url": "https://www.masjidtucson.org/quran/appendices/appendix17.html"},
+        {"n": 18, "title": "Quran is All You Need", "url": "https://www.masjidtucson.org/quran/appendices/appendix18.html"},
+        {"n": 19, "title": "Hadith and Sunna: Satanic Innovations", "url": "https://www.masjidtucson.org/quran/appendices/appendix19.html"},
+        {"n": 20, "title": "Quran: Unlike Any Other Book", "url": "https://www.masjidtucson.org/quran/appendices/appendix20.html"},
+        {"n": 21, "title": "Satan: Fallen Angel", "url": "https://www.masjidtucson.org/quran/appendices/appendix21.html"},
+        {"n": 22, "title": "Jesus", "url": "https://www.masjidtucson.org/quran/appendices/appendix22.html"},
+        {"n": 23, "title": "Chronological Order of Revelation", "url": "https://www.masjidtucson.org/quran/appendices/appendix23.html"},
+        {"n": 24, "title": "Two False Verses Removed from the Quran", "url": "https://www.masjidtucson.org/quran/appendices/appendix24.html"},
+        {"n": 25, "title": "End of the World", "url": "https://www.masjidtucson.org/quran/appendices/appendix25.html"},
+        {"n": 26, "title": "The Three Messengers of Islam", "url": "https://www.masjidtucson.org/quran/appendices/appendix26.html"},
+        {"n": 27, "title": "Who Is Your God?", "url": "https://www.masjidtucson.org/quran/appendices/appendix27.html"},
+        {"n": 28, "title": "Muhammad Wrote God's Revelations With His Own Hand", "url": "https://www.masjidtucson.org/quran/appendices/appendix28.html"},
+        {"n": 29, "title": "The Missing Basmalah", "url": "https://www.masjidtucson.org/quran/appendices/appendix29.html"},
+        {"n": 30, "title": "Polygamy", "url": "https://www.masjidtucson.org/quran/appendices/appendix30.html"},
+        {"n": 31, "title": "Evolution: A Divinely Guided Process", "url": "https://www.masjidtucson.org/quran/appendices/appendix31.html"},
+        {"n": 32, "title": "The Crucial Age of 40", "url": "https://www.masjidtucson.org/quran/appendices/appendix32.html"},
+        {"n": 33, "title": "Why Did God Send a Messenger Now?", "url": "https://www.masjidtucson.org/quran/appendices/appendix33.html"},
+        {"n": 34, "title": "Virginity/Chastity: A Trait of the True Believers", "url": "https://www.masjidtucson.org/quran/appendices/appendix34.html"},
+        {"n": 35, "title": "Drugs & Alcohol", "url": "https://www.masjidtucson.org/quran/appendices/appendix35.html"},
+        {"n": 36, "title": "What Price A Great Nation", "url": "https://www.masjidtucson.org/quran/appendices/appendix36.html"},
+        {"n": 37, "title": "Criminal Justice in Islam", "url": "https://www.masjidtucson.org/quran/appendices/appendix37.html"},
+        {"n": 38, "title": "The Creator's Signature", "url": "https://www.masjidtucson.org/quran/appendices/appendix38.html"}
+      ],
+      "estimated_size_chars_total": 760000,
+      "estimated_word_count_total": 130000,
+      "category": "translation_apparatus",
+      "khalifa_primary": true,
+      "notes": "Appendix 24 (Two False Verses Removed) is where Khalifa flags 9:128-9:129. Surface this Appendix in the corpus, but the runtime rule still forbids the app surfacing the verses themselves."
+    },
+    {
+      "id": "book_quran_hadith_islam",
+      "title": "Quran, Hadith and Islam",
+      "author": "Rashad Khalifa, Ph.D.",
+      "author_evidence": "Title page byline: 'By: Rashad Khalifa, Ph.D.' on /publications/books/qhi/contents.html",
+      "year": 1982,
+      "format": "pdf_per_chapter + html_consolidated",
+      "url_base": "https://www.masjidtucson.org/publications/books/qhi/",
+      "url_pattern": "QURAN_Hadith_Islam_pg{N}.pdf for N in 1..89, plus QURAN_Hadith_Islam_TitlePage.pdf, QURAN_Hadith_Islam_CopyRightPg.pdf, QURAN_Hadith_Islam_Preface.pdf, rear_cover.html",
+      "consolidated_html_url": "https://www.masjidtucson.org/publications/books/qhi/qhi.html",
+      "alt_pdf_mirror": "https://submission.ws/downloads/qhi.pdf",
+      "item_count": 92,
+      "estimated_size_chars": 220000,
+      "estimated_word_count": 38000,
+      "category": "book",
+      "khalifa_primary": true,
+      "notes": "89 chapters as individual PDFs averaging ~187 KB each (chapter 1 sample-verified). Single consolidated HTML may be preferred for ingestion. Alt mirror on submission.ws if primary fetch fails."
+    },
+    {
+      "id": "book_visual_presentation",
+      "title": "Quran: Visual Presentation of the Miracle",
+      "author": "Rashad Khalifa",
+      "author_evidence": "Title page byline: 'By: Rashad Khalifa'; published 1982 by Islamic Productions, 739 E 6th Street, Tucson AZ",
+      "year": 1982,
+      "format": "pdf_per_chapter",
+      "url_base": "https://www.masjidtucson.org/publications/books/vp/",
+      "url_pattern": "fact{NN}.pdf for NN in 01..52, plus front_matter.pdf, introduction.pdf, corrections.pdf, summary_and_conclusions.pdf, book_cover.pdf",
+      "item_count": 57,
+      "estimated_size_chars": 90000,
+      "estimated_word_count": 15000,
+      "category": "book",
+      "khalifa_primary": true,
+      "notes": "Heavily diagrammatic; relies on visual presentation of Code-19 patterns. Text extraction will lose figures. PDFs gated behind /publications/books/vp/ 'I Agree' page — must inspect copyright text before bulk fetch (Open Question #1)."
+    },
+    {
+      "id": "book_computer_speaks",
+      "title": "The Computer Speaks: God's Message to the World",
+      "author": "Rashad Khalifa",
+      "author_evidence": "Title page byline: 'By: Rashad Khalifa'; published 1982 by Islamic Productions, 739 E 6th Street, Tucson AZ",
+      "year": 1982,
+      "format": "pdf_per_chapter",
+      "url_base": "https://www.masjidtucson.org/publications/books/computer_speaks/",
+      "url_pattern": "fact{NN}.pdf for NN in 01..31, plus cover, copyright, prologue, summary_and_conclusions, lessons_from_quran PDFs",
+      "item_count": 36,
+      "estimated_size_chars": 60000,
+      "estimated_word_count": 10000,
+      "category": "book",
+      "khalifa_primary": true,
+      "notes": "Same gating pattern as VP — copyright agreement must be inspected first."
+    },
+    {
+      "id": "newsletter_sp_khalifa_era",
+      "title": "Submitters Perspective (Khalifa-editorship era only)",
+      "author": "Rashad Khalifa, Ph.D. (Editor; many issues fully bylined to him)",
+      "author_evidence": "Sample-verified 1989/jan/page1.html byline reads 'Editor: Rashad Khalifa, Ph.D.'; archive index explicitly states he edited until martyrdom 1990-01-31; March 1990 issue published in advance",
+      "year_range": "1985-02 to 1990-03",
+      "format": "html",
+      "url_base": "https://www.masjidtucson.org/publications/books/sp/",
+      "url_pattern": "{YYYY}/{mmm}/page{P}.html where mmm = lowercase 3-letter month abbreviation, P in 1..4 (most issues 4 pages)",
+      "issue_breakdown": {
+        "1985": ["feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"],
+        "1986": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"],
+        "1987": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"],
+        "1988": ["jan", "feb", "mar", "apr", "may", "may_bonus", "jun", "jul", "aug", "sep", "oct", "nov", "dec"],
+        "1989": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"],
+        "1990": ["jan", "jan_bonus", "feb", "mar"]
+      },
+      "issue_count": 64,
+      "estimated_page_count": 256,
+      "estimated_word_count": 230000,
+      "category": "newsletter",
+      "khalifa_primary": true,
+      "khalifa_primary_caveat": "Khalifa edited all 64 issues. Lead articles typically bylined to him. Some shorter pieces in each issue may be from other contributors (letters, community notices). The scrape session should preserve byline metadata per-article so non-Khalifa-bylined snippets can be filtered downstream.",
+      "notes": "Post-1990-03 SP issues (April 1990 onwards through 2026) are community-edited and EXCLUDED from primary corpus per binding rule."
+    }
+  ],
+  "excluded_items": [
+    {
+      "title": "Proclamation",
+      "url": "https://www.masjidtucson.org/quran/appendices/proclamation.html",
+      "reason": "Authored by United Submitters International / Masjid Tucson as organization, not Khalifa-bylined"
+    },
+    {
+      "title": "Beyond Probability Series 1 & 2",
+      "authors": ["Abdullah Arik", "Faiz Currim", "Lisa Spray"],
+      "reason": "Community contributors; not Khalifa-authored"
+    },
+    {
+      "title": "All Lisa Spray books",
+      "examples": ["Women's Rights, the Quran and Islam", "Heart's Surprise", "Lifting the Veil", "Development of Christian Doctrine", "Jesus: Myths & Message"],
+      "reason": "Community contributor"
+    },
+    {
+      "title": "Understanding Islam",
+      "author": "Masjid Tucson Submitters",
+      "reason": "Community-authored; collective Masjid Tucson byline, not Khalifa-bylined"
+    },
+    {
+      "title": "Weekly Reminder",
+      "url_base": "https://www.masjidtucson.org/publications/books/weekly/",
+      "reason": "Modern community-authored, post-Khalifa"
+    },
+    {
+      "title": "Submitters Perspective April 1990 onwards (through 2026)",
+      "url_pattern": "https://www.masjidtucson.org/publications/books/sp/{YYYY}/{mmm}/pageN.html for YYYY > 1990 or (YYYY=1990 AND mmm > mar)",
+      "reason": "Post-Khalifa community editorship; not Khalifa-primary"
+    },
+    {
+      "title": "submission.org content",
+      "url_base": "https://www.submission.org/",
+      "reason": "Anonymous community editors; site self-describes as 'not owned, maintained, managed or operated by any kind of legal organizations or organized groups'"
+    },
+    {
+      "title": "19.org content",
+      "url_base": "https://19.org/",
+      "reason": "Edip Yuksel platform; articles ABOUT Khalifa are secondary attribution, Yuksel's own writing is post-Khalifa-community"
+    }
+  ],
+  "deferred_items": [
+    {
+      "title": "Khalifa Friday sermons (1985-1989)",
+      "format": "audio_video",
+      "evidence": "Multiple YouTube videos under 'Dr. Rashad Khalifa Friday Sermons 1987-1989'; submission.ws hosts a 50-session study-session index with detailed summaries but not full transcripts",
+      "reason_deferred": "No full text transcripts available on canonical sites. Requires a separate STT (Whisper) session to convert audio to text. Defer to a future corpus-expansion session, not the initial scrape."
+    },
+    {
+      "title": "Khalifa's translation footnotes (standalone export)",
+      "format": "html_inline",
+      "evidence": "Footnotes appear inline in /quran/noframes/ and /quran/frames/",
+      "reason_deferred": "Need to verify whether these are already captured in the Neo4j Verse.text property. If yes, skip; if no, add as a separate extraction step."
+    }
+  ],
+  "totals": {
+    "items_total": 6,
+    "url_total": "≈480 source URLs (38 appendices + 1 intro + 92 QHI items + 57 VP items + 36 CS items + 256 SP pages)",
+    "estimated_word_count_total": "≈430,000 words of Khalifa-primary text",
+    "estimated_size_mb": "≈4 MB of pure-text Markdown after extraction (excluding PDF binaries which sum to ≈80 MB on disk)"
+  }
+}
