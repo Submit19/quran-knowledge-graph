@@ -41,7 +41,7 @@ from pathlib import Path
 
 import pdfplumber
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, NavigableString
 from markdownify import markdownify as html_to_md
 
 # --------------------------------------------------------------------------- #
@@ -300,6 +300,12 @@ def html_body_to_markdown(html: str) -> str:
     for tag in soup.find_all(class_=_CHROME_CLASS_RE):
         tag.decompose()
     body = soup.body or soup
+    # Preserve cell/row boundaries before flattening, else dense data tables
+    # (e.g. Appendix 23's revelation-order grid) collapse into one merged token.
+    for cell in body.find_all(["td", "th"]):
+        cell.append(NavigableString(" | "))
+    for row in body.find_all("tr"):
+        row.append(soup.new_tag("br"))
     # Flatten layout containers so prose flows instead of becoming pipe-tables.
     for tag in body.find_all(_LAYOUT_TAGS):
         tag.unwrap()
