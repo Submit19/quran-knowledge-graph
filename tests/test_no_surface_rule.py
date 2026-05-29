@@ -66,9 +66,6 @@ def _scan_jsonl(path: Path, *, mode: str) -> list[str]:
     return violations
 
 
-@pytest.mark.xfail(
-    strict=True, reason="baseline answers not yet cleaned of bracketed 9:128/9:129"
-)
 def test_jsonl_outputs_no_9_128_129_brackets():
     """No eval/v2 answer may cite [9:128] or [9:129] in bracket form."""
     jsonls = sorted(EVAL_V2_DIR.glob("*.jsonl"))
@@ -77,9 +74,6 @@ def test_jsonl_outputs_no_9_128_129_brackets():
     assert not violations, "bracketed 9:128/9:129 in answers:\n" + "\n".join(violations)
 
 
-@pytest.mark.xfail(
-    strict=True, reason="baseline answers not yet cleaned of prose 9:128/9:129"
-)
 def test_jsonl_outputs_no_9_128_129_prose():
     """No eval/v2 answer may reference 9:128 or 9:129 in prose."""
     jsonls = sorted(EVAL_V2_DIR.glob("*.jsonl"))
@@ -88,7 +82,6 @@ def test_jsonl_outputs_no_9_128_129_prose():
     assert not violations, "prose 9:128/9:129 in answers:\n" + "\n".join(violations)
 
 
-@pytest.mark.xfail(strict=True, reason="cache answers not yet cleaned of 9:128/9:129")
 def test_cache_outputs_no_9_128_129():
     """No answer_cache.json entry may surface 9:128/9:129 (bracket or prose)."""
     if not CACHE_PATH.exists():
