@@ -6,10 +6,10 @@ category: "appendix"
 appendix_number: 7
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix7.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
-word_count: 1227
-char_count: 7189
-content_sha256: "eea1d10e6da242c8a3fe69376f030ad6dddb6fb5161b01ef40f9e780f9ef78c7"
+scraped_at: "2026-05-29T10:20:11Z"
+word_count: 1226
+char_count: 7187
+content_sha256: "abfae0182d1705ab1aa5a82be656f2a6d8b243de07853fe5ee2711ccbfea9824"
 flagged_9_128_129: false
 ---
 
@@ -76,7 +76,6 @@ Scripture has it:
 `You shall worship the Lord your God;
 Him ALONE shall you adore.'"
 [Matthew 4:8-10] & [Luke 4:5-8]
-|
 
 God's plan called for creating death (67:1-2), then bringing the humans
 and jinns into this world. Thus, they start over without any biases, and

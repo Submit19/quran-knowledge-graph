@@ -6,7 +6,7 @@ category: "appendix"
 appendix_number: 37
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix37.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
+scraped_at: "2026-05-29T10:20:11Z"
 word_count: 549
 char_count: 3183
 content_sha256: "1ed42cee39c6fd0082b371bedee55ae2adad0dfb3bda4a99a0f1d753e2d631af"

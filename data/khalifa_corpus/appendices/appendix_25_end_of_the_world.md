@@ -6,10 +6,10 @@ category: "appendix"
 appendix_number: 25
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix25.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
-word_count: 1149
-char_count: 6199
-content_sha256: "b35ff2949bcc093286dbf071c41cbf91eb01fed4c156312d16da27ba6b638978"
+scraped_at: "2026-05-29T10:20:11Z"
+word_count: 1129
+char_count: 6159
+content_sha256: "ed4562746d70879876ee114bbcbaecfc6aeb52722317199c638ccf1b6f504ca8"
 flagged_9_128_129: false
 ---
 
@@ -24,7 +24,6 @@ by Rashad Khalifa, PhD.)
 He does not permit anyone to unveil such knowledge.
 Only through the messengers that He chooses
 does He reveal future and past events.** [ 72:27 ]
-|
 
 Among the duties charged to me as God's Messenger of the Covenant is unveiling the end of the world (Page 415). We learn from 18:7-8 and 69:13-15 that this world will come to an end. A new earth and new heavens will replace the present heavens and earth (14:48).
 
@@ -49,30 +48,29 @@ The Quran provides many signs, and states that the means for unveiling the end o
 Verse 15 of Sura 20 informs us that the end of the world will be revealed by God before the end of the world, and Sura 15, Verse 87, gives the time for that event:
 
 **We have given you the seven pairs, and the great Quran. [ 15:87 ]**
-|
 
 The seven pairs are the 14 Quranic Initials. The total gematrical value of these profound pillars of the Quran's miracle pinpoints the year of the end of the world. It is noteworthy that Verse 85 of Sura 15 states: "The end of the world will surely come to pass." The next verse, 15:86, tells us that God is the Creator of this world, and, of course, He knows when it will end. The following verse, 15:87, tells us when the world will end. As shown in Table 1, the gematrical values of "The Seven Pairs" of Quranic Initials total 1709 (see also Table 1 of Appendix 1). According to 15:87, the world will survive for 1709 lunar years from the time this prophecy is stated in the Quran. This means that the world will end in the year 1710 AH. This number is a multiple of 19; 1710 = 19x90.
 
 Table 1: Total Gematrical Value of "The Seven Pairs" of Quranic Initials
 
-| Quranic Initial | Gematrical Value |
-| ------- | ---------- |
-1. | Q | 100 |
-2. | N | 50 |
-3. | S (Saad) | 90 |
-4. | H.M. | 48 |
-5. | Y.S. | 70 |
-6. | T.H. | 14 |
-7. | T.S. | 69 |
-8. | A.L.M. | 71 |
-9. | A.L.R. | 231 |
-10. | T.S.M. | 109 |
-11. | `A.S.Q. | 230 |
-12. | A.L.M.S. | 161 |
-13. | A.L.M.R. | 271 |
-14. | K.H.Y.`A.S. | 195 |
-| | ---- |
-| | 1709 |
+| Quranic Initial | Gematrical Value
+| ------- | ----------
+1. | Q | 100
+2. | N | 50
+3. | S (Saad) | 90
+4. | H.M. | 48
+5. | Y.S. | 70
+6. | T.H. | 14
+7. | T.S. | 69
+8. | A.L.M. | 71
+9. | A.L.R. | 231
+10. | T.S.M. | 109
+11. | `A.S.Q. | 230
+12. | A.L.M.S. | 161
+13. | A.L.M.R. | 271
+14. | K.H.Y.`A.S. | 195
+| | ----
+| | 1709
 
 The unveiling of this information took place in the year 1400 AH, 309 years before the prophesied end of the world (1709-1400=309). The number 309 is a Quranic number (18:25), and is connected with the end of the world (18:21). The peculiar way of writing 309 in 18:25, "Three hundred years, increased by nine," indicates that the 309 are lunar years. The difference between 300 solar years and 300 lunar years is 9 years.
 

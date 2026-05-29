@@ -5,10 +5,10 @@ year: 1989
 category: "introduction"
 source_url: "https://www.masjidtucson.org/quran/appendices/introduction.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:42Z"
-word_count: 3805
-char_count: 22663
-content_sha256: "7970795eb5e28a36d14e552d032a340afc186831f5a1991288edcd0e92043a3e"
+scraped_at: "2026-05-29T10:20:10Z"
+word_count: 3789
+char_count: 22620
+content_sha256: "7e11757a61ec481a7befeddf33bec5e2a7acd936c7bd4725ca4e55a347294cf0"
 flagged_9_128_129: false
 ---
 
@@ -35,8 +35,6 @@ Hear, O Israel! The Lord our God is One God!
 
  and with all your strength. [Deuteronomy 6:4-5, Mark 12:29-30, Quran 3:18]
 
-|
-
  Let us meditate on God, His glorious
 attributes,
  who is the basis of everything in this universe as its Creator,
@@ -44,8 +42,6 @@ attributes,
  and self existent conscious being,
  who removes all ignorance and impurities from the mind
  and purifies and sharpens our intellect. [Gayatri Mantra, Yajur Veda]
-
-|
 
 While every religion has been corrupted by innovations, traditions, and false, idolatrous doctrines, there may be "Submitters" within every religion. There may be Submitters who are Christian, Jewish, Muslim, Hindu, Buddhist, or anything else. These Submitters, collectively, constitute the only religion acceptable to God. As emphasized by the theme on the front page of this book, all Submitters who are devoted to God ALONE, and do not
 set up any idols beside God, are redeemed into God's eternal kingdom (2:62).
@@ -55,9 +51,7 @@ With the advent of this Testament, God's message to the world is now complete. W
 
 Some may wonder: "Why did God wait all this time to perfect and consolidate His message? What about all the people since Adam who did not receive the complete scripture?" Bearing in mind that the Quran answers this question in 20:52, it is a matter of simple statistics that the world's population from the beginning until now did not exceed 7,000,000,000. From now to the end of the world, 2280 A.D. (Appendix 25), it is estimated that the total world population will exceed 75,000,000,000. Thus, the vast majority of people are destined to receive God's purified and consolidated message (see diagram).
 
- |
 World population from now (1989) to the end of the world (2280).
-|
 
 [ The black section represents the world population since Adam ]
 
@@ -70,16 +64,8 @@ If you claim that you can fly a plane, the best way to test your claim is to giv
 
 The white area represents the vast
 majority that did not agree with Satan.
- |
-
- |
-
-|
 
 The grey area represents the vast majority that repented and submitted.
- |
-
- |
 
 The dispute in the Heavenly Community led to the classification of God's creatures into different categories:
 
@@ -100,10 +86,9 @@ the mountains, the trees, the animals,
 as well as many people?
 Many people, however, are destined for retribution.
 (22:18)
-|
 
 The stars and the trees prostrate.
-(55:6) |
+(55:6)
 
 The horse has no ego. The horse's owner can be rich or poor, tall
 or short, fat or thin, young or old, and the horse will serve them all. The dog has no ego; it will wag its tail to its owner, no matter how rich or poor the owner might be. The sun rises and sets every day at precisely the times prescribed by God. The moon follows its synchronized orbit around the earth, without the slightest deviation. The human body—a temporary garment—belongs to the Earth; as such, it is a submitter. The heart, lungs, kidneys, and other organs, perform their functions without our control.
@@ -253,11 +238,10 @@ mathematical composition.
 Total Count of the Word "God"
 (Shown at the lower left corner of every page)
 2698 (19x142)
- |
+
 Total Sum of Verse Numbers
 (Shown at the lower right corner)
 118123 (19x6217)
- |
 
 In addition to the Quran's
 extraordinary mathematical composition, we find a large number of Quranic facts which are proven or theorized by modern science. Here are a few examples of such advance scientific information:
@@ -286,7 +270,6 @@ top of a giant whale (see Ibn Kathir's interpretation of Verse 68:1).
 As recently as 1975, and in the same location where the Quran was revealed, the president of the Islamic University of Medina, Saudi Arabia, Sheikh Abdul Aziz Ben Baz, declared that the earth is flat and standing still (see insert)!!
 
 Translation from Ben Baz' book, Page 23: "If the earth is rotating as they claim, the countries, the mountains, the trees, the rivers, and the oceans will have no bottom and the people will see the eastern countries move to the west and the western countries move to the east."
-|
 
 ### Perfect Happiness: Now and Forever
 
@@ -301,7 +284,6 @@ and lead a righteous life.
 For them happiness in this life, and in the Hereafter.
 Such is God's inviolable law.
 This is the true triumph [10:62-64]
-|
 
 ### All Believers Constitute the One Acceptable Religion
 
@@ -318,7 +300,6 @@ anyone who
 (3) leads a righteous life,
 will receive their recompense from their Lord;
 they have nothing to fear, nor will they grieve. [2:62, 5:69]
-|
 
 ### God's Messenger of the Covenant
 

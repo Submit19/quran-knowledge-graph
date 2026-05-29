@@ -6,10 +6,10 @@ category: "appendix"
 appendix_number: 24
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix24.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
-word_count: 13390
-char_count: 64648
-content_sha256: "0b4a0dea886ba595bc7f9218608c4fe5aa6cc0ebfa26aeecaab5d6d2a6512a3f"
+scraped_at: "2026-05-29T10:20:11Z"
+word_count: 11171
+char_count: 59360
+content_sha256: "748e1d347bcb467e2a1a7ce8c40125f001cb1be216e707575d194ca25ab5901d"
 flagged_9_128_129: true
 ---
 
@@ -29,12 +29,8 @@ the Quran to its pristine purity, and illustrates a major function of
 the Quran's mathematical code, namely, to protect the Quran from the slightest
 tampering. Thus, the code rejects ONLY the false injections 9:128-129.*
 
-|
-
 "Surely, we have revealed this scripture,
 and surely, we will preserve it." [ 15:9 ]
-
-|
 
 The Quran is God's Final Testament. Hence the divine pledge to keep it perfectly
 preserved. To assure us of both the divine authorship, and the perfect preservation
@@ -66,8 +62,6 @@ be altered.
 Ali's protest is documented in many references, but I cite and reproduce here
 the classic reference AL ITQAAN FEE 'ULUM AL QURAN by Jalaluddin Al-Suyuty,
 Al-Azhareyyah Press, Cairo, Egypt, 1318 AH, Page 59 [see Insert 1].
-
-|
 
 The horrendous dimensions of this crime can be realized once we look at the
 consequences:
@@ -116,7 +110,7 @@ Strangely, the false injections 9:128-129 are labeled in the traditional Quran
 printings as "Meccan" [see Insert 2].
 
  The Title Figure of Sura 9 from a standard Quran, showing that this sura is Medinan,
- "except for the last two verses; they are Meccan"!!! [Insert 2] |
+ "except for the last two verses; they are Meccan"!!! [Insert 2]
 
 How could these `Meccan' verses be found with Khuzeimah, a late `Medinan' Muslim?!
 How could a Medinan sura contain Meccan verses, when the universal convention
@@ -141,8 +135,6 @@ God, there is no god except He. I put my trust in Him. He is the Lord
 with the great throne.' "
 
 [Insert 3]
-
-|
 
 ## THE PHYSICAL EVIDENCE
 
@@ -174,100 +166,81 @@ in the initialed section would have become 2642, not a multiple of 19.
 
 Table 1: Occurrence of the word "God" outside the initialed section
 
- |
- |
- |
- |
+ Sura
+No.of
+Sura
+No.of
 
- Sura |
-No.of |
-Sura |
-No.of |
+ No.
+Occurrences
+No.
+Occurrences
 
- No. |
-Occurrences |
-No. |
-Occurrences |
+------
+------
+------
+-------
 
------- |
------- |
------- |
-------- |
+ 1
+2
+84
+1
 
- 1 |
-2 |
-84 |
-1 |
+ 69
+1
+85
+3
 
- 69 |
-1 |
-85 |
-3 |
+ 70
+1
+87
+1
 
- 70 |
-1 |
-87 |
-1 |
+ 71
+7
+88
+1
 
- 71 |
-7 |
-88 |
-1 |
+ 72
+10
+91
+2
 
- 72 |
-10 |
-91 |
-2 |
+ 73
+7
+95
+1
 
- 73 |
-7 |
-95 |
-1 |
+ 74
+3
+96
+1
 
- 74 |
-3 |
-96 |
-1 |
+ 76
+5
+98
+3
 
- 76 |
-5 |
-98 |
-3 |
+ 79
+1
+104
+1
 
- 79 |
-1 |
-104 |
-1 |
+ 81
+1
+110
+2
 
- 81 |
-1 |
-110 |
-2 |
+ 82
+1
+112
+2
 
- 82 |
-1 |
-112 |
-2 |
+-----
 
- |
- |
- |
------ |
+57
 
- |
- |
- |
-57 |
-
- |
- |
- |
-= (19x3) |
-
- |
- |
- |
- |
+= (19x3)
 
 [5] Sura 9 is an un-initialed sura, and if we look at the 85 un-initialed suras,
 we find that the word "God" occurs in 57 of these suras, 19x3. The
@@ -283,110 +256,104 @@ word "God" would have become 514, and this phenomenon would have disappeared.
  Table 2: The word "God" from
  the missing **Basmalah** to the extra **Basmalah**.
 
- |
- |
- |
+Sura
+No. of Verses
 
- |
-Sura |
-No. of Verses |
+ No.
+No.
+with "God"
 
- No. |
-No. |
-with "God" |
+------
+-------
+-------------
 
------- |
-------- |
-------------- |
+ 1.
+9
+100
 
- 1. |
-9 |
-100 |
+ 2.
+10
+49
 
- 2. |
-10 |
-49 |
+ 3.
+11
+33
 
- 3. |
-11 |
-33 |
+ 4.
+12
+34
 
- 4. |
-12 |
-34 |
+ 5.
+13
+23
 
- 5. |
-13 |
-23 |
+ 6.
+14
+28
 
- 6. |
-14 |
-28 |
+ 7.
+15
+2
 
- 7. |
-15 |
-2 |
+ 8.
+16
+64
 
- 8. |
-16 |
-64 |
+ 9.
+17
+10
 
- 9. |
-17 |
-10 |
+ 10.
+18
+14
 
- 10. |
-18 |
-14 |
+ 11.
+19
+8
 
- 11. |
-19 |
-8 |
+ 12.
+20
+6
 
- 12. |
-20 |
-6 |
+ 13.
+21
+5
 
- 13. |
-21 |
-5 |
+ 14.
+22
+50
 
- 14. |
-22 |
-50 |
+ 15.
+23
+12
 
- 15. |
-23 |
-12 |
+ 16.
+24
+50
 
- 16. |
-24 |
-50 |
+ 17.
+25
+6
 
- 17. |
-25 |
-6 |
+ 18.
+26
+13
 
- 18. |
-26 |
-13 |
+ 19.
+27
+6
 
- 19. |
-27 |
-6 |
+-----
+------
+------
 
------ |
------- |
------- |
-
- 19 |
-342 |
-513 |
+ 19
+342
+513
 
 No. of suras = 19,
 Total of sura numbers =342 =19x18
 Total of verses = 513 = 19 x 27
-|
 
 [7] The word "Elaah" which means "god" occurs in Verses
 9:129. The total occurrence of this word in the Quran is 95, 19x5. The inclusion
@@ -432,75 +399,61 @@ the false Verses 9:128-129 are included.
 Table 3: Mathematical coding of the
  Quran's suras & verses, based on "19"
 
- |
- |
- |
- |
+ Sura
+No.of
+Sum of
 
- Sura |
-No.of |
-Sum of |
- |
+ No.
+Verses
+Verse #'s
+Total
 
- No. |
-Verses |
-Verse #'s |
-Total |
+-----
+--------
+----------
+------
 
------ |
--------- |
----------- |
------- |
+ 1
+7
+28
+36
 
- 1 |
-7 |
-28 |
-36 |
+ 2
+286
+41041
+41329
 
- 2 |
-286 |
-41041 |
-41329 |
+ -
+-
+-
+-
 
- - |
-- |
-- |
-- |
+ 9
+127
+8128
+8264
 
- 9 |
-127 |
-8128 |
-8264 |
+ -
+-
+-
+-
 
- - |
-- |
-- |
-- |
+ 114
+6
+21
+141
 
- 114 |
-6 |
-21 |
-141 |
+-----
+------
+--------
+------
 
------ |
------- |
--------- |
------- |
+ 6555
+6234
+333410
+346199
 
- 6555 |
-6234 |
-333410 |
-346199 |
-
- |
- |
- |
-(19 x 19 x 959) |
-
- |
- |
- |
- |
+(19 x 19 x 959)
 
 [14] When we carry out the same calculations as in Item 13 above, but for the
 85 un-initialed suras only, which include Sura 9, the cumulative total is also
@@ -511,65 +464,55 @@ this criterion.
 
 Table 4: Mathematical coding of the Quran's 85 un-initialed suras.
 
- |
- |
- |
- |
+Sura
+No.of
+Sum of
 
-Sura |
-No.of |
-Sum of |
- |
+No.
+Verses
+Verse #'s
+Total
 
-No. |
-Verses |
-Verse #'s |
-Total |
+----
+------
+---------
+------
 
----- |
------- |
---------- |
------- |
+ 1
+7
+28
+36
 
- 1 |
-7 |
-28 |
-36 |
+ 4
+176
+15576
+15756
 
- 4 |
-176 |
-15576 |
-15756 |
+ -
+-
+-
+-
 
- - |
-- |
-- |
-- |
+ 9
+127
+8128
+8264
 
- 9 |
-127 |
-8128 |
-8264 |
+ -
+-
+-
+-
 
- - |
-- |
-- |
-- |
+114
+6
+21
+141
 
-114 |
-6 |
-21 |
-141 |
+------
 
- |
------- |
-
- |
-156066 |
+156066
 
  156066 = (19x8214)
-
-|
 
 [15] By adding the sura numbers of all un-initialed suras (85 suras), plus
 their number of verses, from the beginning of the Quran to the end of Sura 9
@@ -580,59 +523,43 @@ Table 5: Un-initialed suras
 and
 their verses from the beginning to Sura 9
 
-|
+ Sura
+# Verses
+Total
 
- |
- |
- |
+------
+--------
+-------
 
- Sura |
-# Verses |
-Total |
+ 1
+7
+8
 
------- |
--------- |
-------- |
+ 4
+176
+180
 
- 1 |
-7 |
-8 |
+ 5
+120
+125
 
- 4 |
-176 |
-180 |
+ 6
+165
+171
 
- 5 |
-120 |
-125 |
+ 8
+75
+83
 
- 6 |
-165 |
-171 |
+ 9
+127
+136
 
- 8 |
-75 |
-83 |
+-----
 
- 9 |
-127 |
-136 |
+703
 
- |
- |
------ |
-
- |
- |
-703 |
-
- |
- |
-(19x37) |
-
- |
- |
- |
+(19x37)
 
 [16] By adding the sura number of the un-initialed suras, plus the number of
 verses, plus the sum of verse numbers from the missing Basmalah (9:1) to the
@@ -652,72 +579,50 @@ un-initialed suras & their verses
 from missing Basmalah (Sura 9)
 to the end of the Quran
 
-|
+Sura
+No.of
+Sum of
 
- |
- |
- |
- |
+No.
+Verses
+Verse #'s
+Total
 
-Sura |
-No.of |
-Sum of |
- |
+----
+------
+---------
+------
 
-No. |
-Verses |
-Verse #'s |
-Total |
+ 9
+127
+8128
+8264
 
----- |
------- |
---------- |
------- |
+ 16
+128
+8256
+8400
 
- 9 |
-127 |
-8128 |
-8264 |
+ -
+-
+-
+-
 
- 16 |
-128 |
-8256 |
-8400 |
+113
+5
+15
+133
 
- - |
-- |
-- |
-- |
+114
+6
+21
+141
 
-113 |
-5 |
-15 |
-133 |
+------
 
-114 |
-6 |
-21 |
-141 |
+116090
 
- |
- |
- |
------- |
-
- |
- |
- |
-116090 |
-
- |
- |
- |
-(19x6110) |
-
- |
- |
- |
- |
+(19x6110)
 
 [18] When the same calculations of Items 16 and 17 are carried out from the
 missing Basmalah (9:1) to the verse where the number 19 is mentioned (74:30),
@@ -727,72 +632,56 @@ must consist of 127 verses.
 Table 7: The suras and verses from
 the missing Basmalah to 74:30.
 
-|
+ Sura
+No.of
+Sum of
 
- |
- |
- |
- |
+ No.
+Verses
+Verse #s
+Total
 
- Sura |
-No.of |
-Sum of |
- |
+------
+------
+--------
+------
 
- No. |
-Verses |
-Verse #s |
-Total |
+ 9
+127
+8128
+8264
 
------- |
------- |
--------- |
------- |
+ 10
+109
+5995
+6114
 
- 9 |
-127 |
-8128 |
-8264 |
+ -
+-
+-
+-
 
- 10 |
-109 |
-5995 |
-6114 |
+ 73
+20
+210
+303
 
- - |
-- |
-- |
-- |
+ 74
+30
+465
+569
 
- 73 |
-20 |
-210 |
-303 |
+-----
+-----
+-------
+-------
 
- 74 |
-30 |
-465 |
-569 |
+2739
+4288
+200643
+207670
 
------ |
------ |
-------- |
-------- |
-
-2739 |
-4288 |
-200643 |
-207670 |
-
- |
- |
- |
-(19x10930) |
-
- |
- |
- |
- |
+(19x10930)
 
 [19] Sura 9 consists of 127 verses. The digits of 127 add up to 1+2+7 = 10.
 Let us look at all the verses whose digits add up to 10, from the missing Basmalah
@@ -803,143 +692,129 @@ of 19, and this phenomenon would have disappeared. The data are in Table 8.
 Table 8: The verses whose digits add
 up to 10 from 9:1 to 27:29.
 
-|
+How many
 
- |
- |
- |
- |
+ Sura
+No.of
+add up
+No.of
 
- |
- |
-How many |
- |
+ No.
+Verses
+to 10
+Total
 
- Sura |
-No.of |
-add up |
-No.of |
+-----
+------
+------
+-------
 
- No. |
-Verses |
-to 10 |
-Total |
+ 9
+127
+12
+148
 
------ |
------- |
------- |
-------- |
+ 10
+109
+10
+129
 
- 9 |
-127 |
-12 |
-148 |
+ 11
+123
+11
+145
 
- 10 |
-109 |
-10 |
-129 |
+ 12
+111
+10
+133
 
- 11 |
-123 |
-11 |
-145 |
+ 13
+43
+3
+59
 
- 12 |
-111 |
-10 |
-133 |
+ 14
+52
+4
+70
 
- 13 |
-43 |
-3 |
-59 |
+ 15
+99
+9
+123
 
- 14 |
-52 |
-4 |
-70 |
+ 16
+128
+12
+156
 
- 15 |
-99 |
-9 |
-123 |
+ 17
+111
+10
+138
 
- 16 |
-128 |
-12 |
-156 |
+ 18
+110
+10
+138
 
- 17 |
-111 |
-10 |
-138 |
+ 19
+98
+9
+126
 
- 18 |
-110 |
-10 |
-138 |
+ 20
+135
+12
+167
 
- 19 |
-98 |
-9 |
-126 |
+ 21
+112
+10
+143
 
- 20 |
-135 |
-12 |
-167 |
+ 22
+78
+7
+107
 
- 21 |
-112 |
-10 |
-143 |
+ 23
+118
+11
+152
 
- 22 |
-78 |
-7 |
-107 |
+ 24
+64
+6
+94
 
- 23 |
-118 |
-11 |
-152 |
+ 25
+77
+7
+109
 
- 24 |
-64 |
-6 |
-94 |
+ 26
+227
+22
+275
 
- 25 |
-77 |
-7 |
-109 |
+ 27
+29
+2
+58
 
- 26 |
-227 |
-22 |
-275 |
+----
+-----
+----
+------
 
- 27 |
-29 |
-2 |
-58 |
-
----- |
------ |
----- |
------- |
-
-342 |
-1951 |
-177 |
-2470 |
+342
+1951
+177
+2470
 
  342 = 19x18 & 2470 = 19x130
-
-|
-
- |
 
 [20] The falsifiers wanted us to believe that Sura 9 consists of 129 verses.
 The number 129 ends with the digit "9." Let us look at the first sura
@@ -956,108 +831,96 @@ and the Quran's code would have been violated (Table 9).
 Table 9: All the suras whose number
 of verses ends with "9."
 
-|
+ Sura
+No.of
+Sum of
 
- |
- |
- |
- |
+ No.
+Verses
+Verse #s
+Total
 
- Sura |
-No.of |
-Sum of |
- |
+------
+------
+--------
+------
 
- No. |
-Verses |
-Verse #s |
-Total |
+ 10
+109
+5995
+6114
 
------- |
------- |
--------- |
------- |
+ 15
+99
+4950
+5064
 
- 10 |
-109 |
-5995 |
-6114 |
+ 29
+69
+2415
+2513
 
- 15 |
-99 |
-4950 |
-5064 |
+ 43
+89
+4005
+4137
 
- 29 |
-69 |
-2415 |
-2513 |
+ 44
+59
+1770
+1873
 
- 43 |
-89 |
-4005 |
-4137 |
+ 48
+29
+435
+512
 
- 44 |
-59 |
-1770 |
-1873 |
+ 52
+49
+1225
+1326
 
- 48 |
-29 |
-435 |
-512 |
+ 57
+29
+435
+521
 
- 52 |
-49 |
-1225 |
-1326 |
+ 81
+29
+435
+545
 
- 57 |
-29 |
-435 |
-521 |
+ 82
+19
+190
+291
 
- 81 |
-29 |
-435 |
-545 |
+ 87
+19
+190
+296
 
- 82 |
-19 |
-190 |
-291 |
+ 96
+19
+190
+305
 
- 87 |
-19 |
-190 |
-296 |
+ 104
+9
+45
+158
 
- 96 |
-19 |
-190 |
-305 |
+-----
+-----
+------
+------
 
- 104 |
-9 |
-45 |
-158 |
+ 748
+627
+22280
+23655
 
------ |
------ |
------- |
------- |
-
- 748 |
-627 |
-22280 |
-23655 |
-
- |
-(19x1245) |
-
- |
- |
+(19x1245)
 
 [21] The false injection consisted of Verses 128 and 129 at the end of Sura
 9. If we look at the numbers 128 and 129, we see two 1's, two 2's, one 8, and
@@ -1070,168 +933,132 @@ becomes 2548, which is not a multiple of 19 (Table 11).
  Table 10: Counting
 all the 1's in the 85 un-initialed suras.
 
-|
+# of
+# of
 
- |
- |
- |
+Sura
+Verse
+1's
 
- |
-# of |
-# of |
+----
+-----
+-----
 
-Sura |
-Verse |
-1's |
+ 1
+7
+1
 
----- |
------ |
------ |
+ 4
+176
+115
 
- 1 |
-7 |
-1 |
+ -
+-
+-
 
- 4 |
-176 |
-115 |
+ 9
+127
+61
 
- - |
-- |
-- |
+ -
+-
+-
 
- 9 |
-127 |
-61 |
+ 113
+5
+1
 
- - |
-- |
-- |
+ 114
+6
+1
 
- 113 |
-5 |
-1 |
+----
 
- 114 |
-6 |
-1 |
+1406
 
- |
- |
----- |
-
- |
- |
-1406 |
-
- |
-(19x74) |
-
- |
- |
+(19x74)
 
 Table 11: Counting the digits that
 make up 128 and 129 in the whole Quran.
 
-|
+ Sura
+No. of 1's
+No. of 2's
+No. of 8's
+No. of 9's
+Total
 
- |
- |
- |
- |
- |
- |
+ ------
+----------
+----------
+----------
+----------
+------
 
- Sura |
-No. of 1's |
-No. of 2's |
-No. of 8's |
-No. of 9's |
-Total |
+ 1
+1
+1
+0
+0
+2
 
- ------ |
----------- |
----------- |
----------- |
----------- |
------- |
+ 2
+159
+146
+55
+48
+408
 
- 1 |
-1 |
-1 |
-0 |
-0 |
-2 |
+ -
+-
+-
+-
+-
+-
 
- 2 |
-159 |
-146 |
-55 |
-48 |
-408 |
+ 9
+61
+31
+22
+22
+136
 
- - |
-- |
-- |
-- |
-- |
-- |
+ 10
+31
+21
+21
+21
+94
 
- 9 |
-61 |
-31 |
-22 |
-22 |
-136 |
+ -
+-
+-
+-
+-
+-
 
- 10 |
-31 |
-21 |
-21 |
-21 |
-94 |
+ 114
+1
+1
+0
+0
+2
 
- - |
-- |
-- |
-- |
-- |
-- |
+-----
+------
+-----
+----
+----
 
- 114 |
-1 |
-1 |
-0 |
-0 |
-2 |
+2546
+1641
+908
+833
+5928
 
- |
------ |
------- |
------ |
----- |
----- |
+(19 x 134)
 
- |
-2546 |
-1641 |
-908 |
-833 |
-5928 |
-
- |
-(19 x 134) |
- |
- |
- |
-(19 x 312) |
-
- |
- |
- |
- |
- |
- |
+(19 x 312)
 
 [22] Since Sura 9 is an un-initialed sura, let us look at all the verse numbers
 in the 85 un-initialed suras and count all the 1's we see. As shown in Table
@@ -1270,78 +1097,63 @@ consisted of 129 verses. Table 12 is abbreviated to illustrate the calculations.
  Table 12: Sum
 of digits of all suras & verse numbers in the whole Quran.
 
-|
+Sura
+No.of
+Sum of
+Digits of
 
- |
- |
- |
- |
+ No.
+Verses
+Suras
+Verses
 
-Sura |
-No.of |
-Sum of |
-Digits of |
+----
+------
+-----
+------
 
- No. |
-Verses |
-Suras |
-Verses |
+ 1
+7
+1
+7
 
----- |
------- |
------ |
------- |
+ 2
+286
+2
+16
 
- 1 |
-7 |
-1 |
-7 |
+ 3
+200
+3
+2
 
- 2 |
-286 |
-2 |
-16 |
+ -
+-
+-
+-
 
- 3 |
-200 |
-3 |
-2 |
+ 9
+127
+9
+10
 
- - |
-- |
-- |
-- |
+ -
+-
+-
+-
 
- 9 |
-127 |
-9 |
-10 |
+ 114
+6
+6
+6
 
- - |
-- |
-- |
-- |
+-----
+-----
 
- 114 |
-6 |
-6 |
-6 |
-
- |
- |
------ |
------ |
-
- |
- |
-975 |
-906 |
+975
+906
 
  975+906 = 1881 = 19x99
-
-|
-
- |
 
 [26] Miraculously, if we calculate the sum of digits for every sura in the
 Quran, and multiply the sum for each sura by the sum of digits of its number
@@ -1355,109 +1167,86 @@ while the false verses are utterly rejected. See Table 13.
 Table 13: Multiplication of the sum
 of digits of the Quran's suras and verses.
 
-|
+ Sura
+No. of
+Sum of
+Digits of
 
- |
- |
- |
- |
- |
+Multiplication
 
- Sura |
-No. of |
-Sum of |
-Digits of |
- |
-Multiplication |
+ No.
+Verses
+Suras
+Verses
 
- No. |
-Verses |
-Suras |
-Verses |
- |
-Product |
+Product
 
- ------ |
------- |
------ |
------- |
- |
--------------- |
+ ------
+------
+-----
+------
 
- 1 |
-7 |
-1 |
-x 7 |
-= |
-7 |
+--------------
 
- 2 |
-286 |
-2 |
-x 16 |
-= |
-32 |
+ 1
+7
+1
+x 7
+=
+7
 
- 3 |
-200 |
-3 |
-x 2 |
-= |
-6 |
+ 2
+286
+2
+x 16
+=
+32
 
- - |
-- |
-- |
-- |
-- |
- |
+ 3
+200
+3
+x 2
+=
+6
 
- 9 |
-127 |
-9 |
-x 10 |
-= |
-90 |
+ -
+-
+-
+-
+-
 
- - |
-- |
-- |
-- |
- |
- |
+ 9
+127
+9
+x 10
+=
+90
 
- 114 |
-6 |
-6 |
-6 |
-= |
-36 |
+ -
+-
+-
+-
 
- |
- |
------ |
------ |
- |
------- |
+ 114
+6
+6
+6
+=
+36
 
- |
- |
-975 |
-906 |
- |
-7771 |
+-----
+-----
 
- |
- |
- |
- |
-(19x409) |
+------
+
+975
+906
+
+7771
+
+(19x409)
 
  975+906 = 1881 = 19x99
-
-|
-
- |
 
 [27] Another truly awesome phenomenon: Sura 9 is an odd-numbered sura, and
 if we carry out the calculations described above for the odd-numbered suras
@@ -1468,171 +1257,107 @@ Table 14 illustrates this remarkable phenomenon.
  Table 14: Same
 data as in Table 12, but only for the odd-numbered suras.
 
-|
-
- |
- |
- |
- |
- |
-
  Sura
-
-|
 
 No.of
 
-|
-Sum of |
+Sum of
 
 Digits of
 
-|
- |
-
  No.
 
-|
+Verses
+
+Suras
 
 Verses
 
-|
-Suras |
-
-Verses
-
-|
-Total |
+Total
 
 -----
 
-|
+------
+
+-----
 
 ------
 
-|
------ |
-
 ------
-
-|
------- |
 
  1
 
-|
+7
+
+1
 
 7
 
-|
-1 |
-
-7
-
-|
-8 |
+8
 
  3
 
-|
-
 200
 
-|
-3 |
+3
 
 2
 
-|
-5 |
+5
 
  -
 
-|
+-
 
 -
 
-|
-- |
-
 -
-
-|
- |
 
  9
 
-|
-
 127
 
-|
-9 |
+9
 
 10
 
-|
-19 |
+19
 
  -
 
-|
+-
 
 -
 
-|
-- |
-
 -
-
-|
- |
 
  113
 
-|
+5
 
 5
 
-|
-5 |
-
 5
 
-|
-10 |
-
- |
- |
------ |
+10
 
 -----
 
-|
------ |
+-----
 
- |
- |
-513 |
+-----
+
+513
 
 437
 
-|
-950 |
+950
 
- |
- |
-(19x27) |
+(19x27)
 
 (19x23)
 
-|
-(19x50) |
-
- |
- |
- |
- |
+(19x50)
 
 [28] Let us take all the suras that consist of 127 verses or less. There are
 105 such suras. The sum of the sura numbers of these 105 suras, plus the sum
@@ -1644,67 +1369,54 @@ phenomenon would have disappeared, and the Quran's code would have been violated
 Table 15: Mathematical coding of all
 suras consisting of 127 verses or less.
 
-|
+ Sura
+No.of
 
- |
- |
- |
+Number
+Verses
+Total
 
- Sura |
-No.of |
- |
+------
+------
+------
 
-Number |
-Verses |
-Total |
+ 1
+7
+8
 
------- |
------- |
------- |
+ 5
+120
+125
 
- 1 |
-7 |
-8 |
+ 8
+75
+83
 
- 5 |
-120 |
-125 |
+ 9
+127
+136
 
- 8 |
-75 |
-83 |
+ -
+-
+-
 
- 9 |
-127 |
-136 |
+ 113
+5
+118
 
- - |
-- |
-- |
+ 114
+6
+120
 
- 113 |
-5 |
-118 |
+----
+-----
+------
 
- 114 |
-6 |
-120 |
+6434
+4529
+10963
 
----- |
------ |
------- |
-
-6434 |
-4529 |
-10963 |
-
- |
- |
-(19x577) |
-
- |
- |
- |
+(19x577)
 
 [29] Since Sura 9 is odd-numbered, and its number of verses is also odd, let
 us look at all the odd-numbered suras whose number of verses is also odd. This
@@ -1734,142 +1446,67 @@ data are shown in Table 16.
  Table 16: All
 suras whose number of verses is 3 digit, and is divisible by 3.
 
-|
-
- |
- |
- |
-
  Sura
-
-|
 
 # of Verses
 
-|
-
 Total
 
-|
-
 ------
-
-|
 
 -----------
 
-|
-
 ------
-
-|
 
  5
 
-|
-
 120
-
-|
 
 125
 
-|
-
  6
-
-|
 
 165
 
-|
-
 171
-
-|
 
  11
 
-|
-
 123
-
-|
 
 134
 
-|
-
  12
 
-|
-
 111
-
-|
 
 123
 
-|
-
  17
-
-|
 
 111
 
-|
-
 128
-
-|
 
  20
 
-|
-
 135
-
-|
 
 155
 
-|
-
 ----
 
-|
-
 -----
 
-|
-
 -----
-
-|
 
  71
 
-|
-
 765
-
-|
 
 836
 
-|
-
- |
- |
-
 (19x44)
-
-|
-
- |
- |
- |
 
 If Sura 9 had 129 verses, it would have been included in this table, and would
 have destroyed this phenomenon.
@@ -1883,111 +1520,51 @@ a multiple of 19.
 Table 17: All the suras that consist
 of 129 verses or more.
 
-|
-
- |
- |
-
  Sura No.
-
-|
 
 No. of Verses
 
-|
-
 ---------
-
-|
 
 --------------
 
-|
-
  2
-
-|
 
 286
 
-|
-
  3
-
-|
 
 200
 
-|
-
  4
-
-|
 
 176
 
-|
-
  6
-
-|
 
 165
 
-|
-
  7
-
-|
 
 206
 
-|
-
  20
-
-|
 
 135
 
-|
-
  26
-
-|
 
 227
 
-|
-
  37
-
-|
 
 182
 
-|
-
- |
-
 -----
-
-|
-
- |
 
 1577
 
-|
-
- |
-
 (19x83)
-
-|
-
- |
- |
 
 [33] The numbers 127, 128 and 129 have two digits in common, "1"
 and "2." Let us consider all the suras whose number of verses contains
@@ -2001,115 +1578,89 @@ Table 18: Suras whose final verse
 have the numerals "1" and "2" in common with the verses
 in question (127, 128, and 129).
 
-|
-
- |
- |
- |
-
- Sura |
+ Sura
 
 No.of
 
-|
- |
-
- No. |
+ No.
 
 Verses
 
-|
-Total |
-
------- |
+Total
 
 ------
 
-|
------- |
+------
 
- 5 |
+------
+
+ 5
 
 120
 
-|
-125 |
+125
 
- 9 |
+ 9
 
 127
 
-|
-136 |
+136
 
- 11 |
+ 11
 
 123
 
-|
-134 |
+134
 
- 16 |
+ 16
 
 128
 
-|
-144 |
+144
 
- 21 |
+ 21
 
 112
 
-|
-133 |
+133
 
- 37 |
+ 37
 
 182
 
-|
-219 |
+219
 
- 65 |
-
-12
-
-|
-77 |
-
- 66 |
+ 65
 
 12
 
-|
-78 |
+77
 
- 92 |
+ 66
+
+12
+
+78
+
+ 92
 
 21
 
-|
-113 |
+113
 
----- |
+----
 
 -----
 
-|
------ |
+-----
 
- 322 |
+ 322
 
 837
 
-|
-1159 |
+1159
 
- |
- |
-(19x61) |
-
- |
+(19x61)
 
 [34] Sura 9 is a single-digit sura whose number of verses contains the digits
 1 and 2. There is only one other sura that possesses these traits: Sura 5 is
@@ -2121,65 +1672,29 @@ Table 19: The only suras whose number
 is a single digit, and the number of verses contains the numerals "1"
 and "2."
 
-|
-
- |
- |
-
  Sura Number
-
-|
 
 No. of Verses
 
-|
-
  -----------
-
-|
 
 -------------
 
-|
-
  5
-
-|
 
 120
 
-|
-
  9
-
-|
 
 127
 
-|
-
  ----
-
-|
 
 -----
 
-|
-
- |
-
 247
 
-|
-
- |
-
 (19x13)
-
-|
-
- |
- |
 
 [35] We looked at all the suras whose number of verses contains "1"
 and "2." Let us now look at all the suras whose number of verses begins
@@ -2203,199 +1718,95 @@ verses is 1216, or 19x64. The data are shown in Table 20.
 Table 20: All the suras where the
 digits of sura number and number of verses add up to 19
 
-|
-
- |
- |
- |
-
  Sura
-
-|
 
 No.of
 
-|
- |
-
  No.
-
-|
 
 Verses
 
-|
-
 Total
-
-|
 
  ------
 
-|
-
 ------
 
-|
-
 ------
-
-|
 
  9
 
-|
-
 127
-
-|
 
 136
 
-|
-
  22
-
-|
 
 78
 
-|
-
 100
-
-|
 
  26
 
-|
-
 227
-
-|
 
 253
 
-|
-
  45
-
-|
 
 37
 
-|
-
 82
-
-|
 
  54
 
-|
-
 55
 
-|
-
 109
-
-|
 
  64
 
-|
-
 18
-
-|
 
 82
 
-|
-
  72
-
-|
 
 28
 
-|
-
 100
-
-|
 
  77
 
-|
-
 50
-
-|
 
 127
 
-|
-
  78
-
-|
 
 40
 
-|
-
 118
-
-|
 
  84
 
-|
-
 25
-
-|
 
 109
 
-|
-
  -----
 
-|
-
 -----
 
-|
-
 -----
-
-|
 
  531
 
-|
-
 685
-
-|
 
 1216
 
-|
-
- |
- |
-
 (19x64)
-
-|
-
- |
- |
- |
 
 **Mr. Gatut Adisoma of Masjid Tucson made the following two discoveries.**
 
@@ -2412,43 +1823,32 @@ Table 21: All the suras where the
 digits of sura number add up to 9 and the digits of number of verses add
 up to 10
 
-|
+ Sura
+No. of
 
- |
- |
+ No.
+Verses
 
- Sura |
-No. of |
+------
+-------
 
- No. |
-Verses |
+ 9
+127
 
------- |
-------- |
+ 45
+37
 
- 9 |
-127 |
+ 54
+55
 
- 45 |
-37 |
+ 72
+28
 
- 54 |
-55 |
+------
 
- 72 |
-28 |
+247
 
- |
------- |
-
- |
-247 |
-
- |
-(19x13) |
-
- |
- |
+(19x13)
 
 [38] If Sura 9 consisted of 129 verses as the distorters claimed, then there
 is only one other sura in the whole Quran whose sura digits add up to 9, and
@@ -2461,60 +1861,27 @@ Table 22: The suras where the digits
 of sura number add up to 9, and the digits of number of verses add up
 to 12, assuming that Sura 9 is 129 verses.
 
-|
-
- |
- |
-
  Sura No.
-
-|
 
 No. of Verses
 
-|
-
  ----------
-
-|
 
 -------------
 
-|
-
  9
-
-|
 
 129
 
-|
-
  27
-
-|
 
 93
 
-|
-
- |
-
 -----
-
-|
-
- |
 
 222
 
-|
-
  (not a multiple of 19)
-
-|
-
- |
 
 [39] Let us assume for awhile that Sura 9 consists of 129 verses. Since the
 number 129 ends with the digit "9," let us look at all the suras where
@@ -2535,169 +1902,134 @@ of 129 verses.
 Table 23: All suras whose number of
 verses end with the digit "9."
 
-|
-
- |
- |
- |
- |
-
- Sura |
+ Sura
 
 No.of
 
-|
-Sum of |
- |
+Sum of
 
- No. |
+ No.
 
 Verses
 
-|
-Verse #'s |
-Total |
+Verse #'s
+Total
 
------ |
+-----
 
 ------
 
-|
---------- |
------ |
+---------
+-----
 
- 10 |
+ 10
 
 109
 
-|
-5995 |
-6114 |
+5995
+6114
 
- 15 |
+ 15
 
 99
 
-|
-4950 |
-5064 |
+4950
+5064
 
- 29 |
+ 29
 
 69
 
-|
-2415 |
-2513 |
+2415
+2513
 
- 43 |
+ 43
 
 89
 
-|
-4005 |
-4137 |
+4005
+4137
 
- 44 |
+ 44
 
 59
 
-|
-1770 |
-1873 |
+1770
+1873
 
- 48 |
+ 48
 
 29
 
-|
-435 |
-512 |
+435
+512
 
- 52 |
+ 52
 
 49
 
-|
-1225 |
-1326 |
+1225
+1326
 
- 57 |
-
-29
-
-|
-435 |
-521 |
-
- 81 |
+ 57
 
 29
 
-|
-435 |
-545 |
+435
+521
 
- 82 |
+ 81
 
-19
+29
 
-|
-190 |
-291 |
+435
+545
 
- 87 |
+ 82
 
 19
 
-|
-190 |
-296 |
+190
+291
 
- 96 |
+ 87
 
 19
 
-|
-190 |
-305 |
+190
+296
 
- 104 |
+ 96
+
+19
+
+190
+305
+
+ 104
 
 9
 
-|
-45 |
-158 |
+45
+158
 
------ |
+-----
 
 ------
 
-|
------- |
-------- |
+------
+-------
 
- 748 |
+ 748
 
 627
 
-|
-22280 |
-23655 |
-
- |
+22280
+23655
 
 (19x33)
 
-|
- |
-(19x1245) |
-
- |
- |
- |
- |
+(19x1245)
 
 [40] Sura 9 is an odd-numbered sura whose number of verses ends with the digit
 "9." Let us now look at all the odd-numbered suras whose number of
@@ -2709,89 +2041,67 @@ it would have been included in this group, and the total would have been 646+129
 Table 24: Odd numbered suras whose
 number of verses ends with "9."
 
-|
-
- |
- |
- |
-
-Sura No. Verses |
+Sura No. Verses
 
 No.of
 
-|
-Total |
+Total
 
---------- |
+---------
 
 -----------
 
-|
------- |
+------
 
- 15 |
+ 15
 
 99
 
-|
-114 |
+114
 
- 29 |
+ 29
 
 69
 
-|
-98 |
+98
 
- 43 |
+ 43
 
 89
 
-|
-132 |
+132
 
- 57 |
-
-29
-
-|
-86 |
-
- 81 |
+ 57
 
 29
 
-|
-110 |
+86
 
- 87 |
+ 81
+
+29
+
+110
+
+ 87
 
 19
 
-|
-106 |
+106
 
- ---- |
+ ----
 
 -----
 
-|
------ |
+-----
 
- 312 |
+ 312
 
 334
 
-|
-646 |
+646
 
- |
- |
-(19x34) |
-
- |
- |
- |
+(19x34)
 
 [41] By now, it is incontrovertibly proven that Sura 9 consists of 127 verses.
 Let us now look at the suras whose number of verses ends with "7."
@@ -2804,118 +2114,73 @@ ends with the digit "7," including Sura 9, conforms with the code.
 Table 25: The suras whose number
 of verses ends with the digit "7."
 
-|
-
- |
- |
- |
-
 Sura No.
-
-|
 
 No.of Verses
 
-|
-Total |
+Total
 
 --------
 
-|
-
 ------------
 
-|
------- |
+------
 
  1
 
-|
-
 7
 
-|
-8 |
+8
 
  9
 
-|
-
 127
 
-|
-136 |
+136
 
  25
 
-|
-
 77
 
-|
-102 |
+102
 
  26
 
-|
-
 227
 
-|
-253 |
+253
 
  45
 
-|
-
 37
 
-|
-82 |
+82
 
  86
 
-|
-
 17
 
-|
-103 |
+103
 
  107
 
-|
-
 7
 
-|
-114 |
+114
 
 -----
 
-|
-
 -----
 
-|
------- |
+------
 
  299
 
-|
-
 499
 
-|
-798 |
+798
 
- |
- |
-(19x42) |
-
- |
- |
- |
+(19x42)
 
 [42] The last two verses of Sura 9 are 126 and 127. Since the falsifiers added
 two verses, let us look at the last two verses of every sura in the Quran, and
@@ -2927,145 +2192,87 @@ last two verses of every sura in the Quran is 38, 19x2.
 Table 26: The total number of the
 digit "7" among the last two verses of every sura in the Quran.
 
-|
-
- |
- |
-
 Sura
 
-|
-Last 2 |
+Last 2
 
 7's in Last
 
-|
-
 No.
 
-|
-Verses |
+Verses
 
 2 Verses
 
-|
-
 ----
 
-|
------- |
+------
 
 -----------
 
-|
-
  1
 
-|
-6,7 |
+6,7
 
 1
-
-|
 
  2
 
-|
-285,286 |
+285,286
 
 0
-
-|
 
  3
 
-|
-199,200 |
+199,200
 
 0
-
-|
 
  4
 
-|
-175,176 |
+175,176
 
 2
 
-|
-
  -
-
-|
-- |
 
 -
 
-|
+-
 
  9
 
-|
-126,127 |
+126,127
 
 1
 
-|
-
  -
-
-|
-- |
 
 -
 
-|
+-
 
  25
 
-|
-76,77 |
+76,77
 
 3
 
-|
-
  -
-
-|
-- |
 
 -
 
-|
+-
 
 114
 
-|
-5,6 |
+5,6
 
 0
 
-|
-
- |
- |
-
 -----
 
-|
-
- |
- |
-
 38
-
-|
-
- |
- |
- |
 
 If the last verse in Sura 9 was 129 instead of 127, the number of occurrences
 of the digit "7" would have been 37, not 38, and this criterion would
@@ -3090,59 +2297,48 @@ in Table 27, which one has the extra 2 verses? The answer is provided in Item
 Table 27: All suras which contain
 a verse number "129."
 
-|
+ Sura No.
+Verse No.
 
- |
- |
+---------
+---------
 
- Sura No. |
-Verse No. |
+ 2
+129
 
---------- |
---------- |
+ 3
+129
 
- 2 |
-129 |
+ 4
+129
 
- 3 |
-129 |
+ 6
+129
 
- 4 |
-129 |
+ 7
+129
 
- 6 |
-129 |
+ 9 ?
+129
 
- 7 |
-129 |
+ 20
+129
 
- 9 ? |
-129 |
+ 26
+129
 
- 20 |
-129 |
+ 37
+129
 
- 26 |
-129 |
+ ----
+-----
 
- 37 |
-129 |
-
- ---- |
------ |
-
- 114 |
-1161 |
+ 114
+1161
 
  (114+1161-2 = 1273 =
 
-|
-
  (19x67)
-
-|
-
- |
 
 [44] To pinpoint the location of these two false verses, let us look at all
 the suras that contain a verse No. 128, while continuing to assume that Sura
@@ -3159,78 +2355,59 @@ after removing Sura 9, is 1273, 19x67, which is the same total obtained in Item
 Table 28: All suras containing a verse
 number "128."
 
-|
+ Sura No.
+Verse No.
 
- |
- |
+---------
+---------
 
- Sura No. |
-Verse No. |
+ 2
+128
 
---------- |
---------- |
+ 3
+128
 
- 2 |
-128 |
+ 4
+128
 
- 3 |
-128 |
+ 6
+128
 
- 4 |
-128 |
+ 7
+128
 
- 6 |
-128 |
+ 9 ?
+128
 
- 7 |
-128 |
+ 16
+128
 
- 9 ? |
-128 |
+ 20
+128
 
- 16 |
-128 |
+ 26
+128
 
- 20 |
-128 |
+ 37
+128
 
- 26 |
-128 |
+ ----
+-----
 
- 37 |
-128 |
-
- ---- |
------ |
-
- 130 |
-1280 |
+ 130
+1280
 
  (130+1280 = 1410
 
-|
-
  not a multiple of 19)
-
-|
 
  If we remove Sura 9,
 
-|
-
  with its 128 verses,
-
-|
 
  we get 1410-9-128 =
 
-|
-
  1273 = 19 x 67
-
-|
-
- |
 
 [45] Sura 9 is an un-initialed sura whose last two verses are 126 and 127.
 Let us take the 85 un-initialed suras, and add up the numbers of the last two
@@ -3243,153 +2420,69 @@ to be 126 and 127.
 Table 29: Abbreviated table of the
 last two verses in the un-initialed suras
 
-|
-
- |
- |
- |
-
  Sura
-
-|
 
 Last 2
 
-|
- |
-
  No.
-
-|
 
 Verses
 
-|
-
 Total
-
-|
 
 ------
 
-|
-
 -------
 
-|
-
 -------
-
-|
 
  1
 
-|
-
 6+7
 
-|
-
 13
-
-|
 
  4
 
-|
-
 175+176
-
-|
 
 351
 
-|
-
  5
-
-|
 
 119+120
 
-|
-
 239
-
-|
 
  -
 
-|
-
 -
 
-|
-
 -
-
-|
 
  9
 
-|
-
 126+127
-
-|
 
 253
 
-|
-
  -
 
-|
-
 -
 
-|
-
 -
-
-|
 
  114
 
-|
-
 5+6
-
-|
 
 13
 
-|
-
- |
- |
-
  ------
-
-|
-
- |
- |
 
  6897
 
-|
-
- |
- |
-
 (19x363)
-
-|
-
- |
- |
- |
 
 [46] Let us now take the last two verses in every sura in the Quran, initialed
 and un-initialed, and add the digits of the last two verses in each sura (Table
@@ -3401,106 +2494,63 @@ code. The last two verses of Sura 9 are confirmed to be 126 & 127, not 128
 Table 30: Sum of digits of the last
 two verses of every sura in the Quran
 
-|
-
- |
- |
- |
-
- Sura |
-Last 2 |
+ Sura
+Last 2
 
 Sum of
 
-|
-
- No. |
-Verses |
+ No.
+Verses
 
 the Digits
 
-|
-
------- |
--------- |
+------
+--------
 
 -------------
 
-|
-
- 1 |
-6,7 |
+ 1
+6,7
 
 6 + 7
 
-|
-
- 2 |
-285,286 |
+ 2
+285,286
 
 2+8+5+2+8+6
 
-|
-
- 3 |
-199,200 |
+ 3
+199,200
 
 1+9+9+2+0+0
 
-|
-
- - |
-- |
+ -
+-
 
 -
 
-|
-
- 9 |
-126,127 |
+ 9
+126,127
 
 1+2+6+1+2+7
 
-|
-
- |
-- |
+-
 
 -
 
-|
-
- 113 |
-4,5 |
+ 113
+4,5
 
 4 + 5
 
-|
-
- 114 |
-5,6 |
+ 114
+5,6
 
 5 + 6
 
-|
-
- |
- |
-
 ------------
 
-|
-
- |
- |
-
 1824 = 19x96
-
-|
-
- |
- |
- |
 
 [47] Sura 9 consists of 127 verses, and 127 consists of 3 digits. Let us look
 at all the suras whose number of verses consists of 3 digits; these are suras
@@ -3530,93 +2580,66 @@ last digit in the number of verses.
 Table 31: All suras whose number of
 verses is odd, and consists of 3 digits
 
-|
-
- |
- |
- |
-
  Sura
 
-|
-No.of |
-Last |
+No.of
+Last
 
  No.
 
-|
-Verses |
-Digit |
+Verses
+Digit
 
 -----
 
-|
------- |
--------- |
+------
+--------
 
  6
 
-|
-165 |
-5 |
+165
+5
 
  9
 
-|
-127 |
-7 |
+127
+7
 
  10
 
-|
-109 |
-9 |
+109
+9
 
  11
 
-|
-123 |
-3 |
+123
+3
 
  12
 
-|
-111 |
-1 |
+111
+1
 
  17
 
-|
-111 |
-1 |
+111
+1
 
  20
 
-|
-135 |
-5 |
+135
+5
 
  26
 
-|
-227 |
-7 |
+227
+7
 
- |
- |
------ |
+-----
 
- |
- |
-38 |
+38
 
- |
- |
-(19x2) |
-
- |
- |
- |
+(19x2)
 
 [49] Let us continue to work with the same group of suras of Items 47 and 48.
 Since Sura 9 is an odd-numbered sura, let us now remove all the even-numbered
@@ -3628,37 +2651,26 @@ Sura 9 consisted of 129 verses, this remarkable phenomenon would have been destr
 Table 32: Odd numbered suras whose
 number of verses is odd and consists of 3 digits.
 
-|
+ Sura No.
+No.of Verses
 
- |
- |
+----------
+------------
 
- Sura No. |
-No.of Verses |
+ 9
+127
 
----------- |
------------- |
+ 11
+123
 
- 9 |
-127 |
+ 17
+111
 
- 11 |
-123 |
+------
 
- 17 |
-111 |
+361
 
- |
------- |
-
- |
-361 |
-
- |
-(19x19) |
-
- |
- |
+(19x19)
 
 [50] Let us continue to work with the three suras listed in Item 49. These
 are all the suras in the Quran whose number is odd (like Sura 9), their number
@@ -3698,8 +2710,6 @@ Just add the digits you see:
  9+1+2+7=19 & 4+5+3+7=19; Total for both
 suras = 19+19 = 38.
 
-|
-
 [54] Let us assume that Sura 9 does have 129 verses. In that case we will have
 only two suras in the whole Quran whose number begins with 9, and their number
 of verses ends with 9: Sura 9 (129 verses) and Sura 96 (19 verses). As detailed
@@ -3709,70 +2719,48 @@ the sum of verse numbers is 8828, not a multiple of 19.
 Table 33: Suras whose numbers begins
 with "9" and their number of verses ends with "9."
 
-|
-
- |
- |
- |
- |
-
  Sura
 
-|
-No.of |
-Sum of |
- |
+No.of
+Sum of
 
  No.
 
-|
-Verses |
-Verse #s |
-Total |
+Verses
+Verse #s
+Total
 
 ------
 
-|
------- |
--------- |
------ |
+------
+--------
+-----
 
  9
 
-|
-129? |
-8385 |
-8523 |
+129?
+8385
+8523
 
  96
 
-|
-19 |
-190 |
-305 |
+19
+190
+305
 
 -----
 
-|
------- |
------- |
------ |
+------
+------
+-----
 
  105
 
-|
-148 |
-8575 |
-8828 |
-
- |
+148
+8575
+8828
 
 (Not multiple of 19)
-
-|
-
- |
- |
 
 Now let us remove the false verses (128 & 129) from Sura 9, and repeat
 the same calculations. The result of this correction is shown in Table 34. The
@@ -3781,113 +2769,61 @@ grand total becomes 8569, 19x451.
 Table 34: Same data as in Table 33,
 after correcting the number of verses in Sura 9.
 
-|
-
- |
- |
- |
- |
-
  Sura
-
-|
 
 No.of
 
-|
-Sum of |
- |
+Sum of
 
  No.
 
-|
-
 Verses
 
-|
-Verse #s |
+Verse #s
 
 Total
 
-|
-
  ------
-
-|
 
 ------
 
-|
--------- |
+--------
 
 -----
-
-|
 
  9
 
-|
-
 127
 
-|
-8128 |
+8128
 
 8264
 
-|
-
  96
-
-|
 
 19
 
-|
-190 |
+190
 
 305
 
-|
-
  -----
-
-|
 
 ------
 
-|
------- |
+------
 
 -----
 
-|
-
  105
-
-|
 
 146
 
-|
-8318 |
+8318
 
 8569
 
-|
-
- |
- |
- |
-
 (19x451)
-
-|
-
- |
- |
- |
- |
 
 [55] Let us assume that Sura 9 consists of 129 verses. The total of these digits
 is 9+1+2+9=21. Let us look at all the suras where the digits of their number
@@ -3901,105 +2837,78 @@ Table 35: Suras whose digits of sura
 numbers and verse numbers add up to 21, assuming that Sura 9 consists
 of 129 verses.
 
-|
-
- |
- |
- |
- |
-
  Sura
 
-|
-No.of |
-Sum of |
- |
+No.of
+Sum of
 
  No.
 
-|
-Verses |
-Verse #s |
-Total |
+Verses
+Verse #s
+Total
 
 ------
 
-|
------- |
--------- |
------ |
+------
+--------
+-----
 
  9
 
-|
-129? |
-8385 |
-8523 |
+129?
+8385
+8523
 
  25
 
-|
-77 |
-3003 |
-3105 |
+77
+3003
+3105
 
  27
 
-|
-93 |
-4371 |
-4491 |
+93
+4371
+4491
 
  37
 
-|
-182 |
-16653 |
-16872 |
+182
+16653
+16872
 
  68
 
-|
-52 |
-1378 |
-1498 |
+52
+1378
+1498
 
  94
 
-|
-8 |
-36 |
-138 |
+8
+36
+138
 
  97
 
-|
-5 |
-15 |
-117 |
+5
+15
+117
 
 -----
 
-|
------- |
------- |
------- |
+------
+------
+------
 
  357
 
-|
-546 |
-33841 |
-34744 |
-
- |
+546
+33841
+34744
 
 (Not divisible by 19)
-
-|
-
- |
- |
 
 Now, let us use the correct number of verses for Sura 9, 127, and repeat the
 same calculations as in Table 35. This causes the grand total to become 34485,
@@ -4008,106 +2917,78 @@ or 19x1815. See Table 36.
 Table 36: Calculations of Table 35,
 after correcting the verses in Sura 9.
 
-|
-
- |
- |
- |
- |
-
  Sura
 
-|
-No.of |
-Sum of |
- |
+No.of
+Sum of
 
  No.
 
-|
-Verses |
-Verse #s |
-Total |
+Verses
+Verse #s
+Total
 
 ------
 
-|
------- |
--------- |
------ |
+------
+--------
+-----
 
  9
 
-|
-127 |
-8128 |
-8264 |
+127
+8128
+8264
 
  25
 
-|
-77 |
-3003 |
-3105 |
+77
+3003
+3105
 
  27
 
-|
-93 |
-4371 |
-4491 |
+93
+4371
+4491
 
  37
 
-|
-182 |
-16653 |
-16872 |
+182
+16653
+16872
 
  68
 
-|
-52 |
-1378 |
-1498 |
+52
+1378
+1498
 
  94
 
-|
-8 |
-36 |
-138 |
+8
+36
+138
 
  97
 
-|
-5 |
-15 |
-117 |
+5
+15
+117
 
 -----
 
-|
------- |
------- |
------- |
+------
+------
+------
 
  357
 
-|
-544 |
-33584 |
-34485 |
+544
+33584
+34485
 
- |
- |
- |
-(19x1815) |
-
- |
- |
- |
- |
+(19x1815)
 
 [56] For the last time, let us assume that Sura 9 consists of 129 verses. We
 have here a sura that (1) is an odd numbered sura, (2) its number is divisible
@@ -4123,7 +3004,7 @@ If we throw away the false number 129, we have one sura in the Quran whose
 number is odd, and its number of verses is divisible by 3 and ends with the
 digit 9 - Sura 15. Now we have the following result:
 
-15 + 99 = 114 = 19x6. |
+15 + 99 = 114 = 19x6.
 
 [57] For some time now, we have been dealing with numbers. Let us now look
 at specific words and letters that occur in the false injections 9:128-129.
@@ -4143,161 +3024,103 @@ Table 37: Gematrical value of the
 first and last letters of every sura from the beginning of the Quran to
 Sura 9.
 
-|
-
- |
- |
- |
- |
-
  Sura
-
-|
 
 First
 
-|
-Last |
- |
+Last
 
  No.
 
-|
-
 Letter
 
-|
-Letter |
-Total |
+Letter
+Total
 
 ------
 
-|
-
 ------
 
-|
------- |
------- |
+------
+------
 
  1
 
-|
-
 B = 2
 
-|
-N = 50 |
-52 |
+N = 50
+52
 
  2
 
-|
-
 A = 1
 
-|
-N = 50 |
-51 |
+N = 50
+51
 
  3
 
-|
-
 A = 1
 
-|
-N = 50 |
-51 |
+N = 50
+51
 
  4
 
-|
-
 Y = 10
 
-|
-M = 40 |
-50 |
+M = 40
+50
 
  5
 
-|
-
 Y = 10
 
-|
-R = 200 |
-210 |
+R = 200
+210
 
  6
 
-|
-
 A = 1
 
-|
-M = 40 |
-41 |
+M = 40
+41
 
  7
 
-|
-
 A = 1
 
-|
-N = 50 |
-51 |
+N = 50
+51
 
  8
 
-|
-
 Y = 10
 
-|
-M = 40 |
-50 |
+M = 40
+50
 
  9
 
-|
-
 B = 2
 
-|
-N = 50 |
-52 |
-
- |
+N = 50
+52
 
 ------
 
-|
------- |
------- |
-
- |
+------
+------
 
 38
 
-|
-570 |
-608 |
-
- |
+570
+608
 
 (19x2)
 
-|
-(19x30) |
-(19x32) |
-
- |
- |
- |
- |
+(19x30)
+(19x32)
 
 [58] Sister Ihsan Ramadan of Masjid Tucson counted all the suras in the Quran
 which end with the letter "N" (Noon), the last letter in Sura 9.
@@ -4308,7 +3131,7 @@ She found that 43 suras end with the same letter as Sura 9 (N) - suras 1, 2,
 107, and 109. Just add the sura numbers + number of suras that end with "N",
 and you get:
 
-1919. |
+1919.
 
 Thus, the last letter in Sura 9 is once again confirmed to be "N,"
 not "M."
@@ -4331,143 +3154,127 @@ Table 38: List of all occurrences
 of the crucial phrase: "LAA ELAAHA ELLA HOO" (There is no other
 god besides Him), after removing 9:129
 
-|
+Verses
+Frequency
 
- |
- |
- |
- |
+Sura
+with the
+of the
 
- |
- |
-Verses |
-Frequency |
+ No.
+No.
+key phrase
+phrase
 
- |
-Sura |
-with the |
-of the |
+----
+----
+----------
+---------
 
- No. |
-No. |
-key phrase |
-phrase |
+ 1.
+2
+163,255
+2
 
----- |
----- |
----------- |
---------- |
+ 2.
+3
+2,6,18(2x)
+4
 
- 1. |
-2 |
-163,255 |
-2 |
+ 3.
+4
+87
+1
 
- 2. |
-3 |
-2,6,18(2x) |
-4 |
+ 4.
+6
+102,106
+2
 
- 3. |
-4 |
-87 |
-1 |
+ 5.
+7
+158
+1
 
- 4. |
-6 |
-102,106 |
-2 |
+ 6.
+9
+31
+1
 
- 5. |
-7 |
-158 |
-1 |
+ 7.
+11
+14
+1
 
- 6. |
-9 |
-31 |
-1 |
+ 8.
+13
+30
+1
 
- 7. |
-11 |
-14 |
-1 |
+ 9.
+20
+8,98
+2
 
- 8. |
-13 |
-30 |
-1 |
+ 10.
+23
+116
+1
 
- 9. |
-20 |
-8,98 |
-2 |
+ 11.
+27
+26
+1
 
- 10. |
-23 |
-116 |
-1 |
+ 12.
+28
+70,88
+2
 
- 11. |
-27 |
-26 |
-1 |
+ 13.
+35
+3
+1
 
- 12. |
-28 |
-70,88 |
-2 |
+ 14.
+39
+6
+1
 
- 13. |
-35 |
-3 |
-1 |
+ 15.
+40
+3,62,65
+3
 
- 14. |
-39 |
-6 |
-1 |
+ 16.
+44
+8
+1
 
- 15. |
-40 |
-3,62,65 |
-3 |
+ 17.
+59
+22,23
+2
 
- 16. |
-44 |
-8 |
-1 |
+ 18.
+64
+13
+1
 
- 17. |
-59 |
-22,23 |
-2 |
+ 19.
+73
+9
+1
 
- 18. |
-64 |
-13 |
-1 |
+-----
+-------
+----
 
- 19. |
-73 |
-9 |
-1 |
-
- |
------ |
-------- |
----- |
-
- |
-507 |
-1592 |
-29 |
+507
+1592
+29
 
  507+1592+29 = 2128 = 19x112
-
-|
-
- |
 
 [60] The first occurrence of "**LA ELAAHA ELLA HOO**"
 is in 2:163, and the last occurrence is in 73:9. If we add the sura number,
@@ -4481,183 +3288,103 @@ would have disappeared.
 Table 39: All suras and verses from
 the first occurrence to the last occurrence of "LAA ELAAHA ELLA HOO"
 
-|
-
- |
- |
- |
- |
-
  Sura
 
-|
-No. of |
+No. of
 
 Sum of
 
-|
- |
-
  No.
 
-|
-Verses |
+Verses
 
 Verse #s
 
-|
-
 Total
-
-|
 
 -----
 
-|
------- |
+------
 
 --------
 
-|
-
 -----
-
-|
 
  2
 
-|
-123 |
+123
 
 27675
 
-|
-
 27800
 
-|
-
- |
-(286-163) |
- |
- |
+(286-163)
 
  3
 
-|
-200 |
+200
 
 20100
 
-|
-
 20303
-
-|
 
  -
 
-|
-- |
+-
 
 -
 
-|
-
 -
-
-|
 
  9
 
-|
-127 |
+127
 
 8128
 
-|
-
 8264
-
-|
 
  -
 
-|
-- |
+-
 
 -
 
-|
-
 -
-
-|
 
  72
 
-|
-28 |
+28
 
 406
 
-|
-
 506
-
-|
 
  73
 
-|
-9 |
+9
 
 45
 
-|
-
 127
-
-|
 
 ----
 
-|
------ |
+-----
 
 ------
 
-|
-
 ------
-
-|
 
 2700
 
-|
-5312 |
+5312
 
 308490
 
-|
-
 316502
 
-|
-
- |
- |
- |
-
 (19x16658)
-
-|
-
- |
- |
- |
- |
 
 [61] The phrase "**LAA ELAAHA ELLA HOO**" occurs 7 times
 between the missing Basmalah of Sura 9 and the extra Basmalah of Sura 27, in
@@ -4668,76 +3395,55 @@ Table 40: Occurrences of the phrase
 "LAA ELAAHA ELLA HOO" from the missing Basmalah to the extra
 Basmalah.
 
-|
-
- |
- |
-
  Sura
 
-|
-Verse Numbers |
+Verse Numbers
 
  No.
 
-|
-With Phrase |
+With Phrase
 
 -----
 
-|
-------------- |
+-------------
 
  9
 
-|
-31 |
+31
 
  11
 
-|
-14 |
+14
 
  13
 
-|
-30 |
+30
 
  20
 
-|
-8 |
+8
 
  20
 
-|
-98 |
+98
 
  23
 
-|
-116 |
+116
 
  27
 
-|
-26 |
+26
 
- |
----- |
+----
 
- |
-323 |
+323
 
- |
-(19x17) |
-
- |
- |
+(19x17)
 
 ***If 9:129 were part of the Quran, the total
 in Table 40 would have been: 323 + 129 = 452, not a multiple of 19. God
-rejects what the hypocrites utter, even if it is the truth (63:1).*** |
+rejects what the hypocrites utter, even if it is the truth (63:1).***
 
 ## The Ultimate Quranic Miracle
 
@@ -4768,8 +3474,6 @@ The total number of verses in Sura 9 is followed by the numbers of every
 verse in the sura from 1 to 127. The resulting long number is a multiple
 of 19.
 
-|
-
 [64] The number of verses in Sura 9, 127, is an odd number. The falsifiers
 added two fake verses, and this made the number of verses 129, which is also
 an odd number. Mr. Arik used the same computer program he devised for Item 62
@@ -4786,8 +3490,6 @@ Obviously, Sura 9 was represented by the number 12713579......7:
 The number of verses in every sura is followed by the numbers of the
 odd-numbered verses. The resulting long number, 3371 digits, is a multiple
 of 19.
-
-|
 
 [65] Since Sura 9 is an un-initialed sura, Mr. Arik applied the same computer
 program to all 85 un-initialed suras. The number of every verse in each of the
@@ -4822,176 +3524,116 @@ is prophesied, to 9:127, the end of Sura 9, is 988 (19x52). Table 41.
 Table 41: The number of verses from
 3:81 to the end of Sura 9.
 
-|
-
- |
- |
- |
-
 Sura
 
-|
-No. of |
+No. of
 
 Sum of
 
-|
-
 No.
 
-|
-Verses |
+Verses
 
 Verse #s
 
-|
-
 ----
 
-|
------- |
+------
 
 --------
 
-|
-
  3
 
-|
-119 |
+119
 
 16860
 
-|
-
  4
 
-|
-176 |
+176
 
 15576
 
-|
-
  5
 
-|
-120 |
+120
 
 7260
 
-|
-
  6
 
-|
-165 |
+165
 
 13695
 
-|
-
  7
 
-|
-206 |
+206
 
 21321
 
-|
-
  8
 
-|
-75 |
+75
 
 2850
 
-|
-
  9
 
-|
-127 |
+127
 
 8128
 
-|
-
- |
----- |
+----
 
 -------
 
-|
-
- |
-988 |
+988
 
 85690
 
-|
-
- |
-(19x52) |
+(19x52)
 
 (19x4510)
-
-|
-
- |
- |
- |
 
 Table 42: Occurrence of the word "God"
 from 3:78 to the end of Sura 9
 
-|
+ Sura
+Frequency of
 
- |
- |
+ Number
+"God"
 
- Sura |
-Frequency of |
+ --------
+------------
 
- Number |
-"God" |
+ 3
+132
 
- -------- |
------------- |
+ 4
+229
 
- 3 |
-132 |
+ 5
+147
 
- 4 |
-229 |
+ 6
+87
 
- 5 |
-147 |
+ 7
+61
 
- 6 |
-87 |
+ 8
+88
 
- 7 |
-61 |
+ 9
+168
 
- 8 |
-88 |
+-----
 
- 9 |
-168 |
+912
 
- |
------ |
-
- |
-912 |
-
- |
-(19x48) |
-
- |
- |
+(19x48)
 
 [69] In Verse 3:78, just 3 verses before proclaiming God's Messenger of the
 Covenant, the word "God" number 361 (19x19) occurs. This verse (3:78)
@@ -5028,8 +3670,6 @@ blasphemous addition of two verses to Sura 9 in order to:
 
 (3) Fulfill God's promise to distinguish the believers and expose the
 hypocrites.
-
-|
 
 ## Why Did God Permit It For 1400 Years ??
 
@@ -5093,12 +3733,10 @@ Praiseworthy. [ 41:41-42 ]**
 **If we revealed this Quran to a mountain, you would see it trembling,
 crumbling, out of reverence for God. [ 59:21 ]**
 
-|
-
 **I acknowledge
 with thanks the valuable contributions of Mahmoud Ali Abib, Gatut Adisoma,
 Abdullah Arik, Ihsan Ramadan, Lisa Spray, and Edip Yuksel. Some of the
 astounding mathematical facts presented in this Appendix were discovered
-by these hard working researchers at Masjid Tucson.** |
+by these hard working researchers at Masjid Tucson.**
 
 ---

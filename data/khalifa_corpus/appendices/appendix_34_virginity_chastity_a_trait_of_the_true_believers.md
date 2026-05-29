@@ -6,10 +6,10 @@ category: "appendix"
 appendix_number: 34
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix34.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
-word_count: 319
-char_count: 2043
-content_sha256: "21682c3b9a660604e3a9a2db3e4b8b02a446ea81d57c677eaf76101af50d9468"
+scraped_at: "2026-05-29T10:20:11Z"
+word_count: 318
+char_count: 2041
+content_sha256: "409d7aef7b33e180d22ba71099868426998fe2bb016b067280494ff05d9a4dfd"
 flagged_9_128_129: false
 ---
 
@@ -26,7 +26,7 @@ chastity. This means that they must keep themselves for their spouses only,
 and never allow anyone else to touch them in a sexual manner (23:5-6,
 24:30,
 33:35,
-70:29-30).* |
+70:29-30).*
 
 Today's society is replete with powerful temptations. In America's society of the eighties, even parents start talking about boyfriends for their daughters and girlfriends for their sons. When they reach their teens, many parents even supply birth control means to their children. An alarming percentage of teen-agers are sexually active, even though they are not physiologically mature, and without any moral limitations. Millions of illicit pregnancies and the tragedies associated with them, plus millions of tragic abortions, happen every month in the USA.
 

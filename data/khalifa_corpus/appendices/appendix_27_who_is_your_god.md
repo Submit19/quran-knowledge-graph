@@ -6,10 +6,10 @@ category: "appendix"
 appendix_number: 27
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix27.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
-word_count: 544
-char_count: 2989
-content_sha256: "9787c342d36e553cf576f3a31ff11ef8785602692e23c36160f25b2989dc857e"
+scraped_at: "2026-05-29T10:20:11Z"
+word_count: 542
+char_count: 2985
+content_sha256: "2bb027402798f3045b23f693131b062d5e8b31ec1a48efeef2a701859142fc59"
 flagged_9_128_129: false
 ---
 
@@ -27,7 +27,7 @@ that their god is the Creator of the heavens and the earth is no more than lip
 service, and that they are in fact destined for Hell (12:106).
 
  **Your god is whoever or whatever occupies
-your mind most of the time.** |
+your mind most of the time.**
 
 Your god can be your children (7:190),
 your spouse (9:24), your business (18:35),
@@ -35,7 +35,7 @@ or your ego (25:43). This is why we note
 that one of the most important and most repeated commandments in the Quran is:
 
 **"O you who believe, you shall remember God frequently;
-glorify Him day and night." [33:41]** |
+glorify Him day and night." [33:41]**
 
 To put this commandment into practice, we must establish certain habits
 whereby we guarantee that God occupies our minds more than anything else.

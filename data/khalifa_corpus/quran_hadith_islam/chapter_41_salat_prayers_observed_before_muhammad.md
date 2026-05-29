@@ -8,10 +8,10 @@ source_url: "https://www.masjidtucson.org/publications/books/qhi/QURAN_Hadith_Is
 source_format: "pdf"
 page_count: 1
 arabic_note: "Arabic quotations in the source PDFs render as glyphs; Unicode Arabic is not reliably preserved."
-scraped_at: "2026-05-29T10:11:20Z"
-word_count: 149
-char_count: 833
-content_sha256: "c8885c10b58c9eb8375479a0599e3886bc24b6df921fe5a86838c6008a2f5d6b"
+scraped_at: "2026-05-29T10:20:14Z"
+word_count: 148
+char_count: 831
+content_sha256: "744dee9dda40f4fb9f8c0db7a7c69277c4a284ea5f7b6e633de95b3ef6030d01"
 flagged_9_128_129: false
 ---
 
@@ -25,7 +25,7 @@ and bow down with those who bow down. M (3: 43) ,m
 "(Jesus said, ) God has made me blessed wherever I go, and
 He commanded me to observe the Salat prayers and Zakat
 charity for as long as I live." (19: 31)
-11 |
+11
 "Generations came thereafter who LOST the Salat prayers,
 and pursued their lusts. " (19: 59)
 There are remnants of the Salat prayers among the Jews,

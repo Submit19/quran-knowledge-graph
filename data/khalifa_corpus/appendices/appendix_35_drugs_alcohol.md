@@ -6,7 +6,7 @@ category: "appendix"
 appendix_number: 35
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix35.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
+scraped_at: "2026-05-29T10:20:11Z"
 word_count: 104
 char_count: 663
 content_sha256: "ed4f3f2f348b32e482d9a5eea829763a87776e5d657c51297c76a14c2ae0842f"

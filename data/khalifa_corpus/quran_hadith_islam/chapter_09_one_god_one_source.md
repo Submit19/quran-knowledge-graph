@@ -8,7 +8,7 @@ source_url: "https://www.masjidtucson.org/publications/books/qhi/QURAN_Hadith_Is
 source_format: "pdf"
 page_count: 2
 arabic_note: "Arabic quotations in the source PDFs render as glyphs; Unicode Arabic is not reliably preserved."
-scraped_at: "2026-05-29T10:11:20Z"
+scraped_at: "2026-05-29T10:20:14Z"
 word_count: 513
 char_count: 1990
 content_sha256: "5f794d8e5fa3a8a452902b891c274a5447a25a678766813f066353843a9b2ea0"

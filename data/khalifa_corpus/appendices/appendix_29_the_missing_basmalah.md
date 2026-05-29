@@ -6,10 +6,10 @@ category: "appendix"
 appendix_number: 29
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix29.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
-word_count: 1420
-char_count: 6684
-content_sha256: "c4d2ed8bb7ba0a285c00cfe93d69f609bf4205e34cdfe4d4b9bc56f624a09d8a"
+scraped_at: "2026-05-29T10:20:11Z"
+word_count: 1335
+char_count: 6514
+content_sha256: "ee59624d85794b4207089c5b4b1619b8c2b9f341b41b312f8b8d65798e5aa887"
 flagged_9_128_129: false
 ---
 
@@ -40,60 +40,60 @@ Now we learn that the missing *Basmalah* plays a significant role as [1] a signi
 
 Table 1: The Verses Containing the Word "Allah" from the Missing Basmalah to the Extra Basmalah.
 
-Sura Number | Verses w/ "Allah" |
------- | --------- |
-9 | 100 |
-10 | 49 |
-11 | 33 |
-12 | 34 |
-13 | 23 |
-14 | 28 |
-15 | 2 |
-16 | 64 |
-17 | 10 |
-18 | 14 |
-19 | 8 |
-20 | 6 |
-21 | 5 |
-22 | 50 |
-23 | 12 |
-24 | 50 |
-25 | 6 |
-26 | 13 |
-27 | 6 |
---- | --- |
+Sura Number | Verses w/ "Allah"
+------ | ---------
+9 | 100
+10 | 49
+11 | 33
+12 | 34
+13 | 23
+14 | 28
+15 | 2
+16 | 64
+17 | 10
+18 | 14
+19 | 8
+20 | 6
+21 | 5
+22 | 50
+23 | 12
+24 | 50
+25 | 6
+26 | 13
+27 | 6
+--- | ---
 342
 (19x18) | 513
-(19x27) |
+(19x27)
 
 [8] The sum of verse numbers (1+2+3+ ... +n), plus the number of verses, from the missing *Basmalah* to the extra *Basmalah* is 119624, 19x6296. See Table 2.
 
 Table 2: Suras & Verses From the Missing Basmalah to the Extra Basmalah
 
-Sura | Verses | Sum of Verse # |
----- | ------ | -------------- |
-9 | 127 | 8128 |
-10 | 109 | 5995 |
-11 | 123 | 7626 |
-12 | 111 | 6216 |
-13 | 43 | 946 |
-14 | 52 | 1378 |
-15 | 99 | 4950 |
-16 | 128 | 8256 |
-17 | 111 | 6216 |
-18 | 110 | 6105 |
-19 | 98 | 4851 |
-20 | 135 | 9180 |
-21 | 112 | 6328 |
-22 | 78 | 3081 |
-23 | 118 | 7021 |
-24 | 64 | 2080 |
-25 | 77 | 3003 |
-26 | 227 | 25878 |
-27 | 29 | 435 |
---- | ---- | ------ |
-342 | 1951 | 117673 |
-342 + 1951 + 117673 =119624 = 19 x 6296 |
+Sura | Verses | Sum of Verse #
+---- | ------ | --------------
+9 | 127 | 8128
+10 | 109 | 5995
+11 | 123 | 7626
+12 | 111 | 6216
+13 | 43 | 946
+14 | 52 | 1378
+15 | 99 | 4950
+16 | 128 | 8256
+17 | 111 | 6216
+18 | 110 | 6105
+19 | 98 | 4851
+20 | 135 | 9180
+21 | 112 | 6328
+22 | 78 | 3081
+23 | 118 | 7021
+24 | 64 | 2080
+25 | 77 | 3003
+26 | 227 | 25878
+27 | 29 | 435
+--- | ---- | ------
+342 | 1951 | 117673
+342 + 1951 + 117673 =119624 = 19 x 6296
 
 [9] This item also proves that Sura 9 consists of 127 verses, not 129 (see Appendix 24). The sum of digits of 127 is 1+2+7=10. By finding all the verses whose digits add up to 10, from the missing *Basmalah* of Sura 9 to the extra *Basmalah* of Sura 27, then adding the number of these verses to the total number of verses from the missing *Basmalah* to the extra *Basmalah*, we get 2128, or 19x112 (Table 3).
 
@@ -101,45 +101,45 @@ Sura | Verses | Sum of Verse # |
 
 Table 3: The Verse Whose Digits Add Up to 10, from the Missing Basmalah to the Extra Basmalah
 
-Sura No | No. of Verses | No. of Occurences |
----- | ------. | ---------- |
-9 | 127 | 12 |
-10 | 109 | 10 |
-11 | 123 | 11 |
-12 | 111 | 10 |
-13 | 43 | 3 |
-14 | 52 | 4 |
-15 | 99 | 9 |
-16 | 128 | 12 |
-17 | 111 | 10 |
-18 | 110 | 10 |
-19 | 98 | 9 |
-20 | 135 | 12 |
-21 | 112 | 10 |
-22 | 78 | 7 |
-23 | 118 | 11 |
-24 | 64 | 6 |
-25 | 77 | 7 |
-26 | 227 | 22 |
-27 | 29 | 2 |
---- | ---- | --- |
-342 | 1951 | 177 |
-(19x18) & 1951+177=2128=19x112 |
+Sura No | No. of Verses | No. of Occurences
+---- | ------. | ----------
+9 | 127 | 12
+10 | 109 | 10
+11 | 123 | 11
+12 | 111 | 10
+13 | 43 | 3
+14 | 52 | 4
+15 | 99 | 9
+16 | 128 | 12
+17 | 111 | 10
+18 | 110 | 10
+19 | 98 | 9
+20 | 135 | 12
+21 | 112 | 10
+22 | 78 | 7
+23 | 118 | 11
+24 | 64 | 6
+25 | 77 | 7
+26 | 227 | 22
+27 | 29 | 2
+--- | ---- | ---
+342 | 1951 | 177
+(19x18) & 1951+177=2128=19x112
 
 Table 4: The Odd-numbered Suras Whose Number of Verses are also Odd
 
-Sura No. | Sum of Digits | No of Verses | Sum of Digits |
----- | ------ | ------ | ------ |
-9 | 9 | 127 | 10 |
-11 | 2 | 123 | 6 |
-13 | 4 | 43 | 7 |
-15 | 6 | 99 | 18 |
-17 | 8 | 111 | 3 |
-25 | 7 | 77 | 14 |
-27 | 9 | 29 | 11 |
-| -- | | -- |
-| 45 | | 69 |
-45+69 = 114 = 19x6 |
+Sura No. | Sum of Digits | No of Verses | Sum of Digits
+---- | ------ | ------ | ------
+9 | 9 | 127 | 10
+11 | 2 | 123 | 6
+13 | 4 | 43 | 7
+15 | 6 | 99 | 18
+17 | 8 | 111 | 3
+25 | 7 | 77 | 14
+27 | 9 | 29 | 11
+| -- | | --
+| 45 | | 69
+45+69 = 114 = 19x6
 
 [11] The next two features authenticate both the missing *Basmalah* and the number of verses in Sura 9 (where two false verses had been injected). If we take the same suras listed in Table 4, odd-numbered suras whose numbers of verses are also odd, and write down the number of every sura, followed by its number of verses, the resulting long number (30 digits) is a multiple of 19 (Figure 1).
 
@@ -151,13 +151,11 @@ Sura No. | Sum of Digits | No of Verses | Sum of Digits |
 This long number equals 19 x 48037427533385052195322409091**.
 
 **[Figure 1]**
-|
 
 **9 1234567890123... ... 27 1234567890 ... 789**
 
 **The sura number is followed by the last digit in every verse number.**
 
 **[Figure 2]**
-|
 
 ---

@@ -6,10 +6,10 @@ category: "appendix"
 appendix_number: 2
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix2.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
-word_count: 5321
-char_count: 28222
-content_sha256: "b30046cecf3f4b00fd8a7c5ea5558dfdeb532c1e2a3a788f3f2610e587f28aef"
+scraped_at: "2026-05-29T10:20:11Z"
+word_count: 4881
+char_count: 27315
+content_sha256: "50310dd024f7a446387825ae9c12f604f67d3155bc6f107ed17134465dfae3e9"
 flagged_9_128_129: true
 ---
 
@@ -112,51 +112,51 @@ introducing God's messenger to the world in the computer-age.
 
 Table 1: Suras and Verses of "Rashada" and "Khalifa"
 
- | "Rashada" | "Khalifa" |
-No. | Sura | Verse | Sura | Verse |
----- | ---- | ---- | ---- | ---- |
-1. |
-2 | 186 |
-(2) | 30 |
-2. |
-- | 256 | 38 | 26 |
-3. |
-4 | 6 | | |
-4. |
-7 | 146 | | |
-5. |
-11 | 78 | | |
-6. |
-- | 87 | | |
-7. |
-- | 97 | | |
-8. |
-18 | 10 | | |
-9. |
-- | 17 | | |
-10. |
-- | 24 | | |
-11. |
-- | 66 | | |
-12. |
-21 | 51 | | |
-13. |
-40 | 29 | | |
-14. |
-- | 38 | | |
-15. |
-49 | 7 | | |
-16. |
-72 | 2 | | |
-17. |
-- | 10 | | |
-18. |
-- | 14 | (Sura 2 | |
-19. |
-- | 21 | is a Repeat) | |
- | ----- | ----- | ----- | ---- |
- | 224 | 1145 | 38 | 56 |
- | 224+114 | 5+38+56 | = 1463 = | 19x77 |
+ | "Rashada" | "Khalifa"
+No. | Sura | Verse | Sura | Verse
+---- | ---- | ---- | ---- | ----
+1.
+2 | 186
+(2) | 30
+2.
+- | 256 | 38 | 26
+3.
+4 | 6 | |
+4.
+7 | 146 | |
+5.
+11 | 78 | |
+6.
+- | 87 | |
+7.
+- | 97 | |
+8.
+18 | 10 | |
+9.
+- | 17 | |
+10.
+- | 24 | |
+11.
+- | 66 | |
+12.
+21 | 51 | |
+13.
+40 | 29 | |
+14.
+- | 38 | |
+15.
+49 | 7 | |
+16.
+72 | 2 | |
+17.
+- | 10 | |
+18.
+- | 14 | (Sura 2 |
+19.
+- | 21 | is a Repeat) |
+ | ----- | ----- | ----- | ----
+ | 224 | 1145 | 38 | 56
+ | 224+114 | 5+38+56 | = 1463 = | 19x77
 
 **(3)** The root word of the name "Rashad " is "Rashada " (to uphold the right guidance). This root word is mentioned in the Quran 19 times. Nineteen is the Quran's common denominator (see *INDEX TO THE WORDS OF QURAN*, First Printing, Page 320).
 
@@ -173,37 +173,35 @@ name as "Rashad Khalifa," and not any "Rashad" or any "Khalifa."
 
 Table 2: The Suras and Verses from the beginning of the Quran to the First occurence of the Root Word "Rashada
 
-Sura |
-No.of |
-Sum of |
+Sura
+No.of
+Sum of
 
-No. |
-Verses |
-Verse #s |
+No.
+Verses
+Verse #s
 
------ |
------- |
--------- |
+-----
+------
+--------
 
-1 |
-7 |
-28 |
+1
+7
+28
 
-2 |
-185 |
-17205 |
+2
+185
+17205
 
------ |
------- |
-------- |
+-----
+------
+-------
 
-3 |
-192 |
-17233 |
+3
+192
+17233
 
- |
- |
-(19x907) |
+(19x907)
 
 Also, "Rashad" (505) + "Khalifa" (725) + Sura Total (3) + Total of Verses (192) = 1425 (19x75)
  505+725+3+192 = 1425 = 19x75
@@ -214,65 +212,62 @@ Also, "Rashad" (505) + "Khalifa" (725) + Sura Total (3) + Total of Verses (192) 
 
 Table 3: The Suras Where the Root Word "Rashada" Occurs
 
-Sura |
-No.of |
- |
+Sura
+No.of
 
-No. |
-Verses |
-Total |
+No.
+Verses
+Total
 
------ |
------- |
------ |
+-----
+------
+-----
 
-2 |
-286 |
-288 |
+2
+286
+288
 
-4 |
-176 |
-180 |
+4
+176
+180
 
-7 |
-206 |
-213 |
+7
+206
+213
 
-11 |
-123 |
-134 |
+11
+123
+134
 
-18 |
-110 |
-128 |
+18
+110
+128
 
-21 |
-112 |
-133 |
+21
+112
+133
 
-40 |
-85 |
-125 |
+40
+85
+125
 
-49 |
-18 |
-67 |
+49
+18
+67
 
-72 |
-28 |
-100 |
+72
+28
+100
 
----- |
------ |
------ |
+----
+-----
+-----
 
-224 |
-1144 |
-1368 |
+224
+1144
+1368
 
- |
- |
-(19x72) |
+(19x72)
 
 **(10)** As shown in Table 3, if we add the numbers of all suras where the root word "Rashada" occurs, plus the number of verses, we get 1368, or 19x72.
 
@@ -288,65 +283,62 @@ The complete number consists of 11087 digits, and is divisible by 19.
 
 Table 4: The Suras and Verses from the First "Rashada" to "Khalifa."
 
-Sura |
-No. of |
- |
+Sura
+No. of
 
-No. |
-Verses |
-Total |
+No.
+Verses
+Total
 
----- |
------- |
------ |
+----
+------
+-----
 
-2 |
-100(187-286) |
-102 |
+2
+100(187-286)
+102
 
-3 |
-200 |
-203 |
+3
+200
+203
 
-4 |
-176 |
-180 |
+4
+176
+180
 
-5 |
-120 |
-125 |
+5
+120
+125
 
-- |
-- |
-- |
+-
+-
+-
 
-35 |
-45 |
-80 |
+35
+45
+80
 
-36 |
-83 |
-119 |
+36
+83
+119
 
-37 |
-182 |
-219 |
+37
+182
+219
 
-38 |
-26 |
-64 |
+38
+26
+64
 
------ |
------- |
------- |
+-----
+------
+------
 
-740 |
-3801 |
-4541 |
+740
+3801
+4541
 
- |
- |
-(19x239) |
+(19x239)
 
 **(13)** When we write down the value of "Rashad" (505), followed by the value of "Khalifa" (725), followed by every sura number where the root word "Rashada" occurs, followed by the numbers of its verses, from the first "Rashada" (2:186) to the word "Khalifa" (38:26), we get a long number that is divisible by 19.
 
@@ -389,49 +381,43 @@ number (81), produces 505 + 725
 
 Table 5: Gematrical Value of the 5 Messengers
 
- |
-Value of |
- |
+Value of
 
-Name |
-Individual Letters |
-Total |
+Name
+Individual Letters
+Total
 
------- |
------------------- |
------ |
+------
+------------------
+-----
 
-Abraham |
-1+2+200+5+10+40 |
-258 |
+Abraham
+1+2+200+5+10+40
+258
 
-Ismail |
-1+60+40+70+10+30 |
-211 |
+Ismail
+1+60+40+70+10+30
+211
 
-Isaac |
-1+60+8+100 |
-169 |
+Isaac
+1+60+8+100
+169
 
-Muhammad |
-40+8+40+4 |
-92 |
+Muhammad
+40+8+40+4
+92
 
-Rashad |
-200+300+1+4 |
-505 |
+Rashad
+200+300+1+4
+505
 
- |
---------------- |
----- |
+---------------
+----
 
- |
-1235 |
-1235 |
+1235
+1235
 
- |
- |
-(19x65) |
+(19x65)
 
 **(17)** If we look at Sura 81, we
 read about a messenger of God who
@@ -445,41 +431,38 @@ Khalifa" 505 + 725 + 81 = 1311
 
 Table 6: The Suras and Verses from 1:1 to 3:81
 
-Sura |
-No. of |
- |
+Sura
+No. of
 
-No. |
-Verses |
-Total |
+No.
+Verses
+Total
 
------- |
-------- |
------- |
+------
+-------
+------
 
-1 |
-7 |
-8 |
+1
+7
+8
 
-2 |
-286 |
-288 |
+2
+286
+288
 
-3 |
-81 |
-84 |
+3
+81
+84
 
----- |
------- |
------- |
+----
+------
+------
 
-6 |
-374 |
-380 |
+6
+374
+380
 
- |
- |
-(19x20) |
+(19x20)
 
 **(18)** If we add the sura numbers plus
 the number of verses from the
@@ -529,65 +512,64 @@ we get 3333+505 = 3838 = 19x202.
 
 Table 7: Suras and Verses from Sura 1 to Verse 3 of Sura 36.
 
-Sura |
-No.of |
-Sum of |
+Sura
+No.of
+Sum of
 
-No. |
-Verses |
-Verse #s |
+No.
+Verses
+Verse #s
 
------ |
------- |
---------- |
+-----
+------
+---------
 
-1 |
-7 |
-28 |
+1
+7
+28
 
-2 |
-286 |
-41041 |
+2
+286
+41041
 
-3 |
-200 |
-20100 |
+3
+200
+20100
 
-- |
-- |
-- |
+-
+-
+-
 
-9 |
-127 |
-8128 |
+9
+127
+8128
 
-- |
-- |
-- |
+-
+-
+-
 
-34 |
-54 |
-1485 |
+34
+54
+1485
 
-35 |
-45 |
-1035 |
+35
+45
+1035
 
-36 |
-2 |
-3 |
+36
+2
+3
 
------ |
------ |
------- |
+-----
+-----
+------
 
-666 |
-3705 |
-257925 |
+666
+3705
+257925
 
- |
-(19x195) |
-(19x13575) |
+(19x195)
+(19x13575)
 
 **(26)** The number of verses from 1:1
 to 36:3 is 3705, 19x195 (Table 7).
@@ -607,71 +589,67 @@ the total is: 666+505+725+612=2508=
 
 Table 8: The Suras and Verses from the First "Rashada" to 36:3
 
- |
-Sura |
-Sum of |
+Sura
+Sum of
 
-No. |
-No. |
-Verse #s |
+No.
+No.
+Verse #s
 
------ |
------- |
----------- |
+-----
+------
+----------
 
-1 |
-2(186-286) |
-23836 |
+1
+2(186-286)
+23836
 
-2 |
-3 |
-20100 |
+2
+3
+20100
 
-3 |
-4 |
-15576 |
+3
+4
+15576
 
-4 |
-5 |
-7260 |
+4
+5
+7260
 
-- |
-- |
-- |
+-
+-
+-
 
-10 |
-9 |
-8128 |
+10
+9
+8128
 
-- |
-- |
-- |
+-
+-
+-
 
-33 |
-34 |
-1485 |
+33
+34
+1485
 
-34 |
-35 |
-1035 |
+34
+35
+1035
 
-35 |
-36(1-3) |
-6 |
+35
+36(1-3)
+6
 
----- |
--------- |
-------- |
+----
+--------
+-------
 
-|
-665 |
-240695 |
+665
+240695
 
-|
-(19 x 35) |
-|
+(19 x 35)
 
-35+665+240695 = 241395 (19x12705) |
+35+665+240695 = 241395 (19x12705)
 
 **(29)** If we add the sum of verse
 numbers (1+2+3+ ...+n) from the first
@@ -703,49 +681,46 @@ Table 9.
 
 Table 9: The Suras and Verses from the Beginning to 5:19
 
-Sura |
-No. of |
- |
+Sura
+No. of
 
-No. |
-Verses |
-Total |
+No.
+Verses
+Total
 
------- |
-------- |
-------- |
+------
+-------
+-------
 
-1 |
-7 |
-8 |
+1
+7
+8
 
-2 |
-286 |
-288 |
+2
+286
+288
 
-3 |
-200 |
-203 |
+3
+200
+203
 
-4 |
-176 |
-180 |
+4
+176
+180
 
-5 |
-19 |
-24 |
+5
+19
+24
 
----- |
------- |
------- |
+----
+------
+------
 
-15 |
-688 |
-703 |
+15
+688
+703
 
- |
- |
-(19x37) |
+(19x37)
 
 **(34)** Sura 98, "The Proof," Verse 2,
 proclaims the advent of God's
@@ -802,142 +777,137 @@ future in 72:27, and that this sura contains 4 "Rashada" words (72:2, 10, 14, & 
 
 Table 10: The Suras and Verses from 1:1 to 44:13
 
-Sura |
-No. of |
- |
+Sura
+No. of
 
-No. |
-Verses |
-Total |
+No.
+Verses
+Total
 
------ |
-------- |
------- |
+-----
+-------
+------
 
-1 |
-7 |
-8 |
+1
+7
+8
 
-2 |
-286 |
-288 |
+2
+286
+288
 
-3 |
-200 |
-203 |
+3
+200
+203
 
-4 |
-176 |
-180 |
+4
+176
+180
 
-5 |
-120 |
-125 |
+5
+120
+125
 
-- |
-- |
-- |
+-
+-
+-
 
-9 |
-127 |
-136 |
+9
+127
+136
 
-- |
-- |
-- |
+-
+-
+-
 
-41 |
-54 |
-95 |
+41
+54
+95
 
-42 |
-53 |
-95 |
+42
+53
+95
 
-43 |
-89 |
-132 |
+43
+89
+132
 
-44 |
-13 |
-57 |
+44
+13
+57
 
------- |
------- |
------ |
+------
+------
+-----
 
-990 |
-4425 |
-5415 |
+990
+4425
+5415
 
- |
- |
-(19x19x15) |
+(19x19x15)
 
 **(40)** Verse 72:27 begins with the statement: ""
 (Only the Messenger that He chooses). This reference to the messenger who is chosen by God to receive news about the future has a gematrical value of 1919. Table 11 presents the data.
 
 Table 11: Gematrical Value of the Chosen Messenger in 72:27.
 
-Letter |
-Gematrical |
+Letter
+Gematrical
 
--------- |
----------- |
+--------
+----------
 
-A |
-1 |
+A
+1
 
-L |
-30 |
+L
+30
 
-A |
-1 |
+A
+1
 
-M |
-40 |
+M
+40
 
-N |
-50 |
+N
+50
 
-A |
-1 |
+A
+1
 
-R |
-200 |
+R
+200
 
-T |
-400 |
+T
+400
 
-D |
-800 |
+D
+800
 
-Y |
-10 |
+Y
+10
 
-M |
-40 |
+M
+40
 
-N |
-50 |
+N
+50
 
-R |
-200 |
+R
+200
 
-S |
-60 |
+S
+60
 
-W |
-6 |
+W
+6
 
-L |
-30 |
+L
+30
 
- |
-------- |
+-------
 
- |
-1919 |
+1919
 
 ### HOW TO DISTINGUISH GOD'S MESSENGER FROM A FAKE MESSENGER
 

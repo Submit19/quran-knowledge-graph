@@ -6,7 +6,7 @@ category: "appendix"
 appendix_number: 38
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix38.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
+scraped_at: "2026-05-29T10:20:11Z"
 word_count: 238
 char_count: 1419
 content_sha256: "05b81c8d3280aabc393588a80428405c5916847fab861a1df7646b434043ce03"

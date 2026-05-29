@@ -6,7 +6,7 @@ category: "appendix"
 appendix_number: 18
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix18.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
+scraped_at: "2026-05-29T10:20:11Z"
 word_count: 256
 char_count: 1471
 content_sha256: "4a1c204ce50d9e16743568c5c97152631d9ce230e99b33c749570d440cc2980f"

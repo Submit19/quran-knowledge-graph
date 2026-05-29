@@ -6,10 +6,10 @@ category: "appendix"
 appendix_number: 11
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix11.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
-word_count: 423
-char_count: 2383
-content_sha256: "3997938e81fbfe4b6039efc3184ce79cf7739dd9097b429b5b0ce47f5f8a8a80"
+scraped_at: "2026-05-29T10:20:11Z"
+word_count: 422
+char_count: 2381
+content_sha256: "f6706b4755f8748a9a6d8e8479132da44a90a4663ead6344367251a85cc35a4b"
 flagged_9_128_129: false
 ---
 
@@ -21,7 +21,6 @@ by Rashad Khalifa, PhD.)
 # The Day of Resurrection
 
 The horn is blown, whereupon everyone in the heavens and the earth is struck unconscious, except those spared by God. Then it is blown a second time, whereupon they rise up. [39:68]
-|
 
 All generations of humans and jinns will be resurrected on this earth; about 150 billion of them. But we will not be earthbound. God teaches us through the example of the caterpillar; it turns into a pupa in the cocoon (grave), then exits the cocoon as an airborne butterfly. Similarly, we live here on earth, and when we exit the grave on the Day of Resurrection we will not be earthbound; like the butterfly (101:4).
 

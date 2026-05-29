@@ -6,10 +6,10 @@ category: "appendix"
 appendix_number: 19
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix19.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
-word_count: 356
-char_count: 2171
-content_sha256: "ef2be3a58325530a9a387f80dd00e26a45d88515ec25ab07be1c56482151ff56"
+scraped_at: "2026-05-29T10:20:11Z"
+word_count: 355
+char_count: 2168
+content_sha256: "81f6e1217e4d74d937acbae353549128cd6cc61ff6bdc6e131e588b37cc32573"
 flagged_9_128_129: false
 ---
 
@@ -26,8 +26,6 @@ The Quran is not a fabricated Hadith; ...it details everything. [12:111]
 Some people uphold vain Hadith to divert others from the path of God. [31:6]
 
 The only *Sunna* to follow shall be God's Sunna. [17:77, 33:62, 48:23, 6:114]
-
-|
 
 The Quran informs us that some enemies of the Prophet, described as "human and jinn devils," will fabricate lies and attribute them to the Prophet (6:112, 25:31). This is precisely what happened after the prophet Muhammad's death; *Hadith* (oral) and *Sunna* (actions) were invented and attributed to the Prophet. *Hadith* and *Sunna* are satanic innovations because they: [1] defy the divine assertions that the Quran is complete, perfect, fully detailed, and shall be the only source of religious guidance (6:19, 38, 114 & 45:6-7), [2] blaspheme against the Prophet and depict him as a vicious tyrant who did not uphold the Quran, and [3] create false doctrines based on superstition, ignorance, and indefensible nonsensical traditions. The prophet Muhammad was enjoined, in very strong words, from issuing any religious teachings besides the Quran (69:38-48).
 

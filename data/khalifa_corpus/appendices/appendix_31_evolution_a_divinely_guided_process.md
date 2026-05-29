@@ -6,10 +6,10 @@ category: "appendix"
 appendix_number: 31
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix31.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
-word_count: 474
-char_count: 2999
-content_sha256: "98aa61b45a516a5a364de60210a2ce8d3eb3ff978907c7491a94202541978874"
+scraped_at: "2026-05-29T10:20:11Z"
+word_count: 471
+char_count: 2991
+content_sha256: "faeb0ce0cd2e99465bf0757ccde9c37655b2a12c4d44c65480f625036442bb96"
 flagged_9_128_129: false
 ---
 
@@ -24,14 +24,10 @@ We learn from the Quran that evolution is a divinely designed fact:
 
 Life began in water: **"From water we initiated all living things." (21:30, 24:45)**
 
-|
-
 Humans not descendants of monkeys: **"He started the creation of man from mud."
 (32:7)**
 
 Man created from "aged" mud: **"I am creating the human being from 'aged' clay." (15:28)**
-
-|
 
 Evolution is possible only within a given species. For example, the navel orange evolved from seeded oranges, not from apples. The laws of probability preclude the possibility of haphazard evolution between species. A fish cannot evolve into a bird; a monkey can never evolve into a human.
 
@@ -45,6 +41,6 @@ Some evolutionists have stated that the human gene and the monkey's gene are 90%
 
 A fitting quote here is that of Professor Edwin Conklin; he stated:
 
-**The probability of life originating from accident is comparable to the probability of the Unabridged Dictionary resulting from an explosion in a printing factory.** |
+**The probability of life originating from accident is comparable to the probability of the Unabridged Dictionary resulting from an explosion in a printing factory.**
 
 ---

@@ -6,7 +6,7 @@ category: "appendix"
 appendix_number: 17
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix17.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
+scraped_at: "2026-05-29T10:20:11Z"
 word_count: 799
 char_count: 4491
 content_sha256: "b2f3ded29d9de50f9350c9c1e085d133cbe30af586a2291ccb0e83655ae38557"

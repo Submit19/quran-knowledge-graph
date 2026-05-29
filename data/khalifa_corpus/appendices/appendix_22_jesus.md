@@ -6,10 +6,10 @@ category: "appendix"
 appendix_number: 22
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix22.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
-word_count: 1221
-char_count: 6643
-content_sha256: "1f390ad58b3c4b85d27dd3d33c0d6f0a2d065d8550b9a3f577ffc3a19efccf4d"
+scraped_at: "2026-05-29T10:20:11Z"
+word_count: 1220
+char_count: 6641
+content_sha256: "0e6c48d804f52008fc68cf6249a5d1ab661b23ea479ab42868527763c7eb7a5c"
 flagged_9_128_129: false
 ---
 
@@ -55,7 +55,6 @@ As he was setting out on a journey a man came running up, knelt down before him 
 Trinity, the doctrine of God taught by Christians that asserts that God is one in essence but three in ``person,'' Father, Son, and Holy Spirit. Neither the word Trinity, nor the explicit doctrine as such, appears in the New Testament, nor did Jesus and his followers intend to contradict the Shema in the Old Testament: ``Hear O Israel: The Lord our God is one'' (Deut. 6:4). [ Encyclopaedia Britannica, 1975 ]
 
 Jesus' soul was raised, i.e., he was put to death prior to the arrest and crucifixion of his body. Thus, his persecutors arrested, tortured, and crucified an empty body - Jesus was already gone to the world of souls (3:55, 4:157).
-|
 
 ### Jesus' Death
 

@@ -6,10 +6,10 @@ category: "appendix"
 appendix_number: 15
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix15.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
-word_count: 2157
-char_count: 11681
-content_sha256: "cc277304966d5348cc6b4fc9e73e5fe27fc91fd143207dd3e30e0451c7a361e4"
+scraped_at: "2026-05-29T10:20:11Z"
+word_count: 2125
+char_count: 11617
+content_sha256: "a5101ff8e41624f0c749cebc358cdacf55446e9d3e18ea435583c433195093d4"
 flagged_9_128_129: false
 ---
 
@@ -68,17 +68,17 @@ The proof that *Salat* was already established through Abraham is found in 8:35,
 **[2]** Let us write down the sura number, followed by the number of every verse in the sura. This is what we get:
 
 1 1 2 3 4 5 6 7 This number is a multiple of 19.
-Properties of Sura 1, The Key |
-Verse No |
-No of Letters |
-Gematrical Value |
-1 | 19 | 786 |
-2 | 17 | 581 |
-3 | 12 | 618 |
-4 | 11 | 241 |
-5 | 19 | 836 |
-6 | 18 | 1072 |
-7 | 43 | 6009 |
+Properties of Sura 1, The Key
+Verse No
+No of Letters
+Gematrical Value
+1 | 19 | 786
+2 | 17 | 581
+3 | 12 | 618
+4 | 11 | 241
+5 | 19 | 836
+6 | 18 | 1072
+7 | 43 | 6009
 
 **[3]** Now, let us replace each verse number by the number of letters in that verse. This is what we get:
 
@@ -125,27 +125,27 @@ When you recite "The Key" in Arabic, your lips touch each other precisely 19 tim
 
 Furthermore, Your lips touch each other where the letters "B" and "M" occur. There are 4 "B's" and 15 "M's" and this adds up to 19. The gematrical value of the 4 "B's" is 4x2=8, and the gematrical value of the 15 "M's" is 15x40=600. The total gematrical value of the 4 "B's" and 15 "M's" is 608, that is 19x32.
 
-| Word | Letter | Value |
-1. | Bism | B | 2 |
-2. | Bism | M | 40 |
-3. | Rahman | M | 40 |
-4. | Rahim | M | 40 |
-5. | Al-Hamdu | M | 40 |
-6. | Rub | B | 2 |
-7. | `Alamin | M | 40 |
-8. | Rahman | M | 40 |
-9. | Rahim | M | 40 |
-10. | Malik | M | 40 |
-11. | Yawm | M | 40 |
-12. | Na'budu | B | 2 |
-13. | Mustaqim | M | 40 |
-14. | Mustaqim | M | 40 |
-15. | An`amta | M | 40 |
-16. | `Alayhim | M | 40 |
-17. | Maghdub | M | 40 |
-18. | Maghdub | B | 2 |
-19. | `Alayhim | M | 40 |
-| | | 608 (19x32) |
+| Word | Letter | Value
+1. | Bism | B | 2
+2. | Bism | M | 40
+3. | Rahman | M | 40
+4. | Rahim | M | 40
+5. | Al-Hamdu | M | 40
+6. | Rub | B | 2
+7. | `Alamin | M | 40
+8. | Rahman | M | 40
+9. | Rahim | M | 40
+10. | Malik | M | 40
+11. | Yawm | M | 40
+12. | Na'budu | B | 2
+13. | Mustaqim | M | 40
+14. | Mustaqim | M | 40
+15. | An`amta | M | 40
+16. | `Alayhim | M | 40
+17. | Maghdub | M | 40
+18. | Maghdub | B | 2
+19. | `Alayhim | M | 40
+| | | 608 (19x32)
 
 ### CONFIRMATION OF THE 5 DAILY PRAYERS, NUMBER OF BOWINGS (Ruku'), PROSTRATIONS (Sujood), AND TASHAHHUD
 

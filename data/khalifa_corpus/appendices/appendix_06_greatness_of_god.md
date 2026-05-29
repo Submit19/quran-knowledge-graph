@@ -6,7 +6,7 @@ category: "appendix"
 appendix_number: 6
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix6.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
+scraped_at: "2026-05-29T10:20:11Z"
 word_count: 479
 char_count: 2801
 content_sha256: "3a168d9977ae663712c3f63452ee4add43f893b1b4c4c31555486666720d7509"

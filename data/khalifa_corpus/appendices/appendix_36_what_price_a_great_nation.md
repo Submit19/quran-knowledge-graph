@@ -6,10 +6,10 @@ category: "appendix"
 appendix_number: 36
 source_url: "https://www.masjidtucson.org/quran/appendices/appendix36.html"
 source_format: "html"
-scraped_at: "2026-05-29T10:07:43Z"
-word_count: 462
-char_count: 2906
-content_sha256: "159c3d910c0cfabaf5dc1c3d0e57c823af6812ad11623ca1d0c92e09ee42ed48"
+scraped_at: "2026-05-29T10:20:11Z"
+word_count: 461
+char_count: 2903
+content_sha256: "1f32064dd5e91621e53da5f360ad02a9466345bce7646de5eab17b9e1ee6c811"
 flagged_9_128_129: false
 ---
 
@@ -25,8 +25,6 @@ If the people of the scripture (Jews, Christians, and Muslims) believe and maint
 If only the people of the various communities believed and maintained a righteous life, we would have showered them with blessings from the heaven and the earth. [7:96]
 
 God is the One who controls your happiness, or misery..... God is the One who makes you rich or poor. [53:43, 48]
-
-|
 
 A nation that upholds God's laws is guaranteed prominence among the nations of the world, victory, prosperity, and happiness (10:62-64, 16:97, 24:55, 41:30-31). On the other hand, a nation that violates God's laws incurs a miserable life (20:124). A nation that upholds God's laws is guaranteed to be a great nation. This is not a mere idealistic dream; since God is in full control (10:61), His guarantees and promises are done. A nation that upholds God's laws is characterized by:
 
