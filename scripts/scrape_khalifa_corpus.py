@@ -285,6 +285,10 @@ def _slugify(text: str, max_len: int = 60) -> str:
 
 def _clean_markdown(text: str) -> str:
     text = text.replace("\xa0", " ")
+    # Drop the dangling cell separator at the end of each line and remove lines
+    # that are only separators (empty layout spacer cells in SP newsletters).
+    text = re.sub(r"(?m)[ \t]*\|[ \t]*$", "", text)
+    text = re.sub(r"(?m)^[ \t|]*\|[ \t|]*$\n?", "", text)
     text = re.sub(r"[ \t]+\n", "\n", text)  # trailing whitespace
     text = re.sub(r"[ \t]{2,}", " ", text)  # runs of spaces
     text = re.sub(r"\n{3,}", "\n\n", text)  # collapse blank lines
@@ -529,9 +533,16 @@ def scrape_qhi(
     return records
 
 
+def _sp_dir(month: str) -> str:
+    """Map a logical month key to its URL directory. Bonus issues live at
+    e.g. 1988/may_2/ and 1990/jan_2/, not may_bonus/jan_bonus."""
+    return month.replace("_bonus", "_2")
+
+
 def _sp_pages_for_issue(fetcher: Fetcher, year: int, month: str) -> list[str]:
     """Return ordered page URLs for one SP issue by reading page1's nav."""
-    p1 = f"{SP_BASE}/{year}/{month}/page1.html"
+    mdir = _sp_dir(month)
+    p1 = f"{SP_BASE}/{year}/{mdir}/page1.html"
     content, status = fetcher.get(p1)
     if content is None:
         return []
@@ -541,7 +552,7 @@ def _sp_pages_for_issue(fetcher: Fetcher, year: int, month: str) -> list[str]:
         m = re.fullmatch(r"page(\d+)\.html", (a.get("href") or "").strip())
         if m:
             nums.add(int(m.group(1)))
-    return [f"{SP_BASE}/{year}/{month}/page{n}.html" for n in sorted(nums)]
+    return [f"{SP_BASE}/{year}/{mdir}/page{n}.html" for n in sorted(nums)]
 
 
 def scrape_sp(
