@@ -651,6 +651,103 @@ BUCKET_DIRS = {
 }
 
 
+def _parse_frontmatter(md_text: str) -> dict:
+    """Parse the simple `key: "value"` YAML frontmatter this script emits."""
+    if not md_text.startswith("---"):
+        return {}
+    end = md_text.find("\n---", 3)
+    block = md_text[3:end]
+    out = {}
+    for line in block.splitlines():
+        if ":" not in line:
+            continue
+        key, _, value = line.partition(":")
+        value = value.strip()
+        if value and value[0] == '"' and value[-1] == '"':
+            value = value[1:-1].replace('\\"', '"')
+        elif value in ("true", "false"):
+            value = value == "true"
+        elif value.lstrip("-").isdigit():
+            value = int(value)
+        out[key.strip()] = value
+    return out
+
+
+def build_manifest() -> None:
+    """Walk the corpus and emit MANIFEST.json from each file's frontmatter."""
+    buckets = {
+        "introduction": "introduction",
+        "appendices": "appendix",
+        "quran_hadith_islam": "book_chapter",
+        "submitters_perspective": "newsletter_issue",
+    }
+    items = []
+    per_bucket = {}
+    total_words = 0
+    flagged = 0
+    for subdir in buckets:
+        bucket_dir = CORPUS_DIR / subdir
+        if not bucket_dir.is_dir():
+            continue
+        files = sorted(bucket_dir.glob("*.md"))
+        bw = 0
+        for path in files:
+            fm = _parse_frontmatter(path.read_text(encoding="utf-8"))
+            rel = path.relative_to(CORPUS_DIR).as_posix()
+            words = int(fm.get("word_count", 0))
+            bw += words
+            total_words += words
+            if fm.get("flagged_9_128_129"):
+                flagged += 1
+            items.append(
+                {
+                    "path": rel,
+                    "bucket": subdir,
+                    "title": fm.get("title"),
+                    "author": fm.get("author"),
+                    "year": fm.get("year"),
+                    "category": fm.get("category"),
+                    "masthead": fm.get("masthead"),
+                    "source_url": fm.get("source_url"),
+                    "source_format": fm.get("source_format"),
+                    "word_count": words,
+                    "char_count": int(fm.get("char_count", 0)),
+                    "content_sha256": fm.get("content_sha256"),
+                    "flagged_9_128_129": bool(fm.get("flagged_9_128_129")),
+                    "size_bytes": path.stat().st_size,
+                }
+            )
+        per_bucket[subdir] = {"files": len(files), "words": bw}
+
+    manifest = {
+        "schema_version": 1,
+        "generated_at": _now_iso(),
+        "generated_by": "scripts/scrape_khalifa_corpus.py",
+        "binding_rule": "memory/feedback_khalifa_only_sources.md",
+        "primary_site": "masjidtucson.org",
+        "scope": "Khalifa-primary, ungated sources only (VP/CS deferred — see LICENSE_NOTE.md)",
+        "no_surface_rule": "9:128/9:129 references are FLAGGED per file, never stripped. "
+        "The no-surface rule binds the composer's output, not this corpus "
+        "(see COMPOSER_CONSTRAINTS.md).",
+        "totals": {
+            "files": len(items),
+            "words": total_words,
+            "files_flagged_9_128_129": flagged,
+            "per_bucket": per_bucket,
+        },
+        "items": items,
+    }
+    out_path = CORPUS_DIR / "MANIFEST.json"
+    out_path.write_text(
+        json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
+    print(
+        f"MANIFEST.json: {len(items)} files, {total_words:,} words, {flagged} flagged"
+    )
+    for b, stats in per_bucket.items():
+        print(f"  {b}: {stats['files']} files, {stats['words']:,} words")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -661,7 +758,16 @@ def main() -> int:
         choices=["intro", "appendices", "qhi", "sp", "all"],
         help="which source bucket to scrape",
     )
+    parser.add_argument(
+        "--manifest",
+        action="store_true",
+        help="(re)generate MANIFEST.json from the scraped corpus",
+    )
     args = parser.parse_args()
+
+    if args.manifest:
+        build_manifest()
+        return 0
 
     fetcher = Fetcher(CACHE_DIR)
 
