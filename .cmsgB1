@@ -1,0 +1,11 @@
+data: drop 5 contaminated expansion entries (no-surface rule)
+
+expansion-307/308/311/312/313 are essays built around the forged verses
+9:128/9:129 (generated before the no-surface rule was formalized) — not
+editable, the forged verses ARE the subject matter. Dropped wholesale via
+scripts/drop_expansion_entries.py; 313 -> 308 entries. See
+data/research/no_surface_rule_violations_2026-05-27.md (composer-rule-
+enforcement branch). This cleaned JSONL is the intended new content of the
+cache-content-expansion-2026-05-21 branch.
+
+Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
