@@ -19,7 +19,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-JSONL = ROOT / "data" / "cache_expansion_2026-05-21.jsonl"
+JSONL = ROOT / "data" / "eval" / "v2" / "baseline_extra_overnight_2026-05-21.jsonl"
 
 # id -> rationale (from the violations report)
 DROP = {
