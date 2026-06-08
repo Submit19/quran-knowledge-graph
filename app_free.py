@@ -243,19 +243,33 @@ class ChatRequest(BaseModel):
 
 # ── model status tracking ─────────────────────────────────────────────────────
 
-_model_status = {"state": "connecting", "model": ""}  # connecting | ready | error
+# `backend` lets the UI badge label remote backends (gemini/openrouter)
+# distinctly from the local Ollama default.
+_model_status = {"state": "connecting", "model": "", "backend": "ollama"}
+
+
+def _default_route():
+    """(backend, model) the default chat request will use, mirroring
+    _decide_backend precedence: Gemini > OpenRouter > Ollama (each gated on
+    its opt-in flag + key)."""
+    if PREFER_GEMINI and GEMINI_API_KEY:
+        return "gemini", GEMINI_MODEL
+    if PREFER_OPENROUTER and OPENROUTER_API_KEY:
+        return "openrouter", OPENROUTER_MODEL
+    return "ollama", OLLAMA_MODEL
 
 
 @app.get("/")
 async def index():
     html = (Path(__file__).parent / "index.html").read_text(encoding="utf-8")
+    _backend, _model = _default_route()
     # Inject a dynamic model badge + polling script
     badge_html = (
         f'<span id="model-badge" style="'
         f'font-size:0.7em;color:#f59e0b;background:#1e293b;'
         f'padding:3px 10px;border-radius:12px;white-space:nowrap;'
         f'border:1px solid #92400e;">'
-        f'⏳ connecting to {OLLAMA_MODEL}...</span>'
+        f'⏳ connecting to {_backend} ({_model})...</span>'
     )
     poll_script = """
 <script>
@@ -264,19 +278,26 @@ async def index():
   const sendBtn = document.getElementById('send-btn');
   const input = document.getElementById('input');
   if (!badge) return;
+  const SUFFIX = {gemini: ' (gemini · free-tier)', openrouter: ' (openrouter · free)', ollama: ' (local · free)'};
   fetch('/model-status').then(r => r.json()).then(d => {
+    const suffix = SUFFIX[d.backend] || ' (free)';
     if (d.state === 'ready') {
-      badge.textContent = '🟢 ' + d.model + ' (local · free)';
+      badge.textContent = '🟢 ' + d.model + suffix;
       badge.style.color = '#94a3b8';
       badge.style.borderColor = '#334155';
       if (sendBtn) sendBtn.disabled = false;
       if (input) input.placeholder = 'Ask about the Quran...';
     } else if (d.state === 'error') {
-      badge.textContent = '🔴 model error';
+      badge.textContent = '🔴 ' + (d.backend || 'model') + ' error';
       badge.style.color = '#ef4444';
       badge.style.borderColor = '#991b1b';
+    } else if (d.state === 'rate_limited') {
+      badge.textContent = '🔴 ' + (d.backend || 'model') + ' rate-limited' + (d.retry_in ? ' (retry in ' + d.retry_in + 's)' : '');
+      badge.style.color = '#ef4444';
+      badge.style.borderColor = '#991b1b';
+      setTimeout(pollModelStatus, 2000);
     } else {
-      badge.textContent = '⏳ loading ' + d.model + '...';
+      badge.textContent = '⏳ connecting to ' + d.backend + ' (' + d.model + ')...';
       if (sendBtn) sendBtn.disabled = true;
       if (input) input.placeholder = 'Model loading, please wait...';
       setTimeout(pollModelStatus, 1500);
@@ -507,7 +528,9 @@ def _preload_model():
 
 
 if __name__ == "__main__":
-    _model_status["model"] = OLLAMA_MODEL
+    _default_backend, _default_model = _default_route()
+    _model_status["backend"] = _default_backend
+    _model_status["model"] = _default_model
 
     from startup_banner import format_startup_banner
     print(format_startup_banner(
@@ -518,8 +541,16 @@ if __name__ == "__main__":
         port=OLLAMA_PORT,
     ))
 
-    # Start model pre-load in background so the UI is available immediately
-    threading.Thread(target=_preload_model, daemon=True).start()
+    if _default_backend == "ollama":
+        # Local model needs a VRAM warm-up; pre-load in the background so the
+        # UI is available immediately.
+        threading.Thread(target=_preload_model, daemon=True).start()
+    else:
+        # Remote backends (gemini/openrouter) have nothing to pre-load — mark
+        # ready so the badge doesn't sit at "connecting" or flip to a spurious
+        # Ollama error. Ollama remains available lazily as the fallback.
+        _model_status["state"] = "ready"
+        print(f"  Default backend: {_default_backend} :: {_default_model} (remote, no preload)")
 
     import uvicorn
     webbrowser.open(f"http://localhost:{OLLAMA_PORT}")
