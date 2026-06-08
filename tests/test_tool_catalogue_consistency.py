@@ -15,8 +15,6 @@ on fixed prose.
 import re
 from pathlib import Path
 
-import pytest
-
 from chat import TOOLS as CHAT_TOOLS
 from app_free import OLLAMA_TOOLS
 
@@ -42,18 +40,12 @@ def _mentions(text, name):
 ALL_TOOL_NAMES = {t["name"] for t in CHAT_TOOLS}
 
 
-@pytest.mark.xfail(
-    strict=True, reason="system_prompt.txt omits 5 exposed tools (fix pending)"
-)
 def test_paid_prompt_describes_every_chat_tool():
     """Every tool exposed via chat.TOOLS must appear in system_prompt.txt."""
     missing = [n for n in _chat_names() if not _mentions(PAID_PROMPT, n)]
     assert not missing, f"system_prompt.txt omits exposed tools: {missing}"
 
 
-@pytest.mark.xfail(
-    strict=True, reason="system_prompt.txt says '15 tools' not '20' (fix pending)"
-)
 def test_paid_prompt_tool_count_matches_registry():
     """The hardcoded count must equal len(chat.TOOLS); no stale wrong count."""
     n = len(CHAT_TOOLS)
@@ -63,19 +55,12 @@ def test_paid_prompt_tool_count_matches_registry():
     assert not wrong, f"system_prompt.txt claims wrong tool count(s): {wrong}"
 
 
-@pytest.mark.xfail(
-    strict=True, reason="free prompt omits recall_similar_query (fix pending)"
-)
 def test_free_prompt_describes_every_ollama_tool():
     """Every tool exposed via OLLAMA_TOOLS must appear in system_prompt_free.txt."""
     missing = [n for n in _ollama_names() if not _mentions(FREE_PROMPT, n)]
     assert not missing, f"system_prompt_free.txt omits exposed tools: {missing}"
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="free prompt references find_path/search_arabic_root absent from OLLAMA_TOOLS (fix pending)",
-)
 def test_free_prompt_references_no_unavailable_tool():
     """Vice-versa: any real tool name the free prompt references must be exposed
     in OLLAMA_TOOLS — the prompt must not mandate a tool the model cannot call."""
@@ -103,10 +88,6 @@ def test_free_prompt_tool_count_matches_registry():
     assert not wrong, f"system_prompt_free.txt claims wrong tool count(s): {wrong}"
 
 
-@pytest.mark.xfail(
-    strict=True,
-    reason="search_arabic_root not yet added to OLLAMA_TOOLS (Q2=ADD, fix pending)",
-)
 def test_search_arabic_root_available_in_free_surface():
     """Q2 path taken = ADD: search_arabic_root is mandated by the free prompt's
     Arabic-root augmentation block, so it must be exposed in OLLAMA_TOOLS and

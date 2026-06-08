@@ -56,7 +56,7 @@ _load_env()
 
 sys.path.insert(0, str(Path(__file__).parent))
 import config as cfg
-from chat import TOOLS as ANTHROPIC_TOOLS, dispatch_tool
+from chat import dispatch_tool
 
 # Use a lean system prompt for local models — fewer tokens, faster inference
 _free_prompt_path = Path(__file__).parent / "prompts" / "system_prompt_free.txt"
@@ -148,6 +148,12 @@ OLLAMA_TOOLS = [
                        "properties": {"query": {"type": "string", "description": "MATCH/RETURN query"},
                                       "row_limit": {"type": "integer", "description": "default 100, max 500"}},
                        "required": ["query"]}}},
+    {"type": "function", "function": {
+        "name": "search_arabic_root",
+        "description": "Find ALL verses containing a specific Arabic trilateral root and its derived forms (root k-t-b yields kitab/kataba/maktub), grouped by surah with a total_verses count. Use for the Arabic-root augmentation and any question about a root's Quranic usage or frequency. Accepts Arabic script ('رحم') or Buckwalter ('rHm').",
+        "parameters": {"type": "object",
+                       "properties": {"root": {"type": "string", "description": "Arabic root in Arabic letters (e.g. 'رحم', 'كتب') or Buckwalter (e.g. 'rHm', 'ktb')"}},
+                       "required": ["root"]}}},
 ]
 
 # Parse --model early so it's available at module level
