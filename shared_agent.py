@@ -737,6 +737,72 @@ def _anthropic_step(
 
 
 # ──────────────────────────────────────────────────────────────────────────
+# Gemini (generativelanguage v1beta) translation helpers
+# ──────────────────────────────────────────────────────────────────────────
+#
+# Gemini speaks a third dialect: tools are declared as
+# ``{functionDeclarations: [{name, description, parameters}]}``; messages live
+# in a ``contents`` array of ``{role, parts}`` where role is ``user``/``model``
+# (no ``assistant``) and parts carry ``text`` / ``functionCall`` /
+# ``functionResponse`` blocks; the system prompt is a top-level
+# ``systemInstruction``. Schema ``type`` values are lowercase (same as OpenAI),
+# so the parameters object passes through after stripping the handful of
+# JSON-Schema keys Gemini's Schema type rejects (``default``,
+# ``additionalProperties``, ``$schema``, ``title``).
+
+# JSON-Schema keys Gemini's Schema type does not accept.
+_GEMINI_SCHEMA_DROP = {"default", "additionalProperties", "$schema", "title"}
+
+
+def _clean_gemini_schema(schema):
+    """Recursively drop JSON-Schema keys Gemini rejects, recursing into
+    ``properties`` and ``items``. Non-dict inputs pass through unchanged."""
+    if not isinstance(schema, dict):
+        return schema
+    out: dict = {}
+    for k, v in schema.items():
+        if k in _GEMINI_SCHEMA_DROP:
+            continue
+        if k == "properties" and isinstance(v, dict):
+            out["properties"] = {pk: _clean_gemini_schema(pv) for pk, pv in v.items()}
+        elif k == "items":
+            out["items"] = _clean_gemini_schema(v)
+        else:
+            out[k] = v
+    return out
+
+
+def _to_gemini_tools(tools: list) -> list:
+    """OpenAI-nested or Anthropic-flat tool schema → Gemini tools envelope.
+
+    Returns the ready-to-send ``[{"functionDeclarations": [...]}]`` list, or
+    ``[]`` when there are no tools (Gemini rejects an empty
+    ``functionDeclarations`` array).
+    """
+    decls: list = []
+    for t in tools:
+        if "function" in t:  # OpenAI-nested ({"type":"function","function":{…}})
+            fn = t["function"]
+            name = fn.get("name", "")
+            desc = fn.get("description", "")
+            params = fn.get("parameters")
+        else:  # Anthropic-flat ({name, description, input_schema})
+            name = t.get("name", "")
+            desc = t.get("description", "")
+            params = t.get("input_schema") or t.get("parameters")
+        if not params:
+            params = {"type": "object", "properties": {}}
+        decls.append({
+            "name": name,
+            "description": desc,
+            "parameters": _clean_gemini_schema(params),
+        })
+    if not decls:
+        return []
+    return [{"functionDeclarations": decls}]
+
+
+# ──────────────────────────────────────────────────────────────────────────
 # Public entry-point — agent_stream
 # ──────────────────────────────────────────────────────────────────────────
 

@@ -7,8 +7,6 @@ inline fixtures that mirror the real OLLAMA_TOOLS shapes. The "every tool is
 expressible" guard round-trips chat.TOOLS (the full Anthropic-flat set).
 """
 
-import pytest
-
 import shared_agent
 from chat import TOOLS as CHAT_TOOLS
 
@@ -108,7 +106,6 @@ def _decls(result):
     return result[0]["functionDeclarations"]
 
 
-@pytest.mark.xfail(strict=True, reason="_to_gemini_tools not implemented yet")
 def test_translates_simple_tool():
     decls = _decls(shared_agent._to_gemini_tools([GET_VERSE]))
     assert len(decls) == 1
@@ -123,7 +120,6 @@ def test_translates_simple_tool():
     assert "type" not in d or d.get("type") != "function"
 
 
-@pytest.mark.xfail(strict=True, reason="_to_gemini_tools not implemented yet")
 def test_translates_tool_with_required_optional_mix():
     d = _decls(shared_agent._to_gemini_tools([SEMANTIC_SEARCH]))[0]
     props = d["parameters"]["properties"]
@@ -132,14 +128,12 @@ def test_translates_tool_with_required_optional_mix():
     assert props["top_k"]["type"] == "integer"
 
 
-@pytest.mark.xfail(strict=True, reason="_to_gemini_tools not implemented yet")
 def test_translates_tool_with_enum():
     d = _decls(shared_agent._to_gemini_tools([GET_CODE19]))[0]
     assert d["parameters"]["properties"]["scope"]["enum"] == ["global", "sura", "verse"]
     assert d["parameters"]["properties"]["scope"]["type"] == "string"
 
 
-@pytest.mark.xfail(strict=True, reason="_to_gemini_tools not implemented yet")
 def test_translates_tool_with_array_param():
     d = _decls(shared_agent._to_gemini_tools([TRAVERSE_TOPIC]))[0]
     kw = d["parameters"]["properties"]["keywords"]
@@ -147,7 +141,6 @@ def test_translates_tool_with_array_param():
     assert kw["items"]["type"] == "string"
 
 
-@pytest.mark.xfail(strict=True, reason="_to_gemini_tools not implemented yet")
 def test_strips_unsupported_default_field():
     d = _decls(shared_agent._to_gemini_tools([CONCEPT_SEARCH_WITH_DEFAULT]))[0]
     top_k = d["parameters"]["properties"]["top_k"]
@@ -155,7 +148,6 @@ def test_strips_unsupported_default_field():
     assert top_k["type"] == "integer"
 
 
-@pytest.mark.xfail(strict=True, reason="_to_gemini_tools not implemented yet")
 def test_translates_multiple_openai_tools_in_one_envelope():
     decls = _decls(
         shared_agent._to_gemini_tools([GET_VERSE, SEMANTIC_SEARCH, TRAVERSE_TOPIC])
@@ -167,13 +159,11 @@ def test_translates_multiple_openai_tools_in_one_envelope():
     ]
 
 
-@pytest.mark.xfail(strict=True, reason="_to_gemini_tools not implemented yet")
 def test_empty_tools_returns_empty_list():
     # Gemini rejects an empty functionDeclarations array, so emit no envelope.
     assert shared_agent._to_gemini_tools([]) == []
 
 
-@pytest.mark.xfail(strict=True, reason="_to_gemini_tools not implemented yet")
 def test_translates_all_chat_tools_without_error():
     """Every real tool (Anthropic-flat shape) must be expressible in Gemini.
 
