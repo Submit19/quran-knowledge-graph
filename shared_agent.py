@@ -802,6 +802,151 @@ def _to_gemini_tools(tools: list) -> list:
     return [{"functionDeclarations": decls}]
 
 
+def _to_gemini_contents(messages: list) -> list:
+    """OpenAI-ish messages → Gemini ``contents`` array.
+
+    System messages are dropped (passed separately as ``systemInstruction``).
+    ``assistant`` → role ``model``; ``tool`` → role ``user`` carrying a
+    ``functionResponse`` part whose ``response`` is always an object (Gemini
+    requires a struct, so non-dict tool payloads are wrapped as
+    ``{"result": …}``).
+    """
+    contents: list = []
+    for m in messages:
+        role = m.get("role")
+        if role == "system":
+            continue
+        if role == "tool":
+            raw = m.get("content", "")
+            try:
+                parsed = json.loads(raw)
+                resp = parsed if isinstance(parsed, dict) else {"result": parsed}
+            except (json.JSONDecodeError, TypeError):
+                resp = {"result": raw}
+            fr = {"name": m.get("name", ""), "response": resp}
+            if m.get("tool_call_id"):
+                fr["id"] = m["tool_call_id"]
+            contents.append({"role": "user", "parts": [{"functionResponse": fr}]})
+            continue
+        if role == "assistant":
+            parts: list = []
+            if m.get("content"):
+                parts.append({"text": m["content"]})
+            for tc in m.get("tool_calls", []) or []:
+                fn = tc.get("function", {})
+                args = fn.get("arguments", {})
+                if isinstance(args, str):
+                    try:
+                        args = json.loads(args)
+                    except json.JSONDecodeError:
+                        args = {}
+                fc = {"name": fn.get("name", ""), "args": args}
+                if tc.get("id"):
+                    fc["id"] = tc["id"]
+                parts.append({"functionCall": fc})
+            if not parts:
+                parts = [{"text": ""}]
+            contents.append({"role": "model", "parts": parts})
+            continue
+        # user (and any other non-system role) → user text part
+        contents.append({"role": "user", "parts": [{"text": str(m.get("content", ""))}]})
+    return contents
+
+
+def _from_gemini_response(data: dict) -> dict:
+    """Gemini ``generateContent`` JSON → OpenAI-ish ``{"message": {...}}``.
+
+    Concatenates text parts; converts ``functionCall`` parts into ``tool_calls``
+    with JSON-stringified ``arguments`` (matching the OpenRouter/Anthropic
+    backends so the agent loop stays uniform). A prompt- or response-level
+    block raises ``RuntimeError`` so the caller can surface a clean error.
+    """
+    candidates = data.get("candidates", []) or []
+    if not candidates:
+        block = (data.get("promptFeedback", {}) or {}).get("blockReason")
+        if block:
+            raise RuntimeError(f"Gemini blocked prompt: {block}")
+        return {"message": {"role": "assistant", "content": "", "tool_calls": []}}
+
+    cand = candidates[0]
+    finish = cand.get("finishReason")
+    parts = (cand.get("content", {}) or {}).get("parts", []) or []
+
+    text_parts: list = []
+    tool_calls: list = []
+    for i, part in enumerate(parts):
+        if "text" in part:
+            text_parts.append(part.get("text") or "")
+        elif "functionCall" in part:
+            fc = part["functionCall"] or {}
+            tool_calls.append({
+                "id": fc.get("id") or f"gemini_call_{i}",
+                "type": "function",
+                "function": {
+                    "name": fc.get("name", ""),
+                    "arguments": json.dumps(fc.get("args", {}) or {}),
+                },
+            })
+
+    if not parts and finish in ("SAFETY", "RECITATION", "PROHIBITED_CONTENT"):
+        raise RuntimeError(f"Gemini blocked response: {finish}")
+
+    return {
+        "message": {
+            "role": "assistant",
+            "content": "".join(text_parts),
+            "tool_calls": tool_calls,
+        },
+        "stop_reason": finish,
+    }
+
+
+# Status codes worth retrying: rate limit + transient capacity/overload.
+_GEMINI_RETRY_CODES = (429, 503)
+
+
+def _gemini_chat(
+    *, api_key: str, url: str, model: str, system: str, messages: list,
+    tools: list | None = None, temperature: float = 0.3,
+    num_predict: int = 4096, max_retries: int = 3,
+) -> dict:
+    """Send a chat request to Gemini ``generateContent`` and normalise the reply.
+
+    ``url`` is the models base (``…/v1beta/models``); the endpoint is built as
+    ``{url}/{model}:generateContent``. Transient 429/503 are retried with capped
+    exponential backoff (1s, 2s, 4s…); on exhaustion or any non-transient status
+    the HTTP error propagates so ``agent_stream``'s fallback chain can take over.
+    """
+    endpoint = f"{url.rstrip('/')}/{model}:generateContent"
+    payload: dict = {
+        "contents": _to_gemini_contents(messages),
+        "generationConfig": {
+            "temperature": temperature,
+            "maxOutputTokens": num_predict,
+        },
+    }
+    if system:
+        payload["systemInstruction"] = {"parts": [{"text": system}]}
+    gem_tools = _to_gemini_tools(tools) if tools else []
+    if gem_tools:
+        payload["tools"] = gem_tools
+
+    headers = {"x-goog-api-key": api_key, "Content-Type": "application/json"}
+
+    last_resp = None
+    for attempt in range(max_retries):
+        last_resp = requests.post(endpoint, headers=headers, json=payload, timeout=600)
+        if last_resp.status_code in _GEMINI_RETRY_CODES and attempt < max_retries - 1:
+            time.sleep(2 ** attempt)
+            continue
+        last_resp.raise_for_status()
+        return _from_gemini_response(last_resp.json())
+
+    # Loop only falls through when the last attempt was a retry code: raise it.
+    last_resp.raise_for_status()
+    return _from_gemini_response(last_resp.json())
+
+
 # ──────────────────────────────────────────────────────────────────────────
 # Public entry-point — agent_stream
 # ──────────────────────────────────────────────────────────────────────────

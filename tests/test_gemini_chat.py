@@ -51,7 +51,6 @@ def _toolcall_response(name, args):
 # ── _to_gemini_contents ───────────────────────────────────────────────────
 
 
-@pytest.mark.xfail(strict=True, reason="_to_gemini_contents not implemented yet")
 def test_to_gemini_contents_multi_turn():
     msgs = [
         {"role": "system", "content": "You are an assistant."},
@@ -99,7 +98,6 @@ def test_to_gemini_contents_multi_turn():
 # ── _gemini_chat: basic + tool call ───────────────────────────────────────
 
 
-@pytest.mark.xfail(strict=True, reason="_gemini_chat not implemented yet")
 def test_simple_chat_no_tools(monkeypatch):
     captured = {}
 
@@ -125,7 +123,6 @@ def test_simple_chat_no_tools(monkeypatch):
     assert captured["json"]["systemInstruction"]["parts"][0]["text"] == "sys prompt"
 
 
-@pytest.mark.xfail(strict=True, reason="_gemini_chat not implemented yet")
 def test_chat_with_tool_call(monkeypatch):
     captured = {}
 
@@ -167,7 +164,6 @@ def test_chat_with_tool_call(monkeypatch):
     assert "functionDeclarations" in captured["json"]["tools"][0]
 
 
-@pytest.mark.xfail(strict=True, reason="_gemini_chat not implemented yet")
 def test_multi_turn_tool_loop(monkeypatch):
     """tool call → tool result → final answer, driven through _gemini_chat twice."""
     responses = [
@@ -210,7 +206,6 @@ def test_multi_turn_tool_loop(monkeypatch):
     assert second["message"]["tool_calls"] == []
 
 
-@pytest.mark.xfail(strict=True, reason="_gemini_chat not implemented yet")
 def test_handles_rate_limit(monkeypatch):
     """429 twice then 200 → _gemini_chat retries with backoff and succeeds."""
     calls = {"n": 0}
@@ -235,7 +230,6 @@ def test_handles_rate_limit(monkeypatch):
     assert out["message"]["content"] == "done"
 
 
-@pytest.mark.xfail(strict=True, reason="_gemini_chat not implemented yet")
 def test_rate_limit_exhausted_raises(monkeypatch):
     """Persistent 429 past max_retries propagates (so the fallback chain fires)."""
 
@@ -255,7 +249,6 @@ def test_rate_limit_exhausted_raises(monkeypatch):
         )
 
 
-@pytest.mark.xfail(strict=True, reason="_gemini_chat not implemented yet")
 def test_non_transient_error_raises_immediately(monkeypatch):
     """A 400 does not retry — it raises on the first call."""
     calls = {"n": 0}
@@ -278,7 +271,6 @@ def test_non_transient_error_raises_immediately(monkeypatch):
     assert calls["n"] == 1  # no retry on a non-transient error
 
 
-@pytest.mark.xfail(strict=True, reason="_from_gemini_response not implemented yet")
 def test_safety_blocked_translates_to_error(monkeypatch):
     """A SAFETY-blocked candidate with no parts becomes a clean RuntimeError."""
     blocked = {"candidates": [{"content": {"parts": []}, "finishReason": "SAFETY"}]}
