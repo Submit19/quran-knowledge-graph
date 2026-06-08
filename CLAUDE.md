@@ -9,7 +9,7 @@ Quran Knowledge Graph — an AI-powered Quran explorer connecting 6,234 verses (
 ## Running the Application
 
 ```bash
-# Main web UI (FastAPI + 3D visualization, agentic loop, Ollama or OpenRouter free or Anthropic)
+# Main web UI (FastAPI + 3D visualization, agentic loop; Ollama default, or OpenRouter/Gemini free, or Anthropic)
 SEMANTIC_SEARCH_INDEX=verse_embedding_m3 \
 RERANKER_MODEL=BAAI/bge-reranker-v2-m3 \
 python app_free.py                     # http://localhost:8085  (RECOMMENDED)
@@ -183,6 +183,16 @@ RERANKER_MODEL=BAAI/bge-reranker-v2-m3            # default — multilingual, RE
               |cross-encoder/ms-marco-MiniLM-L-6-v2  # legacy English-only (HARMFUL on Arabic)
               |none / off / disabled              # skip reranking entirely
 RERANK_DISABLED=1                                 # alternative kill switch
+
+# Backend selection (app_free; default is local Ollama)
+PREFER_OPENROUTER=1                               # or --openrouter — route to OpenRouter free model
+PREFER_GEMINI=1                                   # or --gemini — route to Gemini (opt-in third backend)
+GEMINI_API_KEY=...                                # required when PREFER_GEMINI/--gemini is set
+GEMINI_MODEL=gemini-2.5-flash                     # default Gemini model (free-tier ~15 RPM)
+# Precedence when both opted in: Gemini > OpenRouter > Ollama. Gemini retries
+# transient 429/503 with backoff, then falls back to the local deep-dive model
+# (qwen3:14b). Full function-calling translation for all tools lives in
+# shared_agent.py (_to_gemini_tools / _gemini_chat / _decide_backend).
 
 # Tool-call cache (Nixon "1-second cache" pattern in chat.py)
 TOOL_CACHE_TTL_SEC=30                             # 0 disables; default 30s
