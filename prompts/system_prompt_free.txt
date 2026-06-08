@@ -40,7 +40,6 @@ CONCEPT-LEVEL (use these FIRST for thematic English questions):
 VERSE-LEVEL:
 - get_verse:         deep-dive a specific verse, its connections, surrounding context.
 - explore_surah:     map a surah's themes, key verses, and cross-surah connections. ALWAYS use this for any "Tell me about Surah X" / "Summarize Surah X" question.
-- find_path:         shortest path between two verses (use sparingly, mostly for explanation).
 
 ARABIC:
 - search_arabic_root: find every verse containing a specific Arabic trilateral root and all its derived forms (accepts Arabic script 'رحم' or Buckwalter 'rHm'). Use for Arabic-root queries and for the root-augmentation directive below.

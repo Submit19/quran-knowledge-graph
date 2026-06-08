@@ -16,6 +16,7 @@ OLLAMA_TOOLS is read by ast (app_free connects to Neo4j at import time).
 from __future__ import annotations
 
 import ast
+import re
 from pathlib import Path
 
 import chat
@@ -42,24 +43,57 @@ def _chat_tool_names() -> list[str]:
     return [t["name"] for t in chat.TOOLS]
 
 
+# Catalogue tool bullets are lowercase snake_case "- name:    description".
+# Edge-type / typed-relationship bullets (- SUPPORTS:, - ELABORATES:) are
+# uppercase and so excluded — this regex isolates tool names cleanly.
+_BULLET_RE = re.compile(r"^-\s+([a-z][a-z0-9_]+):", re.MULTILINE)
+
+
+def _catalogue_bullets(prompt: str) -> list[str]:
+    return _BULLET_RE.findall(prompt)
+
+
 def test_paid_prompt_documents_every_chat_tool() -> None:
-    """(a) Every name in chat.TOOLS appears in config.system_prompt()."""
+    """(a) Paid prompt ↔ chat.TOOLS are consistent in BOTH directions.
+
+    Forward: every exposed tool is documented. Reverse: every tool named in
+    the catalogue is a real chat.TOOLS tool (no phantom names). The paid
+    catalogue is clean in reverse today, so this guards against future drift."""
     import config
 
     prompt = config.system_prompt()
-    missing = [name for name in _chat_tool_names() if name not in prompt]
+    exposed = _chat_tool_names()
+
+    missing = [name for name in exposed if name not in prompt]
     assert not missing, (
-        f"chat.TOOLS exposes {len(_chat_tool_names())} tools but the paid system "
+        f"chat.TOOLS exposes {len(exposed)} tools but the paid system "
         f"prompt (config.system_prompt) never names: {missing}"
+    )
+
+    phantom = [name for name in _catalogue_bullets(prompt) if name not in exposed]
+    assert not phantom, (
+        f"Paid prompt catalogue names tools that don't exist in chat.TOOLS: {phantom}"
     )
 
 
 def test_free_prompt_documents_every_ollama_tool() -> None:
-    """(b) Every name in app_free.OLLAMA_TOOLS appears in the free prompt text."""
+    """(b) Free prompt ↔ OLLAMA_TOOLS are consistent in BOTH directions.
+
+    Forward: every exposed tool is documented. Reverse: every tool named in
+    the catalogue is actually exposed (catches a phantom like find_path, which
+    was documented but never handed to the local model)."""
     prompt = (PROMPTS_DIR / "system_prompt_free.txt").read_text(encoding="utf-8")
-    missing = [name for name in _ollama_tool_names() if name not in prompt]
+    exposed = _ollama_tool_names()
+
+    missing = [name for name in exposed if name not in prompt]
     assert not missing, (
         f"OLLAMA_TOOLS exposes tools the free prompt never names: {missing}"
+    )
+
+    phantom = [name for name in _catalogue_bullets(prompt) if name not in exposed]
+    assert not phantom, (
+        f"Free prompt catalogue names tools the local model can't call "
+        f"(not in OLLAMA_TOOLS): {phantom}"
     )
 
 
