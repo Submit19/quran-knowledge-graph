@@ -7,8 +7,6 @@ unless config.prefer_gemini is set AND a key is present, and local_only always
 forces local Ollama.
 """
 
-import pytest
-
 import shared_agent
 from shared_agent import AgentConfig
 
@@ -27,26 +25,22 @@ def _cfg(**over):
     return AgentConfig(**base)
 
 
-@pytest.mark.xfail(strict=True, reason="_decide_backend not implemented yet")
 def test_default_is_ollama():
     b, m = shared_agent._decide_backend(_cfg())
     assert (b, m) == ("ollama", "qwen3:8b")
 
 
-@pytest.mark.xfail(strict=True, reason="_decide_backend not implemented yet")
 def test_prefer_gemini_routes_to_gemini():
     b, m = shared_agent._decide_backend(_cfg(prefer_gemini=True), gemini_api_key="gk")
     assert (b, m) == ("gemini", "gemini-2.5-flash")
 
 
-@pytest.mark.xfail(strict=True, reason="_decide_backend not implemented yet")
 def test_no_gemini_key_falls_back_cleanly():
     # prefer_gemini set but no key → must not route to gemini.
     b, m = shared_agent._decide_backend(_cfg(prefer_gemini=True), gemini_api_key="")
     assert (b, m) == ("ollama", "qwen3:8b")
 
 
-@pytest.mark.xfail(strict=True, reason="_decide_backend not implemented yet")
 def test_gemini_precedence_over_openrouter():
     # Both opt-ins set + both keys present → Gemini wins (rewire-test relevant).
     b, m = shared_agent._decide_backend(
@@ -57,7 +51,6 @@ def test_gemini_precedence_over_openrouter():
     assert b == "gemini"
 
 
-@pytest.mark.xfail(strict=True, reason="_decide_backend not implemented yet")
 def test_local_only_overrides_gemini():
     b, m = shared_agent._decide_backend(
         _cfg(prefer_gemini=True), gemini_api_key="gk", local_only=True
@@ -65,7 +58,6 @@ def test_local_only_overrides_gemini():
     assert b == "ollama"
 
 
-@pytest.mark.xfail(strict=True, reason="_decide_backend not implemented yet")
 def test_deep_dive_does_not_trigger_gemini():
     # deep_dive is an OpenRouter/Ollama concept; with no openrouter key and
     # gemini NOT preferred, it stays on the local deep-dive model.
@@ -73,7 +65,6 @@ def test_deep_dive_does_not_trigger_gemini():
     assert (b, m) == ("ollama", "qwen3:14b")
 
 
-@pytest.mark.xfail(strict=True, reason="_decide_backend not implemented yet")
 def test_prefer_openrouter_still_works():
     # Regression: the existing OpenRouter path is unchanged when gemini is off.
     b, m = shared_agent._decide_backend(
@@ -82,7 +73,6 @@ def test_prefer_openrouter_still_works():
     assert (b, m) == ("openrouter", "qwen/qwen3-coder:free")
 
 
-@pytest.mark.xfail(strict=True, reason="gemini not yet a valid AgentConfig.backend")
 def test_gemini_is_valid_backend_name():
     # An app may set backend='gemini' directly; __post_init__ must accept it.
     cfg = _cfg(backend="gemini")

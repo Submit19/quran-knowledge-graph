@@ -46,7 +46,7 @@ from tool_compressor import compress_tool_result
 # ──────────────────────────────────────────────────────────────────────────
 
 
-BackendName = Literal["anthropic", "ollama", "openrouter"]
+BackendName = Literal["anthropic", "ollama", "openrouter", "gemini"]
 """Allowed values for ``AgentConfig.backend``. Enforced at construction."""
 
 
@@ -106,6 +106,12 @@ class AgentConfig:
     prefer_openrouter: bool = False
     ollama_url: str = "http://localhost:11434/api/chat"
     openrouter_url: str = "https://openrouter.ai/api/v1/chat/completions"
+    # Gemini opt-in (app_free). prefer_gemini activates the backend; it takes
+    # precedence over OpenRouter when both are opted in. gemini_url is the
+    # models base — the endpoint is built as ``{url}/{model}:generateContent``.
+    prefer_gemini: bool = False
+    gemini_model: str | None = None
+    gemini_url: str = "https://generativelanguage.googleapis.com/v1beta/models"
 
     # — Tooling identifiers (informational; surfaced to the UI) —
     tool_labels: dict[str, str] = field(default_factory=dict)
@@ -124,10 +130,10 @@ class AgentConfig:
     fallback_chain: tuple[FallbackBackend, ...] = ()
 
     def __post_init__(self) -> None:
-        if self.backend not in ("anthropic", "ollama", "openrouter"):
+        if self.backend not in ("anthropic", "ollama", "openrouter", "gemini"):
             raise ValueError(
                 f"AgentConfig.backend must be one of "
-                f"'anthropic'|'ollama'|'openrouter', got {self.backend!r}"
+                f"'anthropic'|'ollama'|'openrouter'|'gemini', got {self.backend!r}"
             )
         if self.max_tool_turns < 1:
             raise ValueError(
@@ -165,6 +171,7 @@ class AgentCollaborators:
     reasoning_memory: Any = None
     db_name: str = "quran"
     openrouter_api_key: str = ""
+    gemini_api_key: str = ""
     anthropic_client: Any = None
 
 
@@ -948,6 +955,64 @@ def _gemini_chat(
 
 
 # ──────────────────────────────────────────────────────────────────────────
+# Backend routing decision
+# ──────────────────────────────────────────────────────────────────────────
+
+
+def _decide_backend(
+    config: AgentConfig,
+    *,
+    openrouter_api_key: str = "",
+    gemini_api_key: str = "",
+    anthropic_client: Any = None,
+    deep_dive: bool = False,
+    model_override: str | None = None,
+    local_only: bool = False,
+) -> tuple[str, str]:
+    """Pick ``(active_backend, active_model)`` for one request.
+
+    Pure function extracted from ``agent_stream`` so the routing policy is
+    unit-testable. Behaviour for the three pre-existing backends is unchanged;
+    Gemini is a new opt-in branch that:
+
+    - activates **only** when ``config.prefer_gemini`` is set and a key is
+      present (never on ``deep_dive``/``model_override`` alone — those are
+      OpenRouter/Ollama concepts);
+    - takes **precedence over OpenRouter** when both are opted in;
+    - is suppressed by ``local_only`` (which forces local Ollama).
+
+    Gemini ignores ``model_override`` (an OpenRouter-model concept) and uses
+    ``config.gemini_model`` so an OpenRouter model name can't leak into a
+    Gemini request.
+    """
+    if config.backend == "anthropic":
+        if anthropic_client is None:
+            raise RuntimeError(
+                "AgentConfig.backend == 'anthropic' but "
+                "AgentCollaborators.anthropic_client is None — apps using the "
+                "Anthropic backend must construct an anthropic.Anthropic "
+                "client and pass it in via AgentCollaborators."
+            )
+        return "anthropic", (model_override or config.default_model)
+
+    if not local_only and bool(gemini_api_key) and config.prefer_gemini:
+        return "gemini", (config.gemini_model or config.default_model)
+
+    use_openrouter = (
+        not local_only
+        and bool(openrouter_api_key)
+        and (config.prefer_openrouter or deep_dive or model_override)
+    )
+    if use_openrouter:
+        return "openrouter", (
+            model_override or (config.openrouter_model or config.default_model)
+        )
+    if deep_dive or local_only:
+        return "ollama", (config.deep_dive_model or config.default_model)
+    return "ollama", config.default_model
+
+
+# ──────────────────────────────────────────────────────────────────────────
 # Public entry-point — agent_stream
 # ──────────────────────────────────────────────────────────────────────────
 
@@ -978,41 +1043,22 @@ async def agent_stream(
     reasoning_memory = collaborators.reasoning_memory
     db_name = collaborators.db_name
     openrouter_api_key = collaborators.openrouter_api_key
+    gemini_api_key = collaborators.gemini_api_key
     anthropic_client = collaborators.anthropic_client
 
-    # Routing decision.
-    # For Anthropic-backed apps (app_lite, app.py, app_full.py) the default
-    # is just config.backend with no fallback — the OpenRouter/Ollama branches
-    # below only fire when an Ollama-default app gets `deep_dive` /
-    # `model_override` / etc. from the request layer.
-    if config.backend == "anthropic":
-        if anthropic_client is None:
-            raise RuntimeError(
-                "AgentConfig.backend == 'anthropic' but "
-                "AgentCollaborators.anthropic_client is None — apps using the "
-                "Anthropic backend must construct an anthropic.Anthropic "
-                "client and pass it in via AgentCollaborators."
-            )
-        active_model = model_override or config.default_model
-        active_backend = "anthropic"
-    else:
-        # Routing decision (variant: app_free).
-        use_openrouter = (
-            not local_only
-            and bool(openrouter_api_key)
-            and (config.prefer_openrouter or deep_dive or model_override)
-        )
-        if use_openrouter:
-            active_model = model_override or (
-                config.openrouter_model or config.default_model
-            )
-            active_backend = "openrouter"
-        elif deep_dive or local_only:
-            active_model = config.deep_dive_model or config.default_model
-            active_backend = "ollama"
-        else:
-            active_model = config.default_model
-            active_backend = "ollama"
+    # Routing decision (extracted to _decide_backend so the policy is
+    # unit-testable). Anthropic apps resolve to their own backend with no
+    # fallback; Ollama-default apps (app_free) route to OpenRouter/Gemini only
+    # on explicit opt-in, else local Ollama.
+    active_backend, active_model = _decide_backend(
+        config,
+        openrouter_api_key=openrouter_api_key,
+        gemini_api_key=gemini_api_key,
+        anthropic_client=anthropic_client,
+        deep_dive=deep_dive,
+        model_override=model_override,
+        local_only=local_only,
+    )
 
     print(f"  [chat] {active_backend} :: {active_model}")
 
@@ -1223,6 +1269,22 @@ async def agent_stream(
                             max_tokens=num_predict_default,
                             temperature=0.3,
                         )
+                    if backend == "gemini":
+                        system_text = (
+                            msgs[0]["content"]
+                            if msgs and msgs[0].get("role") == "system"
+                            else config.system_prompt
+                        )
+                        return _gemini_chat(
+                            api_key=gemini_api_key,
+                            url=config.gemini_url,
+                            model=model,
+                            system=system_text,
+                            messages=msgs,
+                            tools=config.tools,
+                            temperature=0.3,
+                            num_predict=num_predict_default,
+                        )
                     raise NotImplementedError(
                         f"_call_backend: backend {backend!r} not yet wired "
                         "in shared_agent — port the corresponding step "
@@ -1230,9 +1292,11 @@ async def agent_stream(
                     )
 
                 def _sanitise_messages_for_backend_switch(from_b: str, to_b: str) -> None:
-                    """OpenAI/OpenRouter returns tool_call arguments as JSON strings;
-                    Ollama expects parsed dicts. Convert in-place when switching."""
-                    if not (from_b == "openrouter" and to_b == "ollama"):
+                    """OpenRouter/Gemini/Anthropic emit tool_call arguments as JSON
+                    strings; Ollama expects parsed dicts. Convert in-place when
+                    switching to the Ollama backend (the isinstance guard makes
+                    this a no-op for already-parsed native Ollama args)."""
+                    if to_b != "ollama":
                         return
                     for m in msgs:
                         if m.get("role") == "assistant" and isinstance(

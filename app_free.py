@@ -160,17 +160,31 @@ _parser.add_argument(
     help="Default to the OpenRouter free model for every chat request "
          "(requires OPENROUTER_API_KEY in .env). Equivalent to PREFER_OPENROUTER=1.",
 )
+_parser.add_argument(
+    "--gemini",
+    action="store_true",
+    help="Default to Gemini for every chat request (requires GEMINI_API_KEY "
+         "in .env). Equivalent to PREFER_GEMINI=1. Takes precedence over "
+         "--openrouter when both are set.",
+)
 _args, _ = _parser.parse_known_args()
 OLLAMA_MODEL = _args.model
 OLLAMA_PORT = _args.port
 # Default backend toggle. The flag wins; env var is a fallback so desktop
 # shortcuts that can't easily pass flags can still set it via .env.
 PREFER_OPENROUTER = _args.openrouter or os.getenv("PREFER_OPENROUTER", "").strip().lower() in ("1", "true", "yes")
+PREFER_GEMINI = _args.gemini or os.getenv("PREFER_GEMINI", "").strip().lower() in ("1", "true", "yes")
 
 # OpenRouter for deep-dive / cache seeding (larger free models)
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "").strip()
 OPENROUTER_MODEL   = os.getenv("OPENROUTER_MODEL", "qwen/qwen3-coder:free").strip()
 OPENROUTER_URL     = "https://openrouter.ai/api/v1/chat/completions"
+
+# Gemini (opt-in via --gemini / PREFER_GEMINI; for composer-rewire obedience
+# testing). Free-tier default model; the models base is the v1beta endpoint.
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
+GEMINI_MODEL   = os.getenv("GEMINI_MODEL", "gemini-2.5-flash").strip()
+GEMINI_URL     = "https://generativelanguage.googleapis.com/v1beta/models"
 
 # ── clients ────────────────────────────────────────────────────────────────────
 
@@ -284,8 +298,10 @@ async def model_status():
 @app.get("/model-info")
 async def model_info():
     # Reflect the default routing decision so the UI banner matches what
-    # chat requests will actually use. Mirrors the logic at the top of
-    # _agent_stream(): PREFER_OPENROUTER + key → OpenRouter by default.
+    # chat requests will actually use. Mirrors _decide_backend precedence:
+    # Gemini (if preferred + key) > OpenRouter (if preferred + key) > Ollama.
+    if PREFER_GEMINI and GEMINI_API_KEY:
+        return {"model": GEMINI_MODEL, "backend": "gemini", "cost": "free"}
     if PREFER_OPENROUTER and OPENROUTER_API_KEY:
         return {"model": OPENROUTER_MODEL, "backend": "openrouter", "cost": "free"}
     return {"model": OLLAMA_MODEL, "backend": "ollama", "cost": "free"}
@@ -396,6 +412,9 @@ AGENT_CONFIG = AgentConfig(
     prefer_openrouter=PREFER_OPENROUTER,
     ollama_url=OLLAMA_URL,
     openrouter_url=OPENROUTER_URL,
+    prefer_gemini=PREFER_GEMINI,
+    gemini_model=GEMINI_MODEL,
+    gemini_url=GEMINI_URL,
     required_tool_classes={
         "keyword retrieval": ["search_keyword", "traverse_topic"],
         "semantic retrieval": ["semantic_search"],
@@ -414,6 +433,7 @@ AGENT_COLLABORATORS = AgentCollaborators(
     reasoning_memory=reasoning_memory,
     db_name=NEO4J_DB,
     openrouter_api_key=OPENROUTER_API_KEY,
+    gemini_api_key=GEMINI_API_KEY,
 )
 
 
