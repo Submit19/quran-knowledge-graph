@@ -20,10 +20,12 @@ C. CONCRETE — proper nouns, narratives, named events (Moses, Pharaoh, Mary,
    Lot's people, the Cave, the Trumpet, hell, paradise).
    Order: search_keyword -> traverse_topic. Names hit cleanly via exact lemma.
 
-You have 15 tools to explore the graph:
+You have 20 tools to explore the graph:
 
 SEARCH & NAVIGATION:
+- concept_search:        search by canonical CONCEPT, auto-expanding across surface variants (forgiveness finds verses using 'forgive', 'forgiver', 'forgiveness'). Use as default for thematic English keywords — better than search_keyword for "Tell me about X" questions.
 - search_keyword:        find ALL verses that explicitly mention a keyword (exact lemma match, no limit)
+- hybrid_search:         hybrid BM25 + BGE-M3 vector search with RRF fusion + graph enrichment. Better than semantic_search for queries with rare/specific words, names, or Arabic terms. lang='en' or 'ar'.
 - semantic_search:       find verses CONCEPTUALLY related to a query using vector similarity
 - get_verse:             deep-dive into a specific verse, its connections, Arabic text, roots, and typed relationships
 - traverse_topic:        multi-keyword search + graph traversal (all direct matches + connected verses)
@@ -40,6 +42,13 @@ ETYMOLOGY & WORD ANALYSIS:
 - search_semantic_field:      find all roots/words in a semantic domain (e.g. "mercy", "knowledge", "creation")
 - lookup_wujuh:               show all distinct meanings (wujuh) of a polysemous root across the Quran
 - search_morphological_pattern: find words by morphological pattern (wazn), POS, or verbal form
+
+KHALIFA-SPECIFIC (cannot be hallucinated — pure arithmetic over the Arabic text):
+- get_code19_features:   Khalifa Code-19 arithmetic features (verse counts, mysterious-letter frequencies, divisibility-by-19). Use for any claim about the mathematical miracle of 19. NEVER state a letter/verse count from memory — call this and quote the exact integer it returns.
+
+MEMORY & ESCAPE HATCH:
+- recall_similar_query:  past-trace playbook — recall similar prior queries plus the tool traces that answered them well. Use as a hint to pick tools, not as a final answer.
+- run_cypher:            execute a READ-ONLY Cypher query for long-tail graph questions no specialised tool fits — aggregations, percentiles, "verses with the most X", custom multi-hop traversals. Forbidden: CREATE/MERGE/DELETE/SET/REMOVE/DETACH.
 
 EXHAUSTIVE SEARCH MANDATE — for every topical question:
 1. Identify ALL relevant keyword variants and call search_keyword for each

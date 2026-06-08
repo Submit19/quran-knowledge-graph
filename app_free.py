@@ -134,6 +134,12 @@ OLLAMA_TOOLS = [
                                       "lang": {"type": "string", "enum": ["en", "ar"], "default": "en"}},
                        "required": ["query"]}}},
     {"type": "function", "function": {
+        "name": "search_arabic_root",
+        "description": "Find every verse containing a specific Arabic trilateral root and all its derived forms (root k-t-b yields kitab/kataba/maktub). Use for Arabic-root queries and for the root-augmentation directive. Accepts Arabic script (e.g. 'رحم') or Buckwalter transliteration (e.g. 'rHm').",
+        "parameters": {"type": "object",
+                       "properties": {"root": {"type": "string", "description": "Arabic root in Arabic letters (e.g. 'رحم', 'كتب') or Buckwalter (e.g. 'rHm', 'ktb')"}},
+                       "required": ["root"]}}},
+    {"type": "function", "function": {
         "name": "recall_similar_query",
         "description": "Find past similar queries from the reasoning memory; returns the tools they used and the answer they produced. Use as a playbook hint, not a final answer.",
         "parameters": {"type": "object",

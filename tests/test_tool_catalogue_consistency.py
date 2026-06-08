@@ -18,8 +18,6 @@ from __future__ import annotations
 import ast
 from pathlib import Path
 
-import pytest
-
 import chat
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -44,9 +42,6 @@ def _chat_tool_names() -> list[str]:
     return [t["name"] for t in chat.TOOLS]
 
 
-@pytest.mark.xfail(
-    strict=True, reason="paid prompt names 15 tools; chat.TOOLS exposes 20"
-)
 def test_paid_prompt_documents_every_chat_tool() -> None:
     """(a) Every name in chat.TOOLS appears in config.system_prompt()."""
     import config
@@ -59,7 +54,6 @@ def test_paid_prompt_documents_every_chat_tool() -> None:
     )
 
 
-@pytest.mark.xfail(strict=True, reason="free prompt omits recall_similar_query")
 def test_free_prompt_documents_every_ollama_tool() -> None:
     """(b) Every name in app_free.OLLAMA_TOOLS appears in the free prompt text."""
     prompt = (PROMPTS_DIR / "system_prompt_free.txt").read_text(encoding="utf-8")
@@ -69,7 +63,6 @@ def test_free_prompt_documents_every_ollama_tool() -> None:
     )
 
 
-@pytest.mark.xfail(strict=True, reason="search_arabic_root missing from OLLAMA_TOOLS")
 def test_search_arabic_root_is_exposed_to_free_backend() -> None:
     """(c) search_arabic_root is in OLLAMA_TOOLS — the free prompt mandates it."""
     assert "search_arabic_root" in _ollama_tool_names(), (
